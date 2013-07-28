@@ -1,0 +1,13 @@
+/* CSS Document */
+
+@keyframes liveShow
+{
+from {background-image:url(../images/header/live_0_kohav.png)}
+to {background-image:url(../images/header/live_1_kohav.png)}
+}
+
+@-webkit-keyframes liveShow /* Safari and Chrome */
+{
+from {background-image:url(../images/header/live_0_kohav.png)}
+to {background-image:url(../images/header/live_1_kohav.png)}
+}
