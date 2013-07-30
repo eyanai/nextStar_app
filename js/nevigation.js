@@ -3,7 +3,7 @@
 var Navi={
 	
 	hidelogin:function(){
-		$('header').show();
+		$('header').removeClass('hide');
 		$('#login,section').hide();
 	},
 	
