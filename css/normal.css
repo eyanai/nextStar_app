@@ -1,0 +1,45 @@
+/* CSS Document */
+
+.fbText,.logText{
+	font-size:2em;
+}
+.header.logo {
+width: 50%;
+}
+.topMenu {
+	width: 100%;
+	height: 7%;	
+	background-size: 1% 100%;
+}
+.slide {
+background-image: url(../images/register/signin_slider_button.png);
+top: 7%;
+}
+.slideRight,.slideLeft {
+background-size: 100%;
+}
+.slideStay,.slideGo {
+top: 10%;
+}
+
+.contestant1 .slideStay,.contestant2 .slideGo {
+top: 8%;
+}
+.contestant2 .hate,.contestant1 .hate {
+}
+.contestant2 .love,.contestant1 .love  {
+}
+
+.contIcons {
+margin: 2% 0 0 0;
+}
+element.style {
+}
+.continue h2 {
+margin-top: 1%;
+}
+.battle .reMesseg{
+}
+.swiper-slide {
+  width: 390px;
+ }
