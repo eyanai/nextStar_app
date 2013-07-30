@@ -12,11 +12,12 @@
 <title>כוכב הבא</title>
 </head>
 <body>
-<header class="hide"> 
+<header id="header" class="hide"> 
 	<figure class="header logo"></figure>
 	<figure class="live"></figure>
 </header>
 <section id="login">
+<div class="nextPage" data-goto="message"></div>
 	<figure class="logo login"></figure>
 	<hgroup class="loginHg">
 		<h1> העונה הזו, אתם השופטים בכל ביצוע</h1>
@@ -33,6 +34,7 @@
 </section>
 <!---log in section-->
 <section id="message" >
+<div class="nextPage" data-goto="register"></div>
 	<div class="messageImage hide">
 		<figure class="team"></figure>
 		<div class="massage">
@@ -61,6 +63,7 @@
 </section>
 <!--- message section-->
 <section id="register" > 
+<div class="nextPage" data-goto="vote"></div>
 	<nav class="topMenu">
 		<h1>אתם פה? מוכנים להצביע?</h1>
 	</nav>
@@ -84,6 +87,7 @@
 </section>
 <!---register  section-->
 <section id="vote"> 
+<div class="nextPage" data-goto="results"></div>
 	<div class="singel hide" >
 		<nav class="topMenu">
 			<h1>הצביעו עכשיו, נשאר או הולך?</h1>
@@ -180,6 +184,7 @@
 </section>
 <!---vote  section-->
 <section id="results" > 
+<div class="nextPage" data-goto="gallery"></div>
 	<nav class="topMenu">
 		<h1>ויש לנו תוצאות....</h1>
 	</nav>
@@ -265,6 +270,7 @@
 </section>
 <!---results  section-->
 <section id="gallery"  style="direction:ltr;">
+<div class="nextPage" data-goto="login"></div>
 	<nav class="topMenu">
 		<h1>התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
 	</nav>
@@ -341,19 +347,26 @@
 		</div>
     <div class="pagination"></div>
   </div>
-</section>
+</section><!---gallery  section-->
 
-<!---gallery  section-->
 <footer id="banner"> <img src="images/banner/banner1.jpg"> </footer>
 <!---banner section-->
-  <script src="js/idangerous.swiper-2.0.min.js"></script>
+<!--  <script src="js/idangerous.swiper-2.0.min.js"></script>
   <script>
   var mySwiper = new Swiper('.swiper-container',{
     pagination: '.pagination',
     paginationClickable: true,
     slidesPerView: 'auto'
   })
-    </script>
+    </script>-->
 <script src="js/nevigation.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('.nextPage').on('click',this,function(){
+		goto=$(this).data('goto');
+		Navi.goto(goto);
+	});
+});
+</script>
 </body>
 </html>
