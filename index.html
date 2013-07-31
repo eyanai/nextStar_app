@@ -21,6 +21,7 @@
 	<figure class="live"></figure>
 </header>
 <section id="login">
+<div class="nextPage" data-goto="message"></div>
 	<figure class="logo login"></figure>
 	<hgroup class="loginHg">
 		<h1> העונה הזו, אתם השופטים בכל ביצוע</h1>
@@ -37,6 +38,7 @@
 </section>
 <!---log in section-->
 <section id="message" >
+<div class="nextPage" data-goto="register"></div>
 	<div class="messageImage">
 		<figure id="message-with-img-img" class="team"></figure>
 		<div class="massage">
@@ -64,7 +66,7 @@
 	</div>
 </section>
 <!--- message section-->
-<section id="register" > 
+<div class="nextPage" data-goto="vote"></div>
 <div class="animat" data-animat="register"></div>
 	<nav class="topMenu">
 		<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
@@ -89,15 +91,10 @@
 </section>
 <!---register  section-->
 <section id="vote"> 
-<div class="nextPage" data-goto="results"></div>
-
-	<div class="singel hide" >
 	<div class="single" >
-	
-	<div class="animat animatG" data-animat="singelGood"></div>
+<div class="nextPage" data-goto="results"></div>
+<div class="animat animatG" data-animat="singelGood"></div>
 	<div class="animat animatB" data-animat="singelBad"></div>
-	
-	
 		<nav class="topMenu">
 			<h1 id="vote-dic-single" >הצביעו עכשיו, נשאר או הולך?</h1>
 		</nav>
@@ -200,6 +197,7 @@
 </section>
 <!---vote  section-->
 <section id="results" > 
+<div class="nextPage" data-goto="gallery"></div>
 <div class="animat animatB" data-animat="results"></div>
 	<nav class="topMenu">
 		<h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
@@ -369,81 +367,86 @@
 <!---banner section-->
   <script src="js/idangerous.swiper-2.0.min.js"></script>
   <script>
-  var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    paginationClickable: true,
-    slidesPerView: 'auto'
-  })
-    </script>-->
-<script src="js/nevigation.js"></script>
+  //var mySwiper = new Swiper('.swiper-container',{
+  //  pagination: '.pagination',
+  //  paginationClickable: true,
+  //  slidesPerView: 'auto'
+  //})
+    </script>
+<script src="js/navigation.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/vote.js"></script>
+    <script src="js/result.js"></script>
 <script>
-$(document).ready(function(e) {
-	$('.nextPage').on('click',this,function(){
-		goto=$(this).data('goto');
-		Navi.goto(goto);
-	});
-
-	
-	$('.animat').on('click',this,function(){
-		anim=$(this).data('animat');//animat="register"
-		
-		switch(anim)
-			{
-			case 'register':
-				$('#register .slide').addClass('regAnim');
-					  break;
-			 case 'singelBad':
-			 		$('.slideRight').addClass('singelBad');
-					$('.slideLeft').addClass('hideL');
-					$('.singel .hate').addClass('hateShow');
-			 	break;
-			 case 'singelGood':
-					$('.slideLeft').addClass('singelGood');
-					$('.slideRight').addClass('hideR');
-					$('.singel .love').addClass('loveShow');
-			 	break;
-			 case 'battel1Good':
-			 		$('.contestant1 .slideTopbattle').addClass('battel1lGood');
-					$('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-					$('.contestant1 .slideDownbattle').addClass('hideR');
-					$('.contestant1 .love').addClass('love1Show');
-					
-				break;
-				case 'battel1Bad':
-			 		$('.contestant1 .slideDownbattle').addClass('battel1Bad');
-					$('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-					$('.contestant1 .slideTopbattle').addClass('hideR');
-					$('.contestant1 .hate').addClass('hate1Show');
-					
-				break;
-				case 'battel2Good':
-			 		$('.contestant2 .slideTopbattle').addClass('battel2lGood');
-					$('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-					$('.contestant2 .slideDownbattle').addClass('hideL');
-					$('.contestant2 .love').addClass('love2Show');
-					
-				break;
-				case 'battel2Bad':
-			 		$('.contestant2 .slideDownbattle').addClass('battel2Bad');
-					$('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-					$('.contestant2 .slideTopbattle').addClass('hideL');
-					$('.contestant2 .hate2').addClass('hate2Show');
-					
-				break;
-			 case 'results':
-			 	$('.scalaBlue,.scalaRed').animate({bottom:'0%'},1000,function(){
-					$('.scalaBlue,.scalaRed').animate({bottom:'-45%'},500,function(){});	
-				});
-			 	break;
-			default:
-				
-			 }
-	
-	});
+    $(document).ready(function(e) {
+        $('.nextPage').on('click', this, function() {
+            goto = $(this).data('goto');
+            Navi.goto(goto);
+        });
 
 
+        $('.animat').on('click', this, function() {
+            anim = $(this).data('animat'); //animat="register"
 
-});
+            switch(anim) {
+                case 'register':
+                    $('#register .slide').addClass('regAnim');
+                    break;
+                case 'singelBad':
+                    $('.slideRight').addClass('singelBad');
+                    $('.slideLeft').addClass('hideL');
+                    $('.singel .hate').addClass('hateShow');
+                    break;
+                case 'singelGood':
+                    $('.slideLeft').addClass('singelGood');
+                    $('.slideRight').addClass('hideR');
+                    $('.singel .love').addClass('loveShow');
+                    break;
+                case 'battel1Good':
+                    $('.contestant1 .slideTopbattle').addClass('battel1lGood');
+                    $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
+                    $('.contestant1 .slideDownbattle').addClass('hideR');
+                    $('.contestant1 .love').addClass('love1Show');
+
+                    break;
+                case 'battel1Bad':
+                    $('.contestant1 .slideDownbattle').addClass('battel1Bad');
+                    $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
+                    $('.contestant1 .slideTopbattle').addClass('hideR');
+                    $('.contestant1 .hate').addClass('hate1Show');
+
+                    break;
+                case 'battel2Good':
+                    $('.contestant2 .slideTopbattle').addClass('battel2lGood');
+                    $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
+                    $('.contestant2 .slideDownbattle').addClass('hideL');
+                    $('.contestant2 .love').addClass('love2Show');
+
+                    break;
+                case 'battel2Bad':
+                    $('.contestant2 .slideDownbattle').addClass('battel2Bad');
+                    $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
+                    $('.contestant2 .slideTopbattle').addClass('hideL');
+                    $('.contestant2 .hate2').addClass('hate2Show');
+
+                    break;
+                case 'results':
+                    $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function() {
+                        $('.scalaBlue,.scalaRed').animate({ bottom: '-45%' }, 500, function() { });
+                    });
+                    break;
+                default:
+
+            }
+
+        });
+
+
+
+
+    });
 
 
 
