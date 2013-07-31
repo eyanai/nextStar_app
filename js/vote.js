@@ -13,7 +13,7 @@ function setVotePage(data){
          //wait text
          var waitText = data.textWaitVote;
         $(".vote-wait-text").text(waitText);
-         firstFields = getFielsdByVote(data.votes[1]);
+         firstFields = getFielsdByVote(data.votes[0]);
         //set the dic title
         $("#vote-dic-single").text(pushVoteDic);
         $("#vote-img-single").css("background-image","url('"+firstFields[2]+"')")

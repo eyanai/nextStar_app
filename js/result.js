@@ -15,7 +15,7 @@ function setResultPage(data){
      }
 
      if(isSingleVote){
-         firstFields = getFielsdByVote(data.votes[1]);
+         firstFields = getFielsdByVote(data.votes[0]);
          $("#results-img-single").css("background-image","url('"+firstFields[2]+"')")
         $("#results-comp-name-single").text(firstFields[0]);
         $("#results-song-name-single").text(firstFields[1]);
