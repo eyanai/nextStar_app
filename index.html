@@ -9,15 +9,18 @@
 <link rel="stylesheet" media="screen and ((max-width:699px)" href="css/small.css" />
 <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width:1399px)" href="css/normal.css" />
 <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/large.css" />
+    
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+        <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
+        <script src="js/serverRequest.js"></script>
 <title>כוכב הבא</title>
 </head>
 <body>
-<header id="header" class="hide"> 
+<header class=""> 
 	<figure class="header logo"></figure>
 	<figure class="live"></figure>
 </header>
 <section id="login">
-<div class="nextPage" data-goto="message"></div>
 	<figure class="logo login"></figure>
 	<hgroup class="loginHg">
 		<h1> העונה הזו, אתם השופטים בכל ביצוע</h1>
@@ -34,41 +37,39 @@
 </section>
 <!---log in section-->
 <section id="message" >
-<div class="nextPage" data-goto="register"></div>
-	<div class="messageImage hide">
-		<figure class="team"></figure>
+	<div class="messageImage">
+		<figure id="message-with-img-img" class="team"></figure>
 		<div class="massage">
-			<h1 class="speker"><img src="images/masseg/messege_icon_kohav.png">הודעה חשובה:</h1>
-			<span class="detail">
+			<h1 class="speker"><img src="images/masseg/messege_icon_kohav.png"><span id="message-with-img-title">הודעה חשובה:</span></h1>
+			<span id="message-with-img-text" class="detail">
 				בתוכנית הקרובה מחכה לכם הפתעה בשולחן השופטים, אתם הקובעים שלישי ב-21:00
 			</span>	
 		</div>
 		<div class="continue">
-			<h2>ממתין להמשך השידור</h2>
+			<h2 id="message-with-img-wait-text">ממתין להמשך השידור</h2>
 			<figure class="contIcons"></figure>
 		</div>
 	</div>
 	<div class="messageNoImage">
 		<div class="massage">
-			<h1 class="speker"><img src="images/masseg/messege_icon_kohav.png">הודעה חשובה:</h1>
-			<span class="detail">
+			<h1 class="speker"><img src="images/masseg/messege_icon_kohav.png"><span id="message-no-img-title">הודעה חשובה:</span></h1>
+			<span id="message-no-img-text" class="detail">
 				בתוכנית הקרובה מחכה לכם הפתעה בשולחן השופטים, אתם הקובעים שלישי ב-21:00
 			</span>	
 		</div>
 		<div class="continue">
-			<h2>ממתין להמשך השידור</h2>
+			<h2 id="message-no-img-wait-text">ממתין להמשך השידור</h2>
 			<figure class="contIcons"></figure>
 		</div>
 	</div>
 </section>
 <!--- message section-->
 <section id="register" > 
-<div class="nextPage" data-goto="vote"></div>
 <div class="animat" data-animat="register"></div>
 	<nav class="topMenu">
-		<h1>אתם פה? מוכנים להצביע?</h1>
+		<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
 	</nav>
-	<div class="contestant">
+	<div id="register-single-img" class="contestant">
 		<div class="slidein">
 			<div class="slide btn">
 			</div>
@@ -76,12 +77,12 @@
 	</div>
 	<div class="reMesseg cf">
 		<div class="continue">
-			<h2>ממתין לתחילת הביצוע</h2>
+			<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
 			<figure class="contIcons"></figure>
 		</div>
 		<div class="songName">
-			<h1>דוד לוי</h1>
-			<h2>ילדות נשכחת</h2>
+			<h1 id="register-comp-name-single">דוד לוי</h1>
+			<h2 id="register-song-name-single">ילדות נשכחת</h2>
 		</div>
 	</div>
 	
@@ -91,15 +92,16 @@
 <div class="nextPage" data-goto="results"></div>
 
 	<div class="singel hide" >
+	<div class="single" >
 	
 	<div class="animat animatG" data-animat="singelGood"></div>
 	<div class="animat animatB" data-animat="singelBad"></div>
 	
 	
 		<nav class="topMenu">
-			<h1>הצביעו עכשיו, נשאר או הולך?</h1>
+			<h1 id="vote-dic-single" >הצביעו עכשיו, נשאר או הולך?</h1>
 		</nav>
-		<div class="contestant">
+		<div id="vote-img-single" class="contestant">
 			<div class="slideLeft">
 				<div class="slideStay btn">
 					<h1>נשאר</h1>
@@ -123,8 +125,8 @@
 				<figure class="contIcons"></figure>
 			</div>
 			<div class="songName">
-				<h1>דוד לוי</h1>
-				<h2>ילדות נשכחת</h2>
+				<h1 id="vote-comp-name-single">דוד לוי</h1>
+				<h2 id="vote-song-name-single">ילדות נשכחת</h2>
 			</div>
 		</div>
 	</div>
@@ -138,9 +140,9 @@
 
 		
 		<nav class="topMenu">
-			<h1>הצביעו עכשיו, נשאר או הולך?</h1>
+			<h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
 		</nav>
-		<div class="contestant1">
+		<div id="vote-img-first" class="contestant1">
 			<div class="slideTopbattle">
 				<div class="slideStay btn">
 					<h1>נשאר</h1>
@@ -158,7 +160,7 @@
 			
 		<!------------------------------------------->
 		</div>
-		<div class="contestant2">
+		<div  id="vote-img-second" class="contestant2">
 			<div class="slideTopbattle">
 				<div class="slideStay btn">
 					<h1>נשאר</h1>
@@ -183,12 +185,12 @@
 				<figure class="contIcons"></figure>
 			</div>
 			<div class="songName1">
-				<h1>דוד לוי</h1>
-				<h2>ילדות נשכחת</h2>
+				<h1 id="vote-comp-name-first">דוד לוי</h1>
+				<h2 id="vote-song-name-first">ילדות נשכחת</h2>
 			</div>
 			<div class="songName2">
-				<h1>חגית יאסו</h1>
-				<h2>ים של דמעות</h2>
+				<h1 id="vote-comp-name-second">חגית יאסו</h1>
+				<h2 id="vote-song-name-second">ים של דמעות</h2>
 			</div>
 		</div>
 		<div class="divideH"></div>
@@ -198,13 +200,12 @@
 </section>
 <!---vote  section-->
 <section id="results" > 
-<div class="nextPage" data-goto="gallery"></div>
 <div class="animat animatB" data-animat="results"></div>
 	<nav class="topMenu">
-		<h1>ויש לנו תוצאות....</h1>
+		<h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
 	</nav>
-	<div class="singel hide">
-		<div class="contestant">
+	<div class="single">
+		<div id="results-img-single" class="contestant">
 			<div class="resultScalaR">
 				<div class="resultRed">
 				</div>
@@ -220,21 +221,21 @@
 		</div>
 		<div class="reMesseg results cf">
 			<div class="continue">
-				<h2>ממתין להמשך השידור</h2>
+				<h2 id="results-wait-text-single">ממתין להמשך השידור</h2>
 				<figure class="contIcons"></figure>
 			</div>
 			<span class="divide"></span>
-			<div class="songName">
-				<h1>דוד לוי</h1>
-				<h2>ילדות נשכחת</h2>
+			<div id="" class="songName">
+				<h1 id="results-comp-name-single">דוד לוי</h1>
+				<h2 id="results-song-name-single">ילדות נשכחת</h2>
 			</div>
-			<div class="percentage">
+			<div id="results-perc-single" class="percentage">
 			57%
 			</div>
 		</div>
-	</div><!---------------------------------------------------singel div--------------------------------->
+	</div><!---------------------------------------------------single div--------------------------------->
 	<div class="battle">
-		<div class="contestant1">
+		<div id="results-img-first" class="contestant1">
 			<div class="resultScalaR">
 				<div class="resultRed">
 				</div>
@@ -248,7 +249,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="contestant2">
+		<div id="results-img-second" class="contestant2">
 			<div class="resultScalaR">
 				<div class="resultRed">
 				</div>
@@ -264,18 +265,18 @@
 		</div>
 		<div class="reMesseg results cf">
 			<div class="continue">
-				<h2>ממתין להמשך השידור</h2>
+				<h2 id="results-wait-text-battle">ממתין להמשך השידור</h2>
 				<figure class="contIcons"></figure>
 			</div>
 			<div class="songName1">
-				<h1>דוד לוי</h1>
-				<h2>ילדות נשכחת</h2>
-				<span class="percentage">57%</span>
+				<h1 id="results-comp-name-first">דוד לוי</h1>
+				<h2 id="results-song-name-single">ילדות נשכחת</h2>
+				<span id="results-perc-first" class="percentage">57%</span>
 			</div>
 			<div class="songName2">
-				<h1>חגית יאסו חגית</h1>
-				<h2>ים של דמעות</h2>
-				<span class="percentage">57%</span>
+				<h1 id="results-comp-name-second">חגית יאסו חגית</h1>
+				<h2 id="results-song-name-second">ים של דמעות</h2>
+				<span  id="results-perc-second" class="percentage">57%</span>
 			</div>
 			
 		</div>
@@ -285,9 +286,8 @@
 </section>
 <!---results  section-->
 <section id="gallery"  style="direction:ltr;">
-<div class="nextPage" data-goto="login"></div>
 	<nav class="topMenu">
-		<h1>התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
+		<h1  id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
 	</nav>
 	<h2>אתם מוזמנים לדפדף בתוצאות הערב</h2>
 	
@@ -362,11 +362,12 @@
 		</div>
     <div class="pagination"></div>
   </div>
-</section><!---gallery  section-->
+</section>
 
+<!---gallery  section-->
 <footer id="banner"> <img src="images/banner/banner1.jpg"> </footer>
 <!---banner section-->
-<!--  <script src="js/idangerous.swiper-2.0.min.js"></script>
+  <script src="js/idangerous.swiper-2.0.min.js"></script>
   <script>
   var mySwiper = new Swiper('.swiper-container',{
     pagination: '.pagination',
