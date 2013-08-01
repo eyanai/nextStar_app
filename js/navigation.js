@@ -39,12 +39,18 @@ var Navi = {
                 $("#vote .single").hide();
                 $("#vote .battle").show();
                 break;
-            case 'waitBeforeResults':
+            case 'voteCloseSingle':
                 Navi.hidelogin();
-                $('#results').show();
-                $("#results-img-single").hide();
-                $("#results .single").show();
-                $("#results .battle").hide();
+                $('#voteClose').show();
+                $("#vote-close-img-single").hide();
+                $("#voteClose .single").show();
+                $("#voteClose .battle").hide();
+                break;
+            case 'voteCloseBattle':
+                Navi.hidelogin();
+                $('#voteClose').show();
+                $("#voteClose .single").hide();
+                $("#voteClose .battle").show();
                 break;
             case 'resultsSingle':
                 Navi.hidelogin();
