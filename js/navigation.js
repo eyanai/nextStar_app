@@ -2,13 +2,13 @@
 
 var Navi = {
 
-    hidelogin: function() {
+    hidelogin: function () {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function(el) {
-        switch(el) {
+    goto: function (el) {
+        switch (el) {
             case 'messageNoImage':
                 $('header').show();
                 $('#login').hide();
@@ -68,6 +68,7 @@ var Navi = {
             case 'gallery':
                 Navi.hidelogin();
                 $('#gallery').show();
+                gallerySize();
                 break;
             default:
                 $('section,header').hide();
