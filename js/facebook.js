@@ -16,7 +16,8 @@ var myLocation = window.location.href;
 
    
     function attachEventsFacebook(){
-        $(".logFb").on("click touchend", loginFb);       
+        $(".logFb").on("click", loginFb);
+           
     }
     function loginFb() {        
         FB.getLoginStatus(function (response) {
