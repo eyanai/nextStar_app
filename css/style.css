@@ -1008,7 +1008,12 @@ header {
     
     position: relative;
 }
-
+.pagination {
+    position: absolute;
+    z-index: 20;
+    left: 41%;
+    bottom: 10%;
+}
 
 
 
