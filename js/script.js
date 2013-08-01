@@ -1,8 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initAppSize();
 
     //init the dictionary values
     initDictionaryValues();
+    attachEventsFacebook();
 });
 
 
