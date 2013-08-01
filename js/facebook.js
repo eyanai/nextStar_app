@@ -16,11 +16,9 @@ var myLocation = window.location.href;
 
    
     function attachEventsFacebook(){
-        $(".logFb").on("click touchend", loginFb);
-        alert("event");
+        $(".logFb").on("click touchend", loginFb);       
     }
-    function loginFb() {
-        alert("log");
+    function loginFb() {        
         FB.getLoginStatus(function (response) {
             if (response.status === 'connected') {
 
