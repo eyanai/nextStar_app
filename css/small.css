@@ -1,0 +1,48 @@
+h1 {
+    font-size: 1em;
+}
+
+
+h2 {
+    font-size: 1em;
+}
+
+
+.detail {
+    font-size: 1em;
+}
+
+.slider-text {
+    font-size: 1.225em;
+}
+
+.topMenu {
+line-height: 150%;
+}
+
+header{
+    height: 14.5%;
+}
+
+section{
+    top: 14.6%;   
+}
+
+.slide {
+    background-size: 100% 110%;
+    top: 21%;
+    height: 73%;
+}
+
+.slide:hover {
+    background-size: 100% 110%;
+}
+
+.slideStay h1 {
+    left: 49%;
+}
+
+#results .percentage {
+    margin-top: 20%;
+    font-size: 1.7em;
+}
