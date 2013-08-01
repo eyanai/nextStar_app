@@ -34,9 +34,7 @@ var myLocation = window.location.href;
                     if (response.authResponse) {
                         isConnect = true;
                         console.log("now connect");
-                        alert(0);
-                        alert(myLocation);
-                        window.top.location.href = myLocation;
+                        
                         saveData();
                     }
                     else {
