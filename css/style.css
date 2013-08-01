@@ -7,6 +7,10 @@
 @import url("animation.css");
 
 .reMesseg .continue {
+    /*display: none;*/
+}
+
+.slidein {
     display: none;
 }
 
@@ -212,12 +216,16 @@ header {
 .loginHg {
     position: absolute;
     color: #fff;
-    left: 16.3%;
+    /*left: 16.3%;*/
     /*	font-size:2em;
 */ height: 10%;
     width: 76%;
     top: 39%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 .loginHg h1 {
@@ -336,6 +344,10 @@ header {
     display: inline-block;
 }
 
+#message .continue h2 {
+    margin-top: 3%;
+}
+
 .messageImage .continue {
     /*bottom: 3%;*/
     height: 10%;
@@ -367,12 +379,15 @@ header {
 /*=============================================REGISTER SECTION===========================================*/
 .topMenu {
     width: 100%;
-    height: 6%;
+    height: 8%;
     background-image: url(../images/register/koteret_bgpixel_kohav_full.png);
     padding: 0 0 0 0;
     line-height: 3em;
     background-size: 100% 100%;
     border-bottom: 2px solid #00a9ff;
+    position: relative;
+    top: 0;
+    z-index: 1;
 }
 
 .topMenu h1 {
@@ -386,6 +401,14 @@ header {
     height: 94%;
     background-size: 100% 100%;
     position: relative;
+    /*background-size: 100% 97%;
+    width: 100%;
+    height: 100%;*/
+    /*margin-top: 8%;*/
+}
+
+#result .contestant {
+    margin-top: 8%;
 }
 
 .slidein {
@@ -451,6 +474,10 @@ header {
     z-index: 5;
 }
 
+#register .reMesseg .continue {
+    height: 53%;
+}
+
 .reMesseg .continue h2 {
     line-height: 151%;
 }
@@ -476,9 +503,10 @@ header {
 }
 
 .single .contestant {
-    background-size: 100% 100%;
+    /*background-size: 100% 97%;
     width: 100%;
     height: 100%;
+    background-position-y: 150%;*/
 }
 
 .battle .contestant1, .battle .contestant2 {
@@ -529,7 +557,6 @@ header {
 .slideGo {
     background-image: url(../images/votes/slide_pick_x.png);
     background-size: 18% 46%;
-
     width: 80%;
     height: 66%;
     background-repeat: no-repeat;
@@ -941,22 +968,21 @@ header {
 
 
 
-#result-gallery{
+#result-gallery {
     height: 55%;
-    
     direction: rtl;
     overflow-x: scroll;
-     overflow-y: hidden; 
+    overflow-y: hidden;
 }
-#result-gallery ul{
+
+#result-gallery ul {
     height: 100%;
-    
-   /* width: 500px;*/
+    /* width: 500px;*/
     padding-right: 4px;
 }
+
 #result-gallery ul li {
     height: 100%;
-    
     /*width: 45.6%;*/
     position: relative;
     /* display: inline-block; */
@@ -965,47 +991,48 @@ header {
     margin-right: 2px;
     float: right;
 }
-.gallery-vote-single{
-    
+
+.gallery-vote-single {
 }
-.gallery-vote-single img{
+
+.gallery-vote-single img {
     width: 100%;
     height: 100%;
 }
-#result-gallery .reMesseg{
+
+#result-gallery .reMesseg {
     height: 31.6%;
-    
-}
-#result-gallery .divide{
-    
-}
-#result-gallery .songName{
-    height: 45%;
-    
-}
-#result-gallery .percentage{
-    
 }
 
-.gallery-vote-battle{
-    
+#result-gallery .divide {
 }
-.gallery-vote-battle img{
+
+#result-gallery .songName {
+    height: 45%;
+}
+
+#result-gallery .percentage {
+}
+
+.gallery-vote-battle {
+}
+
+.gallery-vote-battle img {
     width: 100%;
     height: 100%;
 }
 
-.gallery-vote-battle .vote-1{
+.gallery-vote-battle .vote-1 {
     width: 50%;
     height: 100%;
     position: relative;
     float: right;
 }
-.gallery-vote-battle .vote-2{
-    width: 50%;  
-    display: inline-block;  
+
+.gallery-vote-battle .vote-2 {
+    width: 50%;
+    display: inline-block;
     height: 100%;
-    
     position: relative;
 }
 
