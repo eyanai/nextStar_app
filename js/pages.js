@@ -59,7 +59,9 @@ function  setWaitPageNoImg(data){
     Navi.goto("messageNoImage");
  }
       
-function   setStaticPageWithImg(data){}
+function   setStaticPageWithImg(data){
+    
+}
        
 function   setStaticPageNoImg(data){
                 
