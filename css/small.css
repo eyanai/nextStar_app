@@ -7,6 +7,9 @@ h2 {
     font-size: 1em;
 }
 
+message .continue h2 {
+    margin-top: 3.5%;
+}
 
 .detail {
     font-size: 1em;
@@ -17,15 +20,15 @@ h2 {
 }
 
 .topMenu {
-line-height: 150%;
+    line-height: 150%;
 }
 
-header{
+header {
     height: 14.5%;
 }
 
-section{
-    top: 14.6%;   
+section {
+    top: 14.6%;
 }
 
 .slide {
@@ -38,6 +41,24 @@ section{
     background-size: 100% 110%;
 }
 
+.slideLeft {
+    background-size: 100% 112%;
+    height: 23%;
+}
+
+.slideRight {
+    background-size: 100% 112%;
+    height: 23%;
+}
+
+.slideStay {
+    top: 24%;
+}
+
+.slideGo {
+    top: 24%;
+}
+
 .slideStay h1 {
     left: 49%;
 }
@@ -45,4 +66,22 @@ section{
 #results .percentage {
     margin-top: 20%;
     font-size: 1.7em;
+    margin-left: 2%;
+}
+
+#results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
+    width: 50%;
+}
+
+#results .divideH.waiting-high {
+    height: 69.3%;
+}
+
+#results .divideH.waiting-low {
+    height: 18.2%;
+    top: 76.85%;
+}
+
+.loginHg {
+    top: 43%;
 }
