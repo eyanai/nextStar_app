@@ -32,8 +32,8 @@ to {left:71%}
 from {left:5%}
 to {left:71%}
 }
-/*--------------------------------singel good -------------------------------*/
-.singelGood{
+/*--------------------------------single good -------------------------------*/
+.singleGood{
 	-webkit-animation:sinG 1.2s; /* Safari and Chrome */
 	-webkit-animation-fill-mode:forwards;
 	animation:sinG 1s ;
@@ -76,13 +76,13 @@ to {left:71%}
 
 @-webkit-keyframes hideR 
 {
-	0% {right::0%}
+	0% {right:0%}
 	100%{right: -50%}
 }
 
 @keyframes hideR
 {
-	0% {right::0%}
+	0% {right:0%}
 	100%{right: -50%}
 }
 @-webkit-keyframes loveShow 
@@ -169,13 +169,13 @@ to {left:71%}
 }
 @-webkit-keyframes hideL
 {
-	0% {left::0%}
+	0% {left:0%}
 	100%{left: -50%}
 }
 
 @keyframes hideL
 {
-	0% {left::0%}
+	0% {left:0%}
 	100%{left: -50%}
 }
 @-webkit-keyframes love1Show
@@ -265,13 +265,13 @@ to {left:71%}
 }
 @-webkit-keyframes hideL
 {
-	0% {left::0%}
+	0% {left:0%}
 	100%{left: -50%}
 }
 
 @keyframes hideL
 {
-	0% {left::0%}
+	0% {left:0%}
 	100%{left: -50%}
 }
 @-webkit-keyframes love2Show
