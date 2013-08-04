@@ -945,25 +945,29 @@ header {
     height: 55%;
     
     direction: rtl;
-    overflow-x: scroll;
+    overflow-x: auto;
      overflow-y: hidden; 
+      /*-webkit-overflow-scrolling: touch;*/
 }
 #result-gallery ul{
     height: 100%;
     
    /* width: 500px;*/
     padding-right: 4px;
+   overflow: hidden;
 }
+
 #result-gallery ul li {
     height: 100%;
-    
+   
     /*width: 45.6%;*/
     position: relative;
-    /* display: inline-block; */
+    /*display: inline-block;*/
     /*width: 146px;*/
     border: solid 1px #898788;
     margin-right: 2px;
-    float: right;
+     float: right;
+   /* margin-right: -3px; */
 }
 .gallery-vote-single{
     
@@ -1020,7 +1024,7 @@ header {
 
 
 
-
+   
 /*-------------------------------------------to delite!!!!!--------------------------------*/
 .nextPage {
     position: absolute;
