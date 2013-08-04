@@ -4,6 +4,7 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     attachEventsFacebook();
+    attachEventsRegister();
 });
 
 

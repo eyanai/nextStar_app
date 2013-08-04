@@ -98,8 +98,8 @@
         <section id="vote">
             <div class="single">
                 <div class="nextPage" data-goto="resultsBattle"></div>
-                <div class="animat animatG" data-animat="singelGood"></div>
-                <div class="animat animatB" data-animat="singelBad"></div>
+                <div class="animat animatG" data-animat="singleGood"></div>
+                <div class="animat animatB" data-animat="singleBad"></div>
                 <nav class="topMenu">
                     <h1 id="vote-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                 </nav>
@@ -290,9 +290,9 @@
             </nav>
             <h2>אתם מוזמנים לדפדף בתוצאות הערב</h2>
 
-            <div id="result-gallery" class="cf">
-                <ul class="cf">
-                    <li class="gallery-vote-single" style="border: 1px solid red;">
+            <div id="result-gallery">
+                <ul>
+                    <li class="gallery-vote-single">
                         <img src="images/gallery/gallery-contestant.jpg"  alt="alt"> 
                         <span class="reMesseg">
                                 <span class="divide"></span>
@@ -466,15 +466,15 @@
                         case 'register':
                             $('#register .slide').addClass('regAnim');
                             break;
-                        case 'singelBad':
-                            $('.slideRight').addClass('singelBad');
+                        case 'singleBad':
+                            $('.slideRight').addClass('singleBad');
                             $('.slideLeft').addClass('hideL');
-                            $('.singel .hate').addClass('hateShow');
+                            $('.single .hate').addClass('hateShow');
                             break;
-                        case 'singelGood':
-                            $('.slideLeft').addClass('singelGood');
+                        case 'singleGood':
+                            $('.slideLeft').addClass('singleGood');
                             $('.slideRight').addClass('hideR');
-                            $('.singel .love').addClass('loveShow');
+                            $('.single .love').addClass('loveShow');
                             break;
                         case 'battel1Good':
                             $('.contestant1 .slideTopbattle').addClass('battel1lGood');

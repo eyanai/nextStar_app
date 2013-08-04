@@ -11,7 +11,7 @@
 }
 
 .slidein {
-    display: none;
+    /*display: none;*/
 }
 
 
@@ -971,33 +971,25 @@ header {
 #result-gallery {
     height: 55%;
     direction: rtl;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-}
- 
-#result-gallery>* {
-    -webkit-transform: translate3d(0,0,0);
 }
 
 #result-gallery ul {
     height: 100%;
     /* width: 500px;*/
     padding-right: 4px;
-   overflow: hidden;
 }
 
 #result-gallery ul li {
     height: 100%;
-   
     /*width: 45.6%;*/
     position: relative;
-    /*display: inline-block;*/
+    /* display: inline-block; */
     /*width: 146px;*/
     border: solid 1px #898788;
     margin-right: 2px;
-     float: right;
-   /* margin-right: -3px; */
+    float: right;
 }
 
 .gallery-vote-single {
@@ -1020,7 +1012,6 @@ header {
 }
 
 #result-gallery .percentage {
-    display: none;
 }
 
 .gallery-vote-battle {
@@ -1044,19 +1035,14 @@ header {
     height: 100%;
     position: relative;
 }
-.pagination {
-    position: absolute;
-    z-index: 20;
-    left: 41%;
-    bottom: 10%;
-}
 
 
 
 
 
 
-   
+
+
 /*-------------------------------------------to delite!!!!!--------------------------------*/
 .nextPage {
     position: absolute;
