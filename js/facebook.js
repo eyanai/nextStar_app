@@ -1,4 +1,4 @@
-var appID = "543975688973172";
+//var appID = "543975688973172";
 
 //fb user details
 var user={
@@ -53,6 +53,6 @@ function saveData(){
             user.gender = response.gender;
             user.profilePic = "https://graph.facebook.com/" + user.id + "/picture";
             alert(user.userName+user.gender);
-        });
+      });
         
 }
