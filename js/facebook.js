@@ -7,8 +7,8 @@ var user={
     gender:null,
     profilePic:null
 }
-var myLocation = window.location.href;
-
+var myLocation = "http://google.com";
+alert(0);
 /*FB._https = (window.location.protocol == "https:");*/
     FB._https = true; //check fb init
 

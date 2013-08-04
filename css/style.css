@@ -973,7 +973,11 @@ header {
     direction: rtl;
     overflow-x: auto;
     overflow-y: hidden;
-      /*-webkit-overflow-scrolling: touch;*/
+      -webkit-overflow-scrolling: touch;
+}
+ 
+#result-gallery>* {
+    -webkit-transform: translate3d(0,0,0);
 }
 
 #result-gallery ul {
@@ -1016,6 +1020,7 @@ header {
 }
 
 #result-gallery .percentage {
+    display: none;
 }
 
 .gallery-vote-battle {
