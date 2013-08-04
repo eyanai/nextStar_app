@@ -11,7 +11,7 @@
 }
 
 .slidein {
-    display: none;
+    /*display: none;*/
 }
 
 
@@ -26,6 +26,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
+}
+
+*{
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
 }
 
 body {
@@ -971,34 +976,30 @@ header {
 #result-gallery {
     height: 55%;
    /* direction: rtl;*/
-    overflow-x: auto;
-    overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    -webkit-overflow-scrolling: touch;
 }
  
 #result-gallery>* {
     -webkit-transform: translate3d(0,0,0);
 }
-
 #result-gallery ul {
     height: 100%;
     /* width: 500px;*/
     padding-right: 4px;
-   overflow: hidden;
    direction: rtl;
 }
 
 #result-gallery ul li {
     height: 100%;
-   
     /*width: 45.6%;*/
     position: relative;
-    /*display: inline-block;*/
+    /* display: inline-block; */
     /*width: 146px;*/
     border: solid 1px #898788;
     margin-right: 2px;
-     float: right;
-   /* margin-right: -3px; */
+    float: right;
 }
 
 .gallery-vote-single {
@@ -1021,7 +1022,6 @@ header {
 }
 
 #result-gallery .percentage {
-    display: none;
 }
 
 .gallery-vote-battle {
@@ -1045,19 +1045,14 @@ header {
     height: 100%;
     position: relative;
 }
-.pagination {
-    position: absolute;
-    z-index: 20;
-    left: 41%;
-    bottom: 10%;
-}
 
 
 
 
 
 
-   
+
+
 /*-------------------------------------------to delite!!!!!--------------------------------*/
 .nextPage {
     position: absolute;
