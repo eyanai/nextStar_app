@@ -288,10 +288,27 @@ header {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: block;
-    width: 97%;
-    height: 63%;
+    width: 94%;
+    height: 100%;
+ 
     margin: auto;
     margin-top: 3%;
+    border: 1px solid #00a8ff;
+    z-index: 1;
+}
+
+#smudge-beneath-picture {
+    background-image: url(../images/masseg/img-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+
+    width: 94%;
+    height: 51%;
+    z-index: 0;
+    margin-bottom: -18%;
+    margin: auto;
+    background-position-y: 161%;
 }
 
 .massage {
@@ -755,6 +772,21 @@ header {
 
 .contestant2 .hate {
     right: -40%;
+}
+
+/*------------not-registered*/
+#not-registered {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    font-size: 3em;
+    z-index: 10;
 }
 /*=============================================RESULTS SECTION======================================================*/
 .resultScalaR {

@@ -6,48 +6,55 @@ function setVotePage(data) {
     var isSingleVote;
     var firstFields;
     var secondFields;
-    $("#vote .reMesseg .continue").hide();
-    if (data.votes.length == 2) {
-        isSingleVote = false;
+
+    if (isRegistered) {
+        $("#vote .reMesseg .continue").hide();
+        if (data.votes.length == 2) {
+            isSingleVote = false;
+        }
+        else if (data.votes.length == 1) {
+            isSingleVote = true;
+        }
+
+        if (isSingleVote) {
+            //wait text
+            var waitText = data.textWaitVote;
+            $(".vote-wait-text").text(waitText);
+            firstFields = getFielsdByVote(data.votes[0]);
+            //set the dic title
+            $("#vote-dic-single").text(pushVoteDic);
+            $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')")
+            $("#vote-comp-name-single").text(firstFields[0]);
+            $("#vote-song-name-single").text(firstFields[1]);
+
+            //navigate
+            Navi.goto("voteSingle");
+        }
+        else if (!isSingleVote) {
+            //wait text
+            var waitText = data.textWaitVote;
+            $(".vote-wait-text").text(waitText);
+            firstFields = getFielsdByVote(data.votes[0]);
+            secondFields = getFielsdByVote(data.votes[1]);
+            //set the dic title
+            $("#vote-dic-battle").text(pushVoteDic);
+            //firat comp
+            $("#vote-img-first").css("background-image", "url('" + firstFields[2] + "')")
+            $("#vote-comp-name-first").text(firstFields[0]);
+            $("#vote-song-name-first").text(firstFields[1]);
+            //second comp
+            $("#vote-img-second").css("background-image", "url('" + secondFields[2] + "')")
+            $("#vote-comp-name-second").text(secondFields[0]);
+            $("#vote-song-name-second").text(secondFields[1]);
+
+            //navigate
+            Navi.goto("voteBattle");
+        }
     }
-    else if (data.votes.length == 1) {
-        isSingleVote = true;
+    else { //if not registered
+        $("#not-registered").show();
     }
 
-    if (isSingleVote) {
-        //wait text
-        var waitText = data.textWaitVote;
-        $(".vote-wait-text").text(waitText);
-        firstFields = getFielsdByVote(data.votes[0]);
-        //set the dic title
-        $("#vote-dic-single").text(pushVoteDic);
-        $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')")
-        $("#vote-comp-name-single").text(firstFields[0]);
-        $("#vote-song-name-single").text(firstFields[1]);
-
-        //navigate
-        Navi.goto("voteSingle");
-    }
-    else if (!isSingleVote) {
-        //wait text
-        var waitText = data.textWaitVote;
-        $(".vote-wait-text").text(waitText);
-        firstFields = getFielsdByVote(data.votes[0]);
-        secondFields = getFielsdByVote(data.votes[1]);
-        //set the dic title
-        $("#vote-dic-battle").text(pushVoteDic);
-        //firat comp
-        $("#vote-img-first").css("background-image", "url('" + firstFields[2] + "')")
-        $("#vote-comp-name-first").text(firstFields[0]);
-        $("#vote-song-name-first").text(firstFields[1]);
-        //second comp
-        $("#vote-img-second").css("background-image", "url('" + secondFields[2] + "')")
-        $("#vote-comp-name-second").text(secondFields[0]);
-        $("#vote-song-name-second").text(secondFields[1]);
-
-        //navigate
-        Navi.goto("voteBattle");
-    }
 
 }
 
@@ -102,7 +109,7 @@ function setVoteClosePage(data) {
 
 function setVote(e) {
     var voteId, voteKey, vote;
-    console.log(e.currentTarget.className); 
+    console.log(e.currentTarget.className);
     console.log(e.delegateTarget.className);
     switch (e.currentTarget.className) {
         case 'slideLeft':

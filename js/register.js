@@ -1,10 +1,12 @@
 var voteIdA, voteKeyA, voteIdB, voteKeyB;
+var isRegistered;
 
 function attachEventsRegister() {
     $(".slidein .btn").on("click", setRegister); //click on slider
 }
 
 function setOpenRegisterPage(data) {
+    isRegistered = false;
     //console.log("data.status: " + data.status);
     //take the value from dictionary
     $("#register-dic").text(registerDic);
@@ -70,8 +72,8 @@ function setWaitVotePage(data) {
         voteIdB = data[1].voteId;
         voteKeyB = data[1].voteKey;
     }
-    console.log(voteKeyB);
-
+    isRegistered = true;
+   
 
 
 };
