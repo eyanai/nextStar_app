@@ -1,64 +1,58 @@
 //var appID = "543975688973172";
 
-////fb user details
-//var user={
-//    id:null,
-//    userName:null,
-//    gender:null,
-//    profilePic:null
-//}
-//var myLocation = "http://google.com";
-////alert(0);
-///*FB._https = (window.location.protocol == "https:");*/
-//    FB._https = true; //check fb init
+//fb user details
+var user={
+    id:null,
+    userName:null,
+    gender:null,
+    profilePic:null
+}
+//domain
+var myLocation = "http://makosrv1.egoline.co.il/application/index.html";
 
-//    FB.init({ appId: appID, status: true, cookie: true, oauth: true })
+/*FB._https = (window.location.protocol == "https:");*/
+FB._https = true; //check fb init
 
-//   
-//    function attachEventsFacebook(){
-//        $(".logFb").on("click", loginFb);
-//           
-//    }
-//    function loginFb() {        
-//        FB.getLoginStatus(function (response) {
-//            if (response.status === 'connected') {
+FB.init({ appId: appID, status: true, cookie: true, oauth: true })
 
-//                console.log("connect");
+//listener   
+function attachEventsFacebook(){
+    $(".logFb").on("click", loginFb);
+       
+}
+    
+//check if login fb now
+var searchQuery=window.location.search;
+if(searchQuery.length>0){
+    loginCheck();
+}
 
-//                saveData();
+//login fb
+function loginFb(){
+     window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri="+myLocation; 
+}
 
-//            }
-//            else if (response.status === 'not_authorized' || response.status == "unknown") {
-//                console.log("not connect");
-//                // alert(" response.status " + response.status);
-//                FB.login(function (response) {
-//                    if (response.authResponse) {
-//                        isConnect = true;
-//                        console.log("now connect");
-//                        
-//                        saveData();
-//                    }
-//                    else {
-//                        console.log("facebook login failed in inviteClicked");
-//                        console.log(response);
-//                    }
-//                }, { redirect_uri: myLocation }); //, { scope: 'email' });
-//            }
+//check: if login-> save data
+function loginCheck() {
+    FB.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+            saveData();
+        }
+        else if (response.status === 'not_authorized' || response.status == "unknown") {
+           
+            console.log("not connect");                
+        }
+    });
+}
 
-//        });
-
-//        
-//       
-//    }
-//    function saveData(){
-//        
-//            FB.api('/me', function (response) {
-//                
-//                user.id = response.id;
-//                user.userName = response.name;
-//                user.gender = response.gender;
-//                user.profilePic = "https://graph.facebook.com/" + user.id + "/picture";
-//                alert(user.userName+user.gender);
-//            });
-//        
-//    }
+//save user data
+function saveData(){        
+        FB.api('/me', function (response) {                
+            user.id = response.id;
+            user.userName = response.name;
+            user.gender = response.gender;
+            user.profilePic = "https://graph.facebook.com/" + user.id + "/picture";
+            alert(user.userName+user.gender);
+      });
+        
+}

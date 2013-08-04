@@ -28,6 +28,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+*{
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
+}
+
 body {
     line-height: 1;
 }
@@ -1002,15 +1007,20 @@ header {
 
 #result-gallery {
     height: 55%;
-    direction: rtl;
+   /* direction: rtl;*/
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: hidden; 
+    -webkit-overflow-scrolling: touch;
 }
-
+ 
+#result-gallery>* {
+    -webkit-transform: translate3d(0,0,0);
+}
 #result-gallery ul {
     height: 100%;
     /* width: 500px;*/
     padding-right: 4px;
+   direction: rtl;
 }
 
 #result-gallery ul li {
