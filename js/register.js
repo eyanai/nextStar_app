@@ -1,9 +1,11 @@
+var voteIdA, voteKeyA, voteIdB, voteKeyB;
+
 function attachEventsRegister() {
-    $(".slidein .silde.btn").on("click", setRegister); //click on slider
+    $(".slidein .btn").on("click", setRegister); //click on slider
 }
 
 function setOpenRegisterPage(data) {
-    console.log("data.status: " + data.status);
+    //console.log("data.status: " + data.status);
     //take the value from dictionary
     $("#register-dic").text(registerDic);
     $("#register .slidein").show();
@@ -43,12 +45,13 @@ function setRegisterGoingClose(data) {
 
 function setRegister() {
     //ajax call server
+    console.log(domain);
     $.ajax({
         type: "POST",
         url: domain + "type=registerToVote",
         success: function (data) {
-            console.log("success getPage: " + data);
-            setWaitVotePageData(data);
+            console.log(data);
+            setWaitVotePage(data);
         },
         error: function (data) {
             console.log("error getPage: " + data);
@@ -56,11 +59,19 @@ function setRegister() {
     });
 };
 
-function setWaitVotePageData(data){
-    $(".slide").hide();
+function setWaitVotePage(data) {
+
+    $(".slidein").hide();
     $("#register .reMesseg .continue").show();
 
-    
-};
+    voteIdA = data[0].voteId;
+    voteKeyA = data[0].voteKey;
+    if (data[1]) {
+        voteIdB = data[1].voteId;
+        voteKeyB = data[1].voteKey;
+    }
+    console.log(voteKeyB);
 
-setOpenRegisterPage(0);
+
+
+};
