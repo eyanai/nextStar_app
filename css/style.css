@@ -970,7 +970,7 @@ header {
 
 #result-gallery {
     height: 55%;
-    direction: rtl;
+   /* direction: rtl;*/
     overflow-x: auto;
     overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
@@ -985,6 +985,7 @@ header {
     /* width: 500px;*/
     padding-right: 4px;
    overflow: hidden;
+   direction: rtl;
 }
 
 #result-gallery ul li {
