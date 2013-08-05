@@ -1,4 +1,4 @@
-//var appID = "543975688973172";
+var appID = "543975688973172";
 
 //fb user details
 var user={
