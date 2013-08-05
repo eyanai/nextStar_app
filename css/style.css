@@ -28,8 +28,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-*{
-    -webkit-touch-callout:none;
+* {
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
 }
 
@@ -290,47 +290,38 @@ header {
 
 .team {
     background-image: url(../images/masseg/team.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 100% 100%,100% 100%;
+    background-position: right top, center -150%;
     display: block;
-    width: 94%;
-    height: 100%;
- 
+    width: 89%;
+    height: 50%;
     margin: auto;
-    margin-top: 3%;
-    border: 1px solid #00a8ff;
-    z-index: 1;
+    margin-top: 2%;
+    /*z-index: 1;*/
 }
 
-#smudge-beneath-picture {
-    background-image: url(../images/masseg/img-background.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: block;
 
-    width: 94%;
-    height: 51%;
-    z-index: 0;
-    margin-bottom: -18%;
-    margin: auto;
-    background-position-y: 161%;
-}
 
 .massage {
+    border-top: 2px solid #005d8d;
     height: 24%;
-    width: 83%;
-    border-bottom: solid 1px rgba(82,134,159,.6);
+    width: 89%;
+    border-bottom: solid 2px rgba(196,196,196,0.5);
     margin: auto;
+    position: relative;
+    background-color: rgba(0,0,0,0.29);
 }
 
 .speker {
     text-align: center;
-    /*	font-size: 2em;
-*/ width: 60%;
+    width: 60%;
     margin: 0 auto;
-    height: 23%;
-    color: #fff;
-    background-position-x: 93%;
+    height: 32%;
+    position: absolute;
+    top: -15%;
+    right: 0;
+    left: 0;
 }
 
 .speker img {
@@ -340,10 +331,13 @@ header {
 
 .detail {
     font-size: 2em;
-    width: 100%;
+    width: 95%;
     display: block;
-    margin-top: 3%;
+    margin-top: 6%;
     text-align: center;
+    margin: auto;
+    position: relative;
+    top: 15%;
 }
 
 .continue {
@@ -1007,20 +1001,21 @@ header {
 
 #result-gallery {
     height: 55%;
-   /* direction: rtl;*/
+    /* direction: rtl;*/
     overflow-x: scroll;
-    overflow-y: hidden; 
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
- 
-#result-gallery>* {
+
+#result-gallery > * {
     -webkit-transform: translate3d(0,0,0);
 }
+
 #result-gallery ul {
     height: 100%;
     /* width: 500px;*/
     padding-right: 4px;
-   direction: rtl;
+    direction: rtl;
 }
 
 #result-gallery ul li {

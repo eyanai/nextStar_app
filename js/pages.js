@@ -38,7 +38,7 @@ function setWaitPageWithImg(data){
       else{
         url =data.tamplateImage1;
     }
-    $("#message-with-img-title").text(title);
+    //$("#message-with-img-title").text(title);
     $("#message-with-img-text").text(text);
     $("#message-with-img-wait-text").text(info);
 
@@ -52,7 +52,7 @@ function  setWaitPageNoImg(data){
     var text = data.text;
     var info =data.info
 
-    $("#message-no-img-title").text(title);
+    //$("#message-no-img-title").text(title);
     $("#message-no-img-text").text(text);
     $("#message-with-img-wait-text").text(info);
     

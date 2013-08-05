@@ -62,6 +62,7 @@ function setRegister() {
 };
 
 function setWaitVotePage(data) {
+        console.log(data);
 
     $(".slidein").hide();
     $("#register .reMesseg .continue").show();

@@ -16,10 +16,10 @@ FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true })
 
 //listener   
-function attachEventsFacebook(){
-    $(".logFb").on("click", loginFb);
-       
-}
+//function attachEventsFacebook(){
+//    $(".logFb").on("click", loginFb);
+//       
+//}
     
 //check if login fb now
 var searchQuery=window.location.search;
