@@ -2,17 +2,31 @@ h1 {
     font-size: 1em;
 }
 
+.speker {
+    width: 87%;
+    height: 51%;
+    top: -23%;
+}
+
 
 h2 {
     font-size: 1em;
 }
+
+.massage {
+    border-top: 1px solid #005d8d;
+    border-bottom: 1px solid rgba(196,196,196,0.5);
+}
+
+
 
 message .continue h2 {
     margin-top: 3.5%;
 }
 
 .detail {
-    font-size: 1em;
+    font-size: 0.8em;
+    margin-top: 3%;
 }
 
 .slider-text {
@@ -24,21 +38,30 @@ message .continue h2 {
 }
 
 header {
-    height: 14.5%;
+    height: 17.3%;
 }
 
 section {
-    top: 14.6%;
+    top: 17.6%;
 }
 
 .slide {
-    background-size: 100% 110%;
-    top: 21%;
-    height: 73%;
+    background-size: 100% 100%;
+    top: 18.5%;
+    height: 72%;
+    left: 5.5%;
+    width: 20.5%;
 }
 
+.red .slide {
+    top: 11.5%;
+    height: 69%;
+    left: 3%;
+}
+
+
 .slide:hover {
-    background-size: 100% 110%;
+    background-size: 100% 100%;
 }
 
 .slideLeft {
@@ -84,4 +107,8 @@ section {
 
 .loginHg {
     top: 43%;
+}
+
+.live {
+    width: 7%;
 }

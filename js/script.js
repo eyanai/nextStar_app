@@ -6,7 +6,7 @@ $(document).ready(function () {
     // attachEventsFacebook();
     attachEventsRegister();
     attachEventsVote();
-    longPolling();
+    //longPolling();
 });
 
 
