@@ -19,7 +19,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -83,12 +82,13 @@ html, body {
     position: relative;
     overflow: hidden;
     /* Opera */
-    background-image: -o-linear-gradient(bottom, #007DBE 0%, #000000 61%);
+    /*background-image: -o-linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
     /* Webkit (Safari/Chrome 10) */
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #007DBE), color-stop(1, #000000));
+    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #007DBE), color-stop(1, #000000));*/
     /* Webkit (Chrome 11+) */
-    background-image: -webkit-linear-gradient(bottom, #007DBE 0%, #000000 61%);
-    background-image: linear-gradient(bottom, #007DBE 0%, #000000 61%);
+    /*background-image: -webkit-linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
+    /*background-image: linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
+	background-image: url(../images/general-background.jpg);
     font-family: Arial, Verdana, sans-serif;
     direction: rtl;
     color: #fff;
@@ -210,67 +210,161 @@ header {
     background-size: 100%;
     width: 76%;
     height: 29%;
-    position: absolute;
+    position: relative;
     top: 3%;
-    left: 16.3%;
     background-image: url(../images/singUp/logo.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    display: block;
+    margin: 0 auto;
+}
+#loginExtended, #loginReward{
+position: relative;
+
+top: 0%;
+}
+#loginExtendedBox, #loginRewardBox{
+	/* Opera */
+    background-image: -o-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #002436), color-stop(2, #000000, #01273b));/*SARA CHECK IT !*/
+    /* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    background-image: linear-gradient(bottom,  #002436 0%, #000000 72%, #01273b 100%);
+	width: 86%;
+	height: 60%;
+	margin: 68px;
+	display: block;
+	/* vertical-align: middle; */
+	/* position: absolute; */
+	border: 1px solid;
 }
 
 .loginHg {
-    position: absolute;
+    position: relative;
     color: #fff;
     /*left: 16.3%;*/
     /*	font-size:2em;
-*/ height: 10%;
-    width: 76%;
-    top: 39%;
+*/ 
+    height: 10%;
+    /* width: 76%; */
+    /* top: 39%; */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    margin: 0 15px;
+    padding: 15px 0;
+    /* left: 0; */
+    /* right: 0; */
+	text-align:right;
 }
 
-.loginHg h1 {
-    font-weight: bold;
+.loginHg .titleLogin{
+overflow:visible;    
+font-weight:normal;
+font-size: 28px;
+font-weight:normal;
+text-align:justify;
+margin-bottom:8px;
+}
+
+.loginHg .titleLoginReward{
+overflow:visible;    
+font-weight:normal;
+font-size: 28px;
+font-weight:normal;
+text-align:center;
+margin-bottom: 8px;
+padding: 10px 105px;
+}
+
+.loginHg h2 {
+overflow:visible;    
+text-align:right;
+font-size:1.5em;
+margin-bottom:10px;
+}
+.loginHg .title3{
+overflow:visible;    
+text-align:right;
+font-size:1.7em;
+padding:3px 0;
+}
+.checkboxArea{
+margin:18px 0;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:4px 9px;
+    vertical-align:middle;
+    background:url(../images/singUp/checkbox.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/singUp/checkbox.png) -19px top no-repeat;
+}	
+#notConfired{
+color:red;
+font-size:0.8em;
+text-decoration: underline;
+padding-right: 5px;
 }
 
 .loginBox {
-    position: absolute;
-    width: 69%;
-    height: 20%;
-    top: 53.3%;
-    left: 14.4%;
+    position: relative;
+    width: 96%;
+    height: 98px;
+    top: 33%;
+    margin: 0 auto;
+    /* left: 14.4%; */
     /*	font-size:2em;
-*/ font-weight: bold;
+*/ 
+    /* font-weight: bold; */
+}
+
+#loginRewardBox .logFb {
+width:50%;
+float:right;
+display:inline;
 }
 
 .logFb {
     display: block;
     width: 100%;
-    height: 40%;
-    background-image: url(../images/singUp/signin_facebook_kohav.png);
+    height: 85%;
+    font-weight: normal;
+    background-image: url(../images/singUp/signin_facebook_kohav_1.png);
     background-repeat: no-repeat;
     background-size: 100%;
     color: #fff;
     cursor: pointer;
+    font-size: 26px;
 }
 
 .fbText {
     float: left;
-    margin: 5%;
+    margin: 5% 3%;
+    /* position: absolute; */
+    /* vertical-align: middle; */
+}
+
+#loginRewardBox .login{
+width:50%;
+float:left;
+display:inline;
 }
 
 .login {
     display: block;
     width: 100%;
-    height: 40%;
-    background-image: url(../images/singUp/signin_noface_kohav.png);
+    height: 100%;
+    background-image: url(../images/singUp/signin_noface_kohav_1.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: 10%;
+    margin: 10px auto;
     color: #fff;
     position: relative;
     cursor: pointer;
@@ -281,8 +375,13 @@ header {
     top: 25%;
     text-align: center;
     width: 100%;
+    font-size: 34px;
+    font-weight: normal;
 }
 /*===============================================MASSEGE SECTION==============================================*/
+#message{
+display:none;
+}
 .messageImage, messageNoImage { /*whit image or not */
     width: 100%;
     height: 100%;

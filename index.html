@@ -20,28 +20,58 @@
     </head>
 
     <body>
-        <header class="">
+        <header class="" style="display:none">
             <figure class="header logo"></figure>
             <figure class="live"></figure>
         </header>
-        <section id="login">
+        <section id="login" style="display: block;">
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
-            <hgroup class="loginHg">
-                <h1> העונה הזו, אתם השופטים בכל ביצוע</h1>
-                <h2>ברוכים הבאים </h2>
-            </hgroup>
-            <div class="loginBox">
-                <div class="logFb">
-                    <!--<p class="fbText">כניסה עם חשבון פייסבוק</p>-->
-                </div>
-                <div class="login" onclick="Navi.goto('message')">
-                    <!--<p class="logText">אין לי פייסבוק</p>-->
-                </div>
-            </div>
+			<section id="loginExtended" style="display:none;">		
+				<div id="loginExtendedBox">		
+					<hgroup class="loginHg">
+						<div class="titleLogin"> לראשונה בעולם - בכןכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </div>
+						<h2>התחברו דרך פפיסבוק כדי לזכות בפרסים </h2>					
+						<div class="checkboxArea">
+							<input type="checkbox" id="checkbox1" name="cc" />
+							<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfired">לא אישרת את התקנון</span></br>
+							<input type="checkbox" id="checkbox2" name="cc" />
+							<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+						</div>
+					</hgroup>
+					<div class="loginRewardBox">
+						<div class="logFb">
+							<p class="fbText">התחברו עם פייסבוק כדי לזכות בפרסים</p>
+						</div>
+						<div class="login" onclick="Navi.goto('message')">
+							<p class="logText">הצביעו ללא פייסבוק</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="loginReward" style="display:block;">		
+				<div id="loginRewardBox">		
+					<hgroup class="loginHg">
+						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבו הפייסבוק שלכם </div>
+					</hgroup>
+					<div class="loginBox">
+						<div class="logFb">
+							<p class="fbText">כניסה עם פייסבוק</p>
+						</div>
+						<div class="login" onclick="Navi.goto('message')">
+							<p class="logText">הצבעה ללא פייסבוק</p>
+						</div>
+					</div>
+					<div class="checkboxArea">						
+						<input type="checkbox" id="checkbox3" name="cc" />
+						<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+					</div>
+				</div>
+			</section>
+			<div class="musix"></div>
         </section>
         <!---log in section-->
-        <section id="message">
+        <section id="message" style="display:none;">
             <div class="nextPage" data-goto="register"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
