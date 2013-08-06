@@ -285,7 +285,7 @@ header {
     width: 100%;
 }
 /*===============================================MASSEGE SECTION==============================================*/
-.messageImage, messageNoImage { /*whit image or not */
+.messageImage, .messageNoImage { /*whit image or not */
     width: 100%;
     height: 100%;
 }
@@ -388,19 +388,25 @@ header {
 .musix {
     background-image: url(../images/musix.png);
     background-size: 100% 100%;
+    width: 100%;
     height: 11%;
-    margin-top: 9%;
+    position: absolute;
+    bottom: 2.7%;
 }
 
 
 
 .messageNoImage .massage {
-    margin-top: 36%;
-    border: none;
+    margin-top: 8%;
+    height: 51.3%;
+}
+
+.messageNoImage .speker {
+    height: 23%;
+    top: -10%;
 }
 
 .messageNoImage .continue {
-    bottom: 4%;
     right: 13%;
 }
 /*=============================================REGISTER SECTION===========================================*/
@@ -452,6 +458,20 @@ header {
     background-image: url(../images/register/signin_slider_base_red.png);
     background-size: 95% 92%;
     left: 20.5%;
+    top: 62%;
+}
+
+.slidein.grey {
+    background-image: url(../images/register/signin_slider_grey.png);
+    height: 20%;
+    margin: auto;
+    width: 58%;
+    left: 21%;
+    top: 62%;
+}
+
+.slidein.grey .btn, .slidein.grey .slider-text {
+    display: none;
 }
 
 .slide {
