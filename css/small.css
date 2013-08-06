@@ -87,13 +87,14 @@ section {
 }
 
 #results .percentage {
-    margin-top: 20%;
-    font-size: 1.7em;
-    margin-left: 2%;
+    
+    font-size: 1.5em;
+   
 }
 
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
+    margin: auto;
 }
 
 #results .divideH.waiting-high {

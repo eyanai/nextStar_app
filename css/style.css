@@ -8,7 +8,7 @@
 
 
 .reMesseg .continue {
-    display: none;
+    /*display: none;*/
 }
 
 .slidein {
@@ -503,7 +503,7 @@ header {
     width: 100%;
     bottom: 0;
     background-color: rgba(0,0,0,.65);
-    min-height: 15%;
+    min-height: 11%;
 }
 
 .single {
@@ -512,6 +512,7 @@ header {
 
 #results .single .reMesseg.results.cf {
     bottom: 7%;
+    height: 15%;
 }
 
 .reMesseg .continue {
@@ -535,11 +536,10 @@ header {
 
 .songName {
     text-align: center;
-    clear: both;
-    border-top: solid 1px #545454;
-    height: 57%;
-    float: left;
-    width: 100%;
+clear: both;
+border-top: solid 1px #545454;
+height: 57%;
+width: 100%;
 }
 
 .songName h1 {
@@ -824,10 +824,12 @@ header {
 }
 /*=============================================RESULTS SECTION======================================================*/
 .resultScalaR {
-    width: 3%;
-    height: 62%;
+    background-color: rgba(0,0,0,0.5);
+width: 5%;
+height: 62.5%;
+border-radius: 6px;
     position: absolute;
-    top: 6%;
+    top: 14%;
     right: 2%;
     overflow: hidden;
 }
@@ -835,42 +837,62 @@ header {
 .resultRed {
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 72%;
+    height: 98%;
+    
+    margin: auto;
+position: relative;
+top: 1%;
 }
 
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
-    width: 100%;
+    width: 72%;
     height: 100%;
     position: absolute;
     bottom: -100%;
+    left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
 }
 
 .resultScalaL {
-    width: 3%;
-    height: 62%;
+   
     position: absolute;
-    top: 6%;
+    top: 14%;
     left: 2%;
     overflow: hidden;
+    
+    background-color: rgba(0,0,0,0.5);
+width: 5%;
+height: 62.5%;
+border-radius: 6px;
 }
 
 .resultBlue {
     background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+   width: 72%;
+    height: 98%;
+    
+    margin: auto;
+position: relative;
+top: 1%;
 }
 
 .scalaBlue {
     background-image: url(../images/results/graph_blue_on_kohav.png);
     background-repeat: no-repeat;
-    width: 100%;
+    width: 72%;
     height: 100%;
     position: absolute;
     bottom: -100%;
+    left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
 }
 
 .divide {
@@ -881,11 +903,9 @@ header {
 }
 
 .reMesseg.results .songName {
-    float: right;
     border: none;
-    width: 50%;
-    margin: 1% 5% 0 0;
-    text-align: right;
+width: 50%;
+margin: auto;
 }
 
 .percentage {
@@ -894,17 +914,24 @@ header {
     float: left;
     margin: 3% 0 0 10%;
 }
+
+#results .single .resultRed{
+    display: none;
+}
+#results .single .scalaRed{
+    display: none;
+}
 /*=======================================================RESULT BATTLE=========================================*/
 #results .divideH {
     top: 0%;
 }
 
 #results .battle .resultScalaR, #results .battle .resultScalaL {
-    top: 3%;
+    top: 14%;
 }
 
 #results .battle .reMesseg {
-    height: 17%;
+    
     bottom: 7%;
 }
 
@@ -914,30 +941,42 @@ header {
 }
 
 #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
-    text-align: right;
+    
     width: 65%;
     float: right;
     clear: both;
-    margin-right: 1%;
+    margin-right: 20%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 #results .songName1 h1, #results .songName2 h1 {
-    margin-top: 7%;
+    margin-top: 3%;
 }
 
 #results .percentage {
-    top: 25%;
+    top: 22%;
     font-size: 3em;
     position: absolute;
-    left: 2%;
     margin: 0;
+   
 }
-
+#results .single .percentage {
+    left: 1%;
+}
 #results .songName2 .percentage {
     color: #ff0060;
+}
+
+#results  #results-perc-first{
+    float: none;
+right:1%;
+}
+#results  #results-perc-second{
+    float: none;
+left: 1%;
+color: #ff0060;
 }
 /*================================================GALLARY SECTION================================================*/
 #gallery h2 {
@@ -1089,6 +1128,7 @@ header {
 #result-gallery .percentage {
     font-size: 2em;
     margin-right: 33%;
+    float: none;
 }
 
 .gallery-vote-battle {
