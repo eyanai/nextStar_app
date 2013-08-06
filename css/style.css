@@ -375,7 +375,7 @@ cursor: pointer;
 text-align:center;
 }
 
-#loginRewardBox.login:hover, #loginExtendedBox .login:hover{
+#loginRewardBox .login:hover, #loginExtendedBox .login:hover{
     opacity: 0.8;
 }
 
@@ -1320,18 +1320,6 @@ color: #ff0060;
     height: 100%;
     position: relative;
 }
-#download-music{
-    width: 83%;
-    height: 9.3%;
-    text-align: center;
-    
-    
-background: -moz-linear-gradient(top, #2183b7 0%, #2989d8 50%, #207cca 50%, #005987 100%, #005987 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2183b7), color-stop(50%,#2989d8), color-stop(50%,#207cca), color-stop(100%,#005987), color-stop(100%,#005987)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* IE10+ */
-background: linear-gradient(to bottom, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* W3C */
 
 #download-music {
     width: 83%;
@@ -1413,8 +1401,8 @@ cursor: pointer;
 	position: relative;
 }
 
-#result-gallery .logFb .logFb-text{
-    font-size: 1.9em;
+#gallery .logFb .logFb-text{
+    font-size: 1.8em;
     display: inline-block;
     padding-right: 9.3%;
     top: 25%;
