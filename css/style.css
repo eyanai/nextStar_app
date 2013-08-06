@@ -6,8 +6,9 @@
 
 @import url("animation.css");
 
+
 .reMesseg .continue {
-    /*display: none;*/
+    display: none;
 }
 
 .slidein {
@@ -19,6 +20,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -97,7 +99,7 @@ html, body {
 
 section {
     display: none;
-    height: 75%;
+    height: 71.9%;
     width: 100%;
     position: absolute;
     top: 14.9%;
@@ -113,8 +115,9 @@ section {
 
 #banner {
     position: absolute;
-    top: 90%;
-    height: 10%;
+    /*top: 90%;*/
+    bottom: 0;
+    height: 10.5%;
     width: 100%;
     display: block;
     border-top: solid 1px #00486d;
@@ -176,7 +179,7 @@ header {
     position: relative;
     width: 100%;
     height: 14.8%;
-    border-bottom: solid 1px #0182c3;
+    border-bottom: solid 1px #006599;
 }
 
 .header.logo {
@@ -194,10 +197,10 @@ header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: right center;
-    width: 17%;
+    width: 7%;
     height: 28%;
     position: absolute;
-    left: 5%;
+    left: 2.5%;
     top: 65%;
     -webkit-animation: liveShow 1s infinite; /* Safari and Chrome */
     animation: liveShow 1s infinite;
@@ -205,23 +208,20 @@ header {
 /*================================================LOG IN SECTION=====================================*/
 
 .logo.login {
-    background-image: url(../images/singUp/logo.png);
-    background-repeat: no-repeat;
     background-size: 100%;
     width: 76%;
     height: 29%;
     position: relative;
     top: 3%;
-    background-image: url(../images/singUp/logo.png);
+	background-image: url(../images/singUp/logo.png);
     background-repeat: no-repeat;
     background-size: 100%;
     display: block;
     margin: 0 auto;
 }
 #loginExtended, #loginReward{
-position: relative;
-
-top: 0%;
+	position: relative;
+	top: 0%;
 }
 #loginExtendedBox, #loginRewardBox{
 	/* Opera */
@@ -235,34 +235,28 @@ top: 0%;
 	height: 60%;
 	margin: 68px;
 	display: block;
-	/* vertical-align: middle; */
-	/* position: absolute; */
 }
 
 .loginHg {
     position: relative;
     color: #fff;
-    /*left: 16.3%;*/
-    /*	font-size:2em;
-*/ 
-    height: 10%;
-    /* width: 76%; */
-    /* top: 39%; */
     text-align: center;
     margin: 0 15px;
     padding: 15px 0;
-    /* left: 0; */
-    /* right: 0; */
 	text-align:right;
+}
+
+#loginRewardBox.loginHg {
+height: 59%;
 }
 
 .loginHg .titleLogin{
 overflow:visible;    
 font-weight:normal;
-font-size: 28px;
-font-weight:normal;
-text-align:justify;
-margin-bottom:8px;
+font-size: 1.8em;
+font-weight: normal;
+/* text-align:justify; */
+/* margin-bottom:8px; */
 }
 
 .loginHg .titleLoginReward{
@@ -271,15 +265,12 @@ font-weight:normal;
 font-size: 28px;
 font-weight:normal;
 text-align:center;
-margin-bottom: 8px;
-padding: 10px 105px;
+margin: 14px 0;
+padding: 25px 105px;
 }
 
-.loginHg h2 {
-overflow:visible;    
-text-align:right;
-font-size:1.5em;
-margin-bottom:10px;
+#loginExtendedBox .loginHg {
+height:28%;
 }
 .loginHg .title3{
 overflow:visible;    
@@ -287,13 +278,23 @@ text-align:right;
 font-size:1.7em;
 padding:3px 0;
 }
+
 .checkboxArea{
-margin:18px 0;
+margin-top: 10px;
+padding-right: 10px;
+position: relative;
+font-size: 1.3em;
+}
+
+.facebookArea{
+	position: relative;
+	height: 42%;
+	margin: 22px auto;
+	width: 95%;
 }
 
 #loginRewardBox .checkboxArea{
 position:relative;
-margin-top:100px;
 }
 input[type="checkbox"] {
     display:none;
@@ -310,38 +311,51 @@ input[type="checkbox"] + label span {
 input[type="checkbox"]:checked + label span {
     background:url(../images/singUp/checkbox.png) -19px top no-repeat;
 }	
-#notConfired{
-color:red;
-font-size:0.8em;
-text-decoration: underline;
-padding-right: 5px;
+
+#notConfirmed{
+	color:red;
+	font-size:0.8em;
+	text-decoration: underline;
+	padding-right: 5px;
 }
 
 .loginBox {
     position: relative;
     width: 96%;
-    height: 98px;
-    top: 33%;
+    height: 17%;
     margin: 0 auto;
-    /* left: 14.4%; */
-    /*	font-size:2em;
-*/ 
-    /* font-weight: bold; */
+}
+
+#loginExtendedBox .logFb {
+	width:100%;	
+	height: 40%;
 }
 
 #loginRewardBox .logFb {
-width: 48%;
-float:right;
-display:inline;
+	width: 48%;
+	height: 90%;
+	float:right;
+	display:inline;
 }
 
-#loginRewardBox .logText{
-font-size: 1.5em;
-margin: 4% 0;
-top: 0%;
+#loginExtendedBox .logFb .logFb-text{
+    font-size: 1.7em;
+    display: inline-block;
+    padding-right: 8.3%;
+    top: 25%;
+    position: relative;
+    /* text-align: center; */
 }
 
-.logFb {
+#loginRewardBox .logFb .logFb-text{
+    font-size: 1.9em;
+    display: inline-block;
+    padding-right: 9.3%;
+    top: 25%;
+    position: relative;
+}
+
+/*.logFb {
     display: block;
     width: 100%;
     height: 85%;
@@ -352,23 +366,47 @@ top: 0%;
     color: #fff;
     cursor: pointer;
     font-size: 26px;
-}
+}*/
 
 .fbText {
     float: left;
     margin: 5% 3%;
-    /* position: absolute; */
-    /* vertical-align: middle; */
+}
+
+#loginRewardBox .login, #loginExtendedBox .login
+{
+background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
+background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
+border: 1px solid rgba(0,0,0,0.5);
+margin: auto;
+border-radius: 3px;
+cursor: pointer;
+text-align:center;
+}
+
+#loginRewardBox.login:hover, #loginExtendedBox .login:hover{
+    opacity: 0.8;
 }
 
 #loginRewardBox .login{
 width: 48%;
+height: 90%;
 float:left;
 display:inline;
 margin: 0;
 }
 
-.login {
+#loginExtendedBox .login{
+	width:100%;
+	height: 40%;
+	margin-top: 2%;
+	background-color: #01273b;
+}
+/*.login {
     display: block;
     width: 100%;
     height: 100%;
@@ -379,21 +417,17 @@ margin: 0;
     color: #fff;
     position: relative;
     cursor: pointer;
-}
+}*/
 
 .logText {
-    position: absolute;
+    font-size: 1.7em;
+    display: inline-block;
+    position: relative;
     top: 25%;
-    text-align: center;
-    width: 100%;
-    font-size: 34px;
     font-weight: normal;
 }
 /*===============================================MASSEGE SECTION==============================================*/
-#message{
-display:none;
-}
-.messageImage, messageNoImage { /*whit image or not */
+.messageImage, .messageNoImage { /*whit image or not */
     width: 100%;
     height: 100%;
 }
@@ -405,7 +439,7 @@ display:none;
     background-position: right top, center -150%;
     display: block;
     width: 89%;
-    height: 50%;
+    height: 45%;
     margin: auto;
     margin-top: 2%;
     /*z-index: 1;*/
@@ -493,24 +527,40 @@ display:none;
     display: inline-block;
 }
 
+.musix {
+    background-image: url(../images/musix.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 11%;
+    position: absolute;
+    bottom: 2.7%;
+}
+
+
+
 .messageNoImage .massage {
-    margin-top: 36%;
-    border: none;
+    margin-top: 8%;
+    height: 51.3%;
+}
+
+.messageNoImage .speker {
+    height: 23%;
+    top: -10%;
 }
 
 .messageNoImage .continue {
-    bottom: 4%;
     right: 13%;
 }
 /*=============================================REGISTER SECTION===========================================*/
 .topMenu {
     width: 100%;
     height: 8%;
-    background-image: url(../images/register/koteret_bgpixel_kohav_full.png);
+    background-color: rgba(0,32,50,0.6);
+    /*background-image: url(../images/register/koteret_bgpixel_kohav_full.png);*/
     padding: 0 0 0 0;
     line-height: 3em;
     background-size: 100% 100%;
-    border-bottom: 2px solid #00a9ff;
+    border-bottom: 1px solid #005078;
     position: relative;
     top: 0;
     z-index: 1;
@@ -524,29 +574,46 @@ display:none;
     background-image: url(../images/register/kohav2.jpg);
     background-repeat: no-repeat;
     width: 100%;
-    height: 94%;
+    height: 100%;
     background-size: 100% 100%;
     position: relative;
-    /*background-size: 100% 97%;
-    width: 100%;
-    height: 100%;*/
-    /*margin-top: 8%;*/
+    top: -8.3%;
 }
 
 #result .contestant {
-    margin-top: 8%;
+    margin-top: 8.1%;
 }
 
 .slidein {
     background-image: url(../images/register/signin_slider_base.png);
     background-repeat: no-repeat;
-    height: 20%;
-    width: 70%;
+    height: 18%;
+    width: 62%;
     background-size: 100%;
     position: absolute;
-    left: 15%;
+    left: 19%;
     top: 61%;
     overflow: hidden;
+}
+
+.slidein.red {
+    background-image: url(../images/register/signin_slider_base_red.png);
+    background-size: 95% 92%;
+    left: 20.5%;
+    top: 62%;
+}
+
+.slidein.grey {
+    background-image: url(../images/register/signin_slider_grey.png);
+    height: 20%;
+    margin: auto;
+    width: 58%;
+    left: 21%;
+    top: 62%;
+}
+
+.slidein.grey .btn, .slidein.grey .slider-text {
+    display: none;
 }
 
 .slide {
@@ -1017,7 +1084,7 @@ display:none;
 /*================================================GALLARY SECTION================================================*/
 #gallery h2 {
     text-align: center;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 /*.swiper-container {
@@ -1110,11 +1177,12 @@ display:none;
 
 
 #result-gallery {
-    height: 55%;
+    height: 33.9%;
     /* direction: rtl;*/
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    margin-top: 1%;
 }
 
 #result-gallery > * {
@@ -1129,16 +1197,18 @@ display:none;
 }
 
 #result-gallery ul li {
-    height: 100%;
+    height: 99%;
     /*width: 45.6%;*/
     position: relative;
     /* display: inline-block; */
     /*width: 146px;*/
     border: solid 1px #898788;
-    margin-right: 2px;
+    margin-right: 1px;
     float: right;
 }
-
+#result-gallery h1,#result-gallery h2 {
+    margin-top: 0;
+}
 .gallery-vote-single {
 }
 
@@ -1159,6 +1229,8 @@ display:none;
 }
 
 #result-gallery .percentage {
+    font-size: 2em;
+    margin-right: 33%;
 }
 
 .gallery-vote-battle {
@@ -1182,10 +1254,98 @@ display:none;
     height: 100%;
     position: relative;
 }
+#download-music{
+    width: 83%;
+    height: 9.3%;
+    text-align: center;
+    
+    
+background: -moz-linear-gradient(top, #2183b7 0%, #2989d8 50%, #207cca 50%, #005987 100%, #005987 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2183b7), color-stop(50%,#2989d8), color-stop(50%,#207cca), color-stop(100%,#005987), color-stop(100%,#005987)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* IE10+ */
+background: linear-gradient(to bottom, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* W3C */
 
+    border: 1px solid rgba(0,0,0,0.5);
+margin: auto;
+border-radius: 3px;
+margin-top: 1.8%;
+position: relative;
+cursor: pointer;
+}
+#download-music:hover{
+    opacity: 0.8;
+}
 
+#download-music .press{
+     opacity: 0.8;
+}
 
+.icon {
+    background-repeat: no-repeat;
+width: 9.3%;
+height: 100%;
+display: inline-block;
+position: absolute;
+right: 0;
+background-position: center;
 
+background-color: rgba(0, 0, 0,0.1);
+}
+#download-music .icon{
+    background-image: url(../images/gallery/kohav_iphone_vert17.png);
+
+background-size: 100% 71%;
+border-left: 1px solid #196085;
+
+}
+#download-music-text{
+    font-size: 2em;
+    
+    display: inline-block;
+    top: 25%;  position: relative;
+}
+.logFb {
+    background: -moz-linear-gradient(top, #39579a 0%, #005987 100%, #2a447c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39579a), color-stop(100%,#005987), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #39579a 0%,#005987 100%,#2a447c 100%); /* W3C */
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.5);
+margin: auto;
+border-radius: 3px;
+cursor: pointer;
+}
+.logFb:hover{
+    opacity: 0.8;
+}
+
+.logFb .press{
+     opacity: 0.8;
+}
+
+.logFb .icon{
+    background-image: url(../images/gallery/fb_icon.png);
+	border-left: 1px solid #196085;	
+}
+
+#result-gallery .logFb{
+	margin-top: 1.8%;
+	position: relative;
+}
+
+#result-gallery .logFb .logFb-text{
+    font-size: 1.9em;
+    display: inline-block;
+    padding-right: 9.3%;
+    top: 25%;
+    position: relative;
+	width: 83%;
+    height: 9.3%;
+}
 
 
 
