@@ -237,7 +237,6 @@ top: 0%;
 	display: block;
 	/* vertical-align: middle; */
 	/* position: absolute; */
-	border: 1px solid;
 }
 
 .loginHg {
@@ -291,6 +290,11 @@ padding:3px 0;
 .checkboxArea{
 margin:18px 0;
 }
+
+#loginRewardBox .checkboxArea{
+position:relative;
+margin-top:100px;
+}
 input[type="checkbox"] {
     display:none;
 }
@@ -326,9 +330,15 @@ padding-right: 5px;
 }
 
 #loginRewardBox .logFb {
-width:50%;
+width: 48%;
 float:right;
 display:inline;
+}
+
+#loginRewardBox .logText{
+font-size: 1.5em;
+margin: 4% 0;
+top: 0%;
 }
 
 .logFb {
@@ -352,9 +362,10 @@ display:inline;
 }
 
 #loginRewardBox .login{
-width:50%;
+width: 48%;
 float:left;
 display:inline;
+margin: 0;
 }
 
 .login {
