@@ -1120,32 +1120,69 @@ background: -o-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 1
 background: -ms-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* IE10+ */
 background: linear-gradient(to bottom, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* W3C */
 
-    border: 1px solid #000000;
+    border: 1px solid rgba(0,0,0,0.5);
 margin: auto;
 border-radius: 3px;
 margin-top: 1.8%;
 position: relative;
 }
-#download-music #icon{
-    background-image: url(../images/gallery/kohav_iphone_vert17.png);
-background-repeat: no-repeat;
+
+.icon {
+    background-repeat: no-repeat;
 width: 9.3%;
 height: 100%;
 display: inline-block;
 position: absolute;
 right: 0;
 background-position: center;
-background-size: 100% 71%;
-border-left: 1px solid #196085;
+
 background-color: rgba(0, 0, 0,0.1);
 }
+#download-music .icon{
+    background-image: url(../images/gallery/kohav_iphone_vert17.png);
+
+background-size: 100% 71%;
+border-left: 1px solid #196085;
+
 }
 #download-music-text{
     font-size: 2em;
     
     display: inline-block;
+    top: 25%;  position: relative;
+}
+.logFb {
+    background: -moz-linear-gradient(top, #39579a 0%, #005987 100%, #2a447c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39579a), color-stop(100%,#005987), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #39579a 0%,#005987 100%,#2a447c 100%); /* W3C */
+    width: 83%;
+    height: 9.3%;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.5);
+margin: auto;
+border-radius: 3px;
+margin-top: 1.8%;
+position: relative;
+
+}
+.logFb .icon{
+    background-image: url(../images/gallery/fb_icon.png);
+
+
+border-left: 1px solid #196085;
 }
 
+.logFb .logFb-text{
+    font-size: 1.9em;
+    
+    display: inline-block;
+    padding-right: 9.3%;
+    top: 25%;
+    position: relative;
+}
 
 
 
