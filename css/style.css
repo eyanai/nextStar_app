@@ -1040,6 +1040,7 @@ header {
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    margin-top: 1%;
 }
 
 #result-gallery > * {
@@ -1054,16 +1055,18 @@ header {
 }
 
 #result-gallery ul li {
-    height: 100%;
+    height: 99%;
     /*width: 45.6%;*/
     position: relative;
     /* display: inline-block; */
     /*width: 146px;*/
     border: solid 1px #898788;
-    margin-right: 2px;
+    margin-right: 1px;
     float: right;
 }
-
+#result-gallery h1,#result-gallery h2 {
+    margin-top: 0;
+}
 .gallery-vote-single {
 }
 
@@ -1084,6 +1087,8 @@ header {
 }
 
 #result-gallery .percentage {
+    font-size: 2em;
+    margin-right: 33%;
 }
 
 .gallery-vote-battle {
@@ -1125,6 +1130,14 @@ margin: auto;
 border-radius: 3px;
 margin-top: 1.8%;
 position: relative;
+cursor: pointer;
+}
+#download-music:hover{
+    opacity: 0.8;
+}
+
+#download-music .press{
+     opacity: 0.8;
 }
 
 .icon {
@@ -1166,8 +1179,16 @@ margin: auto;
 border-radius: 3px;
 margin-top: 1.8%;
 position: relative;
-
+cursor: pointer;
 }
+.logFb:hover{
+    opacity: 0.8;
+}
+
+.logFb .press{
+     opacity: 0.8;
+}
+
 .logFb .icon{
     background-image: url(../images/gallery/fb_icon.png);
 
