@@ -269,8 +269,9 @@ padding: 25px 105px;
 }
 
 #loginExtendedBox .loginHg {
-height:28%;
+height: 21%;
 }
+
 .loginHg .title3{
 overflow:visible;    
 text-align:right;
@@ -279,25 +280,76 @@ padding:3px 0;
 }
 
 .checkboxArea{
-margin-top: 10px;
-padding-right: 10px;
-position: relative;
-font-size: 1.3em;
+ margin-top: 10px; 
+ height: 20%; 
+ position: relative; 
+ font-size: 1.3em; 
+ direction: rtl;
+}
+
+#login .checkboxArea{
+padding-right: 10px; 
 }
 
 .facebookArea{
 	position: relative;
 	height: 42%;
-	margin: 22px auto;
-	width: 95%;
+	margin: 0 auto;
+	width: 96%;
 }
 
 #loginRewardBox .checkboxArea{
 position:relative;
 margin:  14px 0;
 }
+
+
+#checkbox1 {
+	border: 2px solid red;
+}
+
+input{
+	border: 2px solid grey;
+	padding: 0.5em;
+	font-size: 15px;
+	line-height: 1.2em;
+	width: 80%;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	-webkit-appearance: none;
+	-webkit-box-shadow: 1px 1px 1px #fff;
+	-webkit-border-radius: 0.5em;
+}
+
+input[type=checkbox]{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1em;
+    padding: 0;
+	margin:5px;
+    width: 1.25em;
+    height: 1.25em;
+    -webkit-border-radius: 0.25em;
+    vertical-align: text-top;
+  }
+  
+input[type=checkbox]:checked{
+	background:url(../images/singUp/checkbox.png) -19px top no-repeat;
+	border:1px solid grey;
+	z-index:2;
+ }
+ /*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
+ #checkbox1 input[type=checkbox]:checked:after{
+	content="לא אישרת את התקנון!";
+	text-decoration:underline;
+	color:red;
+	border:2px solid red;
+	z-index:2;
+ }
+  
+ /*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
 input[type="checkbox"] {
-    display:none;
+    display:block;
 }
 input[type="checkbox"] + label span {
     display:inline-block;
@@ -310,7 +362,7 @@ input[type="checkbox"] + label span {
 }
 input[type="checkbox"]:checked + label span {
     background:url(../images/singUp/checkbox.png) -19px top no-repeat;
-}	
+}	*/
 
 #notConfirmed{
 	color:red;
@@ -582,8 +634,15 @@ margin: 0;
     background-size: 100%;
     position: absolute;
     left: 19%;
-    top: 61%;
     overflow: hidden;
+}
+
+#registerSingle .slidein {
+    top: 61%;
+}
+
+#registerBattle .slidein {
+    top: 69%;
 }
 
 .slidein.red {
@@ -638,6 +697,10 @@ margin: 0;
     min-height: 11%;
 }
 
+#registerBattle .reMesseg {
+    width: 50%;
+}
+
 .single {
     display: none;
 }
@@ -668,28 +731,28 @@ margin: 0;
 
 .songName {
     text-align: center;
-clear: both;
-border-top: solid 1px #545454;
-height: 57%;
-width: 100%;
+	clear: both;
+	border-top: solid 1px #545454;
+	height: 57%;
+	width: 100%;
+}
+
+#registerBattle .songName {
+position:relative;	
+
 }
 
 .songName h1 {
     margin-top: 3%;
 }
 
+.registerBattle{
+
+}
+
+
+
 /*================================================VOTE SECTION=====================================*/
-#vote{
-	display:block;
-}
-
-#vote .battle{
-	display:block;
-}
-
-#vote .single{
-	/*display:block;*/
-}
 
 .single, .battle {
     position: relative;
@@ -801,12 +864,20 @@ width: 100%;
     overflow: hidden;
 }
 
-.contestant1 .slideGo:before, .contestant1 .slideStay:before{
+.contestant .slideGo:before, .contestant1 .slideGo:before, .contestant1 .slideStay:before{
 	left: 0;
 }
 
-.contestant2 .slideGo:before, .contestant2 .slideStay:before{
+.contestant .slideGo:before{
+	left: -15px;
+}
+
+.contestant .slideStay:before, .contestant2 .slideGo:before, .contestant2 .slideStay:before{
 	right: 0;
+}
+
+.contestant .slideGo:before, .contestant .slideStay:before{
+	top:15px;
 }
 
 /*.slideGo:before {
@@ -1378,13 +1449,14 @@ color: #ff0060;
 }
 
 .goodbyeBox{
-margin:20px auto;
-height:40%;
+margin: 20px auto;
+height:24%;
+width: 77%;
 }
 
 #download-music {
-    width: 83%;
-    height: 9.3%;
+    width: 100%;
+    height: 33%;
     text-align: center;
     background: -moz-linear-gradient(top, #2183b7 0%, #2989d8 50%, #207cca 50%, #005987 100%, #005987 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2183b7), color-stop(50%,#2989d8), color-stop(50%,#207cca), color-stop(100%,#005987), color-stop(100%,#005987)); /* Chrome,Safari4+ */
@@ -1421,8 +1493,11 @@ background-color: rgba(0, 0, 0,0.1);
 #download-music .icon{
     background-image: url(../images/gallery/kohav_iphone_vert17.png);
 
-background-size: 100% 71%;
-border-left: 1px solid #196085;
+
+    background-size: 60% 100%;
+
+    width: 20%;
+    border-left: 1px solid #196085;
 
 }
 
@@ -1457,8 +1532,16 @@ border-left: 1px solid #196085;
 }
 
 #result-gallery .logFb{
-	margin-top: 1.8%;
+	margin: 10px auto;
 	position: relative;
+	height:37%;
+}
+
+#gallery .logFb{
+	height:37%;
+	width: 100%;
+	margin:2% auto;
+	
 }
 
 #gallery .logFb .logFb-text{
@@ -1515,3 +1598,38 @@ border-left: 1px solid #196085;
     right: 90%;
 }
 /*-----------------------------------------------------------------------------------------*/
+#vote{
+	display:none;
+}
+
+#login{
+	display:block;
+}
+
+#loginExtended{
+	display:none;
+}
+
+#loginReward{
+	display:block;
+}
+
+#vote .battle{
+	display:block;
+}
+
+#vote .single{
+	display:none;
+}
+
+#register{
+	display:none;
+}
+
+#registerSingle{
+display:none;
+}
+
+#registerBattle{
+display:block;
+}

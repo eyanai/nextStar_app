@@ -33,16 +33,18 @@
 					<hgroup class="loginHg">
 						<div class="titleLogin"> לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים </div>
 					</hgroup>
-					<div class="checkboxArea">
-						<input type="checkbox" id="checkbox1"/>
-						<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון</span></br>
-						<input type="checkbox" id="checkbox2"/>
-						<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-					</div>
-					<div class="facebookArea">
-						<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-						<div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
-					</div>
+					<form name="" action="" method="">
+						<div class="checkboxArea">
+							<input type="checkbox" id="checkbox1"/>
+							<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><a id="notConfirmed" href="">!לא אישרת את התקנון</a></br>
+							<input type="checkbox" id="checkbox2"/>
+							<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+						</div>
+						<div class="facebookArea">
+							<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+							<div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
+						</div>
+					</form>
 				</div>
 			</section>
 			<section id="loginReward">		
@@ -107,32 +109,74 @@
             <nav class="topMenu">
                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
             </nav>
-            <div id="register-single-img" class="contestant">
-                <div class="slidein">
-                    <div class="slide btn"></div>
-                    <div class="slider-text">כניסה להצבעה</div>
-                </div>
-                <div class="reMesseg cf">
-                    <div class="continue">
-                        <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                        <figure class="contIcons"></figure>
-                    </div>
-                    <div class="songName">
-                        <h1 id="register-comp-name-single">דוד לוי</h1>
-                        <h2 id="register-song-name-single">ילדות נשכחת</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="reMesseg cf">
-                <div class="continue">
-                    <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                    <figure class="contIcons"></figure>
-                </div>
-                <div class="songName">
-                    <h1 id="register-comp-name-single">דוד לוי</h1>
-                    <h2 id="register-song-name-single">ילדות נשכחת</h2>
-                </div>
-            </div>
+			<div id="registerSingle">
+				<div id="register-single-img" class="contestant">
+					<div class="slidein">
+						<div class="slide btn"></div>
+						<div class="slider-text">כניסה להצבעה</div>
+					</div>
+					<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-single">דוד לוי</h1>
+							<h2 id="register-song-name-single">ילדות נשכחת</h2>
+						</div>
+					</div>
+				</div>
+				<!--<div class="reMesseg cf">
+					<div class="continue">
+						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+						<figure class="contIcons"></figure>
+					</div>
+					<div class="songName">
+						<h1 id="register-comp-name-single">דוד לוי</h1>
+						<h2 id="register-song-name-single">ילדות נשכחת</h2>
+					</div>
+				</div>-->
+			</div>
+			<div id="registerBattle">
+				<div class="slidein">
+					<div class="slide btn"></div>
+					<div class="slider-text">כניסה להצבעה</div>
+				</div>
+				<div id="register-img-first" class="contestant1">
+					<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-battle">דוד לוי</h1>
+							<h2 id="register-song-name-battle">ילדות נשכחת</h2>
+						</div>
+					</div>
+				</div>
+				<div id="register-img-second" class="contestant2">
+					<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-single">מרינה מקסימיליאן בלומין</h1>
+							<h2 id="register-song-name-single">רוצי שמוליק קורא לך</h2>
+						</div>
+					</div>
+				</div>
+				<!--<div class="reMesseg cf">
+					<div class="continue">
+						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+						<figure class="contIcons"></figure>
+					</div>
+					<div class="songName">
+						<h1 id="register-comp-name-single">דוד לוי</h1>
+						<h2 id="register-song-name-single">ילדות נשכחת</h2>
+					</div>
+				</div>-->
+			</div>
 
         </section>
         <!---register  section-->
@@ -475,6 +519,10 @@
 			<div class="goodbyeBox">
 				<div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
 				<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+				<div class="checkboxArea">						
+					<input type="checkbox" id="checkbox3" name="cc" />
+					<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+				</div>
 			</div>
             <div class="musix"></div>
   </div>
