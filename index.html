@@ -25,10 +25,10 @@
             <figure class="header logo"></figure>
             <figure class="live"></figure>
         </header>
-        <section id="login" style="display: block;">
+        <section id="login">
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
-			<section id="loginExtended" style="display:block;">		
+			<section id="loginExtended">		
 				<div id="loginExtendedBox">		
 					<hgroup class="loginHg">
 						<div class="titleLogin"> לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים </div>
@@ -45,15 +45,13 @@
 					</div>
 				</div>
 			</section>
-			<section id="loginReward" style="display:none;">		
+			<section id="loginReward">		
 				<div id="loginRewardBox">		
 					<hgroup class="loginHg">
 						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבו הפייסבוק שלכם </div>
 					</hgroup>
 					<div class="loginBox">
-						<div class="logFb">
-							<p class="logFb-text">כניסה עם פייסבוק</p>
-						</div>
+						<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
 						<div class="login" onclick="Navi.goto('message')">
 							<p class="logText">הצבעה ללא פייסבוק</p>
 						</div>
@@ -186,33 +184,29 @@
                     <h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
                 </nav>
                 <div id="vote-img-first" class="contestant1">
-                    <div class="slideTopbattle">
-                        <div class="slideStay btn">
-                            <h1>נשאר</h1>
-                            <div class="love"></div>
-                        </div>
+					<div class="slideTopbattle">
+                        <div class="slideGo btn"></div>
+						<h1>הולך</h1>
+						<div class="hate"></div>
                     </div>
                     <div class="slideDownbattle">
-                        <div class="slideGo btn">
-                            <h1>הולך</h1>
-                            <div class="hate"></div>
-                        </div>
+                        <div class="slideStay btn"></div>
+						<h1>נשאר</h1>
+						<div class="love"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
                 </div>
                 <div id="vote-img-second" class="contestant2">
                     <div class="slideTopbattle">
-                        <div class="slideStay btn">
-                            <h1>נשאר</h1>
-                            <div class="love"></div>
-                        </div>
+                        <div class="slideGo btn"></div>
+						<h1>הולך</h1>
+						<div class="hate2"></div>
                     </div>
-                    <div class="slideDownbattle">
-                        <div class="slideGo btn">
-                            <h1>הולך</h1>
-                            <div class="hate2"></div>
-                        </div>
+					<div class="slideDOwnbattle">
+                        <div class="slideStay btn"></div>
+						<h1>נשאר</h1>
+						<div class="love"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
@@ -478,9 +472,10 @@
                                                             -->
 
             <!--<div class="pagination"></div>-->
-
-            <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
-            <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+			<div class="goodbyeBox">
+				<div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
+				<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+			</div>
             <div class="musix"></div>
   </div>
         </section>

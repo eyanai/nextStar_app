@@ -66,20 +66,21 @@ section {
 
 .slideLeft {
     background-size: 100% 112%;
-    height: 23%;
+    /*height: 23%;*/
+	 height: 18%;
 }
 
 .slideRight {
     background-size: 100% 112%;
-    height: 23%;
+    height: 18%;
 }
 
 .slideStay {
-    top: 26%;
+    top: 21%;
 }
 
 .slideGo {
-    top: 26%;
+    top: 21%;
 }
 
 .slideStay h1 {
