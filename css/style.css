@@ -224,6 +224,8 @@ header {
 	top: 0%;
 }
 #loginExtendedBox, #loginRewardBox{
+	position: relative;
+	top: 0%;
 	/* Opera */
     background-image: -o-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
     /* Webkit (Safari/Chrome 10) */
@@ -232,7 +234,7 @@ header {
 	background-image: -webkit-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
     background-image: linear-gradient(bottom,  #002436 0%, #000000 72%, #01273b 100%);
 	width: 86%;
-	height: 60%;
+	height: 44%;
 	margin: 68px auto;
 	display: block;
 }
@@ -254,7 +256,7 @@ overflow:visible;
 font-weight:normal;
 font-size: 1.8em;
 font-weight: normal;
-/* text-align:justify; */
+padding: 0 15px;
 /* margin-bottom:8px; */
 }
 
@@ -309,27 +311,24 @@ margin:  14px 0;
 }
 
 input{
-	border: 2px solid grey;
-	padding: 0.5em;
+	border: 1.5px solid grey;
 	font-size: 15px;
 	line-height: 1.2em;
 	width: 80%;
-	background: #fff;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
 	-webkit-appearance: none;
-	-webkit-box-shadow: 1px 1px 1px #fff;
 	-webkit-border-radius: 0.5em;
 }
 
 input[type=checkbox]{
     display: inline-block;
-    font-size: 15px;
+    /* font-size: 15px; */
     line-height: 1em;
     padding: 0;
-	margin:5px;
+    margin:5px;
     width: 1.25em;
     height: 1.25em;
-    -webkit-border-radius: 0.25em;
+    -webkit-border-radius: 0.35em;
     vertical-align: text-top;
   }
   
@@ -339,13 +338,13 @@ input[type=checkbox]:checked{
 	z-index:2;
  }
  /*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
- #checkbox1 input[type=checkbox]:checked:after{
+ /*#checkbox1 input[type=checkbox]:checked:after{
 	content="לא אישרת את התקנון!";
 	text-decoration:underline;
 	color:red;
 	border:2px solid red;
 	z-index:2;
- }
+ }*/
   
  /*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
 input[type="checkbox"] {
@@ -516,8 +515,9 @@ margin: 0;
 }
 
 .detail {
-    font-size: 2em;
+    font-size: 1.8em;
     width: 95%;
+    height: 66%;
     display: block;
     margin-top: 6%;
     text-align: center;
@@ -548,6 +548,7 @@ margin: 0;
 
 #message .continue h2 {
     margin-top: 3%;
+    font-size: 1.6em;
 }
 
 .messageImage .continue {
@@ -565,17 +566,21 @@ margin: 0;
     background-repeat: no-repeat;
     /*float: right;
 	margin: 5px 0 0 0;*/
-    margin-top: 1%;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .musix {
     background-image: url(../images/musix.png);
     background-size: 100% 100%;
     width: 100%;
-    height: 12%;
+    height: 14%;
     position: absolute;
     bottom: 2.7%;
+}
+
+#login .musix {
+	height: 12%;
 }
 
 
@@ -596,7 +601,7 @@ margin: 0;
 /*=============================================REGISTER SECTION===========================================*/
 .topMenu {
     width: 100%;
-    height: 8%;
+    height: 6%;
     background-color: rgba(0,32,50,0.6);
     /*background-image: url(../images/register/koteret_bgpixel_kohav_full.png);*/
     padding: 0 0 0 0;
@@ -610,6 +615,13 @@ margin: 0;
 
 .topMenu h1 {
     text-align: center;
+	font-size:100%;
+}
+
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
+height: 80%;
+padding-top: 1%;
+font-size: 1.5em;
 }
 
 .contestant {
@@ -619,7 +631,7 @@ margin: 0;
     height: 100%;
     background-size: 100% 100%;
     position: relative;
-    top: -8.3%;
+/*    top: -8.3%;*/
 }
 
 #result .contestant {
@@ -743,7 +755,11 @@ position:relative;
 }
 
 .songName h1 {
-    margin-top: 3%;
+    margin-top: 2%;
+}
+
+.songName , .songName1, .songName2{
+    font-size: 1.5em;
 }
 
 .registerBattle{
@@ -783,12 +799,15 @@ position:relative;
     height: 18%;
 }
 
-.slideStay {
+.slideGo , .slideStay {
     width: 80%;
-    height: 66%;
-    left: -13%;
-    top: 17%;
+    height: 100%;
+    top: 7%;
     position: absolute;
+}
+
+.slideStay {
+    left: -15%;
 }
 
 .slideStay {
@@ -855,13 +874,6 @@ position:relative;
     bottom: 25%;
     background-size: 100% 100%;
     height: 18%;
-}
-
-.slideGo {
-    width: 80%;
-    height: 66%;
-    position: relative;
-    overflow: hidden;
 }
 
 .contestant .slideGo:before, .contestant1 .slideGo:before, .contestant1 .slideStay:before{
@@ -1018,29 +1030,21 @@ position:relative;
 }
 
 .contestant1 .slideStay {
-    width: 80%;
-    height: 66%;
     background-repeat: no-repeat;
     right: 60%;
-    top: 17%;
+    top: 7%;
     position: absolute;
     background-position: left center;
 }
 
-.slideGo {
-    width: 80%;
-    height: 66%;
-    background-repeat: no-repeat;
-    top: 17%;
-    position: absolute;
-}
 
 .contestant1 .slideGo{
-    right: 7%;
+    right: 4%;
     background-position: left center;
 }
+
 .contestant2 .slideGo {
-    right: 12%;
+    right: 17%;
     background-position: right center;
 }
 
@@ -1247,7 +1251,7 @@ margin: auto;
 }
 
 #results .songName1 h1, #results .songName2 h1 {
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 #results .percentage {
@@ -1366,8 +1370,6 @@ color: #ff0060;
 
 */
 
-
-
 #result-gallery {
     height: 33.9%;
     /* direction: rtl;*/
@@ -1383,6 +1385,7 @@ color: #ff0060;
 
 #result-gallery ul {
     height: 100%;
+	width:1081px;
     /* width: 500px;*/
     padding-right: 4px;
     direction: rtl;
@@ -1390,7 +1393,7 @@ color: #ff0060;
 
 #result-gallery ul li {
     height: 99%;
-    /*width: 45.6%;*/
+    width: 185px;
     position: relative;
     /* display: inline-block; */
     /*width: 146px;*/
@@ -1421,8 +1424,8 @@ color: #ff0060;
 }
 
 #result-gallery .percentage {
-    font-size: 2em;
-    margin-right: 33%;
+    font-size: 1.5em;
+    margin-right: 35%;
     float: none;
 }
 
@@ -1451,7 +1454,7 @@ color: #ff0060;
 .goodbyeBox{
 margin: 20px auto;
 height:24%;
-width: 77%;
+width: 80%;
 }
 
 #download-music {
@@ -1477,6 +1480,11 @@ cursor: pointer;
 
 #download-music .press{
      opacity: 0.8;
+}
+
+#result-gallery .songName{
+	font-size:1em;
+	padding: 4px 0;
 }
 
 .icon {
@@ -1606,20 +1614,20 @@ background-color: rgba(0, 0, 0,0.1);
 	display:block;
 }
 
-#loginExtended{
-	display:none;
-}
-
-#loginReward{
+#loginExtendedBox{
 	display:block;
 }
 
-#vote .battle{
-	display:block;
+#loginRewardBox{
+	display:none;
 }
 
-#vote .single{
+#voteBattle{
 	display:none;
+}
+
+#voteSingle{
+	display:block;
 }
 
 #register{

@@ -28,7 +28,6 @@
         <section id="login">
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
-			<section id="loginExtended">		
 				<div id="loginExtendedBox">		
 					<hgroup class="loginHg">
 						<div class="titleLogin"> לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים </div>
@@ -36,7 +35,7 @@
 					<form name="" action="" method="">
 						<div class="checkboxArea">
 							<input type="checkbox" id="checkbox1"/>
-							<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><a id="notConfirmed" href="">!לא אישרת את התקנון</a></br>
+							<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><a id="notConfirmed" href="">לא אישרת את התקנון!</a></br>
 							<input type="checkbox" id="checkbox2"/>
 							<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
 						</div>
@@ -46,16 +45,14 @@
 						</div>
 					</form>
 				</div>
-			</section>
-			<section id="loginReward">		
 				<div id="loginRewardBox">		
 					<hgroup class="loginHg">
-						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבו הפייסבוק שלכם </div>
+						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם </div>
 					</hgroup>
 					<div class="loginBox">
 						<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
 						<div class="login" onclick="Navi.goto('message')">
-							<p class="logText">הצבעה ללא פייסבוק</p>
+							<span class="logText">הצבעה ללא פייסבוק</span>
 						</div>
 					</div>
 					<div class="checkboxArea">						
@@ -63,7 +60,6 @@
 						<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
 					</div>
 				</div>
-			</section>
 			<div class="musix"></div>
         </section>
         <!---log in section-->
@@ -79,7 +75,7 @@
                         <!--<span id="message-with-img-title">הודעה חשובה:</span>-->
                     </h1>
                     <span id="message-with-img-text" class="detail">
-					מיד זה קורה - אתם השופטים בזמן אמת,וקובעים אם המתמודד עובר או לא עובר בכל שיר! הכוכב הבא, שידור חי, ערוץ 2, מיד זה מתחיל
+					מיד זה קורה - לראשונה בעולם, אתם השופטים בזמן אמת וקובעים אם המתמודד עובר או לא עובר בכל שיר! הכוכב הבא, שידור חי, ערוץ 2, תכף זה מתחיל
                     </span>
                 </div>
                 <div class="continue">
@@ -115,7 +111,7 @@
 						<div class="slide btn"></div>
 						<div class="slider-text">כניסה להצבעה</div>
 					</div>
-					<div class="reMesseg cf">
+					<!--<div class="reMesseg cf">
 						<div class="continue">
 							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
 							<figure class="contIcons"></figure>
@@ -124,9 +120,9 @@
 							<h1 id="register-comp-name-single">דוד לוי</h1>
 							<h2 id="register-song-name-single">ילדות נשכחת</h2>
 						</div>
-					</div>
+					</div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
 				</div>
-				<!--<div class="reMesseg cf">
+				<div class="reMesseg cf">
 					<div class="continue">
 						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
 						<figure class="contIcons"></figure>
@@ -135,7 +131,7 @@
 						<h1 id="register-comp-name-single">דוד לוי</h1>
 						<h2 id="register-song-name-single">ילדות נשכחת</h2>
 					</div>
-				</div>-->
+				</div>
 			</div>
 			<div id="registerBattle">
 				<div class="slidein">
@@ -181,7 +177,8 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="single">
+			
+            <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
@@ -216,7 +213,7 @@
                 </div>
             </div>
             <!----------------------------------------------------------------------single  div----------------->
-            <div class="battle">
+            <div id="voteBattle" class="battle">
 
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
@@ -355,7 +352,7 @@
                     </div>
                     <div class="songName1">
                         <h1 id="results-comp-name-first">דוד לוי</h1>
-                        <h2 id="results-song-name-single">ילדות נשכחת</h2>
+                        <h2 id="results-song-name-first">ילדות נשכחת</h2>
                         
                     </div>
                     <div class="songName2">
@@ -374,8 +371,7 @@
             <nav class="topMenu">
                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
             </nav>
-            <h2>אתם מוזמנים לדפדף בתוצאות הערב</h2>
-
+            <h2>אתם החלטתם - התוצאות המלאות של הערב</h2>
             <div id="result-gallery">
                 <ul>
                     <li class="gallery-vote-single">
