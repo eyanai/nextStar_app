@@ -486,9 +486,17 @@ margin: 0;
     /*z-index: 1;*/
 }
 
+.message {
+	background: -moz-linear-gradient(top,  rgba(0,34,51,1) 0%, rgba(0,9,15,0.1) 32%, rgba(0,9,12,0.1) 62%, rgba(0,22,36,0.1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,34,51,1)), color-stop(32%,rgba(0,9,15,0.1)), color-stop(62%,rgba(0,9,12,0.1)), color-stop(100%,rgba(0,22,36,0.1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002233', endColorstr='#e6001624',GradientType=0 ); /* IE6-9 */
+}
 
-
-.massage {
+.message {
     border-top: 2px solid #005d8d;
     height: 24%;
     width: 89%;
@@ -496,6 +504,12 @@ margin: 0;
     margin: auto;
     position: relative;
     background-color: rgba(0,0,0,0.29);
+}
+
+#message-no-img-text{
+	font-size: 1.9em;
+letter-spacing: 0.13em;
+margin-top: 5%;
 }
 
 .speker {
@@ -512,6 +526,13 @@ margin: 0;
 .speker img {
     height: 88%;
     width: 15%;
+}
+#message-no-img-text .detail {
+    font-size: 1.8em;
+    height: 66%;
+    margin-top: 6%;
+    margin: auto;
+    top: 15%;
 }
 
 .detail {
@@ -546,12 +567,14 @@ margin: 0;
     display: inline-block;
 }
 
+
+
 #message .continue h2 {
     margin-top: 3%;
     font-size: 1.6em;
 }
 
-.messageImage .continue {
+.continue {
     /*bottom: 3%;*/
     height: 10%;
 }
@@ -568,6 +591,7 @@ margin: 0;
 	margin: 5px 0 0 0;*/
     display: inline-block;
     vertical-align: middle;
+	top:72%;
 }
 
 .musix {
@@ -585,7 +609,7 @@ margin: 0;
 
 
 
-.messageNoImage .massage {
+.messageNoImage .message {
     margin-top: 8%;
     height: 51.3%;
 }
@@ -654,7 +678,7 @@ font-size: 1.5em;
 }
 
 #registerBattle .slidein {
-    top: 69%;
+    top: 65%;
 }
 
 .slidein.red {
@@ -799,8 +823,16 @@ position:relative;
     height: 18%;
 }
 
-.slideGo , .slideStay {
+.slideGo {
+    width: 72%;
+    left: 22%;
+}
+
+.slideStay {
     width: 80%;
+}
+
+.slideGo , .slideStay {
     height: 100%;
     top: 7%;
     position: absolute;
@@ -858,8 +890,9 @@ position:relative;
 
 .slideStay h1 {
     position: absolute;
-    top: 31%;
+    top: 38%;
     left: 50%;
+    font-size: 1.5em;
     color: #00a9ff;
 }
 
@@ -892,19 +925,11 @@ position:relative;
 	top:15px;
 }
 
-/*.slideGo:before {
-	background-position: right center;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}*/
-
 .slideGo h1 {
     position: absolute;
-    top: 31%;
+    top: 38%;
     right: 50%;
+    font-size: 1.8em;
     color: #ff006c;
 }
 
@@ -1030,41 +1055,27 @@ position:relative;
 }
 
 .contestant1 .slideStay {
-    background-repeat: no-repeat;
-    right: 60%;
+    right: 56%;
     top: 7%;
-    position: absolute;
     background-position: left center;
 }
 
 
 .contestant1 .slideGo{
-    right: 4%;
+    right: 9%;
     background-position: left center;
 }
 
-.contestant2 .slideGo {
-    right: 17%;
+.contestant2 .slideStay {
+    right: 18%;
     background-position: right center;
 }
 
-/*
-.contestant1 .btn{
-	-webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+.contestant2 .slideGo {
+    right: 18%;
+    background-position: right center;
 }
 
-.contestant2 .btn{
-	-webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-*/
 .contestant1 .slideStay h1 {
     left: 30%;
 }
@@ -1453,8 +1464,8 @@ color: #ff0060;
 
 .goodbyeBox{
 margin: 20px auto;
-height:24%;
-width: 80%;
+height: 26%;
+width: 87%;
 }
 
 #download-music {
@@ -1627,7 +1638,7 @@ background-color: rgba(0, 0, 0,0.1);
 }
 
 #voteSingle{
-	display:block;
+	display: none;
 }
 
 #register{
