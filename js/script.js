@@ -3,26 +3,32 @@ $(document).ready(function () {
 
     //init the dictionary values
     initDictionaryValues();
-    // attachEventsFacebook();
+    attachEventsFacebook();
     attachEventsRegister();
     attachEventsVote();
-    longPolling();
+    //longPolling();
 });
 
 //general parameters
-var generalParameters={
-    isRegistered:false,//if register to vote
-    voteIdA:null,
-    voteKeyA:null,
-    voteIdB:null,
-    voteKeyB:null,
-    isSingle:null//is the vote is to single or battle
+var generalParameters = {
+    isRegistered: false, //if register to vote
+    voteIdA: null,
+    voteKeyA: null,
+    voteIdB: null,
+    voteKeyB: null,
+    isSingle: null, //is the vote is to single or battle
+    fbUser: {
+        id: null,
+        userName: null,
+        gender: null,
+        profilePic: null
+    }
 }
 
-function pageChange(data){
+function pageChange(data) {
     var status = data.status;
 
-    switch(status){
+    switch (status) {
         case 11:
             setStaticPage(data);
             break;
@@ -51,7 +57,7 @@ function pageChange(data){
 
 
 var isBigSize = false;
-function initAppSize(){
+function initAppSize() {
     //set the isBigSize parameter by the device
 }
 
@@ -61,7 +67,7 @@ var afterVoteDic = "";
 var resultsDic = "";
 var endShowDic = "";
 //init the dictionary values from admin- to blue title
-function initDictionaryValues(){
+function initDictionaryValues() {
     registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
@@ -70,17 +76,17 @@ function initDictionaryValues(){
 
 }
 
-function getFielsdByVote(voteData){
-     var firstName =voteData.name;
-     var firstSong =voteData.songName;
-     var firstUrl="";
+function getFielsdByVote(voteData) {
+    var firstName = voteData.name;
+    var firstSong = voteData.songName;
+    var firstUrl = "";
     //set the img by size
-    if(isBigSize){
-        firstUrl =voteData.imageUrlB;
+    if (isBigSize) {
+        firstUrl = voteData.imageUrlB;
     }
-      else{
-        firstUrl =voteData.imageUrlA;
+    else {
+        firstUrl = voteData.imageUrlA;
     }
-    var results = new Array(firstName,firstSong,firstUrl);
+    var results = new Array(firstName, firstSong, firstUrl);
     return results;
 }

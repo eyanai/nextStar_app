@@ -47,11 +47,11 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            // 
+            //  
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')){
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
@@ -60,7 +60,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')){
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").hide();
@@ -68,6 +68,10 @@ var Navi = {
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
+                break;
+            case 'WaitVotePage':
+                $(".slidein").hide();
+                $("#register .reMesseg .continue").show();
                 break;
             case 'voteSingle':
                 Navi.hidelogin();

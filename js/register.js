@@ -64,9 +64,7 @@ function setRegister() {
 
 function setWaitVotePage(data) {
         console.log(data);
-
-    $(".slidein").hide();
-    $("#register .reMesseg .continue").show();
+ Navi.goto("WaitVotePage");    
 
     voteIdA = data[0].voteId;
     voteKeyA = data[0].voteKey;
