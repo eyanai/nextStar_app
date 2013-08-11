@@ -1,9 +1,18 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.9em;
-	color:pink;
-	padding: 0 35%;
+	color:yellow;
+
 	margin:1% auto;
+}
+
+.loginHg .titleLoginReward{
+	height:45%;
+	padding: 0 30%;
+}
+
+.loginHg .titleLogin{
+		
 }
 
 h1, .facebookArea , .logFb, .logText {
@@ -38,11 +47,15 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #loginExtendedBox .logFb, #loginExtendedBox .login {
-    height: 48%;
+
 }
 
 #loginExtendedBox .login {
     margin-top: 2%;
+}
+
+#loginRewardBox .loginHg{
+	height:65%;
 }
 
 #message .continue h2 {
