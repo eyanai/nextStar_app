@@ -9,23 +9,65 @@ var Navi = {
 
     goto: function (el) {
         switch (el) {
-            case 'messageNoImage':
+            case 'login1':
+                //
+                break;
+            case 'login2':
+                //
+                break;
+            case 'messageWaitingNoImage':
+                Navi.hidelogin();
                 $('header').show();
-                $('#login').hide();
+                $('#message').show();
+                $('#message .messageImage').hide();
+                $('#message .messageNoImage').show();
+                $('#message .messageNoImage .continue').show();
+                break;
+            case 'messageWaitingWithImage':
+                Navi.hidelogin();
+                $('header').show();
+                $('#message').show();
+                $('#message .messageImage').show();
+                $('#message .messageImage .continue').show();
+                $('#message .messageNoImage').hide();
+                break;
+            case 'messageNoImage':
+                Navi.hidelogin();
+                $('header').show();
+                $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
                 break;
             case 'messageWithImage':
+                Navi.hidelogin();
                 $('header').show();
-                $('#login').hide();
+                $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            case 'register':
+            // 
+            case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
+                if($(".slidein ").hasClass('grey')){
+                    $(".slidein ").removeClass('grey');
+                };
+                $("#registerSingle").show();
+                $("#registerBattle").hide();
+                break;
+            case 'registerBattle':
+                Navi.hidelogin();
+                $('#register').show();
+                if($(".slidein ").hasClass('grey')){
+                    $(".slidein ").removeClass('grey');
+                };
+                $("#registerSingle").hide();
+                $("#registerBattle").show();
+                break;
+            case 'notRegister':
+                $(".slidein ").addClass('grey');
                 break;
             case 'voteSingle':
                 Navi.hidelogin();
@@ -71,8 +113,7 @@ var Navi = {
                 gallerySize();
                 break;
             default:
-                $('section,header').hide();
-                $('#login').show();
+                Navi.hidelogin();
         }
     }
 
