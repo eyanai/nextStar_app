@@ -581,18 +581,15 @@ margin-top: 5%;
 }
 
 .contIcons {
-    background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
-    background-size: 100% 100%;
-    /*width: 64px;
-    height: 24px;*/
-    width: 12%;
-    height: 33%;
-    background-repeat: no-repeat;
-    /*float: right;
-	margin: 5px 0 0 0;*/
-    display: inline-block;
-    vertical-align: middle;
-	top:72%;
+   background-image: url(../images/masseg/dots.png);
+width: 12%;
+height: 33%;
+background-repeat: no-repeat;
+display: inline-block;
+vertical-align: middle;
+top: 72%;
+
+background-position-x: -431px;
 }
 
 .musix {
@@ -741,7 +738,7 @@ font-size: 1.5em;
 }
 
 #registerBattle .reMesseg {
-    width: 50%;
+    width: 100%;
 }
 
 .single {
@@ -1154,25 +1151,13 @@ border-radius: 6px;
 .resultRed {
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
-    width: 72%;
-    height: 98%;
-    
-    margin: auto;
-position: relative;
-top: 1%;
+   
 }
 
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
-    width: 72%;
-    height: 100%;
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-right: 0;
-margin-left: auto;
-margin-right: auto;
+  
 }
 
 .resultScalaL {
@@ -1187,10 +1172,12 @@ width: 5%;
 height: 62.5%;
 border-radius: 6px;
 }
-
-.resultBlue {
-    background-image: url(../images/results/graph_blue_off_kohav.png);
+.resultBlue{
+     background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
+}
+.result {
+   
    width: 72%;
     height: 98%;
     
@@ -1198,10 +1185,12 @@ border-radius: 6px;
 position: relative;
 top: 1%;
 }
-
 .scalaBlue {
-    background-image: url(../images/results/graph_blue_on_kohav.png);
+     background-image: url(../images/results/graph_blue_on_kohav.png);
     background-repeat: no-repeat;
+}
+.scala{
+   
     width: 72%;
     height: 100%;
     position: absolute;
@@ -1293,6 +1282,9 @@ right:1%;
 #results  #results-perc-second{
     float: none;
 left: 1%;
+}
+#results .red{
+    
 color: #ff0060;
 }
 /*================================================GALLARY SECTION================================================*/
