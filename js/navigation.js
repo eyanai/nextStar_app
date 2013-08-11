@@ -2,13 +2,13 @@
 
 var Navi = {
 
-    hidelogin: function () {
+    hidelogin: function() {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function (el) {
-        switch (el) {
+    goto: function(el) {
+        switch(el) {
             case 'login1':
                 //
                 break;
@@ -47,11 +47,11 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            // 
+            //  
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')){
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
@@ -60,14 +60,18 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')){
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
-                };
+                }
                 $("#registerSingle").hide();
                 $("#registerBattle").show();
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
+                break;
+            case 'WaitVotePage':
+                $(".slidein").hide();
+                $("#register .reMesseg .continue").show();
                 break;
             case 'voteSingle':
                 Navi.hidelogin();
@@ -100,12 +104,14 @@ var Navi = {
                 $("#results-img-single").show();
                 $("#results .single").show();
                 $("#results .battle").hide();
+                $("#results .single .reMesseg .continue").show();
                 break;
             case 'resultsBattle':
                 Navi.hidelogin();
                 $('#results').show();
                 $("#results .single").hide();
                 $("#results .battle").show();
+                $("#results .battle .reMesseg .continue").show();
                 break;
             case 'gallery':
                 Navi.hidelogin();
