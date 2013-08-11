@@ -1,5 +1,65 @@
-h1 {
-    font-size: 1em;
+.loginHg .titleLogin{
+	font-size:0.9em;
+	color:red;
+	margin-bottom:1%;
+}
+
+h1, .facebookArea , .logFb {
+    font-size: 0.5em;
+}
+
+.logo.login {
+    background-size: 100% 110%;
+}
+
+#download-music{
+	font-size:0.55em;
+}
+
+#loginExtendedBox, #loginRewardBox{
+	height:50%;
+	position: relative;
+	top: 0%;
+	margin: 4% auto;
+}
+
+#loginExtendedBox .logFb .logFb-text, #loginExtendedBox .login{
+	font-size:1.4em;
+}
+
+#loginExtendedBox .logFb, #loginExtendedBox .login{
+	height:48%;
+}
+
+#loginExtendedBox .login{
+	margin-top:2%;
+}
+
+#message .continue h2{
+	font-size:1em;
+}
+
+.topMenu{
+	height:8%;
+}
+
+
+.checkboxArea{
+	font-size:0.15em;
+}
+
+input[type=checkbox]{
+	margin:1%;
+	width:1em;
+	height:1em;
+}
+
+.loginHg{
+	padding:2.5% 0;
+}
+
+.logFb .icon{
+	background-size:45% 50%;
 }
 
 .speker {
@@ -10,28 +70,38 @@ h1 {
 
 
 h2 {
-    font-size: 1em;
+    font-size: 0.4em;
 }
 
-.massage {
+.message {
     border-top: 1px solid #005d8d;
-    border-bottom: 1px solid rgba(196,196,196,0.5);
+    border-bottom: 1px solid #183344;
+	/*rgba(196,196,196,0.5);*/
 }
 
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
+	font-size: 0.75em;
+	vertical-align: middle;
+	padding: 0.4% 0;
+}
 
+.slideStay h1, .slideGo h1{
+	font-size:0.3em;
+}
 
-message .continue h2 {
+.message .continue h2 {
     margin-top: 3.5%;
+	font-size:0.14em;
 }
 
 .detail {
-    font-size: 1.5em;
+    font-size: 0.7em;
 	letter-spacing:0.13em;
     margin-top: 3%;
 }
 
 .slider-text {
-    font-size: 2.225em;
+    font-size: 1.2em;
 }
 
 .topMenu {
@@ -90,13 +160,15 @@ section {
 
 #results .percentage {
     
-    font-size: 1.5em;
+    font-size: 0.15em;
    
 }
 
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
+	font-size: 0.4em;
+	
 }
 
 #results .divideH.waiting-high {
@@ -114,4 +186,14 @@ section {
 
 .live {
     width: 7%;
+}
+
+.musix {
+    background-image: url(../images/musix_iphone.png);
+    background-size: 100% 100%;
+    width: 45%;
+	margin:0 auto;
+    height: 16%;
+    position: relative;
+    bottom: 2.7%;
 }
