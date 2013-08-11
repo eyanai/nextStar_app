@@ -14,9 +14,35 @@ function setOpenRegisterPage(data) {
     $("#register .reMesseg .continue").hide();
     var url = "";
     //if this is a double vote
-    if (data.votes.length == 2) {
+    if (!isSingle(data)) {
+        var url1 = "";
+        var url2 = "";
         //set the img
         //set the ing by size
+        if (isBigSize) {
+            url1 = data.votes[0].imageUrlB;
+            url2 = data.votes[1].imageUrlB;
+        }
+        else {
+            url1 = data.votes[0].imageUrlA;
+            url2 = data.votes[1].imageUrlA;
+        }
+        var name1 = data.votes[0].name;
+        var song1 = data.votes[0].songName;
+        var name2 = data.votes[1].name;
+        var song2 = data.votes[1].songName;
+        var textWait = data.textWaitRegister;
+        $("#register-img-first").css("background-image", "url('" + url1 + "')");
+        $("#register-comp-name-first").text(name1);
+        $("#register-song-name-first").text(song1);
+        $("#register-img-second").css("background-image", "url('" + url2 + "')");
+        $("#register-comp-name-second").text(name2);
+        $("#register-song-name-second").text(song2);
+        $("#register-wait-text").text(textWait);
+        Navi.goto("registerBattle");
+    }
+    //if this is a single vote
+    else {
         if (isBigSize) {
             url = data.votes[0].imageUrlB;
         }
@@ -30,11 +56,6 @@ function setOpenRegisterPage(data) {
         $("#register-comp-name-single").text(name);
         $("#register-song-name-single").text(song);
         $("#register-wait-text").text(textWait);
-        Navi.goto("registerBattle");
-    }
-    //if this is a single vote
-    else {
-
         Navi.goto("registerSingle");
     }
 
@@ -64,15 +85,13 @@ function setRegister() {
 
 function setWaitVotePage(data) {
         console.log(data);
+ Navi.goto("WaitVotePage");    
 
-    $(".slidein").hide();
-    $("#register .reMesseg .continue").show();
-
-    voteIdA = data[0].voteId;
-    voteKeyA = data[0].voteKey;
+    generalParameters.voteIdA = data[0].voteId;
+    generalParameters.voteKeyA = data[0].voteKey;
     if (data[1]) {
-        voteIdB = data[1].voteId;
-        voteKeyB = data[1].voteKey;
+       generalParameters.voteIdB = data[1].voteId;
+        generalParameters.voteKeyB = data[1].voteKey;
     }
     generalParameters.isRegistered = true;
    
