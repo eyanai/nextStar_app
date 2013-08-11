@@ -65,7 +65,7 @@
         <!---log in section-->
 		
         <section id="message">
-            <div class="nextPage" data-goto="register"></div>
+            <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -131,7 +131,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="registerBattle">
+			<div id="registerBattle" class="cf">
 				<div class="slidein">
 					<div class="slide btn"></div>
 					<div class="slider-text">כניסה להצבעה</div>
@@ -513,9 +513,9 @@
 			<div class="goodbyeBox">
 				<div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
 				<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-				<div class="checkboxArea">						
+				<div class="checkboxArea">						י
 					<input type="checkbox" id="checkbox3" name="cc" />
-					<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+					<label for="checkbox3"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
 				</div>
 			</div>
             <div class="musix"></div>
@@ -536,17 +536,17 @@
         <script src="js/gallery.js"></script>
 
         <script>
-            $(document).ready(function(e) {
-                $('.nextPage').on('click', this, function() {
+            $(document).ready(function (e) {
+                $('.nextPage').on('click', this, function () {
                     goto = $(this).data('goto');
                     Navi.goto(goto);
                 });
-            
-            
-                $('.animat').on('click', this, function() {
+
+
+                $('.animat').on('click', this, function () {
                     anim = $(this).data('animat'); //animat="register"
-            
-                    switch(anim) {
+
+                    switch (anim) {
                         case 'register':
                             $('#register .slide').addClass('regAnim');
                             break;
@@ -554,6 +554,7 @@
                             $('.slideRight').addClass('singleBad');
                             $('.slideLeft').addClass('hideL');
                             $('.single .hate').addClass('hateShow');
+                            replaceHeadline();
                             break;
                         case 'singleGood':
                             $('.slideLeft').addClass('singleGood');
@@ -565,39 +566,39 @@
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant1 .love').addClass('love1Show');
-            
+
                             break;
                         case 'battel1Bad':
                             $('.contestant1 .slideDownbattle').addClass('battel1Bad');
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideTopbattle').addClass('hideR');
                             $('.contestant1 .hate').addClass('hate1Show');
-            
+
                             break;
                         case 'battel2Good':
                             $('.contestant2 .slideTopbattle').addClass('battel2lGood');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant2 .love').addClass('love2Show');
-            
+
                             break;
                         case 'battel2Bad':
                             $('.contestant2 .slideDownbattle').addClass('battel2Bad');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideTopbattle').addClass('hideL');
                             $('.contestant2 .hate2').addClass('hate2Show');
-            
+
                             break;
                         case 'results':
-                            $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function() {
-                                $('.scalaBlue,.scalaRed').animate({ bottom: '-45%' }, 500, function() { });
+                            $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function () {
+                                $('.scalaBlue,.scalaRed').animate({ bottom: '-45%' }, 500, function () { });
                             });
                             break;
                         default:
-            
+
                     }
-            
-                });  
+
+                });
             });
         </script>
     </body>

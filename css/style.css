@@ -555,6 +555,7 @@ margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    display: none;
 }
 
 .continue h2 {
@@ -632,7 +633,7 @@ margin-top: 5%;
     line-height: 3em;
     background-size: 100% 100%;
     border-bottom: 1px solid #005078;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 1;
 }
@@ -673,10 +674,16 @@ font-size: 1.5em;
     overflow: hidden;
 }
 
+#registerSingle{
+    display: none;
+}
 #registerSingle .slidein {
     top: 61%;
 }
 
+#registerBattle{
+    display: none;
+}
 #registerBattle .slidein {
     top: 65%;
 }
@@ -697,7 +704,7 @@ font-size: 1.5em;
     top: 62%;
 }
 
-.slidein.grey .btn, .slidein.grey .slider-text {
+.slidein.grey .btn {
     display: none;
 }
 
@@ -844,7 +851,7 @@ position:relative;
 
 .slideStay {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .slideGo:before {
