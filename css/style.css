@@ -243,7 +243,7 @@ header {
     overflow: hidden;
 }
 
-#slide-containter{
+#slide-container{
     position: relative;
     top: 0%;
 }
@@ -1626,14 +1626,6 @@ input[type="checkbox"]:checked + label span {
 
 #login {
     display: block;
-}
-
-#loginExtendedBox{
-	display:none;
-}
-
-#loginRewardBox {
-    /*display: none;*/
 }
 
 #voteBattle{

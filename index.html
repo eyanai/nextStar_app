@@ -30,7 +30,7 @@
             <figure class="logo login"></figure>
 
             <div id="loginExtendedBox">
-                <div id="slide-containter">
+                <div id="slide-container">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
  לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים
@@ -45,7 +45,7 @@
                         </div>
                         <div class="facebookArea">
                             <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
+                            <div class="login" onclick="Navi.goto('login2')"><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
                     <!--</div>-->
@@ -548,11 +548,11 @@
                     goto = $(this).data('goto');
                     Navi.goto(goto);
                 });
-            
-            
+
+
                 $('.animat').on('click', this, function () {
                     anim = $(this).data('animat'); //animat="register"
-            
+
                     switch (anim) {
                         case 'register':
                             $('#register .slide').addClass('regAnim');
@@ -573,38 +573,39 @@
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant1 .love').addClass('love1Show');
-            
+
                             break;
                         case 'battel1Bad':
                             $('.contestant1 .slideDownbattle').addClass('battel1Bad');
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideTopbattle').addClass('hideR');
                             $('.contestant1 .hate').addClass('hate1Show');
-            
+
                             break;
                         case 'battel2Good':
                             $('.contestant2 .slideTopbattle').addClass('battel2lGood');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant2 .love').addClass('love2Show');
-            
+
                             break;
                         case 'battel2Bad':
                             $('.contestant2 .slideDownbattle').addClass('battel2Bad');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideTopbattle').addClass('hideL');
                             $('.contestant2 .hate2').addClass('hate2Show');
-            
+
                             break;
                         case 'results':
+                            var x = -50;
                             $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scalaBlue,.scalaRed').animate({ bottom: '-45%' }, 500, function () { });
+                                $('.scalaBlue,.scalaRed').animate({ bottom: x+'%' }, 500, function () { });
                             });
                             break;
                         default:
-            
+
                     }
-            
+
                 });
             });
         </script>
