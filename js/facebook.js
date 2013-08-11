@@ -9,6 +9,7 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true })
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() {    
+    //localStorage.setItem('fbStorage', "");
     $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", startLongPolling);
 }
@@ -21,6 +22,7 @@ checkLocalStorge();
 var searchQuery = window.location.search;//search Query 
 //if connect already
 if (fromLocalStorge) {
+    //alert("fromLocalStorge");
     saveDataOnServer("fromLocalStorge");
 }
 //connect yet and after after login in webview
@@ -35,6 +37,7 @@ function loginFb() {
 }
 //check: if login-> save data
 function loginCheck() {
+    //alert("loginCheck");
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
             saveData();
@@ -64,17 +67,21 @@ function saveData() {
 ////////////////////////////////////////////////////// localstorge functions
 //set Local Storage
 function setLocalStorage() {
-    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));    
+    alert(localStorage.getItem('fbStorage'));
 }
 //get Local Storage
 function getLocalStorage() {
+    
     return (localStorage.getItem('fbStorage'));
 }
 //check if there is local storge
 function checkLocalStorge() {
-    if (userFromLocalStorge != "") {
-
+    
+    if (userFromLocalStorge != "") {       
+       
         userFromLocalStorge = jQuery.parseJSON(userFromLocalStorge);
+        alert(userFromLocalStorge);
         //if connect already
         if (userFromLocalStorge.id != null) {
             generalParameters.fbUser = userFromLocalStorge;
@@ -98,14 +105,14 @@ function saveDataOnServer(str) {
         },
         success: function (data) {
             console.log(data);
-            setLocalStorage(data);
+            setLocalStorage();
         },
         error: function (data) {
             console.log("error getFacebookData: " + data);
         }
     });
 
-    startLongPolling("saveDataOnServer " +str);
+    //startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
 function startLongPolling(str) {
