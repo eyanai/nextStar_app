@@ -6,10 +6,18 @@ $(document).ready(function () {
     // attachEventsFacebook();
     attachEventsRegister();
     attachEventsVote();
-    //longPolling();
+    longPolling();
 });
 
-
+//general parameters
+var generalParameters={
+    isRegistered:false,//if register to vote
+    voteIdA:null,
+    voteKeyA:null,
+    voteIdB:null,
+    voteKeyB:null,
+    isSingle:null//is the vote is to single or battle
+}
 
 function pageChange(data){
     var status = data.status;
