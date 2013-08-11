@@ -90,11 +90,12 @@ html, body {
     /* Webkit (Chrome 11+) */
     /*background-image: -webkit-linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
     /*background-image: linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
-	background-image: url(../images/general-background.jpg);
+    background-image: url(../images/general-background.jpg);
     font-family: Arial, Verdana, sans-serif;
     direction: rtl;
     color: #fff;
     font-size: 1em;
+    background-size: 100% 100%;
 }
 
 section {
@@ -106,7 +107,7 @@ section {
 }
 
 #login {
-    display: none;
+    display: block;
     height: 90%;
     width: 100%;
     position: absolute;
@@ -213,30 +214,38 @@ header {
     height: 29%;
     position: relative;
     top: 3%;
-	background-image: url(../images/singUp/logo.png);
+    background-image: url(../images/singUp/logo.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 90%;
     display: block;
     margin: 0 auto;
 }
-#loginExtended, #loginReward{
-	position: relative;
-	top: 0%;
+
+#loginExtended, #loginReward {
+    position: relative;
+    top: 0%;
 }
-#loginExtendedBox, #loginRewardBox{
-	position: relative;
-	top: 0%;
-	/* Opera */
+
+#loginExtendedBox{/*, #loginRewardBox*/ 
+    position: relative;
+    top: 0%;
+    /* Opera */
     background-image: -o-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
     /* Webkit (Safari/Chrome 10) */
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #002436), color-stop(2, #000000, #01273b));/*SARA CHECK IT !*/
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #002436), color-stop(2, #000000, #01273b)); /*SARA CHECK IT !*/
     /* Webkit (Chrome 11+) */
-	background-image: -webkit-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
-    background-image: linear-gradient(bottom,  #002436 0%, #000000 72%, #01273b 100%);
-	width: 86%;
-	height: 44%;
-	margin: 68px auto;
-	display: block;
+    background-image: -webkit-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    background-image: linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    width: 86%;
+    height: 44%;
+    margin: 8% auto;
+    display: block;
+    overflow: hidden;
+}
+
+#slide-containter{
+    position: relative;
+    top: 0%;
 }
 
 .loginHg {
@@ -244,109 +253,109 @@ header {
     color: #fff;
     text-align: center;
     padding: 28px 0;
-	text-align:right;
+    text-align: right;
 }
 
 #loginRewardBox.loginHg {
-height: 59%;
+    height: 59%;
 }
 
-.loginHg .titleLogin{
-overflow:visible;    
-font-weight:normal;
-font-size: 1.8em;
-font-weight: normal;
-padding: 0 15px;
-/* margin-bottom:8px; */
+.loginHg .titleLogin {
+    overflow: visible;
+    font-weight: normal;
+    font-size: 1.8em;
+    font-weight: normal;
+    padding: 0 15px;
+    /* margin-bottom:8px; */
 }
 
-.loginHg .titleLoginReward{
-overflow:visible;    
-font-weight:normal;
-font-size: 28px;
-font-weight:normal;
-text-align:center;
-margin: 14px 0;
-padding: 25px 105px;
+.loginHg .titleLoginReward {
+    overflow: visible;
+    font-weight: normal;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin: 14px 0;
+    padding: 25px 105px;
+height:50%;
 }
 
 #loginExtendedBox .loginHg {
-height: 21%;
+    height: 21%;
 }
 
-.loginHg .title3{
-overflow:visible;    
-text-align:right;
-font-size:1.7em;
-padding:3px 0;
+.loginHg .title3 {
+    overflow: visible;
+    text-align: right;
+    font-size: 1.7em;
+    padding: 3px 0;
 }
 
-.checkboxArea{
- margin-top: 10px; 
- height: 20%; 
- position: relative; 
- font-size: 1.3em; 
- direction: rtl;
+.checkboxArea {
+    height: 27%;
+    position: relative;
+    font-size: 1.3em;
+    direction: rtl;
 }
 
-#login .checkboxArea{
-padding-right: 10px; 
+#login .checkboxArea {
+    padding-right: 10px;
 }
 
-.facebookArea{
-	position: relative;
-	height: 42%;
-	margin: 0 auto;
-	width: 96%;
+.facebookArea {
+    position: relative;
+    height: 42%;
+    margin: 0 auto;
+    width: 96%;
 }
 
-#loginRewardBox .checkboxArea{
-position:relative;
-margin:  14px 0;
+#loginRewardBox .checkboxArea {
+    position: relative;
+    margin: 14px 0;
 }
 
 
 #checkbox1 {
-	border: 2px solid red;
+    border: 2px solid red;
 }
 
-input{
-	border: 1.5px solid grey;
-	font-size: 15px;
-	line-height: 1.2em;
-	width: 80%;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
-	-webkit-appearance: none;
-	-webkit-border-radius: 0.5em;
+input {
+    border: 1.5px solid grey;
+    font-size: 15px;
+    line-height: 1.2em;
+    width: 80%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+    -webkit-appearance: none;
+    -webkit-border-radius: 0.5em;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
     display: inline-block;
     /* font-size: 15px; */
     line-height: 1em;
     padding: 0;
-    margin:5px;
+    margin: 5px;
     width: 1.25em;
     height: 1.25em;
     -webkit-border-radius: 0.35em;
-    vertical-align: text-top;
-  }
-  
-input[type=checkbox]:checked{
-	background:url(../images/singUp/checkbox.png) -19px top no-repeat;
-	border:1px solid grey;
-	z-index:2;
- }
- /*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
- /*#checkbox1 input[type=checkbox]:checked:after{
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked {
+    background: url(../images/singUp/checkbox.png) -19px top no-repeat;
+    border: 1px solid grey;
+    z-index: 2;
+}
+/*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
+/*#checkbox1 input[type=checkbox]:checked:after{
 	content="לא אישרת את התקנון!";
 	text-decoration:underline;
 	color:red;
 	border:2px solid red;
 	z-index:2;
  }*/
-  
- /*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
+
+/*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
 input[type="checkbox"] {
     display:block;
 }
@@ -363,11 +372,11 @@ input[type="checkbox"]:checked + label span {
     background:url(../images/singUp/checkbox.png) -19px top no-repeat;
 }	*/
 
-#notConfirmed{
-	color:red;
-	font-size:0.8em;
-	text-decoration: underline;
-	padding-right: 5px;
+#notConfirmed {
+    color: red;
+    font-size: 0.8em;
+    text-decoration: underline;
+    padding-right: 5px;
 }
 
 .loginBox {
@@ -378,18 +387,18 @@ input[type="checkbox"]:checked + label span {
 }
 
 #loginExtendedBox .logFb {
-	width:100%;	
-	height: 40%;
+    width: 100%;
+    height: 40%;
 }
 
 #loginRewardBox .logFb {
-	width: 48%;
-	height: 90%;
-	float:right;
-	display:inline;
+    width: 48%;
+    height: 90%;
+    float: right;
+    display: inline;
 }
 
-#loginExtendedBox .logFb .logFb-text{
+#loginExtendedBox .logFb .logFb-text {
     font-size: 1.7em;
     display: inline-block;
     padding-right: 8.3%;
@@ -398,15 +407,16 @@ input[type="checkbox"]:checked + label span {
     /* text-align: center; */
 }
 
-#loginRewardBox .logFb .logFb-text{
+#loginRewardBox .logFb .logFb-text {
     font-size: 1.7em;
     display: inline-block;
     padding-right: 9.3%;
     top: 25%;
     position: relative;
 }
-#loginRewardBox .icon{
-	width: 15%;
+
+#loginRewardBox .icon {
+    width: 15%;
 }
 
 .fbText {
@@ -414,51 +424,39 @@ input[type="checkbox"]:checked + label span {
     margin: 5% 3%;
 }
 
-#loginRewardBox .login, #loginExtendedBox .login
-{
-background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
-background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
-border: 1px solid rgba(0,0,0,0.5);
-margin: auto;
-border-radius: 3px;
-cursor: pointer;
-text-align:center;
+#loginRewardBox .login{/*, #loginExtendedBox .login*/ 
+    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
+    border: 1px solid rgba(0,0,0,0.5);
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
 }
 
-#loginRewardBox .login:hover, #loginExtendedBox .login:hover{
+#loginRewardBox .login:hover, #loginExtendedBox .login:hover {
     opacity: 0.8;
 }
 
-#loginRewardBox .login{
-width: 48%;
-height: 90%;
-float:left;
-display:inline;
-margin: 0;
+#loginExtendedBox #loginRewardBox .login {
+    width: 48%;
+    height: 90%;
+    float: left;
+    display: inline;
+    margin: 0;
 }
 
-#loginExtendedBox .login{
-	width:100%;
-	height: 40%;
-	margin-top: 2%;
-	background-color: #01273b;
-}
-/*.login {
-    display: block;
+#loginExtendedBox .login {
     width: 100%;
-    height: 100%;
-    background-image: url(../images/singUp/signin_noface_kohav_1.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin: 10px auto;
-    color: #fff;
-    position: relative;
-    cursor: pointer;
-}*/
+    height: 40%;
+    margin-top: 2%;
+    background-color: #01273b;
+}
+
 
 .logText {
     font-size: 1.7em;
@@ -487,29 +485,29 @@ margin: 0;
 }
 
 .message {
-	background: -moz-linear-gradient(top,  rgba(0,34,51,1) 0%, rgba(0,9,15,0.1) 32%, rgba(0,9,12,0.1) 62%, rgba(0,22,36,0.1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,34,51,1)), color-stop(32%,rgba(0,9,15,0.1)), color-stop(62%,rgba(0,9,12,0.1)), color-stop(100%,rgba(0,22,36,0.1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002233', endColorstr='#e6001624',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(0,34,51,1) 0%, rgba(0,9,15,0.1) 32%, rgba(0,9,12,0.1) 62%, rgba(0,22,36,0.1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,34,51,1)), color-stop(32%,rgba(0,9,15,0.1)), color-stop(62%,rgba(0,9,12,0.1)), color-stop(100%,rgba(0,22,36,0.1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002233', endColorstr='#e6001624',GradientType=0 ); /* IE6-9 */
 }
 
 .message {
     border-top: 2px solid #005d8d;
     height: 24%;
     width: 89%;
-    border-bottom: solid 2px rgba(196,196,196,0.5);
+    border-bottom: solid 2px #183344;
     margin: auto;
     position: relative;
     background-color: rgba(0,0,0,0.29);
 }
 
-#message-no-img-text{
-	font-size: 1.9em;
-letter-spacing: 0.13em;
-margin-top: 5%;
+#message-no-img-text {
+    font-size: 1.9em;
+    letter-spacing: 0.13em;
+    margin-top: 5%;
 }
 
 .speker {
@@ -527,6 +525,7 @@ margin-top: 5%;
     height: 88%;
     width: 15%;
 }
+
 #message-no-img-text .detail {
     font-size: 1.8em;
     height: 66%;
@@ -555,7 +554,7 @@ margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: none;
+ 
 }
 
 .continue h2 {
@@ -590,19 +589,31 @@ vertical-align: middle;
 top: 72%;
 
 background-position-x: -431px;
+    background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
+    background-size: 100% 100%;
+    /*width: 64px;
+    height: 24px;*/
+    width: 12%;
+    height: 33%;
+    background-repeat: no-repeat;
+    /*float: right;
+	margin: 5px 0 0 0;*/
+    display: inline-block;
+    vertical-align: middle;
+    top: 72%;
 }
 
 .musix {
     background-image: url(../images/musix.png);
     background-size: 100% 100%;
     width: 100%;
-    height: 14%;
+    height: 16%;
     position: absolute;
     bottom: 2.7%;
 }
 
 #login .musix {
-	height: 12%;
+    height: 14%;
 }
 
 
@@ -630,20 +641,20 @@ background-position-x: -431px;
     line-height: 3em;
     background-size: 100% 100%;
     border-bottom: 1px solid #005078;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 1;
 }
 
 .topMenu h1 {
     text-align: center;
-	font-size:100%;
+    font-size: 100%;
 }
 
-#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
-height: 80%;
-padding-top: 1%;
-font-size: 1.5em;
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
+    height: 80%;
+    padding-top: 1%;
+    font-size: 1.5em;
 }
 
 .contestant {
@@ -653,7 +664,7 @@ font-size: 1.5em;
     height: 100%;
     background-size: 100% 100%;
     position: relative;
-/*    top: -8.3%;*/
+    /*    top: -8.3%;*/
 }
 
 #result .contestant {
@@ -671,16 +682,18 @@ font-size: 1.5em;
     overflow: hidden;
 }
 
-#registerSingle{
+#registerSingle {
     display: none;
 }
+
 #registerSingle .slidein {
     top: 61%;
 }
 
-#registerBattle{
+#registerBattle {
     display: none;
 }
+
 #registerBattle .slidein {
     top: 65%;
 }
@@ -734,7 +747,7 @@ font-size: 1.5em;
     width: 100%;
     bottom: 0;
     background-color: rgba(0,0,0,.65);
-    min-height: 11%;
+    min-height: 13%;
 }
 
 #registerBattle .reMesseg {
@@ -771,27 +784,25 @@ font-size: 1.5em;
 
 .songName {
     text-align: center;
-	clear: both;
-	border-top: solid 1px #545454;
-	height: 57%;
-	width: 100%;
+    clear: both;
+    border-top: solid 1px #545454;
+    height: 57%;
+    width: 100%;
 }
 
 #registerBattle .songName {
-position:relative;	
-
+    position: relative;
 }
 
 .songName h1 {
     margin-top: 2%;
 }
 
-.songName , .songName1, .songName2{
+.songName, .songName1, .songName2 {
     font-size: 1.5em;
 }
 
-.registerBattle{
-
+.registerBattle {
 }
 
 
@@ -836,7 +847,7 @@ position:relative;
     width: 80%;
 }
 
-.slideGo , .slideStay {
+.slideGo, .slideStay {
     height: 100%;
     top: 7%;
     position: absolute;
@@ -848,11 +859,11 @@ position:relative;
 
 .slideStay {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .slideGo:before {
-	content: "";
+    content: "";
     position: absolute;
     width: 33%;
     height: 76%;
@@ -861,8 +872,8 @@ position:relative;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: right center;
-    
 }
+
 .slideStay:before {
     content: "";
     position: absolute;
@@ -876,16 +887,16 @@ position:relative;
     background-position: right center;
 }
 
-.contestant .slideGo:before, .contestant1 .slideStay:before , .contestant1 .slideGo:before{
-	-webkit-transform: rotate(-90deg);
+.contestant .slideGo:before, .contestant1 .slideStay:before, .contestant1 .slideGo:before {
+    -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
 
-.contestant .slideStay:before, .contestant2 .slideStay:before , .contestant2 .slideGo:before{
-   -webkit-transform: rotate(90deg);
+.contestant .slideStay:before, .contestant2 .slideStay:before, .contestant2 .slideGo:before {
+    -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
@@ -913,20 +924,20 @@ position:relative;
     height: 18%;
 }
 
-.contestant .slideGo:before, .contestant1 .slideGo:before, .contestant1 .slideStay:before{
-	left: 0;
+.contestant .slideGo:before, .contestant1 .slideGo:before, .contestant1 .slideStay:before {
+    left: 0;
 }
 
-.contestant .slideGo:before{
-	left: -15px;
+.contestant .slideGo:before {
+    left: -15px;
 }
 
-.contestant .slideStay:before, .contestant2 .slideGo:before, .contestant2 .slideStay:before{
-	right: 0;
+.contestant .slideStay:before, .contestant2 .slideGo:before, .contestant2 .slideStay:before {
+    right: 0;
 }
 
-.contestant .slideGo:before, .contestant .slideStay:before{
-	top:15px;
+.contestant .slideGo:before, .contestant .slideStay:before {
+    top: 15px;
 }
 
 .slideGo h1 {
@@ -1029,15 +1040,14 @@ position:relative;
     top: 76.2%;
 }
 
-.slideTopbattle{
-	height: 20%;
-	top: 50%;
-	
+.slideTopbattle {
+    height: 20%;
+    top: 50%;
 }
 
 .slideDownbattle {
-	height: 20%;
-	top: 70%;
+    height: 20%;
+    top: 70%;
 }
 
 .contestant1 .slideTopbattle {
@@ -1065,7 +1075,7 @@ position:relative;
 }
 
 
-.contestant1 .slideGo{
+.contestant1 .slideGo {
     right: 9%;
     background-position: left center;
 }
@@ -1139,9 +1149,9 @@ position:relative;
 /*=============================================RESULTS SECTION======================================================*/
 .resultScalaR {
     background-color: rgba(0,0,0,0.5);
-width: 5%;
-height: 62.5%;
-border-radius: 6px;
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
     position: absolute;
     top: 14%;
     right: 2%;
@@ -1152,25 +1162,36 @@ border-radius: 6px;
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
    
+    width: 72%;
+    height: 98%;
+    margin: auto;
+    position: relative;
+    top: 1%;
 }
 
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
   
+    width: 72%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resultScalaL {
-   
     position: absolute;
     top: 14%;
     left: 2%;
     overflow: hidden;
-    
     background-color: rgba(0,0,0,0.5);
-width: 5%;
-height: 62.5%;
-border-radius: 6px;
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
 }
 .resultBlue{
      background-image: url(../images/results/graph_blue_off_kohav.png);
@@ -1179,11 +1200,11 @@ border-radius: 6px;
 .result {
    
    width: 72%;
+    width: 72%;
     height: 98%;
-    
     margin: auto;
-position: relative;
-top: 1%;
+    position: relative;
+    top: 1%;
 }
 .scalaBlue {
      background-image: url(../images/results/graph_blue_on_kohav.png);
@@ -1196,9 +1217,9 @@ top: 1%;
     position: absolute;
     bottom: -100%;
     left: 0;
-right: 0;
-margin-left: auto;
-margin-right: auto;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .divide {
@@ -1210,8 +1231,8 @@ margin-right: auto;
 
 .reMesseg.results .songName {
     border: none;
-width: 50%;
-margin: auto;
+    width: 50%;
+    margin: auto;
 }
 
 .percentage {
@@ -1221,10 +1242,11 @@ margin: auto;
     margin: 3% 0 0 10%;
 }
 
-#results .single .resultRed{
+#results .single .resultRed {
     display: none;
 }
-#results .single .scalaRed{
+
+#results .single .scalaRed {
     display: none;
 }
 /*=======================================================RESULT BATTLE=========================================*/
@@ -1237,7 +1259,6 @@ margin: auto;
 }
 
 #results .battle .reMesseg {
-    
     bottom: 7%;
 }
 
@@ -1247,7 +1268,6 @@ margin: auto;
 }
 
 #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
-    
     width: 65%;
     float: right;
     clear: both;
@@ -1266,26 +1286,30 @@ margin: auto;
     font-size: 3em;
     position: absolute;
     margin: 0;
-   
 }
+
 #results .single .percentage {
     left: 1%;
 }
+
 #results .songName2 .percentage {
     color: #ff0060;
 }
 
-#results  #results-perc-first{
+#results #results-perc-first {
     float: none;
-right:1%;
+    right: 1%;
 }
-#results  #results-perc-second{
+
+#results #results-perc-second {
     float: none;
 left: 1%;
 }
 #results .red{
     
 color: #ff0060;
+    left: 1%;
+    color: #ff0060;
 }
 /*================================================GALLARY SECTION================================================*/
 #gallery h2 {
@@ -1395,7 +1419,7 @@ color: #ff0060;
 
 #result-gallery ul {
     height: 100%;
-	width:1081px;
+    width: 1081px;
     /* width: 500px;*/
     padding-right: 4px;
     direction: rtl;
@@ -1411,9 +1435,11 @@ color: #ff0060;
     margin-right: 1px;
     float: right;
 }
-#result-gallery h1,#result-gallery h2 {
+
+#result-gallery h1, #result-gallery h2 {
     margin-top: 0;
 }
+
 .gallery-vote-single {
 }
 
@@ -1461,10 +1487,10 @@ color: #ff0060;
     position: relative;
 }
 
-.goodbyeBox{
-margin: 20px auto;
-height: 26%;
-width: 87%;
+.goodbyeBox {
+    margin: 20px auto;
+    height: 26%;
+    width: 87%;
 }
 
 #download-music {
@@ -1482,49 +1508,48 @@ width: 87%;
     border-radius: 3px;
     margin-top: 1.8%;
     position: relative;
-cursor: pointer;
+    cursor: pointer;
 }
-#download-music:hover{
+
+#download-music:hover {
     opacity: 0.8;
 }
 
-#download-music .press{
-     opacity: 0.8;
+#download-music .press {
+    opacity: 0.8;
 }
 
-#result-gallery .songName{
-	font-size:1em;
-	padding: 4px 0;
+#result-gallery .songName {
+    font-size: 1em;
+    padding: 4px 0;
 }
 
 .icon {
     background-repeat: no-repeat;
-width: 9.3%;
-height: 100%;
-display: inline-block;
-position: absolute;
-right: 0;
-background-position: center;
-
-background-color: rgba(0, 0, 0,0.1);
+    width: 9.3%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-position: center;
+    background-color: rgba(0, 0, 0,0.1);
 }
-#download-music .icon{
+
+#download-music .icon {
     background-image: url(../images/gallery/kohav_iphone_vert17.png);
-
-
-    background-size: 60% 100%;
-
+    background-size: 50% 100%;
     width: 20%;
     border-left: 1px solid #196085;
-
 }
 
 #download-music-text {
     font-size: 2em;
     display: inline-block;
-    top: 25%;  position: relative;
+    top: 25%;
+    position: relative;
 }
-.logFb{
+
+.logFb {
     background: -moz-linear-gradient(top, #39579a 0%, #005987 100%, #2a447c 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39579a), color-stop(100%,#005987), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
@@ -1535,40 +1560,40 @@ background-color: rgba(0, 0, 0,0.1);
     height: 9.3%;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.5);
-	margin: auto;
-	border-radius: 3px;
-	position: relative;
-	cursor: pointer;
+    margin: auto;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
 }
-.logFb:hover{
+
+.logFb:hover {
     opacity: 0.8;
 }
 
-.logFb .icon{
+.logFb .icon {
     background-image: url(../images/gallery/fb_icon.png);
-	border-left: 1px solid #196085;	
+    border-left: 1px solid #196085;
 }
 
-#result-gallery .logFb{
-	margin: 10px auto;
-	position: relative;
-	height:37%;
+#result-gallery .logFb {
+    margin: 10px auto;
+    position: relative;
+    height: 37%;
 }
 
-#gallery .logFb{
-	height:37%;
-	width: 100%;
-	margin:2% auto;
-	
+#gallery .logFb {
+    height: 37%;
+    width: 100%;
+    margin: 2% auto;
 }
 
-#gallery .logFb .logFb-text{
+#gallery .logFb .logFb-text {
     font-size: 1.75em;
     display: inline-block;
     padding-right: 9.3%;
     top: 25%;
     position: relative;
-	width: 83%;
+    width: 83%;
     height: 9.3%;
 }
 
@@ -1616,38 +1641,38 @@ background-color: rgba(0, 0, 0,0.1);
     right: 90%;
 }
 /*-----------------------------------------------------------------------------------------*/
-#vote{
-	display:none;
+#vote {
+    display: none;
 }
 
-#login{
-	display:block;
+#login {
+    display: block;
 }
 
 #loginExtendedBox{
-	display:block;
+	display:none;
 }
 
-#loginRewardBox{
-	display:none;
+#loginRewardBox {
+    /*display: none;*/
 }
 
 #voteBattle{
-	display:none;
+	display:block;
 }
 
-#voteSingle{
-	display: none;
+#voteSingle {
+    display: none;
 }
 
-#register{
-	display:none;
+#register {
+    display: none;
 }
 
 #registerSingle{
-display:none;
+display:block;
 }
 
 #registerBattle{
-display:block;
+display:none;
 }
