@@ -243,7 +243,7 @@ header {
     overflow: hidden;
 }
 
-#slide-containter{
+#slide-container{
     position: relative;
     top: 0%;
 }
@@ -1647,10 +1647,6 @@ color: #ff0060;
 
 #login {
     display: block;
-}
-
-#loginExtendedBox{
-	
 }
 
 #voteBattle{

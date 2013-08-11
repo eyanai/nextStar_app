@@ -13,7 +13,7 @@ var Navi = {
                 //
                 break;
             case 'login2':
-                //
+                $("#slide-container").addClass("login-anim");
                 break;
             case 'messageWaitingNoImage':
                 Navi.hidelogin();

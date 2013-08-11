@@ -1,300 +1,529 @@
 /* CSS Document */
 
-@keyframes liveShow
-{
-from {background-image:url(../images/header/live_0_kohav.png)}
-to {background-image:url(../images/header/live_1_kohav.png)}
+@keyframes liveShow {
+    from {
+        background-image: url(../images/header/live_0_kohav.png);
+    }
+
+    to {
+        background-image: url(../images/header/live_1_kohav.png);
+    }
 }
 
 @-webkit-keyframes liveShow /* Safari and Chrome */
 {
-from {background-image:url(../images/header/live_0_kohav.png)}
-to {background-image:url(../images/header/live_1_kohav.png)}
+    from {
+        background-image: url(../images/header/live_0_kohav.png);
+    }
+
+    to {
+        background-image: url(../images/header/live_1_kohav.png);
+    }
+}
+/*--------------------------------login -------------------------------*/
+.login-anim {
+    -webkit-animation: login-anim 1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: login-anim 1s infinite;
+    animation-fill-mode: forwards;
 }
 
-/*--------------------------------regiater -------------------------------*/
-.regAnim{
-	-webkit-animation:regAnim 1s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:regAnim 1s infinite;
-	animation-fill-mode:forwards;
+@keyframes login-anim {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: -100%;
+    }
 }
 
-
-@keyframes regAnim
+@-webkit-keyframes login-anim /* Safari and Chrome */
 {
-from {left:5%}
-to {left:71%}
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: -100%;
+    }
+}
+/*--------------------------------regiater -------------------------------*/
+.regAnim {
+    -webkit-animation: regAnim 1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: regAnim 1s infinite;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes regAnim {
+    from {
+        left: 5%;
+    }
+
+    to {
+        left: 71%;
+    }
 }
 
 @-webkit-keyframes regAnim /* Safari and Chrome */
 {
-from {left:5%}
-to {left:71%}
+    from {
+        left: 5%;
+    }
+
+    to {
+        left: 71%;
+    }
 }
 /*--------------------------------single good -------------------------------*/
-.singleGood{
-	-webkit-animation:sinG 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:sinG 1s ;
-	animation-fill-mode:forwards;
-}
-.hideR{
-	-webkit-animation:hideR .6s; /* Safari and Chrome */
-	-webkit-animation-delay:.6s;
-	-webkit-animation-fill-mode:forwards;
-	animation:hideR .6s infinite;
-	animation-delay:.6s;
-	animation-fill-mode:forwards;
-}
-.loveShow{
-	-webkit-animation:loveShow .6s; /* Safari and Chrome */
-	-webkit-animation-delay:1.2s;
-	-webkit-animation-fill-mode:forwards;
-	-webkit-animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation:loveShow 1.2s infinite;
-	animation-delay:1s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
+.singleGood {
+    -webkit-animation: sinG 1.2s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: sinG 1s;
+    animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes sinG 
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
+.hideR {
+    -webkit-animation: hideR .6s; /* Safari and Chrome */
+    -webkit-animation-delay: .6s;
+    -webkit-animation-fill-mode: forwards;
+    animation: hideR .6s infinite;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes sinG
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
+.loveShow {
+    -webkit-animation: loveShow .6s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+    animation: loveShow 1.2s infinite;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
-@-webkit-keyframes hideR 
-{
-	0% {right:0%}
-	100%{right: -50%}
+@-webkit-keyframes sinG {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
 }
 
-@keyframes hideR
-{
-	0% {right:0%}
-	100%{right: -50%}
-}
-@-webkit-keyframes loveShow 
-{
-0% {left: -75%;}
-100% {left:135%;
-      background-size: 0%,115%;}
+@keyframes sinG {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
 }
 
-@keyframes loveShow
-{
-0% {left: -75%;}
-100% {left:145%}
+@-webkit-keyframes hideR {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@keyframes hideR {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@-webkit-keyframes loveShow {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 135%;
+        background-size: 0%,115%;
+    }
+}
+
+@keyframes loveShow {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 145%;
+    }
 }
 /*--------------------------------battel side r -------------------------------*/
-.battel1lGood{
-	-webkit-animation:battel1lGood 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:battel1lGood 1.2s ;
-	animation-fill-mode:forwards;
-}
-.battel1Bad{
-	-webkit-animation:battel1Bad 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:battel1Bad 1.2s ;
-	animation-fill-mode:forwards;
-}
-.hideL{
-	-webkit-animation:hideL .6s; /* Safari and Chrome */
-	-webkit-animation-delay:.6s;
-	-webkit-animation-fill-mode:forwards;
-	animation:hideL .6s infinite;
-	animation-delay:.6s;
-	animation-fill-mode:forwards;
-}
-.love1Show{
-	-webkit-animation:love1Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay:1.2s;
-	-webkit-animation-fill-mode:forwards;
-	-webkit-animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation:love1Show 1.2s ;
-	animation-delay:1s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-}
-.hate1Show{
-	-webkit-animation:hate1Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay:1.2s;
-	-webkit-animation-fill-mode:forwards;
-	-webkit-animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation:hate1Show 1.2s ;
-	animation-delay:1s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-}
-@-webkit-keyframes battel1lGood 
-{
-0% {right: -30%}
-40% {right:0%}
-60%{right:0%}
-100%{right: -50%}
+.battel1lGood {
+    -webkit-animation: battel1lGood 1.2s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: battel1lGood 1.2s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes battel1lGood
-{
-0% {right: -30%}
-40% {right:0%}
-60%{right:0%}
-100%{right: -50%}
-}
-@-webkit-keyframes battel1Bad 
-{
-0% {right: -30%}
-40% {right:0%}
-60%{right:0%}
-100%{right: -50%}
+.battel1Bad {
+    -webkit-animation: battel1Bad 1.2s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: battel1Bad 1.2s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes battel1lGood
-{
-0% {right: -30%}
-40% {right:0%}
-60%{right:0%}
-100%{right: -50%}
-}
-@-webkit-keyframes hideL
-{
-	0% {left:0%}
-	100%{left: -50%}
+.hideL {
+    -webkit-animation: hideL .6s; /* Safari and Chrome */
+    -webkit-animation-delay: .6s;
+    -webkit-animation-fill-mode: forwards;
+    animation: hideL .6s infinite;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes hideL
-{
-	0% {left:0%}
-	100%{left: -50%}
-}
-@-webkit-keyframes love1Show
-{
-0% {right: -75%;}
-100% {right:145%}
-}
-
-@keyframes love1Show
-{
-0% {right: -75%;}
-100% {right:145%}
-}
-@-webkit-keyframes hate1Show
-{
-0% {right: -75%;}
-100% {right:145%}
+.love1Show {
+    -webkit-animation: love1Show .6s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+    animation: love1Show 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
-@keyframes hate1Show
-{
-0% {right: -75%;}
-100% {right:145%}
+.hate1Show {
+    -webkit-animation: hate1Show .6s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+    animation: hate1Show 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+}
+
+@-webkit-keyframes battel1lGood {
+    0% {
+        right: -30%;
+    }
+
+    40% {
+        right: 0%;
+    }
+
+    60% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@keyframes battel1lGood {
+    0% {
+        right: -30%;
+    }
+
+    40% {
+        right: 0%;
+    }
+
+    60% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@-webkit-keyframes battel1Bad {
+    0% {
+        right: -30%;
+    }
+
+    40% {
+        right: 0%;
+    }
+
+    60% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@keyframes battel1lGood {
+    0% {
+        right: -30%;
+    }
+
+    40% {
+        right: 0%;
+    }
+
+    60% {
+        right: 0%;
+    }
+
+    100% {
+        right: -50%;
+    }
+}
+
+@-webkit-keyframes hideL {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes hideL {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@-webkit-keyframes love1Show {
+    0% {
+        right: -75%;
+    }
+
+    100% {
+        right: 145%;
+    }
+}
+
+@keyframes love1Show {
+    0% {
+        right: -75%;
+    }
+
+    100% {
+        right: 145%;
+    }
+}
+
+@-webkit-keyframes hate1Show {
+    0% {
+        right: -75%;
+    }
+
+    100% {
+        right: 145%;
+    }
+}
+
+@keyframes hate1Show {
+    0% {
+        right: -75%;
+    }
+
+    100% {
+        right: 145%;
+    }
 }
 /*--------------------------------battel side left -------------------------------*/
-.battel2lGood{
-	-webkit-animation:battel2lGood 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:battel2lGood 1.2s ;
-	animation-fill-mode:forwards;
-}
-.battel2Bad{
-	-webkit-animation:battel2Bad 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode:forwards;
-	animation:battel2Bad 1.2s ;
-	animation-fill-mode:forwards;
-}
-.love2Show{
-	-webkit-animation:love2Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay:1.2s;
-	-webkit-animation-fill-mode:forwards;
-	-webkit-animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation:love2Show 1.2s ;
-	animation-delay:1s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-}
-.hate2Show{
-	-webkit-animation:hate2Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay:1.2s;
-	-webkit-animation-fill-mode:forwards;
-	-webkit-animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation:hate2Show 1.2s ;
-	animation-delay:1s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.460, 0.025, 0.425, 1);
-}
-@-webkit-keyframes battel2lGood 
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
+.battel2lGood {
+    -webkit-animation: battel2lGood 1.2s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: battel2lGood 1.2s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes battel2lGood
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
-}
-@-webkit-keyframes battel2Bad 
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
+.battel2Bad {
+    -webkit-animation: battel2Bad 1.2s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: battel2Bad 1.2s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes battel2lGood
-{
-0% {left: -30%}
-40% {left:0%}
-60%{left:0%}
-100%{left: -50%}
-}
-@-webkit-keyframes hideL
-{
-	0% {left:0%}
-	100%{left: -50%}
+.love2Show {
+    -webkit-animation: love2Show .6s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+    animation: love2Show 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
-@keyframes hideL
-{
-	0% {left:0%}
-	100%{left: -50%}
-}
-@-webkit-keyframes love2Show
-{
-0% {left: -75%;}
-100% {left:145%}
-}
-
-@keyframes love2Show
-{
-0% {left: -75%;}
-100% {left:145%}
-}
-@-webkit-keyframes hate2Show
-{
-0% {left: -75%;}
-100% {left:145%}
+.hate2Show {
+    -webkit-animation: hate2Show .6s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+    animation: hate2Show 1.2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
-@keyframes hate2Show
-{
-0% {left: -75%;}
-100% {left:145%}
+@-webkit-keyframes battel2lGood {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes battel2lGood {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@-webkit-keyframes battel2Bad {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes battel2lGood {
+    0% {
+        left: -30%;
+    }
+
+    40% {
+        left: 0%;
+    }
+
+    60% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@-webkit-keyframes hideL {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes hideL {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@-webkit-keyframes love2Show {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 145%;
+    }
+}
+
+@keyframes love2Show {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 145%;
+    }
+}
+
+@-webkit-keyframes hate2Show {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 145%;
+    }
+}
+
+@keyframes hate2Show {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 145%;
+    }
 }
 /*-------------------------------------result-------------------------------------------*/
