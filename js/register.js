@@ -1,12 +1,12 @@
 var voteIdA, voteKeyA, voteIdB, voteKeyB;
-var isRegistered;
+//var isRegistered;
 
 function attachEventsRegister() {
     $(".slidein .btn").on("click", setRegister); //click on slider
 }
 
 function setOpenRegisterPage(data) {
-    isRegistered = false;
+    generalParameters.isRegistered = false;
     //console.log("data.status: " + data.status);
     //take the value from dictionary
     $("#register-dic").text(registerDic);
@@ -30,14 +30,15 @@ function setOpenRegisterPage(data) {
         $("#register-comp-name-single").text(name);
         $("#register-song-name-single").text(song);
         $("#register-wait-text").text(textWait);
+        Navi.goto("registerBattle");
     }
     //if this is a single vote
     else {
 
+        Navi.goto("registerSingle");
     }
 
-    //show register page
-    Navi.goto("register");
+    
 
 }
 
@@ -73,7 +74,7 @@ function setWaitVotePage(data) {
         voteIdB = data[1].voteId;
         voteKeyB = data[1].voteKey;
     }
-    isRegistered = true;
+    generalParameters.isRegistered = true;
    
 
 
