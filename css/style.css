@@ -632,7 +632,7 @@ margin-top: 5%;
     line-height: 3em;
     background-size: 100% 100%;
     border-bottom: 1px solid #005078;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 1;
 }
@@ -844,7 +844,7 @@ position:relative;
 
 .slideStay {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .slideGo:before {
