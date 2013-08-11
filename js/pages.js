@@ -65,4 +65,4 @@ function   setStaticPageWithImg(data){
        
 function   setStaticPageNoImg(data){
                 
-            }
+ }

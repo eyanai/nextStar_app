@@ -88,7 +88,8 @@ to {left:71%}
 @-webkit-keyframes loveShow 
 {
 0% {left: -75%;}
-100% {left:145%}
+100% {left:135%;
+      background-size: 0%,115%;}
 }
 
 @keyframes loveShow

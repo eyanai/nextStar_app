@@ -169,5 +169,18 @@ function setVote(e) {
 
 function setWaitResultsPage() {
     $("#vote-img-single").hide();
-    $("#vote .reMesseg .continue").show();
+    $("#vote .reMesseg .continue").slideUp(500, function () { $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); }); });
+    //$("#vote .topMenu").slideUp(500,function(){$("#vote .topMenu h1").text(afterVoteDic);});
+    $("#vote .topMenu").slideDown(500);
+}
+
+function replaceHeadline() {
+    $('.slideLeft').addClass('singleGood');
+    $('.slideRight').addClass('hideR');
+    $('.single .love').addClass('loveShow');
+
+    $("#vote .reMesseg .continue").slideDown(500);
+    $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); });
+    $("#vote .topMenu").slideDown(500);
+
 }
