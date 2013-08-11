@@ -18,15 +18,15 @@ h1, .facebookArea , .logFb, .logText {
     
 }
 
-#download-music{
-	font-size:0.55em;
+#download-music {
+    font-size: 0.55em;
 }
 
-#loginExtendedBox, #loginRewardBox{
-	height:50%;
-	position: relative;
-	top: 0%;
-	margin: 4% auto;
+#loginExtendedBox {/*, #loginRewardBox*/
+    height: 50%;
+    position: relative;
+    top: 0%;
+    margin: 4% auto;
 }
 
 #loginExtendedBox .logFb .logFb-text{
@@ -37,39 +37,39 @@ h1, .facebookArea , .logFb, .logText {
 	font-size:1.4em;
 }
 
-#loginExtendedBox .logFb, #loginExtendedBox .login{
-	height:48%;
+#loginExtendedBox .logFb, #loginExtendedBox .login {
+    height: 48%;
 }
 
-#loginExtendedBox .login{
-	margin-top:2%;
+#loginExtendedBox .login {
+    margin-top: 2%;
 }
 
-#message .continue h2{
-	font-size:1em;
+#message .continue h2 {
+    font-size: 1em;
 }
 
-.topMenu{
-	height:8%;
+.topMenu {
+    height: 8%;
 }
 
 
-.checkboxArea{
-	font-size:0.15em;
+.checkboxArea {
+    font-size: 0.15em;
 }
 
-input[type=checkbox]{
-	margin:1%;
-	width:1em;
-	height:1em;
+input[type=checkbox] {
+    margin: 1%;
+    width: 1em;
+    height: 1em;
 }
 
-.loginHg{
-	padding:2.5% 0;
+.loginHg {
+    padding: 2.5% 0;
 }
 
-.logFb .icon{
-	background-size:45% 50%;
+.logFb .icon {
+    background-size: 45% 50%;
 }
 
 .speker {
@@ -86,27 +86,27 @@ h2 {
 .message {
     border-top: 1px solid #005d8d;
     border-bottom: 1px solid #183344;
-	/*rgba(196,196,196,0.5);*/
+    /*rgba(196,196,196,0.5);*/
 }
 
-#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
-	font-size: 0.75em;
-	vertical-align: middle;
-	padding: 0.4% 0;
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
+    font-size: 0.75em;
+    vertical-align: middle;
+    padding: 0.4% 0;
 }
 
-.slideStay h1, .slideGo h1{
-	font-size:0.3em;
+.slideStay h1, .slideGo h1 {
+    font-size: 0.3em;
 }
 
 .message .continue h2 {
     margin-top: 3.5%;
-	font-size:0.14em;
+    font-size: 0.14em;
 }
 
 .detail {
     font-size: 0.7em;
-	letter-spacing:0.13em;
+    letter-spacing: 0.13em;
     margin-top: 3%;
 }
 
@@ -148,7 +148,7 @@ section {
 .slideLeft {
     background-size: 100% 112%;
     /*height: 23%;*/
-	 height: 18%;
+    height: 18%;
 }
 
 .slideRight {
@@ -169,16 +169,13 @@ section {
 }
 
 #results .percentage {
-    
     font-size: 0.15em;
-   
 }
 
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
-	font-size: 0.4em;
-	
+    font-size: 0.4em;
 }
 
 #results .divideH.waiting-high {

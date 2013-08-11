@@ -28,42 +28,49 @@
         <section id="login">
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
-				<div id="loginExtendedBox">		
-					<hgroup class="loginHg">
-						<div class="titleLogin"> לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים </div>
-					</hgroup>
-					<form name="" action="" method="">
-						<div class="checkboxArea">
-							<input type="checkbox" id="checkbox1"/>
-							<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
-							<input type="checkbox" id="checkbox2"/>
-							<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-						</div>
-						<div class="facebookArea">
-							<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-							<div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
-						</div>
-					</form>
-				</div>
-				<div id="loginRewardBox">		
-					<hgroup class="loginHg">
-						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם </div>
-					</hgroup>
-					<div class="loginBox">
-						<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-						<div class="login" onclick="Navi.goto('message')">
-							<span class="logText">הצבעה ללא פייסבוק</span>
-						</div>
-					</div>
-					<div class="checkboxArea">						
-						<input type="checkbox" id="checkbox3" name="cc" />
-						<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-					</div>
-				</div>
-			<div class="musix centerMe"></div>
+
+            <div id="loginExtendedBox">
+                <div id="slide-containter">
+                    <hgroup class="loginHg">
+                        <div class="titleLogin">
+ לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים
+                        </div>
+                    </hgroup>
+                    <form name="" action="" method="">
+                        <div class="checkboxArea">
+                            <input type="checkbox" id="checkbox1" />
+                            <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
+                            <input type="checkbox" id="checkbox2" />
+                            <label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+                        </div>
+                        <div class="facebookArea">
+                            <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+                            <div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
+                        </div>
+                    </form>
+                    <!--</div>-->
+                    <div id="loginRewardBox">
+                        <hgroup class="loginHg">
+                            <div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
+                            </div>
+                        </hgroup>
+                        <div class="loginBox">
+                            <div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
+                            <div class="login" onclick="Navi.goto('message')">
+                                <span class="logText">הצבעה ללא פייסבוק</span>
+                            </div>
+                        </div>
+                        <div class="checkboxArea">
+                            <input type="checkbox" id="checkbox3" name="cc" />
+                            <label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="musix"></div>
         </section>
         <!---log in section-->
-		
         <section id="message">
             <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
@@ -103,79 +110,79 @@
             <nav class="topMenu">
                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
             </nav>
-			<div id="registerSingle">
-				<div id="register-single-img" class="contestant">
-					<div class="slidein">
-						<div class="slide btn"></div>
-						<div class="slider-text">כניסה להצבעה</div>
-					</div>
-					<!--<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-single">דוד לוי</h1>
-							<h2 id="register-song-name-single">ילדות נשכחת</h2>
-						</div>
-					</div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
-				</div>
-				<div class="reMesseg cf">
-					<div class="continue">
-						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-						<figure class="contIcons"></figure>
-					</div>
-					<div class="songName">
-						<h1 id="register-comp-name-single">דוד לוי</h1>
-						<h2 id="register-song-name-single">ילדות נשכחת</h2>
-					</div>
-				</div>
-			</div>
-			<div id="registerBattle" class="cf">
-				<div class="slidein">
-					<div class="slide btn"></div>
-					<div class="slider-text">כניסה להצבעה</div>
-				</div>
-				<div id="register-img-first" class="contestant1">
-					<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-battle">דוד לוי</h1>
-							<h2 id="register-song-name-battle">ילדות נשכחת</h2>
-						</div>
-					</div>
-				</div>
-				<div id="register-img-second" class="contestant2">
-					<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-single">מרינה מקסימיליאן בלומין</h1>
-							<h2 id="register-song-name-single">רוצי שמוליק קורא לך</h2>
-						</div>
-					</div>
-				</div>
-				<!--<div class="reMesseg cf">
-					<div class="continue">
-						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-						<figure class="contIcons"></figure>
-					</div>
-					<div class="songName">
-						<h1 id="register-comp-name-single">דוד לוי</h1>
-						<h2 id="register-song-name-single">ילדות נשכחת</h2>
-					</div>
-				</div>-->
-			</div>
+            <div id="registerSingle">
+                <div id="register-single-img" class="contestant">
+                    <div class="slidein">
+                        <div class="slide btn"></div>
+                        <div class="slider-text">כניסה להצבעה</div>
+                    </div>
+                                            <!--<div class="reMesseg cf">
+                                                                                                                                                <div class="continue">
+                                                                                                                                                    <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                                                    <figure class="contIcons"></figure>
+                                                                                                                                                </div>
+                                                                                                                                                <div class="songName">
+                                                                                                                                                    <h1 id="register-comp-name-single">דוד לוי</h1>
+                                                                                                                                                    <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                                                                                                                                                </div>
+                                                                                                                                            </div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
+                </div>
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName">
+                        <h1 id="register-comp-name-single">דוד לוי</h1>
+                        <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="registerBattle" class="cf">
+                <div class="slidein">
+                    <div class="slide btn"></div>
+                    <div class="slider-text">כניסה להצבעה</div>
+                </div>
+                <div id="register-img-first" class="contestant1">
+                    <div class="reMesseg cf">
+                        <div class="continue">
+                            <h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
+                            <figure class="contIcons"></figure>
+                        </div>
+                        <div class="songName">
+                            <h1 id="register-comp-name-battle">דוד לוי</h1>
+                            <h2 id="register-song-name-battle">ילדות נשכחת</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-img-second" class="contestant2">
+                    <div class="reMesseg cf">
+                        <div class="continue">
+                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                            <figure class="contIcons"></figure>
+                        </div>
+                        <div class="songName">
+                            <h1 id="register-comp-name-single">מרינה מקסימיליאן בלומין</h1>
+                            <h2 id="register-song-name-single">רוצי שמוליק קורא לך</h2>
+                        </div>
+                    </div>
+                </div>
+                                    <!--<div class="reMesseg cf">
+                                                                                                                        <div class="continue">
+                                                                                                                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                            <figure class="contIcons"></figure>
+                                                                                                                        </div>
+                                                                                                                        <div class="songName">
+                                                                                                                            <h1 id="register-comp-name-single">דוד לוי</h1>
+                                                                                                                            <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                                                                                                                        </div>
+                                                                                                                    </div>-->
+            </div>
 
         </section>
         <!---register  section-->
         <section id="vote">
-			
+
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
@@ -223,15 +230,15 @@
                     <h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
                 </nav>
                 <div id="vote-img-first" class="contestant1">
-					<div class="slideTopbattle">
+                    <div class="slideTopbattle">
                         <div class="slideGo btn"></div>
-						<h1>הולך</h1>
-						<div class="hate"></div>
+                        <h1>הולך</h1>
+                        <div class="hate"></div>
                     </div>
                     <div class="slideDownbattle">
                         <div class="slideStay btn"></div>
-						<h1>נשאר</h1>
-						<div class="love"></div>
+                        <h1>נשאר</h1>
+                        <div class="love"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
@@ -239,13 +246,13 @@
                 <div id="vote-img-second" class="contestant2">
                     <div class="slideTopbattle">
                         <div class="slideGo btn"></div>
-						<h1>הולך</h1>
-						<div class="hate2"></div>
+                        <h1>הולך</h1>
+                        <div class="hate2"></div>
                     </div>
-					<div class="slideDownbattle">
+                    <div class="slideDownbattle">
                         <div class="slideStay btn"></div>
-						<h1>נשאר</h1>
-						<div class="love"></div>
+                        <h1>נשאר</h1>
+                        <div class="love"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
@@ -291,7 +298,7 @@
                         <div class="scalaRed">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="reMesseg results cf">
                     <div class="continue">
@@ -299,14 +306,14 @@
                         <figure class="contIcons"></figure>
                         <div id="results-perc-single" class="percentage">
 			57%
-                    </div>
+                        </div>
                     </div>
                     <span class="divide"></span>
                     <div id="" class="songName">
                         <h1 id="results-comp-name-single">דוד לוי</h1>
                         <h2 id="results-song-name-single">ילדות נשכחת</h2>
                     </div>
-                    
+
                     <!--<div class="divideH"></div>-->
                 </div>
             </div><!---------------------------------------------------single div--------------------------------->
@@ -323,7 +330,7 @@
                         </div>
                         <div class="scalaRed">
                         </div>
-                        
+
                     </div>
                 </div>
                 <div id="results-img-second" class="contestant2">
@@ -338,7 +345,7 @@
                         </div>
                         <div class="scalaRed">
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="reMesseg results cf">
@@ -351,16 +358,16 @@
                     <div class="songName1">
                         <h1 id="results-comp-name-first">דוד לוי</h1>
                         <h2 id="results-song-name-first">ילדות נשכחת</h2>
-                        
+
                     </div>
                     <div class="songName2">
                         <h1 id="results-comp-name-second">חגית יאסו חגית</h1>
                         <h2 id="results-song-name-second">ים של דמעות</h2>
-                        
+
                     </div>
 
                 </div>
-                
+
             </div><!---------------------------------------------------battle div--------------------------------->
         </section>
         <!---results  section-->
@@ -455,69 +462,69 @@
                 </ul>
             </div>
                             <!--<div class="swiper-container">
-                                                                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide red-slide">
-                                                                        <span class="dividHgall"></span>
-                                                                        <div class="contestant gall">
-                                                                            <div class="reMesseg gall cf">
-                                                                                <span class="divide"></span>
-                                                                                <div class="songName">
-                                                                                    <h1>דוד לוי</h1>
-                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                </div>
-                                                                                <div class="percentage">
-                                                                        57%
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                                                                                <div class="swiper-wrapper">
+                                                                                                                                                    <div class="swiper-slide red-slide">
+                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                <span class="divide"></span>
+                                                                                                                                                                <div class="songName">
+                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="percentage">
+                                                                                                                                                        57%
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
                 
-                                                                    </div>
-                                                                    <div class="swiper-slide blue-slide">
-                                                                        <span class="dividHgall"></span>
-                                                                        <div class="contestant gall">
-                                                                            <div class="reMesseg gall cf">
-                                                                                <span class="divide"></span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="swiper-slide blue-slide">
+                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                <span class="divide"></span>
                 
-                                                                                <div class="songName">
-                                                                                    <h1>דוד לוי</h1>
-                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                </div>
-                                                                                <div class="percentage">
-                                                                        57%
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                                                                                                <div class="songName">
+                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="percentage">
+                                                                                                                                                        57%
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
                 
-                                                                    </div>
-                                                                    <div class="swiper-slide orange-slide">
-                                                                        <span class="dividHgall"></span>
-                                                                        <div class="contestant gall">
-                                                                            <div class="reMesseg gall cf">
-                                                                                <span class="divide"></span>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="swiper-slide orange-slide">
+                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                <span class="divide"></span>
                 
-                                                                                <div class="songName">
-                                                                                    <h1>דוד לוי</h1>
-                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                </div>
-                                                                                <div class="percentage">
-                                                                        57%
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                
-                                                                </div>
-                                                            </div>
-                                                            -->
-
+                                                                                                                                                                <div class="songName">
+                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="percentage">
+                                                                                                                                                        57%
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>                
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                            -->
             <!--<div class="pagination"></div>-->
-			<div class="goodbyeBox">
-				<div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
-				<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-				<div class="checkboxArea">						י
-					<input type="checkbox" id="checkbox3" name="cc" />
-					<label for="checkbox3"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-				</div>
-			</div>
+            <div class="goodbyeBox">
+                <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
+                <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+                <div class="checkboxArea">
+						י
+                    <input type="checkbox" id="checkbox3" name="cc" />
+                    <label for="checkbox3"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+                </div>
+            </div>
             <div class="musix"></div>
   </div>
         </section>
@@ -541,11 +548,11 @@
                     goto = $(this).data('goto');
                     Navi.goto(goto);
                 });
-
-
+            
+            
                 $('.animat').on('click', this, function () {
                     anim = $(this).data('animat'); //animat="register"
-
+            
                     switch (anim) {
                         case 'register':
                             $('#register .slide').addClass('regAnim');
@@ -566,28 +573,28 @@
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant1 .love').addClass('love1Show');
-
+            
                             break;
                         case 'battel1Bad':
                             $('.contestant1 .slideDownbattle').addClass('battel1Bad');
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideTopbattle').addClass('hideR');
                             $('.contestant1 .hate').addClass('hate1Show');
-
+            
                             break;
                         case 'battel2Good':
                             $('.contestant2 .slideTopbattle').addClass('battel2lGood');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant2 .love').addClass('love2Show');
-
+            
                             break;
                         case 'battel2Bad':
                             $('.contestant2 .slideDownbattle').addClass('battel2Bad');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideTopbattle').addClass('hideL');
                             $('.contestant2 .hate2').addClass('hate2Show');
-
+            
                             break;
                         case 'results':
                             $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function () {
@@ -595,9 +602,9 @@
                             });
                             break;
                         default:
-
+            
                     }
-
+            
                 });
             });
         </script>
