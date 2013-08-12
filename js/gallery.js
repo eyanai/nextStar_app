@@ -29,7 +29,6 @@ function setGalleryPage(data){
         
     });
     $("#result-gallery ul").append(gallerObj);//append to dom the gallery string
-    $("#end-show-dic").text(endShowDic);
     $("#gallery-title").text(data.title);
     Navi.goto("gallery");
 }

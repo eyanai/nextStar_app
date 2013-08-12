@@ -5,7 +5,12 @@ $(document).ready(function() {
     initDictionaryValues();
     checkRulesChecked();
     //attachEventsFacebook(); //check gallery
-    attachEventsRegister();
+
+   // attachEventsFacebook();
+    //attachEventsRegister();
+
+    //attachEventsFacebook();//check gallery
+    //attachEventsRegister();
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
@@ -153,7 +158,15 @@ function initMoveEvents(){
         $(document).css("top","0px")
     };
 }
+}
 
+function toggleTopMenu(headerText) {
+
+    $(".topMenu").slideUp(1000);
+    $(".topMenu h1").text(headerText);
+    $(".topMenu").slideDown(1000);
+
+}
 function checkRulesChecked(){
     if(localStorage.getItem('rulesStorage')){
         generalParameters.ruledChecked = true;

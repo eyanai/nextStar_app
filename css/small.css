@@ -78,16 +78,19 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 .topMenu {
-    height: 7%;
+    height: 6%;
 }
 
+.checkboxArea  , #result-gallery .checkboxArea{
+    font-size: 0.6em;
+}
 
-.checkboxArea {
-    font-size: 0.15em;
+label[for="checkbox1"], label[for="checkbox2"], label[for="checkbox3"]{
+    font-size: 0.6em;
 }
 
 input[type=checkbox] {
-    margin: 1%;
+    margin: 2%;
     width: 1em;
     height: 1em;
 }
@@ -124,6 +127,10 @@ h2 {
 
 .slideStay h1, .slideGo h1 {
     font-size: 0.3em;
+}
+
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay{
+	top:7%;
 }
 
 .message .continue h2 {
@@ -203,7 +210,7 @@ section {
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
-    font-size: 0.4em;
+    font-size: 0.6em;
 }
 
 #results .divideH .waiting-high {
@@ -224,7 +231,7 @@ section {
 }
 
 #gallery h2{
-	margin-top:9%;
+	margin:11% 0 2%;
 }
 
 #result-gallery h2{
@@ -238,7 +245,7 @@ section {
 
 #result-gallery .percentage{
 	margin-right:32%;
-	font-size:0.8em;
+	font-size:0.75em;
 }
 
 #result-gallery .reMesseg{

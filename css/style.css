@@ -226,7 +226,7 @@ header {
     top: 0%;
 }
 
-#loginExtendedBox{/*, #loginRewardBox*/ 
+#loginExtendedBox { /*, #loginRewardBox*/
     position: relative;
     top: 0%;
     /* Opera */
@@ -342,8 +342,10 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked {
-    background: url(../images/singUp/checkbox.png) -19px top no-repeat;
-    border: 1px solid grey;
+    background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
+	background-color: #fff;
+	background-size:85% 80%;
+	background-position: center ;
     z-index: 2;
 }
 /*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
@@ -425,7 +427,7 @@ input[type="checkbox"]:checked + label span {
     margin: 5% 3%;
 }
 
-#loginRewardBox .login{/*, #loginExtendedBox .login*/ 
+#loginRewardBox .login { /*, #loginExtendedBox .login*/
     background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
@@ -555,7 +557,6 @@ input[type="checkbox"]:checked + label span {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
- 
 }
 
 .continue h2 {
@@ -577,6 +578,14 @@ input[type="checkbox"]:checked + label span {
 }
 
 .contIcons {
+    background-image: url(../images/masseg/dots.png);
+    width: 12%;
+    height: 33%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    top: 72%;
+    background-position-x: -431px;
     background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
     background-size: 100% 100%;
     width: 12%;
@@ -620,8 +629,9 @@ input[type="checkbox"]:checked + label span {
     background-size: 100% 100%;
     border-bottom: 1px solid #005078;
     position: absolute;
-    top: 0;
+    top: 17.6%;
     z-index: 1;
+    display: none;
 }
 
 .topMenu h1 {
@@ -653,7 +663,9 @@ input[type="checkbox"]:checked + label span {
     background-image: url(../images/register/signin_slider_base.png);
     background-repeat: no-repeat;
     height: 18%;
-    width: 62%;
+    width: 54%;
+    padding-right: 4%;
+    padding-left: 4%;
     background-size: 100%;
     position: absolute;
     left: 19%;
@@ -704,6 +716,10 @@ input[type="checkbox"]:checked + label span {
     width: 58%;
     left: 21%;
     top: 62%;
+}
+
+.grey .slider-text{
+    content: "אין אוטו";
 }
 
 .slidein.grey .btn {
@@ -776,14 +792,13 @@ input[type="checkbox"]:checked + label span {
 
 .songName {
     text-align: center;
-    clear: both;
-    border-top: solid 1px #545454;
     height: 57%;
     width: 100%;
 }
 
 #registerBattle .songName {
     position: relative;
+	
 }
 
 .songName h1 {
@@ -980,7 +995,7 @@ input[type="checkbox"]:checked + label span {
     background-image: url(../images/votes/kohav6_02.jpg);
     background-repeat: no-repeat;
     width: 50%;
-    height: 94%;
+    height: 100%;
     float: right;
     background-size: 100% 100%;
 }
@@ -989,7 +1004,7 @@ input[type="checkbox"]:checked + label span {
     background-image: url(../images/votes/kohav6_01.jpg);
     background-repeat: no-repeat;
     width: 50%;
-    height: 94%;
+    height: 100%;
     float: left;
     background-size: 100% 100%;
 }
@@ -1187,6 +1202,10 @@ input[type="checkbox"]:checked + label span {
 .resultBlue {
     background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
+}
+
+.result {
+    width: 72%;
     width: 72%;
     height: 98%;
     margin: auto;
@@ -1197,6 +1216,9 @@ input[type="checkbox"]:checked + label span {
 .scalaBlue {
     background-image: url(../images/results/graph_blue_on_kohav.png);
     background-repeat: no-repeat;
+}
+
+.scala {
     width: 72%;
     height: 100%;
     position: absolute;
@@ -1288,6 +1310,11 @@ input[type="checkbox"]:checked + label span {
 
 #results #results-perc-second {
     float: none;
+    left: 1%;
+}
+
+#results .red {
+    color: #ff0060;
     left: 1%;
     color: #ff0060;
 }
@@ -1631,12 +1658,8 @@ input[type="checkbox"]:checked + label span {
     display: block;
 }
 
-#loginExtendedBox{
-	
-}
-
-#voteBattle{
-	display:block;
+#voteBattle {
+    display: block;
 }
 
 #voteSingle {
@@ -1647,10 +1670,10 @@ input[type="checkbox"]:checked + label span {
     display: none;
 }
 
-#registerSingle{
-display:block;
+#registerSingle {
+    display: block;
 }
 
-#registerBattle{
-display:none;
+#registerBattle {
+    display: none;
 }
