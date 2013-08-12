@@ -3,23 +3,17 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-    //attachEventsFacebook();//check gallery
+    checkRulesChecked();
+    //attachEventsFacebook(); //check gallery
     attachEventsRegister();
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
-    // longPolling();
-    //
     // initWaitAnimation();
 
     longPolling();////check gallery
-	
-    /*$(document).bind("touchmove", function(event) {
-        event.preventDefault();
-    });*/
-    document.ontouchmove = function(e) {
-        $(document).css("top", "0")
-    }
+
+
 });
 
 //general parameters
@@ -36,7 +30,8 @@ var generalParameters = {
         gender: null,
         profilePic: null
     },
-    isBigSize:false
+    isBigSize:false,
+    ruledChecked: false
 }
 var domain = "http://makosrv1.egoline.co.il/application";
 function pageChange(data) {
@@ -157,4 +152,11 @@ function initMoveEvents(){
         e.stopPropagation();
         $(document).css("top","0px")
     };
+}
+
+function checkRulesChecked(){
+    if(localStorage.getItem('rulesStorage')){
+        generalParameters.ruledChecked = true;
+    }
+  
 }

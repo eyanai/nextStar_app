@@ -1,21 +1,28 @@
 //////////////////////////////////////////////////////// help parameters
-var appID = "543975688973172";//fb app id
-var myLocation = domain+"/index.html";//domain
+//var appID = "543975688973172";//fb app id
+//var myLocation = domain+"/index.html";//domain
 
 //////////////////////////////////////////////////////// fb init
-///*FB._https = (window.location.protocol == "https:");*/
-FB._https = true; //check fb init
-FB.init({ appId: appID, status: true, cookie: true, oauth: true });
+//FB._https = (window.location.protocol == "https:");
+//FB._https = true; //check fb init
+//FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 ////////////////////////////////////////////////////////// fb init
 /////*FB._https = (window.location.protocol == "https:");*/
 //FB._https = true; //check fb init
 //FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //////////////////////////////////////////////////////// listener   
-//function attachEventsFacebook() {    
-//    
-//    $(".logFb").on("click", loginFb);
+//function attachEventsFacebook() { 
+////if the user checked ruled in previous time -hide it   
+//    if(generalParameters.ruledChecked)
+//    {
+//        $("#rules-wrap").hide();
+//    }   
+// $(".logFb").on("click", loginFb);
 //    $("#loginRewardBox").on("click", ".login", startLongPolling);
+//    $(".login").on("click", loginWithoutFacebook);
+//    $("#rulesCB").on("click",rulesCBClick);
+//    $("#tvImgCB").on("click",tvImgCBClick);
 //}
 
 ////check if localStorge is reset with connect to fb
@@ -36,7 +43,15 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 //////////////////////////////////////////////////////// fb api functions
 ////login fb
 //function loginFb() {
-//    window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation;
+//   // if rules not checked - alert
+//    if(!generalParameters.ruledChecked){
+//        alert("עליך לאשר תקנון");
+//        $("#notConfirmed").fadeIn();
+//    }
+//    else{
+//            window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation;
+//    }
+
 //}
 ////check: if login-> save data
 //function loginCheck() {
@@ -51,6 +66,19 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 //        }
 //    });
 //}
+
+//function loginWithoutFacebook(){
+//   
+//    if(!generalParameters.ruledChecked){
+//        alert("עליך לאשר תקנון");
+//        $("#notConfirmed").fadeIn();
+//    }
+//    else{
+//        //if the rules checked - go to login 2 
+//        Navi.goto('login2');
+//    }
+//}
+
 ////get user data from fb api
 //function saveData() {
 //    FB.api('/me', function (response) {
@@ -97,27 +125,48 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 //////send data to server
 //function saveDataOnServer(str) {
 
-    $.ajax({
-        type: "POST",
-        url: serverDomain + "type==getFacebookData",
-        data: {
-            facebookId: generalParameters.fbUser.id,
-            facebookName: generalParameters.fbUser.userName,
-            facebookSex: generalParameters.fbUser.gender,
-            facebookimgurl: generalParameters.fbUser.profilePic
-        },
-        success: function (data) {
-            console.log(data);
-            setLocalStorage();
-        },
-        error: function (data) {
-            console.log("error getFacebookData: " + data);
-        }
-    });
+//    $.ajax({
+//        type: "POST",
+//        url: serverDomain + "type==getFacebookData",
+//        data: {
+//            facebookId: generalParameters.fbUser.id,
+//            facebookName: generalParameters.fbUser.userName,
+//            facebookSex: generalParameters.fbUser.gender,
+//            facebookimgurl: generalParameters.fbUser.profilePic
+//        },
+//        success: function (data) {
+//            console.log(data);
+//            setLocalStorage();
+//        },
+//        error: function (data) {
+//            console.log("error getFacebookData: " + data);
+//        }
+//    });
 
 //    startLongPolling("saveDataOnServer " +str);
 //}
 ////start LongPolling
 //function startLongPolling(str) {    
 //    longPolling();
+//}
+
+
+
+///*****************check boxes************************/
+
+////ruled check box clicked
+//function rulesCBClick(){
+//    if($("#rulesCB").attr("selected") != "selected"){
+//        generalParameters.ruledChecked = true;
+//        $("#rulesCB").attr("selected", "selected");
+//        localStorage.setItem('rulesStorage', true);
+//    }
+//    else{
+//      $("#rulesCB").removeAttr("selected")  
+//    }
+//    
+//}
+
+//function tvImgCBClick(){
+//    
 //}

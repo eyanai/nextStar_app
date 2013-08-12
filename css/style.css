@@ -315,7 +315,7 @@ header {
 }
 
 
-#checkbox1 {
+#rulesCB {
     border: 2px solid red;
 }
 
@@ -377,6 +377,7 @@ input[type="checkbox"]:checked + label span {
     font-size: 0.8em;
     text-decoration: underline;
     padding-right: 5px;
+    display: none;
 }
 
 .loginBox {
