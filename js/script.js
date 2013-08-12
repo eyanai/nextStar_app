@@ -3,13 +3,12 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-<<<<<<< HEAD
+
    // attachEventsFacebook();
     //attachEventsRegister();
-=======
+
     //attachEventsFacebook();//check gallery
-    attachEventsRegister();
->>>>>>> e6942da2d21b184e3ea99bc08749a6334e4c01a9
+    //attachEventsRegister();
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
