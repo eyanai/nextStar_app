@@ -4,7 +4,7 @@ $(document).ready(function() {
     //init the dictionary values
     initDictionaryValues();
    // attachEventsFacebook();
-    attachEventsRegister();
+    //attachEventsRegister();
     attachEventsVote();
     longPolling();
 

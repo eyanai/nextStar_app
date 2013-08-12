@@ -226,7 +226,7 @@ header {
     top: 0%;
 }
 
-#loginExtendedBox{/*, #loginRewardBox*/ 
+#loginExtendedBox { /*, #loginRewardBox*/
     position: relative;
     top: 0%;
     /* Opera */
@@ -243,7 +243,7 @@ header {
     overflow: hidden;
 }
 
-#slide-container{
+#slide-container {
     position: relative;
     top: 0%;
 }
@@ -277,7 +277,7 @@ header {
     text-align: center;
     margin: 14px 0;
     padding: 25px 105px;
-height:50%;
+    height: 50%;
 }
 
 #loginExtendedBox .loginHg {
@@ -424,7 +424,7 @@ input[type="checkbox"]:checked + label span {
     margin: 5% 3%;
 }
 
-#loginRewardBox .login{/*, #loginExtendedBox .login*/ 
+#loginRewardBox .login { /*, #loginExtendedBox .login*/
     background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
@@ -554,7 +554,6 @@ input[type="checkbox"]:checked + label span {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
- 
 }
 
 .continue h2 {
@@ -580,15 +579,14 @@ input[type="checkbox"]:checked + label span {
 }
 
 .contIcons {
-   background-image: url(../images/masseg/dots.png);
-width: 12%;
-height: 33%;
-background-repeat: no-repeat;
-display: inline-block;
-vertical-align: middle;
-top: 72%;
-
-background-position-x: -431px;
+    background-image: url(../images/masseg/dots.png);
+    width: 12%;
+    height: 33%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    top: 72%;
+    background-position-x: -431px;
     background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
     background-size: 100% 100%;
     /*width: 64px;
@@ -675,7 +673,9 @@ background-position-x: -431px;
     background-image: url(../images/register/signin_slider_base.png);
     background-repeat: no-repeat;
     height: 18%;
-    width: 62%;
+    width: 54%;
+    padding-right: 4%;
+    padding-left: 4%;
     background-size: 100%;
     position: absolute;
     left: 19%;
@@ -712,6 +712,10 @@ background-position-x: -431px;
     width: 58%;
     left: 21%;
     top: 62%;
+}
+
+.grey .slider-text{
+    content: "אין אוטו";
 }
 
 .slidein.grey .btn {
@@ -1161,7 +1165,6 @@ background-position-x: -431px;
 .resultRed {
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
-   
     width: 72%;
     height: 98%;
     margin: auto;
@@ -1172,7 +1175,6 @@ background-position-x: -431px;
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
-  
     width: 72%;
     height: 100%;
     position: absolute;
@@ -1193,25 +1195,27 @@ background-position-x: -431px;
     height: 62.5%;
     border-radius: 6px;
 }
-.resultBlue{
-     background-image: url(../images/results/graph_blue_off_kohav.png);
+
+.resultBlue {
+    background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
 }
+
 .result {
-   
-   width: 72%;
+    width: 72%;
     width: 72%;
     height: 98%;
     margin: auto;
     position: relative;
     top: 1%;
 }
+
 .scalaBlue {
-     background-image: url(../images/results/graph_blue_on_kohav.png);
+    background-image: url(../images/results/graph_blue_on_kohav.png);
     background-repeat: no-repeat;
 }
-.scala{
-   
+
+.scala {
     width: 72%;
     height: 100%;
     position: absolute;
@@ -1303,11 +1307,11 @@ background-position-x: -431px;
 
 #results #results-perc-second {
     float: none;
-left: 1%;
+    left: 1%;
 }
-#results .red{
-    
-color: #ff0060;
+
+#results .red {
+    color: #ff0060;
     left: 1%;
     color: #ff0060;
 }
@@ -1649,8 +1653,8 @@ color: #ff0060;
     display: block;
 }
 
-#voteBattle{
-	display:block;
+#voteBattle {
+    display: block;
 }
 
 #voteSingle {
@@ -1661,10 +1665,10 @@ color: #ff0060;
     display: none;
 }
 
-#registerSingle{
-display:block;
+#registerSingle {
+    display: block;
 }
 
-#registerBattle{
-display:none;
+#registerBattle {
+    display: none;
 }
