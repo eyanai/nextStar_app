@@ -16,7 +16,10 @@
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
         <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
-
+        
+        <script src="js/script.js"></script>
+        <script src="https://connect.facebook.net/en_US/all.js"></script>
+        <!--<script src="js/facebook.js"></script>  //check gallery -->
 
     </head>
 
@@ -174,12 +177,12 @@
                         <h2 id="register-wait-text-battle">ממתין להמשך השידור</h2>
                         <figure class="contIcons"></figure>
                     </div>
-                    <div class="songName1">
+                    <div class="songName1 songName">
                         <h1 id="register-comp-name-first">דוד לוי</h1>
                         <h2 id="register-song-name-first">ילדות נשכחת</h2>
                         
                     </div>
-                    <div class="songName2">
+                    <div class="songName2 songName">
                         <h1 id="register-comp-name-second">חגית יאסו חגית</h1>
                         <h2 id="register-song-name-second">ים של דמעות</h2>
                         
@@ -430,7 +433,6 @@
                         </div>
                         <div class="scala">
                         </div>
-
                     </div>
                 </div>
                 <div class="reMesseg results cf">
@@ -443,12 +445,10 @@
                     <div class="songName1">
                         <h1 id="results-comp-name-first">דוד לוי</h1>
                         <h2 id="results-song-name-first">ילדות נשכחת</h2>
-
                     </div>
                     <div class="songName2">
                         <h1 id="results-comp-name-second">חגית יאסו חגית</h1>
                         <h2 id="results-song-name-second">ים של דמעות</h2>
-
                     </div>
 
                 </div>
@@ -461,10 +461,10 @@
             <nav class="topMenu">
                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
             </nav>
-            <h2>אתם החלטתם - התוצאות המלאות של הערב</h2>
+            <h2 id="gallery-title">אתם החלטתם - התוצאות המלאות של הערב</h2>
             <div id="result-gallery">
                 <ul>
-                    <li class="gallery-vote-single">
+                    <!--<li class="gallery-vote-single">
                         <img src="images/gallery/gallery-contestant.jpg" alt="alt">
                         <span class="reMesseg">
                             <span class="divide"></span>
@@ -472,9 +472,7 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
                     </li>
                     <li class="gallery-vote-single">
@@ -485,24 +483,9 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
-                    </li>
-                    <li class="gallery-vote-single">
-                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                        <span class="reMesseg">
-                            <span class="divide"></span>
-                            <div class="songName">
-                                <h1>דוד לביא</h1>
-                                <h2>ים של דמעות</h2>
-                            </div>
-                            <span class="percentage">
-						            57%
-                            </span>
-                        </span>
-                    </li>
+                    </li>                    
                     <li class="gallery-vote-battle">
                         <span class="vote-1">
                             <img src="images/gallery/gallery-contestant.jpg" alt="alt">
@@ -512,9 +495,7 @@
                                     <h1>דוד לביא</h1>
                                     <h2>ים של דמעות</h2>
                                 </div>
-                                <span class="percentage">
-						            57%
-                                </span>
+                                <span class="percentage">57%</span>
                             </span>
                         </span>
                         <span class="vote-2">
@@ -525,9 +506,7 @@
                                     <h1>דוד לביא</h1>
                                     <h2>ים של דמעות</h2>
                                 </div>
-                                <span class="percentage">
-						            57%
-                                </span>
+                                <span class="percentage">57%</span>
                             </span>
                         </span>
                     </li>
@@ -539,11 +518,10 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
                     </li>
+                    -->
                 </ul>
             </div>
                             <!--<div class="swiper-container">
@@ -605,7 +583,6 @@
                 <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
                 <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
                 <div class="checkboxArea">
-						י
                     <input type="checkbox" id="checkbox3" name="cc" />
                     <label for="checkbox3"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
                 </div>
@@ -617,14 +594,11 @@
         <footer id="banner"> <img src="images/banner/banner1.jpg" alt="alt"> </footer>
         <!---banner section-->
         <script src="js/navigation.js"></script>
-        <script src="js/script.js"></script>
         <script src="js/pages.js"></script>
         <script src="js/register.js"></script>
         <script src="js/vote.js"></script>
         <script src="js/result.js"></script>
-        <script src="https://connect.facebook.net/en_US/all.js"></script>
-        <!--<script src="js/ jquery.ba-bbq.min.js"></script>-->
-        <script src="js/facebook.js"></script>
+        
         <script src="js/gallery.js"></script>
 
         <script>

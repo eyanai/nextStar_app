@@ -1,7 +1,11 @@
-////////////////////////////////////////////////////////// help parameters
-//var appID = "543975688973172";//fb app id
-//var myLocation = "http://makosrv1.egoline.co.il/application/index.html";//domain
+//////////////////////////////////////////////////////// help parameters
+var appID = "543975688973172";//fb app id
+var myLocation = domain+"/index.html";//domain
 
+//////////////////////////////////////////////////////// fb init
+///*FB._https = (window.location.protocol == "https:");*/
+FB._https = true; //check fb init
+FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 ////////////////////////////////////////////////////////// fb init
 /////*FB._https = (window.location.protocol == "https:");*/
 //FB._https = true; //check fb init
@@ -93,23 +97,23 @@
 //////send data to server
 //function saveDataOnServer(str) {
 
-//    $.ajax({
-//        type: "POST",
-//        url: domain + "type==getFacebookData",
-//        data: {
-//            facebookId: generalParameters.fbUser.id,
-//            facebookName: generalParameters.fbUser.userName,
-//            facebookSex: generalParameters.fbUser.gender,
-//            facebookimgurl: generalParameters.fbUser.profilePic
-//        },
-//        success: function (data) {
-//            console.log(data);
-//            setLocalStorage();
-//        },
-//        error: function (data) {
-//            console.log("error getFacebookData: " + data);
-//        }
-//    });
+    $.ajax({
+        type: "POST",
+        url: serverDomain + "type==getFacebookData",
+        data: {
+            facebookId: generalParameters.fbUser.id,
+            facebookName: generalParameters.fbUser.userName,
+            facebookSex: generalParameters.fbUser.gender,
+            facebookimgurl: generalParameters.fbUser.profilePic
+        },
+        success: function (data) {
+            console.log(data);
+            setLocalStorage();
+        },
+        error: function (data) {
+            console.log("error getFacebookData: " + data);
+        }
+    });
 
 //    startLongPolling("saveDataOnServer " +str);
 //}

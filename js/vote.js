@@ -151,7 +151,7 @@ function setVote(e) {
 
     $.ajax({
         type: "POST",
-        url: domain + "type=vote",
+        url: serverDomain + "type=vote",
         data: { voteId: voteId, voteKey: voteKey, vote: vote },
         success: function(data) {
             console.log(data);
