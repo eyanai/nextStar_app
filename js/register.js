@@ -69,10 +69,10 @@ function setRegisterGoingClose(data) {
 
 function setRegister() {
     //ajax call server
-    console.log(domain);
+    console.log(serverDomain);
     $.ajax({
         type: "POST",
-        url: domain + "type=registerToVote",
+        url: serverDomain + "type=registerToVote",
         success: function (data) {
             console.log(data);
             setWaitVotePage(data);

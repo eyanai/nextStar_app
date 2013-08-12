@@ -7,9 +7,10 @@ $(document).ready(function() {
     attachEventsRegister();
     attachEventsVote();
     longPolling();////check gallery
-	$(document).bind("touchmove", function(event) {
+	
+    /*$(document).bind("touchmove", function(event) {
         event.preventDefault();
-    });
+    });*/
    // initWaitAnimation();
 
  
@@ -31,7 +32,7 @@ var generalParameters = {
     },
     isBigSize:false
 }
-
+var domain = "http://makosrv1.egoline.co.il/application";
 function pageChange(data) {
     var status = data.status;
 
@@ -91,12 +92,31 @@ var resultsDic = "";
 var endShowDic = "";
 //init the dictionary values from admin- to blue title
 function initDictionaryValues() {
-    registerDic = "אתם פה? מוכנים להצביע?";
+    var dictionary=null;
+    $.ajax({
+        type: "GET",
+        datatype: "json",
+        url: domain + "/dictionary/dictionary.txt",
+        success: function (data) {
+            dictionary = JSON.parse(data);
+             registerDic =dictionary.registerDic;
+        pushVoteDic =dictionary.pushVoteDic;
+        afterVoteDic=dictionary.afterVoteDic;
+        resultsDic =dictionary.resultsDic;
+        endShowDic =dictionary.endShowDic;
+            //console.log(JSON.parse(data));
+        },
+        error: function (data) {
+            console.log("error getPage: " + data);
+        }
+    });
+   
+    /*registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
     resultsDic = "ויש לנו תוצאות...";
     endShowDic = "התוכנית הסתיימה, נתראה בשלישי ב21:00";
-
+    */
 }
 
 function getFielsdByVote(voteData) {
