@@ -7,7 +7,9 @@ $(document).ready(function() {
     attachEventsRegister();
     attachEventsVote();
     //longPolling();
-
+	$(document).bind("touchmove", function(event) {
+        event.preventDefault();
+    });
    // initWaitAnimation();
 });
 

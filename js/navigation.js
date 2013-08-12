@@ -14,6 +14,7 @@ var Navi = {
                 break;
             case 'login2':
                 $("#slide-container").addClass("login-anim");
+				$('#login .header').hide();
                 break;
             case 'messageWaitingNoImage':
                 Navi.hidelogin();
