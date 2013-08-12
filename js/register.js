@@ -46,9 +46,7 @@ $("#registerBattle .slide.btn.drag").draggable({
 function setOpenRegisterPage(data) {
     generalParameters.isRegistered = false;
     //take the value from dictionary
-    $(".topMenu").hide();
-    $(".topMenu").slideDown(1000);
-    $("#register-dic").text(registerDic);
+    toggleTopMenu(registerDic);
     $(".slide").css("left", "5.5%");
      $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();

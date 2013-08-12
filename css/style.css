@@ -630,6 +630,7 @@ input[type="checkbox"]:checked + label span {
     position: absolute;
     top: 17.6%;
     z-index: 1;
+    display: none;
 }
 
 .topMenu h1 {

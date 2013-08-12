@@ -2,13 +2,13 @@
 
 var Navi = {
 
-    hidelogin: function() {
+    hidelogin: function () {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function(el) {
-        switch(el) {
+    goto: function (el) {
+        switch (el) {
             case 'login1':
                 //
                 break;
@@ -47,11 +47,11 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            //    
+            //      
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
@@ -61,7 +61,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
                 $("#registerSingle").hide();
