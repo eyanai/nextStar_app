@@ -19,7 +19,7 @@ function setOpenRegisterPage(data) {
         var url2 = "";
         //set the img
         //set the ing by size
-        if (isBigSize) {
+        if (generalParameters.isBigSize) {
             url1 = data.votes[0].imageUrlB;
             url2 = data.votes[1].imageUrlB;
         }
@@ -43,7 +43,7 @@ function setOpenRegisterPage(data) {
     }
     //if this is a single vote
     else {
-        if (isBigSize) {
+        if (generalParameters.isBigSize) {
             url = data.votes[0].imageUrlB;
         }
         else {

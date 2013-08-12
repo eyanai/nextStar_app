@@ -3,10 +3,10 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-    attachEventsFacebook();
+    //attachEventsFacebook();//check gallery
     attachEventsRegister();
     attachEventsVote();
-    //longPolling();
+    longPolling();////check gallery
 
    // initWaitAnimation();
 });
@@ -24,7 +24,8 @@ var generalParameters = {
         userName: null,
         gender: null,
         profilePic: null
-    }
+    },
+    isBigSize:false
 }
 
 function pageChange(data) {
@@ -74,7 +75,7 @@ function isSingle(data){
 
 
 
-var isBigSize = false;
+
 function initAppSize() {
     //set the isBigSize parameter by the device
 }
@@ -99,7 +100,7 @@ function getFielsdByVote(voteData) {
     var firstSong = voteData.songName;
     var firstUrl = "";
     //set the img by size
-    if (isBigSize) {
+    if (generalParameters.isBigSize) {
         firstUrl = voteData.imageUrlB;
     }
     else {
