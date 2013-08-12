@@ -81,7 +81,6 @@ h1, .facebookArea , .logFb, .logText {
     height: 6%;
 }
 
-
 .checkboxArea  , #result-gallery .checkboxArea{
     font-size: 0.6em;
 }
@@ -131,7 +130,7 @@ h2 {
 }
 
 .contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay{
-	top:6%;
+	top:7%;
 }
 
 .message .continue h2 {
