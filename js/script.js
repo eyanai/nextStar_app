@@ -7,8 +7,12 @@ $(document).ready(function() {
     attachEventsRegister();
     attachEventsVote();
     longPolling();////check gallery
-
+	$(document).bind("touchmove", function(event) {
+        event.preventDefault();
+    });
    // initWaitAnimation();
+
+ 
 });
 
 //general parameters
