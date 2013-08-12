@@ -203,7 +203,7 @@ section {
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
-    font-size: 0.4em;
+    font-size: 0.6em;
 }
 
 #results .divideH .waiting-high {
@@ -224,7 +224,7 @@ section {
 }
 
 #gallery h2{
-	margin-top:9%;
+	margin-top:9% 0 2%;
 }
 
 #result-gallery h2{
@@ -238,7 +238,7 @@ section {
 
 #result-gallery .percentage{
 	margin-right:32%;
-	font-size:0.8em;
+	font-size:0.75em;
 }
 
 #result-gallery .reMesseg{
