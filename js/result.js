@@ -17,13 +17,16 @@ function setResultPage(data) {
         $("#results-wait-text-single").text(data.textWaitContinue);
         //percent
         $("#results-perc-single").text(data.votes[0].finalPercent + "%");
-
-        $("#results .battle .resultScalaL .result").addClass("resultBlue");
-        $("#results .battle .resultScalaL .scala").addClass("scalaBlue");
+         //percent gragh
+        
+        $("#results .single .resultScalaL .result").addClass("resultBlue");
+        $("#results .single .resultScalaL .scala").addClass("scalaBlue");
          $('.scala').animate({ bottom: '0%' }, 1000, function () {
-            $("#results .battle .resultScalaR .scala").animate({ bottom: data.votes[0].finalPercent + '%' }, 500);
+              var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
+            $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 500);
         });
-
+       
+       
         //navigate
         Navi.goto("resultsSingle");
     }
@@ -48,9 +51,11 @@ function setResultPage(data) {
         //if the percent bigger then  - add the red class
         $("#results .battle .resultScalaR .result").addClass("resultRed");
         $("#results .battle .resultScalaR .scala").addClass("scalaRed");
-        $('.scala').animate({ bottom: '0%' }, 1000, function () {
-            $("#results .battle .resultScalaR .scala").animate({ bottom: data.votes[0].finalPercent + '%' }, 500, function () { });
-            $("#results .battle .resultScalaL .scala").animate({ bottom: data.votes[1].finalPercent + '%' }, 500, function () { });
+        $('.scala').animate({ bottom: '0%' }, 1000, function() {
+            var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
+            var bottomSecond =  -1 *(100 - data.votes[1].finalPercent);
+            $("#results .battle .resultScalaR .scala").animate({ bottom: bottomFirst + '%' }, 500, function() { });
+            $("#results .battle .resultScalaL .scala").animate({ bottom: bottomSecond + '%' }, 500, function() { });
         });
 
 

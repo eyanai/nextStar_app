@@ -3,16 +3,23 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-    attachEventsFacebook();
+    //attachEventsFacebook();//check gallery
     attachEventsRegister();
     attachEventsVote();
-    //longPolling();
-	$(document).bind("touchmove", function(event) {
-        event.preventDefault();
-    });
-   // initWaitAnimation();
+    //init the touchmive events
+    initMoveEvents();
+    // longPolling();
+    //
+    // initWaitAnimation();
 
- 
+    longPolling();////check gallery
+	
+    /*$(document).bind("touchmove", function(event) {
+        event.preventDefault();
+    });*/
+    document.ontouchmove = function(e) {
+        $(document).css("top", "0")
+    }
 });
 
 //general parameters
@@ -28,9 +35,10 @@ var generalParameters = {
         userName: null,
         gender: null,
         profilePic: null
-    }
+    },
+    isBigSize:false
 }
-
+var domain = "http://makosrv1.egoline.co.il/application";
 function pageChange(data) {
     var status = data.status;
 
@@ -78,7 +86,7 @@ function isSingle(data){
 
 
 
-var isBigSize = false;
+
 function initAppSize() {
     //set the isBigSize parameter by the device
 }
@@ -86,16 +94,37 @@ function initAppSize() {
 var registerDic = "";
 var pushVoteDic = "";
 var afterVoteDic = "";
+var voteCloseDic = "";
 var resultsDic = "";
 var endShowDic = "";
 //init the dictionary values from admin- to blue title
 function initDictionaryValues() {
-    registerDic = "אתם פה? מוכנים להצביע?";
+    var dictionary=null;
+    $.ajax({
+        type: "GET",
+        datatype: "json",
+        url: domain + "/dictionary/dictionary.txt",
+        success: function (data) {
+            dictionary = JSON.parse(data);
+             registerDic =dictionary.registerDic;
+        pushVoteDic =dictionary.pushVoteDic;
+        afterVoteDic=dictionary.afterVoteDic;
+        resultsDic =dictionary.resultsDic;
+        endShowDic =dictionary.endShowDic;
+            //console.log(JSON.parse(data));
+        },
+        error: function (data) {
+            console.log("error getPage: " + data);
+        }
+    });
+   
+    /*registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
+    voteCloseDic = "אנא המתן לפרסום התוצאות";
     resultsDic = "ויש לנו תוצאות...";
     endShowDic = "התוכנית הסתיימה, נתראה בשלישי ב21:00";
-
+    */
 }
 
 function getFielsdByVote(voteData) {
@@ -103,7 +132,7 @@ function getFielsdByVote(voteData) {
     var firstSong = voteData.songName;
     var firstUrl = "";
     //set the img by size
-    if (isBigSize) {
+    if (generalParameters.isBigSize) {
         firstUrl = voteData.imageUrlB;
     }
     else {
@@ -118,4 +147,14 @@ function initWaitAnimation(){
     pos = pos.substring(0, pos.length - 2);
     pos = pos - 63;
     $(".contIcons").css("background-position-x",pos+"px");
+}
+
+
+function initMoveEvents(){
+  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+    var slider = $("#result-gallery")[0];
+    slider.ontouchmove = function(e) {
+        e.stopPropagation();
+        $(document).css("top","0px")
+    };
 }

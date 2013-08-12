@@ -19,7 +19,7 @@ function setOpenRegisterPage(data) {
         var url2 = "";
         //set the img
         //set the ing by size
-        if (isBigSize) {
+        if (generalParameters.isBigSize) {
             url1 = data.votes[0].imageUrlB;
             url2 = data.votes[1].imageUrlB;
         }
@@ -43,7 +43,7 @@ function setOpenRegisterPage(data) {
     }
     //if this is a single vote
     else {
-        if (isBigSize) {
+        if (generalParameters.isBigSize) {
             url = data.votes[0].imageUrlB;
         }
         else {
@@ -65,14 +65,15 @@ function setOpenRegisterPage(data) {
 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
+    $(".register-red-flash").show();
 }
 
 function setRegister() {
     //ajax call server
-    console.log(domain);
+    console.log(serverDomain);
     $.ajax({
         type: "POST",
-        url: domain + "type=registerToVote",
+        url: serverDomain + "type=registerToVote",
         success: function (data) {
             console.log(data);
             setWaitVotePage(data);

@@ -16,7 +16,10 @@
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
         <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
-
+        
+        <script src="js/script.js"></script>
+        <script src="https://connect.facebook.net/en_US/all.js"></script>
+        <!--<script src="js/facebook.js"></script>  //check gallery -->
 
     </head>
 
@@ -112,7 +115,12 @@
             </nav>
 			<div id="registerSingle">
 				<div id="register-single-img" class="contestant">
+<<<<<<< HEAD
 					<div class="slidein grey">
+=======
+					<div class="slidein">
+                        <div class="register-red-flash"></div>
+>>>>>>> 4a9b44630532f2081cbbf0be4ca500432226e5f3
 						<div class="slide btn"></div>
 						<div class="slider-text">כניסה להצבעה</div>
 					</div>
@@ -139,7 +147,12 @@
 				</div>
 			</div>
 			<div id="registerBattle" class="cf">
+<<<<<<< HEAD
 				<div class="slidein grey">
+=======
+				<div class="slidein">
+                    <div class="register-red-flash"></div>
+>>>>>>> 4a9b44630532f2081cbbf0be4ca500432226e5f3
 					<div class="slide btn"></div>
 					<div class="slider-text">כניסה להצבעה</div>
 				</div>
@@ -296,6 +309,75 @@
             <div id="not-registered"><br><br><br>לא נרשמת בזמן<br>אין אוטו.</div>
             <!---------------------------------------------------not-registered div--------------------------------->
         </section>
+        <section id="voteClose">
+
+            <div id="voteCloseSingle" class="single">
+                <div class="nextPage" data-goto="resultsBattle"></div>
+                <div class="animat animatG" data-animat="singleGood"></div>
+                <div class="animat animatB" data-animat="singleBad"></div>
+                <nav class="topMenu">
+                    <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
+                </nav>
+                <div id="vote-close-img-single" class="contestant">
+                   
+                </div>
+                <!--after user slide this div need to show--->
+                <!------------------------------------------->
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2>ממתין לסגירת ההצבעה</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName">
+                        <h1 id="vote-close-comp-name-single">דוד לוי</h1>
+                        <h2 id="vote-close-song-name-single">ילדות נשכחת</h2>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------------------------------------------------single  div----------------->
+            <div id="voteCloseBattle" class="battle">
+
+                <div class="animat animatG1" data-animat="battel1Good"></div>
+                <div class="animat animatB1" data-animat="battel1Bad"></div>
+                <div class="animat animatG" data-animat="battel2Good"></div>
+                <div class="animat animatB" data-animat="battel2Bad"></div>
+
+
+                <nav class="topMenu">
+                    <h1 id="vote-close-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
+                </nav>
+                <div id="vote-close-img-first" class="contestant1">
+                   
+                    <!--after user slide this div need to show--->
+                    <!------------------------------------------->
+                </div>
+                <div id="vote-close-img-second" class="contestant2">
+                    
+                    <!--after user slide this div need to show--->
+                    <!------------------------------------------->
+                </div>
+
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2>ממתין לסגירת ההצבעה</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName1">
+                        <h1 id="vote-close-comp-name-first">דוד לוי</h1>
+                        <h2 id="vote-close-song-name-first">ילדות נשכחת</h2>
+                    </div>
+                    <div class="songName2">
+                        <h1 id="vote-close-comp-name-second">חגית יאסו</h1>
+                        <h2 id="vote-close-song-name-second">ים של דמעות</h2>
+                    </div>
+                </div>
+                <div class="divideH"></div>
+
+            </div>
+            <!---------------------------------------------------battle div--------------------------------->
+            <div id="not-registered"><br><br><br>לא נרשמת בזמן<br>אין אוטו.</div>
+            <!---------------------------------------------------not-registered div--------------------------------->
+        </section>
         <!---vote  section-->
         <section id="results">
             <div class="nextPage" data-goto="gallery"></div>
@@ -306,10 +388,7 @@
             <div class="single">
                 <div id="results-img-single" class="contestant">
                     <div class="resultScalaL">
-                        <div class="result">
-                        </div>
-                        <div class="scala">
-                        </div>
+                       
                         <div class="result">
                         </div>
                         <div class="scala">
@@ -390,10 +469,10 @@
             <nav class="topMenu">
                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
             </nav>
-            <h2>אתם החלטתם - התוצאות המלאות של הערב</h2>
+            <h2 id="gallery-title">אתם החלטתם - התוצאות המלאות של הערב</h2>
             <div id="result-gallery">
                 <ul>
-                    <li class="gallery-vote-single">
+                    <!--<li class="gallery-vote-single">
                         <img src="images/gallery/gallery-contestant.jpg" alt="alt">
                         <span class="reMesseg">
                             <span class="divide"></span>
@@ -401,9 +480,7 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
                     </li>
                     <li class="gallery-vote-single">
@@ -414,24 +491,9 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
-                    </li>
-                    <li class="gallery-vote-single">
-                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                        <span class="reMesseg">
-                            <span class="divide"></span>
-                            <div class="songName">
-                                <h1>דוד לביא</h1>
-                                <h2>ים של דמעות</h2>
-                            </div>
-                            <span class="percentage">
-						            57%
-                            </span>
-                        </span>
-                    </li>
+                    </li>                    
                     <li class="gallery-vote-battle">
                         <span class="vote-1">
                             <img src="images/gallery/gallery-contestant.jpg" alt="alt">
@@ -441,9 +503,7 @@
                                     <h1>דוד לביא</h1>
                                     <h2>ים של דמעות</h2>
                                 </div>
-                                <span class="percentage">
-						            57%
-                                </span>
+                                <span class="percentage">57%</span>
                             </span>
                         </span>
                         <span class="vote-2">
@@ -454,9 +514,7 @@
                                     <h1>דוד לביא</h1>
                                     <h2>ים של דמעות</h2>
                                 </div>
-                                <span class="percentage">
-						            57%
-                                </span>
+                                <span class="percentage">57%</span>
                             </span>
                         </span>
                     </li>
@@ -468,11 +526,10 @@
                                 <h1>דוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
-                            <span class="percentage">
-						            57%
-                            </span>
+                            <span class="percentage">57%</span>
                         </span>
                     </li>
+                    -->
                 </ul>
             </div>
                             <!--<div class="swiper-container">
@@ -545,14 +602,11 @@
         <footer id="banner"> <img src="images/banner/banner1.jpg" alt="alt"> </footer>
         <!---banner section-->
         <script src="js/navigation.js"></script>
-        <script src="js/script.js"></script>
         <script src="js/pages.js"></script>
         <script src="js/register.js"></script>
         <script src="js/vote.js"></script>
         <script src="js/result.js"></script>
-        <script src="https://connect.facebook.net/en_US/all.js"></script>
-        <!--<script src="js/ jquery.ba-bbq.min.js"></script>-->
-        <script src="js/facebook.js"></script>
+        
         <script src="js/gallery.js"></script>
 
         <script>
