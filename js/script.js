@@ -158,7 +158,7 @@ function initMoveEvents(){
         $(document).css("top","0px")
     };
 }
-}
+
 
 function toggleTopMenu(headerText) {
 
