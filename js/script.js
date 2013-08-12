@@ -3,10 +3,10 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-   // attachEventsFacebook();
+    attachEventsFacebook();
     attachEventsRegister();
     attachEventsVote();
-    longPolling();
+    //longPolling();
 
    // initWaitAnimation();
 
