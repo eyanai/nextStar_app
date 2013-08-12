@@ -11,6 +11,8 @@ $(document).ready(function() {
         event.preventDefault();
     });
    // initWaitAnimation();
+
+ 
 });
 
 //general parameters
