@@ -1,15 +1,15 @@
-////////////////////////////////////////////////////// help parameters
+//////////////////////////////////////////////////////// help parameters
 var appID = "543975688973172";//fb app id
 var myLocation = "http://makosrv1.egoline.co.il/application/index.html";//domain
 
-////////////////////////////////////////////////////// fb init
-/*FB._https = (window.location.protocol == "https:");*/
+//////////////////////////////////////////////////////// fb init
+///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
-FB.init({ appId: appID, status: true, cookie: true, oauth: true })
+FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() {    
-    //localStorage.setItem('fbStorage', "");
+    
     $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", startLongPolling);
 }
@@ -22,7 +22,6 @@ checkLocalStorge();
 var searchQuery = window.location.search;//search Query 
 //if connect already
 if (fromLocalStorge) {
-    //alert("fromLocalStorge");
     saveDataOnServer("fromLocalStorge");
 }
 //connect yet and after after login in webview
@@ -55,9 +54,9 @@ function saveData() {
         generalParameters.fbUser.userName = response.name;
         generalParameters.fbUser.gender = response.gender;
         generalParameters.fbUser.profilePic = "https://graph.facebook.com/" + generalParameters.fbUser.id + "/picture";
-
+        //alert("fb api "+generalParameters.fbUser.userName);
         saveDataOnServer();
-        //alert(user.userName + user.gender);
+        
 
     });
 
@@ -68,7 +67,7 @@ function saveData() {
 //set Local Storage
 function setLocalStorage() {
     localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));    
-    alert(localStorage.getItem('fbStorage'));
+    //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
 }
 //get Local Storage
 function getLocalStorage() {
@@ -78,10 +77,10 @@ function getLocalStorage() {
 //check if there is local storge
 function checkLocalStorge() {
     
-    if (userFromLocalStorge != "") {       
-       
+    if ((userFromLocalStorge != "")&&(userFromLocalStorge != null)) {       
+       //alert(userFromLocalStorge);
         userFromLocalStorge = jQuery.parseJSON(userFromLocalStorge);
-        alert(userFromLocalStorge);
+        
         //if connect already
         if (userFromLocalStorge.id != null) {
             generalParameters.fbUser = userFromLocalStorge;
@@ -90,8 +89,8 @@ function checkLocalStorge() {
     }
 }
 
-/////////////////////////////////////////////////////// functions
-//send data to server
+///////////////////////////////////////////////////////// functions
+////send data to server
 function saveDataOnServer(str) {
 
     $.ajax({
@@ -112,10 +111,9 @@ function saveDataOnServer(str) {
         }
     });
 
-    //startLongPolling("saveDataOnServer " +str);
+    startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
-function startLongPolling(str) {
-    alert("start polling " + str);
+function startLongPolling(str) {    
     longPolling();
 }

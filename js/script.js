@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     initAppSize();
 
     //init the dictionary values
@@ -7,6 +7,8 @@ $(document).ready(function () {
     attachEventsRegister();
     attachEventsVote();
     //longPolling();
+
+   // initWaitAnimation();
 });
 
 //general parameters
@@ -52,7 +54,23 @@ function pageChange(data) {
 }
 
 
+function isSingle(data){
 
+    // if the generalParameters.isSingle was init -return it
+    if(generalParameters.isSingle != null && generalParameters.isSingle !=""){
+        return generalParameters.isSingle;
+    }
+    //else - init and then return it
+    else{
+        if(data.votes.length == 2){
+            generalParameters.isSingle =false;
+        }
+        else{
+            generalParameters.isSingle =true;
+        }
+        return generalParameters.isSingle
+    }
+}
 
 
 
@@ -89,4 +107,11 @@ function getFielsdByVote(voteData) {
     }
     var results = new Array(firstName, firstSong, firstUrl);
     return results;
+}
+
+function initWaitAnimation(){
+    var pos = $(".contIcons").css("background-position-x");
+    pos = pos.substring(0, pos.length - 2);
+    pos = pos - 63;
+    $(".contIcons").css("background-position-x",pos+"px");
 }

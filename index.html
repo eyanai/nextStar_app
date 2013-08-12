@@ -30,7 +30,7 @@
             <figure class="logo login"></figure>
 
             <div id="loginExtendedBox">
-                <div id="slide-containter">
+                <div id="slide-container">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
  לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים
@@ -45,7 +45,7 @@
                         </div>
                         <div class="facebookArea">
                             <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" onclick="Navi.goto('message')"><span class="logText">הצביעו ללא פייסבוק</span></div>
+                            <div class="login" onclick="Navi.goto('login2')"><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
                     <!--</div>-->
@@ -110,74 +110,91 @@
             <nav class="topMenu">
                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
             </nav>
-            <div id="registerSingle">
-                <div id="register-single-img" class="contestant">
-                    <div class="slidein">
-                        <div class="slide btn"></div>
-                        <div class="slider-text">כניסה להצבעה</div>
-                    </div>
-                                            <!--<div class="reMesseg cf">
-                                                                                                                                                <div class="continue">
-                                                                                                                                                    <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                                                                                                                                                    <figure class="contIcons"></figure>
-                                                                                                                                                </div>
-                                                                                                                                                <div class="songName">
-                                                                                                                                                    <h1 id="register-comp-name-single">דוד לוי</h1>
-                                                                                                                                                    <h2 id="register-song-name-single">ילדות נשכחת</h2>
-                                                                                                                                                </div>
-                                                                                                                                            </div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
-                </div>
-                <div class="reMesseg cf">
+			<div id="registerSingle">
+				<div id="register-single-img" class="contestant">
+					<div class="slidein">
+						<div class="slide btn"></div>
+						<div class="slider-text">כניסה להצבעה</div>
+					</div>
+					<!--<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-single">דוד לוי</h1>
+							<h2 id="register-song-name-single">ילדות נשכחת</h2>
+						</div>
+					</div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
+				</div>
+				<div class="reMesseg cf">
+					<div class="continue">
+						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+						<figure class="contIcons"></figure>
+					</div>
+					<div class="songName">
+						<h1 id="register-comp-name-single">דוד לוי</h1>
+						<h2 id="register-song-name-single">ילדות נשכחת</h2>
+					</div>
+				</div>
+			</div>
+			<div id="registerBattle" class="cf">
+				<div class="slidein">
+					<div class="slide btn"></div>
+					<div class="slider-text">כניסה להצבעה</div>
+				</div>
+				<div id="register-img-first" class="contestant1">
+					<!--<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-first">דוד לוי</h1>
+							<h2 id="register-song-name-first">ילדות נשכחת</h2>
+						</div>
+					</div>-->
+				</div>
+				<div id="register-img-second" class="contestant2">
+					<!--<div class="reMesseg cf">
+						<div class="continue">
+							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+							<figure class="contIcons"></figure>
+						</div>
+						<div class="songName">
+							<h1 id="register-comp-name-second">מרינה מקסימיליאן בלומין</h1>
+							<h2 id="register-song-name-second">רוצי שמוליק קורא לך</h2>
+						</div>
+					</div>-->
+				</div>
+                <div class="reMesseg register cf">
                     <div class="continue">
-                        <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                        <h2 id="register-wait-text-battle">ממתין להמשך השידור</h2>
                         <figure class="contIcons"></figure>
                     </div>
-                    <div class="songName">
-                        <h1 id="register-comp-name-single">דוד לוי</h1>
-                        <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                    <div class="songName1">
+                        <h1 id="register-comp-name-first">דוד לוי</h1>
+                        <h2 id="register-song-name-first">ילדות נשכחת</h2>
+                        
                     </div>
-                </div>
-            </div>
-            <div id="registerBattle" class="cf">
-                <div class="slidein">
-                    <div class="slide btn"></div>
-                    <div class="slider-text">כניסה להצבעה</div>
-                </div>
-                <div id="register-img-first" class="contestant1">
-                    <div class="reMesseg cf">
-                        <div class="continue">
-                            <h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
-                            <figure class="contIcons"></figure>
-                        </div>
-                        <div class="songName">
-                            <h1 id="register-comp-name-battle">דוד לוי</h1>
-                            <h2 id="register-song-name-battle">ילדות נשכחת</h2>
-                        </div>
+                    <div class="songName2">
+                        <h1 id="register-comp-name-second">חגית יאסו חגית</h1>
+                        <h2 id="register-song-name-second">ים של דמעות</h2>
+                        
                     </div>
+
                 </div>
-                <div id="register-img-second" class="contestant2">
-                    <div class="reMesseg cf">
-                        <div class="continue">
-                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                            <figure class="contIcons"></figure>
-                        </div>
-                        <div class="songName">
-                            <h1 id="register-comp-name-single">מרינה מקסימיליאן בלומין</h1>
-                            <h2 id="register-song-name-single">רוצי שמוליק קורא לך</h2>
-                        </div>
-                    </div>
-                </div>
-                                    <!--<div class="reMesseg cf">
-                                                                                                                        <div class="continue">
-                                                                                                                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                                                                                                                            <figure class="contIcons"></figure>
-                                                                                                                        </div>
-                                                                                                                        <div class="songName">
-                                                                                                                            <h1 id="register-comp-name-single">דוד לוי</h1>
-                                                                                                                            <h2 id="register-song-name-single">ילדות נשכחת</h2>
-                                                                                                                        </div>
-                                                                                                                    </div>-->
-            </div>
+				<!--<div class="reMesseg cf">
+					<div class="continue">
+						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+						<figure class="contIcons"></figure>
+					</div>
+					<div class="songName">
+						<h1 id="register-comp-name-single">דוד לוי</h1>
+						<h2 id="register-song-name-single">ילדות נשכחת</h2>
+					</div>
+				</div>-->
+			</div>
 
         </section>
         <!---register  section-->
@@ -289,13 +306,13 @@
             <div class="single">
                 <div id="results-img-single" class="contestant">
                     <div class="resultScalaL">
-                        <div class="resultBlue">
+                        <div class="result">
                         </div>
-                        <div class="scalaBlue">
+                        <div class="scala">
                         </div>
-                        <div class="resultRed">
+                        <div class="result">
                         </div>
-                        <div class="scalaRed">
+                        <div class="scala">
                         </div>
                     </div>
 
@@ -319,31 +336,31 @@
             </div><!---------------------------------------------------single div--------------------------------->
             <div class="battle">
                 <div id="results-img-first" class="contestant1">
-                    <div class="resultScalaR">
+                    <!--<div class="resultScalaR">
                         <div class="resultBlue">
                         </div>
                         <div class="scalaBlue">
                         </div>
-                    </div>
-                    <div class="resultScalaL">
-                        <div class="resultRed">
+                    </div>-->
+                    <div class="resultScalaR">
+                        <div class="result">
                         </div>
-                        <div class="scalaRed">
+                        <div class="scala">
                         </div>
 
                     </div>
                 </div>
                 <div id="results-img-second" class="contestant2">
-                    <div class="resultScalaR">
+                    <!--<div class="resultScalaL">
                         <div class="resultBlue">
                         </div>
                         <div class="scalaBlue">
                         </div>
-                    </div>
+                    </div>-->
                     <div class="resultScalaL">
-                        <div class="resultRed">
+                        <div class="result">
                         </div>
-                        <div class="scalaRed">
+                        <div class="scala">
                         </div>
 
                     </div>
@@ -548,11 +565,11 @@
                     goto = $(this).data('goto');
                     Navi.goto(goto);
                 });
-            
-            
+
+
                 $('.animat').on('click', this, function () {
                     anim = $(this).data('animat'); //animat="register"
-            
+
                     switch (anim) {
                         case 'register':
                             $('#register .slide').addClass('regAnim');
@@ -573,38 +590,39 @@
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant1 .love').addClass('love1Show');
-            
+
                             break;
                         case 'battel1Bad':
                             $('.contestant1 .slideDownbattle').addClass('battel1Bad');
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideTopbattle').addClass('hideR');
                             $('.contestant1 .hate').addClass('hate1Show');
-            
+
                             break;
                         case 'battel2Good':
                             $('.contestant2 .slideTopbattle').addClass('battel2lGood');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant2 .love').addClass('love2Show');
-            
+
                             break;
                         case 'battel2Bad':
                             $('.contestant2 .slideDownbattle').addClass('battel2Bad');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideTopbattle').addClass('hideL');
                             $('.contestant2 .hate2').addClass('hate2Show');
-            
+
                             break;
                         case 'results':
-                            $('.scalaBlue,.scalaRed').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scalaBlue,.scalaRed').animate({ bottom: '-45%' }, 500, function () { });
+                            var x = -50;
+                            $('.scala').animate({ bottom: '0%' }, 1000, function () {
+                                $('.scala').animate({ bottom: x+'%' }, 500, function () { });
                             });
                             break;
                         default:
-            
+
                     }
-            
+
                 });
             });
         </script>

@@ -2,18 +2,18 @@
 
 var Navi = {
 
-    hidelogin: function () {
+    hidelogin: function() {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function (el) {
-        switch (el) {
+    goto: function(el) {
+        switch(el) {
             case 'login1':
                 //
                 break;
             case 'login2':
-                //
+                $("#slide-container").addClass("login-anim");
                 break;
             case 'messageWaitingNoImage':
                 Navi.hidelogin();
@@ -51,7 +51,7 @@ var Navi = {
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                if ($(".slidein ").hasClass('grey')) {
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
@@ -60,9 +60,9 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if ($(".slidein ").hasClass('grey')) {
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
-                };
+                }
                 $("#registerSingle").hide();
                 $("#registerBattle").show();
                 break;
@@ -104,12 +104,14 @@ var Navi = {
                 $("#results-img-single").show();
                 $("#results .single").show();
                 $("#results .battle").hide();
+                $("#results .single .reMesseg .continue").show();
                 break;
             case 'resultsBattle':
                 Navi.hidelogin();
                 $('#results').show();
                 $("#results .single").hide();
                 $("#results .battle").show();
+                $("#results .battle .reMesseg .continue").show();
                 break;
             case 'gallery':
                 Navi.hidelogin();
