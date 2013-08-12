@@ -1,14 +1,19 @@
 //////////////////////////////////////////////////////// help parameters
-//var appID = "543975688973172";//fb app id
-//var myLocation = "http://makosrv1.egoline.co.il/application/index.html";//domain
+var appID = "543975688973172";//fb app id
+var myLocation = domain+"/index.html";//domain
 
 //////////////////////////////////////////////////////// fb init
 ///*FB._https = (window.location.protocol == "https:");*/
+FB._https = true; //check fb init
+FB.init({ appId: appID, status: true, cookie: true, oauth: true });
+////////////////////////////////////////////////////////// fb init
+/////*FB._https = (window.location.protocol == "https:");*/
 //FB._https = true; //check fb init
-//FB.init({ appId: appID, status: true, cookie: true, oauth: true })
+//FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //////////////////////////////////////////////////////// listener   
 //function attachEventsFacebook() {    
+//    
 //    $(".logFb").on("click", loginFb);
 //    $("#loginRewardBox").on("click", ".login", startLongPolling);
 //}
@@ -35,6 +40,7 @@
 //}
 ////check: if login-> save data
 //function loginCheck() {
+//    //alert("loginCheck");
 //    FB.getLoginStatus(function (response) {
 //        if (response.status === 'connected') {
 //            saveData();
@@ -52,9 +58,9 @@
 //        generalParameters.fbUser.userName = response.name;
 //        generalParameters.fbUser.gender = response.gender;
 //        generalParameters.fbUser.profilePic = "https://graph.facebook.com/" + generalParameters.fbUser.id + "/picture";
-
+//        //alert("fb api "+generalParameters.fbUser.userName);
 //        saveDataOnServer();
-//        //alert(user.userName + user.gender);
+//        
 
 //    });
 
@@ -64,17 +70,21 @@
 //////////////////////////////////////////////////////// localstorge functions
 ////set Local Storage
 //function setLocalStorage() {
-//    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+//    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));    
+//    //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
 //}
 ////get Local Storage
 //function getLocalStorage() {
+//    
 //    return (localStorage.getItem('fbStorage'));
 //}
 ////check if there is local storge
 //function checkLocalStorge() {
-//    if (userFromLocalStorge != "") {
-
+//    
+//    if ((userFromLocalStorge != "")&&(userFromLocalStorge != null)) {       
+//       //alert(userFromLocalStorge);
 //        userFromLocalStorge = jQuery.parseJSON(userFromLocalStorge);
+//        
 //        //if connect already
 //        if (userFromLocalStorge.id != null) {
 //            generalParameters.fbUser = userFromLocalStorge;
@@ -83,32 +93,31 @@
 //    }
 //}
 
-///////////////////////////////////////////////////////// functions
-////send data to server
+/////////////////////////////////////////////////////////// functions
+//////send data to server
 //function saveDataOnServer(str) {
 
-//    $.ajax({
-//        type: "POST",
-//        url: domain + "type==getFacebookData",
-//        data: {
-//            facebookId: generalParameters.fbUser.id,
-//            facebookName: generalParameters.fbUser.userName,
-//            facebookSex: generalParameters.fbUser.gender,
-//            facebookimgurl: generalParameters.fbUser.profilePic
-//        },
-//        success: function (data) {
-//            console.log(data);
-//            setLocalStorage(data);
-//        },
-//        error: function (data) {
-//            console.log("error getFacebookData: " + data);
-//        }
-//    });
+    $.ajax({
+        type: "POST",
+        url: serverDomain + "type==getFacebookData",
+        data: {
+            facebookId: generalParameters.fbUser.id,
+            facebookName: generalParameters.fbUser.userName,
+            facebookSex: generalParameters.fbUser.gender,
+            facebookimgurl: generalParameters.fbUser.profilePic
+        },
+        success: function (data) {
+            console.log(data);
+            setLocalStorage();
+        },
+        error: function (data) {
+            console.log("error getFacebookData: " + data);
+        }
+    });
 
 //    startLongPolling("saveDataOnServer " +str);
 //}
 ////start LongPolling
-//function startLongPolling(str) {
-//    alert("start polling " + str);
+//function startLongPolling(str) {    
 //    longPolling();
 //}

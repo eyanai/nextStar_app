@@ -21,7 +21,9 @@ function setStaticPage(data){
         case 4:
             setStaticPageNoImg(data);
             break;
-        
+        case 5:
+            setGalleryPage(data);
+            break;
     }
 }
 
@@ -32,7 +34,7 @@ function setWaitPageWithImg(data){
     var info =data.info
     var url="";
     //set the ing by size
-    if(isBigSize){
+    if(generalParameters.isBigSize){
         url =data.tamplateImage2;
     }
       else{

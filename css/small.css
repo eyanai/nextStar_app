@@ -1,14 +1,36 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
-	font-size:0.9em;
-	color:pink;
-	padding: 0 35%;
+	font-size:0.8em;
+	color:yellow;
 	margin:1% auto;
 }
 
-h1, .facebookArea , .logFb, .logText {
-    font-size: 0.5em;
+.loginHg .titleLogin{
+	height:27%;
 }
+
+.loginHg .titleLoginReward{
+	/* height: 100%; */
+	margin: 13% 0;
+	padding: 0 30%;
+}
+
+.login .logText{
+	right:25%;
+}
+
+h1, .facebookArea , .logFb, .logText {
+    font-size: 0.8em;
+}
+
+#result-gallery .songName, #result .songName{
+	font-size: 0.8em;
+} 
+
+.songName1, .songName2{
+	font-size: 1em;
+} 
+
 
 #login .checkboxArea{
 	padding:2px 10px 0 0;
@@ -18,8 +40,9 @@ h1, .facebookArea , .logFb, .logText {
     
 }
 
-#download-music {
-    font-size: 0.55em;
+#download-music-text{
+	font-size: 1.2em;
+	top:20%;
 }
 
 #loginExtendedBox {/*, #loginRewardBox*/
@@ -30,36 +53,45 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #loginExtendedBox .logFb .logFb-text{
-	font-size:1.8em;
+	font-size:1.4em;
+}
+
+#gallery .logFb .logFb-text{
+	font-size:1.2em;
 }
 
 #loginExtendedBox .login{
 	font-size:1.4em;
-}
-
-#loginExtendedBox .logFb, #loginExtendedBox .login {
-    height: 48%;
+	margin-top: 2%;
 }
 
 #loginExtendedBox .login {
-    margin-top: 2%;
+    
+}
+
+#loginRewardBox .loginHg{
+	height: 63%;
 }
 
 #message .continue h2 {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .topMenu {
-    height: 8%;
+    height: 7%;
 }
 
 
-.checkboxArea {
-    font-size: 0.15em;
+.checkboxArea  , #result-gallery .checkboxArea{
+    font-size: 0.6em;
+}
+
+label[for="checkbox1"], label[for="checkbox2"], label[for="checkbox3"]{
+    font-size: 0.6em;
 }
 
 input[type=checkbox] {
-    margin: 1%;
+    margin: 2%;
     width: 1em;
     height: 1em;
 }
@@ -78,9 +110,8 @@ input[type=checkbox] {
     top: -23%;
 }
 
-
 h2 {
-    font-size: 0.4em;
+    font-size: 0.6em;
 }
 
 .message {
@@ -92,7 +123,7 @@ h2 {
 #vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
     font-size: 0.75em;
     vertical-align: middle;
-    padding: 0.4% 0;
+    padding: 0.3% 0;
 }
 
 .slideStay h1, .slideGo h1 {
@@ -105,7 +136,7 @@ h2 {
 }
 
 .detail {
-    font-size: 0.7em;
+    font-size: 0.65em;
     letter-spacing: 0.13em;
     margin-top: 3%;
 }
@@ -157,11 +188,12 @@ section {
 }
 
 .slideStay {
-    top: 7%;
+    top: -8%;
 }
 
 .slideGo {
-    top: 7%;
+    top: -8%;
+	left:27%;
 }
 
 .slideStay h1 {
@@ -169,20 +201,20 @@ section {
 }
 
 #results .percentage {
-    font-size: 0.15em;
+    font-size: 100%;
 }
 
 #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
-    font-size: 0.4em;
+    font-size: 0.6em;
 }
 
-#results .divideH.waiting-high {
+#results .divideH .waiting-high {
     height: 69.3%;
 }
 
-#results .divideH.waiting-low {
+#results .divideH .waiting-low {
     height: 18.2%;
     top: 76.85%;
 }
@@ -195,11 +227,45 @@ section {
     width: 7%;
 }
 
+#gallery h2{
+	margin:11% 0 2%;
+}
+
+#result-gallery h2{
+	margin-top:0%;
+}
+
+#result-gallery{
+	height:37%;
+	font-size:1.2em;
+}
+
+#result-gallery .percentage{
+	margin-right:32%;
+	font-size:0.75em;
+}
+
+#result-gallery .reMesseg{
+	height:38%;
+}
+
+#results .battle .reMesseg .continue{
+	height:54%;
+}
+
+.goodbyeBox{
+	margin:2% auto;
+}
+
+.contIcons{
+	height:90%;
+}
+
 .musix {
     background-image: url(../images/musix_iphone.png);
     background-size: 100% 100%;
     width: 45%;
-	/*margin:0 auto;*/
+    /* margin:0 auto; */
 	left:26%;
     height: 13%;
     position: absolute;

@@ -64,9 +64,7 @@ function setVoteClosePage(data) {
     if (generalParameters.isRegistered) {
         console.log("setVoteClosePage data.status: " + data.status);
 
-        //set the dictionary text
-        $("#vote-close-dic").text(resultsDic);
-
+      
         var isSingleVote;
         var firstFields;
         var secondFields;
@@ -74,7 +72,8 @@ function setVoteClosePage(data) {
             firstFields = getFielsdByVote(data.votes[0]);
             $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
             $("#vote-close-comp-name-single").text(firstFields[0]);
-            $("#vote-close-song-name-single").text(firstFields[1]);
+             //set the dictionary text
+            $("#vote-close-dic-single").text(voteCloseDic);
 
             //wait text
             $("#vote-close-wait-text-single").text(data.textWaitCalc);
@@ -93,6 +92,8 @@ function setVoteClosePage(data) {
             $("#vote-close-img-second").css("background-image", "url('" + secondFields[2] + "')")
             $("#vote-close-comp-name-second").text(secondFields[0]);
             $("#vote-close-song-name-second").text(secondFields[1]);
+             //set the dictionary text
+            $("#vote-close-dic-battle").text(voteCloseDic);
 
             //wait text
             $("#vote-close-wait-text-battle").text(data.textWaitCalc);
@@ -150,7 +151,7 @@ function setVote(e) {
 
     $.ajax({
         type: "POST",
-        url: domain + "type=vote",
+        url: serverDomain + "type=vote",
         data: { voteId: voteId, voteKey: voteKey, vote: vote },
         success: function(data) {
             console.log(data);
