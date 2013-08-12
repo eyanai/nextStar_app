@@ -1,7 +1,7 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.8em;
-	color:yellow;
+	color:pink;
 	margin:1% auto;
 }
 
@@ -128,6 +128,10 @@ h2 {
 
 .slideStay h1, .slideGo h1 {
     font-size: 0.3em;
+}
+
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay{
+	top:6%;
 }
 
 .message .continue h2 {
