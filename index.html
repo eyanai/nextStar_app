@@ -113,6 +113,7 @@
 			<div id="registerSingle">
 				<div id="register-single-img" class="contestant">
 					<div class="slidein">
+                        <div class="register-red-flash"></div>
 						<div class="slide btn"></div>
 						<div class="slider-text">כניסה להצבעה</div>
 					</div>
@@ -140,6 +141,7 @@
 			</div>
 			<div id="registerBattle" class="cf">
 				<div class="slidein">
+                    <div class="register-red-flash"></div>
 					<div class="slide btn"></div>
 					<div class="slider-text">כניסה להצבעה</div>
 				</div>
@@ -296,6 +298,75 @@
             <div id="not-registered"><br><br><br>לא נרשמת בזמן<br>אין אוטו.</div>
             <!---------------------------------------------------not-registered div--------------------------------->
         </section>
+        <section id="voteClose">
+
+            <div id="voteCloseSingle" class="single">
+                <div class="nextPage" data-goto="resultsBattle"></div>
+                <div class="animat animatG" data-animat="singleGood"></div>
+                <div class="animat animatB" data-animat="singleBad"></div>
+                <nav class="topMenu">
+                    <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
+                </nav>
+                <div id="vote-close-img-single" class="contestant">
+                   
+                </div>
+                <!--after user slide this div need to show--->
+                <!------------------------------------------->
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2>ממתין לסגירת ההצבעה</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName">
+                        <h1 id="vote-close-comp-name-single">דוד לוי</h1>
+                        <h2 id="vote-close-song-name-single">ילדות נשכחת</h2>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------------------------------------------------single  div----------------->
+            <div id="voteCloseBattle" class="battle">
+
+                <div class="animat animatG1" data-animat="battel1Good"></div>
+                <div class="animat animatB1" data-animat="battel1Bad"></div>
+                <div class="animat animatG" data-animat="battel2Good"></div>
+                <div class="animat animatB" data-animat="battel2Bad"></div>
+
+
+                <nav class="topMenu">
+                    <h1 id="vote-close-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
+                </nav>
+                <div id="vote-close-img-first" class="contestant1">
+                   
+                    <!--after user slide this div need to show--->
+                    <!------------------------------------------->
+                </div>
+                <div id="vote-close-img-second" class="contestant2">
+                    
+                    <!--after user slide this div need to show--->
+                    <!------------------------------------------->
+                </div>
+
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2>ממתין לסגירת ההצבעה</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName1">
+                        <h1 id="vote-close-comp-name-first">דוד לוי</h1>
+                        <h2 id="vote-close-song-name-first">ילדות נשכחת</h2>
+                    </div>
+                    <div class="songName2">
+                        <h1 id="vote-close-comp-name-second">חגית יאסו</h1>
+                        <h2 id="vote-close-song-name-second">ים של דמעות</h2>
+                    </div>
+                </div>
+                <div class="divideH"></div>
+
+            </div>
+            <!---------------------------------------------------battle div--------------------------------->
+            <div id="not-registered"><br><br><br>לא נרשמת בזמן<br>אין אוטו.</div>
+            <!---------------------------------------------------not-registered div--------------------------------->
+        </section>
         <!---vote  section-->
         <section id="results">
             <div class="nextPage" data-goto="gallery"></div>
@@ -306,10 +377,7 @@
             <div class="single">
                 <div id="results-img-single" class="contestant">
                     <div class="resultScalaL">
-                        <div class="result">
-                        </div>
-                        <div class="scala">
-                        </div>
+                       
                         <div class="result">
                         </div>
                         <div class="scala">

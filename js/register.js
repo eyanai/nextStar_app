@@ -65,6 +65,7 @@ function setOpenRegisterPage(data) {
 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
+    $(".register-red-flash").show();
 }
 
 function setRegister() {

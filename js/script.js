@@ -3,14 +3,18 @@ $(document).ready(function() {
 
     //init the dictionary values
     initDictionaryValues();
-    attachEventsFacebook();
+    //attachEventsFacebook();
     attachEventsRegister();
     attachEventsVote();
-    //longPolling();
+    //init the touchmive events
+    initMoveEvents();
+    // longPolling();
+    //
+    // initWaitAnimation();
 
-   // initWaitAnimation();
-
- 
+    document.ontouchmove = function(e) {
+        $(document).css("top", "0")
+    }
 });
 
 //general parameters
@@ -84,6 +88,7 @@ function initAppSize() {
 var registerDic = "";
 var pushVoteDic = "";
 var afterVoteDic = "";
+var voteCloseDic = "";
 var resultsDic = "";
 var endShowDic = "";
 //init the dictionary values from admin- to blue title
@@ -91,6 +96,7 @@ function initDictionaryValues() {
     registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
+    voteCloseDic = "אנא המתן לפרסום התוצאות";
     resultsDic = "ויש לנו תוצאות...";
     endShowDic = "התוכנית הסתיימה, נתראה בשלישי ב21:00";
 
@@ -116,4 +122,14 @@ function initWaitAnimation(){
     pos = pos.substring(0, pos.length - 2);
     pos = pos - 63;
     $(".contIcons").css("background-position-x",pos+"px");
+}
+
+
+function initMoveEvents(){
+  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+    var slider = $("#result-gallery")[0];
+    slider.ontouchmove = function(e) {
+        e.stopPropagation();
+        $(document).css("top","0px")
+    };
 }
