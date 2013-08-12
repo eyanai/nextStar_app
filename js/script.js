@@ -9,6 +9,8 @@ $(document).ready(function() {
     longPolling();
 
    // initWaitAnimation();
+
+ 
 });
 
 //general parameters
