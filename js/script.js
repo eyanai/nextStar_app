@@ -162,3 +162,11 @@ function initMoveEvents(){
         $(document).css("top","0px")
     };
 }
+
+function toggleTopMenu(headerText) {
+
+    $(".topMenu").slideUp(1000);
+    $(".topMenu h1").text(headerText);
+    $(".topMenu").slideDown(1000);
+
+}
