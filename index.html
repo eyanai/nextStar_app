@@ -14,13 +14,16 @@
 
 
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script src="js/jquery-ui-touch-punch.js" type="text/javascript"></script>
         <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
-        
+
         <script src="js/script.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
         <!--<script src="js/facebook.js"></script>  //check gallery -->
-
     </head>
 
     <body>
@@ -28,6 +31,9 @@
             <figure class="header logo"></figure>
             <figure class="live"></figure>
         </header>
+        <nav class="topMenu">
+            <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
+        </nav>
         <section id="login">
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
@@ -110,76 +116,76 @@
         <section id="register">
             <div class="nextPage" data-goto="voteBattle"></div>
             <div class="animat" data-animat="register"></div>
-            <nav class="topMenu">
+            <!--<nav class="topMenu">
                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
-            </nav>
-			<div id="registerSingle">
-				<div id="register-single-img" class="contestant">
-<<<<<<< HEAD
-					<div class="slidein grey">
-=======
-					<div class="slidein">
+            </nav>-->
+            <div id="registerSingle">
+                <div id="register-single-img" class="contestant">
+
+                    <div class="slidein grey"></div>
+
+                    <div class="slidein">
                         <div class="register-red-flash"></div>
->>>>>>> 4a9b44630532f2081cbbf0be4ca500432226e5f3
-						<div class="slide btn"></div>
-						<div class="slider-text">כניסה להצבעה</div>
-					</div>
-					<!--<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-single">דוד לוי</h1>
-							<h2 id="register-song-name-single">ילדות נשכחת</h2>
-						</div>
-					</div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
-				</div>
-				<div class="reMesseg cf">
-					<div class="continue">
-						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-						<figure class="contIcons"></figure>
-					</div>
-					<div class="songName">
-						<h1 id="register-comp-name-single">דוד לוי</h1>
-						<h2 id="register-song-name-single">ילדות נשכחת</h2>
-					</div>
-				</div>
-			</div>
-			<div id="registerBattle" class="cf">
-<<<<<<< HEAD
-				<div class="slidein grey">
-=======
-				<div class="slidein">
+
+                        <div class="slide btn drag"></div>
+                        <div class="slider-text">כניסה להצבעה</div>
+                    </div>
+                                            <!--<div class="reMesseg cf">
+                                                                                                                                <div class="continue">
+                                                                                                                                    <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                                    <figure class="contIcons"></figure>
+                                                                                                                                </div>
+                                                                                                                                <div class="songName">
+                                                                                                                                    <h1 id="register-comp-name-single">דוד לוי</h1>
+                                                                                                                                    <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                                                                                                                                </div>
+                                                                                                                            </div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
+                </div>
+                <div class="reMesseg cf">
+                    <div class="continue">
+                        <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                        <figure class="contIcons"></figure>
+                    </div>
+                    <div class="songName">
+                        <h1 id="register-comp-name-single">דוד לוי</h1>
+                        <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="registerBattle" class="cf">
+
+                <div class="slidein grey"></div>
+
+                <div class="slidein">
                     <div class="register-red-flash"></div>
->>>>>>> 4a9b44630532f2081cbbf0be4ca500432226e5f3
-					<div class="slide btn"></div>
-					<div class="slider-text">כניסה להצבעה</div>
-				</div>
-				<div id="register-img-first" class="contestant1">
-					<!--<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-first">דוד לוי</h1>
-							<h2 id="register-song-name-first">ילדות נשכחת</h2>
-						</div>
-					</div>-->
-				</div>
-				<div id="register-img-second" class="contestant2">
-					<!--<div class="reMesseg cf">
-						<div class="continue">
-							<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-							<figure class="contIcons"></figure>
-						</div>
-						<div class="songName">
-							<h1 id="register-comp-name-second">מרינה מקסימיליאן בלומין</h1>
-							<h2 id="register-song-name-second">רוצי שמוליק קורא לך</h2>
-						</div>
-					</div>-->
-				</div>
+
+                    <div class="slide btn drag"></div>
+                    <div class="slider-text">כניסה להצבעה</div>
+                </div>
+                <div id="register-img-first" class="contestant1">
+                                            <!--<div class="reMesseg cf">
+                                                                                                                                        <div class="continue">
+                                                                                                                                            <h2 id="register-battle-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                                            <figure class="contIcons"></figure>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="songName">
+                                                                                                                                            <h1 id="register-comp-name-first">דוד לוי</h1>
+                                                                                                                                            <h2 id="register-song-name-first">ילדות נשכחת</h2>
+                                                                                                                                        </div>
+                                                                                                                                    </div>-->
+                </div>
+                <div id="register-img-second" class="contestant2">
+                                            <!--<div class="reMesseg cf">
+                                                                                                                                        <div class="continue">
+                                                                                                                                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                                            <figure class="contIcons"></figure>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="songName">
+                                                                                                                                            <h1 id="register-comp-name-second">מרינה מקסימיליאן בלומין</h1>
+                                                                                                                                            <h2 id="register-song-name-second">רוצי שמוליק קורא לך</h2>
+                                                                                                                                        </div>
+                                                                                                                                    </div>-->
+                </div>
                 <div class="reMesseg register cf">
                     <div class="continue">
                         <h2 id="register-wait-text-battle">ממתין להמשך השידור</h2>
@@ -188,26 +194,26 @@
                     <div class="songName1 songName">
                         <h1 id="register-comp-name-first">דוד לוי</h1>
                         <h2 id="register-song-name-first">ילדות נשכחת</h2>
-                        
+
                     </div>
                     <div class="songName2 songName">
                         <h1 id="register-comp-name-second">חגית יאסו חגית</h1>
                         <h2 id="register-song-name-second">ים של דמעות</h2>
-                        
+
                     </div>
 
                 </div>
-				<!--<div class="reMesseg cf">
-					<div class="continue">
-						<h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-						<figure class="contIcons"></figure>
-					</div>
-					<div class="songName">
-						<h1 id="register-comp-name-single">דוד לוי</h1>
-						<h2 id="register-song-name-single">ילדות נשכחת</h2>
-					</div>
-				</div>-->
-			</div>
+                                    <!--<div class="reMesseg cf">
+                                                                                                                                        <div class="continue">
+                                                                                                                                            <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
+                                                                                                                                            <figure class="contIcons"></figure>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="songName">
+                                                                                                                                            <h1 id="register-comp-name-single">דוד לוי</h1>
+                                                                                                                                            <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                                                                                                                                        </div>
+                                                                                                                                    </div>-->
+            </div>
 
         </section>
         <!---register  section-->
@@ -217,9 +223,9 @@
                 <div class="nextPage" data-goto="resultSingle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
-                <nav class="topMenu">
+                <!--<nav class="topMenu">
                     <h1 id="vote-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
-                </nav>
+                </nav>-->
                 <div id="vote-img-single" class="contestant">
                     <div class="slideLeft">
                         <div class="slideStay btn">
@@ -256,9 +262,9 @@
                 <div class="animat animatB" data-animat="battel2Bad"></div>
 
 
-                <nav class="topMenu">
+                <!--<nav class="topMenu">
                     <h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
-                </nav>
+                </nav>-->
                 <div id="vote-img-first" class="contestant1">
                     <div class="slideTopbattle">
                         <div class="slideGo btn"></div>
@@ -315,11 +321,11 @@
                 <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
-                <nav class="topMenu">
+                <!--<nav class="topMenu">
                     <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
-                </nav>
+                </nav>-->
                 <div id="vote-close-img-single" class="contestant">
-                   
+
                 </div>
                 <!--after user slide this div need to show--->
                 <!------------------------------------------->
@@ -343,16 +349,16 @@
                 <div class="animat animatB" data-animat="battel2Bad"></div>
 
 
-                <nav class="topMenu">
+                <!--<nav class="topMenu">
                     <h1 id="vote-close-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
-                </nav>
+                </nav>-->
                 <div id="vote-close-img-first" class="contestant1">
-                   
+
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
                 </div>
                 <div id="vote-close-img-second" class="contestant2">
-                    
+
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
                 </div>
@@ -382,13 +388,13 @@
         <section id="results">
             <div class="nextPage" data-goto="gallery"></div>
             <div class="animat animatB" data-animat="results"></div>
-            <nav class="topMenu">
+            <!--<nav class="topMenu">
                 <h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
-            </nav>
+            </nav>-->
             <div class="single">
                 <div id="results-img-single" class="contestant">
                     <div class="resultScalaL">
-                       
+
                         <div class="result">
                         </div>
                         <div class="scala">
@@ -415,12 +421,12 @@
             </div><!---------------------------------------------------single div--------------------------------->
             <div class="battle">
                 <div id="results-img-first" class="contestant1">
-                    <!--<div class="resultScalaR">
-                        <div class="resultBlue">
-                        </div>
-                        <div class="scalaBlue">
-                        </div>
-                    </div>-->
+                                            <!--<div class="resultScalaR">
+                                                                                                                                                <div class="resultBlue">
+                                                                                                                                                </div>
+                                                                                                                                                <div class="scalaBlue">
+                                                                                                                                                </div>
+                                                                                                                                            </div>-->
                     <div class="resultScalaR">
                         <div class="result">
                         </div>
@@ -430,12 +436,12 @@
                     </div>
                 </div>
                 <div id="results-img-second" class="contestant2">
-                    <!--<div class="resultScalaL">
-                        <div class="resultBlue">
-                        </div>
-                        <div class="scalaBlue">
-                        </div>
-                    </div>-->
+                                            <!--<div class="resultScalaL">
+                                                                                                                                                <div class="resultBlue">
+                                                                                                                                                </div>
+                                                                                                                                                <div class="scalaBlue">
+                                                                                                                                                </div>
+                                                                                                                                            </div>-->
                     <div class="resultScalaL">
                         <div class="result">
                         </div>
@@ -466,126 +472,126 @@
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
             <div class="nextPage" data-goto="messageWithNoImage"></div>
-            <nav class="topMenu">
+            <!--<nav class="topMenu">
                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
-            </nav>
+            </nav>-->
             <h2 id="gallery-title">אתם החלטתם - התוצאות המלאות של הערב</h2>
             <div id="result-gallery">
                 <ul>
-                    <!--<li class="gallery-vote-single">
-                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                        <span class="reMesseg">
-                            <span class="divide"></span>
-                            <div class="songName">
-                                <h1>דוד לביא</h1>
-                                <h2>ים של דמעות</h2>
-                            </div>
-                            <span class="percentage">57%</span>
-                        </span>
-                    </li>
-                    <li class="gallery-vote-single">
-                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                        <span class="reMesseg">
-                            <span class="divide"></span>
-                            <div class="songName">
-                                <h1>דוד לביא</h1>
-                                <h2>ים של דמעות</h2>
-                            </div>
-                            <span class="percentage">57%</span>
-                        </span>
-                    </li>                    
-                    <li class="gallery-vote-battle">
-                        <span class="vote-1">
-                            <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                            <span class="reMesseg">
-                                <span class="divide"></span>
-                                <div class="songName">
-                                    <h1>דוד לביא</h1>
-                                    <h2>ים של דמעות</h2>
-                                </div>
-                                <span class="percentage">57%</span>
-                            </span>
-                        </span>
-                        <span class="vote-2">
-                            <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                            <span class="reMesseg">
-                                <span class="divide"></span>
-                                <div class="songName">
-                                    <h1>דוד לביא</h1>
-                                    <h2>ים של דמעות</h2>
-                                </div>
-                                <span class="percentage">57%</span>
-                            </span>
-                        </span>
-                    </li>
-                    <li class="gallery-vote-single">
-                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
-                        <span class="reMesseg">
-                            <span class="divide"></span>
-                            <div class="songName">
-                                <h1>דוד לביא</h1>
-                                <h2>ים של דמעות</h2>
-                            </div>
-                            <span class="percentage">57%</span>
-                        </span>
-                    </li>
-                    -->
+                                            <!--<li class="gallery-vote-single">
+                                                                                                                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
+                                                                                                                        <span class="reMesseg">
+                                                                                                                            <span class="divide"></span>
+                                                                                                                            <div class="songName">
+                                                                                                                                <h1>דוד לביא</h1>
+                                                                                                                                <h2>ים של דמעות</h2>
+                                                                                                                            </div>
+                                                                                                                            <span class="percentage">57%</span>
+                                                                                                                        </span>
+                                                                                                                    </li>
+                                                                                                                    <li class="gallery-vote-single">
+                                                                                                                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
+                                                                                                                        <span class="reMesseg">
+                                                                                                                            <span class="divide"></span>
+                                                                                                                            <div class="songName">
+                                                                                                                                <h1>דוד לביא</h1>
+                                                                                                                                <h2>ים של דמעות</h2>
+                                                                                                                            </div>
+                                                                                                                            <span class="percentage">57%</span>
+                                                                                                                        </span>
+                                                                                                                    </li>                    
+                                                                                                                    <li class="gallery-vote-battle">
+                                                                                                                        <span class="vote-1">
+                                                                                                                            <img src="images/gallery/gallery-contestant.jpg" alt="alt">
+                                                                                                                            <span class="reMesseg">
+                                                                                                                                <span class="divide"></span>
+                                                                                                                                <div class="songName">
+                                                                                                                                    <h1>דוד לביא</h1>
+                                                                                                                                    <h2>ים של דמעות</h2>
+                                                                                                                                </div>
+                                                                                                                                <span class="percentage">57%</span>
+                                                                                                                            </span>
+                                                                                                                        </span>
+                                                                                                                        <span class="vote-2">
+                                                                                                                            <img src="images/gallery/gallery-contestant.jpg" alt="alt">
+                                                                                                                            <span class="reMesseg">
+                                                                                                                                <span class="divide"></span>
+                                                                                                                                <div class="songName">
+                                                                                                                                    <h1>דוד לביא</h1>
+                                                                                                                                    <h2>ים של דמעות</h2>
+                                                                                                                                </div>
+                                                                                                                                <span class="percentage">57%</span>
+                                                                                                                            </span>
+                                                                                                                        </span>
+                                                                                                                    </li>
+                                                                                                                    <li class="gallery-vote-single">
+                                                                                                                        <img src="images/gallery/gallery-contestant.jpg" alt="alt">
+                                                                                                                        <span class="reMesseg">
+                                                                                                                            <span class="divide"></span>
+                                                                                                                            <div class="songName">
+                                                                                                                                <h1>דוד לביא</h1>
+                                                                                                                                <h2>ים של דמעות</h2>
+                                                                                                                            </div>
+                                                                                                                            <span class="percentage">57%</span>
+                                                                                                                        </span>
+                                                                                                                    </li>
+                                                                                                                    -->
                 </ul>
             </div>
                             <!--<div class="swiper-container">
-                                                                                                                                                <div class="swiper-wrapper">
-                                                                                                                                                    <div class="swiper-slide red-slide">
-                                                                                                                                                        <span class="dividHgall"></span>
-                                                                                                                                                        <div class="contestant gall">
-                                                                                                                                                            <div class="reMesseg gall cf">
-                                                                                                                                                                <span class="divide"></span>
-                                                                                                                                                                <div class="songName">
-                                                                                                                                                                    <h1>דוד לוי</h1>
-                                                                                                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                                                                                                </div>
-                                                                                                                                                                <div class="percentage">
-                                                                                                                                                        57%
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
+                                                                                                                                                                                                                                <div class="swiper-wrapper">
+                                                                                                                                                                                                                                    <div class="swiper-slide red-slide">
+                                                                                                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                                                                                                <span class="divide"></span>
+                                                                                                                                                                                                                                                <div class="songName">
+                                                                                                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                <div class="percentage">
+                                                                                                                                                                                                                                        57%
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
                 
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="swiper-slide blue-slide">
-                                                                                                                                                        <span class="dividHgall"></span>
-                                                                                                                                                        <div class="contestant gall">
-                                                                                                                                                            <div class="reMesseg gall cf">
-                                                                                                                                                                <span class="divide"></span>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                    <div class="swiper-slide blue-slide">
+                                                                                                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                                                                                                <span class="divide"></span>
                 
-                                                                                                                                                                <div class="songName">
-                                                                                                                                                                    <h1>דוד לוי</h1>
-                                                                                                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                                                                                                </div>
-                                                                                                                                                                <div class="percentage">
-                                                                                                                                                        57%
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                <div class="songName">
+                                                                                                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                <div class="percentage">
+                                                                                                                                                                                                                                        57%
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
                 
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="swiper-slide orange-slide">
-                                                                                                                                                        <span class="dividHgall"></span>
-                                                                                                                                                        <div class="contestant gall">
-                                                                                                                                                            <div class="reMesseg gall cf">
-                                                                                                                                                                <span class="divide"></span>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                    <div class="swiper-slide orange-slide">
+                                                                                                                                                                                                                                        <span class="dividHgall"></span>
+                                                                                                                                                                                                                                        <div class="contestant gall">
+                                                                                                                                                                                                                                            <div class="reMesseg gall cf">
+                                                                                                                                                                                                                                                <span class="divide"></span>
                 
-                                                                                                                                                                <div class="songName">
-                                                                                                                                                                    <h1>דוד לוי</h1>
-                                                                                                                                                                    <h2>ילדות נשכחת</h2>
-                                                                                                                                                                </div>
-                                                                                                                                                                <div class="percentage">
-                                                                                                                                                        57%
-                                                                                                                                                                </div>
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>                
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                            -->
+                                                                                                                                                                                                                                                <div class="songName">
+                                                                                                                                                                                                                                                    <h1>דוד לוי</h1>
+                                                                                                                                                                                                                                                    <h2>ילדות נשכחת</h2>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                <div class="percentage">
+                                                                                                                                                                                                                                        57%
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                    </div>                
+                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                            -->
             <!--<div class="pagination"></div>-->
             <div class="goodbyeBox">
                 <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
@@ -606,20 +612,49 @@
         <script src="js/register.js"></script>
         <script src="js/vote.js"></script>
         <script src="js/result.js"></script>
-        
+
         <script src="js/gallery.js"></script>
 
         <script>
             $(document).ready(function (e) {
+            
+                //$(".slide.btn.drag").draggable({
+                //    stack: ".drag",
+                //    axis: "x",
+                //    containment: ".slidein",
+                //    drag: function (event, ui) {
+                //        //console.log(ui);
+                //    },
+                //    stop: function (event, ui) {
+            
+            
+                //        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
+                //        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
+                //            $(ui.helper).css("left", "74%");
+                //            $(".slider-text").text("");
+                //            alert("chosen");
+                //            $(ui.helper).draggable("destroy");
+                //        }
+                //        else {
+                //            $(ui.helper).css("left", "5.5%");
+                //        }
+                //    }
+            
+            
+            
+                //});
+            
+            
+            
                 $('.nextPage').on('click', this, function () {
                     goto = $(this).data('goto');
                     Navi.goto(goto);
                 });
-
-
+            
+            
                 $('.animat').on('click', this, function () {
                     anim = $(this).data('animat'); //animat="register"
-
+            
                     switch (anim) {
                         case 'register':
                             $('#register .slide').addClass('regAnim');
@@ -640,39 +675,39 @@
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant1 .love').addClass('love1Show');
-
+            
                             break;
                         case 'battel1Bad':
                             $('.contestant1 .slideDownbattle').addClass('battel1Bad');
                             $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant1 .slideTopbattle').addClass('hideR');
                             $('.contestant1 .hate').addClass('hate1Show');
-
+            
                             break;
                         case 'battel2Good':
                             $('.contestant2 .slideTopbattle').addClass('battel2lGood');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideDownbattle').addClass('hideL');
                             $('.contestant2 .love').addClass('love2Show');
-
+            
                             break;
                         case 'battel2Bad':
                             $('.contestant2 .slideDownbattle').addClass('battel2Bad');
                             $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
                             $('.contestant2 .slideTopbattle').addClass('hideL');
                             $('.contestant2 .hate2').addClass('hate2Show');
-
+            
                             break;
                         case 'results':
                             var x = -50;
                             $('.scala').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scala').animate({ bottom: x+'%' }, 500, function () { });
+                                $('.scala').animate({ bottom: x + '%' }, 500, function () { });
                             });
                             break;
                         default:
-
+            
                     }
-
+            
                 });
             });
         </script>

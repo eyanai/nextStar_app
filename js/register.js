@@ -1,15 +1,56 @@
 var voteIdA, voteKeyA, voteIdB, voteKeyB;
 //var isRegistered;
 
-function attachEventsRegister() {
-    $(".slidein .btn").on("click", setRegister); //click on slider
-}
+//function attachEventsRegister() {
+//    //$(".slidein .btn").on("click", setRegister); //click on slider
+//}
+
+$("#registerSingle .slide.btn.drag").draggable({
+    stack: ".drag",
+    axis: "x",
+    containment: "#registerSingle .slidein",
+    drag: function (event, ui) {
+    },
+    stop: function (event, ui) {
+        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
+                        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
+            $(ui.helper).css("left", "74%");
+            $(".slider-text").text("");
+            setRegister();
+        }
+        else {
+            $(ui.helper).css("left", "5.5%");
+        }
+    }
+});
+
+$("#registerBattle .slide.btn.drag").draggable({
+    stack: ".drag",
+    axis: "x",
+    containment: "#registerBattle .slidein",
+    drag: function (event, ui) {
+    },
+    stop: function (event, ui) {
+        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
+                        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
+            $(ui.helper).css("left", "74%");
+            $(".slider-text").text("");
+            setRegister();
+        }
+        else {
+            $(ui.helper).css("left", "5.5%");
+        }
+    }
+});
 
 function setOpenRegisterPage(data) {
     generalParameters.isRegistered = false;
-    //console.log("data.status: " + data.status);
     //take the value from dictionary
+    $(".topMenu").hide();
+    $(".topMenu").slideDown(1000);
     $("#register-dic").text(registerDic);
+    $(".slide").css("left", "5.5%");
+     $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
     $("#register .reMesseg .continue").hide();
     var url = "";
@@ -59,7 +100,7 @@ function setOpenRegisterPage(data) {
         Navi.goto("registerSingle");
     }
 
-    
+
 
 }
 
@@ -70,7 +111,8 @@ function setRegisterGoingClose(data) {
 
 function setRegister() {
     //ajax call server
-    console.log(serverDomain);
+
+    //console.log(domain);
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
@@ -85,17 +127,20 @@ function setRegister() {
 };
 
 function setWaitVotePage(data) {
-        console.log(data);
- Navi.goto("WaitVotePage");    
 
-    generalParameters.voteIdA = data[0].voteId;
-    generalParameters.voteKeyA = data[0].voteKey;
-    if (data[1]) {
-       generalParameters.voteIdB = data[1].voteId;
-        generalParameters.voteKeyB = data[1].voteKey;
+    if (data.length == 0) {
+        Navi.goto("notRegister");
     }
-    generalParameters.isRegistered = true;
-   
 
+    else {
+        Navi.goto("WaitVotePage");
 
+        generalParameters.voteIdA = data[0].voteId;
+        generalParameters.voteKeyA = data[0].voteKey;
+        if (data[1]) {
+            generalParameters.voteIdB = data[1].voteId;
+            generalParameters.voteKeyB = data[1].voteKey;
+        }
+        generalParameters.isRegistered = true;
+    }
 };
