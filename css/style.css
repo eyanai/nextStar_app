@@ -525,7 +525,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 #message-no-img-text {
-    font-size: 1.9em;
+    /* font-size: 1.9em; */
     letter-spacing: 0.13em;
     margin-top: 5%;
 }
@@ -1485,7 +1485,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 #result-gallery .songName {
-    height: 45%;
+    height: 41%;
 }
 
 #result-gallery .percentage {

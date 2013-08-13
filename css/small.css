@@ -1,7 +1,7 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.85em;
-	color:green;
+	/* color:yellow; */
 	margin:1% auto;
 }
 
@@ -153,8 +153,13 @@ h2 {
     font-size: 0.14em;
 }
 
+#message-no-img-text{
+	font-size:1em;
+	line-height:1.2em;
+}
+
 .detail {
-    font-size: 0.65em;
+    font-size: 0.75em;
     letter-spacing: 0.13em;
     margin-top: 3%;
 }
@@ -246,7 +251,7 @@ section {
 }
 
 #gallery .logFb, #download-music{
-	height:35px;
+	height:30px;
 }
 
 #gallery h2{
