@@ -13,11 +13,15 @@ $("#registerSingle .slide.btn.drag").draggable({
     drag: function (event, ui) {
     },
     stop: function (event, ui) {
-        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
-                        ($(".slidein").width().substring(0, $(".slidein").width().length - 2)) / 2) {
+        var lengthNoPx = ui.helper.css("left").length - 2;
+        var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
+
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx/2)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
+            sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
-            $(".slider-text").text("");
+            $(".deny-register").show();
+            //$(".slider-text").text("");
             setRegister();
         }
         else {
@@ -35,11 +39,14 @@ $("#registerBattle .slide.btn.drag").draggable({
     },
     stop: function (event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
+        var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= ($(".slidein").width() / 2)) { //btn position goes over 50%
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
+             sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
-            $(".slider-text").text("");
+            $(".deny-register").show();
+            //$(".slider-text").text("");
             setRegister();
         }
         else {
@@ -56,6 +63,7 @@ function setOpenRegisterPage(data) {
     $(".slide").css("left", "5.5%");
      $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
+    $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
     //if this is a double vote

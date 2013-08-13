@@ -16,7 +16,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    longPolling(); //check gallery
+    //longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
 
@@ -42,7 +42,7 @@ var generalParameters = {
     ruledChecked: false
 }
 
-var domain = "http://makosrv1.egoline.co.il/application";//app domain
+var domain = "http://makosrv1.egoline.co.il/application"; //app domain
 
 //dictionary values
 var registerDic = "";
@@ -153,7 +153,7 @@ function getFielsdByVote(voteData) {
 function initWaitAnimation() {
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
-    pos = pos*1 + 63.75*1;
+    pos = pos * 1 + 63.75 * 1;
     $(".contIcons").css("background-position-x", pos + "px");
 }
 
@@ -167,15 +167,14 @@ function initMoveEvents() {
 }
 
 function toggleTopMenu(headerText) {
-    $(".topMenu").slideUp(1000,function(){$(".topMenu h1").text(headerText);});
-    
+    $(".topMenu").slideUp(1000, function () { $(".topMenu h1").text(headerText); });
+
     $(".topMenu").slideDown(1000);
 
 }
 
-function checkRulesChecked(){
-    if(localStorage.getItem('rulesStorage')){
+function checkRulesChecked() {
+    if (localStorage.getItem('rulesStorage')) {
         generalParameters.ruledChecked = true;
     }
-
 }

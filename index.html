@@ -39,6 +39,7 @@
             <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
         </nav>
         <section id="login">
+            
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
 
@@ -61,7 +62,7 @@
                        </div>
                         <div class="facebookArea">
                             <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" ><span class="logText">הצביעו ללא פייסבוק</span></div>
+                            <div class="login" onclick="genClickSound.playclip();"><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
 					<div id="loginRewardBox">
@@ -71,7 +72,7 @@
 						</hgroup>
 						<div class="loginBox">
 							<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-							<div class="login" onclick="Navi.goto('message')">
+							<div class="login" onclick="genClickSound.playclip();Navi.goto('message');">
 								<span class="logText">הצבעה ללא פייסבוק</span>
 							</div>
 						</div>
@@ -128,24 +129,14 @@
             <div id="registerSingle">
                 <div id="register-single-img" class="contestant">
 
-                    <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
-
                     <div class="slidein">
                         <div class="register-red-flash"></div>
+                        <div class="deny-register"></div>
 
                         <div class="slide btn drag"></div>
                         <div class="slider-text">כניסה להצבעה</div>
                     </div>
-                                            <!--<div class="reMesseg cf">
-                                                                                                                                <div class="continue">
-                                                                                                                                    <h2 id="register-wait-text">ממתין לתחילת הביצוע</h2>
-                                                                                                                                    <figure class="contIcons"></figure>
-                                                                                                                                </div>
-                                                                                                                                <div class="songName">
-                                                                                                                                    <h1 id="register-comp-name-single">דוד לוי</h1>
-                                                                                                                                    <h2 id="register-song-name-single">ילדות נשכחת</h2>
-                                                                                                                                </div>
-                                                                                                                            </div>    I changed the position to be in the next div, hope it's not affecting other stuff. Sara-->
+                                        
                 </div>
                 <div class="reMesseg cf">
                     <div class="continue">
@@ -160,11 +151,10 @@
             </div>
             <div id="registerBattle" class="cf">
 
-                <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
 
                 <div class="slidein">
                     <div class="register-red-flash"></div>
-
+                    <div class="deny-register"></div>
                     <div class="slide btn drag"></div>
                     <div class="slider-text">כניסה להצבעה</div>
                 </div>
@@ -621,7 +611,7 @@
         <script src="js/vote.js"></script>
         <script src="js/result.js"></script>
         <script src="js/gallery.js"></script>
-
+        <script src="js/sounds.js"></script>
         <script>
             $(document).ready(function (e) {
             

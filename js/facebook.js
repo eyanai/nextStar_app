@@ -43,6 +43,7 @@
 //////////////////////////////////////////////////////// fb api functions
 ////login fb
 //function loginFb() {
+  // genClickSound.playclip();//play sound
 //   // if rules not checked - alert
 //    if(!generalParameters.ruledChecked){
 //        alert("עליך לאשר תקנון");
