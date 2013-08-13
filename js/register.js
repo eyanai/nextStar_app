@@ -13,7 +13,7 @@ $("#registerSingle .slide.btn.drag").draggable({
     },
     stop: function (event, ui) {
         if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
-                        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
+                        ($(".slidein").width().substring(0, $(".slidein").width().length - 2)) / 2) {
             $(ui.helper).css("left", "74%");
             $(ui.helper).css("left", "5.5%");
             $(".slider-text").text("");
@@ -32,8 +32,9 @@ $("#registerBattle .slide.btn.drag").draggable({
     drag: function (event, ui) {
     },
     stop: function (event, ui) {
-        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
-                        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
+        var lengthNoPx = ui.helper.css("left").length - 2;
+
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= ($(".slidein").width() / 2)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
             $(ui.helper).css("left", "5.5%");
             $(".slider-text").text("");
