@@ -585,10 +585,8 @@ input[type="checkbox"]:checked + label span {
     display: inline-block;
     vertical-align: middle;
     top: 72%;
-    background-position-x: -431px;
-    background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
-    background-size: 100% 100%;
-    width: 12%;
+    background-position-x: -430px;
+     width: 12%;
     height: 100%;
     background-repeat: no-repeat;
     display: inline-block;
@@ -1426,8 +1424,8 @@ input[type="checkbox"]:checked + label span {
 
 #result-gallery ul {
     height: 100%;
-    width: 1081px;
-    /* width: 500px;*/
+   /* width: 1081px;
+     width: 500px;*/
     padding-right: 4px;
     direction: rtl;
     overflow-y: hidden;
