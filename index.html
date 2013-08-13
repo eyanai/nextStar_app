@@ -1,4 +1,4 @@
-  </div>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +23,7 @@
 
         <script src="js/script.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
-        <script src="js/facebook.js"></script> 
+        <!--<script src="js/facebook.js"></script>  //check gallery -->
     </head>
 
     <body>
@@ -47,17 +47,14 @@
                     </hgroup>
                     <form name="" action="" method="">
                         <div class="checkboxArea">
-                            <div id="rules-wrap">
-                                <input type="checkbox" id="rulesCB" />
-                                <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
-                           
-                            </div>
-                             <input type="checkbox" id="tvImgCB" />
+                            <input type="checkbox" id="checkbox1" />
+                            <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
+                            <input type="checkbox" id="checkbox2" />
                             <label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
                         </div>
                         <div class="facebookArea">
                             <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" ><span class="logText">הצביעו ללא פייסבוק</span></div>
+                            <div class="login" onclick="Navi.goto('login2')"><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
                     <!--</div>-->
@@ -258,6 +255,7 @@
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
+
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
                 <div class="animat animatG" data-animat="battel2Good"></div>
@@ -320,7 +318,7 @@
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="results"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                 <!--<nav class="topMenu">

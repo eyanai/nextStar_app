@@ -243,9 +243,9 @@ header {
     overflow: hidden;
 }
 
-#slide-containter{
+#slide-container{
     position: relative;
-    top: -100%;
+    top: 0%;
 }
 
 .loginHg {
@@ -315,7 +315,7 @@ header {
 }
 
 
-#rulesCB {
+#checkbox1 {
     border: 2px solid red;
 }
 
@@ -379,7 +379,6 @@ input[type="checkbox"]:checked + label span {
     font-size: 0.8em;
     text-decoration: underline;
     padding-right: 5px;
-    display: none;
 }
 
 .loginBox {
