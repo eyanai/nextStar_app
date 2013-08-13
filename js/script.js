@@ -4,13 +4,12 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    //attachEventsFacebook(); //check gallery
+    attachEventsFacebook(); //check gallery
 
      attachEventsFacebook();
     //attachEventsRegister();
 
-    //attachEventsFacebook();//check gallery
-    //attachEventsRegister();
+ 
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
