@@ -1,9 +1,11 @@
 var numOfVotesThatChecked =0;
 
+//listener
 function attachEventsVote() {
     $("#vote-img-single,#vote-img-first,#vote-img-second").on("click", ".slideLeft, .slideRight, .slideTopbattle, .slideDownbattle", setVote); //click slider
 }
 
+//set vote page
 function setVotePage(data) {
     var isSingleVote;
     var firstFields;
@@ -18,7 +20,8 @@ function setVotePage(data) {
             $(".vote-wait-text").text(waitText);
             firstFields = getFielsdByVote(data.votes[0]);
             //set the dic title
-            $("#vote-dic-single").text(pushVoteDic);
+            //$("#vote-dic-single").text(pushVoteDic);
+            toggleTopMenu(pushVoteDic);
             $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')")
             $("#vote-comp-name-single").text(firstFields[0]);
             $("#vote-song-name-single").text(firstFields[1]);
@@ -33,7 +36,8 @@ function setVotePage(data) {
             firstFields = getFielsdByVote(data.votes[0]);
             secondFields = getFielsdByVote(data.votes[1]);
             //set the dic title
-            $("#vote-dic-battle").text(pushVoteDic);
+            //$("#vote-dic-battle").text(pushVoteDic);
+            toggleTopMenu(pushVoteDic);
             //firat comp
             $("#vote-img-first").css("background-image", "url('" + firstFields[2] + "')")
             $("#vote-comp-name-first").text(firstFields[0]);
@@ -57,8 +61,7 @@ function setVotePage(data) {
 
 }
 
-//vote close
-
+//set vote is close
 function setVoteClosePage(data) {
     //if registered
     if (generalParameters.isRegistered) {
@@ -73,7 +76,8 @@ function setVoteClosePage(data) {
             $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
             $("#vote-close-comp-name-single").text(firstFields[0]);
              //set the dictionary text
-            $("#vote-close-dic-single").text(voteCloseDic);
+            //$("#vote-close-dic-single").text(voteCloseDic);
+            toggleTopMenu(voteCloseDic);
 
             //wait text
             $("#vote-close-wait-text-single").text(data.textWaitCalc);
@@ -93,7 +97,8 @@ function setVoteClosePage(data) {
             $("#vote-close-comp-name-second").text(secondFields[0]);
             $("#vote-close-song-name-second").text(secondFields[1]);
              //set the dictionary text
-            $("#vote-close-dic-battle").text(voteCloseDic);
+            //$("#vote-close-dic-battle").text(voteCloseDic);
+            toggleTopMenu(voteCloseDic);
 
             //wait text
             $("#vote-close-wait-text-battle").text(data.textWaitCalc);
@@ -108,6 +113,7 @@ function setVoteClosePage(data) {
     }
 }
 
+//send to server the vote
 function setVote(e) {
     var voteId, voteKey, vote;
     console.log(e.currentTarget.className);
@@ -178,20 +184,26 @@ function setVote(e) {
 
 }
 
+//set wait result page
 function setWaitResultsPage() {
     $("#vote-img-single").hide();
-    $("#vote .reMesseg .continue").slideUp(500, function () { $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); }); });
+    //$("#vote .reMesseg .continue").slideUp(500, function () { $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); }); });
     //$("#vote .topMenu").slideUp(500,function(){$("#vote .topMenu h1").text(afterVoteDic);});
-    $("#vote .topMenu").slideDown(500);
+    //$("#vote .topMenu").slideDown(500);
+
+    toggleTopMenu(afterVoteDic);
 }
+
 
 function replaceHeadline() {
     $('.slideLeft').addClass('singleGood');
     $('.slideRight').addClass('hideR');
     $('.single .love').addClass('loveShow');
 
-    $("#vote .reMesseg .continue").slideDown(500);
+    /*$("#vote .reMesseg .continue").slideDown(500);
     $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); });
-    $("#vote .topMenu").slideDown(500);
+    $("#vote .topMenu").slideDown(500);*/
+    toggleTopMenu(afterVoteDic);
+
 
 }
