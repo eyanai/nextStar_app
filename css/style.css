@@ -243,9 +243,9 @@ header {
     overflow: hidden;
 }
 
-#slide-containter{
+#slide-container{
     position: relative;
-    top: -100%;
+    top: 0%;
 }
 
 .loginHg {
@@ -315,7 +315,7 @@ header {
 }
 
 
-#rulesCB {
+#checkbox1 {
     border: 2px solid red;
 }
 
@@ -379,7 +379,6 @@ input[type="checkbox"]:checked + label span {
     font-size: 0.8em;
     text-decoration: underline;
     padding-right: 5px;
-    display: none;
 }
 
 .loginBox {
@@ -585,10 +584,8 @@ input[type="checkbox"]:checked + label span {
     display: inline-block;
     vertical-align: middle;
     top: 72%;
-    background-position-x: -431px;
-    background-image: url(../images/masseg/loading_seq_kohav_DEMO.gif);
-    background-size: 100% 100%;
-    width: 12%;
+    background-position-x: -430px;
+     width: 12%;
     height: 100%;
     background-repeat: no-repeat;
     display: inline-block;
@@ -1048,12 +1045,12 @@ input[type="checkbox"]:checked + label span {
 }
 
 .slideTopbattle {
-    height: 20%;
+    height: 17%;
     top: 50%;
 }
 
 .slideDownbattle {
-    height: 20%;
+    height: 17%;
     top: 70%;
 }
 
@@ -1426,8 +1423,8 @@ input[type="checkbox"]:checked + label span {
 
 #result-gallery ul {
     height: 100%;
-    width: 1081px;
-    /* width: 500px;*/
+   /* width: 1081px;
+     width: 500px;*/
     padding-right: 4px;
     direction: rtl;
     overflow-y: hidden;
@@ -1676,4 +1673,9 @@ input[type="checkbox"]:checked + label span {
 
 #registerBattle {
     display: none;
+}
+
+.ui-page{
+    width: 100%;
+    height: 100%;
 }

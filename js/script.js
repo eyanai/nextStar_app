@@ -4,19 +4,14 @@ $(document).ready(function() {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    //attachEventsFacebook(); //check gallery
-
-   // attachEventsFacebook();
-    //attachEventsRegister();
-
     //attachEventsFacebook();//check gallery
     //attachEventsRegister();
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
-    // initWaitAnimation();
+    //initWaitAnimation();
 
-    longPolling();////check gallery
+    //longPolling();////check gallery
 
 
 });
@@ -150,7 +145,7 @@ function getFielsdByVote(voteData) {
 function initWaitAnimation(){
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
-    pos = pos - 63;
+    pos = pos*1 + 63*1;
     $(".contIcons").css("background-position-x",pos+"px");
 }
 

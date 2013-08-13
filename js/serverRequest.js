@@ -4,12 +4,12 @@
 //var serverDomain = 'http://makosrv1.egoline.co.il/nextStar/userjson?';
 var serverDomain = "http://makosrv1.egoline.co.il/nextStarTestB/userjson?";
 
-function longPolling() {
-    pollController = new PollController();
-    pollController._setUrl(serverDomain+"type=getStatus");
-    pollController._setCallBackFunction(function (data) {
-        console.log(data);
-        pageChange(data);
-    });
-    pollController._init();
-} 
+//function longPolling() {
+//    pollController = new PollController();
+//    pollController._setUrl(serverDomain+"type=getStatus");
+//    pollController._setCallBackFunction(function (data) {
+//        console.log(data);
+//        pageChange(data);
+//    });
+//    pollController._init();
+//} 
