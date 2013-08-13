@@ -8,16 +8,20 @@ var Navi = {
     },
 
     goto: function(el) {
+		stopWaitAnimation()
         switch(el) {
             case 'login1':
                 //
+                $(".topMenu").hide();
                 break;
             case 'login2':
                 $("#slide-container").addClass("login-anim");
+                $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $('#message').show();
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
@@ -25,8 +29,10 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
+				initWaitAnimation()
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageImage .continue').show();
@@ -36,6 +42,7 @@ var Navi = {
             case 'messageNoImage':
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').hide();
@@ -45,13 +52,14 @@ var Navi = {
             case 'messageWithImage':
                 Navi.hidelogin();
                 $('header').show();
+                 $(".topMenu").hide();
                 $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
                 break;
-            //        
+              
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
@@ -158,25 +166,25 @@ var Navi = {
 
 //check screen orientation - if screen fliped
 function updateOrientation() {
-    alert('in');
+    // alert('in');
     switch (window.orientation) {
         case 0:
-            alert('0');
+            // alert('0');
             $("#horizonal-screen").hide();
             break;
 
         case -90:
-            alert('-90');
+            // alert('-90');
             $("#horizonal-screen").show();
             break;
 
         case 90:
-            alert('90');
+            // alert('90');
             $("#horizonal-screen").show();
             break;
 
         case 180:
-            alert('180');
+            // alert('180');
             $("#horizonal-screen").hide();
             break;
 
