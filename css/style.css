@@ -729,6 +729,17 @@ input[type="checkbox"]:checked + label span {
 75%  {opacity:0.5;}
 100% {opacity:0;}
 }
+
+.slidein .register-stars{
+top: 20px;
+background-repeat: no-repeat;
+height: 85%;
+width: 90%;
+position: absolute;
+left: 19px;
+
+}
+
 .slidein .grey {
     background-image: url(../images/register/signin_slider_grey.png);
     height: 20%;
