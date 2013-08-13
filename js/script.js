@@ -1,9 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initAppSize();
 
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
+    //attachEventsFacebook(); //check gallery
+
+    // attachEventsFacebook();
+    //attachEventsRegister();
+
     //attachEventsFacebook();//check gallery
     //attachEventsRegister();
     attachEventsVote();
@@ -11,10 +16,13 @@ $(document).ready(function() {
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling();////check gallery
+    longPolling(); //check gallery
 
+    $("#horizonal-screen").hide();
 
 });
+
+
 
 //general parameters
 var generalParameters = {
@@ -30,7 +38,7 @@ var generalParameters = {
         gender: null,
         profilePic: null
     },
-    isBigSize:false,
+    isBigSize: false,
     ruledChecked: false
 }
 
@@ -72,19 +80,19 @@ function pageChange(data) {
 }
 
 //check for every vote if is single or battle
-function isSingle(data){
+function isSingle(data) {
 
     // if the generalParameters.isSingle was init -return it
-    if(generalParameters.isSingle != null && generalParameters.isSingle !=""){
+    if (generalParameters.isSingle != null && generalParameters.isSingle != "") {
         return generalParameters.isSingle;
     }
     //else - init and then return it
-    else{
-        if(data.votes.length == 2){
-            generalParameters.isSingle =false;
+    else {
+        if (data.votes.length == 2) {
+            generalParameters.isSingle = false;
         }
-        else{
-            generalParameters.isSingle =true;
+        else {
+            generalParameters.isSingle = true;
         }
         return generalParameters.isSingle
     }
@@ -97,7 +105,7 @@ function initAppSize() {
 
 //init the dictionary values from admin- to blue title
 function initDictionaryValues() {
-    var dictionary=null;
+    var dictionary = null;
     $.ajax({
         type: "GET",
         datatype: "json",
@@ -116,7 +124,7 @@ function initDictionaryValues() {
             console.log("error getPage: " + data);
         }
     });
-   
+
     /*registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
@@ -142,19 +150,19 @@ function getFielsdByVote(voteData) {
     return results;
 }
 
-function initWaitAnimation(){
+function initWaitAnimation() {
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
     pos = pos*1 + 63.75*1;
-    $(".contIcons").css("background-position-x",pos+"px");
+    $(".contIcons").css("background-position-x", pos + "px");
 }
 
-function initMoveEvents(){
-  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+function initMoveEvents() {
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var slider = $("#result-gallery")[0];
-    slider.ontouchmove = function(e) {
+    slider.ontouchmove = function (e) {
         e.stopPropagation();
-        $(document).css("top","0px")
+        $(document).css("top", "0px")
     };
 }
 
@@ -169,5 +177,5 @@ function checkRulesChecked(){
     if(localStorage.getItem('rulesStorage')){
         generalParameters.ruledChecked = true;
     }
-  
+
 }
