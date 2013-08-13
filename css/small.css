@@ -23,6 +23,10 @@ h1, .facebookArea , .logFb, .logText {
     font-size: 0.8em;
 }
 
+.logFb, .login{
+	height:50px;
+}
+
 #result-gallery .songName, #result .songName{
 	font-size: 0.8em;
 } 
@@ -34,6 +38,8 @@ h1, .facebookArea , .logFb, .logText {
 
 #login .checkboxArea{
 	padding:2px 10px 0 0;
+	height: 44%;
+	margin: 4% auto;
 }
 
 .logo.login {
@@ -46,7 +52,7 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #loginExtendedBox {/*, #loginRewardBox*/
-    height: 50%;
+    height: 45%;
     position: relative;
     top: 0%;
     margin: 4% auto;
@@ -60,13 +66,19 @@ h1, .facebookArea , .logFb, .logText {
 	font-size:1.2em;
 }
 
+/* #loginExtendedBox .logFB, #loginExtendedBox .login,  #loginRewardedBox .logFB, #loginRewardedBox .login,{
+   height:50px;
+}
+ */
+
+ .logFB, .login, #loginRewardBox .logFb, #loginExtendedBox #loginRewardBox .login {
+   height:50px;
+}
+ 
 #loginExtendedBox .login{
 	font-size:1.4em;
 	margin-top: 2%;
-}
-
-#loginExtendedBox .login {
-    
+	  height:50px;
 }
 
 #loginRewardBox .loginHg{
