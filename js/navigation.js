@@ -11,13 +11,16 @@ var Navi = {
         switch (el) {
             case 'login1':
                 //
+                $(".topMenu").hide();
                 break;
             case 'login2':
                 $("#slide-container").addClass("login-anim");
+                $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $('#message').show();
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
@@ -26,6 +29,7 @@ var Navi = {
             case 'messageWaitingWithImage':
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageImage .continue').show();
@@ -34,6 +38,7 @@ var Navi = {
             case 'messageNoImage':
                 Navi.hidelogin();
                 $('header').show();
+                $(".topMenu").hide();
                 $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').hide();
@@ -42,12 +47,13 @@ var Navi = {
             case 'messageWithImage':
                 Navi.hidelogin();
                 $('header').show();
+                 $(".topMenu").hide();
                 $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            //       
+              
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();

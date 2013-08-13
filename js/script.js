@@ -11,7 +11,7 @@ $(document).ready(function() {
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling();////check gallery
+    longPolling();////check gallery
 
 
 });
@@ -141,14 +141,25 @@ function getFielsdByVote(voteData) {
     var results = new Array(firstName, firstSong, firstUrl);
     return results;
 }
-
+var gifInterval;
 function initWaitAnimation(){
-    var pos = $(".contIcons").css("background-position-x");
-    pos = pos.substring(0, pos.length - 2);
-    pos = pos*1 + 63*1;
-    $(".contIcons").css("background-position-x",pos+"px");
+    var pos;
+    gifInterval = setInterval(function () {
+        pos = $(".contIcons").css("background-position-x");
+        pos = pos.substring(0, pos.length - 2);
+        if (pos == 0) {
+            pos = -476;
+        }
+        else{
+            pos = pos * 1 + 68 * 1;
+        }
+        $(".contIcons").css("background-position-x", pos + "px");
+    }, 300);    
 }
 
+function stopWaitAnimation(){
+    clearInterval(gifInterval);
+}
 function initMoveEvents(){
   document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
     var slider = $("#result-gallery")[0];

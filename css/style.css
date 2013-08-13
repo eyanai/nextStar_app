@@ -577,15 +577,10 @@ input[type="checkbox"]:checked + label span {
 }
 
 .contIcons {
-    background-image: url(../images/masseg/dots.png);
-    width: 12%;
-    height: 33%;
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    top: 72%;
-    background-position-x: -430px;
-     width: 12%;
+    background-image: url(../images/masseg/dots_gif.png);
+    
+    background-position-x: -476px;
+     width: 13%;
     height: 100%;
     background-repeat: no-repeat;
     display: inline-block;
