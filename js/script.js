@@ -6,7 +6,7 @@ $(document).ready(function () {
     checkRulesChecked();
     //attachEventsFacebook(); //check gallery
 
-    // attachEventsFacebook();
+     attachEventsFacebook();
     //attachEventsRegister();
 
     //attachEventsFacebook();//check gallery
@@ -16,7 +16,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    longPolling(); //check gallery
+    //longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
 
@@ -42,7 +42,8 @@ var generalParameters = {
     ruledChecked: false
 }
 
-var domain = "http://makosrv1.egoline.co.il/application";//app domain
+var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
+//var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
 
 //dictionary values
 var registerDic = "";
