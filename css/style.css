@@ -243,9 +243,9 @@ header {
     overflow: hidden;
 }
 
-#slide-containter{
+#slide-container{
     position: relative;
-    top: -100%;
+    top: 0%;
 }
 
 .loginHg {
