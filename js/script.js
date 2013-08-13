@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initAppSize();
 
     //init the dictionary values
@@ -6,7 +6,7 @@ $(document).ready(function() {
     checkRulesChecked();
     //attachEventsFacebook(); //check gallery
 
-   // attachEventsFacebook();
+    // attachEventsFacebook();
     //attachEventsRegister();
 
     //attachEventsFacebook();//check gallery
@@ -16,10 +16,13 @@ $(document).ready(function() {
     initMoveEvents();
     // initWaitAnimation();
 
-    //longPolling();////check gallery
+    longPolling(); //check gallery
 
+    $("#horizonal-screen").hide();
 
 });
+
+
 
 //general parameters
 var generalParameters = {
@@ -35,7 +38,7 @@ var generalParameters = {
         gender: null,
         profilePic: null
     },
-    isBigSize:false,
+    isBigSize: false,
     ruledChecked: false
 }
 var domain = "http://makosrv1.egoline.co.il/application";
@@ -66,19 +69,19 @@ function pageChange(data) {
 }
 
 
-function isSingle(data){
+function isSingle(data) {
 
     // if the generalParameters.isSingle was init -return it
-    if(generalParameters.isSingle != null && generalParameters.isSingle !=""){
+    if (generalParameters.isSingle != null && generalParameters.isSingle != "") {
         return generalParameters.isSingle;
     }
     //else - init and then return it
-    else{
-        if(data.votes.length == 2){
-            generalParameters.isSingle =false;
+    else {
+        if (data.votes.length == 2) {
+            generalParameters.isSingle = false;
         }
-        else{
-            generalParameters.isSingle =true;
+        else {
+            generalParameters.isSingle = true;
         }
         return generalParameters.isSingle
     }
@@ -99,25 +102,25 @@ var resultsDic = "";
 var endShowDic = "";
 //init the dictionary values from admin- to blue title
 function initDictionaryValues() {
-    var dictionary=null;
+    var dictionary = null;
     $.ajax({
         type: "GET",
         datatype: "json",
         url: domain + "/dictionary/dictionary.txt",
         success: function (data) {
             dictionary = JSON.parse(data);
-             registerDic =dictionary.registerDic;
-        pushVoteDic =dictionary.pushVoteDic;
-        afterVoteDic=dictionary.afterVoteDic;
-        resultsDic =dictionary.resultsDic;
-        endShowDic =dictionary.endShowDic;
+            registerDic = dictionary.registerDic;
+            pushVoteDic = dictionary.pushVoteDic;
+            afterVoteDic = dictionary.afterVoteDic;
+            resultsDic = dictionary.resultsDic;
+            endShowDic = dictionary.endShowDic;
             //console.log(JSON.parse(data));
         },
         error: function (data) {
             console.log("error getPage: " + data);
         }
     });
-   
+
     /*registerDic = "אתם פה? מוכנים להצביע?";
     pushVoteDic = "הצביעו עכשיו, נשאר או הולך?";
     afterVoteDic = "תודה על הצבעתך.";
@@ -142,20 +145,20 @@ function getFielsdByVote(voteData) {
     return results;
 }
 
-function initWaitAnimation(){
+function initWaitAnimation() {
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
     pos = pos - 63;
-    $(".contIcons").css("background-position-x",pos+"px");
+    $(".contIcons").css("background-position-x", pos + "px");
 }
 
 
-function initMoveEvents(){
-  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+function initMoveEvents() {
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var slider = $("#result-gallery")[0];
-    slider.ontouchmove = function(e) {
+    slider.ontouchmove = function (e) {
         e.stopPropagation();
-        $(document).css("top","0px")
+        $(document).css("top", "0px")
     };
 }
 
@@ -167,9 +170,9 @@ function toggleTopMenu(headerText) {
     $(".topMenu").slideDown(1000);
 
 }
-function checkRulesChecked(){
-    if(localStorage.getItem('rulesStorage')){
+function checkRulesChecked() {
+    if (localStorage.getItem('rulesStorage')) {
         generalParameters.ruledChecked = true;
     }
-  
+
 }

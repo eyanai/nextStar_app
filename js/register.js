@@ -15,6 +15,7 @@ $("#registerSingle .slide.btn.drag").draggable({
         if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
                         ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
             $(ui.helper).css("left", "74%");
+            $(ui.helper).css("left", "5.5%");
             $(".slider-text").text("");
             setRegister();
         }
@@ -34,6 +35,7 @@ $("#registerBattle .slide.btn.drag").draggable({
         if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
                         ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
             $(ui.helper).css("left", "74%");
+            $(ui.helper).css("left", "5.5%");
             $(".slider-text").text("");
             setRegister();
         }

@@ -47,7 +47,7 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 break;
-            //      
+            //       
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
@@ -131,4 +131,29 @@ var Navi = {
 
 }
 
-	
+//check screen orientation - if screen fliped
+function updateOrientation() {
+    alert('in');
+    switch (window.orientation) {
+        case 0:
+            alert('0');
+            $("#horizonal-screen").hide();
+            break;
+
+        case -90:
+            alert('-90');
+            $("#horizonal-screen").show();
+            break;
+
+        case 90:
+            alert('90');
+            $("#horizonal-screen").show();
+            break;
+
+        case 180:
+            alert('180');
+            $("#horizonal-screen").hide();
+            break;
+
+    }
+}
