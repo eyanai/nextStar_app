@@ -8,6 +8,7 @@ var Navi = {
     },
 
     goto: function(el) {
+		stopWaitAnimation()
         switch(el) {
             case 'login1':
                 //
@@ -28,6 +29,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
+				initWaitAnimation()
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
