@@ -38,8 +38,9 @@
             <div class="nextPage" data-goto="messageWithImage"></div>
             <figure class="logo login"></figure>
 
-            <div id="loginExtendedBox">
-                <div id="slide-container">
+            
+			<div id="slide-container">
+				<div id="loginExtendedBox">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
  לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים
@@ -57,24 +58,23 @@
                             <div class="login" onclick="Navi.goto('login2')"><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
-                    <!--</div>-->
-                    <div id="loginRewardBox">
-                        <hgroup class="loginHg">
-                            <div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
-                            </div>
-                        </hgroup>
-                        <div class="loginBox">
-                            <div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-                            <div class="login" onclick="Navi.goto('message')">
-                                <span class="logText">הצבעה ללא פייסבוק</span>
-                            </div>
-                        </div>
-                        <div class="checkboxArea">
-                            <input type="checkbox" id="checkbox3" name="cc" />
-                            <label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-                        </div>
-                    </div>
-                </div>
+				</div>
+				<div id="loginRewardBox">
+					<hgroup class="loginHg">
+						<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
+						</div>
+					</hgroup>
+					<div class="loginBox">
+						<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
+						<div class="login" onclick="Navi.goto('message')">
+							<span class="logText">הצבעה ללא פייסבוק</span>
+						</div>
+					</div>
+					<div class="checkboxArea">
+						<input type="checkbox" id="checkbox3" name="cc" />
+						<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+					</div>
+				</div>
             </div>
 
             <div class="musix"></div>
@@ -122,7 +122,7 @@
             <div id="registerSingle">
                 <div id="register-single-img" class="contestant">
 
-                    <div class="slidein grey"></div>
+                    <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
 
                     <div class="slidein">
                         <div class="register-red-flash"></div>
@@ -154,7 +154,7 @@
             </div>
             <div id="registerBattle" class="cf">
 
-                <div class="slidein grey"></div>
+                <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
 
                 <div class="slidein">
                     <div class="register-red-flash"></div>
@@ -255,7 +255,7 @@
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
-
+				<div class="nextPage" data-goto="gallery"></div>
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
                 <div class="animat animatG" data-animat="battel2Good"></div>
@@ -308,7 +308,7 @@
                         <h2 id="vote-song-name-second">ים של דמעות</h2>
                     </div>
                 </div>
-                <div class="divideH"></div>
+                <!-- <div class="divideH"></div> -->
 
             </div>
             <!---------------------------------------------------battle div--------------------------------->
@@ -377,7 +377,7 @@
                         <h2 id="vote-close-song-name-second">ים של דמעות</h2>
                     </div>
                 </div>
-                <div class="divideH"></div>
+                <!-- <div class="divideH"></div> -->
 
             </div>
             <!---------------------------------------------------battle div--------------------------------->
