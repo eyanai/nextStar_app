@@ -2,17 +2,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <script src="js/jq.js"></script>
+        <meta charset="utf-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/animation.css">
         <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
         <link rel="stylesheet" media="screen and (max-width:699px) and (orientation:portrait)" href="css/small.css" />
         <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width:1399px) and (orientation:portrait)" href="css/normal.css" />
         <link rel="stylesheet" media="screen and (min-width: 1400px) and (orientation:portrait)" href="css/large.css" />
-
-
+        
+        <!------------------------------------general scripts and plugins------------------------------------------>
+        <script src="js/jq.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
         <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
@@ -20,17 +21,17 @@
         <script src="js/jquery-ui-touch-punch.js" type="text/javascript"></script>
         <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
-
-        <script src="js/script.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
+
+        <!------------------------------------ internal scripts  ------------------------------------------>
+        <script src="js/script.js"></script>        
         <!--<script src="js/facebook.js"></script>  //check gallery -->
     </head>
-
     <body onorientationchange="updateOrientation();">
         <div id="horizonal-screen">
             <div id="flip-me"></div>
         </div>
-        <header class="">
+        <header class="hide">
             <figure class="header logo"></figure>
             <figure class="live"></figure>
         </header>
@@ -42,7 +43,7 @@
             <figure class="logo login"></figure>
 
             <div id="loginExtendedBox">
-                <div id="slide-container">
+				<div id="slide-container">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
  לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>	התחברו דרך פייסבוק כדי לזכות בפרסים
@@ -50,34 +51,36 @@
                     </hgroup>
                     <form name="" action="" method="">
                         <div class="checkboxArea">
-                            <input type="checkbox" id="checkbox1" />
-                            <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
-                            <input type="checkbox" id="checkbox2" />
+                           <div id="rules-wrap">
+                                <input type="checkbox" id="rulesCB" />
+                                <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label><span id="notConfirmed">לא אישרת את התקנון!</span></br>
+                           
+                            </div>
+                             <input type="checkbox" id="tvImgCB" />
                             <label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-                        </div>
+                       </div>
                         <div class="facebookArea">
                             <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" onclick="Navi.goto('login2')"><span class="logText">הצביעו ללא פייסבוק</span></div>
+                            <div class="login" ><span class="logText">הצביעו ללא פייסבוק</span></div>
                         </div>
                     </form>
-                    <!--</div>-->
-                    <div id="loginRewardBox">
-                        <hgroup class="loginHg">
-                            <div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
-                            </div>
-                        </hgroup>
-                        <div class="loginBox">
-                            <div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-                            <div class="login" onclick="Navi.goto('message')">
-                                <span class="logText">הצבעה ללא פייסבוק</span>
-                            </div>
-                        </div>
-                        <div class="checkboxArea">
-                            <input type="checkbox" id="checkbox3" name="cc" />
-                            <label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-                        </div>
-                    </div>
-                </div>
+					<div id="loginRewardBox">
+						<hgroup class="loginHg">
+							<div class="titleLoginReward">שימו לב! </br> כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
+							</div>
+						</hgroup>
+						<div class="loginBox">
+							<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
+							<div class="login" onclick="Navi.goto('message')">
+								<span class="logText">הצבעה ללא פייסבוק</span>
+							</div>
+						</div>
+						<div class="checkboxArea">
+							<input type="checkbox" id="checkbox3" name="cc" />
+							<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+						</div>
+					</div>
+				</div>		
             </div>
 
             <div class="musix"></div>
@@ -125,7 +128,7 @@
             <div id="registerSingle">
                 <div id="register-single-img" class="contestant">
 
-                    <div class="slidein grey"></div>
+                    <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
 
                     <div class="slidein">
                         <div class="register-red-flash"></div>
@@ -157,7 +160,7 @@
             </div>
             <div id="registerBattle" class="cf">
 
-                <div class="slidein grey"></div>
+                <div class="slidein grey"><!-- <span>ההצבעה החלה</br>המתן לביצוע הבא</span> --></div>
 
                 <div class="slidein">
                     <div class="register-red-flash"></div>
@@ -221,7 +224,7 @@
         </section>
         <!---register  section-->
         <section id="vote">
-
+             <div class="nextPage" data-goto="resultsBattle"></div>
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="resultSingle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
@@ -258,7 +261,7 @@
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
-
+				<div class="nextPage" data-goto="gallery"></div>
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
                 <div class="animat animatG" data-animat="battel2Good"></div>
@@ -311,7 +314,7 @@
                         <h2 id="vote-song-name-second">ים של דמעות</h2>
                     </div>
                 </div>
-                <div class="divideH"></div>
+                <!-- <div class="divideH"></div> -->
 
             </div>
             <!---------------------------------------------------battle div--------------------------------->
@@ -380,7 +383,7 @@
                         <h2 id="vote-close-song-name-second">ים של דמעות</h2>
                     </div>
                 </div>
-                <div class="divideH"></div>
+                <!-- <div class="divideH"></div> -->
 
             </div>
             <!---------------------------------------------------battle div--------------------------------->
@@ -610,12 +613,13 @@
         <!---gallery  section-->
         <footer id="banner"> <img src="images/banner/banner1.jpg" alt="alt"> </footer>
         <!---banner section-->
+        
+        <!------------------------------------ internal scripts  ------------------------------------------>
         <script src="js/navigation.js"></script>
         <script src="js/pages.js"></script>
         <script src="js/register.js"></script>
         <script src="js/vote.js"></script>
         <script src="js/result.js"></script>
-
         <script src="js/gallery.js"></script>
 
         <script>

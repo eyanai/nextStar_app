@@ -27,7 +27,7 @@ function setStaticPage(data){
     }
 }
 
-
+//set wait page with image
 function setWaitPageWithImg(data){
     var title = data.title;
     var text = data.text;
@@ -48,7 +48,8 @@ function setWaitPageWithImg(data){
     
     Navi.goto("messageWithImage");
 }
-       
+
+//set wait page without image       
 function  setWaitPageNoImg(data){
     var title = data.title;
     var text = data.text;
@@ -60,11 +61,30 @@ function  setWaitPageNoImg(data){
     
     Navi.goto("messageNoImage");
  }
-      
-function   setStaticPageWithImg(data){
+
+//set page with image      
+function   setStaticPageWithImg(data){   
+    var title = data.title;
+    var text = data.text;
+    var info =data.info
+
+    //$("#message-no-img-title").text(title);
+    $("#message-no-img-text").text(text);
+    $("#message-with-img-wait-text").text(info);
     
+    Navi.goto("messageWithImage");
+ 
 }
-       
+
+//set wait without image       
 function   setStaticPageNoImg(data){
-                
+    var title = data.title;
+    var text = data.text;
+    var info =data.info
+
+    //$("#message-no-img-title").text(title);
+    $("#message-no-img-text").text(text);
+    $("#message-with-img-wait-text").text(info);
+    
+    Navi.goto("messageNoImage");                
  }

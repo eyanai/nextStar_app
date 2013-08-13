@@ -5,6 +5,7 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 //    //$(".slidein .btn").on("click", setRegister); //click on slider
 //}
 
+//drag to register in single vote
 $("#registerSingle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
@@ -25,6 +26,7 @@ $("#registerSingle .slide.btn.drag").draggable({
     }
 });
 
+//drag to register in battle vote
 $("#registerBattle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
@@ -46,6 +48,7 @@ $("#registerBattle .slide.btn.drag").draggable({
     }
 });
 
+//set register page
 function setOpenRegisterPage(data) {
     generalParameters.isRegistered = false;
     //take the value from dictionary
@@ -105,15 +108,15 @@ function setOpenRegisterPage(data) {
 
 }
 
+//set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
     $(".register-red-flash").show();
 }
 
+//send to server the register
 function setRegister() {
     //ajax call server
-
-    //console.log(domain);
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
@@ -127,6 +130,7 @@ function setRegister() {
     });
 };
 
+//set wait vote page
 function setWaitVotePage(data) {
 
     if (data.length == 0) {

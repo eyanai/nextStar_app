@@ -14,7 +14,7 @@ $(document).ready(function () {
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
-    // initWaitAnimation();
+    //initWaitAnimation();
 
     longPolling(); //check gallery
 
@@ -41,7 +41,18 @@ var generalParameters = {
     isBigSize: false,
     ruledChecked: false
 }
-var domain = "http://makosrv1.egoline.co.il/application";
+
+var domain = "http://makosrv1.egoline.co.il/application";//app domain
+
+//dictionary values
+var registerDic = "";
+var pushVoteDic = "";
+var afterVoteDic = "";
+var voteCloseDic = "";
+var resultsDic = "";
+var endShowDic = "";
+
+//get data from the server and send to the suitable page
 function pageChange(data) {
     var status = data.status;
 
@@ -68,7 +79,7 @@ function pageChange(data) {
     }
 }
 
-
+//check for every vote if is single or battle
 function isSingle(data) {
 
     // if the generalParameters.isSingle was init -return it
@@ -87,19 +98,11 @@ function isSingle(data) {
     }
 }
 
-
-
-
+//check if tha app run on small screen or big. According to result load appropriate sized image
 function initAppSize() {
     //set the isBigSize parameter by the device
 }
 
-var registerDic = "";
-var pushVoteDic = "";
-var afterVoteDic = "";
-var voteCloseDic = "";
-var resultsDic = "";
-var endShowDic = "";
 //init the dictionary values from admin- to blue title
 function initDictionaryValues() {
     var dictionary = null;
@@ -112,6 +115,7 @@ function initDictionaryValues() {
             registerDic = dictionary.registerDic;
             pushVoteDic = dictionary.pushVoteDic;
             afterVoteDic = dictionary.afterVoteDic;
+            voteCloseDic = dictionary.voteCloseDic;
             resultsDic = dictionary.resultsDic;
             endShowDic = dictionary.endShowDic;
             //console.log(JSON.parse(data));
@@ -130,6 +134,7 @@ function initDictionaryValues() {
     */
 }
 
+//get fields per vote
 function getFielsdByVote(voteData) {
     var firstName = voteData.name;
     var firstSong = voteData.songName;
@@ -148,10 +153,9 @@ function getFielsdByVote(voteData) {
 function initWaitAnimation() {
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
-    pos = pos - 63;
+    pos = pos*1 + 63.75*1;
     $(".contIcons").css("background-position-x", pos + "px");
 }
-
 
 function initMoveEvents() {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -162,16 +166,15 @@ function initMoveEvents() {
     };
 }
 
-
 function toggleTopMenu(headerText) {
-
-    $(".topMenu").slideUp(1000);
-    $(".topMenu h1").text(headerText);
+    $(".topMenu").slideUp(1000,function(){$(".topMenu h1").text(headerText);});
+    
     $(".topMenu").slideDown(1000);
 
 }
-function checkRulesChecked() {
-    if (localStorage.getItem('rulesStorage')) {
+
+function checkRulesChecked(){
+    if(localStorage.getItem('rulesStorage')){
         generalParameters.ruledChecked = true;
     }
 

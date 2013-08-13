@@ -2,7 +2,8 @@ function setResultPage(data) {
     console.log("setResultPage data.status: " + data.status);
 
     //set the dictionary text
-    $("#results-dic").text(resultsDic);
+    //$("#results-dic").text(resultsDic);
+    toggleTopMenu(resultsDic);
 
     var isSingleVote;
     var firstFields;

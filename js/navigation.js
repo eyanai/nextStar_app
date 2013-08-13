@@ -51,6 +51,7 @@ var Navi = {
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
+                $(".topMenu").show();
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
@@ -61,6 +62,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
+                $(".topMenu").show();
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
@@ -70,27 +72,32 @@ var Navi = {
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
+                $(".topMenu").show();
                 $(".register-red-flash").hide();
                 break;
             case 'WaitVotePage':
                 $(".slidein").hide();
+                $(".topMenu").show();
                 $("#register .reMesseg .continue").show();
                 break;
             case 'voteSingle':
                 Navi.hidelogin();
                 $('#vote').show();
+                $(".topMenu").show();
                 $("#vote .single").show();
                 $("#vote .battle").hide();
                 break;
             case 'voteBattle':
                 Navi.hidelogin();
                 $('#vote').show();
+                $(".topMenu").show();
                 $("#vote .single").hide();
                 $("#vote .battle").show();
                 break;
             case 'voteCloseSingle':
                 Navi.hidelogin();
                 $('#voteClose').show();
+                $(".topMenu").show();
                 $("#voteClose .single").show();
                 $("#voteClose .battle").hide();
                 $("#vote-close-wait-text-single").show();
@@ -98,6 +105,7 @@ var Navi = {
             case 'voteCloseBattle':
                 Navi.hidelogin();
                 $('#voteClose').show();
+                $(".topMenu").show();
                 $("#voteClose .single").hide();
                 $("#voteClose .battle").show();
                 $("#vote-close-wait-text-battle").show();
@@ -105,6 +113,7 @@ var Navi = {
             case 'resultsSingle':
                 Navi.hidelogin();
                 $('#results').show();
+                $(".topMenu").show();
                 $("#results-img-single").show();
                 $("#results .single").show();
                 $("#results .battle").hide();
@@ -112,6 +121,7 @@ var Navi = {
                 break;
             case 'resultsBattle':
                 Navi.hidelogin();
+                $(".topMenu").show();
                 $('#results').show();
                 $("#results .single").hide();
                 $("#results .battle").show();
@@ -119,6 +129,7 @@ var Navi = {
                 break;
             case 'gallery':
                 Navi.hidelogin();
+                $(".topMenu").show();
                 $('#gallery').show();
                 gallerySize();
                 break;
