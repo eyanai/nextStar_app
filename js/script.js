@@ -140,7 +140,7 @@ function getFielsdByVote(voteData) {
 function initWaitAnimation(){
     var pos = $(".contIcons").css("background-position-x");
     pos = pos.substring(0, pos.length - 2);
-    pos = pos*1 + 63*1;
+    pos = pos*1 + 63.75*1;
     $(".contIcons").css("background-position-x",pos+"px");
 }
 
