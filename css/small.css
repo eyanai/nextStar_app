@@ -1,7 +1,7 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
-	font-size:0.8em;
-	color:pink;
+	font-size:0.85em;
+	color:green;
 	margin:1% auto;
 }
 
@@ -11,20 +11,20 @@
 
 .loginHg .titleLoginReward{
 	/* height: 100%; */
-	margin: 13% 0;
-	padding: 0 30%;
+	margin: 11% 0;
+	padding: 0 24%;
 }
 
-.login .logText{
-	right:25%;
+.facebookArea .login .logText{
+	right:25%; 
+}
+
+#loginExtendedBox .loginHg{
+	height:10%;
 }
 
 h1, .facebookArea , .logFb, .logText {
     font-size: 0.8em;
-}
-
-.logFb, .login{
-	height:50px;
 }
 
 #result-gallery .songName, #result .songName{
@@ -52,7 +52,7 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #loginExtendedBox {/*, #loginRewardBox*/
-    height: 45%;
+    height: 50%;
     position: relative;
     top: 0%;
     margin: 4% auto;
@@ -62,23 +62,26 @@ h1, .facebookArea , .logFb, .logText {
 	font-size:1.4em;
 }
 
+#loginRewardBox .logFb .logFb-text{
+	font-size:1em;
+}
+
+#loginRewardBox .logText{
+	font-size:0.5em;
+}
+
 #gallery .logFb .logFb-text{
 	font-size:1.2em;
 }
 
-/* #loginExtendedBox .logFB, #loginExtendedBox .login,  #loginRewardedBox .logFB, #loginRewardedBox .login,{
-   height:50px;
-}
- */
-
- .logFB, .login, #loginRewardBox .logFb, #loginExtendedBox #loginRewardBox .login {
-   height:50px;
+.logFb, .login, #loginRewardBox .logFb, #loginExtendedBox #loginRewardBox .login {
+   height:35px;
 }
  
 #loginExtendedBox .login{
 	font-size:1.4em;
 	margin-top: 2%;
-	  height:50px;
+	  height:35px;
 }
 
 #loginRewardBox .loginHg{
@@ -94,11 +97,11 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 .checkboxArea  , #result-gallery .checkboxArea{
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 label[for="checkbox1"], label[for="checkbox2"], label[for="checkbox3"], label[for="checkbox4"]{
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
 
 input[type=checkbox] {
@@ -141,8 +144,8 @@ h2 {
     font-size: 0.3em;
 }
 
-.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay{
-	top:7%;
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay{
+	top:16%;
 }
 
 .message .continue h2 {
@@ -242,8 +245,12 @@ section {
     width: 7%;
 }
 
+#gallery .logFb, #download-music{
+	height:35px;
+}
+
 #gallery h2{
-	margin:11% 0 2%;
+	margin:10% 0 2%;
 }
 
 #result-gallery h2{
@@ -282,7 +289,11 @@ section {
     width: 45%;
     /* margin:0 auto; */
 	left:26%;
-    height: 13%;
+    height: 15%;
     position: absolute;
     bottom: 2.7%;
+}
+
+#login .musix {
+	height:13.5%;
 }
