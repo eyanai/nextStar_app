@@ -179,3 +179,7 @@ function checkRulesChecked(){
     }
 
 }
+
+function showFlash(){
+    $(".register-red-flash").show();
+}
