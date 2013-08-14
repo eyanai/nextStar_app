@@ -887,6 +887,7 @@ left: 19px;
     bottom: 25%;
     background-size: 100% 100%;
     height: 18%;
+    z-index: 50;
 }
 
 .slideGo {
@@ -912,8 +913,23 @@ left: 19px;
     position: relative;
     /*overflow: hidden;*/
 }
-
-.slideGo:before {
+.blueArrow {
+	position: absolute;
+	right: 1%;
+	top: 22%;
+	-webkit-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+	width: 35%;
+}
+.redArrow{
+	position: absolute;
+	left: -10%;
+	top: 20%;
+	-webkit-transform: rotateZ(-90deg);
+	transform: rotateZ(-90deg);
+	width: 35%;
+}
+/*.slideGo:before {
     content: "";
     position: absolute;
     width: 33%;
@@ -952,7 +968,7 @@ left: 19px;
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-}
+}*/
 
 .slideStay h1 {
     position: absolute;
@@ -969,7 +985,7 @@ left: 19px;
     height: 20%;
     background-repeat: no-repeat;
     position: absolute;
-    right: -30%;
+    left: 80%;
     bottom: 25%;
     background-size: 100% 100%;
     height: 18%;
@@ -1000,27 +1016,31 @@ left: 19px;
 }
 
 .love {
-    background-image: url(../images/votes/slide_pick_heart.png),url(../images/votes/slide_round_pick.png);
+    background-image:url(../images/votes/slide_round_pick.png);
     position: absolute;
-    width: 42%;
+    width: 52%;
     height: 100%;
-    top: 3%;
+    top: 13%;
     background-repeat: no-repeat;
     background-position: center;
-    left: -75%;
-    background-size: 45%,100%;
+    left: 56%;
+    background-size: 100%;
+    opacity: 0;
+    z-index: 3;
 }
 
 .hate {
-    background-image: url(../images/votes/slide_pick_x.png),url(../images/votes/slide_round_pick.png);
+    background-image: url(../images/votes/slide_round_red.png);
     position: absolute;
-    width: 42%;
+    width: 55%;
     height: 100%;
-    top: 2%;
+    top: 15%;
     background-repeat: no-repeat;
     background-position: center;
-    right: -45%;
-    background-size: 25%,100%;
+    left: -35%;
+    background-size:100%;
+     opacity: 0; 
+    z-index: 1;
 }
 
 .hate2 {
@@ -1112,6 +1132,8 @@ left: 19px;
 
 .contestant1 .slideDownbattle {
     background-image: url(../images/votes/slide_pick_right.png);
+
+
     width: 49%;
     background-repeat: no-repeat;
     position: absolute;
@@ -1325,6 +1347,7 @@ left: 19px;
     margin-right: 20%;
     overflow: hidden;
     white-space: nowrap;
+
     text-overflow: ellipsis;
 }
 
@@ -1723,3 +1746,6 @@ left: 19px;
 #registerBattle {
     display: none;
 }*/
+
+
+
