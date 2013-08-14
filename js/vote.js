@@ -54,8 +54,8 @@ function setVotePage(data) {
         }
     }
     else { //if not registered
-        setOpenRegisterPage(data);
-        Navi.goto("notRegister");        
+        setOpenRegisterPage(data,"vote");
+        //Navi.goto("notRegister");        
     }
 
     //init numOfVotesThatVoted
@@ -110,8 +110,8 @@ function setVoteClosePage(data) {
     }
 
     else { //if not registered
-        setOpenRegisterPage(data);
-        Navi.goto("notRegister");        
+        setOpenRegisterPage(data,"vote");
+       // Navi.goto("notRegister");        
     }
 }
 

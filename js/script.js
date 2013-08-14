@@ -23,6 +23,7 @@ $(document).ready(function () {
 //general parameters
 var generalParameters = {
     isRegistered: false, //if register to vote
+    wasRegisterPage:false,
     voteIdA: null,
     voteKeyA: null,
     voteIdB: null,
@@ -153,12 +154,6 @@ function getFielsdByVote(voteData) {
 
 var gifInterval;
 function initWaitAnimation() {
-
-    var pos = $(".contIcons").css("background-position-x");
-    pos = pos.substring(0, pos.length - 2);
-    pos = pos * 1 + 63.75 * 1;
-    $(".contIcons").css("background-position-x", pos + "px");
-
     var pos;
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");

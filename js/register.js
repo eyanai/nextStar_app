@@ -2,10 +2,10 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 
 
 //set register page
-function setOpenRegisterPage(data) {
+function setOpenRegisterPage(data,from) {
     generalParameters.isRegistered = false;
     //take the value from dictionary
-    toggleTopMenu(registerDic);
+   
     $(".slide").css("left", "5.5%");
     $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
@@ -58,7 +58,15 @@ function setOpenRegisterPage(data) {
         Navi.goto("registerSingle");
     }
 
-
+    //if(!generalParameters.wasRegisterPage||generalParameters.wasRegisterPage&&generalParameters.isRegistered){
+    if (from == "vote") {
+        Navi.goto("notRegister");
+    }
+    else{
+         toggleTopMenu(registerDic);
+    }
+    //}
+    //generalParameters.wasRegisterPage = true;
 
 }
 
