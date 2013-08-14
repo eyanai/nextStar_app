@@ -7,6 +7,8 @@ var myLocation = domain+"/index.html";//domain
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
+//localStorage.setItem('fbStorage', "");
+
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
 //if the user checked ruled in previous time -hide it   
@@ -16,7 +18,7 @@ function attachEventsFacebook() {
     }   
  $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", startLongPolling);
-    $(".login").on("click", loginWithoutFacebook);
+    $("#loginExtendedBox").on("click",".login", loginWithoutFacebook);
     $("#rulesCB").on("click",rulesCBClick);
     $("#tvImgCB").on("click",tvImgCBClick);
 }
@@ -41,8 +43,8 @@ else if (searchQuery.length > 0) {
 function loginFb() {
    // if rules not checked - alert
     if(!generalParameters.ruledChecked){
-        alert("עליך לאשר תקנון");
         $("#notConfirmed").fadeIn();
+        $("#rulesCB").addClass("required");
     }
     else{
             window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
@@ -66,8 +68,8 @@ function loginCheck() {
 function loginWithoutFacebook(){
    
     if(!generalParameters.ruledChecked){
-        alert("עליך לאשר תקנון");
         $("#notConfirmed").fadeIn();
+        $("#rulesCB").addClass("required");
     }
     else{
         //if the rules checked - go to login 2 
@@ -183,8 +185,8 @@ function saveDataOnServer(str) {
 }
 //start LongPolling
 function startLongPolling(str) {
-    alert("in fb");
-    //longPolling();
+    //alert("in fb");
+    longPolling();
 }
 
 
@@ -199,7 +201,9 @@ function rulesCBClick(){
         localStorage.setItem('rulesStorage', true);
     }
     else{
-      $("#rulesCB").removeAttr("selected")  
+        $("#rulesCB").removeAttr("selected");
+        localStorage.setItem('rulesStorage', false);
+        generalParameters.ruledChecked = false;
     }
     
 }
