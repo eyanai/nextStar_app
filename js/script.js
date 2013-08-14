@@ -165,6 +165,10 @@ function initWaitAnimation() {
     }, 300);    
 }
 
+function stopWaitAnimation(){
+    clearInterval(gifInterval);
+}
+
 function initMoveEvents() {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var slider = $("#result-gallery")[0];
