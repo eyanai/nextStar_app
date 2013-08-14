@@ -595,6 +595,12 @@
         <!---gallery  section-->
         <footer id="banner"> <img src="images/banner/banner1.jpg" alt="alt"> </footer>
         <!---banner section-->
+        <!--<div class="audio-wrap">
+            <audio id="audio-alert">
+                <source>
+            </audio>
+        </div>-->
+        
         <!------------------------------------ internal scripts  ------------------------------------------>
         <script src="js/navigation.js"></script>
         <script src="js/pages.js"></script>
@@ -605,35 +611,7 @@
         <script src="js/sounds.js"></script>
         <script>
             $(document).ready(function (e) {
-            
-                //$(".slide.btn.drag").draggable({
-                //    stack: ".drag",
-                //    axis: "x",
-                //    containment: ".slidein",
-                //    drag: function (event, ui) {
-                //        //console.log(ui);
-                //    },
-                //    stop: function (event, ui) {
-            
-            
-                //        if (ui.helper.css("left").substring(0, ui.helper.css("left").length - 2) >=
-                //        ($(".slidein").css("width").substring(0, $(".slidein").css("width").length - 2)) / 2) {
-                //            $(ui.helper).css("left", "74%");
-                //            $(".slider-text").text("");
-                //            alert("chosen");
-                //            $(ui.helper).draggable("destroy");
-                //        }
-                //        else {
-                //            $(ui.helper).css("left", "5.5%");
-                //        }
-                //    }
-            
-            
-            
-                //});
-            
-            
-            
+   
                 $('.nextPage').on('click', this, function () {
                     goto = $(this).data('goto');
                     Navi.goto(goto);
@@ -651,7 +629,6 @@
                             $('.slideRight').addClass('singleBad');
                             $('.slideLeft').addClass('hideL');
                             $('.single .hate').addClass('hateShow');
-                            //replaceHeadline();
                             break;
                         case 'singleGood':
                             $('.slideLeft').addClass('singleGood');
@@ -693,9 +670,7 @@
                             });
                             break;
                         default:
-            
                     }
-            
                 });
             });
         </script>

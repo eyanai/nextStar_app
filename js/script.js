@@ -15,7 +15,7 @@ $(document).ready(function () {
     longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
-
+    //initSounds();
 });
 
 
