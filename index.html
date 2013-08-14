@@ -25,7 +25,7 @@
 
         <!------------------------------------ internal scripts  ------------------------------------------>
         <script src="js/script.js"></script>        
-        <!--<script src="js/facebook.js"></script>  //check gallery -->
+        <script src="js/facebook.js"></script>  
     </head>
     <body onorientationchange="updateOrientation();">
         <div id="horizonal-screen">
@@ -39,10 +39,8 @@
             <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
         </nav>
         <section id="login">
-            
-            <div class="nextPage" data-goto="messageWithImage"></div>
+            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
             <figure class="logo login"></figure>
-
             <div id="loginExtendedBox">
 				<div id="slide-container">
                     <hgroup class="loginHg">
@@ -88,7 +86,7 @@
         </section>
         <!---log in section-->
         <section id="message">
-            <div class="nextPage" data-goto="registerBattle"></div>
+            <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -121,8 +119,9 @@
         </section>
         <!--- message section-->
         <section id="register">
-            <div class="nextPage" data-goto="voteBattle"></div>
+            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
             <div class="animat" data-animat="register"></div>
+            <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
             <!--<nav class="topMenu">
                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
             </nav>-->
@@ -155,6 +154,7 @@
                 <div class="slidein">
                     <div class="register-red-flash"></div>
                     <div class="deny-register"></div>
+                   <!-- <div class="register-stars"><img src="images/register/kohav_bg_slider_iphone.png"/></div>-->
                     <div class="slide btn drag"></div>
                     <div class="slider-text">כניסה להצבעה</div>
                 </div>
@@ -214,9 +214,9 @@
         </section>
         <!---register  section-->
         <section id="vote">
-             <div class="nextPage" data-goto="resultsBattle"></div>
+            <div class="nextPage" data-goto="resultsSingle"></div>
             <div id="voteSingle" class="single">
-                <div class="nextPage" data-goto="resultSingle"></div>
+                <div class="nextPage" data-goto="resultsSingle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                 <!--<nav class="topMenu">
@@ -225,13 +225,13 @@
                 <div id="vote-img-single" class="contestant">
                     <div class="slideLeft">
                         <div class="slideStay btn">
-                            <h1>נשאר</h1>
+                            <!-- <h1>נשאר</h1> -->
                             <div class="love"></div>
                         </div>
                     </div>
                     <div class="slideRight">
                         <div class="slideGo btn">
-                            <h1>הולך</h1>
+                            <!-- <h1>הולך</h1> -->
                             <div class="hate"></div>
                         </div>
                     </div>
@@ -251,7 +251,7 @@
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
-				<div class="nextPage" data-goto="gallery"></div>
+				<div class="nextPage" data-goto="resultsSingle"></div>
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
                 <div class="animat animatG" data-animat="battel2Good"></div>
@@ -264,7 +264,7 @@
                 <div id="vote-img-first" class="contestant1">
                     <div class="slideTopbattle">
                         <div class="slideGo btn"></div>
-                        <h1>הולך</h1>
+                        <!-- <h1>הולך</h1> -->
                         <div class="hate"></div>
                     </div>
                     <div class="slideDownbattle">
@@ -278,12 +278,12 @@
                 <div id="vote-img-second" class="contestant2">
                     <div class="slideTopbattle">
                         <div class="slideGo btn"></div>
-                        <h1>הולך</h1>
+                        <!-- <h1>הולך</h1> -->
                         <div class="hate2"></div>
                     </div>
                     <div class="slideDownbattle">
                         <div class="slideStay btn"></div>
-                        <h1>נשאר</h1>
+                        <!-- <h1>נשאר</h1> -->
                         <div class="love"></div>
                     </div>
                     <!--after user slide this div need to show--->
@@ -314,7 +314,7 @@
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="resultsBattle"></div>
+                <div class="nextPage" data-goto="resultsSingle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                 <!--<nav class="topMenu">
@@ -467,14 +467,14 @@
         </section>
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
-            <div class="nextPage" data-goto="messageWithNoImage"></div>
+            <div class="nextPage" data-goto="messageNoImage"></div>
             <!--<nav class="topMenu">
                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
             </nav>-->
             <h2 id="gallery-title">אתם החלטתם - התוצאות המלאות של הערב</h2>
             <div id="result-gallery">
                 <ul>
-                                            <!--<li class="gallery-vote-single">
+                                            <li class="gallery-vote-single">
                                                                                                                         <img src="images/gallery/gallery-contestant.jpg" alt="alt">
                                                                                                                         <span class="reMesseg">
                                                                                                                             <span class="divide"></span>
@@ -531,7 +531,7 @@
                                                                                                                             <span class="percentage">57%</span>
                                                                                                                         </span>
                                                                                                                     </li>
-                                                                                                                    -->
+                                                                                                                    
                 </ul>
             </div>
                             <!--<div class="swiper-container">
@@ -593,8 +593,8 @@
                 <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
                 <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
                 <div class="checkboxArea">
-                    <input type="checkbox" id="checkbox3" name="cc" />
-                    <label for="checkbox3"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+                    <input type="checkbox" id="checkbox4" name="cc" />
+                    <label for="checkbox4"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
                 </div>
             </div>
             <div class="musix"></div>
