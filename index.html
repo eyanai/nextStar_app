@@ -89,7 +89,7 @@
 <!---log in section-->
    
         <section id="message">
-            <div class="nextPage" data-goto="registerSingle"></div>
+            <div class="nextPage" data-goto="registerBattle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -124,6 +124,7 @@
         <section id="register">
             <div class="nextPage" data-goto="resultsSingle"></div>
             <div class="nextPage" data-goto="voteSingle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>
             <div class="animat" data-animat="register"></div>
             <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
                             <!--<nav class="topMenu">
@@ -270,29 +271,37 @@
                                         <h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
                                     </nav>-->
                 <div id="vote-img-first" class="contestant1">
-                    <div class="slideTopbattle">
-                        <div class="slideGo btn"></div>
+                    <div class="slideTopbattle con1">
+                        <div class="slideGo btn">
+							<img src="images/votes/slide_pick_x.png" class="redArrow cont1">
+						</div>
                         <!-- <h1>הולך</h1> -->
-                        <div class="hate"></div>
+                        <div class="hate1"></div>
                     </div>
-                    <div class="slideDownbattle">
-                        <div class="slideStay btn"></div>
-                        <!-- <h1>נשאר</h1> -->
-                        <div class="love"></div>
+                    <div class="slideDownbattle con1">
+                        <div class="slideStay btn">
+							<img src="images/votes/slide_pick_heart.png" class="blueArrow cont1">
+						</div>
+                      <!--  <h1>נשאר</h1>-->
+                        <div class="love1"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
                 </div>
                 <div id="vote-img-second" class="contestant2">
-                    <div class="slideTopbattle">
-                        <div class="slideGo btn"></div>
+                    <div class="slideTopbattle con2">
+                        <div class="slideGo btn">
+							<img src="images/votes/slide_pick_x.png" class="redArrow cont2">
+						</div>
                         <!-- <h1>הולך</h1> -->
                         <div class="hate2"></div>
                     </div>
-                    <div class="slideDownbattle">
-                        <div class="slideStay btn"></div>
+                    <div class="slideDownbattle con2">
+                        <div class="slideStay btn">
+							<img src="images/votes/slide_pick_heart.png" class="blueArrow cont2">
+						</div>
                         <!-- <h1>נשאר</h1> -->
-                        <div class="love"></div>
+                        <div class="love2"></div>
                     </div>
                     <!--after user slide this div need to show---> 
 <!------------------------------------------->
@@ -331,19 +340,6 @@
 		<!--<nav class="topMenu">
                     <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                 </nav>-->
-
-
-
-
-
-
-
-
-
-
-
-
-=======
                 <div class="reMesseg cf">
                     <div class="continue">
                         <h2>ממתין לסגירת ההצבעה</h2>
@@ -373,8 +369,7 @@
                                     <!--<nav class="topMenu">
                                         <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                                     </nav>-->
->>>>>>> .theirs
-<<<<<<< .mine
+
 		<div id="vote-close-img-single" class="contestant"> </div>
 		<!--after user slide this div need to show---> 
 		<!------------------------------------------->
