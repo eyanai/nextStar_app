@@ -45,9 +45,7 @@ function setResultPage(data) {
 
         //wait text
         $("#results-wait-text-battle").text(data.textWaitContinue);
-        //percent
-        $("#results-perc-first").text(data.votes[0].finalPercent + "%");
-        $("#results-perc-second").text(data.votes[1].finalPercent + "%");
+       
         //percent gragh
         //if the percent bigger then  - add the red class
         $("#results .battle .resultScalaR .result").addClass("resultRed");
@@ -62,8 +60,32 @@ function setResultPage(data) {
 
         $("#results .battle .resultScalaL .result").addClass("resultBlue");
         $("#results .battle .resultScalaL .scala").addClass("scalaBlue");
+         //percent
+        $("#results-perc-first").text(data.votes[0].finalPercent + "%");
+        $("#results-perc-second").text(data.votes[1].finalPercent + "%");
+      //  setPercentNumberAnimation("single", data.votes[0].finalPercent,data.votes[1].finalPercent);
         //if the percent bigger then  - add the red class $("#results-perc-second").addClass("red")
         //navigate
         Navi.goto("resultsBattle");
     }
 }
+
+//function setPercentNumberAnimation(type,perc1,perc2){
+//    if( type=="single"){
+//        returnNumber();
+//    }
+//}
+//function returnNumber(){
+//     var milise = 1 * 1000 / perc1;
+//        perce1Temp = 0;
+//        setTimeout(function() {
+//            perce1Temp ++;
+//            if(perce1Temp == perc1){
+//                
+//            }
+//            else{
+//                returnNumber(perce1Temp);
+//            }
+//            
+//        }, milise);  
+//}
