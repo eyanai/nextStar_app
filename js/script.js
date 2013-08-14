@@ -15,7 +15,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling(); //check gallery
+    longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
 
@@ -149,6 +149,7 @@ function getFielsdByVote(voteData) {
     var results = new Array(firstName, firstSong, firstUrl);
     return results;
 }
+
 var gifInterval;
 function initWaitAnimation() {
     var pos;
@@ -179,9 +180,9 @@ function initMoveEvents() {
 }
 
 function toggleTopMenu(headerText) {
-    $(".topMenu").slideUp(1000,function(){$(".topMenu h1").text(headerText);});
+    $(".topMenu").slideUp(700,function(){$(".topMenu h1").text(headerText);});
     
-    $(".topMenu").slideDown(1000);
+    $(".topMenu").slideDown(700);
 
 }
 
