@@ -933,6 +933,46 @@ left: 19px;
 	transform: rotateZ(-90deg);
 	width: 35%;
 }
+.blueArrow.cont1{
+	position: absolute;
+	right: 1%;
+	top: -5%;
+	-webkit-transform: rotateZ(-90deg);
+	transform: rotateZ(-90deg);
+	width: 30%;
+}
+
+
+
+
+
+
+
+
+.redArrow.cont1{
+	position: absolute;
+	left: 0;
+	top: -5%;
+	-webkit-transform: rotateZ(-90deg);
+	transform: rotateZ(-90deg);
+	width: 30%;
+}
+.blueArrow.cont2{
+	position: absolute;
+	right: 0;
+	top: -5%;
+	-webkit-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+	width: 30%;
+}
+.redArrow.cont2{
+	position: absolute;
+	right: 0;
+	top: -5%;
+	-webkit-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+	width: 30%;
+}
 /*.slideGo:before {
     content: "";
     position: absolute;
@@ -1032,6 +1072,34 @@ left: 19px;
     opacity: 0;
     z-index: 3;
 }
+.love1 {
+    background-image:url(../images/votes/slide_round_pick.png);
+    position: absolute;
+    width: 34%;
+    height: 100%;
+    top: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 1%;
+    background-size: 100%;
+    opacity: 1;
+    z-index: 3;
+}
+
+.love2 {
+    background-image:url(../images/votes/slide_round_pick.png);
+    position: absolute;
+    width: 34%;
+    height: 100%;
+    top: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 1%;
+    background-size: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
 
 .hate {
     background-image: url(../images/votes/slide_round_red.png);
@@ -1046,17 +1114,28 @@ left: 19px;
      opacity: 0; 
     z-index: 1;
 }
-
-.hate2 {
-    background-image: url(../images/votes/slide_pick_x.png),url(../images/votes/slide_round_pick.png);
+.hate1 {
+    background-image: url(../images/votes/slide_round_red.png);
     position: absolute;
-    width: 42%;
+    width: 34%;
     height: 100%;
-    top: 4%;
+    top: 0;
     background-repeat: no-repeat;
     background-position: center;
-    left: -45%;
-    background-size: 25%,100%;
+    left: 2%;
+    background-size: 100%;
+}
+.hate2 {
+    background-image: url(../images/votes/slide_round_red.png);
+    position: absolute;
+    width: 34%;
+    height: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 2%;
+    background-size: 100%;
+    opacity: 0;
 }
 /*================================================VOTE BATTLE SECTION=====================================*/
 .contestant1 {
@@ -1130,7 +1209,7 @@ left: 19px;
     width: 49%;
     background-repeat: no-repeat;
     position: absolute;
-    right: -30%;
+    left: 80%;
     background-size: 100%;
 }
 
@@ -1141,7 +1220,7 @@ left: 19px;
     width: 49%;
     background-repeat: no-repeat;
     position: absolute;
-    right: -30%;
+    left: 80%;
     background-size: 100%;
 }
 
