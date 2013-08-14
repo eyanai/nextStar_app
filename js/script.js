@@ -4,7 +4,7 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    //attachEventsFacebook(); //check gallery
+    attachEventsFacebook(); //check gallery
 
     attachEventsVote();
     attachEventsGallery();
@@ -12,7 +12,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling(); //check gallery
+    longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
 
@@ -150,6 +150,7 @@ function getFielsdByVote(voteData) {
     var results = new Array(firstName, firstSong, firstUrl);
     return results;
 }
+
 var gifInterval;
 function initWaitAnimation() {
 
@@ -186,9 +187,9 @@ function initMoveEvents() {
 }
 
 function toggleTopMenu(headerText) {
-    $(".topMenu").slideUp(1000, function () { $(".topMenu h1").text(headerText); });
-
-    $(".topMenu").slideDown(1000);
+    $(".topMenu").slideUp(700,function(){$(".topMenu h1").text(headerText);});
+    
+    $(".topMenu").slideDown(700);
 
 }
 
