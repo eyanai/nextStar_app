@@ -6,16 +6,13 @@ $(document).ready(function () {
     checkRulesChecked();
     attachEventsFacebook(); //check gallery
 
-     attachEventsFacebook();
-    //attachEventsRegister();
-
- 
     attachEventsVote();
+    attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling(); //check gallery
+    longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
 
@@ -26,6 +23,7 @@ $(document).ready(function () {
 //general parameters
 var generalParameters = {
     isRegistered: false, //if register to vote
+    wasRegisterPage:false,
     voteIdA: null,
     voteKeyA: null,
     voteIdB: null,
@@ -41,8 +39,12 @@ var generalParameters = {
     ruledChecked: false
 }
 
+
+var domain = "http://makosrv1.egoline.co.il/application"; //app domain
+
 var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
+
 
 //dictionary values
 var registerDic = "";
@@ -149,6 +151,7 @@ function getFielsdByVote(voteData) {
     var results = new Array(firstName, firstSong, firstUrl);
     return results;
 }
+
 var gifInterval;
 function initWaitAnimation() {
     var pos;
@@ -179,19 +182,22 @@ function initMoveEvents() {
 }
 
 function toggleTopMenu(headerText) {
-    $(".topMenu").slideUp(1000,function(){$(".topMenu h1").text(headerText);});
+    $(".topMenu").slideUp(700,function(){$(".topMenu h1").text(headerText);});
     
-    $(".topMenu").slideDown(1000);
+    $(".topMenu").slideDown(700);
 
 }
 
-function checkRulesChecked(){
-    if(localStorage.getItem('rulesStorage')){
+function checkRulesChecked() {
+    if (localStorage.getItem('rulesStorage')) {
         generalParameters.ruledChecked = true;
     }
-
 }
+
+
+
 
 function showFlash(){
     $(".register-red-flash").show();
+    alertRegisterGoingClose();
 }

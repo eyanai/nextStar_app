@@ -26,6 +26,7 @@ function setResultPage(data) {
               var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
             $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 500);
         });
+        voteBarsSound.playclip();
        
        
         //navigate

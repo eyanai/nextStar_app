@@ -3,10 +3,6 @@ var appID = "543975688973172";//fb app id
 var myLocation = domain+"/index.html";//domain
 
 ////////////////////////////////////////////////////// fb init
-FB._https = (window.location.protocol == "https:");
-FB._https = true; //check fb init
-FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-//////////////////////////////////////////////////////// fb init
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
@@ -211,3 +207,4 @@ function rulesCBClick(){
 function tvImgCBClick(){
     
 }
+
