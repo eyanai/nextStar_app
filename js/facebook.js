@@ -195,13 +195,13 @@ function startLongPolling(str) {
 
 //ruled check box clicked
 function rulesCBClick(){
-    if($("#rulesCB").attr("selected") != "selected"){
+    if($("#rulesCB").attr("checked") != "checked"){
         generalParameters.ruledChecked = true;
-        $("#rulesCB").attr("selected", "selected");
+        $("#rulesCB").attr("checked", "checked");
         localStorage.setItem('rulesStorage', true);
     }
     else{
-        $("#rulesCB").removeAttr("selected");
+        $("#rulesCB").removeAttr("checked");
         localStorage.setItem('rulesStorage', false);
         generalParameters.ruledChecked = false;
     }

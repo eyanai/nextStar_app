@@ -96,7 +96,7 @@ var Navi = {
             case 'WaitVotePage':
                 $(".slidein").hide();
                 $(".topMenu").show();
-                $("#register .reMesseg .continue").show();
+                $("#register .reMesseg .continue").slideDown(500);
                 $(".live").hide();
                 break;
             case 'voteSingle':
@@ -142,7 +142,7 @@ var Navi = {
                 $("#results-img-single").show();
                 $("#results .single").show();
                 $("#results .battle").hide();
-                $("#results .single .reMesseg .continue").show();
+                $("#results .single .reMesseg .continue").slideDown(500);
                 $(".live").hide();
                 break;
             case 'resultsBattle':
@@ -151,7 +151,7 @@ var Navi = {
                 $('#results').show();
                 $("#results .single").hide();
                 $("#results .battle").show();
-                $("#results .battle .reMesseg .continue").show();
+                $("#results .battle .reMesseg .continue").slideDown();
                 $(".live").hide();
                 break;
             case 'gallery':
