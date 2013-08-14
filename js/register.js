@@ -12,6 +12,7 @@ function setOpenRegisterPage(data) {
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
+    generalParameters.isSingle = null;//init isSingle
     //if this is a double vote
     if (!isSingle(data)) {
         var url1 = "";
