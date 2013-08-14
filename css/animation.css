@@ -87,8 +87,8 @@
 .songBad {
 	-webkit-animation: sinB 0.6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-delay:.6s;
-	animation-delay:.6s;
+	-webkit-animation-delay:.4s;
+	animation-delay:.4s;
 	animation: sinB 0.6s;
 	animation-fill-mode: forwards;
 }
@@ -218,9 +218,14 @@
 60%{
 	left:80%;	
 	}
-70%{
+	
+65%{
 	left:80%;
 	background-image: url(../images/votes/slide_pick_right.png);
+	}
+	70%{
+	left: 80%;
+	 background-image:none;
 	}
  100% {
  	left: 80%;
@@ -234,10 +239,14 @@
 60%{
 	left:80%;	
 	}
-70%{
+65%{
 	left:80%;
 	background-image: url(../images/votes/slide_pick_right.png);
 	}
+70%{
+	left: 80%;
+	 background-image:none;
+	}	
  100% {
  	left: 80%;
 	 background-image:none;
@@ -280,6 +289,7 @@
  opacity:0;
 }
 15%{
+
 	opacity:1;
 	left:50%;
 }
