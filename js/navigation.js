@@ -11,7 +11,6 @@ var Navi = {
 		stopWaitAnimation()
         switch(el) {
             case 'login1':
-                //
                 $(".topMenu").hide();
                 break;
             case 'login2':
