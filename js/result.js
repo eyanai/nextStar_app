@@ -69,23 +69,27 @@ function setResultPage(data) {
         Navi.goto("resultsBattle");
     }
 }
+var  perce1Temp = 0;
+var milise = 0;
+function setPercentNumberAnimation(type,perc1,perc2){
+    if( type=="single"){
+        perce1Temp = 0;
+        milise = 1 * 1000 / perc1;
+        returnNumber();
+    }
+}
 
-//function setPercentNumberAnimation(type,perc1,perc2){
-//    if( type=="single"){
-//        returnNumber();
-//    }
-//}
-//function returnNumber(){
-//     var milise = 1 * 1000 / perc1;
-//        perce1Temp = 0;
-//        setTimeout(function() {
-//            perce1Temp ++;
-//            if(perce1Temp == perc1){
-//                
-//            }
-//            else{
-//                returnNumber(perce1Temp);
-//            }
-//            
-//        }, milise);  
-//}
+function returnNumber(){
+     
+    setTimeout(function() {
+        perce1Temp ++;
+        if(perce1Temp == perc1){
+                
+        }
+        else{
+             $("#results-perc-first").text(perce1Temp+"%")
+            returnNumber();
+        }
+            
+    }, milise);  
+}
