@@ -63,7 +63,7 @@ var Navi = {
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
@@ -76,7 +76,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }

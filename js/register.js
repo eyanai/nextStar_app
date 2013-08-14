@@ -63,6 +63,7 @@ function setOpenRegisterPage(data,from) {
         Navi.goto("notRegister");
     }
     else{
+        $(".topMenu").show();
          toggleTopMenu(registerDic);
     }
     //}

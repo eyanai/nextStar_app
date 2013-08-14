@@ -1498,7 +1498,11 @@ left: 19px;
 
 .gallery-vote-single img {
     width: 100%;
-    
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 #result-gallery .reMesseg {
@@ -1524,7 +1528,11 @@ left: 19px;
 
 .gallery-vote-battle img {
     width: 100%;
-    
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 .gallery-vote-battle .vote-1 {
