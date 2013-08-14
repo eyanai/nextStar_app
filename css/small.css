@@ -267,7 +267,7 @@ section {
 }
 
 #result-gallery{
-	height:37%;
+	height:39%;
 	font-size:1.2em;
 }
 
@@ -277,7 +277,7 @@ section {
 }
 
 #result-gallery .reMesseg{
-	height:38%;
+	/*height:38%;*/
 }
 
 #results .battle .reMesseg .continue{
