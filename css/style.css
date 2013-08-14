@@ -208,7 +208,7 @@ header {
 
 .header.logo {
     display: block;
-    width: 40%;
+    width: 56%;
     height: 100%;
     margin: 0 auto;
     background-image: url(../images/header/hdr_logo_kohav.png);
@@ -592,7 +592,7 @@ input[type="checkbox"]:checked + label span {
 
 
 #message .continue h2 {
-    margin-top: 3%;
+    /* margin-top: 3%; */
     font-size: 1.6em;
 }
 
@@ -603,13 +603,14 @@ input[type="checkbox"]:checked + label span {
 
 .contIcons {
     background-image: url(../images/masseg/dots_gif.png);
-    background-position-x: -476px;
-    width: 13%;
-    height: 100%;
+    /* background-position-x: -364px; */
+	/* background-size:767%; */
+    /* width: 10%; */
+    /* height: 100%; */
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    top: 72%;
+    /* top: 72%; */
 }
 
 .musix {
@@ -1235,14 +1236,14 @@ input[type="checkbox"]:checked + label span {
 }
 
 .contestant1 .slideStay {
-    right: 56%;
+    right: 57%;
     top: 7%;
     background-position: left center;
 }
 
 
 .contestant1 .slideGo {
-    right: 9%;
+    right: 10%;
     background-position: left center;
 }
 
@@ -1634,7 +1635,8 @@ margin-bottom: auto;
 
 #result-gallery .percentage {
     font-size: 1.5em;
-    margin-right: 35%;
+    display:block;
+	margin:0 auto;
     float: none;
 }
 
@@ -1773,6 +1775,7 @@ margin-bottom: auto;
     position: relative;
     width: 83%;
     height: 9.3%;
+	vertical-align:middle;
 }
 
 

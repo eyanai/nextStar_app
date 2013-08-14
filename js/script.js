@@ -154,15 +154,16 @@ function getFielsdByVote(voteData) {
 
 var gifInterval;
 function initWaitAnimation() {
+
     var pos;
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
-        if (pos == 0) {
-            pos = -476;
+        if (pos > -41) {
+            pos = -326;
         }
         else{
-            pos = pos * 1 + 68 * 1;
+            pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
     }, 300);    

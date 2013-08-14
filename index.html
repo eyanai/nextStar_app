@@ -122,7 +122,9 @@
         </section>
         <!--- message section-->
         <section id="register">
+            <div class="nextPage" data-goto="resultsSingle"></div>
             <div class="nextPage" data-goto="voteSingle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>
             <div class="animat" data-animat="register"></div>
             <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
                             <!--<nav class="topMenu">
@@ -219,9 +221,9 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="nextPage" data-goto="resultsSingle"></div>
+            <div class="nextPage" data-goto="resultsBattle"></div>
             <div id="voteSingle" class="single">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                                     <!--<nav class="topMenu">
@@ -333,7 +335,7 @@
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                                     <!--<nav class="topMenu">
