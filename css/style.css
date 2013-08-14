@@ -810,7 +810,7 @@ left: 19px;
 }
 
 #results .single .reMesseg.results.cf {
-    bottom: 7%;
+    /*bottom: 7%;*/
     height: 15%;
 }
 
@@ -819,7 +819,7 @@ left: 19px;
     width: 100%;
     border-top: solid 1px #545454;
     float: left;
-    bottom: 100%;
+    bottom: 102%;
     background-color: rgba(0,0,0,.65);
     height: 49%;
     z-index: 5;
@@ -827,6 +827,10 @@ left: 19px;
 
 #register .reMesseg .continue {
     height: 53%;
+}
+
+#results .reMesseg .continue {
+    bottom: 101%;
 }
 
 .reMesseg .continue h2 {
@@ -1521,7 +1525,11 @@ left: 19px;
 
 .gallery-vote-single img {
     width: 100%;
-    
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 #result-gallery .reMesseg {
@@ -1547,7 +1555,11 @@ left: 19px;
 
 .gallery-vote-battle img {
     width: 100%;
-    
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 .gallery-vote-battle .vote-1 {

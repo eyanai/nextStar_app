@@ -29,7 +29,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
-                initWaitAnimation()
+                //initWaitAnimation()
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -63,7 +63,7 @@ var Navi = {
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
@@ -76,7 +76,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
@@ -88,7 +88,8 @@ var Navi = {
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
-                $(".topMenu").show();
+                //$(".topMenu").hide();
+                $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
                 break;
