@@ -4,12 +4,8 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    attachEventsFacebook(); //check gallery
+    //attachEventsFacebook(); //check gallery
 
-     attachEventsFacebook();
-    //attachEventsRegister();
-
- 
     attachEventsVote();
     //init the touchmive events
     initMoveEvents();
@@ -41,8 +37,12 @@ var generalParameters = {
     ruledChecked: false
 }
 
+
+var domain = "http://makosrv1.egoline.co.il/application"; //app domain
+
 var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
+
 
 //dictionary values
 var registerDic = "";
@@ -151,6 +151,12 @@ function getFielsdByVote(voteData) {
 }
 var gifInterval;
 function initWaitAnimation() {
+
+    var pos = $(".contIcons").css("background-position-x");
+    pos = pos.substring(0, pos.length - 2);
+    pos = pos * 1 + 63.75 * 1;
+    $(".contIcons").css("background-position-x", pos + "px");
+
     var pos;
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");
@@ -189,9 +195,12 @@ function checkRulesChecked() {
     if (localStorage.getItem('rulesStorage')) {
         generalParameters.ruledChecked = true;
     }
-
 }
+
+
+
 
 function showFlash(){
     $(".register-red-flash").show();
+    alertRegisterGoingClose();
 }

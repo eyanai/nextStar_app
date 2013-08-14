@@ -2,14 +2,14 @@
 
 var Navi = {
 
-    hidelogin: function() {
+    hidelogin: function () {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function(el) {
-		stopWaitAnimation()
-        switch(el) {
+    goto: function (el) {
+        stopWaitAnimation()
+        switch (el) {
             case 'login1':
                 //
                 $(".topMenu").hide();
@@ -29,7 +29,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
-				initWaitAnimation()
+                initWaitAnimation()
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -52,42 +52,45 @@ var Navi = {
             case 'messageWithImage':
                 Navi.hidelogin();
                 $('header').show();
-                 $(".topMenu").hide();
+                $(".topMenu").hide();
                 $(".continue").hide();
                 $('#message').show();
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
                 break;
-              
+
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
                 $(".topMenu").show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
+                stopAlertRegisterGoingClose();
                 $(".live").hide();
                 break;
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
                 $(".topMenu").show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
                 $("#registerSingle").hide();
                 $("#registerBattle").show();
                 $(".register-red-flash").hide();
+                stopAlertRegisterGoingClose();
                 $(".live").hide();
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
                 $(".topMenu").show();
                 $(".register-red-flash").hide();
+                stopAlertRegisterGoingClose();
                 break;
             case 'WaitVotePage':
                 $(".slidein").hide();

@@ -1,59 +1,5 @@
 var voteIdA, voteKeyA, voteIdB, voteKeyB;
-//var isRegistered;
 
-//function attachEventsRegister() {
-//    //$(".slidein .btn").on("click", setRegister); //click on slider
-//}
-
-//drag to register in single vote
-$("#registerSingle .slide.btn.drag").draggable({
-    stack: ".drag",
-    axis: "x",
-    containment: "#registerSingle .slidein",
-    drag: function (event, ui) {
-    },
-    stop: function (event, ui) {
-        var lengthNoPx = ui.helper.css("left").length - 2;
-        var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
-
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx/2)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
-            sliderCheckInSound.playclip();
-            $(ui.helper).css("left", "5.5%");
-            $(".deny-register").show();
-            //$(".slider-text").text("");
-            setRegister();
-        }
-        else {
-            $(ui.helper).css("left", "5.5%");
-        }
-    }
-});
-
-//drag to register in battle vote
-$("#registerBattle .slide.btn.drag").draggable({
-    stack: ".drag",
-    axis: "x",
-    containment: "#registerBattle .slidein",
-    drag: function (event, ui) {
-    },
-    stop: function (event, ui) {
-        var lengthNoPx = ui.helper.css("left").length - 2;
-        var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
-
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
-             sliderCheckInSound.playclip();
-            $(ui.helper).css("left", "5.5%");
-            $(".deny-register").show();
-            //$(".slider-text").text("");
-            setRegister();
-        }
-        else {
-            $(ui.helper).css("left", "5.5%");
-        }
-    }
-});
 
 //set register page
 function setOpenRegisterPage(data) {
@@ -61,7 +7,7 @@ function setOpenRegisterPage(data) {
     //take the value from dictionary
     toggleTopMenu(registerDic);
     $(".slide").css("left", "5.5%");
-     $(".slider-text").text("כניסה להצבעה");
+    $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
@@ -116,10 +62,79 @@ function setOpenRegisterPage(data) {
 
 }
 
+//drag to register in single vote
+$("#registerSingle .slide.btn.drag").draggable({
+    stack: ".drag",
+    axis: "x",
+    containment: "#registerSingle .slidein",
+    drag: function (event, ui) {
+    },
+    stop: function (event, ui) {
+        var lengthNoPx = ui.helper.css("left").length - 2;
+
+        if ($(".slidein").width().toString().length < 3) {
+            var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
+        }
+        else {
+            var widthInPx = $(".slidein").width();
+        }
+
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+            $(ui.helper).css("left", "74%");
+            sliderCheckInSound.playclip();
+            $(ui.helper).css("left", "5.5%");
+            $(".deny-register").show();
+            //$(".slider-text").text("");
+            setRegister();
+        }
+        else {
+            $(ui.helper).css("left", "5.5%");
+        }
+    }
+});
+
+//drag to register in battle vote
+$("#registerBattle .slide.btn.drag").draggable({
+    stack: ".drag",
+    axis: "x",
+    containment: "#registerBattle .slidein",
+    drag: function (event, ui) {
+    },
+    stop: function (event, ui) {
+        var lengthNoPx = ui.helper.css("left").length - 2;
+        var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
+
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+            $(ui.helper).css("left", "74%");
+            sliderCheckInSound.playclip();
+            $(ui.helper).css("left", "5.5%");
+            $(".deny-register").show();
+            //$(".slider-text").text("");
+            setRegister();
+        }
+        else {
+            $(ui.helper).css("left", "5.5%");
+        }
+    }
+});
+
+
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
     $(".register-red-flash").show();
+    alertRegisterGoingClose();
+}
+
+var alertInterval
+function alertRegisterGoingClose() {
+    alertInterval = setInterval(function () {
+        alertSound.playclip();
+    }, 1000);
+}
+
+function stopAlertRegisterGoingClose() {
+    clearInterval(alertInterval);
 }
 
 //send to server the register
