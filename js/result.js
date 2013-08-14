@@ -76,11 +76,11 @@ function setPercentNumberAnimation(type,perc1,perc2){
     if( type=="single"){
         perce1Temp = 0;
         milise = 1 * 1000 / perc1;
-        returnNumber();
+        returnNumber(perc1);
     }
 }
 
-function returnNumber(){
+function returnNumber(perc1){
      
     setTimeout(function() {
         perce1Temp ++;
