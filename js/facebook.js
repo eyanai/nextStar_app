@@ -3,10 +3,6 @@ var appID = "543975688973172";//fb app id
 var myLocation = domain+"/index.html";//domain
 
 ////////////////////////////////////////////////////// fb init
-FB._https = (window.location.protocol == "https:");
-FB._https = true; //check fb init
-FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-//////////////////////////////////////////////////////// fb init
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
@@ -45,8 +41,8 @@ else if (searchQuery.length > 0) {
 function loginFb() {
    // if rules not checked - alert
     if(!generalParameters.ruledChecked){
+        alert("עליך לאשר תקנון");
         $("#notConfirmed").fadeIn();
-         $("#rulesCB").addClass("required");
     }
     else{
             window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
@@ -70,8 +66,8 @@ function loginCheck() {
 function loginWithoutFacebook(){
    
     if(!generalParameters.ruledChecked){
+        alert("עליך לאשר תקנון");
         $("#notConfirmed").fadeIn();
-         $("#rulesCB").addClass("required");
     }
     else{
         //if the rules checked - go to login 2 
@@ -201,7 +197,6 @@ function rulesCBClick(){
         generalParameters.ruledChecked = true;
         $("#rulesCB").attr("selected", "selected");
         localStorage.setItem('rulesStorage', true);
-       
     }
     else{
       $("#rulesCB").removeAttr("selected")  
@@ -212,3 +207,4 @@ function rulesCBClick(){
 function tvImgCBClick(){
     
 }
+
