@@ -2,16 +2,17 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 
 
 //set register page
-function setOpenRegisterPage(data) {
+function setOpenRegisterPage(data,from) {
     generalParameters.isRegistered = false;
     //take the value from dictionary
-    toggleTopMenu(registerDic);
+   
     $(".slide").css("left", "5.5%");
     $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
+    generalParameters.isSingle = null;//init isSingle
     //if this is a double vote
     if (!isSingle(data)) {
         var url1 = "";
@@ -58,7 +59,16 @@ function setOpenRegisterPage(data) {
         Navi.goto("registerSingle");
     }
 
-
+    //if(!generalParameters.wasRegisterPage||generalParameters.wasRegisterPage&&generalParameters.isRegistered){
+    if (from == "vote") {
+        Navi.goto("notRegister");
+    }
+    else{
+        $(".topMenu").show();
+         toggleTopMenu(registerDic);
+    }
+    //}
+    //generalParameters.wasRegisterPage = true;
 
 }
 

@@ -24,7 +24,8 @@ function setVotePage(data) {
             //set the dic title
             //$("#vote-dic-single").text(pushVoteDic);
             toggleTopMenu(pushVoteDic);
-            $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')")
+            $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')");
+            $("#vote-img-single").show();
             $("#vote-comp-name-single").text(firstFields[0]);
             $("#vote-song-name-single").text(firstFields[1]);
 
@@ -54,8 +55,8 @@ function setVotePage(data) {
         }
     }
     else { //if not registered
-        setOpenRegisterPage(data);
-        Navi.goto("notRegister");        
+        setOpenRegisterPage(data,"vote");
+        //Navi.goto("notRegister");        
     }
 
     //init numOfVotesThatVoted
@@ -110,8 +111,8 @@ function setVoteClosePage(data) {
     }
 
     else { //if not registered
-        setOpenRegisterPage(data);
-        Navi.goto("notRegister");        
+        setOpenRegisterPage(data,"vote");
+       // Navi.goto("notRegister");        
     }
 }
 
@@ -125,11 +126,13 @@ function setVote(e) {
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 1;
+            votePositiveSound.playclip();
             break;
         case 'slideRight':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 0;
+            voteNegativeSound.playclip();
             break;
         case 'slideTopbattle':
             if (e.delegateTarget.className == "contestant1") {
@@ -140,7 +143,8 @@ function setVote(e) {
                 voteId = generalParameters.voteIdB;
                 voteKey = generalParameters.voteKeyB;
             }
-            vote = 1;
+            vote = 0;
+            voteNegativeSound.playclip();
             break;
         case 'slideDownbattle':
             if (e.delegateTarget.className == "contestant1") {
@@ -151,7 +155,8 @@ function setVote(e) {
                 voteId = generalParameters.voteIdB;
                 voteKey = generalParameters.voteKeyB;
             }
-            vote = 0;
+            vote = 1;
+            votePositiveSound.playclip();
             break;
     }
 
@@ -168,13 +173,13 @@ function setVote(e) {
                 //if is single and one was checked - show it
             if(generalParameters.isSingle){
                 if(numOfVotesThatChecked ==1){
-                    setWaitResultsPage();
+                    setWaitVoteClosePage();
                 }
             }
             else{
                  //if is battle and two was checked - show it
                 if(numOfVotesThatChecked ==2){
-                    setWaitResultsPage();
+                    setWaitVoteClosePage();
                 }
             }
             
@@ -187,28 +192,11 @@ function setVote(e) {
 }
 
 //set wait result page
-function setWaitResultsPage() {
-    if (vote==0){voteNegativeSound.playclip();}
-    else{votePositiveSound.playclip();}
-    $("#vote-img-single").hide();
-
-    //$("#vote .reMesseg .continue").slideUp(500, function () { $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); }); });
-    //$("#vote .topMenu").slideUp(500,function(){$("#vote .topMenu h1").text(afterVoteDic);});
-    //$("#vote .topMenu").slideDown(500);
-
-    toggleTopMenu(afterVoteDic);
-}
-
-
-function replaceHeadline() {
-    $('.slideLeft').addClass('singleGood');
-    $('.slideRight').addClass('hideR');
-    $('.single .love').addClass('loveShow');
-
-    /*$("#vote .reMesseg .continue").slideDown(500);
-    $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); });
-    $("#vote .topMenu").slideDown(500);*/
+function setWaitVoteClosePage() {
+    //if (vote==0){voteNegativeSound.playclip();}
+    //else{votePositiveSound.playclip();}
     toggleTopMenu(afterVoteDic);
 
+    $("#vote .continue").slideDown(500);
 
 }

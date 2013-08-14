@@ -15,7 +15,7 @@ $(document).ready(function () {
     //longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
-
+    //initSounds();
 });
 
 
@@ -23,6 +23,7 @@ $(document).ready(function () {
 //general parameters
 var generalParameters = {
     isRegistered: false, //if register to vote
+    wasRegisterPage:false,
     voteIdA: null,
     voteKeyA: null,
     voteIdB: null,

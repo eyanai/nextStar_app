@@ -63,7 +63,7 @@ var Navi = {
             case 'registerSingle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
@@ -76,7 +76,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                $(".topMenu").show();
+                
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
@@ -88,7 +88,8 @@ var Navi = {
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
-                $(".topMenu").show();
+                //$(".topMenu").hide();
+                $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
                 break;
@@ -96,7 +97,7 @@ var Navi = {
 				initWaitAnimation();
                 $(".slidein").hide();
                 $(".topMenu").show();
-                $("#register .reMesseg .continue").show();
+                $("#register .reMesseg .continue").slideDown(500);
                 $(".live").hide();
                 break;
             case 'voteSingle':
@@ -141,7 +142,7 @@ var Navi = {
                 $("#results-img-single").show();
                 $("#results .single").show();
                 $("#results .battle").hide();
-                $("#results .single .reMesseg .continue").show();
+                $("#results .single .reMesseg .continue").slideDown(500);
                 $(".live").hide();
                 break;
             case 'resultsBattle':
@@ -151,7 +152,7 @@ var Navi = {
                 $('#results').show();
                 $("#results .single").hide();
                 $("#results .battle").show();
-                $("#results .battle .reMesseg .continue").show();
+                $("#results .battle .reMesseg .continue").slideDown();
                 $(".live").hide();
                 break;
             case 'gallery':
