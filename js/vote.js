@@ -1,5 +1,7 @@
 var numOfVotesThatChecked =0;
 
+var voteId, voteKey, vote;
+
 //listener
 function attachEventsVote() {
     $("#vote-img-single,#vote-img-first,#vote-img-second").on("click", ".slideLeft, .slideRight, .slideTopbattle, .slideDownbattle", setVote); //click slider
@@ -115,7 +117,7 @@ function setVoteClosePage(data) {
 
 //send to server the vote
 function setVote(e) {
-    var voteId, voteKey, vote;
+    voteId=null; voteKey=null; vote=null;
     console.log(e.currentTarget.className);
     console.log(e.delegateTarget.className);
     switch (e.currentTarget.className) {
@@ -186,7 +188,10 @@ function setVote(e) {
 
 //set wait result page
 function setWaitResultsPage() {
+    if (vote==0){voteNegativeSound.playclip();}
+    else{votePositiveSound.playclip();}
     $("#vote-img-single").hide();
+
     //$("#vote .reMesseg .continue").slideUp(500, function () { $("#vote .topMenu").slideUp(500, function () { $("#vote .topMenu h1").text(afterVoteDic); }); });
     //$("#vote .topMenu").slideUp(500,function(){$("#vote .topMenu h1").text(afterVoteDic);});
     //$("#vote .topMenu").slideDown(500);

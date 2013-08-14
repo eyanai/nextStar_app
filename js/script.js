@@ -7,6 +7,7 @@ $(document).ready(function () {
     //attachEventsFacebook(); //check gallery
 
     attachEventsVote();
+    attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
