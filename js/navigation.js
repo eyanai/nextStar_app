@@ -18,7 +18,7 @@ var Navi = {
                 $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
-				//initWaitAnimation();
+				initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -29,7 +29,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
-                initWaitAnimation()
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -93,6 +93,7 @@ var Navi = {
                 stopAlertRegisterGoingClose();
                 break;
             case 'WaitVotePage':
+				initWaitAnimation();
                 $(".slidein").hide();
                 $(".topMenu").show();
                 $("#register .reMesseg .continue").show();
@@ -133,7 +134,8 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'resultsSingle':
-                Navi.hidelogin();
+                initWaitAnimation();
+				Navi.hidelogin();
                 $('#results').show();
                 $(".topMenu").show();
                 $("#results-img-single").show();
@@ -143,6 +145,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'resultsBattle':
+				initWaitAnimation();
                 Navi.hidelogin();
                 $(".topMenu").show();
                 $('#results').show();

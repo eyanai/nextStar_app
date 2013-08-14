@@ -96,7 +96,7 @@ h2 .songName1,h2 .songName2{
 }
 
 #message .continue h2 {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .continue h2 {
@@ -296,8 +296,17 @@ section {
 	margin:2% auto;
 }
 
-.contIcons{
-	height:90%;
+#message .contIcons{
+	 height:60%;  
+	 width:15%;   
+}
+
+ .contIcons{
+	 height:70%;  
+	 width:13.3%;   
+	 background-image: url(../images/masseg/dots_gif_iphone.png);
+	 background-repeat: no-repeat;
+	 background-position-x: -326px;
 }
 
 .musix {

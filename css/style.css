@@ -592,7 +592,7 @@ input[type="checkbox"]:checked + label span {
 
 
 #message .continue h2 {
-    margin-top: 3%;
+    /* margin-top: 3%; */
     font-size: 1.6em;
 }
 
@@ -603,14 +603,14 @@ input[type="checkbox"]:checked + label span {
 
 .contIcons {
     background-image: url(../images/masseg/dots_gif.png);
-    
-    background-position-x: -476px;
-     width: 13%;
-    height: 100%;
+    /* background-position-x: -364px; */
+	/* background-size:767%; */
+    /* width: 10%; */
+    /* height: 100%; */
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    top: 72%;
+    /* top: 72%; */
 }
 
 .musix {
