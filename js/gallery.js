@@ -11,10 +11,11 @@ function gallerySize() {
     var numSingleVotes = $(".gallery-vote-single").width(singleVoteWidth).size(); //set single width and counter single votes
     var battleVoteWidth = $("#result-gallery").width() * 50 / 100; //calculate battle width
     var numBattleVotes = $(".gallery-vote-battle").width(battleVoteWidth).size(); //set battle width and counter battle votes
+    //var margin = $("#result-gallery ul li").css("margin-right").slice(0,-2)+0.5;
     var margin = 4;
-    var resultGalleryList = numSingleVotes * (singleVoteWidth + margin) + numBattleVotes * (battleVoteWidth + margin); //calculate ul width
+    var resultGalleryList = numSingleVotes * (singleVoteWidth + 1*margin) + numBattleVotes * (battleVoteWidth + 1*margin); //calculate ul width
     $("#result-gallery ul").width(resultGalleryList); //set ul width
-    $("#result-gallery").scrollLeft(resultGalleryList - resultGallery + margin); //go to the right in ul
+    $("#result-gallery").scrollLeft(resultGalleryList - resultGallery + 1*margin); //go to the right in ul
 }
 
 //set gallery page
