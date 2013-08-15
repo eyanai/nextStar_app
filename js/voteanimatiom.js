@@ -4,10 +4,10 @@
 $('.slideLeft').draggable({
     stack: ".drag",
     axis: "x",
-    // containment:[conleftstart,0,0,0],
+    containment:'#slideSingleLeft',
     drag: function (event, ui) {
         console.log($('.slideLeft').css('left'));
-        if ($('.slideLeft').position().left > -5) {
+        if ($('.slideLeft').position().left > 300) {
             $('.blueArrow').addClass('rotupl');
             $('.slideLeft').addClass('songGood');
             $('.slideRight').addClass('hideR');
@@ -17,20 +17,22 @@ $('.slideLeft').draggable({
         };
 
     },
-    stop: setVote
+    stop:function (event, ui) {
+		if($('.slideLeft').position().left < 300){
+			$('.slideLeft').animate({left:'20%'},800,function(){});	
+		}
+	}
 
 });
-//$('.slideGo').width()
+////////////////////////////////////////////////
 
 $('.slideRight').draggable({ 
 	stack: ".drag",
     axis: "x",
-   // containment:[conleftstart,0,0,0],
+    containment:'#slideSingleRight',
     drag: function (event, ui) {
-		sR=$(document).width();
-		sR2=$('.slideRight').width();
-		singelR=sR-sR2;
-    	if($('.slideRight').position().left<singelR){
+		
+    	if($('.slideRight').position().left<10){
 			$('.redArrow').addClass('rotupr');
 			$('.slideRight').addClass('songBad');
 			$('.slideLeft').addClass('hideL');
@@ -39,7 +41,11 @@ $('.slideRight').draggable({
 			return false;
 		};
 	},
-    stop: setVote
+     stop:function (event, ui) {
+		if($('.slideRight').position().left > 10){
+			$('.slideRight').animate({left:'30%'},800,function(){});	
+		}
+	}
 });
 
 ///////////////////////////////////////////////////////battel////////////////////////////////////////
