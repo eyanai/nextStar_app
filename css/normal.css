@@ -5,15 +5,16 @@
 /*=====================================================generel==============================================*/
 
 
-html , body {
-	/* background-image: url(../images/general-background.jpg); */
-	font-size:15x;
+html, body {
+    /* background-image: url(../images/general-background.jpg); */
+    font-size: 15px;
     background-repeat: repeat;
     overflow: scroll;
 }
 
-section{
-	height: 82.9%;
+section {
+    height: 82.8%;
+    top: 11.4%;
 }
 
 .musix {
@@ -23,32 +24,32 @@ section{
 /*===========================================horizonal-screen=================================*/
 
 #horizonal-screen {
-	/* background-image: url(../images/horizonal-background.jpg); */
+    /* background-image: url(../images/horizonal-background.jpg); */
 }
 
 #flip-me {
-	/* background-image: url(../images/flip.png); */
+    /* background-image: url(../images/flip.png); */
 }
 
 /*================================================HEADER=====================================*/
 
 header {
     height: 11.3%;
-
 }
 
 .header.logo {
-	background-image: url(../images/normal/header/kohav_logo_big.png);
+    background-image: url(../images/normal/header/kohav_logo_big.png);
+    width: 30%;
+    height: 99%;
+    background-size: 100% 119%;
 }
 
-.live{
-	background-image: url(../images/normal/header/kohav_live_sequence1.png);
+.live {
+    /*background-image: url(../images/normal/header/kohav_live_sequence1.png);*/
 }
 
 .topMenu {
-	
-	height: 5%;	
-	
+    height: 5%;
     top: 11.5%;
 }
 
@@ -58,57 +59,56 @@ header {
 
 /*===============================================MASSEGE SECTION==============================================*/
 
-.detail{
-	line-height:1.2em;
+.detail {
+    line-height: 1.2em;
 }
 
-#message-no-img-text{
-	line-height:1.3em;
-	width:80%;
-	font-size:2em;
+#message-no-img-text {
+    line-height: 1.3em;
+    width: 80%;
+    font-size: 2em;
 }
 
-#message .continue h2{
-	font-size: 1em;
+#message .continue h2 {
+    font-size: 1em;
 }
 
-.continue{
-	margin-top:4%;
-	
+.continue {
+    margin-top: 4%;
 }
 
 .continue h2 {
     font-size: 0.7em;
 }
 
-.messageNoImage .message{
-	height:35%;
+.messageNoImage .message {
+    height: 35%;
 }
 
-#message .contIcons{
-	 height:23%;  
-	 width:13%;   
-	 border:1px solid yellow;
+#message .contIcons {
+    height: 23%;
+    width: 13%;
+    border: 1px solid yellow;
 }
 
-.contIcons{
-	 border:1px solid red;
-	 height:70%;  
-	 width:13%;   
-	 background-image: url(../images/masseg/dots_gif_iphone.png);
-	 background-repeat: no-repeat;
-	 background-position-x: -326px;
-	 vertical-align:middle;
+.contIcons {
+    border: 1px solid red;
+    height: 70%;
+    width: 13%;
+    background-image: url(../images/masseg/dots_gif_iphone.png);
+    background-repeat: no-repeat;
+    background-position-x: -326px;
+    vertical-align: middle;
 }
 
 
 /*=============================================REGISTER SECTION===========================================*/
 
-.songName, .songName1, .songName2{
+.songName, .songName1, .songName2 {
     font-size: 0.8em;
 }
 
-.songName h1{
+.songName h1 {
     margin-top: 1%;
 }
 /*================================================VOTE SECTION=====================================*/
@@ -125,6 +125,14 @@ header {
     background-image: url(../images/votes/slide_pick_right.png);
 }
 
+#results #results-perc-first{
+    top: 140%;
+}
+
+#results #results-perc-second{
+    top: 140%;
+}
+
 /*================================================VOTE BATTLE SECTION=====================================*/
 
 
@@ -136,7 +144,7 @@ header {
 /*=======================================================RESULT BATTLE=========================================*/
 
 .resultScalaR {
-/*     background-color: rgba(0,0,0,0.5);
+    /*     background-color: rgba(0,0,0,0.5);
     width: 5%;
     height: 62.5%;
     border-radius: 6px;
@@ -147,11 +155,23 @@ header {
 }
 
 .resultRed {
-    background-image: url(../images/normal/results/kohav_red_off.png);
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 93% 100%;
 }
 
 .scalaRed {
-    background-image: url(../images/normal/results/kohav_red_on.png);
+    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-size: 93% 99%;
+}
+
+.resultRed {
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 93% 100%;
+}
+
+.scalaBlue {
+    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-size: 93% 99%;
 }
 
 
@@ -161,8 +181,8 @@ header {
 
 
 
-#banner{
-	height:5.8%;
+#banner {
+    height: 5.8%;
 }
 
 

@@ -226,9 +226,8 @@ header {
     position: absolute;
     left: 2.5%;
     top: 65%;
-    -webkit-animation: liveShow 1s infinite; /* Safari and Chrome */
+    -webkit-animation: liveShow 2s infinite; /* Safari and Chrome */
     animation: liveShow 1s infinite;
-    display: none;
 }
 /*================================================LOG IN SECTION=====================================*/
 
