@@ -84,7 +84,7 @@ html, body {
     font-family: Arial, Verdana, sans-serif;
     direction: rtl;
     color: #fff;
-    font-size: 1em;
+    font-size: 16px;
     /*background-size: 100% 100%;*/
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -1477,7 +1477,7 @@ input[type="checkbox"]:checked + label span {
     left: 1%;
     color: #ff0060;
 }
-/*================================================GALLARY SECTION================================================*/
+/*================================================GALLERY SECTION================================================*/
 #gallery h2 {
     text-align: center;
     margin-top: 6%;
