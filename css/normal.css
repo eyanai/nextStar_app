@@ -7,7 +7,7 @@
 
 html , body {
 	/* background-image: url(../images/general-background.jpg); */
-	font-size:15x;
+	font-size:15px;
     background-repeat: repeat;
     overflow: scroll;
 }
@@ -58,22 +58,33 @@ line-height: 2em;
 /*===============================================MASSEGE SECTION==============================================*/
 
 .detail{
-	line-height:1.2em;
+	line-height:1.3em;
+	width:83%;
 }
 
 #message-no-img-text{
-	line-height:1.3em;
+	line-height:1.4em;
 	width:80%;
 	font-size:2em;
 }
 
-#message .continue h2{
-	font-size: 1em;
+.continue{
+	width:100%;
 }
 
-.continue{
+
+#message .continue h2{
+	font-size:1.8em;
+	margin-bottom:10px;
+	margin-left:0;
+}
+
+#message .continue h2{
+	margin-right:-21%;
+}
+
+.continue, .reMesseg .continue{
 	margin-top:4%;
-	
 }
 
 .continue h2 {
@@ -84,19 +95,22 @@ line-height: 2em;
 	height:35%;
 }
 
+.message, .team{
+	width:86%;
+}
+
 #message .contIcons{
 	 height:23%;  
-	 width:13%;   
+	 width:5.5%;   
 	 border:1px solid yellow;
 }
 
 .contIcons{
 	 border:1px solid red;
-	 height:70%;  
-	 width:13%;   
+	 height:35%;  
+	 width:6.5%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
 	 background-repeat: no-repeat;
-	 background-position-x: -326px;
 	 vertical-align:middle;
 }
 
@@ -216,3 +230,6 @@ margin-top: 1%;
 .swiper-slide {
   width: 390px;
  } */
+ 
+ 
+ 

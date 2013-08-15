@@ -613,6 +613,7 @@ input[type="checkbox"]:checked + label span {
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
+	background-position-x: -285.25px;
     /* top: 72%; */
 }
 
