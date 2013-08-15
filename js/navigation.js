@@ -62,6 +62,8 @@ var Navi = {
 
             case 'registerSingle':
                 Navi.hidelogin();
+                //toggleTopMenu(registerDic);
+                $(".topMenu").show();//check reut need to remove
                 $('#register').show();
                 
                 if ($(".slidein ").hasClass('grey')) {

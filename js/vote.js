@@ -1,11 +1,5 @@
 var numOfVotesThatChecked = 0;
-
 var voteId, voteKey, vote;
-
-//listener
-function attachEventsVote() {
-    // $("#vote-img-single,#vote-img-first,#vote-img-second").on("click", ".slideLeft, .slideRight, .slideTopbattle, .slideDownbattle", setVote); //click slider
-}
 
 //set vote page
 function setVotePage(data) {
@@ -15,22 +9,10 @@ function setVotePage(data) {
 
     if (generalParameters.isRegistered) {
         $("#vote .reMesseg .continue").hide();
+        resetAnimations()//reset animations
 
         if (isSingle(data)) {
-            //reset animations
-            $('.blueArrow').removeClass('rotupl');
-            $('.slideLeft').removeClass('songGood');
-            $('.slideRight').removeClass('hideR');
-            $('.love').removeClass('loveShow');
-            $('.redArrow').removeClass('rotupr');
-            $('.slideRight').removeClass('songBad');
-            $('.slideLeft').removeClass('hideL');
-            $('.hate').removeClass('hateShow');
-            $('.redArrow').show();
-            $('.blueArrow').show(); 
-            $('.slideLeft').css('left','-30%');
-            $('.slideRight').css('left','80%');
-
+           
             //wait text
             var waitText = data.textWaitVote;
             $(".vote-wait-text").text(waitText);
@@ -146,27 +128,27 @@ function setVote(e) {
             vote = 0;
             voteNegativeSound.playclip();
             break;
-        case 'slideTopbattle':
-            if (e.delegateTarget.className == "contestant1") {
-                voteId = generalParameters.voteIdA;
-                voteKey = generalParameters.voteKeyA;
-            }
-            else if (e.delegateTarget.className == "contestant2") {
-                voteId = generalParameters.voteIdB;
-                voteKey = generalParameters.voteKeyB;
-            }
+        case 'slideTopbattleCon1':
+            voteId = generalParameters.voteIdA;
+            voteKey = generalParameters.voteKeyA;
             vote = 0;
             voteNegativeSound.playclip();
             break;
-        case 'slideDownbattle':
-            if (e.delegateTarget.className == "contestant1") {
-                voteId = generalParameters.voteIdA;
-                voteKey = generalParameters.voteKeyA;
-            }
-            else if (e.delegateTarget.className == "contestant2") {
-                voteId = generalParameters.voteIdB;
-                voteKey = generalParameters.voteKeyB;
-            }
+        case 'slideTopbattleCon2':
+            voteId = generalParameters.voteIdB;
+            voteKey = generalParameters.voteKeyB;
+            vote = 0;
+            voteNegativeSound.playclip();
+            break;
+        case 'slideDownbattleCon1':
+            voteId = generalParameters.voteIdA;
+            voteKey = generalParameters.voteKeyA;
+            vote = 1;
+            votePositiveSound.playclip();
+            break;
+        case 'slideDownbattleCon2':
+            voteId = generalParameters.voteIdB;
+            voteKey = generalParameters.voteKeyB;
             vote = 1;
             votePositiveSound.playclip();
             break;
@@ -211,4 +193,47 @@ function setWaitVoteClosePage() {
 
     $("#vote .continue").slideDown(500);
 
+}
+
+function resetAnimations() {
+    $('.blueArrow').removeClass('rotupl');
+    $('.slideLeft').removeClass('songGood');
+    $('.slideRight').removeClass('hideR');
+    $('.love').removeClass('loveShow');
+    $('.redArrow').removeClass('rotupr');
+    $('.slideRight').removeClass('songBad');
+    $('.slideLeft').removeClass('hideL');
+    $('.hate').removeClass('hateShow');
+    $('.redArrow').show();
+    $('.blueArrow').show();
+    $('.slideLeft').css('left', '-30%');
+    $('.slideRight').css('left', '80%');
+
+    $('.redArrow.cont1').removeClass('rotuprcon1');
+    $('.slideTopbattle.con1').removeClass('battel1vot');
+    $('.slideDownbattle.con1').removeClass('hideRcon');
+    $('.slideTopbattle.con2,.slideDownbattle.con2').removeClass('hideLcon');
+    $('.redArrow.cont1').show();
+    $('.hate1').removeClass('showIconCon1');
+
+    $('.blueArrow.cont1').removeClass('rotuprcon1');
+    $('.slideDownbattle.con1').removeClass('battel1vot');
+    $('.slideTopbattle.con1').removeClass('hideRcon');
+    $('.slideTopbattle.con2,.slideDownbattle.con2').removeClass('hideLcon');
+    $('.blueArrow.cont1').show();
+    $('.love1').removeClass('showIconCon1');
+
+    $('.redArrow.cont2').removeClass('rotuplcon2');
+    $('.slideTopbattle.con2').removeClass('battel2vot');
+    $('.slideDownbattle.con2').removeClass('hideLcon');
+    $('.slideTopbattle.con1,.slideDownbattle.con1').removeClass('hideRcon');
+    $('.redArrow.cont2').show();
+    $('.hate2').removeClass('showIconCon2');
+
+    $('.blueArrow.cont2').removeClass('rotuplcon2');
+    $('.slideDownbattle.con2').removeClass('battel2vot');
+    $('.slideTopbattle.con2').removeClass('hideLcon');
+    $('.slideTopbattle.con1,.slideDownbattle.con1').removeClass('hideRcon');
+    $('.blueArrow.cont2').show();
+    $('.love2').removeClass('showIconCon2');
 }

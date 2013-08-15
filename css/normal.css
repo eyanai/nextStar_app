@@ -7,7 +7,7 @@
 
 html , body {
 	/* background-image: url(../images/general-background.jpg); */
-	font-size:9px;
+	font-size:15px;
     background-repeat: repeat;
     overflow: scroll;
 }
@@ -34,6 +34,7 @@ section{
 
 header {
     height: 11.3%;
+
 }
 
 .header.logo {
@@ -44,6 +45,11 @@ header {
 	background-image: url(../images/normal/header/kohav_live_sequence1.png);
 }
 
+.topMenu {
+	height: 5%;
+top: 11.5%;
+line-height: 2em;
+}
 
 
 /*================================================LOG IN SECTION=====================================*/
@@ -51,12 +57,77 @@ header {
 
 /*===============================================MASSEGE SECTION==============================================*/
 
+.detail{
+	line-height:1.3em;
+	width:83%;
+}
+
+#message-no-img-text{
+	line-height:1.4em;
+	width:80%;
+	font-size:2em;
+}
+
+.continue{
+	width:100%;
+}
+
+
+#message .continue h2{
+	font-size:1.8em;
+	margin-bottom:10px;
+	margin-left:0;
+}
+
+#message .continue h2{
+	margin-right:-21%;
+}
+
+.continue, .reMesseg .continue{
+	margin-top:4%;
+}
+
+.continue h2 {
+    font-size:1.7em;
+}
+
+.messageNoImage .message{
+	height:35%;
+}
+
+.message, .team{
+	width:86%;
+}
+
+#message .contIcons{
+	 height:23%;  
+	 width:5.5%;   
+	 border:1px solid yellow;
+}
+
+.contIcons{
+	 border:1px solid red;
+	 height:35%;  
+	 width:6.5%;   
+	 background-image: url(../images/masseg/dots_gif_iphone.png);
+	 background-repeat: no-repeat;
+	 vertical-align:middle;
+}
 
 
 /*=============================================REGISTER SECTION===========================================*/
 
+.songName, .songName1, .songName2{
+    font-size: 0.8em;
+}
 
+.songName h1{
+    margin-top: 1%;
+}
 
+#registerBattle .slidein{
+    top: 61%;
+}
 /*================================================VOTE SECTION=====================================*/
 
 .slideLeft {
@@ -103,7 +174,9 @@ header {
 
 /*================================================GALLERY SECTION================================================*/
 
-
+#result-gallery ul li{
+    margin-right: 6px;
+}
 
 
 
@@ -157,3 +230,6 @@ margin-top: 1%;
 .swiper-slide {
   width: 390px;
  } */
+ 
+ 
+ 
