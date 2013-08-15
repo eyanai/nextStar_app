@@ -1,21 +1,24 @@
 // JavaScript Document
- 
 
-$('.slideLeft').draggable({ 
-	stack: ".drag",
+
+$('.slideLeft').draggable({
+    stack: ".drag",
     axis: "x",
-   // containment:[conleftstart,0,0,0],
+    // containment:[conleftstart,0,0,0],
     drag: function (event, ui) {
-		console.log($('.slideLeft').css('left'));
-    	if($('.slideLeft').position().left>-5){
-			$('.blueArrow').addClass('rotupl');
-			$('.slideLeft').addClass('songGood');
-			$('.slideRight').addClass('hideR');
-			setTimeout(function(){$('.blueArrow.rotupl').hide();},800);
-			$('.love').addClass('loveShow');
-			return false;
-		};
-	}
+        console.log($('.slideLeft').css('left'));
+        if ($('.slideLeft').position().left > -5) {
+            $('.blueArrow').addClass('rotupl');
+            $('.slideLeft').addClass('songGood');
+            $('.slideRight').addClass('hideR');
+            setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 800);
+            $('.love').addClass('loveShow');
+            return false;
+        };
+
+    },
+    stop: setVote
+
 });
 //$('.slideGo').width()
 
@@ -33,7 +36,8 @@ $('.slideRight').draggable({
 			$('.hate').addClass('hateShow');
 			return false;
 		};
-	}
+	},
+    stop: setVote
 });
 
 ///////////////////////////////////////////////////////battel////////////////////////////////////////
