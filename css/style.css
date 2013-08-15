@@ -730,7 +730,7 @@ input[type="checkbox"]:checked + label span {
     left: 3%;
     -webkit-animation: mymove 1s infinite;
 }
-}
+
 
 @-webkit-keyframes mymove {
     0% {
