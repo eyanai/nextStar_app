@@ -160,7 +160,7 @@ function initWaitAnimation() {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
         if (pos > -41) {
-            pos = -326;
+            pos = -285.25;
         }
         else{
             pos = pos * 1 + 40.75 * 1;
