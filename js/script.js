@@ -5,8 +5,6 @@ $(document).ready(function () {
     initDictionaryValues();
     checkRulesChecked();
     attachEventsFacebook(); //check gallery
-
-    attachEventsVote();
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
