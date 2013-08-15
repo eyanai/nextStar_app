@@ -299,9 +299,11 @@ section {
 #message .contIcons{
 	 height:60%;  
 	 width:15%;   
+	 border:1px solid yellow;
 }
 
  .contIcons{
+	 border:1px solid red;
 	 height:70%;  
 	 width:13%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
