@@ -5,9 +5,11 @@
 /*=====================================================generel==============================================*/
 
 
-body {
+html , body {
 	/* background-image: url(../images/general-background.jpg); */
 	font-size:9px;
+    background-repeat: repeat;
+    overflow: scroll;
 }
 
 section{
@@ -67,6 +69,7 @@ header {
 
 .contestant1 .slideTopbattle {
     background-image: url(../images/votes/slide_pick_right.png);
+}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
@@ -104,7 +107,7 @@ header {
 
 
 
-footer{
+#banner{
 	height:5.8%;
 }
 

@@ -124,6 +124,7 @@ var Navi = {
                 $("#voteClose .battle").hide();
                 $("#vote-close-wait-text-single").show();
                 $(".live").hide();
+                $("#voteClose .continue").show();
                 break;
             case 'voteCloseBattle':
                 Navi.hidelogin();
@@ -132,6 +133,7 @@ var Navi = {
                 $("#voteClose .single").hide();
                 $("#voteClose .battle").show();
                 $("#vote-close-wait-text-battle").show();
+                $("#voteClose .continue").show();
                 $(".live").hide();
                 break;
             case 'resultsSingle':
