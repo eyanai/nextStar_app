@@ -1,7 +1,7 @@
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.85em;
-	color:yellow; 
+	/* color:yellow;  */
 	margin:1% auto;
 }
 
@@ -17,7 +17,7 @@
 
 .facebookArea .login .logText{
 	display:block;
-	width:45%;
+	width:42%;
 	margin:0 auto;
 	top:25%;
 }
@@ -34,7 +34,11 @@ h1, .facebookArea , .logFb, .logText {
 	font-size: 0.8em;
 } 
 
-.songName1, .songName2{
+h1 .songName1,h1 .songName2{
+	font-size: 1em;
+} 
+
+h2 .songName1,h2 .songName2{
 	font-size: 1em;
 } 
 
@@ -92,7 +96,11 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #message .continue h2 {
-    font-size: 0.9em;
+    font-size: 1em;
+}
+
+.continue h2 {
+    font-size: 0.7em;
 }
 
 .topMenu {
@@ -139,7 +147,7 @@ h2 {
 }
 
 #vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
-    font-size: 0.75em;
+    font-size: 0.9em;
     vertical-align: middle;
     padding: 0.3% 0;
 }
@@ -164,7 +172,7 @@ h2 {
 
 .detail {
     font-size: 0.72em;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.08em; 
     margin-top: 3%;
 }
 
@@ -272,7 +280,7 @@ section {
 }
 
 #result-gallery .percentage{
-	margin-right:32%;
+	width:10%;
 	font-size:0.75em;
 }
 
@@ -288,8 +296,17 @@ section {
 	margin:2% auto;
 }
 
-.contIcons{
-	height:90%;
+#message .contIcons{
+	 height:60%;  
+	 width:15%;   
+}
+
+ .contIcons{
+	 height:70%;  
+	 width:13%;   
+	 background-image: url(../images/masseg/dots_gif_iphone.png);
+	 background-repeat: no-repeat;
+	 background-position-x: -326px;
 }
 
 .musix {
@@ -304,5 +321,5 @@ section {
 }
 
 #login .musix {
-	height:13.5%;
+	height:12.5%;
 }

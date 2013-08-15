@@ -11,7 +11,6 @@ var Navi = {
         stopWaitAnimation()
         switch (el) {
             case 'login1':
-                //
                 $(".topMenu").hide();
                 break;
             case 'login2':
@@ -19,6 +18,7 @@ var Navi = {
                 $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
+				initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -29,7 +29,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'messageWaitingWithImage':
-                //initWaitAnimation()
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -94,6 +94,7 @@ var Navi = {
                 stopAlertRegisterGoingClose();
                 break;
             case 'WaitVotePage':
+				initWaitAnimation();
                 $(".slidein").hide();
                 $(".topMenu").show();
                 $("#register .reMesseg .continue").slideDown(500);
@@ -123,6 +124,7 @@ var Navi = {
                 $("#voteClose .battle").hide();
                 $("#vote-close-wait-text-single").show();
                 $(".live").hide();
+                $("#voteClose .continue").show();
                 break;
             case 'voteCloseBattle':
                 Navi.hidelogin();
@@ -131,10 +133,12 @@ var Navi = {
                 $("#voteClose .single").hide();
                 $("#voteClose .battle").show();
                 $("#vote-close-wait-text-battle").show();
+                $("#voteClose .continue").show();
                 $(".live").hide();
                 break;
             case 'resultsSingle':
-                Navi.hidelogin();
+                initWaitAnimation();
+				Navi.hidelogin();
                 $('#results').show();
                 $(".topMenu").show();
                 $("#results-img-single").show();
@@ -144,6 +148,7 @@ var Navi = {
                 $(".live").hide();
                 break;
             case 'resultsBattle':
+				initWaitAnimation();
                 Navi.hidelogin();
                 $(".topMenu").show();
                 $('#results').show();

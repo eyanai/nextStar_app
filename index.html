@@ -89,7 +89,7 @@
 <!---log in section-->
    
         <section id="message">
-            <div class="nextPage" data-goto="registerSingle"></div>
+            <div class="nextPage" data-goto="registerBattle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -122,7 +122,9 @@
         </section>
         <!--- message section-->
         <section id="register">
+            <div class="nextPage" data-goto="resultsSingle"></div>
             <div class="nextPage" data-goto="voteSingle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>
             <div class="animat" data-animat="register"></div>
             <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
                             <!--<nav class="topMenu">
@@ -219,9 +221,9 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="nextPage" data-goto="resultsSingle"></div>
+            <div class="nextPage" data-goto="resultsBattle"></div>
             <div id="voteSingle" class="single">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                                     <!--<nav class="topMenu">
@@ -269,29 +271,37 @@
                                         <h1 id="vote-dic-battle">הצביעו עכשיו, נשאר או הולך?</h1>
                                     </nav>-->
                 <div id="vote-img-first" class="contestant1">
-                    <div class="slideTopbattle">
-                        <div class="slideGo btn"></div>
+                    <div class="slideTopbattle con1">
+                        <div class="slideGo btn">
+							<img src="images/votes/slide_pick_x.png" class="redArrow cont1">
+						</div>
                         <!-- <h1>הולך</h1> -->
-                        <div class="hate"></div>
+                        <div class="hate1"></div>
                     </div>
-                    <div class="slideDownbattle">
-                        <div class="slideStay btn"></div>
-                        <h1>נשאר</h1>
-                        <div class="love"></div>
+                    <div class="slideDownbattle con1">
+                        <div class="slideStay btn">
+							<img src="images/votes/slide_pick_heart.png" class="blueArrow cont1">
+						</div>
+                      <!--  <h1>נשאר</h1>-->
+                        <div class="love1"></div>
                     </div>
                     <!--after user slide this div need to show--->
                     <!------------------------------------------->
                 </div>
                 <div id="vote-img-second" class="contestant2">
-                    <div class="slideTopbattle">
-                        <div class="slideGo btn"></div>
+                    <div class="slideTopbattle con2">
+                        <div class="slideGo btn">
+							<img src="images/votes/slide_pick_x.png" class="redArrow cont2">
+						</div>
                         <!-- <h1>הולך</h1> -->
                         <div class="hate2"></div>
                     </div>
-                    <div class="slideDownbattle">
-                        <div class="slideStay btn"></div>
+                    <div class="slideDownbattle con2">
+                        <div class="slideStay btn">
+							<img src="images/votes/slide_pick_heart.png" class="blueArrow cont2">
+						</div>
                         <!-- <h1>נשאר</h1> -->
-                        <div class="love"></div>
+                        <div class="love2"></div>
                     </div>
                     <!--after user slide this div need to show---> 
 <!------------------------------------------->
@@ -310,9 +320,7 @@
 		<h2 id="vote-song-name-second">ים של דמעות</h2>
 	</div>
 </div>
-<!-- <div class="divideH"></div> -->
 
-<<<<<<< .mine
 </div>
 <!---------------------------------------------------battle div--------------------------------->
 <div id="not-registered"><br>
@@ -322,58 +330,18 @@
 	אין אוטו.</div>
 <!---------------------------------------------------not-registered div--------------------------------->
 </section>
-<section id="voteClose">
-	<div id="voteCloseSingle" class="single">
-		<div class="nextPage" data-goto="resultsSingle"></div>
-		<div class="animat animatG" data-animat="singleGood"></div>
-		<div class="animat animatB" data-animat="singleBad"></div>
-		<!--<nav class="topMenu">
-                    <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
-                </nav>-->
 
-
-
-
-
-
-
-
-
-
-
-
-=======
-                <div class="reMesseg cf">
-                    <div class="continue">
-                        <h2>ממתין לסגירת ההצבעה</h2>
-                        <figure class="contIcons"></figure>
-                    </div>
-                    <div class="songName1">
-                        <h1 id="vote-comp-name-first">דוד לוי</h1>
-                        <h2 id="vote-song-name-first">ילדות נשכחת</h2>
-                    </div>
-                    <div class="songName2">
-                        <h1 id="vote-comp-name-second">חגית יאסו</h1>
-                        <h2 id="vote-song-name-second">ים של דמעות</h2>
-                    </div>
-                </div>
-            </div>
-            <!---------------------------------------------------battle div--------------------------------->
-            <div id="not-registered"><br><br><br>לא נרשמת בזמן<br>אין אוטו.</div>
-            <!---------------------------------------------------not-registered div--------------------------------->
-        </section>
         <!---vote  section-->
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                                     <!--<nav class="topMenu">
                                         <h1 id="vote-close-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                                     </nav>-->
->>>>>>> .theirs
-<<<<<<< .mine
+
 		<div id="vote-close-img-single" class="contestant"> </div>
 		<!--after user slide this div need to show---> 
 		<!------------------------------------------->

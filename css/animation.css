@@ -87,8 +87,8 @@
 .songBad {
 	-webkit-animation: sinB 0.6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-delay:.6s;
-	animation-delay:.6s;
+	-webkit-animation-delay:.4s;
+	animation-delay:.4s;
 	animation: sinB 0.6s;
 	animation-fill-mode: forwards;
 }
@@ -188,11 +188,11 @@
 }
 80%{
  	left: -30%;
-	 background-image:none;
+	background-image: url(../images/votes/slide_pick_left.png);
 }
 100%{
 	left :-30%;
-	 background-image:none;
+	 background:none;
 }
 }
  @keyframes sinG {
@@ -204,11 +204,11 @@
 }
 80%{
  	left: -30%;
-	 background-image:none;
+	background-image: url(../images/votes/slide_pick_left.png);
 }
 100%{
 	left :-30%;
-	 background-image:none;
+	background:none;
 }
 }
  @-webkit-keyframes sinB {
@@ -218,9 +218,14 @@
 60%{
 	left:80%;	
 	}
-80%{
+	
+65%{
 	left:80%;
-	background-image:none;	
+	background-image: url(../images/votes/slide_pick_right.png);
+	}
+	70%{
+	left: 80%;
+	 background-image:none;
 	}
  100% {
  	left: 80%;
@@ -234,10 +239,14 @@
 60%{
 	left:80%;	
 	}
-80%{
+65%{
 	left:80%;
-	background-image:none;	
+	background-image: url(../images/votes/slide_pick_right.png);
 	}
+70%{
+	left: 80%;
+	 background-image:none;
+	}	
  100% {
  	left: 80%;
 	 background-image:none;
@@ -280,6 +289,7 @@
  opacity:0;
 }
 15%{
+
 	opacity:1;
 	left:50%;
 }
@@ -326,6 +336,38 @@
  left:-45%;
 }}
 /*--------------------------------battel side r -------------------------------*/
+.rotuplcon2{
+	-webkit-animation: rarrowUpcon2 0.4s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+	animation: rarrowUpcon2 .4s;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes rarrowUpcon2 {
+ 0% {
+ 	right:1%;
+	 top: -5%;
+	-webkit-transform: rotateZ(90deg);
+}
+ 100% {
+	 right:0%;
+	 top: 0%;
+	-webkit-transform: rotateZ(0deg);
+
+}
+}
+@keyframes rarrowUpcon2 {
+  0% {
+ 	right:1%;
+	 top: -5%;
+	-webkit-transform: rotateZ(90deg);
+}
+ 100% {
+	 right:0%;
+	 top: 0%;
+	-webkit-transform: rotateZ(0deg);
+
+}
+}
 .battel1lGood {
 	-webkit-animation: battel1lGood 1.2s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
