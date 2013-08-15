@@ -160,7 +160,8 @@ input[type=checkbox] {
 }
 
 .continue h2 {
-    font-size:1.7em;
+    font-size: 2.3em;
+    line-height: 160%;
 }
 
 .messageNoImage .message {
@@ -192,6 +193,12 @@ input[type=checkbox] {
     font-size: 0.8em;
 }
 
+
+.songName{
+    position: relative;
+    top: 12%;
+}
+
 .songName h1 {
     margin-top: 1%;
 }
@@ -219,6 +226,10 @@ input[type=checkbox] {
 
 #results #results-perc-second{
     top: 140%;
+}
+
+#results .single .percentage{
+    top:  140%
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/
