@@ -46,7 +46,6 @@
 	animation: regAnim 1s infinite;
 	animation-fill-mode: forwards;
 }
-
  @keyframes regAnim {
  from {
  left: 5%;
@@ -64,13 +63,13 @@
 }
 }
 /*--------------------------------single good -------------------------------*/
-.rotupl{
+.rotupl {
 	-webkit-animation: rarrowUp 0.4s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
 	animation: rarrowUp .4s;
 	animation-fill-mode: forwards;
 }
-.rotupr{
+.rotupr {
 	-webkit-animation: larrowUp 0.4s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
 	animation: larrowUp .4s;
@@ -79,16 +78,16 @@
 .songGood {
 	-webkit-animation: sinG 0.6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-delay:.6s;
-	animation-delay:.6s;
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
 	animation: sinG 0.6s;
 	animation-fill-mode: forwards;
 }
 .songBad {
 	-webkit-animation: sinB 0.6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-delay:.4s;
-	animation-delay:.4s;
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s;
 	animation: sinB 0.6s;
 	animation-fill-mode: forwards;
 }
@@ -115,8 +114,7 @@
 	/*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 	*/animation: loveShow .2s;
 	animation-delay: .8s;
-	animation-fill-mode: forwards;
-	/*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
+	animation-fill-mode: forwards;/*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 .hateShow {
 	-webkit-animation: hateShow .2s; /* Safari and Chrome */
@@ -125,131 +123,126 @@
 	/*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 	*/animation: hateShow .2s;
 	animation-delay: .8s;
-	animation-fill-mode: forwards;
-	/*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
+	animation-fill-mode: forwards;/*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 @-webkit-keyframes rarrowUp {
  0% {
- 	right:1%;
-	 top: 19%;
-	-webkit-transform: rotateZ(90deg);
+ right:1%;
+ top: 19%;
+ -webkit-transform: rotateZ(90deg);
 }
  100% {
-	 right:0%;
-	 top: 19%;
-	-webkit-transform: rotateZ(0deg);
-
+ right:0%;
+ top: 19%;
+ -webkit-transform: rotateZ(0deg);
 }
 }
 @keyframes rarrowUp {
  0% {
- 	right:1%;
-	 top: 19%;
-	transform: rotateZ(-90deg);
+ right:1%;
+ top: 19%;
+ transform: rotateZ(-90deg);
 }
  100% {
-	 right:0%;
-	 top: 19%;
-	transform: rotateZ(0deg);
-
+ right:0%;
+ top: 19%;
+ transform: rotateZ(0deg);
 }
 }
 @-webkit-keyframes larrowUp {
  0% {
- 	left:-10%;
-	 top: 22%;
-	-webkit-transform: rotateZ(-90deg);
+ left:-10%;
+ top: 22%;
+ -webkit-transform: rotateZ(-90deg);
 }
  100% {
-	 left:-15%;
-	 top: 30%;
-	-webkit-transform: rotateZ(0deg);
+ left:-15%;
+ top: 30%;
+ -webkit-transform: rotateZ(0deg);
 }
 }
 @keyframes larrowUp {
  0% {
- 	right:1%;
-	 top: 19%;
-	transform: rotateZ(90deg);
+ right:1%;
+ top: 19%;
+ transform: rotateZ(90deg);
 }
  100% {
-	 right:0%;
-	 top: 19%;
-	transform: rotateZ(0deg);
-
+ right:0%;
+ top: 19%;
+ transform: rotateZ(0deg);
 }
 }
  @-webkit-keyframes sinG {
  0% {
- 	left: 0%;
+ left: 320px;
 }
  60% {
- 	left: -30%;
+ left: 20%;
 }
-80%{
- 	left: -30%;
-	background-image: url(../images/votes/slide_pick_left.png);
+80% {
+ left: 20%;
+ background-image: url(../images/votes/slide_pick_left.png);
 }
-100%{
-	left :-30%;
-	 background:none;
+100% {
+ left :20%;
+ background:none;
 }
 }
  @keyframes sinG {
-  0% {
- 	left: 0%;
+ 0% {
+ left: 320px;
 }
  60% {
- 	left: -30%;
+ left: 20%;
 }
-80%{
- 	left: -30%;
-	background-image: url(../images/votes/slide_pick_left.png);
+80% {
+ left: 20%;
+ background-image: url(../images/votes/slide_pick_left.png);
 }
-100%{
-	left :-30%;
-	background:none;
+100% {
+ left :20%;
+ background:none;
 }
 }
  @-webkit-keyframes sinB {
  0% {
- 	left: 52%;
-	}
-60%{
-	left:80%;	
-	}
-	
-65%{
-	left:80%;
-	background-image: url(../images/votes/slide_pick_right.png);
-	}
-	70%{
-	left: 80%;
-	 background-image:none;
-	}
+ left: 10px;
+}
+60% {
+ left:30%;
+}
+ 65% {
+ left:30%;
+ background-image: url(../images/votes/slide_pick_right.png);
+}
+ 70% {
+ left: 30%;
+ background-image:none;
+}
  100% {
- 	left: 80%;
-	 background-image:none;
+ left: 30%;
+ background-image:none;
 }
 }
  @keyframes sinB {
-0% {
- 	left: 52%;
-	}
-60%{
-	left:80%;	
-	}
-65%{
-	left:80%;
-	background-image: url(../images/votes/slide_pick_right.png);
-	}
-70%{
-	left: 80%;
-	 background-image:none;
-	}	
+ 0% {
+ left: 10px;
+}
+60% {
+ left:30%;
+}
+ 65% {
+ left:30%;
+ background-image: url(../images/votes/slide_pick_right.png);
+}
+ 70% {
+ left: 30%;
+ background-image:none;
+}
  100% {
- 	left: 80%;
-	 background-image:none;
+ left: 30%;
+ background-image:none;
 }
 }
  @-webkit-keyframes hideR {
@@ -288,10 +281,9 @@
  0% {
  opacity:0;
 }
-15%{
-
-	opacity:1;
-	left:50%;
+15% {
+ opacity:1;
+ left:50%;
 }
  100% {
  opacity:1;
@@ -302,21 +294,22 @@
  0% {
  opacity:0;
 }
-15%{
-	opacity:1;
-	left:50%;
+15% {
+ opacity:1;
+ left:50%;
 }
  100% {
  opacity:1;
  left:75%;
-}}
+}
+}
  @-webkit-keyframes hateShow {
  0% {
  opacity:0;
 }
-15%{
-	opacity:1;
-	left:-35%;
+15% {
+ opacity:1;
+ left:-35%;
 }
  100% {
  opacity:1;
@@ -327,16 +320,47 @@
  0% {
  opacity:0;
 }
-15%{
-	opacity:1;
-	left:-35%;
+15% {
+ opacity:1;
+ left:-35%;
 }
  100% {
  opacity:1;
  left:-45%;
-}}
+}
+}
 /*--------------------------------battel side r -------------------------------*/
-.rotuplcon2{
+.rotuprcon1 {
+	-webkit-animation: rarrowUpcon1 0.4s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+	animation: rarrowUpcon1 .4s;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes rarrowUpcon1 {
+ 0% {
+ left:0;
+ top: -5%;
+ -webkit-transform: rotateZ(-90deg);
+}
+ 100% {
+ left:0%;
+ top: 0%;
+ -webkit-transform: rotateZ(0deg);
+}
+}
+@keyframes rarrowUpcon1 {
+ 0% {
+ left:0;
+ top: -5%;
+ -webkit-transform: rotateZ(-90deg);
+}
+ 100% {
+ left:0%;
+ top: 0%;
+ -webkit-transform: rotateZ(0deg);
+}
+}
+.rotuplcon2 {
 	-webkit-animation: rarrowUpcon2 0.4s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
 	animation: rarrowUpcon2 .4s;
@@ -344,309 +368,228 @@
 }
 @-webkit-keyframes rarrowUpcon2 {
  0% {
- 	right:1%;
-	 top: -5%;
-	-webkit-transform: rotateZ(90deg);
+ right:1%;
+ top: -5%;
+ -webkit-transform: rotateZ(90deg);
 }
  100% {
-	 right:0%;
-	 top: 0%;
-	-webkit-transform: rotateZ(0deg);
-
+ right:0%;
+ top: 0%;
+ -webkit-transform: rotateZ(0deg);
 }
 }
 @keyframes rarrowUpcon2 {
-  0% {
- 	right:1%;
-	 top: -5%;
-	-webkit-transform: rotateZ(90deg);
+ 0% {
+ right:1%;
+ top: -5%;
+ -webkit-transform: rotateZ(90deg);
 }
  100% {
-	 right:0%;
-	 top: 0%;
-	-webkit-transform: rotateZ(0deg);
-
+ right:0%;
+ top: 0%;
+ -webkit-transform: rotateZ(0deg);
 }
 }
-.battel1lGood {
-	-webkit-animation: battel1lGood 1.2s; /* Safari and Chrome */
+.battel1vot {
+	-webkit-animation: battel1vot .6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	animation: battel1lGood 1.2s;
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+	animation: battel1vot .6s;
 	animation-fill-mode: forwards;
 }
-.battel1Bad {
-	-webkit-animation: battel1Bad 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode: forwards;
-	animation: battel1Bad 1.2s;
-	animation-fill-mode: forwards;
-}
-.hideL {
-	-webkit-animation: hideL .6s; /* Safari and Chrome */
+.hideLcon {
+	-webkit-animation: hideLcon .6s; /* Safari and Chrome */
 	-webkit-animation-delay: .6s;
 	-webkit-animation-fill-mode: forwards;
-	animation: hideL .6s infinite;
+	animation: hideLcon .6s infinite;
 	animation-delay: .6s;
 	animation-fill-mode: forwards;
 }
-.love1Show {
-	-webkit-animation: love1Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay: 1.2s;
+.hideRcon {
+	-webkit-animation: hideRcon .6s; /* Safari and Chrome */
+	-webkit-animation-delay: .6s;
+	-webkit-animation-fill-mode: forwards;
+	animation: hideRcon .6s infinite;
+	animation-delay: .6s;
+	animation-fill-mode: forwards;
+}
+.showIconCon1 {
+	-webkit-animation: showIconCon1 .2s; /* Safari and Chrome */
+	-webkit-animation-delay: .8s;
 	-webkit-animation-fill-mode: forwards;
 	-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation: love1Show 1.2s;
-	animation-delay: 1s;
+	animation: showIconCon1 .2s;
+	animation-delay: .8s;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
-.hate1Show {
-	-webkit-animation: hate1Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay: 1.2s;
-	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation: hate1Show 1.2s;
-	animation-delay: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-}
- @-webkit-keyframes battel1lGood {
+ @-webkit-keyframes battel1vot {
  0% {
- right: -30%;
+ left: 0px;
 }
  40% {
- right: 0%;
+ left: 30%;
 }
  60% {
- right: 0%;
+ left: 30%;
+ background-image:url(../images/votes/slide_pick_right.png);
 }
  100% {
- right: -50%;
+ left: 30%;
+ background-image:none;
 }
 }
- @keyframes battel1lGood {
+ @keyframes battel1vot {
  0% {
- right: -30%;
+ left: 0px;
 }
  40% {
- right: 0%;
+ left: 30%;
 }
  60% {
- right: 0%;
+ left: 30%;
+ background-image:url(../images/votes/slide_pick_right.png);
 }
  100% {
- right: -50%;
+ left: 30%;
+ background-image:none;
 }
 }
- @-webkit-keyframes battel1Bad {
+ @-webkit-keyframes showIconCon1 {
  0% {
- right: -30%;
+ opacity:0;
 }
- 40% {
- right: 0%;
-}
- 60% {
- right: 0%;
+15% {
+ opacity:1;
+ left:2%;
 }
  100% {
- right: -50%;
+ opacity:1;
+ left:2%;
 }
 }
- @keyframes battel1lGood {
+ @keyframes showIconCon1 {
  0% {
- right: -30%;
+ opacity:0;
 }
- 40% {
- right: 0%;
-}
- 60% {
- right: 0%;
+15% {
+ opacity:1;
+ left:2%;
 }
  100% {
- right: -50%;
-}
-}
- @-webkit-keyframes hideL {
- 0% {
- left: 0%;
-}
- 100% {
- left: -50%;
-}
-}
- @keyframes hideL {
- 0% {
- left: 0%;
-}
- 100% {
- left: -50%;
-}
-}
- @-webkit-keyframes love1Show {
- 0% {
- right: -75%;
-}
- 100% {
- right: 145%;
-}
-}
- @keyframes love1Show {
- 0% {
- right: -75%;
-}
- 100% {
- right: 145%;
-}
-}
- @-webkit-keyframes hate1Show {
- 0% {
- right: -75%;
-}
- 100% {
- right: 145%;
-}
-}
- @keyframes hate1Show {
- 0% {
- right: -75%;
-}
- 100% {
- right: 145%;
+ opacity:1;
+ left:2%;
 }
 }
 /*--------------------------------battel side left -------------------------------*/
-.battel2lGood {
-	-webkit-animation: battel2lGood 1.2s; /* Safari and Chrome */
+.battel2vot {
+	-webkit-animation: battel2vot .6s; /* Safari and Chrome */
 	-webkit-animation-fill-mode: forwards;
-	animation: battel2lGood 1.2s;
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+	animation: battel2vot .6s;
 	animation-fill-mode: forwards;
 }
-.battel2Bad {
-	-webkit-animation: battel2Bad 1.2s; /* Safari and Chrome */
-	-webkit-animation-fill-mode: forwards;
-	animation: battel2Bad 1.2s;
-	animation-fill-mode: forwards;
-}
-.love2Show {
-	-webkit-animation: love2Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay: 1.2s;
+.showIconCon2 {
+	-webkit-animation: showIconCon2 .2s; /* Safari and Chrome */
+	-webkit-animation-delay: .8s;
 	-webkit-animation-fill-mode: forwards;
 	-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation: love2Show 1.2s;
-	animation-delay: 1s;
+	animation: showIconCon2 .2s;
+	animation-delay: .8s;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
-.hate2Show {
-	-webkit-animation: hate2Show .6s; /* Safari and Chrome */
-	-webkit-animation-delay: 1.2s;
-	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	animation: hate2Show 1.2s;
-	animation-delay: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-}
- @-webkit-keyframes battel2lGood {
+ @-webkit-keyframes battel2vot {
  0% {
- left: -30%;
+ left: 320px;
 }
  40% {
- left: 0%;
+ left: 20%;
 }
  60% {
- left: 0%;
+ left: 20%;
+/* background-image:url(../images/votes/slide_round_red.png);*/
 }
  100% {
- left: -50%;
+ left: 20%;
+ background-image:none;
 }
 }
- @keyframes battel2lGood {
+ @keyframes battel2vot {
  0% {
- left: -30%;
+ left: 320px;
 }
  40% {
- left: 0%;
+ left: 20%;
 }
  60% {
+ left: 20%;
+/*background-image:url(../images/votes/slide_round_red.png);*/
+}
+ 100% {
+ left: 20%;
+ background-image:none;
+}
+}
+ @-webkit-keyframes hideRcon {
+ 0% {
+ left: 30%;
+}
+ 100% {
+ left: 50%;
+}
+}
+ @keyframes hideRcon {
+ 0% {
+ left: 30%;
+}
+ 100% {
+ left: 50%;
+}
+}
+ @-webkit-keyframes hideLcon {
+ 0% {
+ left: 20%;
+}
+ 100% {
  left: 0%;
 }
- 100% {
- left: -50%;
 }
-}
- @-webkit-keyframes battel2Bad {
+ @keyframes hideLcon {
  0% {
- left: -30%;
+ left: 20%;
 }
- 40% {
+ 100% {
  left: 0%;
 }
- 60% {
- left: 0%;
 }
- 100% {
- left: -50%;
-}
-}
- @keyframes battel2lGood {
+ @-webkit-keyframes showIconCon2 {
  0% {
- left: -30%;
+ opacity:0;
 }
- 40% {
- left: 0%;
-}
- 60% {
- left: 0%;
+15% {
+ opacity:1;
+ left:50%;
 }
  100% {
- left: -50%;
+ opacity:1;
+ left:75%;
 }
 }
- @-webkit-keyframes hideL {
+ @keyframes showIconCon2 {
  0% {
- left: 0%;
+ opacity:0;
+}
+15% {
+ opacity:1;
+ left:50%;
 }
  100% {
- left: -50%;
+ opacity:1;
+ left:75%;
 }
 }
- @keyframes hideL {
- 0% {
- left: 0%;
-}
- 100% {
- left: -50%;
-}
-}
- @-webkit-keyframes love2Show {
- 0% {
- left: -75%;
-}
- 100% {
- left: 145%;
-}
-}
- @keyframes love2Show {
- 0% {
- left: -75%;
-}
- 100% {
- left: 145%;
-}
-}
- @-webkit-keyframes hate2Show {
- 0% {
- left: -75%;
-}
- 100% {
- left: 145%;
-}
-}
- @keyframes hate2Show {
- 0% {
- left: -75%;
-}
- 100% {
- left: 145%;
-}
-}
+
 /*-------------------------------------result-------------------------------------------*/

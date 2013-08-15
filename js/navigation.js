@@ -62,6 +62,7 @@ var Navi = {
 
             case 'registerSingle':
                 Navi.hidelogin();
+                toggleTopMenu(registerDic);
                 $('#register').show();
                 
                 if ($(".slidein ").hasClass('grey')) {
