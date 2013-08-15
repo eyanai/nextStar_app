@@ -13,6 +13,7 @@ $('.slideLeft').draggable({
             $('.slideRight').addClass('hideR');
             setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 800);
             $('.love').addClass('loveShow');
+            setVote(event);
             return false;
         };
 
@@ -24,7 +25,6 @@ $('.slideLeft').draggable({
 	}
 
 });
-////////////////////////////////////////////////
 
 $('.slideRight').draggable({ 
 	stack: ".drag",
@@ -38,6 +38,7 @@ $('.slideRight').draggable({
 			$('.slideLeft').addClass('hideL');
 			setTimeout(function(){$('.redArrow.rotupr').hide();},800);
 			$('.hate').addClass('hateShow');
+            setVote(event);
 			return false;
 		};
 	},
@@ -48,7 +49,7 @@ $('.slideRight').draggable({
 	}
 });
 
-///////////////////////////////////////////////////////battel////////////////////////////////////////
+///////////////////////////////////////////////////////battle////////////////////////////////////////
 
 $('.slideTopbattle.con1').draggable({ //R top
 	stack: ".drag",
@@ -62,7 +63,8 @@ $('.slideTopbattle.con1').draggable({ //R top
 			$('.slideDownbattle.con1').addClass('hideRcon');
 			$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
 			setTimeout(function(){$('.redArrow.cont1.rotuprcon1').hide();},800);
-			$('.hate1').addClass('showIconCon1');			
+			$('.hate1').addClass('showIconCon1');
+            setVote(event);			
 			return false;
 		};
 	},
@@ -85,6 +87,7 @@ $('.slideDownbattle.con1').draggable({ ///R bottom
 			$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
 			setTimeout(function(){$('.blueArrow.cont1.rotuprcon1').hide();},800);
 			$('.love1').addClass('showIconCon1');
+            setVote(event);
 			return false;
 		};
 	},
@@ -107,6 +110,7 @@ $('.slideTopbattle.con2').draggable({ //left top
 			$('.slideTopbattle.con1,.slideDownbattle.con1').addClass('hideRcon');
 			setTimeout(function(){$('.redArrow.cont2.rotuplcon2').hide();},800);
 			$('.hate2').addClass('showIconCon2');
+            setVote(event);
 			return false;
 		};
 	},
@@ -131,6 +135,7 @@ $('.slideDownbattle.con2').draggable({ ///left bottom
 			$('.slideTopbattle.con1,.slideDownbattle.con1').addClass('hideRcon');
 			setTimeout(function(){$('.blueArrow.cont2.rotuplcon2').hide();},800);
 			$('.love2').addClass('showIconCon2');
+            setVote(event);
 			return false;
 		}
 	}, 
@@ -141,4 +146,3 @@ $('.slideDownbattle.con2').draggable({ ///left bottom
 	}
 });
 
-$('.slideTopbattle.con1').width();

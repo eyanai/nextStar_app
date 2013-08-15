@@ -46,10 +46,9 @@ header {
 }
 
 .topMenu {
-	
-	height: 5%;	
-	
-    top: 11.5%;
+	height: 5%;
+top: 11.5%;
+line-height: 2em;
 }
 
 
@@ -89,7 +88,7 @@ header {
 }
 
 .continue h2 {
-    font-size: 0.7em;
+    font-size:1.7em;
 }
 
 .messageNoImage .message{
@@ -124,6 +123,10 @@ header {
 
 .songName h1{
     margin-top: 1%;
+}
+
+#registerBattle .slidein{
+    top: 61%;
 }
 /*================================================VOTE SECTION=====================================*/
 
@@ -171,7 +174,9 @@ header {
 
 /*================================================GALLERY SECTION================================================*/
 
-
+#result-gallery ul li{
+    margin-right: 6px;
+}
 
 
 
