@@ -51,6 +51,48 @@ header {
 
 /*===============================================MASSEGE SECTION==============================================*/
 
+.detail{
+	line-height:1.2em;
+}
+
+#message-no-img-text{
+	line-height:1.3em;
+	width:80%;
+	font-size:2em;
+}
+
+#message .continue h2{
+	font-size: 1em;
+}
+
+.continue{
+	margin-top:4%;
+	
+}
+
+.continue h2 {
+    font-size: 0.7em;
+}
+
+.messageNoImage .message{
+	height:35%;
+}
+
+#message .contIcons{
+	 height:23%;  
+	 width:13%;   
+	 border:1px solid yellow;
+}
+
+.contIcons{
+	 border:1px solid red;
+	 height:70%;  
+	 width:13%;   
+	 background-image: url(../images/masseg/dots_gif_iphone.png);
+	 background-repeat: no-repeat;
+	 background-position-x: -326px;
+	 vertical-align:middle;
+}
 
 
 /*=============================================REGISTER SECTION===========================================*/
