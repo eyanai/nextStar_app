@@ -69,12 +69,13 @@ header {
 }
 
 #message .continue h2{
-	font-size: 1em;
+	font-size: 2.5em;
+	margin-bottom:8px;
+	margin-left:0;
 }
 
-.continue{
+.continue, .reMesseg .continue{
 	margin-top:4%;
-	
 }
 
 .continue h2 {
@@ -87,14 +88,14 @@ header {
 
 #message .contIcons{
 	 height:23%;  
-	 width:13%;   
+	 width:6.5%;   
 	 border:1px solid yellow;
 }
 
 .contIcons{
 	 border:1px solid red;
-	 height:70%;  
-	 width:13%;   
+	 height:35%;  
+	 width:6.5%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
 	 background-repeat: no-repeat;
 	 background-position-x: -326px;
