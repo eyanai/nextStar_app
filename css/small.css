@@ -42,15 +42,10 @@ h2 .songName1,h2 .songName2{
 	font-size: 1em;
 } 
 
-
 #login .checkboxArea{
 	padding:2px 10px 0 0;
 	height: 44%;
 	margin: 4% auto;
-}
-
-.logo.login {
-    
 }
 
 #download-music-text{

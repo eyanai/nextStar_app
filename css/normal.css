@@ -20,6 +20,26 @@ section{
     background-image: url(../normal/images/musix_logo.png);
 }
 
+
+.musix {
+    background-image: url(../images/musix_normal.png);
+    background-size: 100% 100%;
+    width: 45%;
+	display:block;
+	left:26%;
+	margin:0 auto;
+    height: 15%;
+}
+
+#login .musix {
+	/* height:12.5%; */
+}
+
+#banner{
+	height:5.8%;
+}
+
+
 /*===========================================horizonal-screen=================================*/
 
 #horizonal-screen {
@@ -54,6 +74,55 @@ line-height: 2em;
 
 /*================================================LOG IN SECTION=====================================*/
 
+#loginExtendedBox {
+    height: 47%;
+	width:66%;
+}
+
+.loginHg .titleLogin{
+	line-height:1.3em;
+}
+
+.facebookArea{
+	width:94%;
+}
+
+.loginBox .logText{
+	display:block;
+	margin:0 auto;
+	top:25%;
+}
+
+.facebookArea .login .logText{
+	display:block;
+	width:47%;
+	margin:0 auto;
+	top:25%;
+}
+
+.logFb, #loginExtendedBox .login, .loginBox{
+	height:57px;
+}
+
+#loginExtendedBox .login{
+	margin-top:3%;
+}
+
+.logFb .icon {
+    background-size: 45% 50%;
+}
+
+#login .checkboxArea{
+	padding:2px 10px 0 0;
+	height: 44%;
+	margin: 4% auto;
+	height:62px;
+}
+
+input[type=checkbox] {
+    margin: 2%;
+	margin-right:4%;
+}
 
 /*===============================================MASSEGE SECTION==============================================*/
 
@@ -79,8 +148,8 @@ line-height: 2em;
 	margin-left:0;
 }
 
-#message .continue h2{
-	margin-right:-21%;
+#message .messageNoImage .continue h2{
+	 margin-right:-29%; 
 }
 
 .continue, .reMesseg .continue{
@@ -101,14 +170,13 @@ line-height: 2em;
 
 #message .contIcons{
 	 height:23%;  
-	 width:5.5%;   
 	 border:1px solid yellow;
 }
 
 .contIcons{
 	 border:1px solid red;
 	 height:35%;  
-	 width:6.5%;   
+	 width:5.5%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
 	 background-repeat: no-repeat;
 	 vertical-align:middle;
@@ -176,12 +244,6 @@ line-height: 2em;
 
 #result-gallery ul li{
     margin-right: 6px;
-}
-
-
-
-#banner{
-	height:5.8%;
 }
 
 
