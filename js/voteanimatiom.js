@@ -1,13 +1,14 @@
 // JavaScript Document
-
+var wid=$(document).width();
+var maxwid=wid/2;
 
 $('.slideLeft').draggable({
     stack: ".drag",
     axis: "x",
     containment:'#slideSingleLeft',
     drag: function (event, ui) {
-        console.log($('.slideLeft').css('left'));
-        if ($('.slideLeft').position().left > 300) {
+		console.log($('.slideLeft').css('left'));
+        if ($('.slideLeft').position().left > maxwid) {
             $('.blueArrow').addClass('rotupl');
             $('.slideLeft').addClass('songGood');
             $('.slideRight').addClass('hideR');
@@ -19,7 +20,7 @@ $('.slideLeft').draggable({
 
     },
     stop:function (event, ui) {
-		if($('.slideLeft').position().left < 300){
+		if($('.slideLeft').position().left < maxwid){
 			$('.slideLeft').animate({left:'20%'},800,function(){});	
 		}
 	}
@@ -31,7 +32,6 @@ $('.slideRight').draggable({
     axis: "x",
     containment:'#slideSingleRight',
     drag: function (event, ui) {
-		
     	if($('.slideRight').position().left<10){
 			$('.redArrow').addClass('rotupr');
 			$('.slideRight').addClass('songBad');
@@ -103,7 +103,7 @@ $('.slideTopbattle.con2').draggable({ //left top
     axis: "x",
     containment:"#lslidecon" ,
     drag: function (event, ui) {
-    	if($('.slideTopbattle.con2').position().left>300){
+    	if($('.slideTopbattle.con2').position().left>maxwid){
 			$('.redArrow.cont2').addClass('rotuplcon2');
 			$('.slideTopbattle.con2').addClass('battel2vot');
 			$('.slideDownbattle.con2').addClass('hideLcon');
@@ -115,7 +115,7 @@ $('.slideTopbattle.con2').draggable({ //left top
 		};
 	},
 	stop:function (event, ui) {
-		if($('.slideTopbattle.con2').position().left<300){
+		if($('.slideTopbattle.con2').position().left<maxwid){
 			$('.slideTopbattle.con2').animate({left:'20%'},800,function(){});	
 		}
 	}
@@ -128,7 +128,7 @@ $('.slideDownbattle.con2').draggable({ ///left bottom
     containment:"#lslidecon" ,
     drag: function (event, ui) {
 	
-    	if($('.slideDownbattle.con2').position().left>300){
+    	if($('.slideDownbattle.con2').position().left>maxwid){
 			$('.blueArrow.cont2').addClass('rotuplcon2');
 			$('.slideDownbattle.con2').addClass('battel2vot');
 			$('.slideTopbattle.con2').addClass('hideLcon');
@@ -140,7 +140,7 @@ $('.slideDownbattle.con2').draggable({ ///left bottom
 		}
 	}, 
 	stop:function (event, ui) {
-		if($('.slideDownbattle.con2').position().left<300){
+		if($('.slideDownbattle.con2').position().left<maxwid){
 			$('.slideDownbattle.con2').animate({left:'20%'},800,function(){});	
 		}
 	}
