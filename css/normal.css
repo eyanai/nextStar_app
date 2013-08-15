@@ -1,5 +1,119 @@
 /* CSS Document */
 
+/* CSS Document */
+
+/*=====================================================generel==============================================*/
+
+
+html , body {
+	/* background-image: url(../images/general-background.jpg); */
+	font-size:9px;
+    background-repeat: repeat;
+    overflow: scroll;
+}
+
+section{
+	height: 82.9%;
+}
+
+.musix {
+    background-image: url(../normal/images/musix_logo.png);
+}
+
+/*===========================================horizonal-screen=================================*/
+
+#horizonal-screen {
+	/* background-image: url(../images/horizonal-background.jpg); */
+}
+
+#flip-me {
+	/* background-image: url(../images/flip.png); */
+}
+
+/*================================================HEADER=====================================*/
+
+header {
+    height: 11.3%;
+}
+
+.header.logo {
+	background-image: url(../images/normal/header/kohav_logo_big.png);
+}
+
+.live{
+	background-image: url(../images/normal/header/kohav_live_sequence1.png);
+}
+
+
+
+/*================================================LOG IN SECTION=====================================*/
+
+
+/*===============================================MASSEGE SECTION==============================================*/
+
+
+
+/*=============================================REGISTER SECTION===========================================*/
+
+
+
+/*================================================VOTE SECTION=====================================*/
+
+.slideLeft {
+    background-image: url(../images/normal/votes/kohav_vote_slider_left.png);
+}
+
+.slideRight {
+    background-image: url(../images/votes/slide_pick_right.png);
+}
+
+.contestant1 .slideTopbattle {
+    background-image: url(../images/votes/slide_pick_right.png);
+}
+
+/*================================================VOTE BATTLE SECTION=====================================*/
+
+
+
+/*=============================================RESULTS SECTION======================================================*/
+
+
+
+/*=======================================================RESULT BATTLE=========================================*/
+
+.resultScalaR {
+/*     background-color: rgba(0,0,0,0.5);
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
+    position: absolute;
+    top: 14%;
+    right: 2%;
+    overflow: hidden; */
+}
+
+.resultRed {
+    background-image: url(../images/normal/results/kohav_red_off.png);
+}
+
+.scalaRed {
+    background-image: url(../images/normal/results/kohav_red_on.png);
+}
+
+
+/*================================================GALLERY SECTION================================================*/
+
+
+
+
+
+#banner{
+	height:5.8%;
+}
+
+
+/* 
+
 .fbText,.logText{
 	font-size:2em;
 }
@@ -42,4 +156,4 @@ margin-top: 1%;
 }
 .swiper-slide {
   width: 390px;
- }
+ } */
