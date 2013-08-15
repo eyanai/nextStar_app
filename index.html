@@ -89,7 +89,7 @@
 <!---log in section-->
    
         <section id="message">
-            <div class="nextPage" data-goto="registerBattle"></div>
+            <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -122,9 +122,10 @@
         </section>
         <!--- message section-->
         <section id="register">
-            <div class="nextPage" data-goto="resultsSingle"></div>
+            <!--<div class="nextPage" data-goto="resultsSingle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>-->
             <div class="nextPage" data-goto="voteSingle"></div>
-            <div class="nextPage" data-goto="voteBattle"></div>
+            
             <div class="animat" data-animat="register"></div>
             <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
                             <!--<nav class="topMenu">
@@ -230,20 +231,24 @@
                                         <h1 id="vote-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                                     </nav>-->
                 <div id="vote-img-single" class="contestant">
-                    <div id="slideLeft" class="slideLeft">
-                        <div class="slideStay btn">
-							<img src="images/votes/slide_pick_heart.png" class="blueArrow">
-                            <!-- <h1>נשאר</h1> -->
-                            <div class="love"></div>
-                        </div>
-                    </div>
-                    <div id="slideRight" class="slideRight">
-                        <div class="slideGo btn">
-							<img src="images/votes/slide_pick_x.png" class="redArrow">
-                            <!-- <h1>הולך</h1> -->
-                            <div class="hate"></div>
-                        </div>
-                    </div>
+					<div id="slideSingleLeft">
+								<div id="slideLeft" class="slideLeft">
+									<div class="slideStay btn">
+										<img src="images/votes/slide_pick_heart.png" class="blueArrow">
+										<!-- <h1>נשאר</h1> -->
+										<div class="love"></div>
+									</div>
+								</div>
+					</div><!--slideSingleLeft-->										
+					<div id="slideSingleRight">		
+							<div id="slideRight" class="slideRight">
+								<div class="slideGo btn">
+									<img src="images/votes/slide_pick_x.png" class="redArrow">
+									<!-- <h1>הולך</h1> -->
+									<div class="hate"></div>
+								</div>
+							</div>
+					</div>		
                 </div>
                 <!--after user slide this div need to show--->
                 <!------------------------------------------->
