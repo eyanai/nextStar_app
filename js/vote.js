@@ -4,7 +4,7 @@ var voteId, voteKey, vote;
 
 //listener
 function attachEventsVote() {
-    $("#vote-img-single,#vote-img-first,#vote-img-second").on("click", ".slideLeft, .slideRight, .slideTopbattle, .slideDownbattle", setVote); //click slider
+   // $("#vote-img-single,#vote-img-first,#vote-img-second").on("click", ".slideLeft, .slideRight, .slideTopbattle, .slideDownbattle", setVote); //click slider
 }
 
 //set vote page
@@ -119,9 +119,9 @@ function setVoteClosePage(data) {
 //send to server the vote
 function setVote(e) {
     voteId=null; voteKey=null; vote=null;
-    console.log(e.currentTarget.className);
-    console.log(e.delegateTarget.className);
-    switch (e.currentTarget.className) {
+ //   console.log(e.target.id);
+   // console.log(e.delegateTarget.className);
+    switch (e.target.id) {
         case 'slideLeft':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;

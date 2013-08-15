@@ -15,7 +15,10 @@ $('.slideLeft').draggable({
 			$('.love').addClass('loveShow');
 			return false;
 		};
-	}
+
+	},
+     stop: setVote(event)
+
 });
 //$('.slideGo').width()
 
