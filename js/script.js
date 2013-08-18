@@ -9,7 +9,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling(); //check gallery
+    longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
     //initSounds();
@@ -57,7 +57,7 @@ function pageChange(data) {
             setStaticPage(data);
             break;
         case 21:
-            setOpenRegisterPage(data);
+            setOpenRegisterPage(data,0);
             break;
         case 22:
             setRegisterGoingClose(data);
