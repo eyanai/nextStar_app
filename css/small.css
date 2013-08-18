@@ -183,6 +183,10 @@ h2 {
     font-size: 1.2em;
 }
 
+#notRegister .slider-text {
+    font-size:0.9em;
+}
+
 .topMenu {
     line-height: 150%;
 }
