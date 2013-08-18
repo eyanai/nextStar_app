@@ -190,7 +190,6 @@ function saveDataOnServer(str) {
 function startLongPolling(str) {
     //alert("in fb");
    longPolling();
-    longPolling();
 }
 
 
