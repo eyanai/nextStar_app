@@ -2,17 +2,18 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 
 
 //set register page
-function setOpenRegisterPage(data,from) {
+function setOpenRegisterPage(data, from) {
     generalParameters.isRegistered = false;
-    //take the value from dictionary
-   
+
+    $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
+
     $(".slide").css("left", "5.5%");
     $(".slider-text").text("כניסה להצבעה");
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
-    generalParameters.isSingle = null;//init isSingle
+    generalParameters.isSingle = null; //init isSingle
     //if this is a double vote
     if (!isSingle(data)) {
         var url1 = "";
@@ -31,14 +32,14 @@ function setOpenRegisterPage(data,from) {
         var song1 = data.votes[0].songName;
         var name2 = data.votes[1].name;
         var song2 = data.votes[1].songName;
-        var textWait = data.textWaitRegister;
+        //var textWait = data.textWaitRegister;
         $("#register-img-first").css("background-image", "url('" + url1 + "')");
         $("#register-comp-name-first").text(name1);
         $("#register-song-name-first").text(song1);
         $("#register-img-second").css("background-image", "url('" + url2 + "')");
         $("#register-comp-name-second").text(name2);
         $("#register-song-name-second").text(song2);
-        $("#register-wait-text").text(textWait);
+        //$("#register-wait-text").text(textWait);
         Navi.goto("registerBattle");
     }
     //if this is a single vote
@@ -51,21 +52,22 @@ function setOpenRegisterPage(data,from) {
         }
         var name = data.votes[0].name;
         var song = data.votes[0].songName;
-        var textWait = data.textWaitRegister;
+        //var textWait = data.textWaitRegister;
         $("#register-single-img").css("background-image", "url('" + url + "')");
         $("#register-comp-name-single").text(name);
         $("#register-song-name-single").text(song);
-        $("#register-wait-text").text(textWait);
+        //$("#register-wait-text").text(textWait);
         Navi.goto("registerSingle");
     }
 
     //if(!generalParameters.wasRegisterPage||generalParameters.wasRegisterPage&&generalParameters.isRegistered){
     if (from == "vote") {
+        $("#register .reMesseg .continue h2").text(data.textWaitVote);
         Navi.goto("notRegister");
     }
-    else{
+    else {
         $(".topMenu").show();
-         toggleTopMenu(registerDic);
+        toggleTopMenu(registerDic);
     }
     //}
     //generalParameters.wasRegisterPage = true;
@@ -166,13 +168,14 @@ function setRegister() {
 //set wait vote page
 function setWaitVotePage(data) {
 
-    if (data.length == 0) {
-        Navi.goto("notRegister");
-    }
+    //if (data.length == 0) {
+    //    $("#register .continue h2").text(data.textWaitVote); //take the value from dictionary
+    //    Navi.goto("notRegister");
+    //}
 
-    else {
+    //else {
+
         Navi.goto("WaitVotePage");
-
         generalParameters.voteIdA = data[0].voteId;
         generalParameters.voteKeyA = data[0].voteKey;
         if (data[1]) {
@@ -180,5 +183,5 @@ function setWaitVotePage(data) {
             generalParameters.voteKeyB = data[1].voteKey;
         }
         generalParameters.isRegistered = true;
-    }
+    //}
 };
