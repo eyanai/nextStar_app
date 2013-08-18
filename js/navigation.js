@@ -2,14 +2,14 @@
 
 var Navi = {
 
-    hidelogin: function () {
+    hidelogin: function() {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function (el) {
+    goto: function(el) {
         stopWaitAnimation()
-        switch (el) {
+        switch(el) {
             case 'login1':
                 $(".topMenu").hide();
                 break;
@@ -66,20 +66,22 @@ var Navi = {
                 $(".topMenu").show(); //check reut need to remove
                 $('#register').show();
 
-                if ($(".slidein ").hasClass('grey')) {
+                
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
+                $("#register .slider-text").html("כניסה להצבעה");
+                $(".slide.btn").show();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
                 break;
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-
-                if ($(".slidein ").hasClass('grey')) {
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
                 $("#registerSingle").hide();
@@ -87,11 +89,14 @@ var Navi = {
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
+                $("#register .slider-text").html("כניסה להצבעה");
+                $(".slide.btn").show();
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
-				document.getElementById("grey-slider-text").innerHTML="ההצבעה החלה</br>המתן לביצוע הבא";
-				//$(".slide .btn .drag .ui-draggable .regAnim").hide();
+                $("#register .slider-text").html("ההצבעה החלה</br>המתן לביצוע הבא");
+                $(".slide.btn").hide();
+                //$(".slide .btn .drag .ui-draggable .regAnim").hide();
                 //$(".topMenu").hide();
                 $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
