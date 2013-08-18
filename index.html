@@ -37,7 +37,7 @@
 	<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
 </nav>
 <section id="login">
-	<div class="nextPage" data-goto="messageWaitingNoImage"></div>
+	<div class="nextPage" data-goto="messageWaitingWithImage"></div>
 	<figure class="logo login"></figure>
 	<div id="loginExtendedBox">
 		<div id="slide-container">
@@ -226,8 +226,8 @@
 					<div id="slideSingleLeft">
 								<div id="slideLeft" class="slideLeft">
 									<div class="slideStay btn">
-										<img src="images/votes/slide_pick_heart.png" class="blueArrow">
-										<!-- <h1>נשאר</h1> -->
+										<img src="images/votes/slide_pick_heart.png" class="blueArrow" alt="c">
+										 <h1>נשאר</h1> 
 										<div class="love"></div>
 									</div>
 								</div>
@@ -235,8 +235,8 @@
 					<div id="slideSingleRight">		
 							<div id="slideRight" class="slideRight">
 								<div class="slideGo btn">
-									<img src="images/votes/slide_pick_x.png" class="redArrow">
-									<!-- <h1>הולך</h1> -->
+									<img src="images/votes/slide_pick_x.png" class="redArrow" alt="c">
+									 <h1>הולך</h1> 
 									<div class="hate"></div>
 								</div>
 							</div>
@@ -273,7 +273,7 @@
 						</div>
 						<div id="slideDownbattleCon1" class="slideDownbattle con1">
 							<div class="slideStay btn">
-								<img src="images/votes/slide_pick_heart.png" class="blueArrow cont1">
+								<img src="images/votes/slide_pick_heart.png" class="blueArrow cont1" alt="c">
 							</div>
 							<div class="love1"></div>
 						</div>
@@ -285,13 +285,13 @@
                    <div id="lslidecon">
 						<div id="slideTopbattleCon2" class="slideTopbattle con2">
 							<div class="slideGo btn">
-								<img src="images/votes/slide_pick_x.png" class="redArrow cont2">
+								<img src="images/votes/slide_pick_x.png" class="redArrow cont2" alt="c">
 							</div>
 							<div class="hate2"></div>
 						</div>
 						<div id="slideDownbattleCon2" class="slideDownbattle con2">
 							<div class="slideStay btn">
-								<img src="images/votes/slide_pick_heart.png" class="blueArrow cont2">
+								<img src="images/votes/slide_pick_heart.png" class="blueArrow cont2" alt="c">
 							</div>
 							<!-- <h1>נשאר</h1> -->
 							<div class="love2"></div>
@@ -440,9 +440,9 @@
                                                                                                                                                                         </div>
                                                                                                                                                                     </div>-->
                     <div class="resultScalaR">
-                        <div class="result">
+                        <div class="result resultRed">
                         </div>
-                        <div class="scala">
+                        <div class="scala scalaRed">
                         </div>
 
                     </div>
@@ -682,8 +682,8 @@
                             break;
                         case 'results':
                             var x = -50;
-                            $('.scala').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scala').animate({ bottom: x + '%' }, 500, function () { });
+                            $('.scalaRed').animate({ bottom: '0%' }, 1000, function () {
+                                $('.scalaRed').animate({ bottom: x + '%' }, 500, function () { });
                             });
                             break;
                         default:
@@ -691,5 +691,6 @@
                 });
             });
         </script>
+		
     </body>
 </html>
