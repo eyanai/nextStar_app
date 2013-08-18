@@ -93,6 +93,7 @@ var Navi = {
                 $(".slide.btn").show();
                 break;
             case 'notRegister':
+                initWaitAnimation();
                 $(".slidein ").addClass('grey');
                 $("#register .slider-text").html("ההצבעה החלה</br>המתן לביצוע הבא");
                 $(".slide.btn").hide();

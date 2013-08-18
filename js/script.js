@@ -30,12 +30,12 @@ var generalParameters = {
         id: null,
         userName: null,
         gender: null,
-        profilePic: null
+        profilePic: null,
+        showImg:false
     },
     isBigSize: false,
     ruledChecked: false
 }
-
 
 
 //dictionary values

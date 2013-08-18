@@ -7,7 +7,7 @@ var myLocation = domain+"/index.html";//domain
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
-localStorage.setItem('fbStorage', "");
+//localStorage.setItem('fbStorage', "");
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
@@ -41,13 +41,16 @@ else if (searchQuery.length > 0) {
 ////////////////////////////////////////////////////// fb api functions
 //login fb
 function loginFb() {
-   // if rules not checked - alert
-    if(!generalParameters.ruledChecked){
-        $("#notConfirmed").fadeIn();
-        $("#rulesCB").addClass("required");
-    }
-    else{
-            window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
+   if(!$(this).hasClass("inFb")){       
+       // if rules not checked - alert
+        if(!generalParameters.ruledChecked){
+            $("#notConfirmed").fadeIn();
+            $("#rulesCB").addClass("required");
+        }
+        else{
+                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
+        }
+        
     }
 
 }
@@ -86,8 +89,6 @@ function saveData() {
         generalParameters.fbUser.profilePic = "https://graph.facebook.com/" + generalParameters.fbUser.id + "/picture";
         //alert("fb api "+generalParameters.fbUser.userName);
         saveDataOnServer();
-        
-
     });
 }
 
@@ -136,7 +137,8 @@ function postOnFeed(){
 ////////////////////////////////////////////////////// localstorge functions
 //set Local Storage
 function setLocalStorage() {
-    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));    
+    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    
     //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
 }
 //get Local Storage
@@ -162,7 +164,7 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-
+    
     $.ajax({
         type: "POST",
         url: serverDomain + "type==getFacebookData",
@@ -170,7 +172,8 @@ function saveDataOnServer(str) {
             facebookId: generalParameters.fbUser.id,
             facebookName: generalParameters.fbUser.userName,
             facebookSex: generalParameters.fbUser.gender,
-            facebookimgurl: generalParameters.fbUser.profilePic
+            facebookimgurl: generalParameters.fbUser.profilePic,
+            showImg:generalParameters.fbUser.showImg
         },
         success: function (data) {
             console.log(data);
@@ -186,7 +189,7 @@ function saveDataOnServer(str) {
 //start LongPolling
 function startLongPolling(str) {
     //alert("in fb");
-   / longPolling();
+   longPolling();
 }
 
 
@@ -209,6 +212,15 @@ function rulesCBClick(){
 }
 
 function tvImgCBClick(){
+    //if check the box : image in tv
+    if ($(".tvImgCB").attr("checked") != "checked") {
+        $(".tvImgCB").attr("checked", "checked");
+        generalParameters.fbUser.showImg = true;
+    }
+    else{
+        $(".tvImgCB").removeAttr("checked");
+        generalParameters.fbUser.showImg = false;
+    }
     
 }
 
