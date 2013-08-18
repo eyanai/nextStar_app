@@ -75,7 +75,7 @@ $('.slideTopbattle.con1').draggable({ //R top
 	}
 });
 
-$('.slideDownbattle.con1').draggable({ ///R bottom
+$('.slideDownbattle.con1').draggable({ //R bottom
 	stack: ".drag",
     axis: "x",
     containment:"#rslidecon" ,
@@ -122,7 +122,7 @@ $('.slideTopbattle.con2').draggable({ //left top
 });
 
 
-$('.slideDownbattle.con2').draggable({ ///left bottom
+$('.slideDownbattle.con2').draggable({ //left bottom
 	stack: ".drag",
     axis: "x",
     containment:"#lslidecon" ,
