@@ -55,6 +55,9 @@ function setResultPage(data) {
             
             $("#results .battle .resultScalaR .result").removeClass("resultBlue");
             $("#results .battle .resultScalaR .scala").removeClass("scalaBlue");
+
+            //set the percent number color
+            $("#results-perc-first").addClass("red");
         }
         //else - remove the red class- and the blue class will shown
         else{
@@ -63,6 +66,9 @@ function setResultPage(data) {
 
             $("#results .battle .resultScalaR .result").removeClass("resultRed");
             $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
+            
+            //set the percent number color
+            $("#results-perc-first").removeClass("red");
         }
              //right checked
         if(data.votes[1].finalPercent >= data.votes[1].threshold){
@@ -71,6 +77,9 @@ function setResultPage(data) {
 
             $("#results .battle .resultScalaL .result").removeClass("resultBlue");
             $("#results .battle .resultScalaL .scala").removeClass("scalaBlue");
+
+            //set the percent number color
+            $("#results-perc-second").addClass("red");
         }
        else{
            $("#results .battle .resultScalaL .result").addClass("resultBlue");
@@ -78,6 +87,9 @@ function setResultPage(data) {
 
            $("#results .battle .resultScalaL .result").removeClass("resultRed");
            $("#results .battle .resultScalaL .scala").removeClass("scalaRed");
+
+           //set the percent number color
+            $("#results-perc-second").removeClass("red");
         }
        
         $('.scala').animate({ bottom: '0%' }, 1000, function() {
