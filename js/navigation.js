@@ -128,6 +128,7 @@ var Navi = {
                 $(".live").show();
                 break;
             case 'voteCloseSingle':
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('#voteClose').show();
                 $(".topMenu").show();
@@ -138,6 +139,7 @@ var Navi = {
                 $("#voteClose .continue").show();
                 break;
             case 'voteCloseBattle':
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('#voteClose').show();
                 $(".topMenu").show();
