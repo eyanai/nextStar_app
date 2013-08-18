@@ -9,13 +9,14 @@ function setVotePage(data) {
 
     if (generalParameters.isRegistered) {
         $("#vote .reMesseg .continue").hide();
-        resetAnimations()//reset animations
+        resetAnimations(); //reset animations
+        $("#vote .continue h2").text(data.textWaitVote); //take the value from dictionary
 
         if (isSingle(data)) {
-           
+
             //wait text
-            var waitText = data.textWaitVote;
-            $(".vote-wait-text").text(waitText);
+            //var waitText = data.textWaitVote;
+            //$(".vote-wait-text").text(waitText);
             firstFields = getFielsdByVote(data.votes[0]);
             //set the dic title
             //$("#vote-dic-single").text(pushVoteDic);
@@ -30,8 +31,8 @@ function setVotePage(data) {
         }
         else if (!isSingle(data)) {
             //wait text
-            var waitText = data.textWaitVote;
-            $(".vote-wait-text").text(waitText);
+            //var waitText = data.textWaitVote;
+            //$(".vote-wait-text").text(waitText);
             firstFields = getFielsdByVote(data.votes[0]);
             secondFields = getFielsdByVote(data.votes[1]);
             //set the dic title
@@ -63,53 +64,53 @@ function setVotePage(data) {
 //set vote is close
 function setVoteClosePage(data) {
     //if registered
-    if (generalParameters.isRegistered) {
-        console.log("setVoteClosePage data.status: " + data.status);
+    //if (generalParameters.isRegistered) {
+    console.log("setVoteClosePage data.status: " + data.status);
 
 
-        var isSingleVote;
-        var firstFields;
-        var secondFields;
-        if (isSingle(data)) {
-            firstFields = getFielsdByVote(data.votes[0]);
-            $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
-            $("#vote-close-comp-name-single").text(firstFields[0]);
-            //set the dictionary text
-            //$("#vote-close-dic-single").text(voteCloseDic);
-            toggleTopMenu(voteCloseDic);
+    var isSingleVote;
+    var firstFields;
+    var secondFields;
+    if (isSingle(data)) {
+        firstFields = getFielsdByVote(data.votes[0]);
+        $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
+        $("#vote-close-comp-name-single").text(firstFields[0]);
+        //set the dictionary text
+        //$("#vote-close-dic-single").text(voteCloseDic);
+        toggleTopMenu(voteCloseDic);
 
-            //wait text
-            $("#vote-close-wait-text-single").text(data.textWaitCalc);
+        //wait text
+        $("#voteClose .continue h2").text(data.textWaitCalc);
 
-            //navigate
-            Navi.goto("voteCloseSingle");
-        }
-        else if (!isSingle(data)) {
-            firstFields = getFielsdByVote(data.votes[0]);
-            secondFields = getFielsdByVote(data.votes[1]);
-            //firat comp
-            $("#vote-close-img-first").css("background-image", "url('" + firstFields[2] + "')")
-            $("#vote-close-comp-name-first").text(firstFields[0]);
-            $("#vote-close-song-name-first").text(firstFields[1]);
-            //second comp
-            $("#vote-close-img-second").css("background-image", "url('" + secondFields[2] + "')")
-            $("#vote-close-comp-name-second").text(secondFields[0]);
-            $("#vote-close-song-name-second").text(secondFields[1]);
-            //set the dictionary text
-            //$("#vote-close-dic-battle").text(voteCloseDic);
-            toggleTopMenu(voteCloseDic);
-
-            //wait text
-            $("#vote-close-wait-text-battle").text(data.textWaitCalc);
-            //navigate
-            Navi.goto("voteCloseBattle");
-        }
+        //navigate
+        Navi.goto("voteCloseSingle");
     }
+    else if (!isSingle(data)) {
+        firstFields = getFielsdByVote(data.votes[0]);
+        secondFields = getFielsdByVote(data.votes[1]);
+        //firat comp
+        $("#vote-close-img-first").css("background-image", "url('" + firstFields[2] + "')")
+        $("#vote-close-comp-name-first").text(firstFields[0]);
+        $("#vote-close-song-name-first").text(firstFields[1]);
+        //second comp
+        $("#vote-close-img-second").css("background-image", "url('" + secondFields[2] + "')")
+        $("#vote-close-comp-name-second").text(secondFields[0]);
+        $("#vote-close-song-name-second").text(secondFields[1]);
+        //set the dictionary text
+        //$("#vote-close-dic-battle").text(voteCloseDic);
+        toggleTopMenu(voteCloseDic);
 
-    else { //if not registered
-        setOpenRegisterPage(data, "vote");
-        // Navi.goto("notRegister");        
+        //wait text
+        $("#voteClose .continue h2").text(data.textWaitCalc);
+        //navigate
+        Navi.goto("voteCloseBattle");
     }
+    //}
+
+    //else { //if not registered
+    //    setOpenRegisterPage(data, "vote");
+    //    // Navi.goto("notRegister");        
+    //}
 }
 
 //send to server the vote
@@ -167,13 +168,13 @@ function setVote(e) {
             //if is single and one was checked - show it
             if (generalParameters.isSingle) {
                 if (numOfVotesThatChecked == 1) {
-                    setWaitVoteClosePage();
+                    setWaitVoteClosePage(data);
                 }
             }
             else {
                 //if is battle and two was checked - show it
                 if (numOfVotesThatChecked == 2) {
-                    setWaitVoteClosePage();
+                    setWaitVoteClosePage(data);
                 }
             }
 
@@ -186,12 +187,12 @@ function setVote(e) {
 }
 
 //set wait result page
-function setWaitVoteClosePage() {
+function setWaitVoteClosePage(data) {
     //if (vote==0){voteNegativeSound.playclip();}
     //else{votePositiveSound.playclip();}
     toggleTopMenu(afterVoteDic);
 
-    $("#vote .continue").slideDown(500);
+    $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
 
 }
 
@@ -206,8 +207,8 @@ function resetAnimations() {
     $('.hate').removeClass('hateShow');
     $('.redArrow').show();
     $('.blueArrow').show();
-    $('.slideLeft').css('left', '-30%');
-    $('.slideRight').css('left', '80%');
+    $('.slideLeft').css('left', '20%');
+    $('.slideRight').css('left', '30%');
 
     $('.redArrow.cont1').removeClass('rotuprcon1');
     $('.slideTopbattle.con1').removeClass('battel1vot');
@@ -215,6 +216,8 @@ function resetAnimations() {
     $('.slideTopbattle.con2,.slideDownbattle.con2').removeClass('hideLcon');
     $('.redArrow.cont1').show();
     $('.hate1').removeClass('showIconCon1');
+    $('.contestant1 .slideDownbattle').css('left', '30%');
+
 
     $('.blueArrow.cont1').removeClass('rotuprcon1');
     $('.slideDownbattle.con1').removeClass('battel1vot');
@@ -222,6 +225,7 @@ function resetAnimations() {
     $('.slideTopbattle.con2,.slideDownbattle.con2').removeClass('hideLcon');
     $('.blueArrow.cont1').show();
     $('.love1').removeClass('showIconCon1');
+    $('.contestant1 .slideTopbattle').css('left', '30%');
 
     $('.redArrow.cont2').removeClass('rotuplcon2');
     $('.slideTopbattle.con2').removeClass('battel2vot');
@@ -229,6 +233,7 @@ function resetAnimations() {
     $('.slideTopbattle.con1,.slideDownbattle.con1').removeClass('hideRcon');
     $('.redArrow.cont2').show();
     $('.hate2').removeClass('showIconCon2');
+    $('.contestant2 .slideDownbattle').css('left', '20%');
 
     $('.blueArrow.cont2').removeClass('rotuplcon2');
     $('.slideDownbattle.con2').removeClass('battel2vot');
@@ -236,4 +241,5 @@ function resetAnimations() {
     $('.slideTopbattle.con1,.slideDownbattle.con1').removeClass('hideRcon');
     $('.blueArrow.cont2').show();
     $('.love2').removeClass('showIconCon2');
+    $('.contestant2 .slideTopbattle').css('left', '20%');
 }

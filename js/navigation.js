@@ -66,6 +66,7 @@ var Navi = {
                 $(".topMenu").show(); //check reut need to remove
                 $('#register').show();
 
+                
                 if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
@@ -80,7 +81,6 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-
                 if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
@@ -101,6 +101,7 @@ var Navi = {
                 $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
+                $("#register .reMesseg .continue").slideDown(500); //text was changed to textWaitVote in setOpenRegisterPage()
                 break;
             case 'WaitVotePage':
                 initWaitAnimation();

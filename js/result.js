@@ -42,7 +42,7 @@ function setResultPage(data) {
         $("#results-img-second").css("background-image", "url('" + secondFields[2] + "')")
         $("#results-comp-name-second").text(secondFields[0]);
         $("#results-song-name-second").text(secondFields[1]);
-
+        
         //wait text
         $("#results-wait-text-battle").text(data.textWaitContinue);
        
