@@ -90,6 +90,8 @@ var Navi = {
                 break;
             case 'notRegister':
                 $(".slidein ").addClass('grey');
+				document.getElementById("grey-slider-text").innerHTML="ההצבעה החלה</br>המתן לביצוע הבא";
+				//$(".slide .btn .drag .ui-draggable .regAnim").hide();
                 //$(".topMenu").hide();
                 $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();

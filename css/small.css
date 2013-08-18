@@ -48,9 +48,9 @@ h2 .songName1,h2 .songName2{
 	margin: 4% auto;
 }
 
-#download-music-text{
-	font-size: 1.2em;
-	top:20%;
+#download-music-text, #gallery .logFb .logFb-text{
+	font-size:14px;
+	/* font-size: 1.2em; */
 }
 
 #loginExtendedBox {/*, #loginRewardBox*/
@@ -72,10 +72,10 @@ h2 .songName1,h2 .songName2{
 	font-size:0.5em;
 }
 
-#gallery .logFb .logFb-text{
+/* #gallery .logFb .logFb-text{
 	font-size:1.2em;
 }
-
+ */
 .logFb, .login, #loginRewardBox .logFb, #loginExtendedBox #loginRewardBox .login {
    height:35px;
 }
@@ -122,7 +122,7 @@ input[type=checkbox] {
 }
 
 .logFb .icon {
-    background-size: 45% 50%;
+    background-size: 45% 60%;
 }
 
 .speker {
@@ -162,12 +162,12 @@ h2 {
 
 #message-no-img-text{
 	font-size:1em;
-	line-height:1.2em;
+/* 	line-height:1.2em; */
 }
 
 .detail {
-    font-size: 0.72em;
-    letter-spacing: 0.08em; 
+    font-size: 0.89em; 
+    /* font-size: 1em; */
     margin-top: 3%;
 }
 
@@ -177,6 +177,11 @@ h2 {
 
 .topMenu {
     line-height: 150%;
+}
+
+.team{
+	background-size: 100% 131%;
+    background-position: center 40%;
 }
 
 header {
@@ -192,7 +197,7 @@ section {
     top: 17%;
     height: 72%;
     left: 5.5%;
-    width: 20.5%;
+/*     width: 20.5%; */
 }
 
 .red .slide {
@@ -258,7 +263,7 @@ section {
 }
 
 #gallery .logFb, #download-music{
-	height:30px;
+	height:28px;
 }
 
 #gallery h2{
@@ -294,11 +299,9 @@ section {
 #message .contIcons{
 	 height:60%;  
 	 width:15%;   
-	 border:1px solid yellow;
 }
 
 .contIcons{
-	 border:1px solid red;
 	 height:70%;  
 	 width:13%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
@@ -310,8 +313,7 @@ section {
     background-image: url(../images/musix_iphone.png);
     background-size: 100% 100%;
     width: 45%;
-    /* margin:0 auto; */
-	left:26%;
+	margin:0 27.5%;
     height: 15%;
     position: absolute;
     bottom: 2.7%;

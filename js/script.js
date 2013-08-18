@@ -156,7 +156,7 @@ function initWaitAnimation() {
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
-        if (pos > -41) {
+        if (pos > -1) {
             pos = -285.25;
         }
         else{
