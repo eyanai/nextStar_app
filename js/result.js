@@ -19,7 +19,6 @@ function setResultPage(data) {
         //percent
         $("#results-perc-single").text(data.votes[0].finalPercent + "%");
          //percent gragh
-        
         $("#results .single .resultScalaL .result").addClass("resultBlue");
         $("#results .single .resultScalaL .scala").addClass("scalaBlue");
          $('.scala').animate({ bottom: '0%' }, 1000, function () {
@@ -70,15 +69,15 @@ function setResultPage(data) {
             $("#results .battle .resultScalaR .result").addClass("resultRed");
             $("#results .battle .resultScalaR .scala").addClass("scalaRed");
 
-             $("#results .battle .resultScalaR .result").removeClass("resultBlue");
+            $("#results .battle .resultScalaR .result").removeClass("resultBlue");
             $("#results .battle .resultScalaR .scala").removeClass("scalaBlue");
         }
        else{
            $("#results .battle .resultScalaR .result").addClass("resultBlue");
-            $("#results .battle .resultScalaR .scala").addClass("scalaBlue");
+           $("#results .battle .resultScalaR .scala").addClass("scalaBlue");
 
-            $("#results .battle .resultScalaR .result").removeClass("resultRed");
-            $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
+           $("#results .battle .resultScalaR .result").removeClass("resultRed");
+           $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
         }
        
         $('.scala').animate({ bottom: '0%' }, 1000, function() {
