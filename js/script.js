@@ -3,13 +3,13 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    attachEventsFacebook(); //check gallery
+    //attachEventsFacebook(); //check gallery
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
 
-    //longPolling(); //check gallery
+    longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
     //initSounds();
@@ -37,9 +37,6 @@ var generalParameters = {
     ruledChecked: false
 }
 
-//var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
-//var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
-var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 
 //dictionary values
 var registerDic = "";
@@ -58,7 +55,7 @@ function pageChange(data) {
             setStaticPage(data);
             break;
         case 21:
-            setOpenRegisterPage(data);
+            setOpenRegisterPage(data,0);
             break;
         case 22:
             setRegisterGoingClose(data);
@@ -154,7 +151,7 @@ function initWaitAnimation() {
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
-        if (pos > -41) {
+        if (pos > -1) {
             pos = -285.25;
         }
         else{

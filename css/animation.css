@@ -402,7 +402,7 @@
         left: -45%;
     }
 }
-/*--------------------------------battel side r -------------------------------*/
+/*--------------------------------battle side r -------------------------------*/
 .rotuprcon1 {
     -webkit-animation: rarrowUpcon1 0.4s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
@@ -455,7 +455,7 @@
     100% {
         right: 0%;
         top: 0%;
-        -webkit-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(-90deg);
     }
 }
 

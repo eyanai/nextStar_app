@@ -1,7 +1,5 @@
 /* CSS Document */
 
-/* CSS Document */
-
 /*=====================================================generel==============================================*/
 
 
@@ -278,6 +276,10 @@ input[type=checkbox] {
 
 #result-gallery ul li{
     margin-right: 6px;
+}
+
+#gallery .logFb .logFb-text{
+	top:25%;
 }
 
 

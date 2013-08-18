@@ -19,7 +19,6 @@ function setResultPage(data) {
         //percent
         $("#results-perc-single").text(data.votes[0].finalPercent + "%");
          //percent gragh
-        
         $("#results .single .resultScalaL .result").addClass("resultBlue");
         $("#results .single .resultScalaL .scala").addClass("scalaBlue");
          $('.scala').animate({ bottom: '0%' }, 1000, function () {
@@ -43,14 +42,56 @@ function setResultPage(data) {
         $("#results-img-second").css("background-image", "url('" + secondFields[2] + "')")
         $("#results-comp-name-second").text(secondFields[0]);
         $("#results-song-name-second").text(secondFields[1]);
-
+        
         //wait text
         $("#results-wait-text-battle").text(data.textWaitContinue);
        
         //percent gragh
-        //if the percent bigger then  - add the red class
-        $("#results .battle .resultScalaR .result").addClass("resultRed");
-        $("#results .battle .resultScalaR .scala").addClass("scalaRed");
+        //if the percent bigger then threshold - add the red class
+            //left checked
+        if(data.votes[0].finalPercent >= data.votes[0].threshold){
+            $("#results .battle .resultScalaR .result").addClass("resultRed");
+            $("#results .battle .resultScalaR .scala").addClass("scalaRed");
+            
+            $("#results .battle .resultScalaR .result").removeClass("resultBlue");
+            $("#results .battle .resultScalaR .scala").removeClass("scalaBlue");
+
+            //set the percent number color
+            $("#results-perc-first").addClass("red");
+        }
+        //else - remove the red class- and the blue class will shown
+        else{
+            $("#results .battle .resultScalaR .result").addClass("resultBlue");
+            $("#results .battle .resultScalaR .scala").addClass("scalaBlue");
+
+            $("#results .battle .resultScalaR .result").removeClass("resultRed");
+            $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
+            
+            //set the percent number color
+            $("#results-perc-first").removeClass("red");
+        }
+             //right checked
+        if(data.votes[1].finalPercent >= data.votes[1].threshold){
+            $("#results .battle .resultScalaL .result").addClass("resultRed");
+            $("#results .battle .resultScalaL .scala").addClass("scalaRed");
+
+            $("#results .battle .resultScalaL .result").removeClass("resultBlue");
+            $("#results .battle .resultScalaL .scala").removeClass("scalaBlue");
+
+            //set the percent number color
+            $("#results-perc-second").addClass("red");
+        }
+       else{
+           $("#results .battle .resultScalaL .result").addClass("resultBlue");
+           $("#results .battle .resultScalaL .scala").addClass("scalaBlue");
+
+           $("#results .battle .resultScalaL .result").removeClass("resultRed");
+           $("#results .battle .resultScalaL .scala").removeClass("scalaRed");
+
+           //set the percent number color
+            $("#results-perc-second").removeClass("red");
+        }
+       
         $('.scala').animate({ bottom: '0%' }, 1000, function() {
             var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
             var bottomSecond =  -1 *(100 - data.votes[1].finalPercent);
@@ -58,9 +99,6 @@ function setResultPage(data) {
             $("#results .battle .resultScalaL .scala").animate({ bottom: bottomSecond + '%' }, 500, function() { });
         });
 
-
-        $("#results .battle .resultScalaL .result").addClass("resultBlue");
-        $("#results .battle .resultScalaL .scala").addClass("scalaBlue");
          //percent
         $("#results-perc-first").text(data.votes[0].finalPercent + "%");
         $("#results-perc-second").text(data.votes[1].finalPercent + "%");
