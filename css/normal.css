@@ -1,5 +1,288 @@
 /* CSS Document */
 
+/* CSS Document */
+
+/*=====================================================generel==============================================*/
+
+
+html, body {
+    /* background-image: url(../images/general-background.jpg); */
+    font-size: 15px;
+    background-repeat: repeat;
+    overflow: scroll;
+}
+
+section {
+    height: 82.8%;
+    top: 11.4%;
+}
+
+.musix {
+    background-image: url(../normal/images/musix_logo.png);
+}
+
+
+.musix {
+    background-image: url(../images/musix_normal.png);
+    background-size: 100% 100%;
+    width: 45%;
+	display:block;
+	left:26%;
+	margin:0 auto;
+    height: 15%;
+}
+
+#login .musix {
+	/* height:12.5%; */
+}
+
+#banner{
+	height:5.8%;
+}
+
+
+/*===========================================horizonal-screen=================================*/
+
+#horizonal-screen {
+    /* background-image: url(../images/horizonal-background.jpg); */
+}
+
+#flip-me {
+    /* background-image: url(../images/flip.png); */
+}
+
+/*================================================HEADER=====================================*/
+
+header {
+    height: 11.3%;
+}
+
+.header.logo {
+    background-image: url(../images/normal/header/kohav_logo_big.png);
+    width: 30%;
+    height: 99%;
+    background-size: 100% 119%;
+}
+
+.live {
+    /*background-image: url(../images/normal/header/kohav_live_sequence1.png);*/
+}
+
+.topMenu {
+	height: 5%;
+top: 11.5%;
+line-height: 2em;
+}
+
+
+/*================================================LOG IN SECTION=====================================*/
+
+#loginExtendedBox {
+    height: 47%;
+	width:66%;
+}
+
+.loginHg .titleLogin{
+	line-height:1.3em;
+}
+
+.facebookArea{
+	width:94%;
+}
+
+.loginBox .logText{
+	display:block;
+	margin:0 auto;
+	top:25%;
+}
+
+.facebookArea .login .logText{
+	display:block;
+	width:47%;
+	margin:0 auto;
+	top:25%;
+}
+
+.logFb, #loginExtendedBox .login, .loginBox{
+	height:57px;
+}
+
+#loginExtendedBox .login{
+	margin-top:3%;
+}
+
+.logFb .icon {
+    background-size: 45% 50%;
+}
+
+#login .checkboxArea{
+	padding:2px 10px 0 0;
+	height: 44%;
+	margin: 4% auto;
+	height:62px;
+}
+
+input[type=checkbox] {
+    margin: 2%;
+	margin-right:4%;
+}
+
+/*===============================================MASSEGE SECTION==============================================*/
+
+.detail{
+	line-height:1.3em;
+	width:83%;
+}
+
+#message-no-img-text{
+	line-height:1.4em;
+	width:80%;
+	font-size:2em;
+}
+
+.continue{
+	width:100%;
+}
+
+
+#message .continue h2{
+	font-size:1.8em;
+	margin-bottom:10px;
+	margin-left:0;
+}
+
+#message .messageNoImage .continue h2{
+	 margin-right:-29%; 
+}
+
+.continue, .reMesseg .continue{
+	margin-top:4%;
+}
+
+.continue h2 {
+    font-size: 2.3em;
+    line-height: 160%;
+}
+
+.messageNoImage .message {
+    height: 35%;
+}
+
+.message, .team{
+	width:86%;
+}
+
+#message .contIcons{
+	 height:23%;  
+	 border:1px solid yellow;
+}
+
+.contIcons{
+	 border:1px solid red;
+	 height:35%;  
+	 width:5.5%;   
+	 background-image: url(../images/masseg/dots_gif_iphone.png);
+	 background-repeat: no-repeat;
+	 vertical-align:middle;
+}
+
+
+/*=============================================REGISTER SECTION===========================================*/
+
+.songName, .songName1, .songName2 {
+    font-size: 0.8em;
+}
+
+
+.songName{
+    position: relative;
+    top: 12%;
+}
+
+.songName h1 {
+    margin-top: 1%;
+}
+
+#registerBattle .slidein{
+    top: 61%;
+}
+/*================================================VOTE SECTION=====================================*/
+
+.slideLeft {
+    background-image: url(../images/normal/votes/kohav_vote_slider_left.png);
+}
+
+.slideRight {
+    background-image: url(../images/votes/slide_pick_right.png);
+}
+
+.contestant1 .slideTopbattle {
+    background-image: url(../images/votes/slide_pick_right.png);
+}
+
+#results #results-perc-first{
+    top: 140%;
+}
+
+#results #results-perc-second{
+    top: 140%;
+}
+
+#results .single .percentage{
+    top:  140%
+}
+
+/*================================================VOTE BATTLE SECTION=====================================*/
+
+
+
+/*=============================================RESULTS SECTION======================================================*/
+
+
+
+/*=======================================================RESULT BATTLE=========================================*/
+
+.resultScalaR {
+    /*     background-color: rgba(0,0,0,0.5);
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
+    position: absolute;
+    top: 14%;
+    right: 2%;
+    overflow: hidden; */
+}
+
+.resultRed {
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 93% 100%;
+}
+
+.scalaRed {
+    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-size: 93% 99%;
+}
+
+.resultRed {
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 93% 100%;
+}
+
+.scalaBlue {
+    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-size: 93% 99%;
+}
+
+
+/*================================================GALLERY SECTION================================================*/
+
+#result-gallery ul li{
+    margin-right: 6px;
+}
+
+
+/* 
+
 .fbText,.logText{
 	font-size:2em;
 }
@@ -42,4 +325,7 @@ margin-top: 1%;
 }
 .swiper-slide {
   width: 390px;
- }
+ } */
+ 
+ 
+ 

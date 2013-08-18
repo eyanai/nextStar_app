@@ -1,12 +1,9 @@
 $(document).ready(function () {
     initAppSize();
-
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
     attachEventsFacebook(); //check gallery
-
-    attachEventsVote();
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
@@ -38,9 +35,6 @@ var generalParameters = {
     isBigSize: false,
     ruledChecked: false
 }
-
-
-var domain = "http://makosrv1.egoline.co.il/application"; //app domain
 
 var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
@@ -154,15 +148,16 @@ function getFielsdByVote(voteData) {
 
 var gifInterval;
 function initWaitAnimation() {
+
     var pos;
     gifInterval = setInterval(function () {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
-        if (pos == 0) {
-            pos = -476;
+        if (pos > -41) {
+            pos = -285.25;
         }
         else{
-            pos = pos * 1 + 68 * 1;
+            pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
     }, 300);    
