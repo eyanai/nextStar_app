@@ -36,9 +36,6 @@ var generalParameters = {
     ruledChecked: false
 }
 
-
-var domain = "http://makosrv1.egoline.co.il/application"; //app domain
-
 var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
 
