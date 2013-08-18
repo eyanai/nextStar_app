@@ -1690,6 +1690,7 @@ margin-bottom: auto;
     margin: 20px auto;
     height: 26%;
     width: 87%;
+    position: relative;
 }
 
 #download-music {
@@ -1716,6 +1717,14 @@ margin-bottom: auto;
 
 #download-music .press {
     opacity: 0.8;
+}
+
+#download-music.inFb{
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 #result-gallery .songName {
@@ -1770,6 +1779,10 @@ margin-bottom: auto;
     opacity: 0.8;
 }
 
+.logFb.inFb{
+    opacity: 0.4;
+    cursor: auto;
+}
 .logFb .icon {
     background-image: url(../images/gallery/fb_icon.png);
     border-left: 1px solid #196085;

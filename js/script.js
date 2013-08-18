@@ -30,15 +30,16 @@ var generalParameters = {
         id: null,
         userName: null,
         gender: null,
-        profilePic: null
+        profilePic: null,
+        showImg:false
     },
     isBigSize: false,
     ruledChecked: false
 }
 
-var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
+//var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
-
+var domain = "http://makosrv1.egoline.co.il/application";//app domain//////////////check fb feed
 
 //dictionary values
 var registerDic = "";
