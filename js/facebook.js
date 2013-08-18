@@ -186,7 +186,7 @@ function saveDataOnServer(str) {
 //start LongPolling
 function startLongPolling(str) {
     //alert("in fb");
- //   longPolling();
+   / longPolling();
 }
 
 
