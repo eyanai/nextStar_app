@@ -9,7 +9,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    longPolling(); //check gallery
+    //longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
     //initSounds();
@@ -30,12 +30,12 @@ var generalParameters = {
         id: null,
         userName: null,
         gender: null,
-        profilePic: null
+        profilePic: null,
+        showImg:false
     },
     isBigSize: false,
     ruledChecked: false
 }
-
 
 
 //dictionary values

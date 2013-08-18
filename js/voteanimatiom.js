@@ -58,11 +58,11 @@ $('.slideTopbattle.con1').draggable({ //R top
     drag: function (event, ui) {
         sR = $(document).width();
         if ($('.slideTopbattle.con1').position().left < 10) {
-            $('.redArrow.cont1').addClass('rotuprcon1');
+            $('.redArrow.cont1').addClass('rotdwnrcon1');
             $('.slideTopbattle.con1').addClass('battel1vot');
             $('.slideDownbattle.con1').addClass('hideRcon');
             //	$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
-            setTimeout(function () { $('.redArrow.cont1.rotuprcon1').hide(); }, 800);
+            setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 800);
             $('.hate1').addClass('showIconCon1');
             setVote(event);
             return false;
@@ -104,11 +104,11 @@ $('.slideTopbattle.con2').draggable({ //left top
     containment:"#lslidecon" ,
     drag: function (event, ui) {
     	if($('.slideTopbattle.con2').position().left>maxwid){
-			$('.redArrow.cont2').addClass('rotuplcon2');
+			$('.redArrow.cont2').addClass('rotdwnlcon2');
 			$('.slideTopbattle.con2').addClass('battel2vot');
 			$('.slideDownbattle.con2').addClass('hideLcon');
 		//	$('.slideTopbattle.con1,.slideDownbattle.con1').addClass('hideRcon');
-			setTimeout(function(){$('.redArrow.cont2.rotuplcon2').hide();},800);
+			setTimeout(function(){$('.redArrow.cont2.rotdwnlcon2').hide();},800);
 			$('.hate2').addClass('showIconCon2');
             setVote(event);
 			return false;

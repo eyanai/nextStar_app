@@ -788,8 +788,8 @@ input[type="checkbox"]:checked + label span {
     top: 62%;*/
 }
 
-.slidein .slider-text {
-    content: "ההצבעה החלה</br>המתן לביצוע הבא";
+#notRegister .slider-text {
+    font-size:1em;
 }
 
 .slidein .grey .btn {
@@ -1151,6 +1151,8 @@ input[type="checkbox"]:checked + label span {
 }
 .hate1 {
     background-image: url(../images/votes/slide_round_red.png);
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
     position: absolute;
     width: 37%;
     height: 100%;
@@ -1163,6 +1165,8 @@ input[type="checkbox"]:checked + label span {
 }
 .hate2 {
     background-image: url(../images/votes/slide_round_red.png);
+	-webkit-transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
     position: absolute;
     width: 37%;
     height: 120px;
@@ -1696,6 +1700,7 @@ margin-bottom: auto;
     margin: 20px auto;
     height: 26%;
     width: 87%;
+    position: relative;
 }
 
 #download-music {
@@ -1722,6 +1727,14 @@ margin-bottom: auto;
 
 #download-music .press {
     opacity: 0.8;
+}
+
+#download-music.inFb{
+    position: absolute;
+top: 0;
+bottom: 0;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 #result-gallery .songName {
@@ -1776,6 +1789,10 @@ margin-bottom: auto;
     opacity: 0.8;
 }
 
+.logFb.inFb{
+    opacity: 0.4;
+    cursor: auto;
+}
 .logFb .icon {
     background-image: url(../images/gallery/fb_icon.png);
     border-left: 1px solid #196085;
