@@ -21,71 +21,67 @@
         <script src="http://makosrv1.egoline.co.il/nextStar/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
-        <!------------------------------------ internal scripts  ------------------------------------------>
-        <script src="js/script.js"></script>
-        <script src="js/facebook.js"></script>
-    </head>
-    <body onorientationchange="updateOrientation();">
-        <div id="horizonal-screen">
-            <div id="flip-me"></div>
-        </div>
-        <header class="hide">
-            <figure class="header logo"></figure>
-            <figure class="live"></figure>
-        </header>
-        <nav class="topMenu">
-            <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
-        </nav>
-        <section id="login">
-            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
-            <figure class="logo login"></figure>
-            <div id="loginExtendedBox">
-                <div id="slide-container">
-                    <hgroup class="loginHg">
-                        <div class="titleLogin">
- לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>
-					התחברו דרך פייסבוק כדי לזכות בפרסים
-                        </div>
-                    </hgroup>
-                    <form name="" action="" method="">
-                        <div class="checkboxArea">
-                            <div id="rules-wrap">
-                                <input type="checkbox" id="rulesCB" />
-                                <label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label>
-                                <span id="notConfirmed">לא אישרת את התקנון!</span></br>
-                            </div>
-                            <input type="checkbox" id="tvImgCB" />
-                            <label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-                        </div>
-                        <div class="facebookArea">
-                            <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-                            <div class="login" onclick="genClickSound.playclip();"><span class="logText">הצביעו ללא פייסבוק</span></div>
-                        </div>
-                    </form>
-                    <div id="loginRewardBox">
-                        <hgroup class="loginHg">
-                            <div class="titleLoginReward">שימו לב! </br>
-						כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם
-                            </div>
-                        </hgroup>
-                        <div class="loginBox">
-                            <div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-                            <div class="login" onclick="genClickSound.playclip();Navi.goto('message');">
-                                <span class="logText">הצבעה ללא פייסבוק</span>
-                            </div>
-                        </div>
-                        <div class="checkboxArea">
-                            <input type="checkbox" id="checkbox3" name="cc" />
-                            <label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="musix"></div>
-        </section>
-        <!---log in section-->
+<!------------------------------------ internal scripts  ------------------------------------------>
+<script src="js/script.js"></script>
+<script src="js/facebook.js"></script>
+</head>
+<body onorientationchange="updateOrientation();">
+<div id="horizonal-screen">
+	<div id="flip-me"></div>
+</div>
+<header class="hide">
+	<figure class="header logo"></figure>
+	<figure class="live"></figure>
+</header>
+<nav class="topMenu">
+	<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
+</nav>
+<section id="login">
+	<div class="nextPage" data-goto="messageWaitingNoImage"></div>
+	<figure class="logo login"></figure>
+	<div id="loginExtendedBox">
+		<div id="slide-container">
+			<hgroup class="loginHg">
+				<div class="titleLogin"> לראשונה בעולם - בכוכב הבא אתם השופטים בזמן אמת שידור חי ובכל ביצוע! </br>
+					התחברו דרך פייסבוק כדי לזכות בפרסים </div>
+			</hgroup>
+			<form name="" action="" method="">
+				<div class="checkboxArea">
+					<div id="rules-wrap">
+						<input type="checkbox" id="rulesCB" />
+						<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label>
+						<span id="notConfirmed">לא אישרת את התקנון!</span></br>
+					</div>
+					<input type="checkbox" id="tvImgCB" />
+					<label for="checkbox2"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+				</div>
+				<div class="facebookArea">
+					<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
+					<div class="login" onclick="genClickSound.playclip();"><span class="logText">הצביעו ללא פייסבוק</span></div>
+				</div>
+			</form>
+			<div id="loginRewardBox">
+				<hgroup class="loginHg">
+					<div class="titleLoginReward">שימו לב! </br>
+						כדי שתוכלו לזכות בפרסים עליכם להכנס עם חשבון הפייסבוק שלכם </div>
+				</hgroup>
+				<div class="loginBox">
+					<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
+					<div class="login" onclick="genClickSound.playclip();Navi.goto('message');"> <span class="logText">הצבעה ללא פייסבוק</span> </div>
+				</div>
+				<div class="checkboxArea">
+					<input type="checkbox" id="checkbox3" name="cc" />
+					<label for="checkbox3"><span></span>רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="musix"></div>
+</section>
+<!---log in section-->
+   
         <section id="message">
-            <div class="nextPage" data-goto="registerSingle"></div>
+            <div class="nextPage" data-goto="registerBattle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -120,7 +116,7 @@
         <section id="register">
                             <!--<div class="nextPage" data-goto="resultsSingle"></div>
                             <div class="nextPage" data-goto="voteBattle"></div>-->
-            <div class="nextPage" data-goto="voteSingle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>
 
             <div class="animat" data-animat="register"></div>
             <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
@@ -146,7 +142,7 @@
                     </div>
                     <div class="songName">
                         <h1 id="register-comp-name-single">דוד לוי</h1>
-                        <h2 id="register-song-name-single">ילדות נשכחת</h2>
+                        <h2 id="register-song-name-single">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחת</h2>
                     </div>
                 </div>
             </div>
@@ -160,7 +156,7 @@
 
                     <!-- <div class="register-stars"><img src="images/register/kohav_bg_slider_iphone.png"/></div>-->
                     <div class="slide btn drag"></div>
-                    <div class="slider-text">כניסה להצבעה</div>
+                    <div id="grey-slider-text" class="slider-text">ההצבעה החלה</br></div>
                 </div>
                 <div id="register-img-first" class="contestant1">
                                             <!--<div class="reMesseg cf">
@@ -192,8 +188,8 @@
                         <figure class="contIcons"></figure>
                     </div>
                     <div class="songName1 songName">
-                        <h1 id="register-comp-name-first">דוד לוי</h1>
-                        <h2 id="register-song-name-first">ילדות נשכחת</h2>
+                        <h1 id="register-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביא</h1>
+                        <h2 id="register-song-name-first">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחת</h2>
 
                     </div>
                     <div class="songName2 songName">
@@ -218,9 +214,9 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="nextPage" data-goto="resultsBattle"></div>
+            <div class="nextPage" data-goto="resultsSingle"></div>
             <div id="voteSingle" class="single">
-                <div class="nextPage" data-goto="resultsBattle"></div>
+                <div class="nextPage" data-goto="resultsSingle"></div>
                 <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>
                                     <!--<nav class="topMenu">
@@ -261,7 +257,7 @@
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="animat animatB1" data-animat="battel1Bad"></div>
                 <div class="animat animatG" data-animat="battel2Good"></div>
@@ -470,7 +466,7 @@
                         <span id="results-perc-second" class="percentage">57%</span>
                     </div>
                     <div class="songName1">
-                        <h1 id="results-comp-name-first">דוד לוי</h1>
+                        <h1 id="results-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביא</h1>
                         <h2 id="results-song-name-first">ילדות נשכחת</h2>
                     </div>
                     <div class="songName2">
@@ -484,7 +480,7 @@
         </section>
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
-            <div class="nextPage" data-goto="messageNoImage"></div>
+            <div class="nextPage" data-goto="messageWithImage"></div>
                             <!--<nav class="topMenu">
                                                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
                                             </nav>-->
@@ -537,7 +533,7 @@
                         <img src="images/gallery/gallery-contestant.jpg" alt="alt">
                         <span class="reMesseg">
                             <div class="songName">
-                                <h1>דוד לביא</h1>
+                                <h1>דוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביא</h1>
                                 <h2>ים של דמעות</h2>
                             </div>
                             <span class="percentage">57%</span>

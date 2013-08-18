@@ -210,7 +210,7 @@ header {
     display: block;
     width: 56%;
     height: 100%;
-    margin: 0 auto;
+    margin: 0 19% 0 23%;
     background-image: url(../images/header/hdr_logo_kohav.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -513,7 +513,7 @@ input[type="checkbox"]:checked + label span {
 .team {
     background-image: url(../images/masseg/team.png);
     background-repeat: no-repeat,no-repeat;
-    background-size: 100% 100%,100% 100%;
+    background-size: 100% 100%;
     background-position: right top, center -150%;
     display: block;
     width: 89%;
@@ -633,6 +633,7 @@ input[type="checkbox"]:checked + label span {
     height: 16%;
     position: absolute;
     bottom: 2.7%;
+    margin:0 27.5%;
 }
 
 .messageNoImage .message {
@@ -720,7 +721,7 @@ input[type="checkbox"]:checked + label span {
 }*/
 
 #registerSingle .slidein {
-    top: 61%;
+    top: 62%;
 }
 
 /*#registerBattle {
@@ -728,7 +729,7 @@ input[type="checkbox"]:checked + label span {
 }*/
 
 #registerBattle .slidein {
-    top: 65%;
+    top: 62%;
 }
 
 .slidein .register-red-flash {
@@ -787,11 +788,11 @@ input[type="checkbox"]:checked + label span {
     top: 62%;*/
 }
 
-.grey .slider-text {
-    content: "אין אוטו";
+.slidein .slider-text {
+    content: "ההצבעה החלה</br>המתן לביצוע הבא";
 }
 
-.slidein.grey .btn {
+.slidein .grey .btn {
     display: none;
 }
 
@@ -873,15 +874,20 @@ input[type="checkbox"]:checked + label span {
     position: relative;
 }
 
-.songName h1 {
-    margin-top: 2%;
-}
-
 .songName, .songName1, .songName2 {
     font-size: 1.5em;
 }
 
 .registerBattle {
+}
+
+.songName h1, .songName h2 {
+	width:80%;
+	margin:0 auto;
+}
+
+.songName h1 {
+    margin-top: 2%;
 }
 
 
