@@ -222,25 +222,30 @@ input[type=checkbox] {
     background-image: url(../images/votes/slide_pick_right.png);
 }
 
-#results #results-perc-first{
-    top: 140%;
-}
-
-#results #results-perc-second{
-    top: 140%;
+#results #results-perc-first, #results #results-perc-second{
+    top: 124%;
 }
 
 #results .single .percentage{
-    top:  140%
+    top:  124%
+}
+
+#results .percentage{
+	font-size:3.5em;
 }
 
 #results .songName1 , #results .songName2{
     text-align: right;
-width: 32%;
-float: right;
+
+    width: 32%;
+
+    padding-right: 1%;
+    float: right;
 }
 #results .songName1 {
     padding-right: 18%;
+    padding-left: 2%;
+    width: 30%;
 }
 
 #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
@@ -271,6 +276,10 @@ float: right;
     overflow: hidden; */
 }
 
+.result{
+	width:37px;
+}
+
 .resultRed {
     /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
     background-size: 93% 100%;
@@ -278,17 +287,17 @@ float: right;
 
 .scalaRed {
     /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 124% 99%;
+    background-size: 0% 100%;
 }
 
-.resultRed {
+.resultBlue {
     /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
     background-size: 93% 100%;
 }
 
 .scalaBlue {
     /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 133% 99%;
+    background-size: 0% 100%;
 }
 
 
@@ -313,7 +322,7 @@ height: auto;
 #gallery .logFb .logFb-text{
 	top: 10%;
 	font-size: 1.6em;
-	width:86%;
+	width:90%;
 }
 
 #gallery h2{
@@ -322,7 +331,7 @@ height: auto;
 }
 
 #download-music{
-    width: 34%;
+    width: 36%;
 display: inline-block;
 float: right;
 }
@@ -342,24 +351,30 @@ float: right;
     right: 9%;
 }
 #gallery .logFb{
-    width: 58.6%;
+    width: 62%;
 display: inline-block;
 height: 33%;
 margin-top: 1.8%;
-left: 5%;
+
+    /* left: 5%; */
 }
 
 .goodbyeBox{
     height: 19%;
-width: auto;
-margin-top: 8%;
-margin-right: 2%;
+
+    width: 96%;
+
+    margin: 8% auto 2%;
+	direction:ltr;
+    /* margin-right: 2%; */
 }
 
 #gallery .checkboxArea{
     position: absolute;
-	width: 58%;
-	padding-left:5%;
+	
+    width: 100%;
+	direction:ltr;
+    /* padding-left:5%; */
 }
 /* 
 
