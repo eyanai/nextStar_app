@@ -1396,6 +1396,7 @@ background-position: center;
 .resultBlue {
     background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
+    background-size: 93% 100%;
 }
 
 .result {
@@ -1416,18 +1417,21 @@ background-position: center;
     /*width: 72%;
     height: 100%;*/
     position: absolute;
-    bottom: -100%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    bottom: -21%;
+   
     
   bottom: 0%;  
 width: 168%;
 height: 105%;
 background-position-x: 251%;
 }
-
+.resultScalaL .scala{
+     left: -19%;
+}
+.resultScalaR .scala
+{
+    right: 14%;
+}
 .divide {
     border-bottom: solid 1px #545454;
     width: 100%;
