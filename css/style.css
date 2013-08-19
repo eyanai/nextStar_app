@@ -765,7 +765,7 @@ input[type="checkbox"]:checked + label span {
     left: 19px;
 }
 
-.slidein .grey {
+.slidein.grey {
     background-image: url(../images/register/signin_slider_grey.png);
     margin: auto;
     /*
