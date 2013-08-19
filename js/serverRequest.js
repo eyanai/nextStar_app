@@ -13,7 +13,7 @@ var domain = "http://makosrv1.egoline.co.il:9090/application";//app domain//////
 
 
 function longPolling() {
-    
+    alert(0);
     pollController = new PollController();
     pollController._setUrl(serverDomain+"type=getStatus");
     pollController._setCallBackFunction(function (data) {
