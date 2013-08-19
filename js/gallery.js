@@ -9,7 +9,7 @@ function gallerySize() {
     var resultGallery = $("#result-gallery").width(); //get the diaplay width
     var singleVoteWidth = resultGallery * 30 / 100; //calculate single width
     var numSingleVotes = $(".gallery-vote-single").width(singleVoteWidth).size(); //set single width and counter single votes
-    var battleVoteWidth = $("#result-gallery").width() * 50 / 100; //calculate battle width
+    var battleVoteWidth = $("#result-gallery").width() * 60 / 100; //calculate battle width
     var numBattleVotes = $(".gallery-vote-battle").width(battleVoteWidth).size(); //set battle width and counter battle votes
     var margin = $("#result-gallery ul li").css("margin-right").slice(0,-2)*1+2;
     //var margin = 4;
@@ -20,6 +20,8 @@ function gallerySize() {
 
 //set gallery page
 function setGalleryPage(data) {
+    $("#result-gallery ul").empty();
+    gallerObj = "";
     var pages = data.pagesOnShow; //all pages in current show
     pages.forEach(function (p) {
         //if this page is a vote and not static page
