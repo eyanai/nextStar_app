@@ -64,6 +64,7 @@ header {
 
 .live {
     /*background-image: url(../images/normal/header/kohav_live_sequence1.png);*/
+	background-size:77% 100%;
 }
 
 .topMenu {
@@ -159,7 +160,15 @@ input[type=checkbox] {
 
 .continue h2 {
     font-size: 1.8em;
-    line-height: 160%;
+    line-height: 168%;
+}
+
+#message .continue h2{
+    line-height: 87%;
+}
+
+.reMesseg .continue h2{
+	height:100%;
 }
 
 .messageNoImage .message {
@@ -189,6 +198,10 @@ input[type=checkbox] {
 
 .songName, .songName1, .songName2 {
     font-size: 0.8em;
+}
+
+.songName1, .songName2 {
+	padding-top:2%;
 }
 
 
@@ -222,34 +235,14 @@ input[type=checkbox] {
     background-image: url(../images/votes/slide_pick_right.png);
 }
 
-#results #results-perc-first, #results #results-perc-second{
-    top: 124%;
+#voteSingle .redArrow{
+	left:-4%;
+	top:5%;
 }
 
-#results .single .percentage{
-    top:  124%
-}
-
-#results .percentage{
-	font-size:3.5em;
-}
-
-#results .songName1 , #results .songName2{
-    text-align: right;
-
-    width: 32%;
-
-    padding-right: 1%;
-    float: right;
-}
-#results .songName1 {
-    padding-right: 18%;
-    padding-left: 2%;
-    width: 30%;
-}
-
-#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
-    margin-right: 0px;
+#voteSingle .blueArrow{
+	right:-3%;
+	top:3%;
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/
@@ -287,19 +280,48 @@ input[type=checkbox] {
 
 .scalaRed {
     /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 0% 100%;
+    background-size: 100% 100%;
 }
 
 .resultBlue {
     /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
-    background-size: 93% 100%;
+    background-size: 100% 100%;
 }
 
 .scalaBlue {
     /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 0% 100%;
+    background-size: 100% 100%;
 }
 
+#results #results-perc-first, #results #results-perc-second{
+    top: 157%;
+}
+
+#results .single .percentage{
+    top:  124%
+}
+
+#results .percentage{
+	font-size:3.5em;
+}
+
+#results .songName1 , #results .songName2{
+    text-align: right;
+	padding-top:2%;
+    width: 32%;
+
+    padding-right: 1%;
+    float: right;
+}
+#results .songName1 {
+    padding-right: 18%;
+    padding-left: 2%;
+    width: 30%;
+}
+
+#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
+    margin-right: 0px;
+}
 
 /*================================================GALLERY SECTION================================================*/
 
@@ -310,6 +332,10 @@ input[type=checkbox] {
 #result-gallery .songName{
     font-size: 0.6em;
 height: auto;
+}
+
+#result-gallery .reMesseg{
+	height:31%;
 }
 
 #gallery .songName h2{
