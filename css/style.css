@@ -1414,11 +1414,16 @@ background-position: center;
 }
 
 .scala {
-    width: 110%;
-    height: 100%;
+    /*width: 72%;
+    height: 100%;*/
     position: absolute;
     bottom: -21%;
    
+    
+  bottom: 0%;  
+width: 168%;
+height: 105%;
+background-position-x: 251%;
 }
 .resultScalaL .scala{
      left: -19%;
