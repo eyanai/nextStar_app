@@ -1129,7 +1129,7 @@ input[type="checkbox"]:checked + label span {
     top: 0%;
     background-repeat: no-repeat;
     background-position: center;
-    right: 1%;
+    right: -3%;
     background-size: 100%;
     opacity: 0;
     z-index: 3;
@@ -1170,11 +1170,11 @@ input[type="checkbox"]:checked + label span {
 	transform: rotateZ(180deg);
     position: absolute;
     width: 37%;
-    height: 120px;
+    height: 100%;
     top: 0;
     background-repeat: no-repeat;
     background-position: center;
-    right: 2%;
+    right: -3%;
     background-size: 100%;
     opacity: 0;
 }
@@ -1240,12 +1240,12 @@ background-position: center;
 
 .slideTopbattle {
     height: 17%;
-    top: 50%;
+    top: 45%;
 }
 
 .slideDownbattle {
     height: 17%;
-    top: 70%;
+    top: 63%;
 }
 
 .contestant1 .slideTopbattle {
@@ -1254,7 +1254,7 @@ background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 30%;
-    background-size: 100%;
+    background-size: 100% 105%;
     background-position: 0 0;
 }
 
@@ -1266,7 +1266,7 @@ background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 30%;
-    background-size: 100%;
+    background-size: 100% 105%;
 }
 
 .contestant1 .slideStay {
@@ -1305,7 +1305,7 @@ background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 20%;
-    background-size: 100%;
+    background-size: 100% 105%;
 }
 
 .contestant2 .slideDownbattle {
@@ -1314,7 +1314,7 @@ background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 20%;
-    background-size: 100%;
+    background-size: 100% 105%;
 }
 
 .contestant1 .love {

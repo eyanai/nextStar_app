@@ -603,6 +603,7 @@
     60% {
         left: 30%;
         background-image: url(../images/votes/slide_pick_right.png);
+        background-image: none;
     }
 
     100% {
