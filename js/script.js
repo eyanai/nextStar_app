@@ -9,7 +9,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-   longPolling(); //check gallery
+  // longPolling(); //check gallery
 
     $("#horizonal-screen").hide();
     //initSounds();
