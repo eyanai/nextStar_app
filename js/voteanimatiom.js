@@ -1,29 +1,29 @@
 // JavaScript Document
 var wid=$(document).width();
-var maxwid=wid/2;
+var maxwid=640/2-1;
 
 $('.slideLeft').draggable({
     stack: ".drag",
     axis: "x",
-    containment:'#slideSingleLeft',
+    containment: '#slideSingleLeft',
     drag: function (event, ui) {
-		console.log($('.slideLeft').css('left'));
+        console.log($('.slideLeft').css('left'));
         if ($('.slideLeft').position().left > maxwid) {
-            $('.blueArrow').addClass('rotupl');
+              $('.blueArrow').addClass('rotupl');
             $('.slideLeft').addClass('songGood');
-            $('.slideRight').addClass('hideR');
-            setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 800);
-            $('.love').addClass('loveShow');
+              $('.slideRight').addClass('hideR');
+              setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 1630);
+              $('.love').addClass('loveShow');
             setVote(event);
             return false;
         };
 
     },
-    stop:function (event, ui) {
-		if($('.slideLeft').position().left < maxwid){
-			$('.slideLeft').animate({left:'20%'},800,function(){});	
-		}
-	}
+    stop: function (event, ui) {
+        if ($('.slideLeft').position().left < maxwid) {
+            $('.slideLeft').animate({ left: '20%' }, 800, function () { });
+        }
+    }
 
 });
 
@@ -36,7 +36,7 @@ $('.slideRight').draggable({
 			$('.redArrow').addClass('rotupr');
 			$('.slideRight').addClass('songBad');
 			$('.slideLeft').addClass('hideL');
-			setTimeout(function(){$('.redArrow.rotupr').hide();},800);
+			setTimeout(function(){$('.redArrow.rotupr').hide();},1630);
 			$('.hate').addClass('hateShow');
             setVote(event);
 			return false;
@@ -57,19 +57,19 @@ $('.slideTopbattle.con1').draggable({ //R top
     containment: "#rslidecon",
     drag: function (event, ui) {
         sR = $(document).width();
-        if ($('.slideTopbattle.con1').position().left < 10) {
+        if ($('.slideTopbattle.con1').position().left < 1) {
             $('.redArrow.cont1').addClass('rotdwnrcon1');
             $('.slideTopbattle.con1').addClass('battel1vot');
             $('.slideDownbattle.con1').addClass('hideRcon');
             //	$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
-            setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 800);
+            setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 830);
             $('.hate1').addClass('showIconCon1');
             setVote(event);
             return false;
         };
     },
     stop: function (event, ui) {
-        if ($('.slideTopbattle.con1').position().left > 10) {
+        if ($('.slideTopbattle.con1').position().left > 1) {
             $('.slideTopbattle.con1').animate({ left: '30%' }, 800, function () { });
         }
     }
@@ -80,7 +80,7 @@ $('.slideDownbattle.con1').draggable({ //R bottom
     axis: "x",
     containment:"#rslidecon" ,
     drag: function (event, ui) {
-		if($('.slideDownbattle.con1').position().left<10){
+		if($('.slideDownbattle.con1').position().left<1){
 			$('.blueArrow.cont1').addClass('rotuprcon1');
 			$('.slideDownbattle.con1').addClass('battel1vot');
 			$('.slideTopbattle.con1').addClass('hideRcon');
@@ -92,7 +92,7 @@ $('.slideDownbattle.con1').draggable({ //R bottom
 		};
 	},
 	stop:function (event, ui) {
-		if($('.slideDownbattle.con1').position().left>10){
+		if($('.slideDownbattle.con1').position().left>1){
 			$('.slideDownbattle.con1').animate({left:'30%'},800,function(){});	
 		}
 	}

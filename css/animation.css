@@ -15,7 +15,7 @@
 }
 
 @-webkit-keyframes liveShow /* Safari and Chrome */ {
-   
+
     0% {
         background-image: url(../images/header/live_0_kohav.png);
     }
@@ -98,58 +98,58 @@
 }
 
 .songGood {
-    -webkit-animation: sinG 0.6s; /* Safari and Chrome */
+    -webkit-animation: sinG 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-    animation: sinG 0.6s;
+    /*-webkit-animation-delay: 2s;
+    animation-delay: 2s;*/
+    animation: sinG 2s;
     animation-fill-mode: forwards;
 }
 
 .songBad {
-    -webkit-animation: sinB 0.6s; /* Safari and Chrome */
+    -webkit-animation: sinB 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s;
-    animation: sinB 0.6s;
+    /*-webkit-animation-delay: 2s;
+    animation-delay: 2s;*/
+    animation: sinB 2s;
     animation-fill-mode: forwards;
 }
 
 .hideR {
-    -webkit-animation: hideR .6s; /* Safari and Chrome */
-    -webkit-animation-delay: .6s;
+    -webkit-animation: hideR 2s; /* Safari and Chrome */
+    -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideR .6s infinite;
-    animation-delay: .6s;
+    animation: hideR 2s infinite;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
 .hideL {
-    -webkit-animation: hideL .6s; /* Safari and Chrome */
-    -webkit-animation-delay: .6s;
+    -webkit-animation: hideL 2s; /* Safari and Chrome */
+    -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideL .6s infinite;
-    animation-delay: .6s;
+    animation: hideL 2s infinite;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
 .loveShow {
-    -webkit-animation: loveShow .2s; /* Safari and Chrome */
-    -webkit-animation-delay: .8s;
+    -webkit-animation: loveShow .5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.9s;
     -webkit-animation-fill-mode: forwards;
     /*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	*/ animation: loveShow .2s;
-    animation-delay: .8s;
+	*/ animation: loveShow .5s;
+    animation-delay: 1.9s;
     animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 
 .hateShow {
-    -webkit-animation: hateShow .2s; /* Safari and Chrome */
-    -webkit-animation-delay: .8s;
+    -webkit-animation: hateShow .5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.9s;
     -webkit-animation-fill-mode: forwards;
     /*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	*/ animation: hateShow .2s;
-    animation-delay: .8s;
+	*/ animation: hateShow .5s;
+    animation-delay: 1.9s;
     animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 
@@ -211,59 +211,93 @@
 
 @-webkit-keyframes sinG {
     0% {
-        left: 320px;
+        left: 50%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/kohav_vote_slider_prs_yes.png),url(../images/votes/slide_pick_left.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    60% {
-        left: 20%;
+    74% {
+        left: 50%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/kohav_vote_slider_prs_yes.png),url(../images/votes/slide_pick_left.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
     80% {
         left: 20%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/slide_pick_left.png),url(../images/votes/kohav_vote_slider_prs_yes.png);*/
         background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    100% {
+    90% {
         left: 20%;
-        background: none;
+        /*background-position: 0%;*/
+        background-image: none;
+    }
+
+    100% {
+        /*background-position: 0%;*/
+        left: 20%;
+        background-image: none;
     }
 }
 
+
+
 @keyframes sinG {
     0% {
-        left: 320px;
+        left: 50%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/kohav_vote_slider_prs_yes.png),url(../images/votes/slide_pick_left.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    60% {
-        left: 20%;
+    74% {
+        left: 50%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/kohav_vote_slider_prs_yes.png),url(../images/votes/slide_pick_left.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
     80% {
         left: 20%;
+        /*background-position: 0%;*/
+        /*background-image: url(../images/votes/slide_pick_left.png),url(../images/votes/kohav_vote_slider_prs_yes.png);*/
         background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    100% {
+    90% {
         left: 20%;
-        background: none;
+        /*background-position: 0%;*/
+        background-image: none;
+    }
+
+    100% {
+        /*background-position: 0%;*/
+        left: 20%;
+        background-image: none;
     }
 }
 
 @-webkit-keyframes sinB {
     0% {
-        left: 10px;
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    60% {
-        left: 30%;
+    74% {
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    65% {
+    80% {
         left: 30%;
         background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    70% {
+    90% {
         left: 30%;
         background-image: none;
     }
@@ -273,22 +307,25 @@
         background-image: none;
     }
 }
+
 
 @keyframes sinB {
     0% {
-        left: 10px;
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    60% {
-        left: 30%;
+    74% {
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    65% {
+    80% {
         left: 30%;
         background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    70% {
+    90% {
         left: 30%;
         background-image: none;
     }
@@ -298,6 +335,7 @@
         background-image: none;
     }
 }
+
 
 @-webkit-keyframes hideR {
     0% {
@@ -344,9 +382,9 @@
         opacity: 0;
     }
 
-    15% {
+    5% {
         opacity: 1;
-        left: 50%;
+        left: 75%;
     }
 
     100% {
@@ -360,9 +398,9 @@
         opacity: 0;
     }
 
-    15% {
+    5% {
         opacity: 1;
-        left: 50%;
+        left: 75%;
     }
 
     100% {
@@ -376,9 +414,9 @@
         opacity: 0;
     }
 
-    15% {
+    5% {
         opacity: 1;
-        left: -35%;
+        left: -45%;
     }
 
     100% {
@@ -392,9 +430,9 @@
         opacity: 0;
     }
 
-    15% {
+    5% {
         opacity: 1;
-        left: -35%;
+        left: -45%;
     }
 
     100% {
@@ -544,39 +582,37 @@
 }
 
 .battel1vot {
-    -webkit-animation: battel1vot .6s; /* Safari and Chrome */
+    -webkit-animation: battel1vot 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-    animation: battel1vot .6s;
+    animation: battel1vot 2s;
     animation-fill-mode: forwards;
 }
 
 .hideLcon {
-    -webkit-animation: hideLcon .6s; /* Safari and Chrome */
-    -webkit-animation-delay: .6s;
+    -webkit-animation: hideLcon 2s; /* Safari and Chrome */
+    -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideLcon .6s infinite;
-    animation-delay: .6s;
+    animation: hideLcon 2s infinite;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
 .hideRcon {
-    -webkit-animation: hideRcon .6s; /* Safari and Chrome */
-    -webkit-animation-delay: .6s;
+    -webkit-animation: hideRcon 2s; /* Safari and Chrome */
+    -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideRcon .6s infinite;
-    animation-delay: .6s;
+    animation: hideRcon 2s infinite;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
- .showIconCon1 {
-    -webkit-animation: showIconCon1 .2s; /* Safari and Chrome */
-     -webkit-animation-delay: .8s;
+.showIconCon1 {
+    -webkit-animation: showIconCon1 .5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.8s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-    animation: showIconCon1 .2s;
-    animation-delay: .8s;
+    animation: showIconCon1 .5s;
+    animation-delay: 1.8s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
@@ -590,7 +626,7 @@
 	-webkit-transform: rotateZ(180deg);
 	transform: rotateZ(180deg);
 }
- */ 
+ */
 @-webkit-keyframes battel1vot {
     0% {
         left: 0px;
@@ -603,7 +639,6 @@
     60% {
         left: 30%;
         background-image: url(../images/votes/slide_pick_right.png);
-        background-image: none;
     }
 
     100% {
@@ -637,7 +672,7 @@
         opacity: 0;
     }
 
-    15% {
+    5% {
         opacity: 1;
         left: 2%;
     }
@@ -673,16 +708,16 @@
     animation-fill-mode: forwards;
 }
 
- .showIconCon2 {
-    -webkit-animation: showIconCon2 .2s; /* Safari and Chrome */ 
-     -webkit-animation-delay: .8s;
+.showIconCon2 {
+    -webkit-animation: showIconCon2 .2s; /* Safari and Chrome */
+    -webkit-animation-delay: .8s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
     animation: showIconCon2 .2s;
     animation-delay: .8s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-} 
+}
 
 @-webkit-keyframes battel2vot {
     0% {
