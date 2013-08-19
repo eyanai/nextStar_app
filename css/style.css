@@ -1413,14 +1413,19 @@ background-position: center;
 }
 
 .scala {
-    width: 72%;
-    height: 100%;
+    /*width: 72%;
+    height: 100%;*/
     position: absolute;
     bottom: -100%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    
+  bottom: 0%;  
+width: 168%;
+height: 105%;
+background-position-x: 251%;
 }
 
 .divide {
