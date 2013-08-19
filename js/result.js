@@ -65,8 +65,8 @@ function setResultPage(data) {
             $("#results .battle .resultScalaR .result").addClass("resultRed");
             $("#results .battle .resultScalaR .scala").addClass("scalaRed");
 
-            $("#results .battle .resultScalaR .result").removeClass("resultRed");
-            $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
+            $("#results .battle .resultScalaR .result").removeClass("resultBlue");
+            $("#results .battle .resultScalaR .scala").removeClass("scalaBlue");
             
             //set the percent number color
             $("#results-perc-first").addClass("red");
