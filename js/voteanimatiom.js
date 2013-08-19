@@ -61,8 +61,7 @@ $('.slideTopbattle.con1').draggable({ //R top
             $('.redArrow.cont1').addClass('rotdwnrcon1');
             $('.slideTopbattle.con1').addClass('battel1vot');
             $('.slideDownbattle.con1').addClass('hideRcon');
-            //	$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
-            setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 830);
+            setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 1630);
             $('.hate1').addClass('showIconCon1');
             setVote(event);
             return false;
@@ -84,8 +83,7 @@ $('.slideDownbattle.con1').draggable({ //R bottom
 			$('.blueArrow.cont1').addClass('rotuprcon1');
 			$('.slideDownbattle.con1').addClass('battel1vot');
 			$('.slideTopbattle.con1').addClass('hideRcon');
-	//		$('.slideTopbattle.con2,.slideDownbattle.con2').addClass('hideLcon');
-			setTimeout(function(){$('.blueArrow.cont1.rotuprcon1').hide();},800);
+			setTimeout(function(){$('.blueArrow.cont1.rotuprcon1').hide();},1630);
 			$('.love1').addClass('showIconCon1');
             setVote(event);
 			return false;
@@ -107,8 +105,7 @@ $('.slideTopbattle.con2').draggable({ //left top
 			$('.redArrow.cont2').addClass('rotdwnlcon2');
 			$('.slideTopbattle.con2').addClass('battel2vot');
 			$('.slideDownbattle.con2').addClass('hideLcon');
-		//	$('.slideTopbattle.con1,.slideDownbattle.con1').addClass('hideRcon');
-			setTimeout(function(){$('.redArrow.cont2.rotdwnlcon2').hide();},800);
+			setTimeout(function(){$('.redArrow.cont2.rotdwnlcon2').hide();},1630);
 			$('.hate2').addClass('showIconCon2');
             setVote(event);
 			return false;
@@ -132,8 +129,7 @@ $('.slideDownbattle.con2').draggable({ //left bottom
 			$('.blueArrow.cont2').addClass('rotuplcon2');
 			$('.slideDownbattle.con2').addClass('battel2vot');
 			$('.slideTopbattle.con2').addClass('hideLcon');
-		//	$('.slideTopbattle.con1,.slideDownbattle.con1').addClass('hideRcon');
-			setTimeout(function(){$('.blueArrow.cont2.rotuplcon2').hide();},800);
+			setTimeout(function(){$('.blueArrow.cont2.rotuplcon2').hide();},1630);
 			$('.love2').addClass('showIconCon2');
             setVote(event);
 			return false;

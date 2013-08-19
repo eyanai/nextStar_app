@@ -965,19 +965,13 @@ input[type="checkbox"]:checked + label span {
 }
 
 
-
-
-
-
-
-
 .redArrow.cont1 {
     position: absolute;
-    left: 0;
+    left: 2%;
     top: -5%;
     -webkit-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg);
-    width: 30%;
+    width: 26%;
 }
 
 .blueArrow.cont2 {
@@ -991,11 +985,11 @@ input[type="checkbox"]:checked + label span {
 
 .redArrow.cont2 {
     position: absolute;
-    right: 0;
+    right: 2%;
     top: -5%;
     -webkit-transform: rotateZ(90deg);
     transform: rotateZ(90deg);
-    width: 30%;
+    width: 26%;
 }
 /*.slideGo:before {
     content: "";
@@ -1120,7 +1114,7 @@ input[type="checkbox"]:checked + label span {
     top: 0%;
     background-repeat: no-repeat;
     background-position: center;
-    right: -3%;
+    right: 2%;
     background-size: 100%;
     opacity: 0;
     z-index: 3;
@@ -1146,7 +1140,7 @@ input[type="checkbox"]:checked + label span {
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
     position: absolute;
-    width: 37%;
+    width: 35%;
     height: 100%;
     top: 0;
     background-repeat: no-repeat;
@@ -1161,12 +1155,12 @@ input[type="checkbox"]:checked + label span {
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
     position: absolute;
-    width: 37%;
+    width: 35%;
     height: 100%;
     top: 0;
     background-repeat: no-repeat;
     background-position: center;
-    right: -3%;
+    right: 2%;
     background-size: 100%;
     opacity: 0;
 }
@@ -1346,19 +1340,17 @@ input[type="checkbox"]:checked + label span {
     top: 14%;
     right: 2%;
     overflow: hidden;
-    
 }
 
 .resultRed {
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
-   background-size: auto 100%;
+    background-size: auto 100%;
 }
 
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
-    
 }
 
 .resultScalaL {
@@ -1378,8 +1370,8 @@ input[type="checkbox"]:checked + label span {
     background-size: 93% 100%;*/
     /*reut add*/
     background-image: url(../images/results/graph_blue_on_kohavNew.png);
-background-repeat: no-repeat;
-background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 }
 
 .result {
@@ -1391,9 +1383,9 @@ background-size: auto 100%;
     top: 1%;*/
     /*reut add*/
     height: 98%;
-position: relative;
-background-position-y: bottom;
-background-position-x: center;
+    position: relative;
+    background-position-y: bottom;
+    background-position-x: center;
 }
 
 .scalaBlue {
@@ -1413,22 +1405,22 @@ width: 168%;
 height: 105%;
 background-position-x: 30%;
 background-position-y: 10%;*/
-    
     /*reut add*/
     height: 98%;
-background-position-x: center;
-background-size: auto 100%;
-bottom: 98%;
-position: relative;
+    background-position-x: center;
+    background-size: auto 100%;
+    bottom: 98%;
+    position: relative;
 }
-.resultScalaL .scala{
-     /*left: -19%;*/
-}
-.resultScalaR .scala
-{
-    /*right: -14%;*/
 
+.resultScalaL .scala {
+    /*left: -19%;*/
 }
+
+.resultScalaR .scala {
+    /*right: -14%;*/
+}
+
 .divide {
     border-bottom: solid 1px #545454;
     width: 100%;
@@ -1474,7 +1466,7 @@ position: relative;
 }
 
 #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
-    width:100%;
+    width: 100%;
     float: right;
     clear: both;
     margin-right: 20%;

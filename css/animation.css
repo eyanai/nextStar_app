@@ -457,7 +457,7 @@
 
     100% {
         left: 0%;
-        top: 0%;
+        top: -10%;
         -webkit-transform: rotateZ(180deg);
     }
 }
@@ -465,7 +465,7 @@
 @keyframes rarrowDwncon1 {
     0% {
         left: 0;
-        top: -5%;
+        top: -10%;
         -webkit-transform: rotateZ(270deg);
     }
 
@@ -520,14 +520,14 @@
 
 @-webkit-keyframes rarrowDwncon2 {
     0% {
-        right: 1%;
+        right: 2%;
         top: -5%;
         -webkit-transform: rotateZ(90deg);
     }
 
     100% {
-        right: 0%;
-        top: 0%;
+        right: 2%;
+        top: -10%;
         -webkit-transform: rotateZ(180deg);
     }
 }
@@ -589,20 +589,20 @@
 }
 
 .hideLcon {
-    -webkit-animation: hideLcon 2s; /* Safari and Chrome */
-    -webkit-animation-delay: 2s;
+    -webkit-animation: hideLcon 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.3s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideLcon 2s infinite;
-    animation-delay: 2s;
+    animation: hideLcon 0.5s infinite;
+    animation-delay: 1.3s;
     animation-fill-mode: forwards;
 }
 
 .hideRcon {
-    -webkit-animation: hideRcon 2s; /* Safari and Chrome */
-    -webkit-animation-delay: 2s;
+    -webkit-animation: hideRcon 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.3s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideRcon 2s infinite;
-    animation-delay: 2s;
+    animation: hideRcon 0.5s infinite;
+    animation-delay: 1.3s;
     animation-fill-mode: forwards;
 }
 
@@ -617,28 +617,26 @@
     animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
-/* .hate1 .showIconCon1 {
-	-webkit-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
-}
-
-.hate2 .showIconCon2 {
-	-webkit-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
-}
- */
 @-webkit-keyframes battel1vot {
     0% {
-        left: 0px;
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    40% {
-        left: 30%;
+    75% {
+        left: 0%;
+        background-image: url(../images/votes/slide_pick_right.png);
     }
 
-    60% {
+    80% {
         left: 30%;
         background-image: url(../images/votes/slide_pick_right.png);
+        /*background-image: url(../images/votes/slide_pick_right.png);*/
+    }
+
+    90% {
+        left: 30%;
+        background-image: none;
     }
 
     100% {
@@ -649,23 +647,32 @@
 
 @keyframes battel1vot {
     0% {
-        left: 0px;
-    }
-
-    40% {
-        left: 30%;
-    }
-
-    60% {
-        left: 30%;
+        left: 50%;
         background-image: url(../images/votes/slide_pick_right.png);
     }
 
+    75% {
+        left: 50%;
+        background-image: url(../images/votes/slide_pick_right.png);
+    }
+
+    80% {
+        left: 20%;
+        background-image: url(../images/votes/slide_pick_right.png);
+        /*background-image: url(../images/votes/slide_pick_right.png);*/
+    }
+
+    90% {
+        left: 20%;
+        background-image: none;
+    }
+
     100% {
-        left: 30%;
+        left: 20%;
         background-image: none;
     }
 }
+
 
 @-webkit-keyframes showIconCon1 {
     0% {
@@ -700,37 +707,45 @@
 }
 /*--------------------------------battel side left -------------------------------*/
 .battel2vot {
-    -webkit-animation: battel2vot .6s; /* Safari and Chrome */
+    -webkit-animation: battel2vot 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-    animation: battel2vot .6s;
+    /*-webkit-animation-delay: 0s;
+    animation-delay: .6s;*/
+    animation: battel2vot 2s;
     animation-fill-mode: forwards;
 }
 
 .showIconCon2 {
-    -webkit-animation: showIconCon2 .2s; /* Safari and Chrome */
-    -webkit-animation-delay: .8s;
+    -webkit-animation: showIconCon2 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.8s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-    animation: showIconCon2 .2s;
-    animation-delay: .8s;
+    animation: showIconCon2 0.5s;
+    animation-delay: 1.8s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
 }
 
 @-webkit-keyframes battel2vot {
     0% {
-        left: 320px;
+        left: 50%;
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    40% {
-        left: 20%;
+    75% {
+        left: 50%;
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    60% {
+    80% {
         left: 20%;
-        /* background-image:url(../images/votes/slide_round_red.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
+        /*background-image: url(../images/votes/slide_pick_right.png);*/
+    }
+
+    90% {
+        left: 20%;
+        background-image: none;
     }
 
     100% {
@@ -741,16 +756,23 @@
 
 @keyframes battel2vot {
     0% {
-        left: 320px;
+        left: 50%;
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    40% {
-        left: 20%;
+    75% {
+        left: 50%;
+        background-image: url(../images/votes/slide_pick_left.png);
     }
 
-    60% {
+    80% {
         left: 20%;
-        /*background-image:url(../images/votes/slide_round_red.png);*/
+        background-image: url(../images/votes/slide_pick_left.png);
+    }
+
+    90% {
+        left: 20%;
+        background-image: none;
     }
 
     100% {
@@ -758,7 +780,6 @@
         background-image: none;
     }
 }
-
 @-webkit-keyframes hideRcon {
     0% {
         left: 30%;
@@ -822,7 +843,7 @@
 
     15% {
         opacity: 1;
-        left: 50%;
+        left: 75%;
     }
 
     100% {
