@@ -19,10 +19,36 @@ function setResultPage(data) {
         //percent
         $("#results-perc-single").text(data.votes[0].finalPercent + "%");
          //percent gragh
-        $("#results .single .resultScalaL .result").addClass("resultBlue");
-        $("#results .single .resultScalaL .scala").addClass("scalaBlue");
-         $('.scala').animate({ bottom: '0%' }, 1000, function () {
-              var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
+      /*  $("#results .single .resultScalaL .result").addClass("resultBlue");
+        $("#results .single .resultScalaL .scala").addClass("scalaBlue");*/
+             //resultBlue resultRed   scalaRed  scalaBlue
+        if(data.votes[0].finalPercent >= data.votes[0].threshold){
+            $("#results .single .resultScalaL .result").addClass("resultBlue");
+            $("#results .single .resultScalaL .scala").addClass("scalaBlue");
+            
+            $("#results .single .resultScalaL .result").removeClass("resultRed");
+            $("#results .single .resultScalaL .scala").removeClass("scalaRed");
+
+            //set the percent number color
+            $("#results-perc-first").removeClass("red");
+        }
+        //else - remove the red class- and the blue class will shown
+        else{
+            $("#results .single .resultScalaL .result").addClass("resultRed");
+            $("#results .single .resultScalaL .scala").addClass("scalaRed");
+
+            $("#results .single .resultScalaL .result").removeClass("resultBlue");
+            $("#results .single .resultScalaL .scala").removeClass("scalaBlue");
+            
+            //set the percent number color
+            $("#results-perc-first").addClass("red");
+        }
+        $('.scala').animate({ bottom: '0%' }, 1000, function () {
+            //var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
+            var bottomFirst = data.votes[0].finalPercent;
+            if (bottomFirst > 98) {
+                bottomFirst = 98;
+            }
             $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 500);
         });
         voteBarsSound.playclip();
@@ -65,8 +91,8 @@ function setResultPage(data) {
             $("#results .battle .resultScalaR .result").addClass("resultRed");
             $("#results .battle .resultScalaR .scala").addClass("scalaRed");
 
-            $("#results .battle .resultScalaR .result").removeClass("resultRed");
-            $("#results .battle .resultScalaR .scala").removeClass("scalaRed");
+            $("#results .battle .resultScalaR .result").removeClass("resultBlue");
+            $("#results .battle .resultScalaR .scala").removeClass("scalaBlue");
             
             //set the percent number color
             $("#results-perc-first").addClass("red");
@@ -94,8 +120,16 @@ function setResultPage(data) {
         }
        
         $('.scala').animate({ bottom: '0%' }, 1000, function() {
-            var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
-            var bottomSecond =  -1 *(100 - data.votes[1].finalPercent);
+
+            var bottomFirst = data.votes[0].finalPercent;
+            if (bottomFirst > 98) {
+                bottomFirst = 98;
+            }
+            var bottomSecond = data.votes[1].finalPercent;
+            if (bottomSecond > 98) {
+                bottomSecond = 98;
+            }
+            
             $("#results .battle .resultScalaR .scala").animate({ bottom: bottomFirst + '%' }, 500, function() { });
             $("#results .battle .resultScalaL .scala").animate({ bottom: bottomSecond + '%' }, 500, function() { });
         });
