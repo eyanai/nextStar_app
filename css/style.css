@@ -356,19 +356,6 @@ input[type=checkbox] {
     margin: 5px;
     width: 1.25em;
     height: 1.25em;
-
-
-
-
-
-
-
-
-
-
-
-
-
     -webkit-border-radius: 0.35em;
     vertical-align: middle;
 }
@@ -616,13 +603,13 @@ input[type="checkbox"]:checked + label span {
 .contIcons {
     background-image: url(../images/masseg/dots_gif.png);
     /* background-position-x: -364px; */
-	/* background-size:767%; */
+    /* background-size:767%; */
     /* width: 10%; */
     /* height: 100%; */
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-	background-position-x: -285.25px;
+    background-position-x: -285.25px;
     /* top: 72%; */
 }
 
@@ -633,7 +620,7 @@ input[type="checkbox"]:checked + label span {
     height: 16%;
     position: absolute;
     bottom: 2.7%;
-    margin:0 27.5%;
+    margin: 0 27.5%;
 }
 
 .messageNoImage .message {
@@ -789,7 +776,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 #notRegister .slider-text {
-    font-size:1em;
+    font-size: 1em;
 }
 
 .slidein .grey .btn {
@@ -882,8 +869,8 @@ input[type="checkbox"]:checked + label span {
 }
 
 .songName h1, .songName h2 {
-	width:80%;
-	margin:0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .songName h1 {
@@ -913,13 +900,13 @@ input[type="checkbox"]:checked + label span {
 
 .slideLeft {
     background-image: url(../images/votes/slide_pick_left.png);
-    background-size: 100% 100%;
-    width: 47%;
-    background-repeat: no-repeat;
+    background-size: 100% 100%,100% 100%;
+    /*background-position: 100%;*/
+    width: 50%;
+    background-repeat: no-repeat,no-repeat;
     position: absolute;
     left: 20%;
     bottom: 25%;
-    background-size: 100% 100%;
     height: 18%;
     z-index: 50;
     cursor: pointer;
@@ -941,70 +928,73 @@ input[type="checkbox"]:checked + label span {
 }
 
 .slideStay {
-    left: -15%;
+    left: -19%;
 }
 
 .slideStay {
     position: relative;
     /*overflow: hidden;*/
 }
+
 .blueArrow {
-	position: absolute;
-	right: 1%;
-	top: 15%;
-	-webkit-transform: rotateZ(90deg);
-	transform: rotateZ(90deg);
-	width: 35%;
-}
-.redArrow{
-
-	position: absolute;
-	left: -10%;
-
-	top: 15%;
-	-webkit-transform: rotateZ(-90deg);
-	transform: rotateZ(-90deg);
-	width: 35%;
-}
-.blueArrow.cont1{
-	position: absolute;
-	right: 1%;
-	top: -5%;
-	-webkit-transform: rotateZ(-90deg);
-	transform: rotateZ(-90deg);
-	width: 30%;
+    position: absolute;
+    right: -5%;
+    top: 15%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 35%;
 }
 
-
-
-
-
-
-
-
-.redArrow.cont1{
-	position: absolute;
-	left: 0;
-	top: -5%;
-	-webkit-transform: rotateZ(-90deg);
-	transform: rotateZ(-90deg);
-	width: 30%;
+.redArrow {
+    position: absolute;
+    left: -23%;
+    top: 20%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 31%;
 }
-.blueArrow.cont2{
-	position: absolute;
-	right: 0;
-	top: -5%;
-	-webkit-transform: rotateZ(90deg);
-	transform: rotateZ(90deg);
-	width: 30%;
+
+.blueArrow.cont1 {
+    position: absolute;
+    right: 1%;
+    top: -5%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 30%;
 }
-.redArrow.cont2{
-	position: absolute;
-	right: 0;
-	top: -5%;
-	-webkit-transform: rotateZ(90deg);
-	transform: rotateZ(90deg);
-	width: 30%;
+
+
+
+
+
+
+
+
+.redArrow.cont1 {
+    position: absolute;
+    left: 0;
+    top: -5%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 30%;
+}
+
+.blueArrow.cont2 {
+    position: absolute;
+    right: 0;
+    top: -5%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 30%;
+}
+
+.redArrow.cont2 {
+    position: absolute;
+    right: 0;
+    top: -5%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 30%;
 }
 /*.slideGo:before {
     content: "";
@@ -1058,7 +1048,7 @@ input[type="checkbox"]:checked + label span {
 .slideRight {
     background-image: url(../images/votes/slide_pick_right.png);
     background-size: 100% 100%;
-    width: 47%;
+    width: 50%;
     height: 20%;
     background-repeat: no-repeat;
     position: absolute;
@@ -1094,7 +1084,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 .love {
-    background-image:url(../images/votes/slide_round_pick.png);
+    background-image: url(../images/votes/slide_round_pick.png);
     position: absolute;
     width: 50%;
     height: 100%;
@@ -1106,8 +1096,9 @@ input[type="checkbox"]:checked + label span {
     opacity: 0;
     z-index: 3;
 }
+
 .love1 {
-    background-image:url(../images/votes/slide_round_pick.png);
+    background-image: url(../images/votes/slide_round_pick.png);
     position: absolute;
     width: 37%;
     height: 100%;
@@ -1121,7 +1112,7 @@ input[type="checkbox"]:checked + label span {
 }
 
 .love2 {
-    background-image:url(../images/votes/slide_round_pick.png);
+    background-image: url(../images/votes/slide_round_pick.png);
     position: absolute;
     width: 37%;
     height: 100%;
@@ -1145,14 +1136,14 @@ input[type="checkbox"]:checked + label span {
     background-position: center;
     left: -35%;
     background-size: 100% 100%;
-     
-    opacity: 0; 
+    opacity: 0;
     z-index: 1;
 }
+
 .hate1 {
     background-image: url(../images/votes/slide_round_red.png);
-	-webkit-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
     position: absolute;
     width: 37%;
     height: 100%;
@@ -1163,10 +1154,11 @@ input[type="checkbox"]:checked + label span {
     background-size: 100%;
     opacity: 0;
 }
+
 .hate2 {
     background-image: url(../images/votes/slide_round_red.png);
-	-webkit-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
     position: absolute;
     width: 37%;
     height: 100%;
@@ -1184,9 +1176,8 @@ input[type="checkbox"]:checked + label span {
     width: 50%;
     height: 100%;
     float: right;
-    
-    background-size:auto 100% ;
-background-position: center;
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .contestant2 {
@@ -1195,8 +1186,8 @@ background-position: center;
     width: 50%;
     height: 100%;
     float: left;
-    background-size:auto 100% ;
-background-position: center;
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .songName1 {
@@ -1249,7 +1240,7 @@ background-position: center;
 
 .contestant1 .slideTopbattle {
     background-image: url(../images/votes/slide_pick_right.png);
-    width: 47%;
+    width: 50%;
     background-repeat: no-repeat;
     position: absolute;
     left: 30%;
@@ -1259,9 +1250,7 @@ background-position: center;
 
 .contestant1 .slideDownbattle {
     background-image: url(../images/votes/slide_pick_right.png);
-
-
-    width: 47%;
+    width: 50%;
     background-repeat: no-repeat;
     position: absolute;
     left: 30%;
@@ -1300,7 +1289,7 @@ background-position: center;
 
 .contestant2 .slideTopbattle {
     background-image: url(../images/votes/slide_pick_left.png);
-    width: 47%;
+    width: 50%;
     background-repeat: no-repeat;
     position: absolute;
     left: 20%;
@@ -1309,7 +1298,7 @@ background-position: center;
 
 .contestant2 .slideDownbattle {
     background-image: url(../images/votes/slide_pick_left.png);
-    width: 47%;
+    width: 50%;
     background-repeat: no-repeat;
     position: absolute;
     left: 20%;
@@ -1473,7 +1462,6 @@ background-position: center;
     margin-right: 20%;
     overflow: hidden;
     white-space: nowrap;
-
     text-overflow: ellipsis;
 }
 
@@ -1508,7 +1496,6 @@ background-position: center;
 
 #results .red {
     color: #ff0060;
-    
     color: #ff0060;
 }
 /*================================================GALLERY SECTION================================================*/
@@ -1648,10 +1635,10 @@ background-position: center;
 .gallery-vote-single img {
     width: 100%;
     position: absolute;
-top: 0;
-bottom: 0;
-margin-top: auto;
-margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #result-gallery .reMesseg {
@@ -1668,8 +1655,8 @@ margin-bottom: auto;
 
 #result-gallery .percentage {
     font-size: 1.5em;
-    display:block;
-	margin:7% auto 1%;
+    display: block;
+    margin: 7% auto 1%;
     float: none;
 }
 
@@ -1679,11 +1666,11 @@ margin-bottom: auto;
 .gallery-vote-battle img {
     width: 100%;
     position: absolute;
-top: 0;
-bottom: 0;
-margin-top: auto;
-margin-bottom: auto;
-height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
 }
 
 .gallery-vote-battle .vote-1 {
@@ -1733,12 +1720,12 @@ height: 100%;
     opacity: 0.8;
 }
 
-#download-music.inFb{
+#download-music.inFb {
     position: absolute;
-top: 0;
-bottom: 0;
-margin-top: auto;
-margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #result-gallery .songName {
@@ -1793,10 +1780,11 @@ margin-bottom: auto;
     opacity: 0.8;
 }
 
-.logFb.inFb{
+.logFb.inFb {
     opacity: 0.4;
     cursor: auto;
 }
+
 .logFb .icon {
     background-image: url(../images/gallery/fb_icon.png);
     border-left: 1px solid #196085;
@@ -1822,7 +1810,7 @@ margin-bottom: auto;
     position: relative;
     width: 83%;
     height: 9.3%;
-	vertical-align:middle;
+    vertical-align: middle;
 }
 
 
@@ -1897,30 +1885,34 @@ margin-bottom: auto;
     display: none;
 }*/
 
-#slideSingleRight{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 50%;
+#slideSingleRight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
 }
-#slideSingleLeft{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: -50%;
+
+#slideSingleLeft {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
 }
-#rslidecon{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	right: -50%;
+
+#rslidecon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -50%;
 }
-#lslidecon{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: -50%;
+
+#lslidecon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
 }
-.bgLeft{
-	position:absolute;
+
+.bgLeft {
+    position: absolute;
 }

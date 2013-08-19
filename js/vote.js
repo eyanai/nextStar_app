@@ -210,7 +210,7 @@ function resetAnimations() {
     $('.slideLeft').css('left', '20%');
     $('.slideRight').css('left', '30%');
 
-    $('.redArrow.cont1').removeClass('rotuprcon1');
+    $('.redArrow.cont1').removeClass('rotdwnrcon1');
     $('.slideTopbattle.con1').removeClass('battel1vot');
     $('.slideDownbattle.con1').removeClass('hideRcon');
     $('.slideTopbattle.con2,.slideDownbattle.con2').removeClass('hideLcon');
@@ -227,7 +227,7 @@ function resetAnimations() {
     $('.love1').removeClass('showIconCon1');
     $('.contestant1 .slideTopbattle').css('left', '30%');
 
-    $('.redArrow.cont2').removeClass('rotuplcon2');
+    $('.redArrow.cont2').removeClass('rotdwnlcon2');
     $('.slideTopbattle.con2').removeClass('battel2vot');
     $('.slideDownbattle.con2').removeClass('hideLcon');
     $('.slideTopbattle.con1,.slideDownbattle.con1').removeClass('hideRcon');
