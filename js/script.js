@@ -3,7 +3,7 @@ $(document).ready(function () {
     //init the dictionary values
     initDictionaryValues();
     checkRulesChecked();
-    //attachEventsFacebook(); //check gallery
+    attachEventsFacebook(); //check gallery
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
