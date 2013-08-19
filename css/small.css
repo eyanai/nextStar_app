@@ -99,7 +99,7 @@ h2 .songName1,h2 .songName2{
 }
 
 .continue h2 {
-    font-size: 0.7em;
+    font-size: 0.95em;
 }
 
 .topMenu {
@@ -160,7 +160,7 @@ h2 {
 }
 
 .contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay{
-	top:16%;
+	top: 22%;
 }
 
 .message .continue h2 {
