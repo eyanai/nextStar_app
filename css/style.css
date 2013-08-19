@@ -788,6 +788,9 @@ input[type="checkbox"]:checked + label span {
     left: 21%;
     top: 62%;*/
 }
+.slidein.grey .slider-text{
+    font-size: 0.8em;
+}
 
 #notRegister .slider-text {
     font-size:1em;
