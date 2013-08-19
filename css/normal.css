@@ -312,7 +312,8 @@ height: auto;
 }
 #gallery .logFb .logFb-text{
 	top: 10%;
-font-size: 1.6em;
+	font-size: 1.6em;
+	width:86%;
 }
 
 #gallery h2{
