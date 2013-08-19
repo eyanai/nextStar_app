@@ -168,12 +168,13 @@ function setRegister() {
 //set wait vote page
 function setWaitVotePage(data) {
 
-    //if (data.length == 0) {
-    //    $("#register .continue h2").text(data.textWaitVote); //take the value from dictionary
-    //    Navi.goto("notRegister");
-    //}
+    if (data.length == 0) {
+        console.log("no data was received");
+        $("#register .continue h2").text("ממתין לסגירת ההצבעה");
+        Navi.goto("notRegister");
+    }
 
-    //else {
+    else {
 
         Navi.goto("WaitVotePage");
         generalParameters.voteIdA = data[0].voteId;
@@ -183,5 +184,5 @@ function setWaitVotePage(data) {
             generalParameters.voteKeyB = data[1].voteKey;
         }
         generalParameters.isRegistered = true;
-    //}
+    }
 };
