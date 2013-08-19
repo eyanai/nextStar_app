@@ -1357,29 +1357,19 @@ background-position: center;
     top: 14%;
     right: 2%;
     overflow: hidden;
+    
 }
 
 .resultRed {
     background-image: url(../images/results/graph_Red_off_kohav.png);
     background-repeat: no-repeat;
-    width: 72%;
-    height: 98%;
-    margin: auto;
-    position: relative;
-    top: 1%;
+   background-size: auto 100%;
 }
 
 .scalaRed {
     background-image: url(../images/results/graph_Red_on_kohav.png);
     background-repeat: no-repeat;
-    width: 72%;
-    height: 100%;
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .resultScalaL {
@@ -1394,18 +1384,27 @@ background-position: center;
 }
 
 .resultBlue {
-    background-image: url(../images/results/graph_blue_off_kohav.png);
+    /*background-image: url(../images/results/graph_blue_off_kohav.png);
     background-repeat: no-repeat;
-    background-size: 93% 100%;
+    background-size: 93% 100%;*/
+    /*reut add*/
+    background-image: url(../images/results/graph_blue_on_kohavNew.png);
+background-repeat: no-repeat;
+background-size: auto 100%;
 }
 
 .result {
-    width: 72%;
+    /*width: 72%;
     width: 72%;
     height: 98%;
     margin: auto;
     position: relative;
-    top: 1%;
+    top: 1%;*/
+    /*reut add*/
+    height: 98%;
+position: relative;
+background-position-y: bottom;
+background-position-x: center;
 }
 
 .scalaBlue {
@@ -1416,21 +1415,30 @@ background-position: center;
 .scala {
     /*width: 72%;
     height: 100%;*/
-    position: absolute;
+    /*position: absolute;
     bottom: -21%;
    
     
-  bottom: 0%;  
+  bottom: -6%;  
 width: 168%;
 height: 105%;
-background-position-x: 251%;
+background-position-x: 30%;
+background-position-y: 10%;*/
+    
+    /*reut add*/
+    height: 98%;
+background-position-x: center;
+background-size: auto 100%;
+bottom: 98%;
+position: relative;
 }
 .resultScalaL .scala{
-     left: -19%;
+     /*left: -19%;*/
 }
 .resultScalaR .scala
 {
-    right: 14%;
+    /*right: -14%;*/
+
 }
 .divide {
     border-bottom: solid 1px #545454;
@@ -1453,11 +1461,11 @@ background-position-x: 251%;
 }
 
 #results .single .resultRed {
-    display: none;
+    /*display: none;*/
 }
 
 #results .single .scalaRed {
-    display: none;
+    /*display: none;*/
 }
 /*=======================================================RESULT BATTLE=========================================*/
 #results .divideH {
