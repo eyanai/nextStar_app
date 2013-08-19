@@ -3,7 +3,7 @@
 ////var serverDomain = "http://192.168.2.108:8080/nextStarQA/userjson?type=getStatus";
 //var serverDomain = 'http://makosrv1.egoline.co.il/nextStar/userjson?';
 ////var serverDomain = "http://makosrv1.egoline.co.il/nextStarTestA/userjson?";
-var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestE/userjson?";
+var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 
 
 var domain = "http://makosrv1.egoline.co.il:9090/application";//app domain//////////////check fb feed
