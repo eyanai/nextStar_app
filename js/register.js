@@ -1,6 +1,6 @@
 var voteIdA, voteKeyA, voteIdB, voteKeyB;
 
-
+var registerTextHtml = "<span>כ</span><span>נ</span><span>י</span><span>ס</span><span>ה</span> <span>ל</span><span>ה</span><span>צ</span><span>ב</span><span>ע</span><span>ה</span>";
 //set register page
 function setOpenRegisterPage(data, from) {
     generalParameters.isRegistered = false;
@@ -8,7 +8,7 @@ function setOpenRegisterPage(data, from) {
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
     $(".slide").css("left", "5.5%");
-    $(".slider-text").text("כניסה להצבעה");
+    $(".slider-text").html(registerTextHtml);
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
@@ -186,3 +186,43 @@ function setWaitVotePage(data) {
         generalParameters.isRegistered = true;
     }
 };
+
+var index =0;
+var registerWishTextInterval;
+function initWishText(sliderObj){
+    index =0;
+    
+   // $(sliderObj).html(registerTextHtml);
+    var spanArray =  $(sliderObj).children("span");
+
+    setTimeout(function(){
+            addWishToLettet(spanArray);
+        },200);
+      
+}
+
+function addWishToLettet(spanArrayTemp){
+    $(spanArrayTemp[index]).addClass("wish");
+    if(index>0){
+         $(spanArrayTemp[index-1]).removeClass("wish");
+    }
+    
+    index++;
+    if(index < spanArrayTemp.length){
+          setTimeout(function(){
+            addWishToLettet(spanArrayTemp);
+        },100);
+      
+    }
+    else{
+         setTimeout(function(){
+            $(spanArrayTemp[index-1]).removeClass("wish");
+        },200);
+        
+    }
+}
+
+function clearRegisterWishTextInterval(){
+    
+    clearInterval(registerWishTextInterval);
+}
