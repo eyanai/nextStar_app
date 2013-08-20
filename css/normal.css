@@ -19,6 +19,9 @@ section {
     background-image: url(../normal/images/musix_logo.png);
 }
 
+#login .musix {
+	bottom:0%;
+}
 
 .musix {
     background-image: url(../images/musix_normal.png);
@@ -27,12 +30,10 @@ section {
 	display:block;
 	left:26%;
 	margin:0 auto;
-    height: 15%;
+    height: 130px;
+	bottom:5%;
 }
 
-#login .musix {
-	/* height:12.5%; */
-}
 
 #banner{
 	height:5.8%;
