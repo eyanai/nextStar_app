@@ -19,6 +19,9 @@ section {
     background-image: url(../normal/images/musix_logo.png);
 }
 
+#login .musix {
+	bottom:0%;
+}
 
 .musix {
     background-image: url(../images/musix_normal.png);
@@ -27,12 +30,10 @@ section {
 	display:block;
 	left:26%;
 	margin:0 auto;
-    height: 15%;
+    height: 130px;
+	bottom:5%;
 }
 
-#login .musix {
-	/* height:12.5%; */
-}
 
 #banner{
 	height:5.8%;
@@ -56,14 +57,15 @@ header {
 }
 
 .header.logo {
-    background-image: url(../images/normal/header/kohav_logo_big.png);
-    width: 30%;
+/*     background-image: url(../images/normal/header/kohav_logo_big.png);
+    width: 30%; */
     height: 99%;
     background-size: 100% 119%;
 }
 
 .live {
     /*background-image: url(../images/normal/header/kohav_live_sequence1.png);*/
+	background-size:77% 100%;
 }
 
 .topMenu {
@@ -159,7 +161,15 @@ input[type=checkbox] {
 
 .continue h2 {
     font-size: 1.8em;
-    line-height: 160%;
+    line-height: 168%;
+}
+
+#message .continue h2{
+    line-height: 87%;
+}
+
+.reMesseg .continue h2{
+	height:100%;
 }
 
 .messageNoImage .message {
@@ -167,16 +177,14 @@ input[type=checkbox] {
 }
 
 .message, .team{
-	width:86%;
+	width:84%;
 }
 
 #message .contIcons{
 	 height:23%;  
-	 border:1px solid yellow;
 }
 
 .contIcons{
-	 border:1px solid red;
 	 height:35%;  
 	 width:5.5%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
@@ -189,6 +197,10 @@ input[type=checkbox] {
 
 .songName, .songName1, .songName2 {
     font-size: 0.8em;
+}
+
+.songName1, .songName2 {
+	padding-top:2%;
 }
 
 
@@ -222,29 +234,14 @@ input[type=checkbox] {
     background-image: url(../images/votes/slide_pick_right.png);
 }
 
-#results #results-perc-first{
-    top: 140%;
+#voteSingle .redArrow{
+	left:-4%;
+	top:5%;
 }
 
-#results #results-perc-second{
-    top: 140%;
-}
-
-#results .single .percentage{
-    top:  140%
-}
-
-#results .songName1 , #results .songName2{
-    text-align: right;
-width: 32%;
-float: right;
-}
-#results .songName1 {
-    padding-right: 18%;
-}
-
-#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
-    margin-right: 0px;
+#voteSingle .blueArrow{
+	right:-3%;
+	top:3%;
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/
@@ -271,26 +268,59 @@ float: right;
     overflow: hidden; */
 }
 
+.result{
+	width:37px;
+}
+
 .resultRed {
     /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
     background-size: 93% 100%;
 }
 
 .scalaRed {
-    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 124% 99%;
+    background-image: url(../images/normal/results/glow_graph_ipad_red.png);
+    background-size: 100% 100%;
 }
 
-.resultRed {
+.resultBlue {
     /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
-    background-size: 93% 100%;
+    background-size: 100% 100%;
 }
 
 .scalaBlue {
-    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
-    background-size: 133% 99%;
+    background-image: url(../images/normal/results/glow_graph_ipad_blue.png);
+    background-size: 100% 100%;
 }
 
+#results #results-perc-first, #results #results-perc-second{
+    top: 157%;
+}
+
+#results .single .percentage{
+    top:  124%
+}
+
+#results .percentage{
+	font-size:3.5em;
+}
+
+#results .songName1 , #results .songName2{
+    text-align: right;
+	padding-top:2%;
+    width: 32%;
+
+    padding-right: 1%;
+    float: right;
+}
+#results .songName1 {
+    padding-right: 18%;
+    padding-left: 2%;
+    width: 30%;
+}
+
+#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
+    margin-right: 0px;
+}
 
 /*================================================GALLERY SECTION================================================*/
 
@@ -303,6 +333,10 @@ float: right;
 height: auto;
 }
 
+#result-gallery .reMesseg{
+	height:31%;
+}
+
 #gallery .songName h2{
     margin-top: 0%;
 }
@@ -312,7 +346,8 @@ height: auto;
 }
 #gallery .logFb .logFb-text{
 	top: 10%;
-font-size: 1.6em;
+	font-size: 1.6em;
+	width:90%;
 }
 
 #gallery h2{
@@ -321,7 +356,7 @@ font-size: 1.6em;
 }
 
 #download-music{
-    width: 34%;
+    width: 36%;
 display: inline-block;
 float: right;
 }
@@ -341,24 +376,30 @@ float: right;
     right: 9%;
 }
 #gallery .logFb{
-    width: 58.6%;
+    width: 62%;
 display: inline-block;
 height: 33%;
 margin-top: 1.8%;
-left: 5%;
+
+    /* left: 5%; */
 }
 
 .goodbyeBox{
     height: 19%;
-width: auto;
-margin-top: 8%;
-margin-right: 2%;
+
+    width: 96%;
+
+    margin: 8% auto 2%;
+	direction:ltr;
+    /* margin-right: 2%; */
 }
 
 #gallery .checkboxArea{
     position: absolute;
-	width: 58%;
-	padding-left:5%;
+	
+    width: 100%;
+	direction:ltr;
+    /* padding-left:5%; */
 }
 /* 
 
