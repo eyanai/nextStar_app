@@ -7,7 +7,7 @@ var myLocation = domain+"/index.html";//domain
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
-//localStorage.setItem('fbStorage', "");
+localStorage.setItem('fbStorage', "");
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
