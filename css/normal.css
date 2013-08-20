@@ -57,8 +57,8 @@ header {
 }
 
 .header.logo {
-    background-image: url(../images/normal/header/kohav_logo_big.png);
-    width: 30%;
+/*     background-image: url(../images/normal/header/kohav_logo_big.png);
+    width: 30%; */
     height: 99%;
     background-size: 100% 119%;
 }
@@ -177,16 +177,14 @@ input[type=checkbox] {
 }
 
 .message, .team{
-	width:86%;
+	width:84%;
 }
 
 #message .contIcons{
 	 height:23%;  
-	 border:1px solid yellow;
 }
 
 .contIcons{
-	 border:1px solid red;
 	 height:35%;  
 	 width:5.5%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
@@ -280,7 +278,7 @@ input[type=checkbox] {
 }
 
 .scalaRed {
-    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-image: url(../images/normal/results/glow_graph_ipad_red.png);
     background-size: 100% 100%;
 }
 
@@ -290,7 +288,7 @@ input[type=checkbox] {
 }
 
 .scalaBlue {
-    /*background-image: url(../images/normal/results/graph_Red_on_kohav.png);*/
+    background-image: url(../images/normal/results/glow_graph_ipad_blue.png);
     background-size: 100% 100%;
 }
 
