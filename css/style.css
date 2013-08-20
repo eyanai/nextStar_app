@@ -887,6 +887,7 @@ input[type="checkbox"]:checked + label span {
 .songName h1, .songName h2 {
     width: 80%;
     margin: 0 auto;
+	line-height:130%;
 }
 
 .songName h1 {
