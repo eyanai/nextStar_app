@@ -9,8 +9,8 @@ $(document).ready(function() {
     initMoveEvents();
     //initWaitAnimation();
 
-    // longPolling(); //check gallery
-    $("body").on("start-app", longPolling);
+   ///longPolling(); //check gallery
+
     $("#horizonal-screen").hide();
     //initSounds();
 
