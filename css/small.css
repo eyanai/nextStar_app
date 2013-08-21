@@ -1,3 +1,7 @@
+html,body{
+	  /* font-size:15px; */ /*andrd */
+}
+
 .header.logo{
 	height:120%;
 }
@@ -21,7 +25,7 @@
 
 .facebookArea .login .logText{
 	display:block;
-	width:42%;
+	width:50%;
 	margin:0 auto;
 	top:25%;
 }
@@ -35,32 +39,47 @@ h1, .facebookArea , .logFb, .logText {
 }
 
 #result-gallery .songName, #result .songName{
-	font-size: 0.8em;
+	font-size: 0.77em;
 	height:auto;
 } 
 
 .songName h1, .songName h2{
+	/* line-height:120%;
+	width:82%;
+}
+ */
+/* #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{ */
+	width:82%;
+	padding-right:9%;
+	margin-right:0%;
+	font-size:0.7em;
 	line-height:120%;
 }
 
-#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
-	width:94%;
-	padding-right:3%;
-	margin-right:0%;
+.songName h1{
+	margin-top:1.7%;
 }
 
-h1 .songName1,h1 .songName2{
+/* h1 .songName1,h1 .songName2{
 	font-size: 1em;
 } 
 
 h2 .songName1,h2 .songName2{
 	font-size: 1em;
 } 
+ */
+#loginRewardBox.checkboxArea{
+	padding:40px 10px 0 0;
+}
+
+#loginRewardBox .loginBox{
+	margin:8% auto;
+}
 
 #login .checkboxArea{
 	padding:2px 10px 0 0;
-	height: 44%;
-	margin: 4% auto;
+	min-height: 36%;
+	margin: 2% auto;
 }
 
 #download-music-text, #gallery .logFb .logFb-text{
@@ -73,10 +92,11 @@ h2 .songName1,h2 .songName2{
 }
 
 #loginExtendedBox {/*, #loginRewardBox*/
-    height: 50%;
+    height: 52%;
     position: relative;
     top: 0%;
     margin: 4% auto;
+	/*background:#ccc; andrd */
 }
 
 #loginExtendedBox .logFb .logFb-text{
@@ -127,11 +147,17 @@ h2 .songName1,h2 .songName2{
 
 #result-gallery h1, #result-gallery h2{
 	line-height:120%;
+	margin:0% auto;
+}
+
+#loginRewardBox .checkboxArea  {
+		margin:18% auto 2%;
 }
 
 .checkboxArea  {
 	height:62px;
 }
+
 
 label[for="checkbox1"], label[for="checkbox2"], label[for="checkbox3"], label[for="checkbox4"]{
     /* font-size: 1em; */
@@ -232,8 +258,13 @@ section {
 }
 
 .slide {
+<<<<<<< HEAD
     background-size: 100% 100%;
     top: 17%;
+=======
+    /*background-size: 100% 100%;
+    top: 16.8%;
+>>>>>>> 63b7af679da178855f13a3d7a7384297c77bb39e
     height: 72%;
     left: 5.5%;
 /*     width: 20.5%; */
@@ -278,11 +309,11 @@ section {
     font-size: 108%;
 }
 
-#results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
+/* #results-song-name-single, #results-comp-name-first, #results-song-name-second, #results-comp-name-second {
     width: 50%;
     margin: auto;
     font-size: 0.6em;
-}
+} */
 
 #results .divideH .waiting-high {
     height: 69.3%;
@@ -305,22 +336,24 @@ section {
 	height:28px;
 }
 
-#gallery h2{
-	margin:10% 0 2%;
+#gallery-title h2{
+	margin-top:10%;
 }
 
-#result-gallery h2{
-	margin:0% auto;
+#gallery-title{
+	margin:10% 0 0%;
 }
 
 #result-gallery{
-	height:39%;
+	height:38%;
 	font-size:1.2em;
+	margin:3% auto 1%;
 }
 
 #result-gallery .percentage{
 	width:20%;
 	font-size:0.7em;
+	margin:2% auto 1%;
 }
 
 #result-gallery .reMesseg{
@@ -339,19 +372,19 @@ section {
 	margin-right:0px;
 	float:right;
 	direction:ltr;
-	width:82%;
+	min-width:83%;/* andrd */
 }
 #checkbox4{
 	margin-right:0px;
 }
 
 #message .contIcons{
-	 height:60%;  
-	 width:15%;   
+	 height:72%;  
+	 width:16%;   
 }
 
 .contIcons{
-	 height:70%;  
+	 height:72%;  
 	 width:13%;   
 	 background-image: url(../images/masseg/dots_gif_iphone.png);
 	 background-repeat: no-repeat;

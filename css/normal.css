@@ -83,16 +83,22 @@ header {
 
 .loginHg .titleLogin {
     line-height: 1.3em;
+		color:yellow;
+
 }
 
 .facebookArea {
     width: 94%;
 }
 
-.loginBox .logText {
-    display: block;
-    margin: 0 auto;
-    top: 25%;
+#loginRewardBox .loginBox{
+	margin:10% auto 0;
+}
+
+.loginBox .logText{
+	display:block;
+	margin:0 auto;
+	top:25%;
 }
 
 .facebookArea .login .logText {
@@ -221,14 +227,13 @@ input[type=checkbox] {
     top: 61%;
 }
 
-.slidein.grey .slider-text {
-    font-size: 2em;
-    padding-right: 8%;
-    padding-bottom: -1%;
+.slidein.grey .slider-text{
+	font-size:2em;
+	padding-right:8%;
 }
 
-.slidein.grey .slider-text + p {
-    padding-right: 9px;
+.slidein.grey .slider-text ~ p{
+	padding-right:9px;
 }
 
 .slider-text {
@@ -390,8 +395,8 @@ input[type=checkbox] {
     font-size: 3.5em;
 }
 
-#result-gallery .percentage {
-    margin-top: 4% auto 1%;
+#result-gallery .percentage{
+	margin:5% auto 1%;
 }
 
 #results .songName1, #results .songName2 {
@@ -420,9 +425,10 @@ input[type=checkbox] {
 
 #result-gallery .songName {
     font-size: 0.6em;
-    height: auto;
-    padding-top: 0%;
-    line-height: 110%;
+	height: auto; 
+	padding-top:0;
+	line-height:110%;
+
 }
 
 #result-gallery .reMesseg {
