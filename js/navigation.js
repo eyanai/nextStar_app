@@ -66,14 +66,19 @@ var Navi = {
                 $(".topMenu").show(); //check reut need to remove
                 $('#register').show();
 
-                
+
                 if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
-                $("#register .slider-text").html("כניסה להצבעה");
+
+                //$("#register .slider-text").html("כניסה להצבעה");
+                $("#register #registerSingle .slidein .slider-text").html(registerTextHtml);
+                registerWishTextInterval = setInterval(function() {
+                    initWishText($("#register #registerSingle .slidein .slider-text"));
+                }, 3500);
                 $(".slide.btn").show();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
@@ -89,11 +94,16 @@ var Navi = {
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
-                $("#register .slider-text").html("כניסה להצבעה");
+                //$("#register .slider-text").html("כניסה להצבעה");
+                $("#register #registerBattle .slidein .slider-text").html(registerTextHtml);
+                registerWishTextInterval = setInterval(function() {
+                    initWishText($("#register #registerBattle .slidein .slider-text"));
+                }, 3500);
                 $(".slide.btn").show();
                 break;
             case 'notRegister':
                 initWaitAnimation();
+                clearRegisterWishTextInterval();
                 $(".slidein ").addClass('grey');
                 $("#register .slider-text").html("ההצבעה החלה</br>המתן לביצוע הבא");
                 $(".slide.btn").hide();

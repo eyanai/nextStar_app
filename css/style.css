@@ -363,20 +363,22 @@ input[type=checkbox] {
     line-height: 1em;
     padding: 0;
     margin: 5px;
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.5em;
+    height: 1.5em;
     -webkit-border-radius: 0.35em;
     vertical-align: middle;
 }
 
 input[type=checkbox]:checked {
+  
+}
+input[type=checkbox].checked{
     background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
     background-color: #fff;
     background-size: 85% 80%;
     background-position: center;
     z-index: 2;
 }
-
 #rulesCB.required {
     border: 2px solid red;
 }
@@ -817,6 +819,15 @@ border: 1px solid white;
 .slidein.grey .slider-text{
     font-size: 0.8em;
 }
+.slidein .slider-text span{
+   
+   transition : color 0.3s ease-out; 
+  -webkit-transition : color 0.3s ease-out; 
+}
+.slidein .slider-text span.wish{
+    color: white;
+ 
+}
 
 #notRegister .slider-text {
     font-size: 1em;
@@ -858,6 +869,7 @@ top: 0%;
     position: absolute;
     top: 35%;
     right: 13%;
+     color: gray;
 }
 
 .reMesseg {
@@ -924,6 +936,7 @@ top: 0%;
 .songName h1, .songName h2 {
     width: 80%;
     margin: 0 auto;
+	line-height:130%;
 }
 
 .songName h1 {

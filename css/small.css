@@ -36,7 +36,18 @@ h1, .facebookArea , .logFb, .logText {
 
 #result-gallery .songName, #result .songName{
 	font-size: 0.8em;
+	height:auto;
 } 
+
+.songName h1, .songName h2{
+	line-height:120%;
+}
+
+#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2{
+	width:94%;
+	padding-right:3%;
+	margin-right:0%;
+}
 
 h1 .songName1,h1 .songName2{
 	font-size: 1em;
@@ -114,6 +125,10 @@ h2 .songName1,h2 .songName2{
     font-size: 0.7em;
 }
 
+#result-gallery h1, #result-gallery h2{
+	line-height:120%;
+}
+
 .checkboxArea  {
 	height:62px;
 }
@@ -172,6 +187,10 @@ h2 {
     font-size: 0.14em;
 }
 
+#message .continue {
+	height:7%;
+}
+
 #message-no-img-text{
 	font-size:1em;
 /* 	line-height:1.2em; */
@@ -202,6 +221,10 @@ h2 {
 
 header {
     height: 17.3%;
+}
+
+.header.logo {
+    background-image: url(../images/header/kohav_main_header_small.png);
 }
 
 section {
@@ -310,6 +333,16 @@ section {
 
 .goodbyeBox{
 	margin:2% auto;
+}
+
+.goodbyeBox .checkboxArea{
+	margin-right:0px;
+	float:right;
+	direction:ltr;
+	width:82%;
+}
+#checkbox4{
+	margin-right:0px;
 }
 
 #message .contIcons{
