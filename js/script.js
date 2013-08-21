@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -13,6 +13,8 @@ $(document).ready(function () {
     $("body").on("start-app", longPolling);
     $("#horizonal-screen").hide();
     //initSounds();
+
+    soundsLoad();
 });
 
 

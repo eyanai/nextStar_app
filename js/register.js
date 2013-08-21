@@ -83,32 +83,33 @@ $("#registerSingle .slide.btn.drag").draggable({
     containment: "#registerSingle .slidein",
     drag: function (event, ui) {
         $("#test-reut-stars").css("left", ui.offset.left - 150 + "px");
+        console.log("ui.offset.left: "+ui.offset.left)
     },
     stop: function (event, ui) {
-        var lengthNoPx = ui.helper.css("left").length - 2;
+        //var lengthNoPx = ui.helper.css("left").length - 2;
 
-        if ($(".slidein").width().toString().length < 3) {
-            var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
-        }
-        else {
-            var widthInPx = $(".slidein").width();
-        }
+        //if ($(".slidein").width().toString().length < 3) {
+        //    var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
+        //}
+        //else {
+        //    var widthInPx = $(".slidein").width();
+        //}
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
-            sliderCheckInSound.playclip();
-            //$(ui.helper).css("left", "5.5%");
-            $(ui.helper).css("left", "76%");
-            $(".deny-register").show();
-            $("#test-reut-stars").hide();
-            //$(".slider-text").text("");
-            setRegister();
-        }
-        else {
-            $("#test-reut-stars").css("left","0%");
-            //$(ui.helper).css("left", "5.5%");
-            $(ui.helper).css("left", "76%");
-        }
+        //if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
+        //    $(ui.helper).css("left", "74%");
+        //    sliderCheckInSound.playclip();
+        //    //$(ui.helper).css("left", "5.5%");
+        //    $(ui.helper).css("left", "76%");
+        //    $(".deny-register").show();
+        //    $("#test-reut-stars").hide();
+        //    //$(".slider-text").text("");
+        //    setRegister();
+        //}
+        //else {
+        //    $("#test-reut-stars").css("left","0%");
+        //    //$(ui.helper).css("left", "5.5%");
+        //    $(ui.helper).css("left", "76%");
+        //}
     }
 });
 
@@ -117,15 +118,16 @@ $("#registerBattle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
     containment: "#registerBattle .slidein",
-    drag: function (event, ui) {
+    drag: function(event, ui) {
     },
-    stop: function (event, ui) {
+    stop: function(event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+        if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
-            sliderCheckInSound.playclip();
+            $("#checkInAud")[0].play();
+           // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
             //$(".slider-text").text("");
@@ -154,8 +156,9 @@ function setRegisterGoingClose(data) {
 
 var alertInterval
 function alertRegisterGoingClose() {
-    alertInterval = setInterval(function () {
-        alertSound.playclip();
+    alertInterval = setInterval(function() {
+        // alertSound.playclip();
+        $("#alertAud")[0].play();
     }, 1000);
 }
 

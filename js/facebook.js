@@ -18,8 +18,8 @@ function attachEventsFacebook() {
         $("#rules-wrap").hide();
     }   
  $(".logFb").on("click", loginFb);
-    $("#loginRewardBox").on("click", ".login", startLongPolling);
-    $("#loginExtendedBox").on("click",".login", loginWithoutFacebook);
+    $("#loginRewardBox").on("click", ".login", loginRewardClicked);
+    $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $("#tvImgCB").on("click",tvImgCBClick);
 }
@@ -227,3 +227,13 @@ function tvImgCBClick(){
       
 }
 
+
+function loginRewardClicked(){
+    $("#genAud")[0].play();
+    startLongPolling();
+}
+
+function loginWithoutFacClicked(){
+    $("#genAud")[0].play();
+    loginWithoutFacebook();
+}
