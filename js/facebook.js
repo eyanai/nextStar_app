@@ -9,6 +9,7 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //localStorage.setItem('fbStorage', "");
 
+
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
 //if the user checked ruled in previous time -hide it   
@@ -188,8 +189,8 @@ function saveDataOnServer(str) {
 }
 //start LongPolling
 function startLongPolling(str) {
-    
-   longPolling();
+    $("body").trigger("start-app");
+   //longPolling();
 }
 
 

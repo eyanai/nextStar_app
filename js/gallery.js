@@ -76,8 +76,12 @@ function createObj(vote) {
     else {
         url = vote.imageUrlA;
     }
-    var $obj = "<img src=\"" + url + "\" alt=\"alt\"><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
-                "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>"
+    //var $obj = "<img src=\"" + url + "\" alt=\"alt\"><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
+    //            "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>"
+
+    var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
+                "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>";
+
     return $obj;
 }
 

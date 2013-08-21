@@ -1,0 +1,2002 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url("animation.css");
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a{
+    color: #ffffff;
+}
+a:link {text-decoration: none}
+a:visited {text-decoration: none}
+a:active {text-decoration: none}
+a:hover {text-decoration: none}
+/*-------------------cf-----------------------------*/
+.cf:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.cf {
+    /*	display: inline-block;
+*/
+}
+
+html[xmlns] .cf {
+    display: block;
+}
+
+* html .cf {
+    height: 1%;
+}
+/*=====================================================generel==============================================*/
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Opera */
+    /*background-image: -o-linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
+    /* Webkit (Safari/Chrome 10) */
+    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #007DBE), color-stop(1, #000000));*/
+    /* Webkit (Chrome 11+) */
+    /*background-image: -webkit-linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
+    /*background-image: linear-gradient(bottom, #007DBE 0%, #000000 61%);*/
+    background-image: url(../images/general-background.jpg);
+    font-family: Arial, Verdana, sans-serif;
+    direction: rtl;
+    color: #fff;
+    font-size: 16px;
+    /*background-size: 100% 100%;*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+section {
+    display: none;
+    height: 71.9%;
+    width: 100%;
+    position: absolute;
+    top: 14.9%;
+}
+
+#login {
+    display: block;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#banner {
+    position: absolute;
+    /*top: 90%;*/
+    bottom: 0;
+    height: 10.5%;
+    width: 100%;
+    display: block;
+    border-top: solid 1px #00486d;
+    z-index: 10;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.centerMe {
+    /* Internet Explorer 10 */
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    /* Safari, Chrome, and Opera */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    /* W3C */
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+h2 {
+    font-size: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*===========================================horizonal-screen=================================*/
+#horizonal-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/horizonal-background.jpg);
+    background-size: 100% 100%;
+    z-index: 1000;
+}
+
+/*#horizonal-screen{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}*/
+
+#flip-me {
+    display: none;
+    height: 20%;
+    width: 20%;
+    background-image: url(../images/flip.png);
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+/*================================================HEADER=====================================*/
+header {
+    position: relative;
+    width: 100%;
+    height: 14.8%;
+    border-bottom: solid 1px #006599;
+}
+
+.header.logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*margin: 0 19% 0 23%;*/
+    margin: auto;
+    background-image: url(../images/header/header_glow.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.live {
+    background-image: url(../images/header/live_0_kohav.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 7%;
+    height: 28%;
+    position: absolute;
+    left: 2.5%;
+    top: 65%;
+    -webkit-animation: liveShow 2s infinite; /* Safari and Chrome */
+    animation: liveShow 2s infinite;
+}
+/*================================================LOG IN SECTION=====================================*/
+
+.logo.login {
+    background-size: 100%;
+    width: 76%;
+    height: 26%;
+    position: relative;
+    top: 3%;
+    background-image: url(../images/singUp/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+#loginExtended, #loginReward {
+    position: relative;
+    top: 0%;
+}
+
+#loginExtendedBox { /*, #loginRewardBox*/
+    position: relative;
+    top: 0%;
+    /* Opera */
+    background-image: -o-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #002436), color-stop(2, #000000, #01273b)); /*SARA CHECK IT !*/
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    background-image: linear-gradient(bottom, #002436 0%, #000000 72%, #01273b 100%);
+    width: 86%;
+    height: 44%;
+    margin: 8% auto;
+    display: block;
+    overflow: hidden;
+}
+
+#slide-container {
+    position: relative;
+    height: 200%;
+    top: 0%;
+}
+
+.loginHg {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 28px 0;
+    text-align: right;
+}
+
+#loginRewardBox.loginHg {
+    height: 59%;
+}
+
+.loginHg .titleLogin {
+    overflow: visible;
+    font-weight: normal;
+    font-size: 1.8em;
+    font-weight: normal;
+    padding: 0 15px;
+    /* margin-bottom:8px; */
+}
+
+.loginHg .titleLoginReward {
+    overflow: visible;
+    font-weight: normal;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin: 14px 0;
+    padding: 25px 105px;
+    height: 50%;
+}
+
+#loginExtendedBox .loginHg {
+    height: 14%;
+}
+
+.loginHg .title3 {
+    overflow: visible;
+    text-align: right;
+    font-size: 1.7em;
+    padding: 3px 0;
+}
+
+.checkboxArea {
+    height: 27%;
+    position: relative;
+    font-size: 1.3em;
+    direction: rtl;
+}
+
+#login .checkboxArea {
+    padding-right: 10px;
+}
+
+.facebookArea {
+    position: relative;
+    margin: 0 auto;
+    width: 96%;
+}
+
+#loginRewardBox .checkboxArea {
+    position: relative;
+    margin: 14px 0;
+}
+
+input {
+    border: 1.5px solid grey;
+    font-size: 15px;
+    line-height: 1.2em;
+    width: 80%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+    -webkit-appearance: none;
+    -webkit-border-radius: 0.5em;
+}
+
+input[type=checkbox] {
+    display: inline-block;
+    margin: 2%;
+    /* font-size: 15px; */
+    line-height: 1em;
+    padding: 0;
+    margin: 5px;
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-border-radius: 0.35em;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked {
+  
+}
+input[type=checkbox].checked{
+    background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
+    background-color: #fff;
+    background-size: 85% 80%;
+    background-position: center;
+    z-index: 2;
+}
+#rulesCB.required {
+    border: 2px solid red;
+}
+/*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
+/*#checkbox1 input[type=checkbox]:checked:after{
+	content="לא אישרת את התקנון!";
+	text-decoration:underline;
+	color:red;
+	border:2px solid red;
+	z-index:2;
+ }*/
+
+/*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
+input[type="checkbox"] {
+    display:block;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:4px 9px;
+    vertical-align:middle;
+    background:url(../images/singUp/checkbox.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/singUp/checkbox.png) -19px top no-repeat;
+}	*/
+
+#notConfirmed {
+    color: red;
+    font-size: 0.8em;
+    text-decoration: underline;
+    padding-right: 5px;
+    display: inline;
+    display: none;
+}
+
+.loginBox {
+    position: relative;
+    width: 96%;
+    height: 17%;
+    margin: 0 auto;
+}
+
+#loginExtendedBox .logFb {
+    width: 100%;
+}
+
+#loginRewardBox .logFb {
+    width: 48%;
+    height: 90%;
+    float: right;
+    display: inline;
+}
+
+#loginExtendedBox .logFb .logFb-text {
+    font-size: 1.7em;
+    display: inline-block;
+    padding-right: 8.3%;
+    top: 25%;
+    position: relative;
+    /* text-align: center; */
+}
+
+#loginRewardBox .logFb .logFb-text {
+    font-size: 1.7em;
+    display: inline-block;
+    padding-right: 9.3%;
+    top: 25%;
+    position: relative;
+}
+
+#loginRewardBox .icon {
+    width: 15%;
+}
+
+.fbText {
+    float: left;
+    margin: 5% 3%;
+}
+
+#loginRewardBox .login { /*, #loginExtendedBox .login*/
+    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
+    border: 1px solid rgba(0,0,0,0.5);
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#loginRewardBox .login:hover, #loginExtendedBox .login:hover {
+    opacity: 0.8;
+}
+
+#loginExtendedBox #loginRewardBox .login {
+    width: 48%;
+    height: 90%;
+    float: left;
+    display: inline;
+    margin: 0;
+}
+
+#loginExtendedBox .login {
+    width: 100%;
+    height: 40%;
+    margin-top: 2%;
+    background-color: #01273b;
+}
+
+
+.logText {
+    font-size: 1.7em;
+    display: inline-block;
+    position: relative;
+    /*     top: 35%; */
+    font-weight: normal;
+}
+/*===============================================MASSEGE SECTION==============================================*/
+.messageImage, .messageNoImage { /*whit image or not */
+    width: 100%;
+    height: 100%;
+}
+
+.team {
+    background-image: url(../images/masseg/team.png);
+    background-repeat: no-repeat,no-repeat;
+    background-size: 100% 100%;
+    background-position: right top, center -150%;
+    display: block;
+    width: 89%;
+    height: 45%;
+    margin: auto;
+    margin-top: 2%;
+    /*z-index: 1;*/
+}
+
+.message {
+    background: -moz-linear-gradient(top, rgba(0,34,51,1) 0%, rgba(0,9,15,0.1) 32%, rgba(0,9,12,0.1) 62%, rgba(0,22,36,0.1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,34,51,1)), color-stop(32%,rgba(0,9,15,0.1)), color-stop(62%,rgba(0,9,12,0.1)), color-stop(100%,rgba(0,22,36,0.1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,34,51,1) 0%,rgba(0,9,15,0.1) 32%,rgba(0,9,12,0.1) 62%,rgba(0,22,36,0.1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002233', endColorstr='#e6001624',GradientType=0 ); /* IE6-9 */
+}
+
+.message {
+    border-top: 2px solid #005d8d;
+    height: 24%;
+    width: 89%;
+    border-bottom: solid 2px #183344;
+    margin: auto;
+    position: relative;
+    background-color: rgba(0,0,0,0.29);
+}
+
+#message-no-img-text {
+    /* font-size: 1.9em; */
+    /* letter-spacing: 0.13em; */
+    margin-top: 5%;
+}
+
+.speker {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    height: 32%;
+    position: absolute;
+    top: -15%;
+    right: 0;
+    left: 0;
+}
+
+.speker img {
+    height: 88%;
+    width: 15%;
+}
+
+#message-no-img-text .detail {
+    font-size: 1.8em;
+    height: 66%;
+    margin-top: 6%;
+    margin: auto;
+    top: 15%;
+}
+
+.detail {
+    font-size: 1.8em;
+    width: 95%;
+    height: 66%;
+    display: block;
+    margin-top: 6%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 15%;
+}
+
+.continue {
+    width: 84%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.continue h2 {
+    margin-left: 1%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+#message .continue h2 {
+    /* margin-top: 3%; */
+    font-size: 1.6em;
+}
+
+.continue {
+    /*bottom: 3%;*/
+    height: 10%;
+}
+
+.contIcons {
+    background-image: url(../images/masseg/dots_gif.png);
+    /* background-position-x: -364px; */
+    /* background-size:767%; */
+    /* width: 10%; */
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-position-x: -285.25px;
+    /* top: 72%; */
+}
+
+.musix {
+    background-image: url(../images/musix.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 16%;
+    position: absolute;
+    bottom: 2.7%;
+    margin: 0 27.5%;
+}
+
+.messageNoImage .message {
+    margin-top: 10%;
+    height: 51.3%;
+}
+
+.messageNoImage .speker {
+    height: 23%;
+    top: -10%;
+}
+
+.messageNoImage .continue {
+    right: 13%;
+}
+/*=============================================REGISTER SECTION===========================================*/
+.topMenu {
+    width: 100%;
+    height: 6%;
+    background-color: rgba(0,32,50,0.8);
+    /*background-image: url(../images/register/koteret_bgpixel_kohav_full.png);*/
+    padding: 0 0 0 0;
+    line-height: 3em;
+    background-size: 100% 100%;
+    border-bottom: 1px solid #005078;
+    position: absolute;
+    top: 17.6%;
+    z-index: 1;
+    display: none;
+}
+
+.topMenu h1 {
+    text-align: center;
+    font-size: 100%;
+}
+
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
+    height: 80%;
+    padding-top: 1%;
+    font-size: 1.5em;
+}
+
+.contestant {
+    background-image: url(../images/register/kohav2.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    /*    top: -8.3%;*/
+}
+
+#registerBattle, #registerSingle {
+    height: 100%;
+}
+
+.deny-register {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+#result .contestant {
+    margin-top: 8.1%;
+}
+
+.slidein {
+    background-image: url(../images/register/signin_slider_base.png);
+    background-repeat: no-repeat;
+    height: 18%;
+    width: 54%;
+    padding-right: 4%;
+    padding-left: 4%;
+    background-size: 100%;
+    position: absolute;
+    left: 19%;
+    overflow: hidden;
+}
+
+/*#registerSingle {
+    display: none;
+}*/
+
+#registerSingle .slidein {
+    top: 62%;
+}
+
+/*#registerBattle {
+    display: none;
+}*/
+
+#registerBattle .slidein {
+    top: 62%;
+}
+
+.slidein .register-red-flash {
+    background-image: url(../images/register/signin_slider_base_red.png);
+    background-size: 95% 92%;
+    top: 6%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 95%;
+    background-size: 100%;
+    position: absolute;
+    left: 3%;
+    -webkit-animation: mymove 1s infinite;
+}
+
+#test-reut{
+    top: 18%;
+height: 67%;
+width: 89%;
+background-size: 100%;
+position: absolute;
+left: 5%;
+/*border: 1px solid red;*/
+border-radius: 72px;
+z-index: 1;
+overflow: hidden;
+border: 1px solid red;
+}
+
+#test-reut-stars{
+    
+width: 100%;
+height: 100%;
+background-image: url(../images/register/kohav_bg_slider_iphone.png);
+background-repeat: no-repeat;
+background-size: 100%;
+position: absolute;
+left: 0%;
+border: 1px solid white;
+}
+#test-reut-outer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: -77%;
+    border: 1px solid yellow;
+}
+@-webkit-keyframes mymove {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slidein .register-stars {
+    top: 20px;
+    background-repeat: no-repeat;
+    height: 85%;
+    width: 90%;
+    position: absolute;
+    left: 19px;
+}
+
+.slidein.grey {
+    background-image: url(../images/register/signin_slider_grey.png);
+    margin: auto;
+    /*
+    height: 20%;
+    
+    width: 58%;
+    left: 21%;
+    top: 62%;*/
+}
+.slidein.grey .slider-text{
+    font-size: 0.8em;
+}
+.slidein .slider-text span{
+   
+   transition : color 0.3s ease-out; 
+  -webkit-transition : color 0.3s ease-out; 
+}
+.slidein .slider-text span.wish{
+    color: white;
+ 
+}
+
+#notRegister .slider-text {
+    font-size: 1em;
+}
+
+.slidein .grey .btn {
+    display: none;
+}
+
+.slide {
+    /*background-image: url(../images/register/signin_slider_button.png);
+    background-size: 100% 104%;
+    background-repeat: no-repeat;
+    width: 23%;
+    height: 70%;
+    background-position: left center;
+    left: 5%;
+    position: absolute;
+    top: 18%;*/
+    
+    background-image: url(../images/register/signin_slider_button.png);
+background-size: 100% 104%;
+background-repeat: no-repeat;
+width: 25%;
+height: 100%;
+background-position: left center;
+left: 76%;
+position: absolute;
+top: 0%;
+}
+
+/*.slide:hover {
+    background-image: url(../images/register/signin_slider_button_prs.png);
+    background-size: 100% 104%;
+}*/
+
+.slider-text {
+    font-size: 2.625em;
+    position: absolute;
+    top: 35%;
+    right: 13%;
+     color: gray;
+}
+
+.reMesseg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0,0,0,.65);
+    min-height: 13%;
+    border-top: solid 1px rgba(117,117,117,1);
+}
+
+#registerBattle .reMesseg {
+    width: 100%;
+}
+
+
+.single {
+    display: none;
+}
+
+#results .single .reMesseg.results.cf {
+    /*bottom: 7%;*/
+    height: 15%;
+}
+
+.reMesseg .continue {
+    position: absolute;
+    width: 100%;
+    border-top: solid 1px rgba(117,117,117,.5);
+    float: left;
+    bottom: 101%;
+    background-color: rgba(0,0,0,.65);
+    height: 49%;
+    z-index: 5;
+}
+
+#register .reMesseg .continue {
+    height: 53%;
+}
+
+
+.reMesseg .continue h2 {
+    /*    line-height: 151%;*/
+}
+
+.songName {
+    text-align: center;
+    height: 57%;
+    width: 100%;
+}
+
+
+#registerBattle .songName {
+    position: relative;
+}
+
+.songName, .songName1, .songName2 {
+    font-size: 1.5em;
+}
+
+.registerBattle {
+}
+
+.songName h1, .songName h2 {
+    width: 80%;
+    margin: 0 auto;
+	line-height:130%;
+}
+
+.songName h1 {
+    margin-top: 2%;
+}
+
+
+
+/*================================================VOTE SECTION=====================================*/
+
+.single, .battle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.single .contestant {
+    /*background-size: 100% 97%;
+    width: 100%;
+    height: 100%;
+    background-position-y: 150%;*/
+}
+
+.battle .contestant1, .battle .contestant2 {
+    height: 100%;
+}
+
+.slideLeft {
+    background-image: url(../images/votes/slide_pick_left.png);
+    background-size: 100% 100%,100% 100%;
+    /*background-position: 100%;*/
+    width: 50%;
+    background-repeat: no-repeat,no-repeat;
+    position: absolute;
+    left: 20%;
+    bottom: 25%;
+    height: 18%;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.slideGo {
+    width: 72%;
+    left: 22%;
+}
+
+.slideStay {
+    width: 80%;
+}
+
+.slideGo, .slideStay {
+    height: 100%;
+    top: 7%;
+    position: absolute;
+}
+
+.slideStay {
+    left: -19%;
+}
+
+.slideStay {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.blueArrow {
+    position: absolute;
+    right: -5%;
+    top: 15%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 35%;
+}
+
+.redArrow {
+    position: absolute;
+    left: -23%;
+    top: 20%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 31%;
+}
+
+.blueArrow.cont1 {
+    position: absolute;
+    right: 1%;
+    top: -5%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 30%;
+}
+
+
+.redArrow.cont1 {
+    position: absolute;
+    left: 2%;
+    top: -5%;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    width: 26%;
+}
+
+.blueArrow.cont2 {
+    position: absolute;
+    right: 0;
+    top: -5%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 30%;
+}
+
+.redArrow.cont2 {
+    position: absolute;
+    right: 2%;
+    top: -5%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    width: 26%;
+}
+/*.slideGo:before {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 76%;
+    top: 0;
+    background-image: url(../images/votes/slide_pick_x.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.slideStay:before {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 76%;
+    top: 0;
+    right: 0;
+    background-image: url(../images/votes/slide_pick_heart.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.contestant .slideGo:before, .contestant1 .slideStay:before, .contestant1 .slideGo:before {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.contestant .slideStay:before, .contestant2 .slideStay:before, .contestant2 .slideGo:before {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}*/
+
+.slideStay h1 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    font-size: 1.5em;
+    color: #00a9ff;
+}
+
+.slideRight {
+    background-image: url(../images/votes/slide_pick_right.png);
+    background-size: 100% 100%;
+    width: 50%;
+    height: 20%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30%;
+    bottom: 25%;
+    background-size: 100% 100%;
+    height: 18%;
+    cursor: pointer;
+}
+
+.contestant .slideGo:before, .contestant1 .slideGo:before, .contestant1 .slideStay:before {
+    left: 0;
+}
+
+.contestant .slideGo:before {
+    left: -15px;
+}
+
+.contestant .slideStay:before, .contestant2 .slideGo:before, .contestant2 .slideStay:before {
+    right: 0;
+}
+
+.contestant .slideGo:before, .contestant .slideStay:before {
+    top: 15px;
+}
+
+.slideGo h1 {
+    position: absolute;
+    top: 38%;
+    right: 50%;
+    font-size: 1.8em;
+    color: #ff006c;
+}
+
+.love {
+    background-image: url(../images/votes/slide_round_pick.png);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 13%;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 70%;
+    background-size: 100% 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.love1 {
+    background-image: url(../images/votes/slide_round_pick.png);
+    position: absolute;
+    width: 37%;
+    height: 100%;
+    top: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 1%;
+    background-size: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.love2 {
+    background-image: url(../images/votes/slide_round_pick.png);
+    position: absolute;
+    width: 37%;
+    height: 100%;
+    top: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 2%;
+    background-size: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+
+.hate {
+    background-image: url(../images/votes/slide_round_red.png);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 15%;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -35%;
+    background-size: 100% 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.hate1 {
+    background-image: url(../images/votes/slide_round_red.png);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 2%;
+    background-size: 100%;
+    opacity: 0;
+}
+
+.hate2 {
+    background-image: url(../images/votes/slide_round_red.png);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 2%;
+    background-size: 100%;
+    opacity: 0;
+}
+/*================================================VOTE BATTLE SECTION=====================================*/
+.contestant1 {
+    background-image: url(../images/register/kohav2.jpg);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.contestant2 {
+    background-image: url(../images/register/kohav2.jpg);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.songName1 {
+    text-align: center;
+    /*border-top: solid 1px rgba(117,117,117,.5);*/
+    height: 57%;
+    float: right;
+    width: 50%;
+    position: relative;
+}
+
+.songName2 {
+    text-align: center;
+    /*border-top: solid 1px rgba(117,117,117,.5);*/
+    height: 57%;
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.divideH {
+    border-left: solid 1px #fff;
+    width: 1%;
+    height: 93%;
+    position: absolute;
+    display: block;
+    top: 8%;
+    right: 49%;
+    z-index: 3;
+}
+
+.divideH.waiting-high {
+    height: 69%;
+}
+
+#results .divideH.waiting-low {
+    height: 17%;
+    top: 76.2%;
+}
+
+.slideTopbattle {
+    height: 17%;
+    top: 45%;
+}
+
+.slideDownbattle {
+    height: 17%;
+    top: 63%;
+}
+
+.contestant1 .slideTopbattle {
+    background-image: url(../images/votes/slide_pick_right.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30%;
+    background-size: 100% 105%;
+    background-position: 0 0;
+}
+
+.contestant1 .slideDownbattle {
+    background-image: url(../images/votes/slide_pick_right.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30%;
+    background-size: 100% 105%;
+}
+
+.contestant1 .slideStay {
+    right: 57%;
+    top: 7%;
+    background-position: left center;
+}
+
+
+.contestant1 .slideGo {
+    right: 10%;
+    background-position: left center;
+}
+
+.contestant2 .slideStay {
+    right: 18%;
+    background-position: right center;
+}
+
+.contestant2 .slideGo {
+    right: 18%;
+    background-position: right center;
+}
+
+.contestant1 .slideStay h1 {
+    left: 30%;
+}
+
+.contestant2 .slideGo h1 {
+    right: 30%;
+}
+
+.contestant2 .slideTopbattle {
+    background-image: url(../images/votes/slide_pick_left.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20%;
+    background-size: 100% 105%;
+}
+
+.contestant2 .slideDownbattle {
+    background-image: url(../images/votes/slide_pick_left.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20%;
+    background-size: 100% 105%;
+}
+
+.contestant1 .love {
+    right: -45%;
+}
+
+.contestant1 .hate {
+    right: -45%;
+}
+
+.contestant2 .love {
+    left: -45%;
+}
+
+.contestant2 .hate {
+    right: -40%;
+}
+
+/*------------not-registered*/
+#not-registered {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: #fff;
+    text-align: center;
+    line-height: 100%;
+    font-size: 3em;
+    z-index: 10;
+}
+/*=============================================RESULTS SECTION======================================================*/
+.resultScalaR {
+    background-color: rgba(0,0,0,0.5);
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
+    position: absolute;
+    top: 14%;
+    right: 2%;
+    overflow: hidden;
+}
+
+.resultRed {
+    background-image: url(../images/results/graph_Red_off_kohav.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.scalaRed {
+    background-image: url(../images/results/graph_Red_on_kohav.png);
+    background-repeat: no-repeat;
+}
+
+.resultScalaL {
+    position: absolute;
+    top: 14%;
+    left: 2%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
+}
+
+.resultBlue {
+    /*background-image: url(../images/results/graph_blue_off_kohav.png);
+    background-repeat: no-repeat;
+    background-size: 93% 100%;*/
+    /*reut add*/
+    background-image: url(../images/results/graph_blue_on_kohavNew.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.result {
+    /*width: 72%;
+    width: 72%;
+    height: 98%;
+    margin: auto;
+    position: relative;
+    top: 1%;*/
+    /*reut add*/
+    height: 98%;
+    position: relative;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+
+.scalaBlue {
+    background-image: url(../images/results/graph_blue_on_kohav.png);
+    background-repeat: no-repeat;
+}
+
+.scala {
+    /*width: 72%;
+    height: 100%;*/
+    /*position: absolute;
+    bottom: -21%;
+   
+    
+  bottom: -6%;  
+width: 168%;
+height: 105%;
+background-position-x: 30%;
+background-position-y: 10%;*/
+    /*reut add*/
+    height: 98%;
+    background-position-x: center;
+    background-size: auto 100%;
+    bottom: 98%;
+    position: relative;
+}
+
+.resultScalaL .scala {
+    /*left: -19%;*/
+}
+
+.resultScalaR .scala {
+    /*right: -14%;*/
+}
+
+.divide {
+    border-bottom: solid 1px #545454;
+    width: 100%;
+    height: 1%;
+    display: block;
+}
+
+.reMesseg.results .songName {
+    border: none;
+    width: 50%;
+    margin: auto;
+}
+
+.percentage {
+    font-size: 3.5em;
+    color: #00aaff;
+    /* float: left;
+    margin: 3% 0 0 10%;*/
+}
+
+#results .single .resultRed {
+    /*display: none;*/
+}
+
+#results .single .scalaRed {
+    /*display: none;*/
+}
+/*=======================================================RESULT BATTLE=========================================*/
+#results .divideH {
+    top: 0%;
+}
+
+#results .battle .resultScalaR, #results .battle .resultScalaL {
+    top: 14%;
+}
+
+#results .battle .reMesseg {
+}
+
+#results .battle .reMesseg .continue {
+    bottom: 100%;
+    height: 41%;
+}
+
+#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
+    width: 100%;
+    float: right;
+    clear: both;
+    margin-right: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#results .songName1 h1, #results .songName2 h1 {
+    margin-top: 4%;
+}
+
+#results .percentage {
+    top: 22%;
+    font-size: 3em;
+    position: absolute;
+    margin: 0;
+}
+
+#results .single .percentage {
+    left: 1%;
+}
+
+#results .songName2 .percentage {
+    color: #ff0060;
+}
+
+#results #results-perc-first {
+    float: none;
+    right: 1.5%;
+}
+
+#results #results-perc-second {
+    float: none;
+    left: 1.5%;
+}
+
+#results .red {
+    color: #ff0060;
+    color: #ff0060;
+}
+/*================================================GALLERY SECTION================================================*/
+#gallery h2 {
+    text-align: center;
+    margin-top: 6%;
+}
+
+/*.swiper-container {
+    margin-top: 10% !important;
+}
+
+.swiper-container {
+    width: 90%;
+    height: 60%;
+    color: #fff;
+    text-align: center;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: 280px;
+    float: right;
+    position: relative;
+}
+
+.dividHgall {
+    width: 2%;
+    float: right;
+    height: 100%;
+    display: block;
+}
+
+.swiper-slide .title {
+    font-style: italic;
+    font-size: 42px;
+    margin-top: 80px;
+    margin-bottom: 0;
+    line-height: 45px;
+}
+
+.pagination {
+    position: absolute;
+    z-index: 20;
+    left: 41%;
+    bottom: 10%;
+}
+
+.swiper-pagination-switch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #222;
+    margin-right: 8px;
+    opacity: 0.8;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.swiper-visible-switch {
+    background-color: #999;
+}
+
+.swiper-active-switch {
+    background: #fff;
+}
+
+.contestant.gall {
+    width: 96%;
+    height: 100%;
+    background-size: 100% 100%;
+    float: right;
+    border: solid 1px #fff;
+    overflow: hidden;
+}
+
+.reMesseg.gall {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    border-bottom: solid 3px #fff;
+    border-top: none;
+}
+
+.reMesseg.gall .percentage {
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+*/
+
+#result-gallery {
+    height: 33.9%;
+    /* direction: rtl;*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1%;
+}
+
+#result-gallery > * {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#result-gallery ul {
+    height: 100%;
+    /* width: 1081px;
+     width: 500px;*/
+    padding-right: 4px;
+    direction: rtl;
+    overflow-y: hidden;
+}
+
+#result-gallery ul li {
+    height: 97%;
+    width: 185px;
+    position: relative;
+    /* display: inline-block; */
+    /*width: 146px;*/
+    border: solid 1px #898788;
+    margin-right: 1px;
+    float: right;
+    overflow: hidden;
+}
+
+#result-gallery h1, #result-gallery h2 {
+    margin-top: 0;
+}
+
+.gallery-vote-single {
+}
+
+.gallery-pic{
+    height: 100%;
+position: absolute;
+/*background-image: url(../images/register/kohav2.jpg);*/
+width: 100%;
+background-size: auto 100%;
+background-position: center;
+}
+
+.gallery-vote-single img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#result-gallery .reMesseg {
+    height: 34%;
+    right: 0;
+}
+
+#result-gallery .divide {
+}
+
+#result-gallery .songName {
+    height: 41%;
+}
+
+#result-gallery .percentage {
+    font-size: 1.5em;
+    display: block;
+    margin: 7% auto 1%;
+    float: none;
+}
+
+.gallery-vote-battle {
+}
+
+.gallery-vote-battle img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*height: 100%;*/
+}
+
+.gallery-vote-battle .vote-1 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: right;
+}
+
+.gallery-vote-battle .vote-2 {
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.goodbyeBox {
+    margin: 20px auto;
+    height: 26%;
+    width: 87%;
+    position: relative;
+}
+
+#download-music {
+    width: 100%;
+    height: 33%;
+    text-align: center;
+    background: -moz-linear-gradient(top, #2183b7 0%, #2989d8 50%, #207cca 50%, #005987 100%, #005987 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2183b7), color-stop(50%,#2989d8), color-stop(50%,#207cca), color-stop(100%,#005987), color-stop(100%,#005987)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #2183b7 0%,#2989d8 50%,#207cca 50%,#005987 100%,#005987 100%); /* W3C */
+    border: 1px solid rgba(0,0,0,0.5);
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 1.8%;
+    position: relative;
+    cursor: pointer;
+}
+
+#download-music:hover {
+    opacity: 0.8;
+}
+
+#download-music .press {
+    opacity: 0.8;
+}
+
+#download-music.inFb {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#result-gallery .songName {
+    font-size: 1em;
+    /*padding: 4px 0;*/
+    padding-top: 2px;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    width: 9.3%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-position: center;
+    background-color: rgba(0, 0, 0,0.1);
+}
+
+#download-music .icon {
+    background-image: url(../images/gallery/kohav_iphone_vert17.png);
+    background-size: 50% 100%;
+    width: 20%;
+    border-left: 1px solid #196085;
+}
+
+#download-music-text {
+    font-size: 2em;
+    display: inline-block;
+    top: 25%;
+    position: relative;
+}
+
+.logFb {
+    background: -moz-linear-gradient(top, #39579a 0%, #005987 100%, #2a447c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39579a), color-stop(100%,#005987), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #39579a 0%,#005987 100%,#2a447c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #39579a 0%,#005987 100%,#2a447c 100%); /* W3C */
+    width: 83%;
+    height: 9.3%;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.5);
+    margin: auto;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.logFb:hover {
+    opacity: 0.8;
+}
+
+.logFb.inFb {
+    opacity: 0.4;
+    cursor: auto;
+}
+
+.logFb .icon {
+    background-image: url(../images/gallery/fb_icon.png);
+    border-left: 1px solid #196085;
+}
+
+#result-gallery .logFb {
+    margin: 10px auto;
+    position: relative;
+    height: 37%;
+}
+
+#gallery .logFb {
+    height: 37%;
+    width: 100%;
+    margin: 2% auto;
+}
+
+#gallery .logFb .logFb-text {
+    font-size: 1.75em;
+    display: inline-block;
+    padding-right: 9.3%;
+    /* top: 25%; */
+    position: relative;
+    width: 83%;
+    height: 9.3%;
+    vertical-align: middle;
+}
+
+
+
+
+/*-------------------------------------------to delite!!!!!--------------------------------*/
+.nextPage {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,204,102,.35);
+    top: 47px;
+    left: 1px;
+    z-index: 500;
+}
+
+.animat {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,204,204,1);
+    top: 47px;
+    right: 1px;
+    z-index: 500;
+}
+
+.animatB {
+    background-color: red;
+}
+
+.animatG {
+    background-color: green;
+    top: 80px;
+}
+
+.animatG1 {
+    background-color: blue;
+    right: 90%;
+    top: 80px;
+}
+
+.animatB1 {
+    background-color: red;
+    right: 90%;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*#vote {
+    display: none;
+}
+
+#login {
+    display: block;
+}
+
+#voteBattle {
+    display: block;
+}
+
+#voteSingle {
+    display: none;
+}
+
+#register {
+    display: none;
+}
+
+#registerSingle {
+    display: block;
+}
+
+#registerBattle {
+    display: none;
+}*/
+
+#slideSingleRight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+}
+
+#slideSingleLeft {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+}
+
+#rslidecon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -50%;
+}
+
+#lslidecon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+}
+
+.bgLeft {
+    position: absolute;
+}

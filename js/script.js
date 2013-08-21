@@ -95,6 +95,10 @@ function isSingle(data) {
 //check if tha app run on small screen or big. According to result load appropriate sized image
 function initAppSize() {
     //set the isBigSize parameter by the device
+    if($(window).width()>700){
+        generalParameters.isBigSize = true;
+    }
+    
 }
 
 //init the dictionary values from admin- to blue title
