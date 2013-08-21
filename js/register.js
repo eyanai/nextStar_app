@@ -7,9 +7,9 @@ function setOpenRegisterPage(data, from) {
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
-    //$(".slide").css("left", "5.5%");
-    $(".slide").css("left", "76%");
-    $("#test-reut-stars").css("left", "0%").show();
+    $(".slide").css("left", "5.5%");
+    //$(".slide").css("left", "76%");
+    //$("#test-reut-stars").css("left", "0%").show();
     $(".slider-text").html(registerTextHtml);
     $("#register .slidein").show();
     $(".deny-register").hide();
@@ -75,14 +75,24 @@ function setOpenRegisterPage(data, from) {
     //generalParameters.wasRegisterPage = true;
 
 }
-
+//var starsWidth;//=$("#test-reut-stars").width();
+//var slideWidth;//=$(".slide").width();
+//var leftMax = $("#test-reut-outer").css("left").slice(0, -2);
 //drag to register in single vote
 $("#registerSingle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
     containment: "#registerSingle .slidein",
+    //start:function(event,ui){
+    //    starsWidth=$("#test-reut-stars").width();
+    //    slideWidth=$(".slide").width();
+
+    //},
     drag: function (event, ui) {
-        $("#test-reut-stars").css("left", ui.offset.left - 150 + "px");
+        //$("#test-reut-stars").css("left", 100*((ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth-10)/starsWidth) + "%");
+        //console.log(ui.helper.css("left").slice(0,-2)*1);
+        //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
+        
     },
     stop: function (event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
@@ -97,17 +107,22 @@ $("#registerSingle .slide.btn.drag").draggable({
         if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
             sliderCheckInSound.playclip();
-            //$(ui.helper).css("left", "5.5%");
-            $(ui.helper).css("left", "76%");
+            $(ui.helper).css("left", "5.5%");
+            //$(ui.helper).css("left", "76%");
             $(".deny-register").show();
-            $("#test-reut-stars").hide();
+            //$("#test-reut-stars").hide();
             //$(".slider-text").text("");
             setRegister();
+
+            //$("#test-reut-stars").css("left", "0%");
+            //$(ui.helper).css("left", "5.5%");
+            //$(ui.helper).css("left", "76%");
         }
         else {
-            $("#test-reut-stars").css("left","0%");
-            //$(ui.helper).css("left", "5.5%");
-            $(ui.helper).css("left", "76%");
+            
+            $(ui.helper).css("left", "5.5%");
+            //$("#test-reut-stars").css("left", "0%");
+            //$(ui.helper).css("left", "76%");
         }
     }
 });

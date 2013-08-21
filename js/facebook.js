@@ -189,6 +189,7 @@ function saveDataOnServer(str) {
 }
 //start LongPolling
 function startLongPolling(str) {
+    generalParameters.isConnect = true;
     $("body").trigger("start-app");
    //longPolling();
 }

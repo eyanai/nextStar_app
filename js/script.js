@@ -1,20 +1,3 @@
-$(document).ready(function () {
-    initAppSize();
-    //init the dictionary values
-    initDictionaryValues();
-    checkRulesChecked();
-    attachEventsFacebook(); //check gallery
-    attachEventsGallery();
-    //init the touchmive events
-    initMoveEvents();
-    //initWaitAnimation();
-
-    // longPolling(); //check gallery
-    $("body").on("start-app", longPolling);
-    $("#horizonal-screen").hide();
-    //initSounds();
-});
-
 
 
 //general parameters
@@ -34,7 +17,8 @@ var generalParameters = {
         showImg:false
     },
     isBigSize: false,
-    ruledChecked: false
+    ruledChecked: false,
+    isConnect:false
 }
 
 
@@ -191,10 +175,29 @@ function checkRulesChecked() {
     }
 }
 
-
-
-
 function showFlash(){
     $(".register-red-flash").show();
     alertRegisterGoingClose();
 }
+
+
+$(document).ready(function () {
+    initAppSize();
+    //init the dictionary values
+    initDictionaryValues();
+    checkRulesChecked();
+    attachEventsFacebook(); //check gallery
+    attachEventsGallery();
+    //init the touchmive events
+    initMoveEvents();
+    //initWaitAnimation();
+
+    // longPolling(); //check gallery
+    $("body").on("start-app", longPolling);
+    if (generalParameters.isConnect) {
+        $("body").trigger("start-app");
+    }
+    $("#horizonal-screen").hide();
+    //initSounds();
+});
+
