@@ -198,29 +198,31 @@ function startLongPolling(str) {
 
 //ruled check box clicked
 function rulesCBClick(){
-    if($("#rulesCB").attr("checked") != "checked"){
-        generalParameters.ruledChecked = true;
-        $("#rulesCB").attr("checked", "checked");
-        localStorage.setItem('rulesStorage', true);
-    }
-    else{
-        $("#rulesCB").removeAttr("checked");
-        localStorage.setItem('rulesStorage', false);
+
+    if($("#rulesCB").hasClass("checked")){
+            $("#rulesCB").removeClass("checked");
+             localStorage.setItem('rulesStorage', false);
         generalParameters.ruledChecked = false;
-    }
-    
+           
+        }
+        else{
+            $("#rulesCB").addClass("checked");
+              generalParameters.ruledChecked = true;
+               localStorage.setItem('rulesStorage', true);
+          
+        }
+
 }
 
 function tvImgCBClick(){
-    //if check the box : image in tv
-    if ($(".tvImgCB").attr("checked") != "checked") {
-        $(".tvImgCB").attr("checked", "checked");
-        generalParameters.fbUser.showImg = true;
-    }
-    else{
-        $(".tvImgCB").removeAttr("checked");
-        generalParameters.fbUser.showImg = false;
-    }
-    
+        if($(".tvImgCB").hasClass("checked")){
+            $(".tvImgCB").removeClass("checked");
+            generalParameters.fbUser.showImg = false;
+        }
+        else{
+            $(".tvImgCB").addClass("checked");
+            generalParameters.fbUser.showImg = true;
+        }
+      
 }
 

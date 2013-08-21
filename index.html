@@ -18,7 +18,7 @@
 
         <!--<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>-->
         <script src="js/jquery-ui-touch-punch.js" type="text/javascript"></script>
-        <script src="http://makosrv1.egoline.co.il:9090/nextStarTestB/pollController.js"></script>
+        <script src="js/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
 <!------------------------------------ internal scripts  ------------------------------------------>
@@ -37,7 +37,7 @@
 	<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
 </nav>
 <section id="login">
-	<div class="nextPage" data-goto="voteSingle"></div>
+	<div class="nextPage" data-goto="messageWaitingWithImage"></div>
 	<figure class="logo login"></figure>
 	<div id="loginExtendedBox">
 		<div id="slide-container">
@@ -81,7 +81,7 @@
 <!---log in section-->
    
         <section id="message">
-            <div class="nextPage" data-goto="registerSingle"></div>
+            <div class="nextPage" data-goto="registerBattle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -93,7 +93,7 @@
                     </span>
                 </div>
                 <div class="continue">
-                    <h2 id="message-with-img-wait-text"></h2>
+                    <h2 id="message-with-img-wait-text">ממתין ל</h2>
                     <figure class="contIcons"></figure>
                 </div>
             </div>
@@ -127,12 +127,12 @@
             <div id="registerSingle">
                 <div id="register-single-img" class="contestant">
 
-                    <div class="slidein">
+                    <div class="slidein grey">
                         <div class="register-red-flash"></div>
                         <div class="deny-register"></div>
 
                         <div class="slide btn drag"></div>
-                        <div class="slider-text">כניסה להצבעה</div>
+                        <div class="slider-text"><h1>ההצבעה החלה</h1></br><h2>המתן לביצוע הבא</h2></div>
                     </div>
 
                 </div>
@@ -142,22 +142,18 @@
                         <figure class="contIcons"></figure>
                     </div>
                     <div class="songName">
-                        <h1 id="register-comp-name-single">דוד לוי</h1>
-                        <h2 id="register-song-name-single">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחת</h2>
+                        <h1 id="register-comp-name-single">דוד לויgg</h1>
+                        <h2 id="register-song-name-single">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתgg</h2>
                     </div>
                 </div>
             </div>
             <div id="registerBattle" class="cf">
-
-
-                <div class="slidein">
+                <div class="slidein grey">
                     <div class="register-red-flash"></div>
-
                     <div class="deny-register"></div>
-
                     <!-- <div class="register-stars"><img src="images/register/kohav_bg_slider_iphone.png"/></div>-->
                     <div class="slide btn drag"></div>
-                    <div id="grey-slider-text" class="slider-text">ההצבעה החלה</br></div>
+                    <div class="slider-text"><!-- <p>ההצבעה החלה</p><p>המתן לביצוע הבא</p> --></div>
                 </div>
                 <div id="register-img-first" class="contestant1">
                                             <!--<div class="reMesseg cf">
@@ -189,13 +185,13 @@
                         <figure class="contIcons"></figure>
                     </div>
                     <div class="songName1 songName">
-                        <h1 id="register-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביא</h1>
-                        <h2 id="register-song-name-first">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחת</h2>
+                        <h1 id="register-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאgg</h1>
+                        <h2 id="register-song-name-first">ילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתילדות נשכחתgg</h2>
 
                     </div>
                     <div class="songName2 songName">
-                        <h1 id="register-comp-name-second">חגית יאסו חגית</h1>
-                        <h2 id="register-song-name-second">ים של דמעות</h2>
+                        <h1 id="register-comp-name-second">חגית יאסו חגיתgg</h1>
+                        <h2 id="register-song-name-second">ים של דמעותgg</h2>
 
                     </div>
 
@@ -215,7 +211,7 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="nextPage" data-goto="resultsBattle"></div>
+            <div class="nextPage" data-goto="voteBattle"></div>
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="resultsBattle"></div>
                 <!--<div class="animat animatG" data-animat="singleGood"></div>
@@ -247,18 +243,18 @@
                 <!------------------------------------------->
                 <div class="reMesseg cf">
                     <div class="continue">
-                        <h2></h2>
+                        <h2>ממתין ל</h2>
                         <figure class="contIcons"></figure>
                     </div> 
                     <div class="songName">
-                        <h1 id="vote-comp-name-single">דוד לוי</h1>
-                        <h2 id="vote-song-name-single">ילדות נשכחת</h2>
+                        <h1 id="vote-comp-name-single">דוד לויgg</h1>
+                        <h2 id="vote-song-name-single">ילדות נשכחתgg</h2>
                     </div>
                 </div>
             </div>
             <!----------------------------------------------------------------------single  div----------------->
             <div id="voteBattle" class="battle">
-                <div class="nextPage" data-goto="notRegister"></div>
+                <div class="nextPage" data-goto="resultsBattle"></div>
                 <!--<div class="animat animatG1" data-animat="battel1Good"></div>
                 <div class="nextPage" data-goto="resultsBattle"></div></br>
                 <div class="animat animatG1" data-animat="battel1Good"></div>
@@ -305,16 +301,16 @@
                 </div>
                 <div class="reMesseg cf">
                     <div class="continue">
-                        <h2></h2>
+                        <h2>ממתין ל</h2>
                         <figure class="contIcons"></figure>
                     </div>
-                    <div class="songName1">
+                    <div class="songName1 songName">
                         <h1 id="vote-comp-name-first">דוד לוי</h1>
                         <h2 id="vote-song-name-first">ילדות נשכחת</h2>
                     </div>
-                    <div class="songName2">
-                        <h1 id="vote-comp-name-second">חגית יאסו</h1>
-                        <h2 id="vote-song-name-second">ים של דמעות</h2>
+                    <div class="songName2 songName">
+                        <h1 id="vote-comp-name-second">חגית יאסוgg</h1>
+                        <h2 id="vote-song-name-second">ים של דמעותgg</h2>
                     </div>
                 </div>
 
@@ -334,7 +330,7 @@
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="resultsBattle"></div>
+                <div class="nextPage" data-goto="resultsSingle"></div>
                <!-- <div class="animat animatG" data-animat="singleGood"></div>
                 <div class="animat animatB" data-animat="singleBad"></div>-->
                                     <!--<nav class="topMenu">
@@ -346,7 +342,7 @@
                 <!------------------------------------------->
                 <div class="reMesseg cf">
                     <div class="continue">
-                        <h2></h2>
+                        <h2>ממתין ל</h2>
                         <figure class="contIcons"></figure>
                     </div>
                     <div class="songName">
@@ -377,16 +373,16 @@
                 </div>
                 <div class="reMesseg cf">
                     <div class="continue">
-                        <h2></h2>
+                        <h2>ממתין ל</h2>
                         <figure class="contIcons"></figure>
                     </div>
-                    <div class="songName1">
+                    <div class="songName1 songName">
                         <h1 id="vote-close-comp-name-first">דוד לוי</h1>
                         <h2 id="vote-close-song-name-first">ילדות נשכחת</h2>
                     </div>
-                    <div class="songName2">
-                        <h1 id="vote-close-comp-name-second">חגית יאסו</h1>
-                        <h2 id="vote-close-song-name-second">ים של דמעות</h2>
+                    <div class="songName2 songName">
+                        <h1 id="vote-close-comp-name-second">חגית יאסוgg</h1>
+                        <h2 id="vote-close-song-name-second">ים של דמעותgg</h2>
                     </div>
                 </div>
                 <!-- <div class="divideH"></div> -->
@@ -401,7 +397,7 @@
         </section>
         <!---vote  section-->
         <section id="results">
-            <div class="nextPage" data-goto="voteBattle"></div>
+            <div class="nextPage" data-goto="gallery"></div>
            <!-- <div class="animat animatB" data-animat="results"></div>-->
                             <!--<nav class="topMenu">
                                                 <h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
@@ -410,9 +406,9 @@
                 <div id="results-img-single" class="contestant">
                     <div class="resultScalaL">
 
-                        <div class="result">
+                        <div class="result resultRed">
                         </div>
-                        <div class="scala">
+                        <div class="scala scalaRed">
                         </div>
                     </div>
 
@@ -426,8 +422,8 @@
                         </div>
                     </div>
                     <div id="" class="songName">
-                        <h1 id="results-comp-name-single">דוד לוי</h1>
-                        <h2 id="results-song-name-single">ילדות נשכחת</h2>
+                        <h1 id="results-comp-name-single">דוד לויgg</h1>
+                        <h2 id="results-song-name-single">ילדות נשכחתgg</h2>
                     </div>
                 </div>
             </div><!---------------------------------------------------single div--------------------------------->
@@ -455,9 +451,9 @@
                                                                                                                                                                                                 </div>
                                                                                                                                                                                             </div>-->
                     <div class="resultScalaL">
-                        <div class="result">
+                        <div class="result resultBlue">
                         </div>
-                        <div class="scala">
+                        <div class="scala scalaBlue">
                         </div>
                     </div>
                 </div>
@@ -468,13 +464,13 @@
                         <figure class="contIcons"></figure>
                         <span id="results-perc-second" class="percentage">57%</span>
                     </div>
-                    <div class="songName1">
-                        <h1 id="results-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביא</h1>
-                        <h2 id="results-song-name-first">ילדות נשכחת</h2>
+                    <div class="songName1 songName">
+                        <h1 id="results-comp-name-first">דוד לוידוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאדוד לביאgg</h1>
+                        <h2 id="results-song-name-first">ילדות נשכחתgg</h2>
                     </div>
-                    <div class="songName2">
-                        <h1 id="results-comp-name-second">חגית יאסו חגית</h1>
-                        <h2 id="results-song-name-second">ים של דמעות</h2>
+                    <div class="songName2 songName">
+                        <h1 id="results-comp-name-second">חגית יאסו חגיתgg</h1>
+                        <h2 id="results-song-name-second">ים של דמעותgg</h2>
                     </div>
 
                 </div>
@@ -483,7 +479,7 @@
         </section>
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
-            <div class="nextPage" data-goto="messageWithImage"></div>
+            <div class="nextPage" data-goto="messageNoImage"></div>
                             <!--<nav class="topMenu">
                                                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
                                             </nav>-->
@@ -515,8 +511,8 @@
                             <img src="images/gallery/gallery-contestant.jpg" alt="alt">
                             <span class="reMesseg">
                                 <div class="songName">
-                                    <h1>דוד לביא</h1>
-                                    <h2>ים של דמעות</h2>
+                                    <h1>דוד לביאgg</h1>
+                                    <h2>ים של דמעותgg</h2>
                                 </div>
                                 <span class="percentage">57%</span>
                             </span>
@@ -601,8 +597,8 @@
                 <div id="download-music"><span class="icon"></span><span id="download-music-text">להורדת הביצועים</span></div>
                 <div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
                 <div class="checkboxArea">
-                    <input type="checkbox" id="checkbox4" name="cc" class="tvImgCB"/>
                     <label for="checkbox4"><span></span>אני רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה </label>
+					<input type="checkbox" id="checkbox4" name="cc" class="tvImgCB"/>
                 </div>
             </div>
             <div class="musix"></div>
