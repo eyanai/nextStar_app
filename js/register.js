@@ -7,7 +7,9 @@ function setOpenRegisterPage(data, from) {
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
-    $(".slide").css("left", "5.5%");
+    //$(".slide").css("left", "5.5%");
+    $(".slide").css("left", "76%");
+    $("#test-reut-stars").css("left", "0%").show();
     $(".slider-text").html(registerTextHtml);
     $("#register .slidein").show();
     $(".deny-register").hide();
@@ -80,6 +82,7 @@ $("#registerSingle .slide.btn.drag").draggable({
     axis: "x",
     containment: "#registerSingle .slidein",
     drag: function (event, ui) {
+        $("#test-reut-stars").css("left", ui.offset.left - 150 + "px");
     },
     stop: function (event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
@@ -91,16 +94,20 @@ $("#registerSingle .slide.btn.drag").draggable({
             var widthInPx = $(".slidein").width();
         }
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
             sliderCheckInSound.playclip();
-            $(ui.helper).css("left", "5.5%");
+            //$(ui.helper).css("left", "5.5%");
+            $(ui.helper).css("left", "76%");
             $(".deny-register").show();
+            $("#test-reut-stars").hide();
             //$(".slider-text").text("");
             setRegister();
         }
         else {
-            $(ui.helper).css("left", "5.5%");
+            $("#test-reut-stars").css("left","0%");
+            //$(ui.helper).css("left", "5.5%");
+            $(ui.helper).css("left", "76%");
         }
     }
 });
