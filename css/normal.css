@@ -82,10 +82,16 @@ line-height: 2em;
 
 .loginHg .titleLogin{
 	line-height:1.3em;
+		color:yellow;
+
 }
 
 .facebookArea{
 	width:94%;
+}
+
+#loginRewardBox .loginBox{
+	margin:10% auto 0;
 }
 
 .loginBox .logText{
@@ -223,10 +229,9 @@ input[type=checkbox] {
 .slidein.grey .slider-text{
 	font-size:2em;
 	padding-right:8%;
-	padding-bottom:-1%;
 }
 
-.slidein.grey .slider-text + p{
+.slidein.grey .slider-text ~ p{
 	padding-right:9px;
 }
 
@@ -318,7 +323,7 @@ input[type=checkbox] {
 }
 
 #result-gallery .percentage{
-	margin-top:4% auto 1%;
+	margin:5% auto 1%;
 }
 
 #results .songName1 , #results .songName2{
@@ -348,7 +353,7 @@ input[type=checkbox] {
 #result-gallery .songName{
     font-size: 0.6em;
 	height: auto; 
-	padding-top:0%;
+	padding-top:0;
 	line-height:110%;
 
 }

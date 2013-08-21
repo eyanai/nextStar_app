@@ -291,6 +291,8 @@ header {
     font-size: 1.8em;
     font-weight: normal;
     padding: 0 15px;
+		color:yellow;
+
     /* margin-bottom:8px; */
 }
 
@@ -355,8 +357,8 @@ input[type=checkbox] {
     line-height: 1em;
     padding: 0;
     margin: 5px;
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.7em;
+    height: 1.7em;
     -webkit-border-radius: 0.35em;
     vertical-align: middle;
 }
@@ -372,31 +374,6 @@ input[type=checkbox]:checked {
 #rulesCB.required {
     border: 2px solid red;
 }
-/*  לא בדקתי מה קורה אם לא ממלאים את הטופס נכון, אבל העיצוב מוכן   */
-/*#checkbox1 input[type=checkbox]:checked:after{
-	content="לא אישרת את התקנון!";
-	text-decoration:underline;
-	color:red;
-	border:2px solid red;
-	z-index:2;
- }*/
-
-/*    מה שיש כאן זאת גרסה קודמת לבחירת תמונה עם וי ובלי וי
-input[type="checkbox"] {
-    display:block;
-}
-input[type="checkbox"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:4px 9px;
-    vertical-align:middle;
-    background:url(../images/singUp/checkbox.png) left top no-repeat;
-    cursor:pointer;
-}
-input[type="checkbox"]:checked + label span {
-    background:url(../images/singUp/checkbox.png) -19px top no-repeat;
-}	*/
 
 #notConfirmed {
     color: red;
@@ -451,13 +428,16 @@ input[type="checkbox"]:checked + label span {
     margin: 5% 3%;
 }
 
-#loginRewardBox .login { /*, #loginExtendedBox .login*/
-    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
+ #loginExtendedBox .login{
+    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */ 
+    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */ 
+    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */ 
+    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */ 
+    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */ 
+	/* background-image: url(../images/signUp/kohav_nofacebook_button1.jpg); */
+    /* background-repeat: repeat-x; */
+    background-size: 100% 100%;
     border: 1px solid rgba(0,0,0,0.5);
     margin: auto;
     border-radius: 3px;
@@ -479,9 +459,9 @@ input[type="checkbox"]:checked + label span {
 
 #loginExtendedBox .login {
     width: 100%;
-    height: 40%;
+    height: 40%;		
     margin-top: 2%;
-    background-color: #01273b;
+    /* background-color: #01273b; */
 }
 
 
@@ -755,6 +735,11 @@ input[type="checkbox"]:checked + label span {
         opacity: 0;
     }
 }
+
+.slidein.grey .slider-text + p{
+	padding-right:9px;
+}
+
 
 .slidein .register-stars {
     top: 20px;
@@ -1469,19 +1454,19 @@ background-position-y: 10%;*/
     height: 41%;
 }
 
-#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
-    width: 100%;
+/* #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
+     width: 100%;
     float: right;
     clear: both;
-    margin-right: 20%;
+    margin-right: 20%; 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
+} */
 
-#results .songName1 h1, #results .songName2 h1 {
+/* #results .songName1 h1, #results .songName2 h1 {
     margin-top: 4%;
-}
+} */
 
 #results .percentage {
     top: 22%;
@@ -1515,7 +1500,7 @@ background-position-y: 10%;*/
 /*================================================GALLERY SECTION================================================*/
 #gallery h2 {
     text-align: center;
-    margin-top: 6%;
+/*     margin-top: 6%; *//* andrd */
 }
 
 /*.swiper-container {

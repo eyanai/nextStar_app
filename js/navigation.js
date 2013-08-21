@@ -186,24 +186,29 @@ var Navi = {
 
 }
 
-//check screen orientation - if screen fliped
-function updateOrientation() {
-    switch (window.orientation) {
-        case 0:
-            $("#horizonal-screen").hide();
-            break;
 
-        case -90:
-            $("#horizonal-screen").show();
-            break;
+var supportsOrientationChange = "onorientationchange" in window;
+var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
-        case 90:
-            $("#horizonal-screen").show();
-            break;
+window.addEventListener(orientationEvent, 
+   function() { 
+		alert ('orientation changed'); 
+		setTimeout(function(){
+			 alert ('general');
+			 alert (window.orientation);
+			 window.isPortrait=(window.innerHeight/window.innerWidth)>1;
+			 alert (window.isPortrait);
+			 switch (window.isPortrait) {
+				 case true:
+					 $("#horizonal-screen").hide();
+					 break;
 
-        case 180:
-            $("#horizonal-screen").hide();
-            break;
+				 case false:
+					 $("#horizonal-screen").show();
+					 break;
+			}
+		},500)
+	}, 
+   false
+);
 
-    }
-}
