@@ -1,0 +1,542 @@
+/* CSS Document */
+
+/*=====================================================generel==============================================*/
+
+
+html, body {
+    /* background-image: url(../images/general-background.jpg); */
+    font-size: 15px;
+    background-repeat: repeat;
+    overflow: scroll;
+}
+
+section {
+    height: 82.8%;
+    top: 11.4%;
+}
+
+.musix {
+    background-image: url(../normal/images/musix_logo.png);
+}
+
+#login .musix {
+    bottom: -2%;
+}
+
+.musix {
+    background-image: url(../images/musix_normal.png);
+    background-size: 100% 100%;
+    width: 45%;
+    display: block;
+    left: 26%;
+    margin: 0 auto;
+    height: 130px;
+    bottom: 3%;
+}
+
+#banner {
+    height: 5.8%;
+}
+
+
+/*===========================================horizonal-screen=================================*/
+
+#horizonal-screen {
+    /* background-image: url(../images/horizonal-background.jpg); */
+}
+
+#flip-me {
+    /* background-image: url(../images/flip.png); */
+}
+
+/*================================================HEADER=====================================*/
+
+header {
+    height: 11.3%;
+}
+
+.header.logo {
+    background-image: url(../images/normal/header/kohav_main_header_normal.png);
+    height: 101%;
+    background-size: 100% 119%;
+}
+
+.live {
+    /*background-image: url(../images/normal/header/kohav_live_sequence1.png);*/
+    background-size: 77% 100%;
+    width: 5%;
+}
+
+.topMenu {
+    height: 5%;
+    top: 11.5%;
+    line-height: 2em;
+}
+
+
+/*================================================LOG IN SECTION=====================================*/
+
+#loginExtendedBox {
+    height: 47%;
+    width: 66%;
+}
+
+.loginHg .titleLogin {
+    line-height: 1.3em;
+}
+
+.facebookArea {
+    width: 94%;
+}
+
+.loginBox .logText {
+    display: block;
+    margin: 0 auto;
+    top: 25%;
+}
+
+.facebookArea .login .logText {
+    display: block;
+    width: 47%;
+    margin: 0 auto;
+    top: 25%;
+}
+
+.logFb, #loginExtendedBox .login, .loginBox {
+    height: 57px;
+}
+
+#loginExtendedBox .login {
+    margin-top: 3%;
+}
+
+.logFb .icon {
+    background-size: 45% 58%;
+}
+
+#login .checkboxArea {
+    padding: 2px 10px 0 0;
+    height: 44%;
+    margin: 4% auto;
+    height: 62px;
+}
+
+input[type=checkbox] {
+    margin: 2%;
+    margin-right: 4%;
+}
+
+/*===============================================MESSAGE SECTION==============================================*/
+
+.detail {
+    line-height: 1.3em;
+    width: 83%;
+}
+
+#message-no-img-text {
+    line-height: 1.4em;
+    width: 80%;
+    font-size: 2em;
+}
+
+.continue {
+    width: 100%;
+}
+
+
+#message .continue h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+#message .messageNoImage .continue h2 {
+    margin-right: -29%;
+}
+
+.continue, .reMesseg .continue {
+    margin-top: 4%;
+}
+
+.continue h2 {
+    font-size: 1.8em;
+    line-height: 168%;
+}
+
+#message .continue h2 {
+    line-height: 87%;
+}
+
+.reMesseg .continue h2 {
+    height: 100%;
+}
+
+.messageNoImage .message {
+    height: 35%;
+}
+
+.messageImage .message {
+    height: 21%;
+}
+
+.message, .team {
+    width: 82%;
+}
+
+#message .contIcons {
+    height: 23%;
+}
+
+.contIcons {
+    height: 35%;
+    width: 5.5%;
+    background-image: url(../images/masseg/dots_gif_iphone.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+
+/*=============================================REGISTER SECTION===========================================*/
+
+.songName, .songName1, .songName2 {
+    font-size: 0.8em;
+}
+
+.songName1, .songName2 {
+    padding-top: 2%;
+}
+
+
+.songName {
+    position: relative;
+    top: 12%;
+    line-height: 120%;
+}
+
+.songName h1 {
+    margin-top: 2%;
+}
+
+#registerBattle .slidein {
+    top: 61%;
+}
+
+.slidein.grey .slider-text {
+    font-size: 2em;
+    padding-right: 8%;
+    padding-bottom: -1%;
+}
+
+.slidein.grey .slider-text + p {
+    padding-right: 9px;
+}
+
+.slider-text {
+    padding-right: 2%;
+}
+/*================================================VOTE SECTION=====================================*/
+
+.slideLeft {
+    background-image: url(../images/normal/votes/kohav_vote_slider_left.png);
+    bottom: 21%;
+}
+
+.slideRight {
+    background-image: url(../images/votes/slide_pick_right.png);
+    bottom: 21%;
+}
+
+.hate{
+    top: -6%;
+}
+
+.love{
+    top: -6%;
+}
+
+
+.contestant1 .slideTopbattle {
+    background-image: url(../images/votes/slide_pick_right.png);
+}
+
+#voteSingle .redArrow {
+    left: -4%;
+    top: 5%;
+}
+
+#voteSingle .blueArrow {
+    right: -3%;
+    top: 3%;
+}
+
+@-webkit-keyframes rarrowUp {/*rotate right arrow up- vote single- chrome*/
+    0% {
+        right: 1%;
+        top: 19%;
+        -webkit-transform: rotateZ(90deg);
+    }
+
+    100% {
+        right: -11%;
+        top: 13%;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rarrowUp {/*rotate right arrow up- vote single*/
+    0% {
+        right: 1%;
+        top: 19%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        right: 10%;
+        top: 26%;
+        transform: rotateZ(0deg);
+    }
+}
+
+
+@-webkit-keyframes hateShow {/*show like circle- single vote- chrome*/
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        left: -26%;
+    }
+
+    100% {
+        opacity: 1;
+        left: -26%;
+    }
+}
+
+@keyframes hateShow {/*show like circle- single vote*/
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        left: -28%;
+    }
+
+    100% {
+        opacity: 1;
+        left: -28%;
+    }
+}
+
+/*================================================VOTE BATTLE SECTION=====================================*/
+
+#voteBattle .btn {
+    top: 23%;
+}
+
+
+/*=============================================RESULTS SECTION======================================================*/
+
+
+
+/*=======================================================RESULT BATTLE=========================================*/
+
+.resultScalaR {
+    /*     background-color: rgba(0,0,0,0.5);
+    width: 5%;
+    height: 62.5%;
+    border-radius: 6px;
+    position: absolute;
+    top: 14%;
+    right: 2%;
+    overflow: hidden; */
+}
+
+.result {
+    width: 37px;
+}
+
+.resultRed {
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 93% 100%;
+}
+
+.scalaRed {
+    background-image: url(../images/normal/results/glow_graph_ipad_red.png);
+    background-size: 100% 100%;
+}
+
+.resultBlue {
+    /*background-image: url(../images/normal/results/graph_Red_off_kohav.png);*/
+    background-size: 100% 100%;
+}
+
+.scalaBlue {
+    background-image: url(../images/normal/results/glow_graph_ipad_blue.png);
+    background-size: 100% 100%;
+}
+
+#results #results-perc-first, #results #results-perc-second {
+    top: 157%;
+}
+
+#results .single .percentage {
+    top: 124%;
+}
+
+#results .percentage {
+    font-size: 3.5em;
+}
+
+#result-gallery .percentage {
+    margin-top: 4% auto 1%;
+}
+
+#results .songName1, #results .songName2 {
+    text-align: right;
+    padding-top: 2%;
+    width: 32%;
+    padding-right: 1%;
+    float: right;
+}
+
+#results .songName1 {
+    padding-right: 18%;
+    padding-left: 2%;
+    width: 30%;
+}
+
+#results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
+    margin-right: 0px;
+}
+
+/*================================================GALLERY SECTION================================================*/
+
+#result-gallery ul li {
+    margin-right: 6px;
+}
+
+#result-gallery .songName {
+    font-size: 0.6em;
+    height: auto;
+    padding-top: 0%;
+    line-height: 110%;
+}
+
+#result-gallery .reMesseg {
+    height: 31%;
+}
+
+#gallery .songName h2 {
+    margin-top: 0%;
+}
+
+#gallery .percentage {
+    text-align: center;
+    font-size: 1.65em;
+}
+
+#gallery .logFb .logFb-text {
+    top: 10%;
+    font-size: 1.6em;
+    width: 90%;
+}
+
+#gallery h2 {
+    margin-top: 9%;
+    margin-bottom: 3%;
+}
+
+#download-music {
+    width: 36%;
+    display: inline-block;
+    float: right;
+}
+
+#download-music .icon {
+    background-size: 92% 85%;
+    width: 20%;
+}
+
+#gallery .logFb .icon {
+    width: 11.3%;
+}
+
+#download-music-text {
+    font-size: 1.6em;
+    top: 19%;
+    right: 9%;
+}
+
+#gallery .logFb {
+    width: 62%;
+    display: inline-block;
+    height: 33%;
+    margin-top: 1.8%;
+    /* left: 5%; */
+}
+
+.goodbyeBox {
+    height: 19%;
+    width: 96%;
+    margin: 8% auto 2%;
+    direction: ltr;
+    /* margin-right: 2%; */
+}
+
+#gallery .checkboxArea {
+    position: absolute;
+    width: 100%;
+    direction: ltr;
+    /* padding-left:5%; */
+}
+/* 
+
+.fbText,.logText{
+	font-size:2em;
+}
+.header.logo {
+width: 50%;
+}
+.topMenu {
+	width: 100%;
+	height: 7%;	
+	background-size: 1% 100%;
+}
+.slide {
+background-image: url(../images/register/signin_slider_button.png);
+top: 7%;
+}
+.slideRight,.slideLeft {
+background-size: 100%;
+}
+.slideStay,.slideGo {
+top: 10%;
+}
+
+.contestant1 .slideStay,.contestant2 .slideGo {
+top: 8%;
+}
+.contestant2 .hate,.contestant1 .hate {
+}
+.contestant2 .love,.contestant1 .love  {
+}
+
+.contIcons {
+margin: 2% 0 0 0;
+}
+element.style {
+}
+.continue h2 {
+margin-top: 1%;
+}
+.battle .reMesseg{
+}
+.swiper-slide {
+  width: 390px;
+ } */
+
+
+

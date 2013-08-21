@@ -232,10 +232,10 @@ section {
 }
 
 .slide {
-    /*background-size: 100% 100%;
+    background-size: 100% 100%;
     top: 17%;
     height: 72%;
-    left: 5.5%; reut test star*/
+    left: 5.5%;
 /*     width: 20.5%; */
 }
 
@@ -370,4 +370,62 @@ section {
 
 #login .musix {
 	height:12.5%;
+}
+
+@-webkit-keyframes rarrowUp {/*rotate right arrow up- vote single- chrome*/
+    0% {
+        right: 1%;
+        top: 19%;
+        -webkit-transform: rotateZ(90deg);
+    }
+
+    100% {
+        right: -10%;
+        top: 23%;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rarrowUp {/*rotate right arrow up- vote single*/
+    0% {
+        right: 1%;
+        top: 19%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        right: -2%;
+        top: 18%;
+        transform: rotateZ(0deg);
+    }
+}
+
+
+
+@-webkit-keyframes larrowUp {/*turn arrow DOWN -chrome*/
+    0% {
+        left: -10%;
+        top: 22%;
+        -webkit-transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -25%;
+        top: 13%;
+        -webkit-transform: rotateZ(-180deg);
+    }
+}
+
+@keyframes larrowUp {/*turn arrow DOWN -chrome*/
+    0% {
+        left: -10%;
+        top: 22%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -25%;
+        top: 13%;
+        transform: rotateZ(-180deg);
+    }
 }
