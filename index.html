@@ -58,7 +58,7 @@
 				</div>
 				<div class="facebookArea">
 					<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-					<div class="login" onclick="genClickSound.playclip();"><span class="logText">הצביעו ללא פייסבוק</span></div>
+					<div class="login"><span class="logText">הצביעו ללא פייסבוק</span></div>
 				</div>
 			</form>
 			<div id="loginRewardBox">
@@ -68,7 +68,7 @@
 				</hgroup>
 				<div class="loginBox">
 					<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-					<div class="login" onclick="genClickSound.playclip();Navi.goto('message');"> <span class="logText">הצבעה ללא פייסבוק</span> </div>
+					<div class="login" > <span class="logText">הצבעה ללא פייסבוק</span> </div>
 				</div>
 				<div class="checkboxArea">
 					<input type="checkbox" id="checkbox3" name="cc" class="tvImgCB" />
@@ -130,16 +130,16 @@
 
                     <div class="slidein grey">
                         <div class="register-red-flash"></div>
-                        <div id="test-reut">
-                            <div id="test-reut-outer">
+                        <!--<div id="test-reut">
+                            <div id="test-reut-outer" class="">
                                 <div id="test-reut-stars"></div>
                                 <div class="slide btn drag"></div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="deny-register"></div>
-
+                        <div class="slide btn drag"></div>
                         <!--<div class="slide btn drag"></div>-->
-                        <div class="slider-text"><h1>ההצבעה החלה</h1></br><h2>המתן לביצוע הבא</h2></div>
+                        <div class="slider-text"><p>ההצבעה החלה</p><p>המתן לביצוע הבא</p></div>
                     </div>
 
                 </div>
@@ -624,6 +624,37 @@
                             <source>
                         </audio>
                     </div>-->
+
+    <div class="audio-wrap" style="display: none">
+        <audio id="alertAud" controls>
+              <source src="sounds/Alert.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="genAud" controls>
+              <source src="sounds/Gen Click.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="voteBarAud" controls>
+              <source src="sounds/Vote Bars.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="voteNegAud" controls>
+              <source src="sounds/Vote Sound Negative.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="votePosAud" controls>
+              <source src="sounds/Vote Sound Positive.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+          <audio id="checkInAud" controls>
+              <source src="sounds/Slider Check in.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+    </div>
         <!------------------------------------ internal scripts  ------------------------------------------>
         <script src="js/navigation.js"></script>
         <script src="js/pages.js"></script>

@@ -87,5 +87,6 @@ function createObj(vote) {
 
 //
 function downloadMusic() {
-    genClickSound.playclip();
+    $("#genAud")[0].play();
+    //genClickSound.playclip();
 }
