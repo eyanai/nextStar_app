@@ -41,7 +41,8 @@ function setWaitPageWithImg(data){
         url =data.tamplateImage1;
     }
     //$("#message-with-img-title").text(title);
-    $("#message-with-img-text").text(text);
+    textHtml = text.replace("\n", "<br/>");
+    $("#message-with-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
 
     $("#message-with-img-img").css("background-image", "url('"+url+"')");
@@ -56,7 +57,8 @@ function  setWaitPageNoImg(data){
     var info =data.info
 
     //$("#message-no-img-title").text(title);
-    $("#message-no-img-text").text(text);
+    textHtml = text.replace("\n", "<br/>");
+    $("#message-no-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
     
     Navi.goto("messageNoImage");
@@ -69,7 +71,8 @@ function   setStaticPageWithImg(data){
     var info =data.info
 
     //$("#message-no-img-title").text(title);
-    $("#message-no-img-text").text(text);
+     textHtml = text.replace("\n", "<br/>");
+    $("#message-no-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
     
     Navi.goto("messageWithImage");
@@ -83,7 +86,8 @@ function   setStaticPageNoImg(data){
     var info =data.info
 
     //$("#message-no-img-title").text(title);
-    $("#message-no-img-text").text(text);
+     textHtml = text.replace("\n", "<br/>");
+    $("#message-no-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
     
     Navi.goto("messageNoImage");                

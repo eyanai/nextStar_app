@@ -93,6 +93,7 @@ $("#registerSingle .slide.btn.drag").draggable({
         //console.log(ui.helper.css("left").slice(0,-2)*1);
         //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
         
+        console.log("ui.offset.left: "+ui.offset.left)
     },
     stop: function (event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
@@ -132,15 +133,16 @@ $("#registerBattle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
     containment: "#registerBattle .slidein",
-    drag: function (event, ui) {
+    drag: function(event, ui) {
     },
-    stop: function (event, ui) {
+    stop: function(event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+        if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
-            sliderCheckInSound.playclip();
+            $("#checkInAud")[0].play();
+           // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
             //$(".slider-text").text("");
@@ -156,14 +158,22 @@ $("#registerBattle .slide.btn.drag").draggable({
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
+    //if(data.votes.length ==1){
+    //   
+    //}
+    //else{
+    //     Navi.goto("registerBattle");
+    //}
+    
     $(".register-red-flash").show();
     alertRegisterGoingClose();
 }
 
 var alertInterval
 function alertRegisterGoingClose() {
-    alertInterval = setInterval(function () {
-        alertSound.playclip();
+    alertInterval = setInterval(function() {
+        // alertSound.playclip();
+        $("#alertAud")[0].play();
     }, 1000);
 }
 
@@ -213,17 +223,17 @@ var index =0;
 var registerWishTextInterval;
 function initWishText(sliderObj){
     index =0;
-    
+    sliderObjTemp =sliderObj;
    // $(sliderObj).html(registerTextHtml);
     var spanArray =  $(sliderObj).children("span");
 
     setTimeout(function(){
-            addWishToLettet(spanArray);
+            addWishToLettet(spanArray,sliderObjTemp);
         },200);
       
 }
 
-function addWishToLettet(spanArrayTemp){
+function addWishToLettet(spanArrayTemp,sliderObjTemp){
     $(spanArrayTemp[index]).addClass("wish");
     if(index>0){
          $(spanArrayTemp[index-1]).removeClass("wish");
@@ -232,19 +242,26 @@ function addWishToLettet(spanArrayTemp){
     index++;
     if(index < spanArrayTemp.length){
           setTimeout(function(){
-            addWishToLettet(spanArrayTemp);
+            addWishToLettet(spanArrayTemp,sliderObjTemp);
         },100);
       
     }
     else{
+
+        registerWishTextInterval = setTimeout(function(){
+            initWishText(sliderObjTemp)
+        },4000);
+
          setTimeout(function(){
             $(spanArrayTemp[index-1]).removeClass("wish");
         },200);
+
+        
         
     }
 }
 
 function clearRegisterWishTextInterval(){
     
-    clearInterval(registerWishTextInterval);
+    clearTimeout(registerWishTextInterval);
 }

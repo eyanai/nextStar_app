@@ -3,19 +3,14 @@
 /*=====================================================generel==============================================*/
 
 
-body {
-	/* background-image: url(../images/general-background.jpg); */
-	font-size:9px;
+/* body {
+	background-image: url(../images/general-background.jpg);
 }
 
 section{
 	height: 82.9%;
 }
-
-.musix {
-    background-image: url(../large/images/musix.png);
-}
-
+ */
 /*===========================================horizonal-screen=================================*/
 
 #horizonal-screen {
@@ -28,25 +23,20 @@ section{
 
 /*================================================HEADER=====================================*/
 
-header {
+/* header {
     height: 11.3%;
 }
 
 .header.logo {
 	background-image: url(../images/large/header/kohav_logo_big.png);
 }
-
-.live{
-	background-image: url(../images/large/header/kohav_live_sequence1.png);
-    width: 5%;
-}
-
+ */
 
 
 /*================================================LOG IN SECTION=====================================*/
 
 
-/*===============================================MASSEGE SECTION==============================================*/
+/*===============================================MESSAGE SECTION==============================================*/
 
 
 
@@ -56,16 +46,7 @@ header {
 
 /*================================================VOTE SECTION=====================================*/
 
-.slideLeft {
-    background-image: url(../images/large/votes/kohav_vote_slider_left.png);
-}
 
-.slideRight {
-    background-image: url(../images/votes/slide_pick_right.png);
-}
-
-.contestant1 .slideTopbattle {
-    background-image: url(../images/votes/slide_pick_right.png);
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
@@ -84,9 +65,10 @@ header {
 
 
 
+/*================================================FOOTER================================================*/
 
-footer{
+/* footer{
 	height:5.8%;
 }
-
+ */
 
