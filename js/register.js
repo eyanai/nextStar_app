@@ -134,6 +134,13 @@ $("#registerBattle .slide.btn.drag").draggable({
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
+    //if(data.votes.length ==1){
+    //   
+    //}
+    //else{
+    //     Navi.goto("registerBattle");
+    //}
+    
     $(".register-red-flash").show();
     alertRegisterGoingClose();
 }
@@ -191,17 +198,17 @@ var index =0;
 var registerWishTextInterval;
 function initWishText(sliderObj){
     index =0;
-    
+    sliderObjTemp =sliderObj;
    // $(sliderObj).html(registerTextHtml);
     var spanArray =  $(sliderObj).children("span");
 
     setTimeout(function(){
-            addWishToLettet(spanArray);
+            addWishToLettet(spanArray,sliderObjTemp);
         },200);
       
 }
 
-function addWishToLettet(spanArrayTemp){
+function addWishToLettet(spanArrayTemp,sliderObjTemp){
     $(spanArrayTemp[index]).addClass("wish");
     if(index>0){
          $(spanArrayTemp[index-1]).removeClass("wish");
@@ -210,19 +217,26 @@ function addWishToLettet(spanArrayTemp){
     index++;
     if(index < spanArrayTemp.length){
           setTimeout(function(){
-            addWishToLettet(spanArrayTemp);
+            addWishToLettet(spanArrayTemp,sliderObjTemp);
         },100);
       
     }
     else{
+
+        registerWishTextInterval = setTimeout(function(){
+            initWishText(sliderObjTemp)
+        },4000);
+
          setTimeout(function(){
             $(spanArrayTemp[index-1]).removeClass("wish");
         },200);
+
+        
         
     }
 }
 
 function clearRegisterWishTextInterval(){
     
-    clearInterval(registerWishTextInterval);
+    clearTimeout(registerWishTextInterval);
 }

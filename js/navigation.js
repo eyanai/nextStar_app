@@ -76,9 +76,9 @@ var Navi = {
 
                 //$("#register .slider-text").html("כניסה להצבעה");
                 $("#register #registerSingle .slidein .slider-text").html(registerTextHtml);
-                registerWishTextInterval = setInterval(function() {
+               // registerWishTextInterval = setInterval(function() {
                     initWishText($("#register #registerSingle .slidein .slider-text"));
-                }, 3500);
+              //  }, 3500);
                 $(".slide.btn").show();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
@@ -96,16 +96,16 @@ var Navi = {
                 $(".live").hide();
                 //$("#register .slider-text").html("כניסה להצבעה");
                 $("#register #registerBattle .slidein .slider-text").html(registerTextHtml);
-                registerWishTextInterval = setInterval(function() {
+                //registerWishTextInterval = setInterval(function() {
                     initWishText($("#register #registerBattle .slidein .slider-text"));
-                }, 3500);
+               // }, 3500);
                 $(".slide.btn").show();
                 break;
             case 'notRegister':
                 initWaitAnimation();
                 clearRegisterWishTextInterval();
                 $(".slidein ").addClass('grey');
-                $("#register .slider-text").html("ההצבעה החלה</br>המתן לביצוע הבא");
+                $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לביצוע הבא</p>");
                 $(".slide.btn").hide();
                 //$(".slide .btn .drag .ui-draggable .regAnim").hide();
                 //$(".topMenu").hide();
