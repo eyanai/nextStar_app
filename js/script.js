@@ -192,7 +192,7 @@ $(document).ready(function () {
     initMoveEvents();
     //initWaitAnimation();
 
-    // longPolling(); //check gallery
+     // longPolling(); //check gallery
     $("body").on("start-app", longPolling);
     if (generalParameters.isConnect) {
         $("body").trigger("start-app");

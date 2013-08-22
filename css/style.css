@@ -97,6 +97,14 @@ html, body {
     background-repeat: no-repeat;
 }
 
+#upSide_login{
+	height:76.05%;
+}
+
+#upSide{
+	height:60.76%;
+}
+
 section {
     display: none;
     height: 71.9%;
@@ -337,11 +345,10 @@ header {
 }
 
 .checkboxArea .textAd{
-	color:pink;
 	text-align:right;
 	width:84%;
 	display:inline-block;
-	vertical-align:top;
+	vertical-align:middle;
 }
 
 #login .checkboxArea {
@@ -377,8 +384,8 @@ input[type=checkbox] {
     line-height: 1em;
     padding: 0;
     margin: 5px;
-    width: 1.7em;
-    height: 1.7em;
+    width: 1.6em;
+    height: 1.6em;
     -webkit-border-radius: 0.35em;
     vertical-align: middle;
 }
@@ -814,7 +821,9 @@ left: 0%;
     top: 62%;*/
 }
 .slidein.grey .slider-text{
-    font-size: 0.8em;
+    font-size: 1em;
+	width:58%;
+	text-align:center;
 }
 .slidein .slider-text span{
    
@@ -844,6 +853,7 @@ left: 0%;
     left: 5%;
     position: absolute;
     top: 18%;
+	
     
     /*background-image: url(../images/register/signin_slider_button.png);
 background-size: 100% 104%;
