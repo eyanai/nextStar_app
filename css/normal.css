@@ -81,23 +81,26 @@ header {
     width: 66%;
 }
 
-.loginHg .titleLogin {
-    line-height: 1.3em;
-    color: yellow;
+.loginHg .titleLogin{
+	line-height:1.3em;
 }
 
 .facebookArea {
     width: 94%;
 }
 
-#loginRewardBox .loginBox {
-    margin: 10% auto 0;
+#loginRewardBox .loginBox{
+	margin:13% auto 2%;
 }
 
-.loginBox .logText {
-    display: block;
-    margin: 0 auto;
-    top: 25%;
+.loginHg .titleLoginReward {
+	margin:14px 0;
+}
+
+.loginBox .logText{
+	display:block;
+	margin:0 auto;
+	top:25%;
 }
 
 .facebookArea .login .logText {
@@ -119,11 +122,14 @@ header {
     background-size: 45% 58%;
 }
 
-#login .checkboxArea {
-    padding: 2px 10px 0 0;
-    height: 44%;
-    margin: 4% auto;
-    height: 62px;
+#login .checkboxArea{
+	padding:2px 10px 0 0;
+	margin: 1.5% auto;
+	min-height:90px;
+}
+
+#loginRewardBox #login .checkboxArea{
+	min-height:60px;
 }
 
 input[type=checkbox] {

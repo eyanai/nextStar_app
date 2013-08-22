@@ -9,7 +9,7 @@ html,body{
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.85em;
-	/* color:yellow;  */
+	/*  color:yellow;   */
 	margin:1% auto;
 }
 
@@ -18,9 +18,9 @@ html,body{
 }
 
 .loginHg .titleLoginReward{
-	/* height: 100%; */
-	margin: 11% 0;
-	padding: 0 24%;
+	min-height: 60px; 
+	 margin: 11% 0; 
+	padding: 0% 24%;
 }
 
 .facebookArea .login .logText{
@@ -73,7 +73,7 @@ h2 .songName1,h2 .songName2{
 }
 
 #loginRewardBox .loginBox{
-	margin:8% auto;
+	margin:8% auto 4%;
 }
 
 #login .checkboxArea{
@@ -151,7 +151,7 @@ h2 .songName1,h2 .songName2{
 }
 
 #loginRewardBox .checkboxArea  {
-		margin:18% auto 2%;
+		margin:22% auto 2%;
 }
 
 .checkboxArea  {
@@ -168,6 +168,10 @@ input[type=checkbox] {
     margin: 2%;
     width: 1em;
     height: 1em;
+}
+
+#checkbox3 input[type=checkbox] {
+    margin-top: 3%;
 }
 
 .loginHg {
@@ -372,7 +376,7 @@ section {
 	margin-right:0px;
 	float:right;
 	direction:ltr;
-	min-width:83%;/* andrd */
+	min-width:87%;/* andrd */
 }
 #checkbox4{
 	margin-right:0px;

@@ -107,7 +107,8 @@ $("#registerSingle .slide.btn.drag").draggable({
 
         if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
             $(ui.helper).css("left", "74%");
-            sliderCheckInSound.playclip();
+            //sliderCheckInSound.playclip();
+            $("#checkInAud")[0].play();
             $(ui.helper).css("left", "5.5%");
             //$(ui.helper).css("left", "76%");
             $(".deny-register").show();
