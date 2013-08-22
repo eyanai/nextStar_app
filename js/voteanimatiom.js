@@ -1,6 +1,6 @@
 // JavaScript Document
 var wid=$(document).width();
-var maxwid=640/2-1;
+var maxwid=wid/2-1;
 
 $('.slideLeft').draggable({
     stack: ".drag",
