@@ -277,6 +277,7 @@ header {
     margin: 8% auto;
     display: block;
     overflow: hidden;
+	
 }
 
 #slide-container {
@@ -289,7 +290,7 @@ header {
     position: relative;
     color: #fff;
     text-align: center;
-    padding: 28px 0;
+    padding: 11% 0 0;
     text-align: right;
 }
 
@@ -303,8 +304,6 @@ header {
     font-size: 1.8em;
     font-weight: normal;
     padding: 0 15px;
-		/*color:yellow;*/
-
     /* margin-bottom:8px; */
 }
 
@@ -314,7 +313,7 @@ header {
     font-size: 28px;
     font-weight: normal;
     text-align: center;
-    margin: 14px 0;
+    margin: 14px 0 0;
     padding: 25px 105px;
     height: 50%;
 }
@@ -337,9 +336,18 @@ header {
     direction: rtl;
 }
 
+.checkboxArea .textAd{
+	color:pink;
+	text-align:right;
+	width:84%;
+	display:inline-block;
+	vertical-align:top;
+}
+
 #login .checkboxArea {
     padding-right: 10px;
 }
+
 
 .facebookArea {
     position: relative;
