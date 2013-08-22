@@ -6,7 +6,6 @@ function attachEventsGallery() {
 }
 
 function gallerySize() {
-    alert("gallery-size");
     var resultGallery = $("#result-gallery").width(); //get the diaplay width
     var singleVoteWidth = resultGallery * 30 / 100; //calculate single width
     var numSingleVotes = $(".gallery-vote-single").width(singleVoteWidth).size(); //set single width and counter single votes
@@ -80,7 +79,7 @@ function createObj(vote) {
     //var $obj = "<img src=\"" + url + "\" alt=\"alt\"><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
     //            "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>"
 
-    var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url.replace(" ","%20")+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
+    var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url.split(' ').join('%20')+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
                 "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>";
 
     return $obj;

@@ -96,45 +96,42 @@ function saveData() {
 }
 
 function postOnFeed(){
-    /*FB.ui({
-        method: 'feed',
-        name: 'Facebook Dialogs',
-        link: 'https://developers.facebook.com/docs/reference/dialogs/',
-        picture: 'http://fbrell.com/f8.jpg',
-        caption: 'Reference Documentation',
-        description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
-      },
-      function(response) {
-        if (response && response.post_id) {
-          alert('Post was published.');
-        } else {
-          alert('Post was not published.');
-        }
-      }      
-    );*/
-   var postText=generalParameters.fbUser.userName;
-   if(generalParameters.fbUser.gender=="male"){
-       postText += " שופט";
-   }
-   else{
-       postText += " שופטת";
-   }
-   postText+=" בכוכב הבא"
+    //check if connect
+    FB.getLoginStatus(function (response) {
+        //if connect
+        if (response.status === 'connected') {
+            //text to post
+            var postText = generalParameters.fbUser.userName;
+            //if male or female
+            if (generalParameters.fbUser.gender == "male") {
+                postText += " שופט";
+            }
+            else {
+                postText += " שופטת";
+            }
+            postText += " בכוכב הבא"
 
-    FB.api('/me/feed', 'post', 
-        { 
-            link: 'http://www.mako.co.il/',
-            picture: domain+'/images/header/hdr_logo_kohav.png',
-            message: postText 
-        }, 
-        function(response) {
-          if (!response || response.error) {
-            alert('Error occured');
-          } 
-          else {
-            alert('Post ID: ' + response.id);
-          }
+            FB.api('/me/feed', 'post',
+            {
+                link: 'http://www.mako.co.il/',
+                picture: domain + '/images/header/hdr_logo_kohav.png',
+                message: postText
+            },
+            function (response) {
+                if (!response || response.error) {
+                    console.log('Error occured');
+                }
+                else {
+                    console.log('Post ID: ' + response.id);
+                }
+            });
+        }
+        else if (response.status === 'not_authorized' || response.status == "unknown") {
+
+            console.log("not connect");
+        }
     });
+   
 }
 
 ////////////////////////////////////////////////////// localstorge functions
@@ -190,9 +187,10 @@ function saveDataOnServer(str) {
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
-function startLongPolling(str) {
+function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
+    postOnFeed();//post on feeds
    //longPolling();
 }
 
