@@ -9,11 +9,11 @@ $('.slideLeft').draggable({
     drag: function (event, ui) {
         console.log($('.slideLeft').css('left'));
         if ($('.slideLeft').position().left > maxwid) {
-              $('.blueArrow').addClass('rotupl');
-            $('.slideLeft').addClass('songGood');
+              $('.arrowRed').addClass('rotDown');
+            $('.slideLeft').addClass('badSong');
               $('.slideRight').addClass('hideR');
-              setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 1630);
-              $('.love').addClass('loveShow');
+              setTimeout(function () { $('.arrowRed.rotDown').hide(); }, 1630);
+              $('.hate').addClass('hateShow');
             setVote(event);
             return false;
         };
@@ -33,11 +33,11 @@ $('.slideRight').draggable({
     containment:'#slideSingleRight',
     drag: function (event, ui) {
     	if($('.slideRight').position().left<10){
-			$('.redArrow').addClass('rotupr');
-			$('.slideRight').addClass('songBad');
+			$('.arrowBlue').addClass('rotupl');
+			$('.slideRight').addClass('goodSong');
 			$('.slideLeft').addClass('hideL');
-			setTimeout(function(){$('.redArrow.rotupr').hide();},1630);
-			$('.hate').addClass('hateShow');
+			setTimeout(function(){$('.arrowBlue.rotupl').hide();},1630);
+			$('.like').addClass('likeShow');
             setVote(event);
 			return false;
 		};
