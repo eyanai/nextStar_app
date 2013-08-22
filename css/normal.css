@@ -92,6 +92,10 @@ line-height: 2em;
 	margin:13% auto 2%;
 }
 
+.loginHg .titleLoginReward {
+	margin:14px 0;
+}
+
 .loginBox .logText{
 	display:block;
 	margin:0 auto;

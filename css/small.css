@@ -20,7 +20,6 @@ html,body{
 .loginHg .titleLoginReward{
 	min-height: 60px; 
 	 margin: 11% 0; 
-	color:yellow;
 	padding: 0% 24%;
 }
 
@@ -74,7 +73,7 @@ h2 .songName1,h2 .songName2{
 }
 
 #loginRewardBox .loginBox{
-	margin:8% auto;
+	margin:8% auto 4%;
 }
 
 #login .checkboxArea{
@@ -152,7 +151,7 @@ h2 .songName1,h2 .songName2{
 }
 
 #loginRewardBox .checkboxArea  {
-		margin:18% auto 2%;
+		margin:22% auto 2%;
 }
 
 .checkboxArea  {
@@ -169,6 +168,10 @@ input[type=checkbox] {
     margin: 2%;
     width: 1em;
     height: 1em;
+}
+
+#checkbox3 input[type=checkbox] {
+    margin-top: 3%;
 }
 
 .loginHg {
