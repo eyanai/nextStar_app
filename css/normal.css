@@ -232,9 +232,9 @@ input[type=checkbox] {
     top: 61%;
 }
 
-.slidein.grey .slider-text{
-	font-size:2em;
-	padding-right:8%;
+.slidein.grey .slider-text {
+    font-size: 2em;
+    padding-right: 8%;
 }
 
 .slidein.grey .slider-text {
@@ -262,11 +262,11 @@ input[type=checkbox] {
     bottom: 21%;
 }
 
-.hate{
+.like {
     top: -6%;
 }
 
-.love{
+.hate {
     top: -6%;
 }
 
@@ -275,46 +275,76 @@ input[type=checkbox] {
     background-image: url(../images/votes/slide_pick_right.png);
 }
 
-#voteSingle .redArrow {
+#voteSingle .arrowBlue {
     left: -4%;
     top: 5%;
 }
 
-#voteSingle .blueArrow {
-    right: -3%;
-    top: 3%;
+#voteSingle .arrowRed {
+    right: -1%;
+    top: 9%;
 }
 
-@-webkit-keyframes rarrowUp {/*rotate right arrow up- vote single- chrome*/
+@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
     0% {
-        right: 1%;
+     left: -4%;
         top: 19%;
-        -webkit-transform: rotateZ(90deg);
+        -webkit-transform: rotateZ(-90deg);
     }
 
     100% {
-        right: -11%;
+    left: -13%;
         top: 13%;
         -webkit-transform: rotateZ(0deg);
     }
 }
 
-@keyframes rarrowUp {/*rotate right arrow up- vote single*/
+@keyframes rarrowUp { /*rotate right arrow up- vote single*/
     0% {
-        right: 1%;
+     left: -4%;
         top: 19%;
         transform: rotateZ(-90deg);
     }
 
     100% {
-        right: 10%;
+     left: -13%;
         top: 26%;
         transform: rotateZ(0deg);
     }
 }
 
 
-@-webkit-keyframes hateShow {/*show like circle- single vote- chrome*/
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
+    0% {
+        left: -1%;
+        top: 9%;
+        -webkit-transform: rotateZ(90deg);
+    }
+
+    100% {
+        left: -5%;
+        top: 2%;
+        -webkit-transform: rotateZ(180deg);
+    }
+}
+
+@keyframes larrowDown { /*turn arrow DOWN*/
+    0% {
+        left: -1%;
+        top: 9%;
+        transform: rotateZ(90deg);
+    }
+
+    100% {
+        left: -5%;
+        top: 2%;
+        transform: rotateZ(180deg);
+    }
+}
+
+
+
+@-webkit-keyframes likeShow { /*show like circle- single vote- chrome*/
     0% {
         opacity: 0;
     }
@@ -330,7 +360,7 @@ input[type=checkbox] {
     }
 }
 
-@keyframes hateShow {/*show like circle- single vote*/
+@keyframes likeShow { /*show like circle- single vote*/
     0% {
         opacity: 0;
     }
@@ -406,8 +436,8 @@ input[type=checkbox] {
     font-size: 3.5em;
 }
 
-#result-gallery .percentage{
-	margin:5% auto 1%;
+#result-gallery .percentage {
+    margin: 5% auto 1%;
 }
 
 #results .songName1, #results .songName2 {
@@ -436,10 +466,9 @@ input[type=checkbox] {
 
 #result-gallery .songName {
     font-size: 0.6em;
-	height: auto; 
-	padding-top:0;
-	line-height:110%;
-
+    height: auto;
+    padding-top: 0;
+    line-height: 110%;
 }
 
 #result-gallery .reMesseg {
@@ -544,7 +573,7 @@ top: 10%;
 .contestant1 .slideStay,.contestant2 .slideGo {
 top: 8%;
 }
-.contestant2 .hate,.contestant1 .hate {
+.contestant2 .like,.contestant1 .like {
 }
 .contestant2 .love,.contestant1 .love  {
 }

@@ -251,7 +251,7 @@ function addWishToLettet(spanArrayTemp,sliderObjTemp){
 
         registerWishTextInterval = setTimeout(function(){
             initWishText(sliderObjTemp)
-        },4000);
+        },2500);
 
          setTimeout(function(){
             $(spanArrayTemp[index-1]).removeClass("wish");
