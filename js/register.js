@@ -106,7 +106,8 @@ $("#registerSingle .slide.btn.drag").draggable({
         }
 
         if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
+            $(".slide").addClass("animateLeft");
+           $(ui.helper).css("left", "74%");
             //sliderCheckInSound.playclip();
             $("#checkInAud")[0].play();
             $(ui.helper).css("left", "5.5%");
@@ -114,7 +115,10 @@ $("#registerSingle .slide.btn.drag").draggable({
             $(".deny-register").show();
             //$("#test-reut-stars").hide();
             //$(".slider-text").text("");
-            setRegister();
+       
+            setTimeout(function() {
+                setRegister();
+            }, 3000);
 
             //$("#test-reut-stars").css("left", "0%");
             //$(ui.helper).css("left", "5.5%");
@@ -141,13 +145,18 @@ $("#registerBattle .slide.btn.drag").draggable({
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
         if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+            $(".slide").addClass("animateLeft");
             $(ui.helper).css("left", "74%");
             $("#checkInAud")[0].play();
-           // sliderCheckInSound.playclip();
+            // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
             //$(".slider-text").text("");
-            setRegister();
+            
+            setTimeout(function() {
+                setRegister();
+            }, 3000);
+
         }
         else {
             $(ui.helper).css("left", "5.5%");

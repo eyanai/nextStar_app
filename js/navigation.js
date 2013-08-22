@@ -70,6 +70,7 @@ var Navi = {
                 if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
+                $(".slide").removeClass("animateLeft");
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
@@ -89,6 +90,7 @@ var Navi = {
                 if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
+                $(".slide").removeClass("animateLeft");
                 $("#registerSingle").hide();
                 $("#registerBattle").show();
                 $(".register-red-flash").hide();
@@ -107,6 +109,7 @@ var Navi = {
                 $(".slidein ").addClass('grey');
                 $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לביצוע הבא</p>");
                 $(".slide.btn").hide();
+                $(".slide").removeClass("animateLeft");
                 //$(".slide .btn .drag .ui-draggable .regAnim").hide();
                 //$(".topMenu").hide();
                 $(".topMenu").slideUp(700);
