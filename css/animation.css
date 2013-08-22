@@ -90,14 +90,14 @@
     animation-fill-mode: forwards;
 }
 
-.rotupr {
-    -webkit-animation: larrowUp 0.4s; /* Safari and Chrome */
+.rotDown {
+    -webkit-animation: larrowDown 0.4s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    animation: larrowUp .4s;
+    animation: larrowDown .4s;
     animation-fill-mode: forwards;
 }
 
-.songGood {
+.badSong {
     -webkit-animation: sinG 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
     /*-webkit-animation-delay: 2s;
@@ -106,7 +106,7 @@
     animation-fill-mode: forwards;
 }
 
-.songBad {
+.goodSong {
     -webkit-animation: sinB 2s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
     /*-webkit-animation-delay: 2s;
@@ -116,31 +116,21 @@
 }
 
 .hideR {
-    -webkit-animation: hideR 1s; /* Safari and Chrome */
-    -webkit-animation-delay: 2s;
+    -webkit-animation: hideR 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideR 1s infinite;
-    animation-delay: 2s;
+    animation: hideR 0.5s infinite;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
 .hideL {
-    -webkit-animation: hideL 1s; /* Safari and Chrome */
-    -webkit-animation-delay: 2s;
+    -webkit-animation: hideL 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideL 1s infinite;
-    animation-delay: 2s;
+    animation: hideL 0.5s infinite;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
-}
-
-.loveShow {
-    -webkit-animation: loveShow .5s; /* Safari and Chrome */
-    -webkit-animation-delay: 1.9s;
-    -webkit-animation-fill-mode: forwards;
-    /*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
-	*/ animation: loveShow .5s;
-    animation-delay: 1.9s;
-    animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 
 .hateShow {
@@ -153,59 +143,69 @@
     animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 
-@-webkit-keyframes rarrowUp {/*rotate right arrow up- vote single- chrome*/
+.likeShow {
+    -webkit-animation: likeShow .5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.9s;
+    -webkit-animation-fill-mode: forwards;
+    /*-webkit-animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);
+	*/ animation: likeShow .5s;
+    animation-delay: 1.9s;
+    animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
+}
+
+@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
     0% {
-        right: 1%;
-        top: 19%;
-        -webkit-transform: rotateZ(90deg);
+        left: -25%;
+        top: 25%;
+        -webkit-transform: rotateZ(-90deg);
     }
 
     100% {
-        right: 0%;
-        top: 19%;
+        left: -30%;
+        top: 25%;
         -webkit-transform: rotateZ(0deg);
     }
 }
 
-@keyframes rarrowUp {/*rotate right arrow up- vote single*/
+@keyframes rarrowUp { /*rotate right arrow up- vote single*/
     0% {
-        right: 1%;
-        top: 19%;
+        left: -25%;
+        top: 25%;
         transform: rotateZ(-90deg);
     }
 
     100% {
-        right: 0%;
-        top: 19%;
+        left: -30%;
+        top: 25%;
         transform: rotateZ(0deg);
     }
 }
 
-@-webkit-keyframes larrowUp {/*turn arrow DOWN -chrome*/
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
     0% {
         left: -10%;
-        top: 22%;
-        -webkit-transform: rotateZ(-90deg);
+        top: 15%;
+        -webkit-transform: rotateZ(90deg);
     }
 
     100% {
-        left: -10%;
-        top: 0%;
-        -webkit-transform: rotateZ(-180deg);
+        left: -5%;
+        top: 15%;
+        -webkit-transform: rotateZ(180deg);
     }
 }
 
-@keyframes larrowUp {/*turn arrow DOWN*/
+@keyframes larrowDown { /*turn arrow DOWN*/
     0% {
         left: -10%;
-        top: 22%;
-        -webkit-transform: rotateZ(-90deg);
+        top: 15%;
+        -webkit-transform: rotateZ(90deg);
     }
 
     100% {
-        left: -10%;
-        top: 0%;
-        -webkit-transform: rotateZ(-180deg);
+        left: -5%;
+        top: 15%;
+        -webkit-transform: rotateZ(180deg);
     }
 }
 
@@ -381,38 +381,6 @@
     }
 }
 
-@-webkit-keyframes loveShow {
-    0% {
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-        left: 75%;
-    }
-
-    100% {
-        opacity: 1;
-        left: 75%;
-    }
-}
-
-@keyframes loveShow {
-    0% {
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-        left: 75%;
-    }
-
-    100% {
-        opacity: 1;
-        left: 75%;
-    }
-}
-
 @-webkit-keyframes hateShow {
     0% {
         opacity: 0;
@@ -420,6 +388,38 @@
 
     5% {
         opacity: 1;
+        left: 75%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 75%;
+    }
+}
+
+@keyframes hateShow {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        left: 75%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 75%;
+    }
+}
+
+@-webkit-keyframes likeShow {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
         left: -45%;
     }
 
@@ -429,7 +429,7 @@
     }
 }
 
-@keyframes hateShow {
+@keyframes likeShow {
     0% {
         opacity: 0;
     }
@@ -593,20 +593,20 @@
 }
 
 .hideLcon {
-    -webkit-animation: hideLcon 1s; /* Safari and Chrome */
-    -webkit-animation-delay: 1.3s;
+    -webkit-animation: hideLcon 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideLcon 1s infinite;
-    animation-delay: 1.3s;
+    animation: hideLcon 0.5s infinite;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
 .hideRcon {
-    -webkit-animation: hideRcon 1s; /* Safari and Chrome */
-    -webkit-animation-delay: 1.3s;
+    -webkit-animation: hideRcon 0.5s; /* Safari and Chrome */
+    -webkit-animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideRcon 1s infinite;
-    animation-delay: 1.3s;
+    animation: hideRcon 0.5s infinite;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -784,6 +784,7 @@
         background-image: none;
     }
 }
+
 @-webkit-keyframes hideRcon {
     0% {
         left: 30%;

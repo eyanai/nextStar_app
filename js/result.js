@@ -138,10 +138,11 @@ function setResultPage(data) {
          //percent
         $("#results-perc-first").text(data.votes[0].finalPercent + "%");
         $("#results-perc-second").text(data.votes[1].finalPercent + "%");
-      //  setPercentNumberAnimation("single", data.votes[0].finalPercent,data.votes[1].finalPercent);
+        setPercentNumberAnimation("single", data.votes[0].finalPercent,data.votes[1].finalPercent);
+		alert('aaa');
         //if the percent bigger then  - add the red class $("#results-perc-second").addClass("red")
         //navigate
-        Navi.goto("resultsBattle");
+        Navi.goto("resultsSingle");
 
         $("#voteBarAud")[0].play();
     }
@@ -152,10 +153,14 @@ var  perce1Temp = 0;
 var milise = 0;
 function setPercentNumberAnimation(type,perc1,perc2){
     if( type=="single"){
+		alert('single');
         perce1Temp = 0;
         milise = 1 * 1000 / perc1;
         returnNumber(perc1);
     }
+	if( type=="battle"){
+		alert('battle');
+	}
 }
 
 function returnNumber(perc1){
