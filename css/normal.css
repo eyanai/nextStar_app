@@ -237,12 +237,18 @@ input[type=checkbox] {
     padding-right: 8%;
 }
 
-.slidein.grey .slider-text ~ p {
-    padding-right: 9px;
+.slidein.grey .slider-text {
+	width:50%;
 }
 
 .slider-text {
     padding-right: 2%;
+}
+
+.slide{
+	top:15%;
+	width: 25%;
+    height: 72%;
 }
 /*================================================VOTE SECTION=====================================*/
 
@@ -532,6 +538,14 @@ input[type=checkbox] {
     direction: ltr;
     /* padding-left:5%; */
 }
+
+.checkboxArea .textAd{
+	vertical-align:middle;
+}
+
+
+
+
 /* 
 
 .fbText,.logText{

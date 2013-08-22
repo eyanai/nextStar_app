@@ -7,10 +7,10 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/animation.css">
         <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
-        <link rel="stylesheet" media="screen and (max-width:699px) and (orientation:portrait)" href="css/small.css" />
-        <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width:1399px) and (orientation:portrait)" href="css/normal.css" />
-        <link rel="stylesheet" media="screen and (min-width: 1400px) and (orientation:portrait)" href="css/large.css" />
-
+        <link rel="stylesheet" media="screen and (max-width:699px)" href="css/small.css" />
+        <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width:1399px)"  href="css/normal.css" /><!-- and (orientation:portrait) "-->
+        <link rel="stylesheet" media="screen and (min-width: 1400px)"  href="css/large.css" /><!-- and (orientation:portrait)" -->
+         
         <!------------------------------------general scripts and plugins------------------------------------------>
         <script src="js/jq.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
@@ -25,7 +25,7 @@
 <script src="js/script.js"></script>
 <script src="js/facebook.js"></script>
 </head>
-<body onOrientationchange<!-- ="updateOrientation1();" onResize="updateOrientation2(); -->
+<body onOrientationchange>
 <div id="horizonal-screen">
 	<div id="flip-me"></div>
 </div>
@@ -36,8 +36,9 @@
 <nav class="topMenu">
 	<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
 </nav>
-<section id="login">
-	<div class="nextPage" data-goto="voteBattle"></div>
+
+	<section id="login">
+	<div class="nextPage" data-goto="messageWaitingWithImage"></div>
 	<figure class="logo login"></figure>
 	<div id="loginExtendedBox">
 		<div id="slide-container">
@@ -49,7 +50,7 @@
 				<div class="checkboxArea">
 					<div id="rules-wrap">
 						<input type="checkbox" id="rulesCB" />
-						<label for="checkbox1"><span></span>קראתי ומאשר/ת את </label>
+						<label for="checkbox1">קראתי ומאשר/ת את </label>
                         <a href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" target="_blank">התקנון </a>
 						<span id="notConfirmed">לא אישרת את התקנון!</span></br>
 					</div>
@@ -79,9 +80,9 @@
 	</div>
 	<div class="musix"></div>
 </section>
-<!---log in section-->
-   
-        <section id="message">
+	<!---log in section-->
+
+		<section id="message">
             <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
@@ -617,12 +618,38 @@
                 </div>
             </div>
             <div class="musix"></div>
-  </div>
+
         </section>
         <!---gallery  section-->
+
         <footer id="banner"> <!--<img src="images/banner/banner1.jpg" alt="alt">-->
-            <iframe src="http://apps.mako.co.il/mobileAds/getAdTag.ashx?template=templateCM8.html&cat=mobile.makoTV.programs.the_next_star.votes&format=APP_BANNER_LARGE_1024X66"></iframe>
-             </footer>
+            <script>
+                var CM8Server;
+                var CM8Cat;
+                var CM8Profile;
+                var CM8Req;
+                var CM8Redir;
+
+                if($(document).width() < 700) {
+                   
+                     CM8Server="mako.checkm8.com";
+                     CM8Cat="mobile.makoTV.programs.the_next_star.votes";
+                     CM8Profile="format=APP_BANNER_320X50";
+                     CM8Req="x";
+                     CM8Redir={click: "", ad_play: ""};
+                }
+                else{
+                    CM8Server="mako.checkm8.com";
+                    CM8Cat="mobile.makoTV.programs.the_next_star.votes";
+                    CM8Profile="APP_BANNER_LARGE_1024X66";
+                    CM8Req="x";
+                    CM8Redir={click: "", ad_play: ""};
+                }
+                
+            </script>
+        <script language="JavaScript" src="http://makostatic.checkm8.com/adam/cm8_detect_ad.js"></script>
+
+        </footer>
         <!---banner section-->
                     <!--<div class="audio-wrap">
                                     <audio id="audio-alert">
