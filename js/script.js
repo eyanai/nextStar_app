@@ -169,11 +169,11 @@ function toggleTopMenu(headerText) {
 
 }
 
-function checkRulesChecked() {
-    if (localStorage.getItem('rulesStorage')) {
-        generalParameters.ruledChecked = true;
-    }
-}
+//function checkRulesChecked() {
+//    if (localStorage.getItem('rulesStorage')) {
+//        generalParameters.ruledChecked = true;
+//    }
+//}
 
 function showFlash(){
     $(".register-red-flash").show();
@@ -185,7 +185,7 @@ $(document).ready(function () {
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
-    checkRulesChecked();
+    //checkRulesChecked();
     attachEventsFacebook(); //check gallery
     attachEventsGallery();
     //init the touchmive events

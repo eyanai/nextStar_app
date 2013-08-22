@@ -13,10 +13,10 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
 //if the user checked ruled in previous time -hide it   
-    if(generalParameters.ruledChecked)
-    {
-        $("#rules-wrap").hide();
-    }   
+    //if(generalParameters.ruledChecked)
+    //{
+    //    $("#rules-wrap").hide();
+    //}   
  $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
@@ -205,14 +205,14 @@ function rulesCBClick(){
 
     if($("#rulesCB").hasClass("checked")){
             $("#rulesCB").removeClass("checked");
-             localStorage.setItem('rulesStorage', false);
+             //localStorage.setItem('rulesStorage', false);
         generalParameters.ruledChecked = false;
            
         }
         else{
             $("#rulesCB").addClass("checked");
               generalParameters.ruledChecked = true;
-               localStorage.setItem('rulesStorage', true);
+               //localStorage.setItem('rulesStorage', true);
           
         }
 
