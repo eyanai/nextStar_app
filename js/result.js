@@ -30,7 +30,7 @@ function setResultPage(data) {
             $("#results .single .resultScalaL .scala").removeClass("scalaRed");
 
             //set the percent number color
-            $("#results-perc-first").removeClass("red");
+            $("#results-perc-single").removeClass("red");
         }
         //else - remove the red class- and the blue class will shown
         else{
@@ -41,9 +41,9 @@ function setResultPage(data) {
             $("#results .single .resultScalaL .scala").removeClass("scalaBlue");
             
             //set the percent number color
-            $("#results-perc-first").addClass("red");
+            $("#results-perc-single").addClass("red");
         }
-        $('.scala').animate({ bottom: '0%' }, 1000, function () {
+        $('.scala').animate({ bottom: '0%' }, 1300, function () {
             //var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
             var bottomFirst = data.votes[0].finalPercent;
             if (bottomFirst > 98) {
@@ -51,7 +51,8 @@ function setResultPage(data) {
             }
             $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 500);
         });
-        voteBarsSound.playclip();
+        $("#voteBarAud")[0].play();
+       // voteBarsSound.playclip();
        
        
         //navigate
@@ -119,7 +120,7 @@ function setResultPage(data) {
             $("#results-perc-second").addClass("red");
         }
        
-        $('.scala').animate({ bottom: '0%' }, 1000, function() {
+        $('.scala').animate({ bottom: '0%' }, 1300, function() {
 
             var bottomFirst = data.votes[0].finalPercent;
             if (bottomFirst > 98) {
@@ -142,6 +143,8 @@ function setResultPage(data) {
         //if the percent bigger then  - add the red class $("#results-perc-second").addClass("red")
         //navigate
         Navi.goto("resultsSingle");
+
+        $("#voteBarAud")[0].play();
     }
 }
 

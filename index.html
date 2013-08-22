@@ -37,7 +37,7 @@
 	<h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
 </nav>
 <section id="login">
-	<div class="nextPage" data-goto="messageWaitingWithImage"></div>
+	<div class="nextPage" data-goto="voteBattle"></div>
 	<figure class="logo login"></figure>
 	<div id="loginExtendedBox">
 		<div id="slide-container">
@@ -49,8 +49,8 @@
 				<div class="checkboxArea">
 					<div id="rules-wrap">
 						<input type="checkbox" id="rulesCB" />
-						<!--<label for="checkbox1"><span></span>קראתי ומאשר/ת את התקנון </label>-->
-                        <a href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" target="_blank">קראתי ומאשר/ת את התקנון </a>
+						<label for="checkbox1"><span></span>קראתי ומאשר/ת את </label>
+                        <a href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" target="_blank">התקנון </a>
 						<span id="notConfirmed">לא אישרת את התקנון!</span></br>
 					</div>
 					<input type="checkbox" id="tvImgCB"  class="tvImgCB"/>
@@ -58,7 +58,7 @@
 				</div>
 				<div class="facebookArea">
 					<div class="logFb"><span class="icon"></span><span class="logFb-text">התחברו עם פייסבוק כדי לזכות בפרסים</span></div>
-					<div class="login" onclick="genClickSound.playclip();"><span class="logText">הצביעו ללא פייסבוק</span></div>
+					<div class="login"><span class="logText">הצביעו ללא פייסבוק</span></div>
 				</div>
 			</form>
 			<div id="loginRewardBox">
@@ -68,7 +68,7 @@
 				</hgroup>
 				<div class="loginBox">
 					<div class="logFb"><span class="icon"></span><span class="logFb-text">כניסה עם פייסבוק</span></div>
-					<div class="login" onclick="genClickSound.playclip();Navi.goto('message');"> <span class="logText">הצבעה ללא פייסבוק</span> </div>
+					<div class="login" > <span class="logText">הצבעה ללא פייסבוק</span> </div>
 				</div>
 				<div class="checkboxArea">
 					<input type="checkbox" id="checkbox3" name="cc" class="tvImgCB" />
@@ -117,7 +117,7 @@
         <section id="register">
                             <!--<div class="nextPage" data-goto="resultsSingle"></div>
                             <div class="nextPage" data-goto="voteBattle"></div>-->
-            <div class="nextPage" data-goto="voteBattle"></div>
+            <div class="nextPage" data-goto="voteSingle"></div>
 
             <!--<div class="animat" data-animat="register"></div>-->
             <div class="animat" data-animat="notRegister"></div>
@@ -130,16 +130,16 @@
 
                     <div class="slidein grey">
                         <div class="register-red-flash"></div>
-                        <div id="test-reut">
-                            <div id="test-reut-outer">
+                        <!--<div id="test-reut">
+                            <div id="test-reut-outer" class="">
                                 <div id="test-reut-stars"></div>
                                 <div class="slide btn drag"></div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="deny-register"></div>
-
+                        <div class="slide btn drag"></div>
                         <!--<div class="slide btn drag"></div>-->
-                        <div class="slider-text"><h1>ההצבעה החלה</h1></br><h2>המתן לביצוע הבא</h2></div>
+                        <div class="slider-text"><p>ההצבעה החלה</p><p>המתן לביצוע הבא</p></div>
                     </div>
 
                 </div>
@@ -218,7 +218,7 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="nextPage" data-goto="voteBattle"></div>
+            <div class="nextPage" data-goto="voteSingle"></div>
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="resultsSingle"></div>
                 <!--<div class="animat animatG" data-animat="singleGood"></div>
@@ -617,13 +617,46 @@
   </div>
         </section>
         <!---gallery  section-->
-        <footer id="banner"> <img src="images/banner/banner1.jpg" alt="alt"> </footer>
+        <footer id="banner"> <!--<img src="images/banner/banner1.jpg" alt="alt">-->
+            <iframe src="http://apps.mako.co.il/mobileAds/getAdTag.ashx?template=templateCM8.html&cat=mobile.makoTV.programs.the_next_star.votes&format=APP_BANNER_LARGE_1024X66"></iframe>
+             </footer>
         <!---banner section-->
                     <!--<div class="audio-wrap">
                         <audio id="audio-alert">
                             <source>
                         </audio>
                     </div>-->
+
+    <div class="audio-wrap" style="display: none">
+        <audio id="alertAud" controls>
+              <source src="sounds/Alert.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="genAud" controls>
+              <source src="sounds/Gen Click.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="voteBarAud" controls>
+              <source src="sounds/Vote Bars.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="voteNegAud" controls>
+              <source src="sounds/Vote Sound Negative.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+
+        <audio id="votePosAud" controls>
+              <source src="sounds/Vote Sound Positive.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+          <audio id="checkInAud" controls>
+              <source src="sounds/Slider Check in.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+    </div>
         <!------------------------------------ internal scripts  ------------------------------------------>
         <script src="js/navigation.js"></script>
         <script src="js/pages.js"></script>

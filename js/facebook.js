@@ -13,13 +13,13 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
 //if the user checked ruled in previous time -hide it   
-    if(generalParameters.ruledChecked)
-    {
-        $("#rules-wrap").hide();
-    }   
+    //if(generalParameters.ruledChecked)
+    //{
+    //    $("#rules-wrap").hide();
+    //}   
  $(".logFb").on("click", loginFb);
-    $("#loginRewardBox").on("click", ".login", startLongPolling);
-    $("#loginExtendedBox").on("click",".login", loginWithoutFacebook);
+    $("#loginRewardBox").on("click", ".login", loginRewardClicked);
+    $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $("#tvImgCB").on("click",tvImgCBClick);
 }
@@ -33,9 +33,11 @@ var searchQuery = window.location.search;//search Query
 //if connect already
 if (fromLocalStorge) {
     saveDataOnServer("fromLocalStorge");
+    //alert("local");
 }
 //connect yet and after after login in webview
 else if (searchQuery.length > 0) {
+    //alert("search");;
     loginCheck();
 }
 
@@ -189,6 +191,7 @@ function saveDataOnServer(str) {
 }
 //start LongPolling
 function startLongPolling(str) {
+    generalParameters.isConnect = true;
     $("body").trigger("start-app");
    //longPolling();
 }
@@ -202,14 +205,14 @@ function rulesCBClick(){
 
     if($("#rulesCB").hasClass("checked")){
             $("#rulesCB").removeClass("checked");
-             localStorage.setItem('rulesStorage', false);
+             //localStorage.setItem('rulesStorage', false);
         generalParameters.ruledChecked = false;
            
         }
         else{
             $("#rulesCB").addClass("checked");
               generalParameters.ruledChecked = true;
-               localStorage.setItem('rulesStorage', true);
+               //localStorage.setItem('rulesStorage', true);
           
         }
 
@@ -227,3 +230,13 @@ function tvImgCBClick(){
       
 }
 
+
+function loginRewardClicked(){
+    $("#genAud")[0].play();
+    startLongPolling();
+}
+
+function loginWithoutFacClicked(){
+    $("#genAud")[0].play();
+    loginWithoutFacebook();
+}

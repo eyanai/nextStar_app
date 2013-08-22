@@ -4,6 +4,9 @@
 //var serverDomain = 'http://makosrv1.egoline.co.il/nextStar/userjson?';
 ////var serverDomain = "http://makosrv1.egoline.co.il/nextStarTestA/userjson?";
 var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
+//E -mako
+//A -yerutech
+//var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 
 var domain = "http://makosrv1.egoline.co.il:9090/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il/applicationMakoQA";
