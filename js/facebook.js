@@ -33,9 +33,11 @@ var searchQuery = window.location.search;//search Query
 //if connect already
 if (fromLocalStorge) {
     saveDataOnServer("fromLocalStorge");
+    //alert("local");
 }
 //connect yet and after after login in webview
 else if (searchQuery.length > 0) {
+    //alert("search");;
     loginCheck();
 }
 
