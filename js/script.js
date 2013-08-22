@@ -1,9 +1,8 @@
 
-
 //general parameters
 var generalParameters = {
     isRegistered: false, //if register to vote
-    wasRegisterPage:false,
+    wasRegisterPage: false,
     voteIdA: null,
     voteKeyA: null,
     voteIdB: null,
@@ -14,11 +13,11 @@ var generalParameters = {
         userName: null,
         gender: null,
         profilePic: null,
-        showImg:false
+        showImg: false
     },
     isBigSize: false,
     ruledChecked: false,
-    isConnect:false
+    isConnect: false
 }
 
 
@@ -39,7 +38,7 @@ function pageChange(data) {
             setStaticPage(data);
             break;
         case 21:
-            setOpenRegisterPage(data,0);
+            setOpenRegisterPage(data, 0);
             break;
         case 22:
             setRegisterGoingClose(data);
@@ -79,10 +78,10 @@ function isSingle(data) {
 //check if tha app run on small screen or big. According to result load appropriate sized image
 function initAppSize() {
     //set the isBigSize parameter by the device
-    if($(window).width()>700){
+    if ($(window).width() > 700) {
         generalParameters.isBigSize = true;
     }
-    
+
 }
 
 //init the dictionary values from admin- to blue title
@@ -142,14 +141,14 @@ function initWaitAnimation() {
         if (pos > -1) {
             pos = -285.25;
         }
-        else{
+        else {
             pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
-    }, 300);    
+    }, 300);
 }
 
-function stopWaitAnimation(){
+function stopWaitAnimation() {
     clearInterval(gifInterval);
 }
 
@@ -163,8 +162,8 @@ function initMoveEvents() {
 }
 
 function toggleTopMenu(headerText) {
-    $(".topMenu").slideUp(700,function(){$(".topMenu h1").text(headerText);});
-    
+    $(".topMenu").slideUp(700, function () { $(".topMenu h1").text(headerText); });
+
     $(".topMenu").slideDown(700);
 
 }
@@ -175,7 +174,7 @@ function toggleTopMenu(headerText) {
 //    }
 //}
 
-function showFlash(){
+function showFlash() {
     $(".register-red-flash").show();
     alertRegisterGoingClose();
 }
@@ -199,5 +198,7 @@ $(document).ready(function () {
     }
     $("#horizonal-screen").hide();
     //initSounds();
+
+
 });
 
