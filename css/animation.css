@@ -116,19 +116,19 @@
 }
 
 .hideR {
-    -webkit-animation: hideR 2s; /* Safari and Chrome */
+    -webkit-animation: hideR 1s; /* Safari and Chrome */
     -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideR 2s infinite;
+    animation: hideR 1s infinite;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
 .hideL {
-    -webkit-animation: hideL 2s; /* Safari and Chrome */
+    -webkit-animation: hideL 1s; /* Safari and Chrome */
     -webkit-animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideL 2s infinite;
+    animation: hideL 1s infinite;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
@@ -339,27 +339,31 @@
 
 @-webkit-keyframes hideR {
     0% {
-        right: 0%;
+        /*right: 0%;*/
+        left: 30%;
     }
 
     100% {
-        right: -50%;
+        /*right: -50%;*/
+        left: 100%;
     }
 }
 
 @keyframes hideR {
     0% {
-        right: 0%;
+        /*right: 0%;*/
+        left: 30%;
     }
 
     100% {
-        right: -50%;
+        /*right: -50%;*/
+        left: 100%;
     }
 }
 
 @-webkit-keyframes hideL {
     0% {
-        left: 0%;
+        left: 20%;
     }
 
     100% {
@@ -369,7 +373,7 @@
 
 @keyframes hideL {
     0% {
-        left: 0%;
+        left: 20%;
     }
 
     100% {
@@ -589,19 +593,19 @@
 }
 
 .hideLcon {
-    -webkit-animation: hideLcon 0.5s; /* Safari and Chrome */
+    -webkit-animation: hideLcon 1s; /* Safari and Chrome */
     -webkit-animation-delay: 1.3s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideLcon 0.5s infinite;
+    animation: hideLcon 1s infinite;
     animation-delay: 1.3s;
     animation-fill-mode: forwards;
 }
 
 .hideRcon {
-    -webkit-animation: hideRcon 0.5s; /* Safari and Chrome */
+    -webkit-animation: hideRcon 1s; /* Safari and Chrome */
     -webkit-animation-delay: 1.3s;
     -webkit-animation-fill-mode: forwards;
-    animation: hideRcon 0.5s infinite;
+    animation: hideRcon 1s infinite;
     animation-delay: 1.3s;
     animation-fill-mode: forwards;
 }
@@ -786,7 +790,7 @@
     }
 
     100% {
-        left: 50%;
+        left: 100%;
     }
 }
 
@@ -796,7 +800,7 @@
     }
 
     100% {
-        left: 50%;
+        left: 100%;
     }
 }
 
@@ -806,7 +810,7 @@
     }
 
     100% {
-        left: 0%;
+        left: -50%;
     }
 }
 
@@ -816,7 +820,7 @@
     }
 
     100% {
-        left: 0%;
+        left: -50%;
     }
 }
 

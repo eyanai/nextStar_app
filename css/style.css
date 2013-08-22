@@ -126,6 +126,11 @@ section {
     height: 100%;
 }
 
+#banner iframe {
+    width: 100%;
+    height: 100%;
+}
+
 .centerMe {
     /* Internet Explorer 10 */
     display: -ms-flexbox;
