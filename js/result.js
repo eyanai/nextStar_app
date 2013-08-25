@@ -157,6 +157,7 @@ function setPercentNumberAnimation(type,perc1,perc2){
         perce1Temp = 0;
         milise = 1 * 1000 / perc1;
         returnNumber(perc1);
+		console.log(type,perc1,perc2);
     }
 	if( type=="battle"){
 		//alert('battle');

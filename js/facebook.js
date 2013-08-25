@@ -112,7 +112,7 @@ function postOnFeed(){
         }
       }      
     );*/
-   var postText=generalParameters.fbUser.userName;
+   var postText=" גם אני ";/*generalParameters.fbUser.userName;*/
    if(generalParameters.fbUser.gender=="male"){
        postText += " שופט";
    }
@@ -120,12 +120,17 @@ function postOnFeed(){
        postText += " שופטת";
    }
    postText+=" בכוכב הבא"
-
+	descriptionText="לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
+	captionText="www.mako.co.il";
+	nameLink="אפליקציית הכוכב הבא בmakoTV";
     FB.api('/me/feed', 'post', 
         { 
-            link: 'http://www.mako.co.il/',
+            link: 'http://www.mako.co.il/collab/thenextstar/',
             picture: domain+'/images/header/hdr_logo_kohav.png',
-            message: postText 
+            message: postText ,
+			description: descriptionText ,
+			caption: captionText ,
+			name: nameLink
         }, 
         function(response) {
           if (!response || response.error) {
