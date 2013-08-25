@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////// help parameters
+﻿////////////////////////////////////////////////////// help parameters
 var appID = "543975688973172";//fb app id
 var myLocation = domain+"/index.html";//domain
 
@@ -8,7 +8,7 @@ FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //localStorage.setItem('fbStorage', "");
-
+//alert(localStorage.getItem('fbStorage'));
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
@@ -32,15 +32,18 @@ checkLocalStorge();
 var searchQuery = window.location.search;//search Query 
 //if connect already
 if (fromLocalStorge) {
-    saveDataOnServer("fromLocalStorge");
     //alert("local");
+    saveDataOnServer("fromLocalStorge");
+    
 }
+
 //connect yet and after after login in webview
 else if (searchQuery.length > 0) {
-    //alert("search");;
+    //alert("search");
     loginCheck();
 }
 
+//alert("search: " + window.location);
 ////////////////////////////////////////////////////// fb api functions
 //login fb
 function loginFb() {
@@ -164,20 +167,21 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-    
+
     $.ajax({
         type: "POST",
-        url: serverDomain + "type==getFacebookData",
+        url: serverDomain + "type=getFacebookData",
         data: {
             facebookId: generalParameters.fbUser.id,
             facebookName: generalParameters.fbUser.userName,
             facebookSex: generalParameters.fbUser.gender,
             facebookimgurl: generalParameters.fbUser.profilePic,
-            showImg:generalParameters.fbUser.showImg
+            showImg: generalParameters.fbUser.showImg
         },
         success: function (data) {
             console.log(data);
             setLocalStorage();
+            //alert("save");
         },
         error: function (data) {
             console.log("error getFacebookData: " + data);
