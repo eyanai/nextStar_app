@@ -246,11 +246,12 @@ input[type=checkbox] {
 }
 
 .slide{
-		width: 22%;
+	width: 22%;
     height: 70%;
     background-size: 100% 100%;
     top: 16.3%;
-	left:5.3%;	
+	left:5.3%;
+	
 }
 /*================================================VOTE SECTION=====================================*/
 
