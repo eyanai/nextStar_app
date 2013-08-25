@@ -6,6 +6,7 @@ function attachEventsGallery() {
 }
 
 function gallerySize() {
+   // alert("gallery-size");
     var resultGallery = $("#result-gallery").width(); //get the diaplay width
     var singleVoteWidth = resultGallery * 30 / 100; //calculate single width
     var numSingleVotes = $(".gallery-vote-single").width(singleVoteWidth).size(); //set single width and counter single votes

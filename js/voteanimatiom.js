@@ -1,6 +1,6 @@
 // JavaScript Document
-var wid=$(document).width();
-var maxwid=640/2-1;
+//var wid=$(document).width();
+//var maxwid=wid/2-1;
 
 $('.slideLeft').draggable({
     stack: ".drag",
@@ -8,19 +8,21 @@ $('.slideLeft').draggable({
     containment: '#slideSingleLeft',
     drag: function (event, ui) {
         console.log($('.slideLeft').css('left'));
-        if ($('.slideLeft').position().left > maxwid) {
-              $('.blueArrow').addClass('rotupl');
-            $('.slideLeft').addClass('songGood');
+        if ($('.slideLeft').position().left > (($("body").width())/2-1)) {
+            //if passes the middle
+              $('.arrowRed').addClass('rotDown');
+            $('.slideLeft').addClass('badSong');
               $('.slideRight').addClass('hideR');
-              setTimeout(function () { $('.blueArrow.rotupl').hide(); }, 1630);
-              $('.love').addClass('loveShow');
+              setTimeout(function () { $('.arrowRed.rotDown').hide(); }, 1630);
+              $('.hate').addClass('hateShow');
             setVote(event);
             return false;
         };
 
     },
     stop: function (event, ui) {
-        if ($('.slideLeft').position().left < maxwid) {
+        if ($('.slideLeft').position().left < (($("body").width())/2-1)) {
+            //if doesn't pass the middle
             $('.slideLeft').animate({ left: '20%' }, 800, function () { });
         }
     }
@@ -33,11 +35,11 @@ $('.slideRight').draggable({
     containment:'#slideSingleRight',
     drag: function (event, ui) {
     	if($('.slideRight').position().left<10){
-			$('.redArrow').addClass('rotupr');
-			$('.slideRight').addClass('songBad');
+			$('.arrowBlue').addClass('rotupl');
+			$('.slideRight').addClass('goodSong');
 			$('.slideLeft').addClass('hideL');
-			setTimeout(function(){$('.redArrow.rotupr').hide();},1630);
-			$('.hate').addClass('hateShow');
+			setTimeout(function(){$('.arrowBlue.rotupl').hide();},1630);
+			$('.like').addClass('likeShow');
             setVote(event);
 			return false;
 		};
@@ -101,7 +103,7 @@ $('.slideTopbattle.con2').draggable({ //left top
     axis: "x",
     containment:"#lslidecon" ,
     drag: function (event, ui) {
-    	if($('.slideTopbattle.con2').position().left>maxwid){
+    	if($('.slideTopbattle.con2').position().left>(($("body").width())/2-1)){
 			$('.redArrow.cont2').addClass('rotdwnlcon2');
 			$('.slideTopbattle.con2').addClass('battel2vot');
 			$('.slideDownbattle.con2').addClass('hideLcon');
@@ -112,7 +114,7 @@ $('.slideTopbattle.con2').draggable({ //left top
 		};
 	},
 	stop:function (event, ui) {
-		if($('.slideTopbattle.con2').position().left<maxwid){
+		if($('.slideTopbattle.con2').position().left<(($("body").width())/2-1)){
 			$('.slideTopbattle.con2').animate({left:'20%'},800,function(){});	
 		}
 	}
@@ -125,7 +127,7 @@ $('.slideDownbattle.con2').draggable({ //left bottom
     containment:"#lslidecon" ,
     drag: function (event, ui) {
 	
-    	if($('.slideDownbattle.con2').position().left>maxwid){
+    	if($('.slideDownbattle.con2').position().left>(($("body").width())/2-1)){
 			$('.blueArrow.cont2').addClass('rotuplcon2');
 			$('.slideDownbattle.con2').addClass('battel2vot');
 			$('.slideTopbattle.con2').addClass('hideLcon');
@@ -136,7 +138,7 @@ $('.slideDownbattle.con2').draggable({ //left bottom
 		}
 	}, 
 	stop:function (event, ui) {
-		if($('.slideDownbattle.con2').position().left<maxwid){
+		if($('.slideDownbattle.con2').position().left<(($("body").width())/2-1)){
 			$('.slideDownbattle.con2').animate({left:'20%'},800,function(){});	
 		}
 	}

@@ -120,44 +120,40 @@ function setVote(e) {
         case 'slideLeft':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
-            vote = 1;
-            $("#votePosAud")[0].play();
-            //votePositiveSound.playclip();
+            vote = 0;
+            $("#voteNegAud")[0].play()
             break;
         case 'slideRight':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
-            vote = 0;
-            $("#voteNegAud")[0].play();
-            //voteNegativeSound.playclip();
+            vote = 1;
+
+            $("#votePosAud")[0].play()
             break;
         case 'slideTopbattleCon1':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 0;
-            $("#voteNegAud")[0].play();
-            //voteNegativeSound.playclip();
+            $("#voteNegAud")[0].play()
             break;
         case 'slideTopbattleCon2':
             voteId = generalParameters.voteIdB;
             voteKey = generalParameters.voteKeyB;
             vote = 0;
-            $("#voteNegAud")[0].play();
-            //voteNegativeSound.playclip();
+            $("#voteNegAud")[0].play()
             break;
         case 'slideDownbattleCon1':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 1;
-            $("#votePosAud")[0].play();
-           // votePositiveSound.playclip();
+            $("#votePosAud")[0].play()
+            
             break;
         case 'slideDownbattleCon2':
             voteId = generalParameters.voteIdB;
             voteKey = generalParameters.voteKeyB;
             vote = 1;
-            $("#votePosAud")[0].play();
-            //votePositiveSound.playclip();
+            $("#votePosAud")[0].play()
             break;
     }
 
@@ -203,16 +199,16 @@ function setWaitVoteClosePage(data) {
 }
 
 function resetAnimations() {
-    $('.blueArrow').removeClass('rotupl');
-    $('.slideLeft').removeClass('songGood');
+    $('.arrowRed').removeClass('rotDown');
+    $('.slideLeft').removeClass('badSong');
     $('.slideRight').removeClass('hideR');
-    $('.love').removeClass('loveShow');
-    $('.redArrow').removeClass('rotupr');
-    $('.slideRight').removeClass('songBad');
-    $('.slideLeft').removeClass('hideL');
     $('.hate').removeClass('hateShow');
-    $('.redArrow').show();
-    $('.blueArrow').show();
+    $('.arrowBlue').removeClass('rotupl');
+    $('.slideRight').removeClass('goodSong');
+    $('.slideLeft').removeClass('hideL');
+    $('.like').removeClass('likeShow');
+    $('.arrowBlue').show();
+    $('.arrowRed').show();
     $('.slideLeft').css('left', '20%');
     $('.slideRight').css('left', '30%');
 

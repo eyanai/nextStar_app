@@ -79,58 +79,69 @@ function setOpenRegisterPage(data, from) {
 //var slideWidth;//=$(".slide").width();
 //var leftMax = $("#test-reut-outer").css("left").slice(0, -2);
 //drag to register in single vote
-$("#registerSingle .slide.btn.drag").draggable({
-    stack: ".drag",
-    axis: "x",
-    containment: "#registerSingle .slidein",
-    //start:function(event,ui){
-    //    starsWidth=$("#test-reut-stars").width();
-    //    slideWidth=$(".slide").width();
 
-    //},
-    drag: function (event, ui) {
-        //$("#test-reut-stars").css("left", 100*((ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth-10)/starsWidth) + "%");
-        //console.log(ui.helper.css("left").slice(0,-2)*1);
-        //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
-        
-        console.log("ui.offset.left: "+ui.offset.left)
-    },
-    stop: function (event, ui) {
-        var lengthNoPx = ui.helper.css("left").length - 2;
+function attachDrag(){
 
-        if ($(".slidein").width().toString().length < 3) {
-            var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
-        }
-        else {
-            var widthInPx = $(".slidein").width();
-        }
+    $("#registerSingle .slide.btn.drag").draggable({
+        stack: ".drag",
+        axis: "x",
+        containment: "#registerSingle .slidein",
+        //start:function(event,ui){
+        //    starsWidth=$("#test-reut-stars").width();
+        //    slideWidth=$(".slide").width();
 
-        if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
-            //sliderCheckInSound.playclip();
-            $("#checkInAud")[0].play();
-            $(ui.helper).css("left", "5.5%");
-            //$(ui.helper).css("left", "76%");
-            $(".deny-register").show();
-            //$("#test-reut-stars").hide();
-            //$(".slider-text").text("");
-            setRegister();
+        //},
+        drag: function(event, ui) {
+            //$("#test-reut-stars").css("left", 100*((ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth-10)/starsWidth) + "%");
+            //console.log(ui.helper.css("left").slice(0,-2)*1);
+            //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
 
-            //$("#test-reut-stars").css("left", "0%");
-            //$(ui.helper).css("left", "5.5%");
-            //$(ui.helper).css("left", "76%");
+            console.log("ui.offset.left: " + ui.offset.left)
+        },
+        stop: function(event, ui) {
+            var lengthNoPx = ui.helper.css("left").length - 2;
+
+            if($(".slidein").width().toString().length < 3) {
+                var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
+            }
+            else {
+                var widthInPx = $(".slidein").width();
+            }
+
+            if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
+
+                //  alert("checkin");
+                // $("#checkInAud")[0].play();
+
+                $(".slide").addClass("animateLeft");
+                $(ui.helper).css("left", "74%");
+                $("#checkInAud")[0].play();
+                $(ui.helper).css("left", "5.5%");
+                $(".deny-register").show();
+
+
+                //stop the red flash sound
+                // $("#alertAud")[0].pause();
+                //   clearInterval(alertInterval);
+                alert("hi4")
+                setTimeout(function() {
+                    alert('5');
+                    setRegister();
+                }, 3000);
+
+
+            }
+            else {
+
+                $(ui.helper).css("left", "5.5%");
+                //$("#test-reut-stars").css("left", "0%");
+                //$(ui.helper).css("left", "76%");
+            }
         }
-        else {
-            
-            $(ui.helper).css("left", "5.5%");
-            //$("#test-reut-stars").css("left", "0%");
-            //$(ui.helper).css("left", "76%");
-        }
-    }
-});
+    });
 
 //drag to register in battle vote
-$("#registerBattle .slide.btn.drag").draggable({
+    $("#registerBattle .slide.btn.drag").draggable({
     stack: ".drag",
     axis: "x",
     containment: "#registerBattle .slidein",
@@ -141,19 +152,29 @@ $("#registerBattle .slide.btn.drag").draggable({
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
         if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+            $(".slide").addClass("animateLeft");
             $(ui.helper).css("left", "74%");
             $("#checkInAud")[0].play();
-           // sliderCheckInSound.playclip();
+            // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
             //$(".slider-text").text("");
-            setRegister();
+            
+            //stop the red flash sound
+            $("#alertAud")[0].pause();
+            clearInterval(alertInterval);
+            setTimeout(function() {
+                setRegister();
+            }, 3000);
+
         }
         else {
             $(ui.helper).css("left", "5.5%");
         }
     }
-});
+}); 
+}
+
 
 
 //set register going to close 
@@ -185,14 +206,17 @@ function stopAlertRegisterGoingClose() {
 //send to server the register
 function setRegister() {
     //ajax call server
+    alert("setRegister");
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
-        success: function (data) {
+        success: function(data) {
             console.log(data);
+            alert("setRegister success");
             setWaitVotePage(data);
         },
-        error: function (data) {
+        error: function(data) {
+             alert("setRegister error: "+data);
             console.log("error getPage: " + data);
         }
     });
@@ -200,15 +224,18 @@ function setRegister() {
 
 //set wait vote page
 function setWaitVotePage(data) {
-
+    alert("data.length =0");
     if (data.length == 0) {
+       
         console.log("no data was received");
         $("#register .continue h2").text("ממתין לסגירת ההצבעה");
         Navi.goto("notRegister");
+
+
     }
 
     else {
-
+        alert("here")
         Navi.goto("WaitVotePage");
         generalParameters.voteIdA = data[0].voteId;
         generalParameters.voteKeyA = data[0].voteKey;
@@ -218,6 +245,10 @@ function setWaitVotePage(data) {
         }
         generalParameters.isRegistered = true;
     }
+
+    //stop the red flash sound
+   // $("#alertAud")[0].pause();
+   // clearInterval(alertInterval);
 };
 
 var index =0;
@@ -251,7 +282,7 @@ function addWishToLettet(spanArrayTemp,sliderObjTemp){
 
         registerWishTextInterval = setTimeout(function(){
             initWishText(sliderObjTemp)
-        },4000);
+        },2500);
 
          setTimeout(function(){
             $(spanArrayTemp[index-1]).removeClass("wish");
