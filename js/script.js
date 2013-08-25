@@ -197,11 +197,9 @@ $(document).ready(function() {
         $("body").trigger("start-app");
     }
     $("#horizonal-screen").hide();
-<<<<<<< HEAD
     //initSounds();
 
 
-=======
    // initSounds();
 
     initBrowser();
@@ -209,11 +207,9 @@ $(document).ready(function() {
 
     //init banner script
    //initBannerScript();
->>>>>>> 6554765ba5ef2a1820a69b9eb8af4f9fc19be149
 });
 var browser;
 function initBrowser(){
-    
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
         var androidSmall = ua.search("android") && ua.search("mobile");
@@ -237,8 +233,10 @@ function loadRelevantCss(){
             
         case "iphone5":
             loadcssfile("css/iphone5.css");
+			alert("iphone5");
             break;
         case "androidSmall":
+			alert("androidSmall");
             loadcssfile("css/andrd_normal.css");
             loadcssfile("css/andrd_small.css");
             break;
