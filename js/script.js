@@ -231,20 +231,14 @@ function initBrowser(){
         var isIpad =false;
         if( ua.search("ipad") >-1){
             isIpad = true;
-        }
-        if(isIpad){
             browser = "ipad";
         }
-         var isIphone5 =false; 
-        if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
+        var isIphone5 =false; 
+        if(ua.search('iphone os 5')>-1){
              isIphone5 =true;
+               browser =  "iphone5";
          }
-        if(isIphone5){
-             browser =  "iphone5";
-			 
-        }
-        return "iphone";
-
+        
 }
 
 function loadRelevantCss(){
