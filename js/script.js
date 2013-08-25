@@ -211,15 +211,18 @@ var browser;
 function initBrowser(){
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
+        // alert("user agent: " + ua);
+        // alert("width: " +$(document).width());
+        // alert("height: " +$(document).height());
         var androidSmall = false;
         var androidSmall2 = false;
          if( ua.search("android") > -1 && ua.search("mobile") >-1){
              androidSmall = true;
-				if( ua.search("i9100") > -1{
-					androidSmall = false;
-					androidSmall2 = true;
-				}
          }
+		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
+			androidSmall = false;
+			androidSmall2 = true;
+		}
         if(androidSmall){
             browser = "androidSmall";
          ///   alert("android small");
@@ -236,7 +239,8 @@ function initBrowser(){
             browser = "ipad";
         }
          var isIphone5 =false; 
-        if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
+        // if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
+		if( ua.search("iphone") > -1 ){
              isIphone5 =true;
          }
         if(isIphone5){
