@@ -112,17 +112,16 @@ function postOnFeed() {
                 postText += " שופטת";
             }
             postText += " בכוכב הבא"
-            descriptionText = "לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
+           // descriptionText = "לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
             captionText = "www.mako.co.il";
-            nameLink = "אפליקציית הכוכב הבא בmakoTV";
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
                 picture: domain + '/images/header/hdr_logo_kohav.png',
                 message: postText,
-                description: descriptionText,
+                description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
-                name: nameLink
+                name: 'אפליקציית הכוכב הבא בmakoTV'
             },
             function (response) {
                 if (!response || response.error) {
