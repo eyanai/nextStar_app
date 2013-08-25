@@ -206,16 +206,26 @@ $(document).ready(function() {
     //init banner script
     //initBannerScript();
 });
+
 var browser;
 function initBrowser(){
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
         var androidSmall = false;
+        var androidSmall2 = false;
          if( ua.search("android") > -1 && ua.search("mobile") >-1){
              androidSmall = true;
+				if( ua.search("i9100") > -1{
+					androidSmall = false;
+					androidSmall2 = true;
+				}
          }
         if(androidSmall){
             browser = "androidSmall";
+         ///   alert("android small");
+        }
+		if(androidSmall2){
+            browser = "androidSmall2";
          ///   alert("android small");
         }
         var isIpad =false;
@@ -225,12 +235,13 @@ function initBrowser(){
         if(isIpad){
             browser = "ipad";
         }
-         var isIphone5 =false; ;
+         var isIphone5 =false; 
         if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
-             isIphone5 =ture;
+             isIphone5 =true;
          }
         if(isIphone5){
              browser =  "iphone5";
+			 
         }
         return "iphone";
 
@@ -238,12 +249,16 @@ function initBrowser(){
 
 function loadRelevantCss(){
     switch(browser){
-            
+	
         case "iphone5":
             loadcssfile("css/iphone5.css");
             break;
-        case "androidSmall":
-            loadcssfile("css/andrd_normal.css");
+        
+		case "androidSmall2":
+            loadcssfile("css/andrd_small_2.css");
+            break;
+			
+		case "androidSmall":
             loadcssfile("css/andrd_small.css");
             break;
     }
