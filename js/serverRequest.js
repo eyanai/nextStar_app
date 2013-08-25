@@ -9,9 +9,9 @@ var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 //var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 
 var domain = "http://makosrv1.egoline.co.il:9090/application";//app domain//////////////check fb feed
-//var domain = "http://makosrv1.egoline.co.il/applicationMakoQA";
-//var domain = "http://makosrv1.egoline.co.il/applicationYerutechQA";
-//var domain = "http://makosrv1.egoline.co.il/reut_test";//////////////check fb feed
+//var domain = "http://makosrv1.egoline.co.il:9090/applicationMakoQA";
+//var domain = "http://makosrv1.egoline.co.il:9090/applicationYerutechQA";
+//var domain = "http://makosrv1.egoline.co.il:9090/reut_test";//////////////check fb feed
 
 
 function longPolling() {

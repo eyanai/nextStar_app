@@ -15,16 +15,12 @@ section {
     top: 11.4%;
 }
 
-.musix {
-    background-image: url(../normal/images/musix_logo.png);
-}
-
 #login .musix {
     bottom: -2%;
 }
 
 .musix {
-    background-image: url(../images/musix_normal.png);
+    background-image: url(../images/musix_general.png);
     background-size: 100% 100%;
     width: 45%;
     display: block;
@@ -246,9 +242,12 @@ input[type=checkbox] {
 }
 
 .slide{
-	top:15%;
-	width: 25%;
-    height: 72%;
+	width: 22%;
+    height: 70%;
+    background-size: 100% 100%;
+    top: 16.3%;
+	left:5.3%;
+	
 }
 /*================================================VOTE SECTION=====================================*/
 

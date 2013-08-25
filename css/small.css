@@ -268,16 +268,11 @@ section {
 }
 
 .slide {
-<<<<<<< HEAD
+	width: 23%;
+    height: 73%;
     background-size: 100% 100%;
-    top: 17%;
-=======
-    /*background-size: 100% 100%;
-    top: 16.8%;
->>>>>>> 63b7af679da178855f13a3d7a7384297c77bb39e
-    height: 72%;
-    left: 5.5%;
-/*     width: 20.5%; */
+    top: 17.5%;
+	left:5.3%;
 }
 
 .red .slide {
@@ -407,7 +402,7 @@ section {
 }
 
 .musix {
-    background-image: url(../images/musix_iphone.png);
+    background-image: url(../images/musix_general.png);
     background-size: 100% 100%;
     width: 45%;
 	margin:0 27.5%;

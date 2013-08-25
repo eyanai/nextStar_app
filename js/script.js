@@ -191,40 +191,44 @@ $(document).ready(function() {
     initMoveEvents();
     //initWaitAnimation();
 
-     // longPolling(); //check gallery
+    // longPolling(); //check gallery
     $("body").on("start-app", longPolling);
     if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
     $("#horizonal-screen").hide();
-<<<<<<< HEAD
-    //initSounds();
 
-
-=======
-   // initSounds();
+    // initSounds();
 
     initBrowser();
     loadRelevantCss();
-
+    attachDrag();
     //init banner script
-   //initBannerScript();
->>>>>>> 6554765ba5ef2a1820a69b9eb8af4f9fc19be149
+    //initBannerScript();
 });
 var browser;
 function initBrowser(){
-    
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
-        var androidSmall = ua.search("android") && ua.search("mobile");
+        var androidSmall = false;
+         if( ua.search("android") > -1 && ua.search("mobile") >-1){
+             androidSmall = true;
+         }
         if(androidSmall){
             browser = "androidSmall";
+         ///   alert("android small");
         }
-        var isIpad = ua.search("ipad");
+        var isIpad =false;
+        if( ua.search("ipad") >-1){
+            isIpad = true;
+        }
         if(isIpad){
             browser = "ipad";
         }
-         var isIphone5 = ua.match(/OS 5(_\d)+ like Mac OS X/i);
+         var isIphone5 =false; ;
+        if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
+             isIphone5 =ture;
+         }
         if(isIphone5){
              browser =  "iphone5";
         }
