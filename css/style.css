@@ -708,6 +708,7 @@ input[type=checkbox].checked {
     overflow: hidden;
 }
 
+
 /*#registerSingle {
     display: none;
 }*/
@@ -722,6 +723,7 @@ input[type=checkbox].checked {
 
 #registerBattle .slidein {
     top: 62%;
+   
 }
 
 .slidein .register-red-flash {
@@ -851,7 +853,8 @@ input[type=checkbox].checked {
     left: 5%;
     position: absolute;
     top: 18%;
-	
+    
+     
     
     /*background-image: url(../images/register/signin_slider_button.png);
 background-size: 100% 104%;
@@ -868,7 +871,11 @@ top: 0%;*/
     background-image: url(../images/register/signin_slider_button_prs.png);
     background-size: 100% 104%;
 }*/
-
+.slide.animateLeft{
+     transition: left 1s ease-out;
+    -webkit-transition: left 1s ease-out;
+	
+}
 .slider-text {
     font-size: 2.625em;
     position: absolute;

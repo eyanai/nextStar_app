@@ -121,37 +121,39 @@ function setVote(e) {
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 0;
-            voteNegativeSound.playclip();
+            $("#voteNegAud")[0].play()
             break;
         case 'slideRight':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 1;
-            votePositiveSound.playclip();
+
+            $("#votePosAud")[0].play()
             break;
         case 'slideTopbattleCon1':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 0;
-            voteNegativeSound.playclip();
+            $("#voteNegAud")[0].play()
             break;
         case 'slideTopbattleCon2':
             voteId = generalParameters.voteIdB;
             voteKey = generalParameters.voteKeyB;
             vote = 0;
-            voteNegativeSound.playclip();
+            $("#voteNegAud")[0].play()
             break;
         case 'slideDownbattleCon1':
             voteId = generalParameters.voteIdA;
             voteKey = generalParameters.voteKeyA;
             vote = 1;
-            votePositiveSound.playclip();
+            $("#votePosAud")[0].play()
+            
             break;
         case 'slideDownbattleCon2':
             voteId = generalParameters.voteIdB;
             voteKey = generalParameters.voteKeyB;
             vote = 1;
-            votePositiveSound.playclip();
+            $("#votePosAud")[0].play()
             break;
     }
 
