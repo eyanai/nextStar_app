@@ -8,7 +8,7 @@ FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //localStorage.setItem('fbStorage', "");
-
+//alert(localStorage.getItem('fbStorage'));
 
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() { 
@@ -32,15 +32,18 @@ checkLocalStorge();
 var searchQuery = window.location.search;//search Query 
 //if connect already
 if (fromLocalStorge) {
-    saveDataOnServer("fromLocalStorge");
     //alert("local");
+    saveDataOnServer("fromLocalStorge");
+    
 }
+
 //connect yet and after after login in webview
 else if (searchQuery.length > 0) {
-    //alert("search");;
+    //alert("search");
     loginCheck();
 }
 
+//alert("search: " + window.location);
 ////////////////////////////////////////////////////// fb api functions
 //login fb
 function loginFb() {
@@ -95,52 +98,45 @@ function saveData() {
     });
 }
 
-function postOnFeed(){
-    /*FB.ui({
-        method: 'feed',
-        name: 'Facebook Dialogs',
-        link: 'https://developers.facebook.com/docs/reference/dialogs/',
-        picture: 'http://fbrell.com/f8.jpg',
-        caption: 'Reference Documentation',
-        description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
-      },
-      function(response) {
-        if (response && response.post_id) {
-          alert('Post was published.');
-        } else {
-          alert('Post was not published.');
+function postOnFeed() {
+    //check if connect
+    FB.getLoginStatus(function (response) {
+        //if connect
+        if (response.status === 'connected') {
+            //text to post
+            var postText = " גם אני "; /*generalParameters.fbUser.userName;*/
+            if (generalParameters.fbUser.gender == "male") {
+                postText += " שופט";
+            }
+            else {
+                postText += " שופטת";
+            }
+            postText += " בכוכב הבא"
+            descriptionText = "לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
+            captionText = "www.mako.co.il";
+            nameLink = "אפליקציית הכוכב הבא בmakoTV";
+            FB.api('/me/feed', 'post',
+            {
+                link: 'http://www.mako.co.il/collab/thenextstar/',
+                picture: domain + '/images/header/hdr_logo_kohav.png',
+                message: postText,
+                description: descriptionText,
+                caption: captionText,
+                name: nameLink
+            },
+            function (response) {
+                if (!response || response.error) {
+                    alert('Error occured');
+                }
+                else {
+                    alert('Post ID: ' + response.id);
+                }
+            });
+
         }
-      }      
-    );*/
-   var postText=" גם אני ";/*generalParameters.fbUser.userName;*/
-   if(generalParameters.fbUser.gender=="male"){
-       postText += " שופט";
-   }
-   else{
-       postText += " שופטת";
-   }
-   postText+=" בכוכב הבא"
-	descriptionText="לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
-	captionText="www.mako.co.il";
-	nameLink="אפליקציית הכוכב הבא בmakoTV";
-    FB.api('/me/feed', 'post', 
-        { 
-            link: 'http://www.mako.co.il/collab/thenextstar/',
-            picture: domain+'/images/header/hdr_logo_kohav.png',
-            message: postText ,
-			description: descriptionText ,
-			caption: captionText ,
-			name: nameLink
-        }, 
-        function(response) {
-          if (!response || response.error) {
-            alert('Error occured');
-          } 
-          else {
-            alert('Post ID: ' + response.id);
-          }
     });
 }
+
 
 ////////////////////////////////////////////////////// localstorge functions
 //set Local Storage
@@ -175,7 +171,7 @@ function saveDataOnServer(str) {
 
     $.ajax({
         type: "POST",
-        url: serverDomain + "type==getFacebookData",
+        url: serverDomain + "type=getFacebookData",
         data: {
             facebookId: generalParameters.fbUser.id,
             facebookName: generalParameters.fbUser.userName,
@@ -187,6 +183,7 @@ function saveDataOnServer(str) {
            // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
+            //alert("save");
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
@@ -197,9 +194,10 @@ function saveDataOnServer(str) {
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
-function startLongPolling(str) {
+function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
+    postOnFeed();//post on feeds
    //longPolling();
 }
 
