@@ -211,6 +211,9 @@ var browser;
 function initBrowser(){
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
+        // alert("user agent: " + ua);
+        // alert("width: " +$(document).width());
+        // alert("height: " +$(document).height());
         var androidSmall = false;
         var androidSmall2 = false;
          if( ua.search("android") > -1 && ua.search("mobile") >-1){
@@ -220,6 +223,10 @@ function initBrowser(){
 					androidSmall2 = true;
 				}
          }
+		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
+			androidSmall = false;
+			androidSmall2 = true;
+		}
         if(androidSmall){
             browser = "androidSmall";
          ///   alert("android small");

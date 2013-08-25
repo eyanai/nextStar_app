@@ -3,7 +3,7 @@
 /*=====================================================generel==============================================*/
 
 html,body{
-	  font-size:15px; 
+	  font-size:17px; 
 }
 
 /*===========================================horizonal-screen=================================*/
@@ -19,17 +19,23 @@ html,body{
 
 .logo.login{
 	height:23%;
+	
 }
 
 #loginExtendedBox{
- 	height:46%;
-	margin:12% auto 10%;
+	background:#ccc;
+	height:44%;
+	margin:14% auto 10%;
 }
 
 .loginHg .titleLoginReward{
 	min-height: 60px; 
 	padding: 10% 24% 0;
-	margin:7% auto 5%;
+	
+}
+
+#loginExtendedBox .loginHg{
+	height:14.5%;
 }
 
 .loginHg .titleLogin{
@@ -44,18 +50,7 @@ html,body{
 
 /*===============================================MESSAGE SECTION==============================================*/
 
-#message .continue h2{
-	margin-bottom:1.8%;
-	margin-left:0%;
-}
 
-.detail{
-	line-height:1.2em;
-}
-
-.team{
-	background-size:100% 103%;
-}
 
 /*=============================================REGISTER SECTION===========================================*/
 
@@ -98,3 +93,9 @@ html,body{
 
 
 /*================================================FOOTER================================================*/
+
+/* footer{
+	height:5.8%;
+}
+ */
+
