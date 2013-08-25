@@ -62,7 +62,7 @@ function setResultPage(data) {
         firstFields = getFielsdByVote(data.votes[0]);
         secondFields = getFielsdByVote(data.votes[1]);
         //firat comp
-        $("#results-img-first").css("background-image", "url('" + firstFields[2] + "')")
+        $("#results-img-first").css("background-image", "url('" + firstFields[2] + "')");
         $("#results-comp-name-first").text(firstFields[0]);
         $("#results-song-name-first").text(firstFields[1]);
         //second comp
@@ -142,7 +142,7 @@ function setResultPage(data) {
 		//alert('aaa');
         //if the percent bigger then  - add the red class $("#results-perc-second").addClass("red")
         //navigate
-        Navi.goto("resultsSingle");
+        Navi.goto("resultsBattle");
 
         $("#voteBarAud")[0].play();
     }
