@@ -80,7 +80,7 @@ function createObj(vote) {
     //var $obj = "<img src=\"" + url + "\" alt=\"alt\"><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
     //            "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>"
 
-    var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url.replace(" ","%20")+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
+    var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url.split(' ').join('%20')+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
                 "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>";
 
     return $obj;
