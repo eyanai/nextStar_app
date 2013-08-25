@@ -218,10 +218,6 @@ function initBrowser(){
         var androidSmall2 = false;
          if( ua.search("android") > -1 && ua.search("mobile") >-1){
              androidSmall = true;
-				if( ua.search("i9100") > -1){
-					androidSmall = false;
-					androidSmall2 = true;
-				}
          }
 		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
 			androidSmall = false;
