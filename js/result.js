@@ -142,7 +142,7 @@ function setResultPage(data) {
 		//alert('aaa');
         //if the percent bigger then  - add the red class $("#results-perc-second").addClass("red")
         //navigate
-        Navi.goto("resultsSingle");
+        Navi.goto("resultsBattle");
 
         $("#voteBarAud")[0].play();
     }
