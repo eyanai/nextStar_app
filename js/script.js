@@ -228,7 +228,7 @@ function initBrowser(){
         }
          var isIphone5 =false; ;
         if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
-             isIphone5 =ture;
+             isIphone5 =true;
          }
         if(isIphone5){
              browser =  "iphone5";

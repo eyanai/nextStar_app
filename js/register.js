@@ -123,9 +123,9 @@ function attachDrag(){
                 //stop the red flash sound
                 // $("#alertAud")[0].pause();
                 //   clearInterval(alertInterval);
-                alert("hi4")
+               // alert("hi4")
                 setTimeout(function() {
-                    alert('5');
+                 //   alert('5');
                     setRegister();
                 }, 3000);
 
@@ -206,17 +206,17 @@ function stopAlertRegisterGoingClose() {
 //send to server the register
 function setRegister() {
     //ajax call server
-    alert("setRegister");
+   // alert("setRegister");
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
         success: function(data) {
             console.log(data);
-            alert("setRegister success");
+         //   alert("setRegister success");
             setWaitVotePage(data);
         },
         error: function(data) {
-             alert("setRegister error: "+data);
+           //  alert("setRegister error: "+data);
             console.log("error getPage: " + data);
         }
     });
@@ -224,7 +224,7 @@ function setRegister() {
 
 //set wait vote page
 function setWaitVotePage(data) {
-    alert("data.length =0");
+   // alert("data.length =0");
     if (data.length == 0) {
        
         console.log("no data was received");
@@ -235,7 +235,7 @@ function setWaitVotePage(data) {
     }
 
     else {
-        alert("here")
+       // alert("here")
         Navi.goto("WaitVotePage");
         generalParameters.voteIdA = data[0].voteId;
         generalParameters.voteKeyA = data[0].voteKey;

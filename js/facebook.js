@@ -179,13 +179,13 @@ function saveDataOnServer(str) {
             showImg: generalParameters.fbUser.showImg
         },
         success: function(data) {
-            alert("return from ajax getFacebookData");
+           // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
-            alert("return from ajax getFacebookData");
+
         }
     });
 
