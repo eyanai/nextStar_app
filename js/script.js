@@ -211,15 +211,25 @@ function initBrowser(){
     
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
-        var androidSmall = ua.search("android") && ua.search("mobile");
+        var androidSmall = false;
+         if( ua.search("android") > -1 && ua.search("mobile") >-1){
+             androidSmall = true;
+         }
         if(androidSmall){
             browser = "androidSmall";
+         ///   alert("android small");
         }
-        var isIpad = ua.search("ipad");
+        var isIpad =false;
+        if( ua.search("ipad") >-1){
+            isIpad = true;
+        }
         if(isIpad){
             browser = "ipad";
         }
-         var isIphone5 = ua.match(/OS 5(_\d)+ like Mac OS X/i);
+         var isIphone5 =false; ;
+        if(ua.match(/OS 5(_\d)+ like Mac OS X/i)){
+             isIphone5 =ture;
+         }
         if(isIphone5){
              browser =  "iphone5";
         }

@@ -167,7 +167,7 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-    
+
     $.ajax({
         type: "POST",
         url: serverDomain + "type==getFacebookData",
@@ -176,14 +176,16 @@ function saveDataOnServer(str) {
             facebookName: generalParameters.fbUser.userName,
             facebookSex: generalParameters.fbUser.gender,
             facebookimgurl: generalParameters.fbUser.profilePic,
-            showImg:generalParameters.fbUser.showImg
+            showImg: generalParameters.fbUser.showImg
         },
-        success: function (data) {
+        success: function(data) {
+            alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
         },
-        error: function (data) {
+        error: function(data) {
             console.log("error getFacebookData: " + data);
+            alert("return from ajax getFacebookData");
         }
     });
 
