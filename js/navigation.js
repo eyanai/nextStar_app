@@ -202,12 +202,8 @@ var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize
 
 window.addEventListener(orientationEvent, 
    function() { 
-		// alert ('orientation changed'); 
 		setTimeout(function(){
-			 // alert ('general');
-			 // alert (window.orientation);
 			 window.isPortrait=(window.innerHeight/window.innerWidth)>1;
-			 // alert (window.isPortrait);
 			 switch (window.isPortrait) {
 				 case true:
 					 $("#horizonal-screen").hide();
