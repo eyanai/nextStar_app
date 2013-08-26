@@ -200,11 +200,15 @@ $(document).ready(function() {
 
     // initSounds();
 
-    initBrowser();
-    loadRelevantCss();
+    //initBrowser();
+    //loadRelevantCss();
     attachDrag();
     //init banner script
     //initBannerScript();
+
+      // alert("user agent: " + ua);
+          alert("width: " +$(document).width());
+          alert("height: " +$(document).height());
 });
 
 var browser;
