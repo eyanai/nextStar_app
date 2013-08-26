@@ -21,6 +21,11 @@ html, body {
 
 }
 
+#horizonal-screen {
+	 background-image: url(../images/horizonal-background-iphone.png);
+}
+
+
 .loginHg .titleLogin, .loginHg .titleLoginReward {
     font-size: 0.85em;
     margin: 1% auto;

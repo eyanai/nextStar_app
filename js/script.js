@@ -17,7 +17,9 @@ var generalParameters = {
     },
     isBigSize: false,
     ruledChecked: false,
-    isConnect: false
+    isConnect: false,
+    onLoad:true
+
 }
 
 
@@ -31,6 +33,10 @@ var endShowDic = "";
 
 //get data from the server and send to the suitable page
 function pageChange(data) {
+    
+    $("#loader").hide();
+    generalParameters.onLoad = false;
+
     var status = data.status;
 
     switch (status) {
@@ -205,6 +211,9 @@ $(document).ready(function () {
     if (generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
+    if (!generalParameters.onLoad) {
+        $("#loader").hide();
+    }
     //$("#horizonal-screen").hide();
 
     // initSounds();
@@ -230,18 +239,18 @@ $(document).ready(function () {
 
 
       //check orientation 
-       isPortrait = (window.innerHeight / window.innerWidth) > 1;
+    var isPortrait = (window.innerHeight / window.innerWidth) > 1;
            //alert(window.isPortrait);	
-            switch (isPortrait) {
-               case true:
+    switch (isPortrait) {
+        case true:
 
-                   $("#horizonal-screen").hide();
-                   break;
+            $("#horizonal-screen").hide();
+            break;
 
-               case false:
-                   $("#horizonal-screen").show();
-                   break;
-           }
+        case false:
+            $("#horizonal-screen").show();
+            break;
+    }
 
 });
 
