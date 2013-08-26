@@ -204,7 +204,7 @@ $(document).ready(function () {
     if (generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    $("#horizonal-screen").hide();
+    //$("#horizonal-screen").hide();
 
     // initSounds();
 
@@ -327,7 +327,7 @@ function initBannerScript() {
 
 }
 
-function df() {
+function df() {//show the agreement on click in login section
     $("#agreement").show();
     $("#login").hide();
 }
