@@ -207,8 +207,8 @@ $(document).ready(function() {
     //initBannerScript();
 
       // alert("user agent: " + ua);
-          alert("width: " +$(document).width());
-          alert("height: " +$(document).height());
+          //alert("width: " +$(document).width());
+          //alert("height: " +$(document).height());
 });
 
 var browser;

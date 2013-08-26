@@ -52,11 +52,6 @@ a:link {text-decoration:none;}      /* unvisited link */
 a:visited {text-decoration:none;}  /* visited link */
 a:hover {text-decoration:none;}  /* mouse over link */
 a:active {text-decoration:none;}
-
-.checkboxArea a{
-	text-decoration:underline;
-}
-
 /*-------------------cf-----------------------------*/
 .cf:after {
     content: ".";
@@ -101,8 +96,6 @@ html, body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
-
 
 section {
     display: none;
@@ -262,7 +255,6 @@ header {
     background-size: 100% 90%;
     display: block;
     margin: 0 auto;
-	
 }
 
 #loginExtended, #loginReward {
@@ -285,6 +277,7 @@ header {
     margin: 8% auto;
     display: block;
     overflow: hidden;
+	
 }
 
 #slide-container {
@@ -299,7 +292,6 @@ header {
     text-align: center;
     padding: 11% 0 0;
     text-align: right;
-	text-align: center;
 }
 
 #loginRewardBox.loginHg {
@@ -345,10 +337,11 @@ header {
 }
 
 .checkboxArea .textAd{
+	color:pink;
 	text-align:right;
 	width:84%;
 	display:inline-block;
-	vertical-align:middle;
+	vertical-align:top;
 }
 
 #login .checkboxArea {
@@ -384,23 +377,22 @@ input[type=checkbox] {
     line-height: 1em;
     padding: 0;
     margin: 5px;
-    width: 1.6em;
-    height: 1.6em;
+    width: 1.7em;
+    height: 1.7em;
     -webkit-border-radius: 0.35em;
     vertical-align: middle;
 }
 
 input[type=checkbox]:checked {
+  
 }
-
-input[type=checkbox].checked {
+input[type=checkbox].checked{
     background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
     background-color: #fff;
     background-size: 85% 80%;
     background-position: center;
     z-index: 2;
 }
-
 #rulesCB.required {
     border: 2px solid red;
 }
@@ -458,14 +450,14 @@ input[type=checkbox].checked {
     margin: 5% 3%;
 }
 
-#loginExtendedBox .login {
-    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */
-    /* background-image: url(../images/signUp/kohav_nofacebook_button1.jpg); */
+ #loginExtendedBox .login{
+    background: -moz-linear-gradient(top, #07405d 0%, #013650 100%, #2a447c 100%); /* FF3.6+ */ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07405d), color-stop(100%,#013650), color-stop(100%,#2a447c)); /* Chrome,Safari4+ */ 
+    background: -webkit-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Chrome10+,Safari5.1+ */ 
+    background: -o-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* Opera 11.10+ */ 
+    background: -ms-linear-gradient(top, #07405d 0%,#013650 100%,#2a447c 100%); /* IE10+ */ 
+    background: linear-gradient(to bottom, #07405d 0%,#013650 100%,#2a447c 100%); /* W3C */ 
+	/* background-image: url(../images/signUp/kohav_nofacebook_button1.jpg); */
     /* background-repeat: repeat-x; */
     background-size: 100% 100%;
     border: 1px solid rgba(0,0,0,0.5);
@@ -474,7 +466,6 @@ input[type=checkbox].checked {
     cursor: pointer;
     text-align: center;
 }
-
 
 #loginRewardBox .login:hover, #loginExtendedBox .login:hover {
     opacity: 0.4;
@@ -490,7 +481,7 @@ input[type=checkbox].checked {
 
 #loginExtendedBox .login {
     width: 100%;
-    height: 40%;
+    height: 40%;		
     margin-top: 2%;
     /* background-color: #01273b; */
 }
@@ -511,7 +502,6 @@ input[type=checkbox].checked {
 
 .team {
     background-image: url(../images/masseg/iphone_message_image_right_size.jpg);
-	/* background-image: url(../images/masseg/team.jpg); */
     background-repeat: no-repeat,no-repeat;
     background-size: 100% 100%;
     background-position: right top, center -150%;
@@ -627,7 +617,7 @@ input[type=checkbox].checked {
 }
 
 .musix {
-    background-image: url(../images/musix_general.png);
+    background-image: url(../images/musix.png);
     background-size: 100% 100%;
     width: 100%;
     height: 16%;
@@ -716,7 +706,6 @@ input[type=checkbox].checked {
     overflow: hidden;
 }
 
-
 /*#registerSingle {
     display: none;
 }*/
@@ -731,7 +720,6 @@ input[type=checkbox].checked {
 
 #registerBattle .slidein {
     top: 62%;
-   
 }
 
 .slidein .register-red-flash {
@@ -747,32 +735,31 @@ input[type=checkbox].checked {
     -webkit-animation: mymove 1s infinite;
 }
 
-#test-reut {
+#test-reut{
     top: 17%;
-    height: 67%;
-    width: 89%;
-    background-size: 100%;
-    position: absolute;
-    left: 5%;
-    /*border: 1px solid red;*/
-    border-radius: 72px;
-    z-index: 1;
-    overflow: hidden;
-    /*border: 1px solid red;*/
+height: 67%;
+width: 89%;
+background-size: 100%;
+position: absolute;
+left: 5%;
+/*border: 1px solid red;*/
+border-radius: 72px;
+z-index: 1;
+overflow: hidden;
+/*border: 1px solid red;*/
 }
 
-#test-reut-stars {
+#test-reut-stars{
     display: none;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/register/kohav_bg_slider_iphone.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    left: 0%;
-    /*border: 1px solid white;*/
+width: 100%;
+height: 100%;
+background-image: url(../images/register/kohav_bg_slider_iphone.png);
+background-repeat: no-repeat;
+background-size: 100%;
+position: absolute;
+left: 0%;
+/*border: 1px solid white;*/
 }
-
 #test-reut-outer {
     height: 100%;
     width: 100%;
@@ -780,7 +767,6 @@ input[type=checkbox].checked {
     left: -77%;
     /*border: 1px solid yellow;*/
 }
-
 @-webkit-keyframes mymove {
     0% {
         opacity: 0;
@@ -803,8 +789,8 @@ input[type=checkbox].checked {
     }
 }
 
-.slidein.grey .slider-text + p {
-    padding-right: 9px;
+.slidein.grey .slider-text + p{
+	padding-right:9px;
 }
 
 
@@ -827,20 +813,17 @@ input[type=checkbox].checked {
     left: 21%;
     top: 62%;*/
 }
-
-.slidein.grey .slider-text {
-    font-size: 1em;
-	width:58%;
-	text-align:center;
+.slidein.grey .slider-text{
+    font-size: 0.8em;
 }
-
-.slidein .slider-text span {
-    transition: color 0.3s ease-out;
-    -webkit-transition: color 0.3s ease-out;
+.slidein .slider-text span{
+   
+   transition : color 0.3s ease-out; 
+  -webkit-transition : color 0.3s ease-out; 
 }
-
-.slidein .slider-text span.wish {
+.slidein .slider-text span.wish{
     color: white;
+ 
 }
 
 #notRegister .slider-text {
@@ -862,8 +845,6 @@ input[type=checkbox].checked {
     position: absolute;
     top: 18%;
     
-     
-    
     /*background-image: url(../images/register/signin_slider_button.png);
 background-size: 100% 104%;
 background-repeat: no-repeat;
@@ -879,17 +860,13 @@ top: 0%;*/
     background-image: url(../images/register/signin_slider_button_prs.png);
     background-size: 100% 104%;
 }*/
-.slide.animateLeft{
-     transition: left 1s ease-out;
-    -webkit-transition: left 1s ease-out;
-	
-}
+
 .slider-text {
     font-size: 2.625em;
     position: absolute;
     top: 35%;
     right: 13%;
-    color: gray;
+     color: gray;
 }
 
 .reMesseg {
@@ -956,7 +933,7 @@ top: 0%;*/
 .songName h1, .songName h2 {
     width: 80%;
     margin: 0 auto;
-    line-height: 130%;
+	line-height:130%;
 }
 
 .songName h1 {
@@ -966,19 +943,6 @@ top: 0%;*/
 
 
 /*================================================VOTE SECTION=====================================*/
-
-#vote{
-	width:100%;
-}
-
-.centerSection{
-	border:1px solid grey;
-	display:table-cell;
-	vertical-align:middle;
-	width:100%;
-	height:100%;
-	position:absolute;
-}
 
 .single, .battle {
     position: relative;
@@ -1035,22 +999,22 @@ top: 0%;*/
     /*overflow: hidden;*/
 }
 
-.arrowRed { /*actually red arrow- to change class names in code review*/
+.blueArrow {
     position: absolute;
-    right: -1%;
-    top: 24%;
+    right: -5%;
+    top: 15%;
     -webkit-transform: rotateZ(90deg);
     transform: rotateZ(90deg);
-    width: 25%;
+    width: 35%;
 }
 
-.arrowBlue { /*actually blue arrow- to change class names in code review*/
+.redArrow {
     position: absolute;
-    left: -25%;
-    top: 18%;
+    left: -23%;
+    top: 20%;
     -webkit-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg);
-    width: 37%;
+    width: 31%;
 }
 
 .blueArrow.cont1 {
@@ -1176,20 +1140,18 @@ top: 0%;*/
     color: #ff006c;
 }
 
-.hate {/*actually hate - to change*/
-    background-image: url(../images/votes/slide_round_red.png);
+.love {
+    background-image: url(../images/votes/slide_round_pick.png);
     position: absolute;
-    width: 47%;
+    width: 50%;
     height: 100%;
-    top: 9%;
+    top: 13%;
     background-repeat: no-repeat;
     background-position: center;
-    left: 77%;
+    left: 70%;
     background-size: 100% 100%;
     opacity: 0;
     z-index: 3;
-    -webkit-transform: rotateZ(-180deg);
-    transform: rotateZ(-180deg);
 }
 
 .love1 {
@@ -1221,19 +1183,20 @@ top: 0%;*/
 }
 
 
-.like { /*actually love- to change*/
-    background-image: url(../images/votes/slide_round_pick.png);
+.hate {
+    background-image: url(../images/votes/slide_round_red.png);
     position: absolute;
-    width: 54%;
+    width: 50%;
     height: 100%;
-    top: 8%;
+    top: 15%;
     background-repeat: no-repeat;
     background-position: center;
-    left: -49%;
+    left: -35%;
     background-size: 100% 100%;
     opacity: 0;
     z-index: 1;
-    
+    -webkit-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
 }
 
 .hate1 {
@@ -1326,12 +1289,12 @@ top: 0%;*/
 
 .slideTopbattle {
     height: 17%;
-    top: 63%;
+    top: 45%;
 }
 
 .slideDownbattle {
     height: 17%;
-    top: 45%;
+    top: 63%;
 }
 
 .contestant1 .slideTopbattle {
@@ -1612,7 +1575,7 @@ background-position-y: 10%;*/
 /*================================================GALLERY SECTION================================================*/
 #gallery h2 {
     text-align: center;
-    /*     margin-top: 6%; */ /* andrd */
+/*     margin-top: 6%; *//* andrd */
 }
 
 /*.swiper-container {
@@ -1977,7 +1940,33 @@ background-position: center;
     right: 90%;
 }
 /*-----------------------------------------------------------------------------------------*/
+/*#vote {
+    display: none;
+}
 
+#login {
+    display: block;
+}
+
+#voteBattle {
+    display: block;
+}
+
+#voteSingle {
+    display: none;
+}
+
+#register {
+    display: none;
+}
+
+#registerSingle {
+    display: block;
+}
+
+#registerBattle {
+    display: none;
+}*/
 
 #slideSingleRight {
     position: absolute;
@@ -2009,4 +1998,14 @@ background-position: center;
 
 .bgLeft {
     position: absolute;
+}
+
+.reset-localstorge {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(196, 0, 204,.35);
+    top: 47px;
+    left: 1px;
+    z-index: 500;
 }

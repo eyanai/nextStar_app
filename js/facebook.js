@@ -7,7 +7,7 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-
+//alert(0);
 //localStorage.setItem('fbStorage', "");
 
 
@@ -19,6 +19,7 @@ function attachEventsFacebook() {
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $(".tvImgCB").on("click",tvImgCBClick);
+    $(".reset-localstorge").on("click",function(){localStorage.setItem('fbStorage', "");});
 }
 
 
@@ -190,7 +191,7 @@ function saveDataOnServer(str) {
            // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
-            alert(generalParameters.fbUser.showImg);
+           // alert(generalParameters.fbUser.showImg);
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
