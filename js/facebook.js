@@ -52,7 +52,7 @@ function loginFb() {
             $("#rulesCB").addClass("required");
         }
         else{
-                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
+                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"?"+generalParameters.fbUser.showImg+"&scope=publish_stream";
         }
         
     }
@@ -61,6 +61,13 @@ function loginFb() {
 //check: if login-> save data
 function loginCheck() {
     //alert("loginCheck");
+    var showImg = window.location.search.substr(1, 5);
+    if(showImg.indexOf("true")>-1){
+        generalParameters.fbUser.showImg = true;
+    }
+    else{
+        generalParameters.fbUser.showImg = false;
+    }
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
             saveData();
@@ -183,7 +190,7 @@ function saveDataOnServer(str) {
            // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
-           // alert("save");
+            alert(generalParameters.fbUser.showImg);
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
