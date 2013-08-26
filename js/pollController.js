@@ -14,7 +14,7 @@ var PollController = function() {
 		if(!self._callBackFunction) self._callBackFunction=function(data){$("body").append(data);};
 		
         $.ajax({ 
-           	url: self._url, 
+           	url: self._url,
            	type: "POST",
            	data: { type: "poll", index: self._index},
            	success: function(data){
@@ -39,7 +39,7 @@ var PollController = function() {
 	//---------------------------------------------------------------------------------
 	self._poll=function(){
         $.ajax({ 
-           	url: self._url, 
+           	url: self._url+"?v="+Date.now(), 
            	complete: function() {
            		setTimeout(function(){self._poll();},3000);
            		}, 

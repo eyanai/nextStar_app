@@ -3,58 +3,100 @@
 /*=====================================================generel==============================================*/
 
 
-/* body {
-	background-image: url(../images/general-background.jpg);
-}
-
-section{
-	height: 82.9%;
-}
- */
 /*===========================================horizonal-screen=================================*/
 
-#horizonal-screen {
-	/* background-image: url(../images/horizonal-background.jpg); */
-}
-
-#flip-me {
-	/* background-image: url(../images/flip.png); */
-}
 
 /*================================================HEADER=====================================*/
 
-/* header {
-    height: 11.3%;
-}
 
-.header.logo {
-	background-image: url(../images/large/header/kohav_logo_big.png);
-}
- */
 
 
 /*================================================LOG IN SECTION=====================================*/
 
+.logo.login{
+	height:23%;
+	
+}
+
+#loginExtendedBox{
+	height:44%;
+	margin:14% auto 10%;
+	
+}
+
+.loginHg .titleLoginReward{
+	min-height: 60px; 
+	padding: 10% 24% 0;
+	margin:9% auto;
+}
+
+#loginExtendedBox .loginHg{
+	height:14.5%;
+}
+
+.loginHg .titleLogin{
+	line-height:1.3em;
+}
+
+#login .checkboxArea{
+	margin-bottom:4%;
+}
+
+.loginHg .titleLoginReward{
+	margin:3px auto;
+}
+
 
 /*===============================================MESSAGE SECTION==============================================*/
+
+.team{
+	background-image: url(../images/masseg/team.png);	
+}
 
 
 
 /*=============================================REGISTER SECTION===========================================*/
 
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
+	font-size:1.8em;
+	padding-top:1.5%;
+}
 
+
+.slide{
+	width: 22%;
+    height: 63%;
+    background-size: 100% 100%;
+    top: 15.8%;
+	left:5.3%;	
+}
 
 /*================================================VOTE SECTION=====================================*/
 
+#voteSingle .arrowBlue{
+	left:-8%;
+	top:6%;
+}
 
+#voteSingle .arrowRed{
+	top:10%;
+}
+
+.slideGo, .slideStay{
+	/* top:6%; */
+}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
-
+#voteBattle .slideGo{
+	top:27%;
+}
 
 /*=============================================RESULTS SECTION======================================================*/
 
-
+#results .single .percentage{
+	top:150%;
+}
 
 /*=======================================================RESULT BATTLE=========================================*/
 
@@ -66,9 +108,4 @@ section{
 
 
 /*================================================FOOTER================================================*/
-
-/* footer{
-	height:5.8%;
-}
- */
 

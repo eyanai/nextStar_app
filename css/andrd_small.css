@@ -23,7 +23,6 @@ html,body{
 }
 
 #loginExtendedBox{
-	background:#ccc;
 	height:44%;
 	margin:14% auto 10%;
 }
@@ -31,7 +30,7 @@ html,body{
 .loginHg .titleLoginReward{
 	min-height: 60px; 
 	padding: 10% 24% 0;
-	
+	margin:9% auto;
 }
 
 #loginExtendedBox .loginHg{
@@ -50,8 +49,18 @@ html,body{
 
 /*===============================================MESSAGE SECTION==============================================*/
 
+#message .continue h2{
+	margin-bottom:3%;
+	margin-left:0%;
+}
 
+.detail{
+	line-height:1.2em;
+}
 
+.team{
+	background-size:100% 103%;
+}
 /*=============================================REGISTER SECTION===========================================*/
 
 .slide{

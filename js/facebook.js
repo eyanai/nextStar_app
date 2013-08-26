@@ -18,7 +18,7 @@ function attachEventsFacebook() {
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
-    $("#tvImgCB").on("click",tvImgCBClick);
+    $(".tvImgCB").on("click",tvImgCBClick);
 }
 
 
@@ -110,24 +110,23 @@ function postOnFeed() {
                 postText += " שופטת";
             }
             postText += " בכוכב הבא"
-            descriptionText = "לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
+           // descriptionText = "לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו";
             captionText = "www.mako.co.il";
-            nameLink = "אפליקציית הכוכב הבא בmakoTV";
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
                 picture: domain + '/images/header/facebook_pic.png',
                 message: postText,
-                description: descriptionText,
+                description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
-                name: nameLink
+                name: 'אפליקציית הכוכב הבא בmakoTV'
             },
             function (response) {
                 if (!response || response.error) {
-                    alert('Error occured');
+                 //   alert('Error occured');
                 }
                 else {
-                    alert('Post ID: ' + response.id);
+                //    alert('Post ID: ' + response.id);
                 }
             });
 
@@ -177,14 +176,14 @@ function saveDataOnServer(str) {
             showImg: generalParameters.fbUser.showImg
         },
         success: function(data) {
-            alert("return from ajax getFacebookData");
+           // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
            // alert("save");
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
-            alert("return from ajax getFacebookData");
+
         }
     });
 
