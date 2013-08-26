@@ -138,17 +138,21 @@ function postOnFeed() {
 ////////////////////////////////////////////////////// localstorge functions
 //set Local Storage
 function setLocalStorage() {
-    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    if (localStorage != null) {
+        localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    }
     
     //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
 }
 //get Local Storage
 function getLocalStorage() {   
+    if(localStorage==null){
+        return null;
+    }
     return (localStorage.getItem('fbStorage'));    
 }
 //check if there is local storge
-function checkLocalStorge() {
-    
+function checkLocalStorge() {    
     if ((userFromLocalStorge != "")&&(userFromLocalStorge != null)) {       
        //alert(userFromLocalStorge);
         userFromLocalStorge = jQuery.parseJSON(userFromLocalStorge);
