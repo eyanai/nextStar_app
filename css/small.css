@@ -137,6 +137,8 @@ h2 .songName1,h2 .songName2{
     font-size: 1.4em;
     margin-top: 2%;
     height: 35px;
+    
+    /*border: 2px solid gray;*/
 }
 
 #loginRewardBox .loginHg {

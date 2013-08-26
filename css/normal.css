@@ -12,6 +12,7 @@ html, body {
     font-size: 15px;
     background-repeat: repeat;
     overflow: scroll;
+    
 }
 
 section {
@@ -116,6 +117,8 @@ header {
 
 #loginExtendedBox .login {
     margin-top: 3%;
+    
+    /*border: 2px solid yellow;*/
 }
 
 .logFb .icon {
@@ -135,10 +138,6 @@ header {
 input[type=checkbox] {
     margin: 2%;
     margin-right: 4%;
-}
-
-.checkboxArea .tvImgCB{
-	margin-top:0%;
 }
 
 /*===============================================MESSAGE SECTION==============================================*/
@@ -397,8 +396,7 @@ input[type=checkbox] {
 /*=======================================================RESULT BATTLE=========================================*/
 
 .resultScalaR {
-    /*     background-
-	rgba(0,0,0,0.5);
+    /*     background-color: rgba(0,0,0,0.5);
     width: 5%;
     height: 62.5%;
     border-radius: 6px;
@@ -548,7 +546,7 @@ input[type=checkbox] {
 }
 
 .checkboxArea .textAd{
-	vertical-align:top;
+	vertical-align:middle;
 }
 
 

@@ -44,7 +44,9 @@ header{
 	margin:10% auto;
 	
 }
-
+/*#loginExtendedBox .login{
+    border: 1px solid red;
+}*/
 #loginExtendedBox .loginHg{
 	/* height:14.5%; */
 }

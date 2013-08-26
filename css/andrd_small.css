@@ -41,6 +41,10 @@ html,body{
 	margin:9% auto;
 }
 
+/*#loginExtendedBox .login{
+    border: 1px solid blue;
+}*/
+
 #loginExtendedBox .loginHg{
 	height:14.5%;
 }
