@@ -200,20 +200,24 @@ $(document).ready(function() {
 
     // initSounds();
 
-    initBrowser();
-    loadRelevantCss();
+    //initBrowser();
+    //loadRelevantCss();
     attachDrag();
     //init banner script
     //initBannerScript();
+
+      // alert("user agent: " + ua);
+          alert("width: " +$(document).width());
+          alert("height: " +$(document).height());
 });
 
 var browser;
 function initBrowser(){
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
-          // alert("user agent: " + ua);
-          // alert("width: " +$(document).width());
-          // alert("height: " +$(document).height());
+           // alert("user agent: " + ua);
+           // alert("width: " +$(document).width());
+           // alert("height: " +$(document).height());
         var androidSmall = false;
         var androidSmall2 = false;
         var androidNormal = false;
@@ -249,7 +253,6 @@ function initBrowser(){
              isIphone5 =true;
                browser =  "iphone5";
          }
-        
 }
 
 function loadRelevantCss(){
@@ -309,3 +312,10 @@ function initBannerScript(){
     }
    
 }
+
+ function df(){
+	 alert("google");
+	 window.location="https://docs.google.com/viewer?url=http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf";
+	 // webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
+	 alert(window.location);
+ }

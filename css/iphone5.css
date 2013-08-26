@@ -1,4 +1,7 @@
 /* CSS Document */
+/*.loginHg .titleLogin {
+color: yellow;
+}*/
 
 /*=====================================================generel==============================================*/
 
@@ -24,6 +27,7 @@ html,body{
 #loginExtendedBox{
 	height:44%;
 	margin:10% auto;
+	/* background:#ccc; */
 	/*margin:10% auto 10%; */
 }
 

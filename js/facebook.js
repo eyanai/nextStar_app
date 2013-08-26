@@ -2,27 +2,25 @@
 var appID = "543975688973172";//fb app id
 var myLocation = domain+"/index.html";//domain
 
+
 ////////////////////////////////////////////////////// fb init
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 
 //localStorage.setItem('fbStorage', "");
-//alert(localStorage.getItem('fbStorage'));
+
 
 ////////////////////////////////////////////////////// listener   
-function attachEventsFacebook() { 
-//if the user checked ruled in previous time -hide it   
-    //if(generalParameters.ruledChecked)
-    //{
-    //    $("#rules-wrap").hide();
-    //}   
+function attachEventsFacebook() {
+    
  $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $(".tvImgCB").on("click",tvImgCBClick);
 }
+
 
 //check if localStorge is reset with connect to fb
 var fromLocalStorge = false;
@@ -140,18 +138,21 @@ function postOnFeed() {
 ////////////////////////////////////////////////////// localstorge functions
 //set Local Storage
 function setLocalStorage() {
-    localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    if (localStorage != null) {
+        localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+    }
     
     //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
 }
 //get Local Storage
-function getLocalStorage() {
-    
-    return (localStorage.getItem('fbStorage'));
+function getLocalStorage() {   
+    if(localStorage==null){
+        return null;
+    }
+    return (localStorage.getItem('fbStorage'));    
 }
 //check if there is local storge
-function checkLocalStorge() {
-    
+function checkLocalStorge() {    
     if ((userFromLocalStorge != "")&&(userFromLocalStorge != null)) {       
        //alert(userFromLocalStorge);
         userFromLocalStorge = jQuery.parseJSON(userFromLocalStorge);
@@ -182,7 +183,7 @@ function saveDataOnServer(str) {
            // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
-            //alert("save");
+           // alert("save");
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
