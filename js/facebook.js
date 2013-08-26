@@ -7,7 +7,7 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-
+//alert(0);
 //localStorage.setItem('fbStorage', "");
 
 
@@ -19,6 +19,7 @@ function attachEventsFacebook() {
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $(".tvImgCB").on("click",tvImgCBClick);
+    $(".reset-localstorge").on("click",function(){localStorage.setItem('fbStorage', "");});
 }
 
 
@@ -52,7 +53,7 @@ function loginFb() {
             $("#rulesCB").addClass("required");
         }
         else{
-                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"&scope=publish_stream";
+                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"?"+generalParameters.fbUser.showImg+"&scope=publish_stream";
         }
         
     }
@@ -61,6 +62,13 @@ function loginFb() {
 //check: if login-> save data
 function loginCheck() {
     //alert("loginCheck");
+    var showImg = window.location.search.substr(1, 5);
+    if(showImg.indexOf("true")>-1){
+        generalParameters.fbUser.showImg = true;
+    }
+    else{
+        generalParameters.fbUser.showImg = false;
+    }
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
             saveData();
@@ -115,7 +123,7 @@ function postOnFeed() {
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
-                picture: domain + '/images/header/facebook_pic.png',
+                picture: domain + '/images/header/facebook_star.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
@@ -183,7 +191,7 @@ function saveDataOnServer(str) {
            // alert("return from ajax getFacebookData");
             console.log(data);
             setLocalStorage();
-           // alert("save");
+           // alert(generalParameters.fbUser.showImg);
         },
         error: function(data) {
             console.log("error getFacebookData: " + data);
