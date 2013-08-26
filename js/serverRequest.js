@@ -13,7 +13,7 @@ var serverDomain = "/nextStarTestD/userjson?";
 //cambium -D
 //var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 
-var domain = "http://makosrv1.egoline.co.il:9090/application";//app domain//////////////check fb feed
+var domain = "http://thenextstar.mako.co.il:9090/application";//app domain//////////////check fb feed
 //var domain = "http://makosrv1.egoline.co.il:9090/apptest";
 //var domain = "http://makosrv1.egoline.co.il:9090/applicationYerutechQA";
 //var domain = "http://makosrv1.egoline.co.il:9090/reut_test";//////////////check fb feed
