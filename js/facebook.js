@@ -7,8 +7,8 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-alert(0);
-localStorage.setItem('fbStorage', "");
+//alert(0);
+//localStorage.setItem('fbStorage', "");
 
 
 ////////////////////////////////////////////////////// listener   

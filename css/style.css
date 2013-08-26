@@ -573,12 +573,12 @@ input[type=checkbox].checked{
     width: 8%;
     color: black;
     background-color: #a9a9a9;
-    float: right;
+    /*float: right;*/
     text-align: center;
     line-height: 115%;
     position: absolute;
     top: -5%;
-    right: 2%;
+    left: 2%;
     border: solid 1px black;
     font-size: 3em;
     border-radius: 20%;

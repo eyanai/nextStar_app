@@ -16,7 +16,7 @@ html, body {
     line-height: 115%;
     position: absolute;
     top: -5%;
-    right: 1%;
+    left: 1%;
     border: solid 1px black;
 
 }
