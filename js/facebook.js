@@ -117,7 +117,7 @@ function postOnFeed() {
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
-                picture: domain + '/images/header/hdr_logo_kohav.png',
+                picture: domain + '/images/header/facebook_pic.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
