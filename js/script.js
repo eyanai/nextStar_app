@@ -211,13 +211,17 @@ var browser;
 function initBrowser(){
         var ua = navigator.userAgent.toLowerCase();
         console.log("user agent: " + ua);
-        // alert("user agent: " + ua);
-        // alert("width: " +$(document).width());
-        // alert("height: " +$(document).height());
+          // alert("user agent: " + ua);
+          // alert("width: " +$(document).width());
+          // alert("height: " +$(document).height());
         var androidSmall = false;
         var androidSmall2 = false;
+        var androidNormal = false;
          if( ua.search("android") > -1 && ua.search("mobile") >-1){
              androidSmall = true;
+         }
+		 if( ua.search("android") > -1 && ua.search("p5110") >-1){
+             androidNormal = true;
          }
 		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
 			androidSmall = false;
@@ -225,11 +229,15 @@ function initBrowser(){
 		}
         if(androidSmall){
             browser = "androidSmall";
-         ///   alert("android small");
+         //   alert("android small");
         }
 		if(androidSmall2){
             browser = "androidSmall2";
-         ///   alert("android small");
+         //   alert("android small");
+        }
+		if(androidNormal){
+            browser = "androidNormal";
+         //   alert("android normal");
         }
         var isIpad =false;
         if( ua.search("ipad") >-1){
@@ -253,6 +261,10 @@ function loadRelevantCss(){
         
 		case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
+            break;
+			
+		case "androidNormal":
+            loadcssfile("css/andrd_normal.css");
             break;
 			
 		case "androidSmall":
