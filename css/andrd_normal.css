@@ -18,7 +18,7 @@ color: orange;
 
 .logo.login{
 	height:23%;
-	
+	/* border-left:1px solid blue; */
 }
 
 #loginExtendedBox{
@@ -62,7 +62,7 @@ color: orange;
 
 #vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
 	font-size:1.8em;
-	padding-top:1.5%;
+	padding-top:1.6%;
 }
 
 
@@ -70,7 +70,7 @@ color: orange;
 	width: 22%;
     height: 63%;
     background-size: 100% 100%;
-    top: 15.8%;
+    top: 15.3%;
 	left:5.3%;	
 }
 
