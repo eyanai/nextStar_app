@@ -155,6 +155,7 @@ function stopWaitAnimation() {
 function initMoveEvents() {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var slider = $("#result-gallery")[0];
+    var rule = $("#result-gallery")[0];
     slider.ontouchmove = function (e) {
         e.stopPropagation();
         $(document).css("top", "0px")
