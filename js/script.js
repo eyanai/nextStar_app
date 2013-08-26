@@ -159,6 +159,14 @@ function initMoveEvents() {
         e.stopPropagation();
         $(document).css("top", "0px")
     };
+
+    var scroller = $("#scroller")[0];
+    scroller.ontouchmove = function (e) {
+        e.stopPropagation();
+        $(document).css("top", "0px")
+    };
+
+
 }
 
 function toggleTopMenu(headerText) {
@@ -180,7 +188,7 @@ function showFlash() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -193,7 +201,7 @@ $(document).ready(function() {
 
     // longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if(generalParameters.isConnect) {
+    if (generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
     $("#horizonal-screen").hide();
@@ -206,116 +214,120 @@ $(document).ready(function() {
     //init banner script
     //initBannerScript();
 
-      // alert("user agent: " + ua);
-          alert("width: " +$(document).width());
-          alert("height: " +$(document).height());
+    //// alert("user agent: " + ua);
+    //    alert("width: " +$(document).width());
+    //    alert("height: " +$(document).height());
+
+    $("#close-agreement").on("click", function () {
+        $("#login").show();
+        $("#agreement").hide();
+    });
+
 });
 
 var browser;
-function initBrowser(){
-        var ua = navigator.userAgent.toLowerCase();
-        console.log("user agent: " + ua);
-           // alert("user agent: " + ua);
-           // alert("width: " +$(document).width());
-           // alert("height: " +$(document).height());
-        var androidSmall = false;
-        var androidSmall2 = false;
-        var androidNormal = false;
-         if( ua.search("android") > -1 && ua.search("mobile") >-1){
-             androidSmall = true;
-         }
-		 if( ua.search("android") > -1 && ua.search("p5110") >-1){
-             androidNormal = true;
-         }
-		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
-			androidSmall = false;
-			androidSmall2 = true;
-		}
-        if(androidSmall){
-            browser = "androidSmall";
-         //   alert("android small");
-        }
-		if(androidSmall2){
-            browser = "androidSmall2";
-         //   alert("android small");
-        }
-		if(androidNormal){
-            browser = "androidNormal";
-         //   alert("android normal");
-        }
-        var isIpad =false;
-        if( ua.search("ipad") >-1){
-            isIpad = true;
-            browser = "ipad";
-        }
-        var isIphone5 =false; 
-        if(ua.search('iphone os 5')>-1){
-             isIphone5 =true;
-               browser =  "iphone5";
-         }
+function initBrowser() {
+    var ua = navigator.userAgent.toLowerCase();
+    console.log("user agent: " + ua);
+    // alert("user agent: " + ua);
+    // alert("width: " +$(document).width());
+    // alert("height: " +$(document).height());
+    var androidSmall = false;
+    var androidSmall2 = false;
+    var androidNormal = false;
+    if (ua.search("android") > -1 && ua.search("mobile") > -1) {
+        androidSmall = true;
+    }
+    if (ua.search("android") > -1 && ua.search("p5110") > -1) {
+        androidNormal = true;
+    }
+    if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") > -1) {
+        androidSmall = false;
+        androidSmall2 = true;
+    }
+    if (androidSmall) {
+        browser = "androidSmall";
+        //   alert("android small");
+    }
+    if (androidSmall2) {
+        browser = "androidSmall2";
+        //   alert("android small");
+    }
+    if (androidNormal) {
+        browser = "androidNormal";
+        //   alert("android normal");
+    }
+    var isIpad = false;
+    if (ua.search("ipad") > -1) {
+        isIpad = true;
+        browser = "ipad";
+    }
+    var isIphone5 = false;
+    if (ua.search('iphone os 5') > -1) {
+        isIphone5 = true;
+        browser = "iphone5";
+    }
 }
 
-function loadRelevantCss(){
-    switch(browser){
-	
+function loadRelevantCss() {
+    switch (browser) {
+
         case "iphone5":
             loadcssfile("css/iphone5.css");
             break;
-        
-		case "androidSmall2":
+
+        case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
             break;
-			
-		case "androidNormal":
+
+        case "androidNormal":
             loadcssfile("css/andrd_normal.css");
             break;
-			
-		case "androidSmall":
+
+        case "androidSmall":
             loadcssfile("css/andrd_small.css");
             break;
     }
 }
 
- function loadcssfile(filename) {
-            //if filename is an external CSS file
-            var fileref = document.createElement("link")
-            fileref.setAttribute("rel", "stylesheet")
-            fileref.setAttribute("type", "text/css")
-            fileref.setAttribute("href", filename)
+function loadcssfile(filename) {
+    //if filename is an external CSS file
+    var fileref = document.createElement("link")
+    fileref.setAttribute("rel", "stylesheet")
+    fileref.setAttribute("type", "text/css")
+    fileref.setAttribute("href", filename)
 
-            $("head").append(fileref);
+    $("head").append(fileref);
 
-        }
-      
-function initBannerScript(){
-    //set the script for 2 different sizes
-
-    if(generalParameters.isBigSize){
-       $("#banner").append('script>'+
-                    'var CM8Server="mako.checkm8.com";'+
-                    'var CM8Cat="mobile.makoTV.programs.the_next_star.votes";'+
-                    'var CM8Profile="APP_BANNER_LARGE_1024X66";'+
-                    'var CM8Req="x";'+
-                   ' var CM8Redir={click: "", ad_play: ""};'+
-                    '</script>'+
-                    '<script language="JavaScript" src="http://makostatic.checkm8.com/adam/cm8_detect_ad.js"></script>')
-    }
-    else{
-         $("#banner").append('<script>'+
-        'var CM8Server="mako.checkm8.com";'+
-        'var CM8Cat="mobile.makoTV.programs.the_next_star.votes";'+
-        'var CM8Profile="format=APP_BANNER_320X50";'+
-        'var CM8Req="x";'+
-        'var CM8Redir={click: "", ad_play: ""};'+
-        '</script>'+
-        '<script language="JavaScript" src="http://makostatic.checkm8.com/adam/cm8_detect_ad.js"></script>'); 
-    }
-   
 }
 
- function df(){
-	 alert("google");
-	 window.location="https://docs.google.com/viewer?url=http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf";
-	 // webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
-	 alert(window.location);
- }
+function initBannerScript() {
+    //set the script for 2 different sizes
+
+    if (generalParameters.isBigSize) {
+        $("#banner").append('script>' +
+                    'var CM8Server="mako.checkm8.com";' +
+                    'var CM8Cat="mobile.makoTV.programs.the_next_star.votes";' +
+                    'var CM8Profile="APP_BANNER_LARGE_1024X66";' +
+                    'var CM8Req="x";' +
+                   ' var CM8Redir={click: "", ad_play: ""};' +
+                    '</script>' +
+                    '<script language="JavaScript" src="http://makostatic.checkm8.com/adam/cm8_detect_ad.js"></script>')
+    }
+    else {
+        $("#banner").append('<script>' +
+        'var CM8Server="mako.checkm8.com";' +
+        'var CM8Cat="mobile.makoTV.programs.the_next_star.votes";' +
+        'var CM8Profile="format=APP_BANNER_320X50";' +
+        'var CM8Req="x";' +
+        'var CM8Redir={click: "", ad_play: ""};' +
+        '</script>' +
+        '<script language="JavaScript" src="http://makostatic.checkm8.com/adam/cm8_detect_ad.js"></script>');
+    }
+
+}
+
+function df() {
+    $("#agreement").show();
+    $("#login").hide();
+}
