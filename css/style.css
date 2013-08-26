@@ -45,13 +45,31 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-a{
+
+a {
     color: white;
 }
-a:link {text-decoration:none;}      /* unvisited link */
-a:visited {text-decoration:none;}  /* visited link */
-a:hover {text-decoration:none;}  /* mouse over link */
-a:active {text-decoration:none;}
+
+a:link {
+    text-decoration: none;
+}
+/* unvisited link */
+a:visited {
+    text-decoration: none;
+}
+/* visited link */
+a:hover {
+    text-decoration: none;
+}
+/* mouse over link */
+a:active {
+    text-decoration: none;
+}
+
+.checkboxArea a {
+    text-decoration: underline;
+}
+
 /*-------------------cf-----------------------------*/
 .cf:after {
     content: ".";
@@ -292,6 +310,7 @@ header {
     text-align: center;
     padding: 11% 0 0;
     text-align: right;
+    text-align: center;
 }
 
 #loginRewardBox.loginHg {
@@ -337,12 +356,11 @@ header {
     direction: rtl;
 }
 
-.checkboxArea .textAd{
-	color:pink;
-	text-align:right;
-	width:84%;
-	display:inline-block;
-	vertical-align:top;
+.checkboxArea .textAd {
+    text-align: right;
+    width: 84%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #login .checkboxArea {
@@ -495,6 +513,44 @@ input[type=checkbox].checked{
     /*     top: 35%; */
     font-weight: normal;
 }
+
+/*===============================================AGREEMENT SECTION==============================================*/
+
+#agreement{
+    display: none;
+    height: 82%;
+    top: 8%;
+    
+}
+
+#scroller {
+    width: 90%;
+    height: 98%;
+    margin-right: 5%;
+    overflow: scroll;
+}
+
+#scroller li{
+    width: 100%;
+    height: 95%;
+}
+
+#close-agreement {
+    /*display: none;*/
+    height: 8%;
+    width: 8%;
+    color: black;
+    background-color: #a9a9a9;
+    float: right;
+    text-align: center;
+    line-height: 115%;
+    position: absolute;
+    top: -5%;
+    right: 2%;
+    border: solid 1px black;
+    font-size: 3em;
+    border-radius: 20%;
+}
 /*===============================================MASSEGE SECTION==============================================*/
 .messageImage, .messageNoImage { /*whit image or not */
     width: 100%;
@@ -503,6 +559,7 @@ input[type=checkbox].checked{
 
 .team {
     background-image: url(../images/masseg/iphone_message_image_right_size.jpg);
+    /* background-image: url(../images/masseg/team.jpg); */
     background-repeat: no-repeat,no-repeat;
     background-size: 100% 100%;
     background-position: right top, center -150%;
@@ -814,8 +871,11 @@ left: 0%;
     left: 21%;
     top: 62%;*/
 }
-.slidein.grey .slider-text{
-    font-size: 0.8em;
+
+.slidein.grey .slider-text {
+    font-size: 1em;
+    width: 58%;
+    text-align: center;
 }
 .slidein .slider-text span{
    
@@ -845,7 +905,6 @@ left: 0%;
     left: 5%;
     position: absolute;
     top: 18%;
-    
     /*background-image: url(../images/register/signin_slider_button.png);
 background-size: 100% 104%;
 background-repeat: no-repeat;
@@ -861,6 +920,10 @@ top: 0%;*/
     background-image: url(../images/register/signin_slider_button_prs.png);
     background-size: 100% 104%;
 }*/
+.slide.animateLeft {
+    transition: left 1s ease-out;
+    -webkit-transition: left 1s ease-out;
+}
 
 .slider-text {
     font-size: 2.625em;
@@ -944,6 +1007,19 @@ top: 0%;*/
 
 
 /*================================================VOTE SECTION=====================================*/
+
+#vote {
+    width: 100%;
+}
+
+.centerSection {
+    border: 1px solid grey;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
 .single, .battle {
     position: relative;
@@ -1141,8 +1217,8 @@ top: 0%;*/
     color: #ff006c;
 }
 
-.love {
-    background-image: url(../images/votes/slide_round_pick.png);
+.hate { /*actually hate - to change*/
+    background-image: url(../images/votes/slide_round_red.png);
     position: absolute;
     width: 50%;
     height: 100%;
@@ -1196,8 +1272,6 @@ top: 0%;*/
     background-size: 100% 100%;
     opacity: 0;
     z-index: 1;
-    -webkit-transform: rotateZ(-180deg);
-    transform: rotateZ(-180deg);
 }
 
 .hate1 {
@@ -1707,13 +1781,13 @@ background-position-y: 10%;*/
 .gallery-vote-single {
 }
 
-.gallery-pic{
+.gallery-pic {
     height: 100%;
-position: absolute;
-/*background-image: url(../images/register/kohav2.jpg);*/
-width: 100%;
-background-size: auto 100%;
-background-position: center;
+    position: absolute;
+    /*background-image: url(../images/register/kohav2.jpg);*/
+    width: 100%;
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .gallery-vote-single img {
