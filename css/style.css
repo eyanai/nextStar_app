@@ -505,6 +505,7 @@ input[type=checkbox].checked {
 
 .team {
     background-image: url(../images/masseg/iphone_message_image_right_size.jpg);
+	/* background-image: url(../images/masseg/team.jpg); */
     background-repeat: no-repeat,no-repeat;
     background-size: 100% 100%;
     background-position: right top, center -150%;
