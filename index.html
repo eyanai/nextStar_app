@@ -72,7 +72,9 @@
                 <div id="slide-container">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
- אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע!<br>התחברו דרך פייסבוק כדי לזכות בפרסים
+								אתם השופטים בזמן אמת,<br>
+								בשידור חי ובכל ביצוע<br>
+								התחברו דרך פייסבוק ותוכלו לזכות בפרסים
                         </div>
                     </hgroup>
                     <form name="" action="" method="">
@@ -80,10 +82,10 @@
                             <div id="rules-wrap">
                                 <input type="checkbox" id="rulesCB" />
                                 <label for="checkbox1">קראתי ומאשר/ת את </label>
-                                <a href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" target="_blank">התקנון </a>
+                                <a onclick="df()"  target="_self">התקנון</a><!-- href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" -->
                                 <span id="notConfirmed">לא אישרת את התקנון!</span></br>
                             </div>
-                            <input type="checkbox" id="tvImgCB" class="tvImgCB" />
+                            <input type="checkbox" id="tvImgCB"  class="tvImgCB" />
                             <label for="checkbox2"><div class="textAd">רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה ובפרסומות לתוכנית</div></label>
                         </div>
                         <div class="facebookArea">
@@ -250,6 +252,7 @@
         </section>
         <!---register  section-->
         <section id="vote">
+		<div class="centerSection"> 
             <div class="nextPage" data-goto="voteSingle"></div>
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="voteBattle"></div>
@@ -367,6 +370,7 @@
 	לא נרשמת בזמן<br>
 	אין אוטו.</div>
             <!---------------------------------------------------not-registered div--------------------------------->
+        </div>
         </section>
 
         <!---vote  section-->

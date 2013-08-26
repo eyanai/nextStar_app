@@ -21,7 +21,7 @@ function attachEventsFacebook() {
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
     $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
-    $("#tvImgCB").on("click",tvImgCBClick);
+    $(".tvImgCB").on("click",tvImgCBClick);
 }
 
 //check if localStorge is reset with connect to fb

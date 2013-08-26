@@ -9,7 +9,6 @@ html,body{
 .loginHg .titleLogin, .loginHg .titleLoginReward
 {
 	font-size:0.85em;
-	/*  color:yellow;   */
 	margin:1% auto;
 }
 
@@ -176,7 +175,7 @@ input[type=checkbox] {
 
 input[type=checkbox] {
     width: 1.3em;
-    height: 1.4em;
+    height: 1.3em;
 }
 
 
@@ -382,6 +381,11 @@ section {
 
 .checkboxArea .textAd{
 	min-width:84%;
+	vertical-align:top;
+}
+
+.checkboxArea .tvImgCB{
+	margin-top:0%;
 }
 
 #checkbox4{

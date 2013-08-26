@@ -19,7 +19,7 @@ html,body{
 
 .logo.login{
 	height:23%;
-	
+	/* border-bottom:1px solid blue; */
 }
 
 #loginExtendedBox{
