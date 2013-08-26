@@ -125,10 +125,10 @@ function postOnFeed() {
             },
             function (response) {
                 if (!response || response.error) {
-                    alert('Error occured');
+                 //   alert('Error occured');
                 }
                 else {
-                    alert('Post ID: ' + response.id);
+                //    alert('Post ID: ' + response.id);
                 }
             });
 
