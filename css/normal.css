@@ -137,6 +137,10 @@ input[type=checkbox] {
     margin-right: 4%;
 }
 
+.checkboxArea .tvImgCB{
+	margin-top:0%;
+}
+
 /*===============================================MESSAGE SECTION==============================================*/
 
 .detail {
@@ -393,7 +397,8 @@ input[type=checkbox] {
 /*=======================================================RESULT BATTLE=========================================*/
 
 .resultScalaR {
-    /*     background-color: rgba(0,0,0,0.5);
+    /*     background-
+	rgba(0,0,0,0.5);
     width: 5%;
     height: 62.5%;
     border-radius: 6px;
@@ -543,7 +548,7 @@ input[type=checkbox] {
 }
 
 .checkboxArea .textAd{
-	vertical-align:middle;
+	vertical-align:top;
 }
 
 

@@ -285,6 +285,7 @@ header {
     margin: 8% auto;
     display: block;
     overflow: hidden;
+	/* border:1px solid red; */
 }
 
 #slide-container {
@@ -312,7 +313,6 @@ header {
     font-size: 1.8em;
     font-weight: normal;
     padding: 0 15px;
-    /* margin-bottom:8px; */
 }
 
 .loginHg .titleLoginReward {
@@ -889,7 +889,7 @@ top: 0%;*/
     position: absolute;
     top: 35%;
     right: 13%;
-    color: gray;
+    
 }
 
 .reMesseg {
