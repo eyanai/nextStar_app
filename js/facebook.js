@@ -7,8 +7,8 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-//alert(0);
-//localStorage.setItem('fbStorage', "");
+alert(0);
+localStorage.setItem('fbStorage', "");
 
 
 ////////////////////////////////////////////////////// listener   
@@ -123,7 +123,7 @@ function postOnFeed() {
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
-                picture: domain + '/images/header/facebook_pic.png',
+                picture: domain + '/images/header/facebook_star.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,

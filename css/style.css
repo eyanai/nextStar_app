@@ -523,11 +523,43 @@ input[type=checkbox].checked{
     
 }
 
-#scroller {
+/*#result-gallery {
+    height: 33.9%;
+    /* direction: rtl;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1%;
+}
+
+#result-gallery > * {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#result-gallery ul {
+    height: 100%;
+    /* width: 1081px;
+     width: 500px;
+    padding-right: 4px;
+    direction: rtl;
+    overflow-y: hidden;
+}*/
+
+
+#scroller-container-agreement{
     width: 90%;
     height: 98%;
     margin-right: 5%;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#scroller {
+    /*width: 90%;
+    height: 98%;
+    margin-right: 5%;
+    overflow: scroll;*/
+    overflow: hidden;
 }
 
 #scroller li{
