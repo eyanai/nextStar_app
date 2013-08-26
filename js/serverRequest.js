@@ -1,18 +1,20 @@
 /////************long polling- get status - change the pages******************/
-////var serverDomain = "http://192.168.2.108:8080/nextStarQA/json?";
-////var serverDomain = "http://192.168.2.108:8080/nextStarQA/userjson?type=getStatus";
-////var serverDomain = 'http://makosrv1.egoline.co.il/nextStar/userjson?';
+
+/***********PRODUCTION***********/
+////var serverDomain = '/nextStar/userjson?';
+/***********PRODUCTION***********/
+
 //var serverDomain = "http://makosrv1.egoline.co.il/nextStarTestB/userjson?";
 //var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
-var serverDomain = "/nextStarTestB/userjson?";
+var serverDomain = "/nextStarTestD/userjson?";
 
 //E -mako
 //A -yerutech
 //cambium -D
 //var serverDomain = "http://makosrv1.egoline.co.il:9090/nextStarTestD/userjson?";
 
-var domain = "http://makosrv1.egoline.co.il:9090/apptest";//app domain//////////////check fb feed
-//var domain = "http://makosrv1.egoline.co.il:9090/apptest";
+//var domain = "http://thenextstar.mako.co.il:9090/productionApp";//app domain//////////////check fb feed
+var domain = "http://thenextstar.mako.co.il:9090/application";
 //var domain = "http://makosrv1.egoline.co.il:9090/applicationYerutechQA";
 //var domain = "http://makosrv1.egoline.co.il:9090/reut_test";//////////////check fb feed
 
