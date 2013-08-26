@@ -225,7 +225,7 @@ window.addEventListener(orientationEvent,
        $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {
-           alert("work");
+            
            isPortrait = (window.innerHeight / window.innerWidth) > 1;
            //alert(window.isPortrait);
            switch (isPortrait) {

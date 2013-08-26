@@ -7,8 +7,8 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-//alert(0);
-//localStorage.setItem('fbStorage', "");
+alert(0);
+localStorage.setItem('fbStorage', "");
 
 
 ////////////////////////////////////////////////////// listener   
@@ -40,6 +40,9 @@ if (fromLocalStorge) {
 else if (searchQuery.length > 0) {
     //alert("search");
     loginCheck();
+}
+else{//if not connect and not from localstorge
+     $("#loader").hide();
 }
 
 //alert("search: " + window.location);
@@ -176,7 +179,7 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-
+     $("#loader").hide();
     $.ajax({
         type: "POST",
         url: serverDomain + "type=getFacebookData",

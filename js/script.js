@@ -205,7 +205,7 @@ $(document).ready(function () {
         $("body").trigger("start-app");
     }
     //$("#horizonal-screen").hide();
-
+   
     // initSounds();
 
     //initBrowser();
