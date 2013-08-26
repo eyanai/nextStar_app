@@ -295,6 +295,7 @@ header {
     margin: 8% auto;
     display: block;
     overflow: hidden;
+	/* border:1px solid red; */
 	
 }
 
@@ -963,6 +964,7 @@ top: 0%;*/
     top: 35%;
     right: 13%;
      color: gray;
+    
 }
 
 .reMesseg {

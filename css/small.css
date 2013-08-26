@@ -26,8 +26,10 @@ html, body {
     margin: 1% auto;
 }
 
-.loginHg .titleLogin {
-    height: 27%;
+.loginHg .titleLoginReward{
+	min-height: 60px; 
+	 margin: 8% 0%; 
+	padding: 0% 24%;
 }
 
 .loginHg .titleLoginReward {

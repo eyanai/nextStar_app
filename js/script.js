@@ -224,9 +224,53 @@ $(document).ready(function () {
         $("#agreement").hide();
     });
 
+    //   alert("user agent: " + ua);
+	  // alert("width: " +$(document).width());
+	  // alert("height: " +$(document).height());
 });
 
 var browser;
+function initBrowser(){
+        var ua = navigator.userAgent.toLowerCase();
+        console.log("user agent: " + ua);
+            // alert("user agent: " + ua);
+            // alert("width: " +$(document).width());
+            // alert("height: " +$(document).height());
+        var androidSmall = false;
+        var androidSmall2 = false;
+        //var androidNormal = false;
+         if( ua.search("android") > -1 && ua.search("mobile") >-1){
+             androidSmall = true;
+         }
+		 // if( ua.search("android") > -1 && ua.search("p5110") >-1){
+             // androidNormal = true;
+         // }
+		 if( ua.search("android") > -1 && ua.search("mobile") >-1 && ua.search("i9100") > -1){
+			androidSmall = false;
+			androidSmall2 = true;
+		}
+        if(androidSmall){
+            browser = "androidSmall";
+         //   alert("android small");
+        }
+		if(androidSmall2){
+            browser = "androidSmall2";
+         //   alert("android small");
+        }
+		// if(androidNormal){
+            // browser = "androidNormal";
+         //   alert("android normal");
+        // }
+        // var isIpad =false;
+        // if( ua.search("ipad") >-1){
+            // isIpad = true;
+            // browser = "ipad";
+        // }
+        // var isIphone5 =false; 
+        // if(ua.search('iphone os 5')>-1){
+             // isIphone5 =true;
+               // browser =  "iphone5";
+         // }
 function initBrowser() {
     var ua = navigator.userAgent.toLowerCase();
     console.log("user agent: " + ua);
@@ -270,16 +314,27 @@ function initBrowser() {
     }
 }
 
+function loadRelevantCss(){
+    switch(browser){
+        /*case "iphone5":
 function loadRelevantCss() {
     switch (browser) {
 
         case "iphone5":
             loadcssfile("css/iphone5.css");
             break;
+        
+		case "androidNormal":
+            loadcssfile("css/andrd_normal.css");
+            break;*/
+		
+		case "androidSmall2":
 
         case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
             break;
+			
+		case "androidSmall":
 
         case "androidNormal":
             loadcssfile("css/andrd_normal.css");
@@ -332,3 +387,9 @@ function df() {//show the agreement on click in login section
     $("#agreement").show();
     $("#login").hide();
 }
+ function df(){
+	
+	 window.location="https://docs.google.com/viewer?url=http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf";
+	 // webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
+
+ }
