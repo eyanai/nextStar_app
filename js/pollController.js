@@ -18,8 +18,8 @@ var PollController = function() {
            	type: "POST",
            	data: { type: "poll", index: self._index},
            	success: function(data){
-           		//self._url=data;
-                self._url=data.substring(0,29)+":9090/"+data.substring(30)
+           		self._url=data;
+                //self._url=data.substring(0,29)+":9090/"+data.substring(30)
            		self._poll();
            	}
         });
