@@ -1,5 +1,9 @@
 /* CSS Document */
 
+/*.loginHg .titleLogin {
+color: red;
+}*/
+
 /*=====================================================generel==============================================*/
 
 html,body{
@@ -19,7 +23,7 @@ html,body{
 
 .logo.login{
 	height:23%;
-	
+	/* border-bottom:1px solid blue; */
 }
 
 #loginExtendedBox{

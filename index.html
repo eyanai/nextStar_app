@@ -12,6 +12,15 @@
         <link rel="stylesheet" media="screen and (max-width:699px)" href="css/small.css" />
         <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width:1399px)" href="css/normal.css" /><!-- and (orientation:portrait) "-->
         <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/large.css" /><!-- and (orientation:portrait)" -->
+     <!--    <link rel="stylesheet" media="screen and (device-width: 240px)" href="css/andrd_small_2.css" /> <!--for galaxy s2 need to be tested-->
+        <link rel="stylesheet" media="screen and (device-width: 360px)" href="css/andrd_small.css" /> <!--for galaxy s4 -s3 need to be tested-->
+         <link rel="stylesheet" media="screen and (device-width: 800px)" href="css/andrd_normal.css" /> <!--for galaxy tab 2 -->
+        <link rel="stylesheet" media="screen and (max-width:320px) and (min-height:500px)" href="css/iphone5.css" /><!--for iphone5 needs to be tested-->
+        
+
+
+
+
         <!------------------------------------general scripts and plugins------------------------------------------>
         <script src="js/jq.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
@@ -72,7 +81,9 @@
                 <div id="slide-container">
                     <hgroup class="loginHg">
                         <div class="titleLogin">
- אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע!<br>התחברו דרך פייסבוק כדי לזכות בפרסים
+								אתם השופטים בזמן אמת,<br>
+								בשידור חי ובכל ביצוע<br>
+								התחברו דרך פייסבוק ותוכלו לזכות בפרסים
                         </div>
                     </hgroup>
                     <form name="" action="" method="">
@@ -80,10 +91,10 @@
                             <div id="rules-wrap">
                                 <input type="checkbox" id="rulesCB" />
                                 <label for="checkbox1">קראתי ומאשר/ת את </label>
-                                <a href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" target="_self">התקנון </a>
+                                <a onclick="df()"  target="_self">התקנון</a><!-- href="http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf" -->
                                 <span id="notConfirmed">לא אישרת את התקנון!</span></br>
                             </div>
-                            <input type="checkbox" id="tvImgCB" class="tvImgCB" />
+                            <input type="checkbox" id="tvImgCB"  class="tvImgCB" />
                             <label for="checkbox2"><div class="textAd">רוצה שתמונת הפרופיל שלי תופיע בטלוויזיה ובפרסומות לתוכנית</div></label>
                         </div>
                         <div class="facebookArea">
@@ -250,6 +261,7 @@
         </section>
         <!---register  section-->
         <section id="vote">
+		<div class="centerSection"> 
             <div class="nextPage" data-goto="voteSingle"></div>
             <div id="voteSingle" class="single">
                 <div class="nextPage" data-goto="voteBattle"></div>
@@ -367,6 +379,7 @@
 	לא נרשמת בזמן<br>
 	אין אוטו.</div>
             <!---------------------------------------------------not-registered div--------------------------------->
+        </div>
         </section>
 
         <!---vote  section-->
