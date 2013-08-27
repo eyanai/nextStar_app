@@ -236,13 +236,14 @@ height: 100%;
 width: 100%;
 background-color: #000000;
 z-index: 1000;
-opacity: 0.6;
+opacity: 0.8;
 color: #ffffff;
+font-size: 3em;
 }
 #loader span{
  position: absolute;
 top: 50%;
-left: 50%;  
+left: 44%;
 }
 
 /*================================================HEADER=====================================*/

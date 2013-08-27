@@ -280,7 +280,7 @@ function initBrowser() {
     if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") >-1)    {
         androidSmall2 = true;
     }
-    if (androidSmall) {
+    if (androidSmall2) {
         browser = "androidSmall2";
         //   alert("android small");
     }
