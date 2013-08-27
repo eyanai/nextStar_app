@@ -275,6 +275,13 @@ h2 {
     /*background-size: 100% 131%;*/
     background-position: center 40%;
 }
+#loader{
+    
+font-size: 2em;
+}
+#loader span{
+    left: 42%;
+}
 
 header {
     height: 17.3%;

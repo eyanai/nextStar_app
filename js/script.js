@@ -195,7 +195,7 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -208,10 +208,10 @@ $(document).ready(function () {
 
     // longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
     //$("#horizonal-screen").hide();
@@ -228,20 +228,20 @@ $(document).ready(function () {
     //    alert("width: " +$(document).width());
     //    alert("height: " +$(document).height());
 
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
 
     //   alert("user agent: " + ua);
-	   //alert("width: " +$(document).width());
-	   //alert("height: " +$(document).height());
+    //alert("width: " +$(document).width());
+    //alert("height: " +$(document).height());
 
 
-      //check orientation 
+    //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
-           //alert(window.isPortrait);	
-    switch (isPortrait) {
+    //alert(window.isPortrait);	
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
@@ -251,6 +251,9 @@ $(document).ready(function () {
             $("#horizonal-screen").show();
             break;
     }
+
+
+    //alert("src: " + $("#scroller li:first img").attr("src"));
 
 });
 
@@ -270,11 +273,12 @@ function initBrowser() {
     //if (ua.search("android") > -1 && ua.search("p5110") > -1) {
     //    androidNormal = true;
     //}
-    if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9300") >-1)    {
+    if (ua.search("android") > -1 && ua.search("mobile") > -1 && (ua.search("i9300") >-1 || ua.search("i9500") >-1 ))    {
         androidSmall = true;
     }
     if (androidSmall) {
         browser = "androidSmall";
+       // alert("androidSmall")
         //   alert("android small");
     }
     if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") >-1)    {
@@ -282,8 +286,11 @@ function initBrowser() {
     }
     if (androidSmall2) {
         browser = "androidSmall2";
+      //  alert("androidSmall2")
         //   alert("android small");
     }
+
+    //alert("ua: "+ua);
     //if (androidSmall2) {
     //    browser = "androidSmall2";
     //    //   alert("android small");

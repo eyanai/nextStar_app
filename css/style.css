@@ -239,6 +239,7 @@ z-index: 1000;
 opacity: 0.8;
 color: #ffffff;
 font-size: 3em;
+text-align: center;
 }
 #loader span{
  position: absolute;
