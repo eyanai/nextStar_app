@@ -21,6 +21,11 @@ html, body {
 
 }
 
+#horizonal-screen {
+	 background-image: url(../images/horizonal-background-iphone.png);
+}
+
+
 .loginHg .titleLogin, .loginHg .titleLoginReward {
     font-size: 0.85em;
     margin: 1% auto;
@@ -137,6 +142,8 @@ h2 .songName1,h2 .songName2{
     font-size: 1.4em;
     margin-top: 2%;
     height: 35px;
+    
+    /*border: 2px solid gray;*/
 }
 
 #loginRewardBox .loginHg {

@@ -15,9 +15,9 @@
         <!--    <link rel="stylesheet" media="screen and (device-width: 240px)" href="css/andrd_small_2.css" /> <!--for galaxy s2 need to be tested-->
          <link rel="stylesheet" media="screen and (device-width: 360px)" href="css/andrd_small.css" />  <!--for galaxy s4 -s3 need to be tested-->
           <link rel="stylesheet" media="screen and (device-width: 800px)" href="css/andrd_normal.css" /><!--for galaxy tab 2 --> 
-        <link rel="stylesheet" media="screen and (min-width:360px) and (min-height:640px)" href="css/andrd_small.css" />
+        <!--<link rel="stylesheet" media="screen and (min-width:360px) and (max-width:699px) and (min-height:640px)" href="css/andrd_small.css" />-->
         <link rel="stylesheet" media="screen and (max-width:320px) and (min-height:548px)" href="css/iphone5.css" /><!--for iphone5 needs to be tested-->
-        <link rel="stylesheet" media="screen and (max-width:320px) and (max-height:533px)" href="css/andrd_small_2.css" /><!--for iphone5 needs to be tested-->
+       <!-- <link rel="stylesheet" media="screen and (max-width:320px) and (max-height:533px)" href="css/andrd_small_2.css" />-->
         <!------------------------------------general scripts and plugins------------------------------------------>
         <script src="js/jq.js"></script>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
@@ -50,6 +50,11 @@
         <div id="horizonal-screen">
             <div id="flip-me"></div>
         </div>
+        
+         <div id="loader">
+            <span>טוען...</span>
+        </div>
+        
         <header class="hide">
             <figure class="header logo"></figure>
             <figure class="live"></figure>
@@ -59,7 +64,7 @@
         </nav>
 
         <section id="login">
-            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
+            <!--<div class="nextPage" data-goto="messageWaitingWithImage"></div>-->
             <figure class="logo login"></figure>
             <div id="loginExtendedBox">
                 <div id="slide-container">
@@ -109,7 +114,7 @@
         </section>
         <!---log in section-->
          <section id="agreement">
-            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
+            <!--<div class="nextPage" data-goto="messageWaitingWithImage"></div>-->
             <div id="close-agreement">x</div>
             <div id="scroller-container-agreement">
                  <ul id="scroller">
@@ -123,7 +128,7 @@
         </section>
         <!---agreement section-->
         <section id="message">
-            <div class="nextPage" data-goto="registerSingle"></div>
+            <!--<div class="nextPage" data-goto="registerSingle"></div>-->
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -158,7 +163,7 @@
         <section id="register">
                             <!--<div class="nextPage" data-goto="resultsSingle"></div>
                                                                                                                                             <div class="nextPage" data-goto="voteBattle"></div>-->
-            <div class="nextPage" data-goto="voteSingle"></div>
+            <!--<div class="nextPage" data-goto="voteSingle"></div>-->
 
             <!--<div class="animat" data-animat="register"></div>-->
             <div class="animat" data-animat="notRegister"></div>
@@ -260,9 +265,9 @@
         <!---register  section-->
         <section id="vote">
             <div class="centerSection">
-                <div class="nextPage" data-goto="voteSingle"></div>
+                <!--<div class="nextPage" data-goto="voteSingle"></div>-->
                 <div id="voteSingle" class="single">
-                    <div class="nextPage" data-goto="voteBattle"></div>
+                    <!--<div class="nextPage" data-goto="voteBattle"></div>-->
                                             <!--<div class="animat animatG" data-animat="singleGood"></div>
                                                                                                                                                                             <div class="animat animatB" data-animat="singleBad"></div>-->
                                             <!--<nav class="topMenu">
@@ -303,7 +308,7 @@
                 </div>
                 <!----------------------------------------------------------------------single  div----------------->
                 <div id="voteBattle" class="battle">
-                    <div class="nextPage" data-goto="resultsSingle"></div>
+                    <!--<div class="nextPage" data-goto="resultsSingle"></div>-->
                                             <!--<div class="animat animatG1" data-animat="battel1Good"></div>
                                                                                                                                                                             <div class="nextPage" data-goto="resultsBattle"></div></br>
                                                                                                                                                                             <div class="animat animatG1" data-animat="battel1Good"></div>
@@ -384,7 +389,7 @@
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <div class="nextPage" data-goto="resultsSingle"></div>
+                <!--<div class="nextPage" data-goto="resultsSingle"></div>-->
                                     <!-- <div class="animat animatG" data-animat="singleGood"></div>
                                                                                                                                                             <div class="animat animatB" data-animat="singleBad"></div>-->
                                     <!--<nav class="topMenu">
@@ -450,7 +455,7 @@
         </section>
         <!---vote  section-->
         <section id="results">
-            <div class="nextPage" data-goto="gallery"></div>
+            <!--<div class="nextPage" data-goto="gallery"></div>-->
             <!-- <div class="animat animatB" data-animat="results"></div>-->
                             <!--<nav class="topMenu">
                                                                                                                                                                 <h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
@@ -532,7 +537,7 @@
         </section>
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
-            <div class="nextPage" data-goto="messageNoImage"></div>
+            <!--<div class="nextPage" data-goto="messageNoImage"></div>-->
                             <!--<nav class="topMenu">
                                                                                                                                                                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
                                                                                                                                                             </nav>-->

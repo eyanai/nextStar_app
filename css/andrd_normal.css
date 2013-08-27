@@ -32,6 +32,9 @@ color: orange;
 	padding: 10% 24% 0;
 	margin:9% auto;
 }
+/*#loginExtendedBox .login{
+    border: 1px solid black;
+}*/
 
 #loginExtendedBox .loginHg{
 	height:14.5%;

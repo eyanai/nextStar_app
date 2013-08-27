@@ -230,8 +230,7 @@ window.addEventListener(orientationEvent,
            //alert("work");
            isPortrait = (window.innerHeight / window.innerWidth) > 1;
            //alert(window.isPortrait);	
-           
-           switch (isPortrait) {
+            switch (isPortrait) {
                case true:
 
                    $("#horizonal-screen").hide();
