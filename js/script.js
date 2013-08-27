@@ -328,13 +328,9 @@ function loadRelevantCss() {
             loadcssfile("css/andrd_normal.css");
             break;*/
 		
-		case "androidSmall2":
-
         case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
             break;
-			
-		case "androidSmall":
 
         case "androidNormal":
             loadcssfile("css/andrd_normal.css");
@@ -387,9 +383,4 @@ function df() {//show the agreement on click in login section
     $("#agreement").show();
     $("#login").hide();
 }
- function df(){
-	
-	 window.location="https://docs.google.com/viewer?url=http://img.mako.co.il/2013/08/18/the_next_star_vote.pdf";
-	 // webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
-
- }
+ 
