@@ -12,47 +12,43 @@ var PollController = function() {
 	//---------------------------------------------------------------------------------
 	self._init = function(){
 		if(!self._callBackFunction) self._callBackFunction=function(data){$("body").append(data);};
-		
+
         $.ajax({ 
            	url: self._url,
            	type: "POST",
            	data: { type: "poll", index: self._index},
            	success: function(data){
            		self._url=data;
-                //self._url=data.substring(0,29)+":9090/"+data.substring(30)
            		self._poll();
            	}
         });
 	};
-	
+
 	self._setCallBackFunction=function(func){
 		self._callBackFunction=func;
 	};
-	
+
 	self._setUrl=function(url){
 		self._url=url;
 	};
-	
-	
+
+
 	//---------------------------------------------------------------------------------
 	//private function
 	//---------------------------------------------------------------------------------
 	self._poll=function(){
         $.ajax({ 
-           	url: self._url+"?v="+Date.now(), 
-           	complete: function() {
-           		setTimeout(function(){self._poll();},3000);
-           		}, 
+           	url: self._url+"?v="+Date.now(),
            	dataType: "json",
            	type: "GET",
-           	/*data: { type: "poll", index: self._index},*/
            	success: function(json){
-           		if (json.index!=self._index){
+           		if (json.index>self._index){
 	           		self._index=json.index;
 	           		if (self._callBackFunction) self._callBackFunction(json.data);
            		}
            	}
         });
+		setTimeout(self._poll,self._timeOut);
 	};
 	//---------------------------------------------------------------------------------
 	//private attribute
@@ -60,4 +56,5 @@ var PollController = function() {
 	self._callBackFunction=null;
 	self._index=-1;
 	self._url='';
+	self._timeOut=3000;
 };
