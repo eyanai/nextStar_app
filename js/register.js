@@ -3,6 +3,11 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 var registerTextHtml = "<span>כ</span><span>נ</span><span>י</span><span>ס</span><span>ה</span> <span>ל</span><span>ה</span><span>צ</span><span>ב</span><span>ע</span><span>ה</span>";
 //set register page
 function setOpenRegisterPage(data, from) {
+    initVoteGeneralParameters();
+
+    voteGeneralParameters.status = data.status
+    voteGeneralParameters.votePageId =data.id;
+    
     generalParameters.isRegistered = false;
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
@@ -16,8 +21,10 @@ function setOpenRegisterPage(data, from) {
     $("#register .reMesseg .continue").hide();
     var url = "";
     generalParameters.isSingle = null; //init isSingle
+    setIsSingle(data);
+    setRegisterGeneralParams(data);
     //if this is a double vote
-    if (!isSingle(data)) {
+    if (!generalParameters.isSingle) {
         var url1 = "";
         var url2 = "";
         //set the img
@@ -127,7 +134,7 @@ function attachDrag(){
                 setTimeout(function() {
                  //   alert('5');
                     setRegister();
-                }, 3000);
+                }, 2000);
 
 
             }
@@ -191,7 +198,7 @@ function setRegisterGoingClose(data) {
     alertRegisterGoingClose();
 }
 
-var alertInterval
+var alertInterval;
 function alertRegisterGoingClose() {
     alertInterval = setInterval(function() {
         // alertSound.playclip();
@@ -205,18 +212,42 @@ function stopAlertRegisterGoingClose() {
 
 //send to server the register
 function setRegister() {
-    //ajax call server
-   // alert("setRegister");
+    voteGeneralParameters.registered = true;
+    var data ="";
+    var facebookid = 0;
+    if(generalParameters.fbUser.id != null) {
+        facebookid = generalParameters.fbUser.id;
+    }
+    if (voteGeneralParameters.isSingle){
+       data ={voteId1:voteGeneralParameters.voteid1,facebookId:facebookid}
+    }
+    else{
+      data =  {voteId1:voteGeneralParameters.voteid1, voteId2 :voteGeneralParameters.voteid2,facebookId:facebookid}
+    }
+
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
+        data: data,
         success: function(data) {
             console.log(data);
-         //   alert("setRegister success");
-            setWaitVotePage(data);
+            //if the resposne to register return when the status is steel register
+            if(voteGeneralParameters.status == 21) {
+               //if the response return when the page id is identical
+                if( (voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null))
+                {
+                    setWaitVotePage(data);
+                }
+                
+            }
+            //else - if the current status is another
+            else {
+                registerReturnFromServerDelay(data);
+            }
+
         },
         error: function(data) {
-           //  alert("setRegister error: "+data);
+            //  alert("setRegister error: "+data);
             console.log("error getPage: " + data);
         }
     });
@@ -237,19 +268,22 @@ function setWaitVotePage(data) {
     else {
        // alert("here")
         Navi.goto("WaitVotePage");
-        generalParameters.voteIdA = data[0].voteId;
-        generalParameters.voteKeyA = data[0].voteKey;
+        voteGeneralParameters.votekey1 = data[0].voteKey;
         if (data[1]) {
-            generalParameters.voteIdB = data[1].voteId;
-            generalParameters.voteKeyB = data[1].voteKey;
+            voteGeneralParameters.votekey2 = data[1].voteKey;
         }
-        generalParameters.isRegistered = true;
+       // generalParameters.isRegistered = true;
     }
 
-    //stop the red flash sound
-   // $("#alertAud")[0].pause();
-   // clearInterval(alertInterval);
 };
+
+function registerReturnFromServerDelay(data){
+     voteGeneralParameters.votekey1 = data[0].voteKey;
+        if (data[1]) {
+            voteGeneralParameters.votekey2 = data[1].voteKey;
+        }
+}
+
 
 var index =0;
 var registerWishTextInterval;
@@ -296,4 +330,32 @@ function addWishToLettet(spanArrayTemp,sliderObjTemp){
 function clearRegisterWishTextInterval(){
     
     clearTimeout(registerWishTextInterval);
+}
+
+
+function setRegisterGeneralParams(data){
+   voteGeneralParameters.voteid1 = data.votes[0].voteID;
+   
+   if(!voteGeneralParameters.isSingle)
+   {
+        voteGeneralParameters.voteid2 = data.votes[1].voteID;
+   }
+
+
+
+}
+
+
+function initVoteGeneralParameters(){
+    
+    voteGeneralParameters.status = 0;
+    voteGeneralParameters.isSingle = null;
+    voteGeneralParameters.registered = false;
+    voteGeneralParameters.voteid1 = 0;
+    voteGeneralParameters.voteid2 = 0;
+    voteGeneralParameters.votekey1 = null;
+    voteGeneralParameters.votekey2 = null;
+    voteGeneralParameters.like1 = null;
+    voteGeneralParameters.like2 = null;
+    voteGeneralParameters.votePageId = 0;
 }

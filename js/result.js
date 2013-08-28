@@ -1,4 +1,7 @@
 function setResultPage(data) {
+
+    voteGeneralParameters.status = data.status;
+
     console.log("setResultPage data.status: " + data.status);
 
     //set the dictionary text
@@ -8,7 +11,8 @@ function setResultPage(data) {
     var isSingleVote;
     var firstFields;
     var secondFields;
-    if (isSingle(data)) {
+    setIsSingle(data);
+    if (voteGeneralParameters.isSingle) {
         firstFields = getFielsdByVote(data.votes[0]);
         $("#results-img-single").css("background-image", "url('" + firstFields[2] + "')")
         $("#results-comp-name-single").text(firstFields[0]);
@@ -58,7 +62,7 @@ function setResultPage(data) {
         //navigate
         Navi.goto("resultsSingle");
     }
-    else if (!isSingle(data)) {
+    else if (!voteGeneralParameters.isSingle) {
         firstFields = getFielsdByVote(data.votes[0]);
         secondFields = getFielsdByVote(data.votes[1]);
         //firat comp

@@ -18,10 +18,11 @@ var domain = "http://thenextstar.mako.co.il:9090/application";
 //var domain = "http://thenextstar.mako.co.il:9090/reut_test";//////////////check fb feed
 
 
+
 function longPolling() {
     //alert(0);
     pollController = new PollController();
-    pollController._setUrl(serverDomain+"type=getStatus");
+    pollController._setUrl("http://thenextstar.mako.co.il/page/pageF.json");
     pollController._setCallBackFunction(function (data) {
         console.log(data);
         pageChange(data);

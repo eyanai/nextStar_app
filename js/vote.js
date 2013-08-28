@@ -7,12 +7,16 @@ function setVotePage(data) {
     var firstFields;
     var secondFields;
 
-    if (generalParameters.isRegistered) {
+    voteGeneralParameters.status = data.status;
+
+    //if the user was register - only if the register server request didnt return - do
+    if (voteGeneralParameters.registered ) {
         $("#vote .reMesseg .continue").hide();
         resetAnimations(); //reset animations
         $("#vote .continue h2").text(data.textWaitVote); //take the value from dictionary
+        setIsSingle(data);
 
-        if (isSingle(data)) {
+        if (voteGeneralParameters.isSingle) {
 
             //wait text
             //var waitText = data.textWaitVote;
@@ -29,7 +33,7 @@ function setVotePage(data) {
             //navigate
             Navi.goto("voteSingle");
         }
-        else if (!isSingle(data)) {
+        else if (!voteGeneralParameters.isSingle) {
             //wait text
             //var waitText = data.textWaitVote;
             //$(".vote-wait-text").text(waitText);
@@ -71,7 +75,9 @@ function setVoteClosePage(data) {
     var isSingleVote;
     var firstFields;
     var secondFields;
-    if (isSingle(data)) {
+    setIsSingle(data);
+
+    if (voteGeneralParameters.isSingle) {
         firstFields = getFielsdByVote(data.votes[0]);
         $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
         $("#vote-close-comp-name-single").text(firstFields[0]);
@@ -85,7 +91,7 @@ function setVoteClosePage(data) {
         //navigate
         Navi.goto("voteCloseSingle");
     }
-    else if (!isSingle(data)) {
+    else if (!voteGeneralParameters.isSingle) {
         firstFields = getFielsdByVote(data.votes[0]);
         secondFields = getFielsdByVote(data.votes[1]);
         //firat comp
@@ -118,47 +124,65 @@ function setVote(e) {
     voteId = null; voteKey = null; vote = null;
     switch (e.target.id) {
         case 'slideLeft':
-            voteId = generalParameters.voteIdA;
-            voteKey = generalParameters.voteKeyA;
+            voteId = voteGeneralParameters.voteid1;
+            voteKey = voteGeneralParameters.votekey1;
             vote = 0;
+            voteGeneralParameters.like1 = 0;
             $("#voteNegAud")[0].play()
             break;
         case 'slideRight':
-            voteId = generalParameters.voteIdA;
-            voteKey = generalParameters.voteKeyA;
+            voteId = voteGeneralParameters.voteid1;
+            voteKey = voteGeneralParameters.votekey1;
             vote = 1;
-
+            voteGeneralParameters.like1 = 1;
             $("#votePosAud")[0].play()
             break;
+
+
         case 'slideTopbattleCon1':
-            voteId = generalParameters.voteIdA;
-            voteKey = generalParameters.voteKeyA;
+            voteId = voteGeneralParameters.voteid1;
+            voteKey = voteGeneralParameters.votekey1;
             vote = 0;
+            voteGeneralParameters.like1 = 0;
             $("#voteNegAud")[0].play()
             break;
         case 'slideTopbattleCon2':
-            voteId = generalParameters.voteIdB;
-            voteKey = generalParameters.voteKeyB;
+            voteId = voteGeneralParameters.voteid2;
+            voteKey = voteGeneralParameters.votekey2;
             vote = 0;
+            voteGeneralParameters.like2 = 0;
             $("#voteNegAud")[0].play()
             break;
         case 'slideDownbattleCon1':
-            voteId = generalParameters.voteIdA;
-            voteKey = generalParameters.voteKeyA;
+            voteId = voteGeneralParameters.voteid1;
+            voteKey = voteGeneralParameters.votekey1;
             vote = 1;
-            $("#votePosAud")[0].play()
-            
+            voteGeneralParameters.like1 = 1;
+            $("#votePosAud")[0].play();
+
             break;
         case 'slideDownbattleCon2':
-            voteId = generalParameters.voteIdB;
-            voteKey = generalParameters.voteKeyB;
+            voteId = voteGeneralParameters.voteid2;
+            voteKey = voteGeneralParameters.votekey2;
             vote = 1;
+            voteGeneralParameters.like1 = 1;
             $("#votePosAud")[0].play()
             break;
     }
 
     console.log(vote, voteId, voteKey);
+    //if the register return from server- send the vote to server, else - wait 
+    if(voteGeneralParameters.votekey1 != null || voteGeneralParameters.votekey2 != null){
+        sendVoteToServer(voteId,voteKey,vote);
+    }
+    else{
+        
+    }
 
+}
+
+function sendVoteToServer(voteId,voteKey,vote){
+   
     $.ajax({
         type: "POST",
         url: serverDomain + "type=vote",
@@ -166,35 +190,31 @@ function setVote(e) {
         success: function (data) {
             console.log(data);
             numOfVotesThatChecked++;
-            //check if show the wait text
-            //if is single and one was checked - show it
-            if (generalParameters.isSingle) {
-                if (numOfVotesThatChecked == 1) {
-                    setWaitVoteClosePage(data);
-                }
-            }
-            else {
-                //if is battle and two was checked - show it
-                if (numOfVotesThatChecked == 2) {
-                    setWaitVoteClosePage(data);
-                }
-            }
+           
+           //show the wait text if the server respone return and if not
+            setWaitVoteClosePage(data);
+              
 
         },
         error: function (data) {
             console.log("error getPage: " + data);
         }
     });
-
 }
+
 
 //set wait result page
 function setWaitVoteClosePage(data) {
-    //if (vote==0){voteNegativeSound.playclip();}
-    //else{votePositiveSound.playclip();}
-    toggleTopMenu(afterVoteDic);
+    
+     toggleTopMenu(afterVoteDic);
 
     $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
+
+    //remove the vote buttons
+    if(voteGeneralParameters.like1 ==null){
+        
+    }
+    if(voteGeneralParameters.like2 ==null)
 
 }
 
