@@ -1093,10 +1093,10 @@ top: 0%;*/
 
 .slideLeft {
     background-image: url(../images/votes/slide_pick_left.png);
-    background-size: 100% 100%,100% 100%;
+    background-size: 100% 100%;
     /*background-position: 100%;*/
     width: 50%;
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat;
     position: absolute;
     left: 20%;
     bottom: 25%;
@@ -1129,22 +1129,22 @@ top: 0%;*/
     /*overflow: hidden;*/
 }
 
-.blueArrow {
+.arrowRed {
     position: absolute;
-    right: -5%;
-    top: 15%;
+    right: -1%;
+    top: 24%;
     -webkit-transform: rotateZ(90deg);
     transform: rotateZ(90deg);
-    width: 35%;
+    width: 25%;
 }
 
-.redArrow {
+.arrowBlue {
     position: absolute;
-    left: -23%;
-    top: 20%;
+    left: -25%;
+    top: 18%;
     -webkit-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg);
-    width: 31%;
+    width: 37%;
 }
 
 .blueArrow.cont1 {
@@ -1270,18 +1270,34 @@ top: 0%;*/
     color: #ff006c;
 }
 
-.hate { /*actually hate - to change*/
-    background-image: url(../images/votes/slide_round_red.png);
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 13%;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 70%;
-    background-size: 100% 100%;
-    opacity: 0;
-    z-index: 3;
+.like {
+background-image: url(../images/votes/slide_round_pick.png);
+position: absolute;
+width: 54%;
+height: 100%;
+top: 8%;
+background-repeat: no-repeat;
+background-position: center;
+left: -49%;
+background-size: 100% 100%;
+opacity: 0;
+z-index: 1;
+}
+
+.hate {
+background-image: url(../images/votes/slide_round_red.png);
+position: absolute;
+width: 47%;
+height: 100%;
+top: 9%;
+background-repeat: no-repeat;
+background-position: center;
+left: 77%;
+background-size: 100% 100%;
+opacity: 0;
+z-index: 3;
+-webkit-transform: rotateZ(-180deg);
+transform: rotateZ(-180deg);
 }
 
 .love1 {

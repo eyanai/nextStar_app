@@ -138,6 +138,7 @@ var Navi = {
                 $("#vote .battle").hide();
                 $(".live").show();
                 ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                resetAnimations();
 
                 break;
             case 'voteBattle':
@@ -148,6 +149,7 @@ var Navi = {
                 $("#vote .battle").show();
                 $(".live").show();
                 ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                resetAnimations();
 
                 break;
             case 'voteCloseSingle':

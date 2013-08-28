@@ -1,7 +1,7 @@
 
-/*.loginHg .titleLogin {
+.loginHg .titleLogin {
 color: orange;
-}*/
+}
 
 /*=====================================================generel==============================================*/
 
@@ -79,17 +79,38 @@ color: orange;
 
 /*================================================VOTE SECTION=====================================*/
 
-#voteSingle .arrowBlue{
+/*#voteSingle .arrowBlue{
 	left:-8%;
 	top:6%;
 }
 
 #voteSingle .arrowRed{
 	top:10%;
-}
+}*/
 
 .slideGo, .slideStay{
 	/* top:6%; */
+}
+
+
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
+    0% {
+        right: -1%;
+    }
+
+    100% {
+        right: -1%;
+    }
+}
+
+@keyframes larrowDown { /*turn arrow DOWN*/
+    0% {
+        right: -1%;
+    }
+
+    100% {
+        right: -1%;
+    }
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/
