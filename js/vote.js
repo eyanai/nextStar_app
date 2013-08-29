@@ -8,7 +8,7 @@ function setVotePage(data) {
     var secondFields;
 
     voteGeneralParameters.status = data.status;
-
+    alert("setVotePage");
     //if the user was register - only if the register server request didnt return - do
     if (voteGeneralParameters.registered ) {
         $("#vote .reMesseg .continue").hide();
@@ -121,6 +121,7 @@ function setVoteClosePage(data) {
 
 //send to server the vote
 function setVote(e) {
+    //alert("setVote");
     voteId = null; voteKey = null; vote = null;
     switch (e.target.id) {
         case 'slideLeft':

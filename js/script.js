@@ -167,7 +167,7 @@ function initWaitAnimation() {
             pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
-    }, 300);
+    }, 900);
 }
 
 function stopWaitAnimation() {

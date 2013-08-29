@@ -20,11 +20,11 @@ function setOpenRegisterPage(data, from) {
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
-    generalParameters.isSingle = null; //init isSingle
+    //generalParameters.isSingle = null; //init isSingle
     setIsSingle(data);
     setRegisterGeneralParams(data);
     //if this is a double vote
-    if (!generalParameters.isSingle) {
+    if (!voteGeneralParameters.isSingle) {
         var url1 = "";
         var url2 = "";
         //set the img
@@ -132,7 +132,7 @@ function attachDrag(){
                 //   clearInterval(alertInterval);
                // alert("hi4")
                 setTimeout(function() {
-                 //   alert('5');
+                    //alert('setRegister');
                     setRegister();
                 }, 1200);
 
@@ -171,6 +171,7 @@ function attachDrag(){
             $("#alertAud")[0].pause();
             clearInterval(alertInterval);
             setTimeout(function() {
+                //alert('setRegister');
                 setRegister();
             }, 1200);
 
@@ -224,18 +225,21 @@ function setRegister() {
     else{
       data =  {voteId1:voteGeneralParameters.voteid1, voteId2 :voteGeneralParameters.voteid2,facebookId:facebookid}
     }
-
+    //alert("before send to server");
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
         data: data,
         success: function(data) {
+             //alert("success registerToVote");
             console.log(data);
             //if the resposne to register return when the status is steel register
+            //alert("data.status" +data.status);
             if(voteGeneralParameters.status == 21) {
                //if the response return when the page id is identical
                 if( (voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null))
                 {
+                    //alert("setWaitVotePage");
                     setWaitVotePage(data);
                 }
                 
@@ -255,7 +259,8 @@ function setRegister() {
 
 //set wait vote page
 function setWaitVotePage(data) {
-   // alert("data.length =0");
+    //alert("data.length = "+data.length);
+
     if (data.length == 0) {
        
         console.log("no data was received");
