@@ -211,7 +211,7 @@ function showFlash() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -219,13 +219,17 @@ $(document).ready(function() {
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
+    //initWaitAnimation();
+    initDrag();// init draggable
+
+    // longPolling(); //check gallery
     
     longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if(generalParameters.isConnect) {
+    if (generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if(!generalParameters.onLoad) {
+    if (!generalParameters.onLoad) {
         $("#loader").hide();
     }
     
@@ -237,7 +241,7 @@ $(document).ready(function() {
     //    alert("width: " +$(document).width());
     //    alert("height: " +$(document).height());
 
-    $("#close-agreement").on("click", function() {
+    $("#close-agreement").on("click", function () {
         $("#login").show();
         $("#agreement").hide();
     });
@@ -247,7 +251,7 @@ $(document).ready(function() {
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch(isPortrait) {
+    switch (isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
