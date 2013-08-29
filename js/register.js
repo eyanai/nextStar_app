@@ -134,7 +134,7 @@ function attachDrag(){
                 setTimeout(function() {
                  //   alert('5');
                     setRegister();
-                }, 2000);
+                }, 1200);
 
 
             }
@@ -172,7 +172,7 @@ function attachDrag(){
             clearInterval(alertInterval);
             setTimeout(function() {
                 setRegister();
-            }, 3000);
+            }, 1200);
 
         }
         else {

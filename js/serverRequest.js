@@ -5,6 +5,7 @@
 /***********PRODUCTION***********/
 
 var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
+//var serverDomain = "/nextStarUser/userjson?";
 
 //E -mako
 //A -yerutech

@@ -214,7 +214,9 @@ function setWaitVoteClosePage(data) {
     if(voteGeneralParameters.like1 ==null){
         
     }
-    if(voteGeneralParameters.like2 ==null)
+    if(voteGeneralParameters.like2 ==null){
+        
+    }
 
 }
 
