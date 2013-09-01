@@ -49,7 +49,7 @@ var endShowDic = "";
 
 //get data from the server and send to the suitable page
 function pageChange(data) {
-    
+    //alert("status change");
     $("#loader").hide();
     generalParameters.onLoad = false;
 
@@ -167,7 +167,7 @@ function initWaitAnimation() {
             pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
-    }, 300);
+    }, 900);
 }
 
 function stopWaitAnimation() {
@@ -212,6 +212,7 @@ function showFlash() {
 
 
 $(document).ready(function () {
+   // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -220,10 +221,10 @@ $(document).ready(function () {
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
-    initDrag();// init draggable
+    initDrag(); // init draggable
 
     // longPolling(); //check gallery
-    
+
     longPolling(); //check gallery
     $("body").on("start-app", longPolling);
     if (generalParameters.isConnect) {
@@ -232,11 +233,11 @@ $(document).ready(function () {
     if (!generalParameters.onLoad) {
         $("#loader").hide();
     }
-    
+
     initBrowser();
     loadRelevantCss();
     attachDrag();
-   
+
     //// alert("user agent: " + ua);
     //    alert("width: " +$(document).width());
     //    alert("height: " +$(document).height());
@@ -246,7 +247,7 @@ $(document).ready(function () {
         $("#agreement").hide();
     });
 
-   
+
 
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
@@ -268,7 +269,7 @@ var browser;
 function initBrowser() {
     var ua = navigator.userAgent.toLowerCase();
     console.log("user agent: " + ua);
-    // alert("user agent: " + ua);
+     alert("user agent: " + ua);
     // alert("width: " +$(document).width());
     // alert("height: " +$(document).height());
     var androidSmall = false;

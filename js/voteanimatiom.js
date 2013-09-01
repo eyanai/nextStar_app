@@ -1,11 +1,13 @@
 function initDrag() {
+	console.log(($("body").width()) / 2 - 15);
     $('.slideLeft').draggable({
         stack: ".drag",
         axis: "x",
         containment: '#slideSingleLeft',
         drag: function (event, ui) {
+            console.log($('.slideLeft').position().left);
             console.log($('.slideLeft').css('left'));
-            if ($('.slideLeft').position().left > (($("body").width()) / 2 - 15)) {
+            if (($('.slideLeft').css('left')) > (($("body").width()) / 2 - 15)) {
                 //if passes the middle
                 $('.arrowRed').addClass('rotDown');
                 $('.slideLeft').addClass('badSong');
@@ -24,7 +26,7 @@ function initDrag() {
         stop: function (event, ui) {
             if ($('.slideLeft').position().left < (($("body").width()) / 2 - 15)) {
                 //if doesn't pass the middle
-                $('.slideLeft').animate({ left: '20%' }, 800, function () { });
+                $('.slideLeft').animate({ right: '30%' }, 800, function () { });
             }
         }
 
@@ -35,7 +37,8 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleRight',
         drag: function (event, ui) {
-            if ($('.slideRight').position().left < 10) {
+			console.log($('.slideRight').position().left);
+            if ($('.slideRight').position().left > (($("body").width()) / 2 - 15)) {
                 $('.arrowBlue').addClass('rotupl');
                 $('.slideRight').addClass('goodSong');
                 $('.slideLeft').addClass('hideL');
@@ -46,8 +49,8 @@ function initDrag() {
             };
         },
         stop: function (event, ui) {
-            if ($('.slideRight').position().left > 10) {
-                $('.slideRight').animate({ left: '30%' }, 800, function () { });
+            if ($('.slideRight').position().left > (($("body").width()) / 2 - 15)) {
+                $('.slideRight').animate({ right: '20%' }, 800, function () { });
             }
         }
     });
@@ -66,7 +69,7 @@ function initDrag() {
                 $('.slideDownbattle.con1').addClass('hideRcon');
                 setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 1630);
                 $('.hate1').addClass('showIconCon1');
-                //   setVote(event);
+                  setVote(event);
                 return false;
             };
         },
@@ -88,7 +91,7 @@ function initDrag() {
                 $('.slideTopbattle.con1').addClass('hideRcon');
                 setTimeout(function () { $('.blueArrow.cont1.rotuprcon1').hide(); }, 1630);
                 $('.love1').addClass('showIconCon1');
-                //    setVote(event);
+                    setVote(event);
                 return false;
             };
         },
@@ -110,7 +113,7 @@ function initDrag() {
                 $('.slideDownbattle.con2').addClass('hideLcon');
                 setTimeout(function () { $('.redArrow.cont2.rotdwnlcon2').hide(); }, 1630);
                 $('.hate2').addClass('showIconCon2');
-                //  setVote(event);
+                  setVote(event);
                 return false;
             };
         },
@@ -134,7 +137,7 @@ function initDrag() {
                 $('.slideTopbattle.con2').addClass('hideLcon');
                 setTimeout(function () { $('.blueArrow.cont2.rotuplcon2').hide(); }, 1630);
                 $('.love2').addClass('showIconCon2');
-                //setVote(event);
+                  setVote(event);
                 return false;
             }
         },
