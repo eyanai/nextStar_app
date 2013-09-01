@@ -1,8 +1,8 @@
 /* CSS Document */
 
-/*.loginHg .titleLogin {
+.loginHg .titleLogin {
 color: red;
-}*/
+}
 
 /*=====================================================generel==============================================*/
 
@@ -93,7 +93,38 @@ html,body{
 
 /*================================================VOTE SECTION=====================================*/
 
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
+    0% {
+        right: -1%;
+    }
 
+    100% {
+        right: -1%;
+    }
+}
+
+@keyframes larrowDown { /*turn arrow DOWN*/
+    0% {
+        right: -1%;
+    }
+
+    100% {
+        right: -1%;
+    }
+}
+
+.arrowRed {
+right: -4%;
+top: 31%;
+width: 28%;
+}
+
+.arrowBlue {
+
+left: -30%;
+top: 26%;
+width: 41%;
+}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 

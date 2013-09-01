@@ -52,9 +52,9 @@
             <div id="flip-me"></div>
         </div>
         
-         <!-- <div id="loader">
+         <div id="loader">
             <span>טוען...</span>
-        </div> -->
+        </div>
         
         <header class="hide">
             <figure class="header logo"></figure>
@@ -65,7 +65,7 @@
         </nav>
 
         <section id="login">
-            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
+            <div class="nextPage" data-goto="voteSingle"></div>
             <figure class="logo login"></figure>
             <div id="loginExtendedBox">
                 <div id="slide-container">
@@ -268,13 +268,14 @@
             <div class="centerSection">
                 <!--<div class="nextPage" data-goto="voteSingle"></div>-->
                 <div id="voteSingle" class="single">
-                    <!--<div class="nextPage" data-goto="voteBattle"></div>-->
+                    <div class="nextPage" data-goto="voteBattle"></div>
                                             <!--<div class="animat animatG" data-animat="singleGood"></div>
                                                                                                                                                                             <div class="animat animatB" data-animat="singleBad"></div>-->
                                             <!--<nav class="topMenu">
                                                                                                                                                                                                                         <h1 id="vote-dic-single">הצביעו עכשיו, נשאר או הולך?</h1>
                                                                                                                                                                                                                     </nav>-->
-                    <div id="vote-img-single" class="contestant">
+                    <div id="vote-img-single"></div>
+                    <div class="contestant">
                         <div id="slideSingleLeft">
                             <div id="slideLeft" class="slideLeft">
                                 <div class="slideStay btn">
@@ -309,14 +310,15 @@
                 </div>
                 <!----------------------------------------------------------------------single  div----------------->
                 <div id="voteBattle" class="battle">
-                    <!--<div class="nextPage" data-goto="resultsSingle"></div>-->
+                    <div class="nextPage" data-goto="voteSingle"></div>
                                             <!--<div class="animat animatG1" data-animat="battel1Good"></div>
                                                                                                                                                                             <div class="nextPage" data-goto="resultsBattle"></div></br>
                                                                                                                                                                             <div class="animat animatG1" data-animat="battel1Good"></div>
                                                                                                                                                                             <div class="animat animatB1" data-animat="battel1Bad"></div>
                                                                                                                                                                             <div class="animat animatG" data-animat="battel2Good"></div>
                                                                                                                                                                             <div class="animat animatB" data-animat="battel2Bad"></div>-->
-                    <div id="vote-img-first" class="contestant1">
+                    <div id="vote-img-first"></div>
+                    <div class="contestant1">
                         <div id="rslidecon">
 
                             <div id="slideDownbattleCon1" class="slideDownbattle con1">
@@ -337,9 +339,10 @@
                         <!--after user slide this div need to show--->
                         <!------------------------------------------->
                     </div>
-                    <div id="vote-img-second" class="contestant2">
+					
+                    <div id="vote-img-second"></div>
+                    <div class="contestant2">
                         <div id="lslidecon">
-
                             <div id="slideDownbattleCon2" class="slideDownbattle con2">
                                 <div class="slideStay btn">
                                     <img src="images/votes/slide_pick_heart.png" class="blueArrow cont2" alt="c">
