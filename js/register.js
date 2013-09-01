@@ -188,15 +188,13 @@ function attachDrag(){
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
-    //if(data.votes.length ==1){
-    //   
-    //}
-    //else{
-    //     Navi.goto("registerBattle");
-    //}
     
-    $(".register-red-flash").show();
-    alertRegisterGoingClose();
+    //show and play the audio if the user not register
+   if(!voteGeneralParameters.registered){
+       $(".register-red-flash").show();
+        alertRegisterGoingClose();
+   } 
+    
 }
 
 var alertInterval;
@@ -231,18 +229,19 @@ function setRegister() {
         url: serverDomain + "type=registerToVote",
         data: data,
         success: function(data) {
-             //alert("success registerToVote");
+            //alert("success registerToVote");
+
             console.log(data);
             //if the resposne to register return when the status is steel register
             //alert("data.status" +data.status);
             if(voteGeneralParameters.status == 21) {
-               //if the response return when the page id is identical
-                if( (voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null))
-                {
+                //if the response return when the page id is identical
+                if((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
                     //alert("setWaitVotePage");
                     setWaitVotePage(data);
+                    //alert("registered");
                 }
-                
+
             }
             //else - if the current status is another
             else {

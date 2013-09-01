@@ -1649,6 +1649,12 @@ background-position-y: 10%;*/
     margin: 3% 0 0 10%;*/
 }
 
+.percentage.red {
+    
+     color: #ff0060;
+   
+}
+
 #results .single .resultRed {
     /*display: none;*/
 }

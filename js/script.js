@@ -49,7 +49,7 @@ var endShowDic = "";
 
 //get data from the server and send to the suitable page
 function pageChange(data) {
-    
+    //alert("status change");
     $("#loader").hide();
     generalParameters.onLoad = false;
 
@@ -211,7 +211,8 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
+   // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -220,38 +221,38 @@ $(document).ready(function () {
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
-    initDrag();// init draggable
+    initDrag(); // init draggable
 
     // longPolling(); //check gallery
-    
+
     longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
-    
+
     initBrowser();
     loadRelevantCss();
     attachDrag();
-   
+
     //// alert("user agent: " + ua);
     //    alert("width: " +$(document).width());
     //    alert("height: " +$(document).height());
 
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
 
-   
+
 
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch (isPortrait) {
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();

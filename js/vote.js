@@ -8,7 +8,7 @@ function setVotePage(data) {
     var secondFields;
 
     voteGeneralParameters.status = data.status;
-    alert("setVotePage");
+    //alert("setVotePage");
     //if the user was register - only if the register server request didnt return - do
     if (voteGeneralParameters.registered ) {
         $("#vote .reMesseg .continue").hide();
@@ -194,7 +194,7 @@ function sendVoteToServer(voteId,voteKey,vote){
            
            //show the wait text if the server respone return and if not
             setWaitVoteClosePage(data);
-              
+//              alert("vote");
 
         },
         error: function (data) {
