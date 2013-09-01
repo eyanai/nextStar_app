@@ -211,7 +211,7 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
    // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
@@ -227,10 +227,10 @@ $(document).ready(function () {
 
     longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
 
@@ -238,11 +238,7 @@ $(document).ready(function () {
     loadRelevantCss();
     attachDrag();
 
-    //// alert("user agent: " + ua);
-    //    alert("width: " +$(document).width());
-    //    alert("height: " +$(document).height());
-
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
@@ -252,7 +248,7 @@ $(document).ready(function () {
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch (isPortrait) {
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
@@ -269,83 +265,47 @@ var browser;
 function initBrowser() {
     var ua = navigator.userAgent.toLowerCase();
     console.log("user agent: " + ua);
-     alert("user agent: " + ua);
-    // alert("width: " +$(document).width());
-    // alert("height: " +$(document).height());
     var androidSmall = false;
     var androidSmall2 = false;
     var androidNormal = false;
-    //if (ua.search("android") > -1 && ua.search("mobile") > -1) {
-    //    androidSmall = true;
-    //}
-    //if (ua.search("android") > -1 && ua.search("p5110") > -1) {
-    //    androidNormal = true;
-    //}
+    if (ua.search("android") > -1 && !(ua.search("mobile") > -1)) {
+        androidNormal = true;
+    }
+	if (androidNormal) {
+        browser = "androidNormal";
+    }
     if (ua.search("android") > -1 && ua.search("mobile") > -1 && (ua.search("i9300") >-1 || ua.search("i9500") >-1 ))    {
         androidSmall = true;
     }
     if (androidSmall) {
         browser = "androidSmall";
-       // alert("androidSmall")
-        //   alert("android small");
     }
     if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") >-1)    {
         androidSmall2 = true;
     }
     if (androidSmall2) {
         browser = "androidSmall2";
-      //  alert("androidSmall2")
-        //   alert("android small");
     }
 
-    //alert("ua: "+ua);
-    //if (androidSmall2) {
-    //    browser = "androidSmall2";
-    //    //   alert("android small");
-    //}
-    //if (androidNormal) {
-    //    browser = "androidNormal";
-    //    //   alert("android normal");
-    //}
-    //var isIpad = false;
-    //if (ua.search("ipad") > -1) {
-    //    isIpad = true;
-    //    browser = "ipad";
-    //}
-    //var isIphone5 = false;
-    //if (ua.search('iphone os 5') > -1) {
-    //    isIphone5 = true;
-    //    browser = "iphone5";
-    //}
 }
 
 function loadRelevantCss(){
      switch (browser) {
 
-  //      case "iphone5":
-  //          loadcssfile("css/iphone5.css");
-  //          break;
-  //      
-		//case "androidNormal":
-  //          loadcssfile("css/andrd_normal.css");
-  //          break;
-		//
-		//case "androidSmall2":
-
         case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
+			
             break;
 			
-		case "androidSmall":
+		case "androidNormal":
             loadcssfile("css/andrd_normal.css");
+			
+            break;
+		
+		case "androidSmall":
+            loadcssfile("css/andrd_small.css");
+			
               break;
-        //case "androidNormal":
-        //    loadcssfile("css/andrd_normal.css");
-        //    break;
-
-        //case "androidSmall":
-        //    loadcssfile("css/andrd_small.css");
-        //    break;
     }
 }
 
