@@ -18,7 +18,7 @@ var Navi = {
                 $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
-                //    initWaitAnimation();
+               initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -30,7 +30,7 @@ var Navi = {
                 //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
                 break;
             case 'messageWaitingWithImage':
-                //   initWaitAnimation();
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -226,7 +226,7 @@ var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize
 
 window.addEventListener(orientationEvent,
    function () {
-       $("#horizonal-screen").show();
+     //  $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {
            //alert("work");

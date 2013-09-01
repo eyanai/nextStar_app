@@ -212,7 +212,9 @@ function showFlash() {
 
 
 $(document).ready(function() {
-   // window.location = "http://thenextstar.mako.co.il/test.html";
+    checkPCScreen();
+
+    // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
@@ -389,4 +391,14 @@ function initBannerScript() {
 function df() {//show the agreement on click in login section
     $("#agreement").show();
     $("#login").hide();
+}
+
+
+function checkPCScreen(){
+     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        alert(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    }
+    else {
+        $("#pc-screen").show();
+    }
 }

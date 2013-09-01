@@ -198,6 +198,25 @@ h2 {
     text-overflow: ellipsis;
 }
 
+/*===========================================pc-screen=================================*/
+#pc-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/pc-screen.jpg);
+    background-size: 100% 100%;
+    z-index: 10000;
+    font-size: 3.5em;
+    text-align: center;
+    vertical-align: central;   
+}
+
+#pc-screen div{
+    margin: auto;  
+    margin-top: 25%;
+}
 
 /*===========================================horizonal-screen=================================*/
 #horizonal-screen {
@@ -2054,7 +2073,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: rgba(0,204,102,.35);
+    background-color: red;
     top: 47px;
     left: 1px;
     z-index: 500;
