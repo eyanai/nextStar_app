@@ -1,13 +1,11 @@
 function initDrag() {
-	console.log(($("body").width()) / 2 - 15);
     $('.slideLeft').draggable({
         stack: ".drag",
         axis: "x",
         containment: '#slideSingleLeft',
         drag: function (event, ui) {
-            console.log($('.slideLeft').position().left);
             console.log($('.slideLeft').css('left'));
-            if (($('.slideLeft').css('left')) > (($("body").width()) / 2 - 15)) {
+            if ($('.slideLeft').position().left > (($("body").width()) / 2 - 15)) {
                 //if passes the middle
                 $('.arrowRed').addClass('rotDown');
                 $('.slideLeft').addClass('badSong');
@@ -18,7 +16,7 @@ function initDrag() {
                 $('.slideRight').addClass('hideR');
                 setTimeout(function () { $('.arrowRed.rotDown').hide(); }, 1630);
                 $('.hate').addClass('hateShow');
-                //     setVote(event);
+                     setVote(event);
                 return false;
             };
 
@@ -26,7 +24,7 @@ function initDrag() {
         stop: function (event, ui) {
             if ($('.slideLeft').position().left < (($("body").width()) / 2 - 15)) {
                 //if doesn't pass the middle
-                $('.slideLeft').animate({ right: '30%' }, 800, function () { });
+                $('.slideLeft').animate({ left: '20%' }, 800, function () { });
             }
         }
 
@@ -37,20 +35,19 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleRight',
         drag: function (event, ui) {
-			console.log($('.slideRight').position().left);
-            if ($('.slideRight').position().left > (($("body").width()) / 2 - 15)) {
+            if ($('.slideRight').position().left < 10) {
                 $('.arrowBlue').addClass('rotupl');
                 $('.slideRight').addClass('goodSong');
                 $('.slideLeft').addClass('hideL');
                 setTimeout(function () { $('.arrowBlue.rotupl').hide(); }, 1630);
                 $('.like').addClass('likeShow');
-                //    setVote(event);
+                    setVote(event);
                 return false;
             };
         },
         stop: function (event, ui) {
-            if ($('.slideRight').position().left > (($("body").width()) / 2 - 15)) {
-                $('.slideRight').animate({ right: '20%' }, 800, function () { });
+            if ($('.slideRight').position().left > 10) {
+                $('.slideRight').animate({ left: '30%' }, 800, function () { });
             }
         }
     });
