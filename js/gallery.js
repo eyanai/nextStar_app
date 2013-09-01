@@ -41,7 +41,7 @@ function setGalleryPage(data) {
 
     });
     $("#result-gallery ul").append(gallerObj); //append to dom the gallery string
-    toggleTopMenu(endShowDic);
+    toggleTopMenu(data.text);
     $("#gallery-title").text(data.title);
     //if login to fb and check show his image in tv
     if(generalParameters.fbUser.id!=null){

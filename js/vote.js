@@ -206,11 +206,18 @@ function sendVoteToServer(voteId,voteKey,vote){
 
 //set wait result page
 function setWaitVoteClosePage(data) {
-    
-     toggleTopMenu(afterVoteDic);
-
-    $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
-
+    //if this is a single vote - show the wait and top menu
+    //if this is a double vote - show the wait and top menu only if the user vote to 2 
+    if(voteGeneralParameters.isSingle){
+          toggleTopMenu(afterVoteDic);
+         $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
+     }
+   else{
+       if(numOfVotesThatChecked == 2){
+         toggleTopMenu(afterVoteDic);
+         $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
+       }
+   }
     //remove the vote buttons
     if(voteGeneralParameters.like1 ==null){
         
