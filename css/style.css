@@ -397,9 +397,13 @@ header {
 
 .checkboxArea .textAd {
     text-align: right;
-    width: 84%;
+    min-width: 84%;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
+}
+
+.checkboxArea .tvImgCB {
+    margin-top: 0%;
 }
 
 #login .checkboxArea {
@@ -447,7 +451,7 @@ input[type=checkbox]:checked {
 input[type=checkbox].checked{
     background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
     background-color: #fff;
-    background-size: 85% 80%;
+    background-size: auto 80%;
     background-position: center;
     z-index: 2;
 }
@@ -829,7 +833,7 @@ input[type=checkbox].checked{
     width: 54%;
     padding-right: 4%;
     padding-left: 4%;
-    background-size: 100%;
+    background-size: auto 100%;
     position: absolute;
     left: 19%;
     overflow: hidden;
@@ -1885,12 +1889,13 @@ background-position-y: 10%;*/
 }
 
 .gallery-vote-single img {
-    width: 100%;
+    width: auto;
+	height:100%;
     position: absolute;
-    top: 0;
+    /* top: 0;
     bottom: 0;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: auto; */
 }
 
 #result-gallery .reMesseg {
@@ -2073,7 +2078,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: purpule;
     top: 47px;
     left: 1px;
     z-index: 500;

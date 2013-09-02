@@ -8,7 +8,7 @@ var Navi = {
     },
 
     goto: function (el) {
-        //stopWaitAnimation()
+        stopWaitAnimation()
         switch (el) {
             case 'login1':
                 $(".topMenu").hide();
