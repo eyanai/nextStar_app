@@ -1,6 +1,6 @@
-/*.loginHg .titleLogin {
-color: green;
-}*/
+.loginHg .titleLogin {
+
+}
 
 
 html, body {
@@ -374,7 +374,7 @@ section {
 }
 
 #gallery-title {
-    margin: 10% 0 0%;
+    margin: 11% 0 0%;
 }
 
 #result-gallery {
@@ -408,14 +408,14 @@ section {
     min-width: 87%; /* andrd */
 }
 
-.checkboxArea .textAd {
+ .checkboxArea .textAd {
     min-width: 84%;
     vertical-align: top;
 }
 
 .checkboxArea .tvImgCB {
     margin-top: 0%;
-}
+} 
 
 #checkbox4 {
     margin-right: 0px;

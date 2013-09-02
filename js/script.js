@@ -366,7 +366,7 @@ function df() {//show the agreement on click in login section
 
 function checkPCScreen(){
      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        //alert(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+     
     }
     else {
         $("#pc-screen").show();

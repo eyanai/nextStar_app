@@ -15,6 +15,10 @@ html, body {
 	direction:rtl;
 }
 
+.continue{
+	direction:rtl;
+}
+
 /*===========================================horizonal-screen=================================*/
 
 
@@ -83,7 +87,7 @@ html, body {
 	width: 22%;
     height: 63%;
     background-size: 100% 100%;
-    top: 15.3%;
+    top: 15%;
 	left:5.3%;	
 }
 

@@ -286,7 +286,7 @@ header {
 }
 
 .live {
-    background-image: url(../images/header/live_0_kohav.png);
+   /*  background-image: url(../images/header/live_0_kohav.png); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: right center;
@@ -306,14 +306,14 @@ header {
     height: 26%;
     position: relative;
     top: 3%;
-    background-image: url(../images/singUp/logo.png);
+    background-image: url(../images/singUp/logo.png); 
     background-repeat: no-repeat;
-    background-size: 100% 90%;
+    background-size: 100% auto;
     display: block;
     margin: 0 auto;
 }
 
-#loginExtended, #loginReward {
+#logiended, #loginReward {
     position: relative;
     top: 0%;
 }
@@ -447,7 +447,7 @@ input[type=checkbox]:checked {
 input[type=checkbox].checked{
     background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
     background-color: #fff;
-    background-size: 85% 80%;
+    background-size: auto 80%;
     background-position: center;
     z-index: 2;
 }
@@ -829,7 +829,7 @@ input[type=checkbox].checked{
     width: 54%;
     padding-right: 4%;
     padding-left: 4%;
-    background-size: 100%;
+    background-size: auto 100%;
     position: absolute;
     left: 19%;
     overflow: hidden;
@@ -1876,21 +1876,20 @@ background-position-y: 10%;*/
 }
 
 .gallery-pic {
-    height: 100%;
-    position: absolute;
-    /*background-image: url(../images/register/kohav2.jpg);*/
-    width: 100%;
-    background-size: auto 100%;
-    background-position: center;
+	height: 100%;
+	position: absolute;
+	/* background-image: url(../images/register/kohav2.jpg);  */
+	width: 100%;
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat:no-repeat;
+	
+	left: 0px;
+	top: 0px;
 }
 
 .gallery-vote-single img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
+   
 }
 
 #result-gallery .reMesseg {
@@ -1916,13 +1915,7 @@ background-position-y: 10%;*/
 }
 
 .gallery-vote-battle img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 100%;
+ 
 }
 
 .gallery-vote-battle .vote-1 {
@@ -2073,7 +2066,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  #3befe9;
+    background-color:  orange;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;
