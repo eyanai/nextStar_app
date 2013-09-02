@@ -57,9 +57,9 @@
 }
 /*--------------------------------regiater -------------------------------*/
 .regAnim {
-    -webkit-animation: regAnim .85s; /* Safari and Chrome */
+    -webkit-animation: regAnim 1.3s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    animation: regAnim 1s infinite;
+    animation: regAnim 1.3s /* infinite */;
     animation-fill-mode: forwards;
 }
 

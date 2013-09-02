@@ -822,6 +822,7 @@ input[type=checkbox].checked{
     margin-top: 8.1%;
 }
 
+
 .slidein {
     background-image: url(../images/register/signin_slider_base.png);
     background-repeat: no-repeat;
@@ -829,7 +830,7 @@ input[type=checkbox].checked{
     width: 54%;
     padding-right: 4%;
     padding-left: 4%;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     position: absolute;
     left: 19%;
     overflow: hidden;
@@ -992,8 +993,8 @@ top: 0%;*/
     background-size: 100% 104%;
 }*/
 .slide.animateLeft {
-    transition: left 1s ease-out;
-    -webkit-transition: left 1s ease-out;
+    transition: left 1.6s ease-out;
+    -webkit-transition: left 1.6s ease-out;
 }
 
 .slider-text {
