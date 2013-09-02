@@ -141,30 +141,30 @@ function setVote(e) {
 
 
         case 'slideTopbattleCon1':
-            voteId = voteGeneralParameters.voteid1;
-            voteKey = voteGeneralParameters.votekey1;
-            vote = 0;
-            voteGeneralParameters.like1 = 0;
-            $("#voteNegAud")[0].play()
-            break;
-        case 'slideTopbattleCon2':
             voteId = voteGeneralParameters.voteid2;
             voteKey = voteGeneralParameters.votekey2;
             vote = 0;
             voteGeneralParameters.like2 = 0;
             $("#voteNegAud")[0].play()
             break;
-        case 'slideDownbattleCon1':
+        case 'slideTopbattleCon2':
             voteId = voteGeneralParameters.voteid1;
             voteKey = voteGeneralParameters.votekey1;
+            vote = 0;
+            voteGeneralParameters.like1 = 0;
+            $("#voteNegAud")[0].play()
+            break;
+        case 'slideDownbattleCon1':
+            voteId = voteGeneralParameters.voteid2;
+            voteKey = voteGeneralParameters.votekey2;
             vote = 1;
-            voteGeneralParameters.like1 = 1;
+            voteGeneralParameters.like2 = 1;
             $("#votePosAud")[0].play();
 
             break;
         case 'slideDownbattleCon2':
-            voteId = voteGeneralParameters.voteid2;
-            voteKey = voteGeneralParameters.votekey2;
+            voteId = voteGeneralParameters.voteid1;
+            voteKey = voteGeneralParameters.votekey1;
             vote = 1;
             voteGeneralParameters.like1 = 1;
             $("#votePosAud")[0].play()
@@ -183,7 +183,8 @@ function setVote(e) {
 }
 
 function sendVoteToServer(voteId,voteKey,vote){
-   
+    
+   // alert("sendVoteToServer");
     $.ajax({
         type: "POST",
         url: serverDomain + "type=vote",
@@ -191,7 +192,8 @@ function sendVoteToServer(voteId,voteKey,vote){
         success: function (data) {
             console.log(data);
             numOfVotesThatChecked++;
-           
+           //alert("suc" +data.result);
+           //alert("suc" +data);
            //show the wait text if the server respone return and if not
             setWaitVoteClosePage(data);
 //              alert("vote");
@@ -199,6 +201,7 @@ function sendVoteToServer(voteId,voteKey,vote){
         },
         error: function (data) {
             console.log("error getPage: " + data);
+          //  alert("err");
         }
     });
 }
