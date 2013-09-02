@@ -4,14 +4,14 @@
 //var serverDomain = '/nextStar/userjson?';
 /***********PRODUCTION***********/
 
-var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
-//var serverDomain = "/nextStarUser/userjson?";
+//var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
+var serverDomain = "/nextStarUser/userjson?";
 
 //E -mako
-//A -yerutech
+//F -yerutech
 //cambium -D
-var domain = "http://thenextstar.mako.co.il/application";
-//var domain = "http://thenextstar.mako.co.il/applicationMakoQA";
+//var domain = "http://thenextstar.mako.co.il/application";
+var domain = "http://thenextstar.mako.co.il/applicationMakoQA";
 //var domain = "http://thenextstar.mako.co.il:9090/apptest";
 //var domain = "http://thenextstar.mako.co.il:9090/applicationYerutechQA";
 //var domain = "http://thenextstar.mako.co.il:9090/reut_test";//////////////check fb feed
@@ -21,7 +21,7 @@ var domain = "http://thenextstar.mako.co.il/application";
 function longPolling() {
     //alert(0);
     pollController = new PollController();
-    pollController._setUrl("http://thenextstar.mako.co.il/page/pageD.json");
+    pollController._setUrl("/page/pageE.json");
     //pollController._setUrl("/page/pageF.json");
     pollController._setCallBackFunction(function (data) {
         console.log(data);

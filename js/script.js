@@ -212,8 +212,11 @@ function showFlash() {
 
 
 $(document).ready(function() {
+    $.ajaxSetup({ cache: false });
     checkPCScreen();
-
+    if(window.location.host.indexOf("9090") > -1) {
+        $(".nextPage").hide();
+    }
     // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
@@ -349,6 +352,13 @@ function initBannerScript() {
 }
 
 function df() {//show the agreement on click in login section
+    $("#scroller").html('');
+    $("#scroller").append(' <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_2.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_3.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_4.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>');
+
     $("#agreement").show();
     $("#login").hide();
 }
@@ -356,7 +366,7 @@ function df() {//show the agreement on click in login section
 
 function checkPCScreen(){
      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        alert(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+        //alert(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
     }
     else {
         $("#pc-screen").show();

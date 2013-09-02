@@ -89,6 +89,12 @@ function setOpenRegisterPage(data, from) {
 
 function attachDrag(){
 
+    $("#registerSingle .slide.btn.drag").click(function(){
+        setRegister()
+    });
+    $("#registerBattle .slide.btn.drag").click(function(){
+        setRegister()
+    });
     $("#registerSingle .slide.btn.drag").draggable({
         stack: ".drag",
         axis: "x",
@@ -130,7 +136,7 @@ function attachDrag(){
                 //stop the red flash sound
                 // $("#alertAud")[0].pause();
                 //   clearInterval(alertInterval);
-               // alert("hi4")
+                //alert("hi4")
                 setTimeout(function() {
                     //alert('setRegister');
                     setRegister();
@@ -171,7 +177,7 @@ function attachDrag(){
             $("#alertAud")[0].pause();
             clearInterval(alertInterval);
             setTimeout(function() {
-                //alert('setRegister');
+                //alert('hi4');
                 setRegister();
             }, 1200);
 
@@ -223,15 +229,18 @@ function setRegister() {
     else{
       data =  {voteId1:voteGeneralParameters.voteid1, voteId2 :voteGeneralParameters.voteid2,facebookId:facebookid}
     }
-    //alert("before send to server");
+     //alert("domain: "+window.location.host);
+    //alert("url: "+serverDomain + "type=registerToVote");
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
+       // url: "http://thenextstar.mako.co.il/nextStarUser/userjson?" + "type=registerToVote",
         data: data,
         success: function(data) {
             //alert("success registerToVote");
 
             console.log(data);
+            //alert("success "+data.result)
             //if the resposne to register return when the status is steel register
             //alert("data.status" +data.status);
             if(voteGeneralParameters.status == 21) {
@@ -245,20 +254,21 @@ function setRegister() {
             }
             //else - if the current status is another
             else {
+
                 registerReturnFromServerDelay(data);
             }
 
         },
-        error: function(data) {
-            //  alert("setRegister error: "+data);
-            console.log("error getPage: " + data);
-        }
+        error: function (request, status, error) {
+         // alert("error: "+request.status);
+         //alert("error status: "+status);
+    }
     });
 };
 
 //set wait vote page
 function setWaitVotePage(data) {
-    //alert("data.length = "+data.length);
+   //alert("data.length = "+data.length);
 
     if (data.length == 0) {
        
@@ -270,7 +280,7 @@ function setWaitVotePage(data) {
     }
 
     else {
-       // alert("here")
+        //alert("here")
         Navi.goto("WaitVotePage");
         voteGeneralParameters.votekey1 = data[0].voteKey;
         if (data[1]) {

@@ -59,8 +59,8 @@ function  setWaitPageNoImg(data){
     //$("#message-no-img-title").text(title);
     textHtml = text.replace("\n", "<br/>");
     $("#message-no-img-text").html(textHtml);
-    $("#message-with-img-wait-text").text(info);
-    
+    //$("#message-with-img-wait-text").text(info);
+    $("#message-no-img-wait-text").text(info)
     Navi.goto("messageWaitingNoImage");
  }
 
