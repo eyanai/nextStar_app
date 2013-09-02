@@ -194,7 +194,21 @@ function attachDrag(){
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
-    
+   //if the user where in register page before the red flash
+    if($('#register').is(":visible")){
+        //show and play the audio if the user not register
+        if(!voteGeneralParameters.registered){
+               $(".register-red-flash").show();
+                alertRegisterGoingClose();
+        }
+    }
+    //else- set the data to the html object
+    else{
+        setOpenRegisterPage(data);
+
+        $(".register-red-flash").show();
+        alertRegisterGoingClose();
+    }
     //show and play the audio if the user not register
    if(!voteGeneralParameters.registered){
        $(".register-red-flash").show();
