@@ -254,7 +254,7 @@ function tvImgCBClick(){
 
 function loginRewardClicked(){
     $("#genAud")[0].play();
-    start();
+    startLongPolling();
 }
 
 function loginWithoutFacClicked(){

@@ -286,7 +286,7 @@ header {
 }
 
 .live {
-    background-image: url(../images/header/live_0_kohav.png);
+   /*  background-image: url(../images/header/live_0_kohav.png); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: right center;
@@ -306,14 +306,14 @@ header {
     height: 26%;
     position: relative;
     top: 3%;
-    background-image: url(../images/singUp/logo.png);
+    background-image: url(../images/singUp/logo.png); 
     background-repeat: no-repeat;
-    background-size: 100% 90%;
+    background-size: 100% auto;
     display: block;
     margin: 0 auto;
 }
 
-#loginExtended, #loginReward {
+#logiended, #loginReward {
     position: relative;
     top: 0%;
 }
@@ -397,13 +397,9 @@ header {
 
 .checkboxArea .textAd {
     text-align: right;
-    min-width: 84%;
+    width: 84%;
     display: inline-block;
-    vertical-align: top;
-}
-
-.checkboxArea .tvImgCB {
-    margin-top: 0%;
+    vertical-align: middle;
 }
 
 #login .checkboxArea {
@@ -1880,22 +1876,20 @@ background-position-y: 10%;*/
 }
 
 .gallery-pic {
-    height: 100%;
-    position: absolute;
-    /*background-image: url(../images/register/kohav2.jpg);*/
-    width: 100%;
-    background-size: auto 100%;
-    background-position: center;
+	height: 100%;
+	position: absolute;
+	/* background-image: url(../images/register/kohav2.jpg);  */
+	width: 100%;
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat:no-repeat;
+	
+	left: 0px;
+	top: 0px;
 }
 
 .gallery-vote-single img {
-    width: auto;
-	height:100%;
-    position: absolute;
-    /* top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto; */
+   
 }
 
 #result-gallery .reMesseg {
@@ -1921,13 +1915,7 @@ background-position-y: 10%;*/
 }
 
 .gallery-vote-battle img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 100%;
+ 
 }
 
 .gallery-vote-battle .vote-1 {
@@ -2078,7 +2066,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  #3befe9;
+    background-color:  orange;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;
