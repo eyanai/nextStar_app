@@ -19,7 +19,7 @@ function attachEventsFacebook() {
     
  $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
-    $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
+    $("#loginExtendedBox .facebookArea").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $(".tvImgCB").on("click",tvImgCBClick);
     //$(".reset-localstorge").on("click",function(){localStorage.setItem('fbStorage', "");});
