@@ -55,31 +55,31 @@
         top: -100%;
     }
 }
-/*--------------------------------regiater -------------------------------*/
-.regAnim {
-    -webkit-animation: regAnim 1.3s; /* Safari and Chrome */
+/*--------------------------------register -------------------------------*/
+.register-slide-back {
+    -webkit-animation: register-slide-back 1.5s; /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
-    animation: regAnim 1.3s /* infinite */;
+    animation: register-slide-back 1.5s /* infinite */;
     animation-fill-mode: forwards;
 }
 
-@keyframes regAnim {
+@keyframes register-slide-back {
     from {
-        left: 5%;
+        left: 74%;
     }
 
     to {
-        left: 71%;
+        left: 5.5%;
     }
 }
 
-@-webkit-keyframes regAnim /* Safari and Chrome */ {
+@-webkit-keyframes register-slide-back /* Safari and Chrome */ {
     from {
-        left: 5%;
+        left: 74%;
     }
 
     to {
-        left: 71%;
+        left: 5.5%;
     }
 }
 /*--------------------------------single good -------------------------------*/

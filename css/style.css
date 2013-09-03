@@ -992,10 +992,10 @@ top: 0%;*/
     background-image: url(../images/register/signin_slider_button_prs.png);
     background-size: 100% 104%;
 }*/
-.slide.animateLeft {
+/*.slide.animateLeft {
     transition: left 1.6s ease-out;
     -webkit-transition: left 1.6s ease-out;
-}
+}*/
 
 .slider-text {
     font-size: 2.625em;
@@ -2062,12 +2062,12 @@ background-position-y: 10%;*/
 
 
 
-/*-------------------------------------------to delite!!!!!--------------------------------*/
+/*-------------------------------------------to delete!!!!!--------------------------------*/
 .nextPage {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  orange;/* #3befe9; */
+    background-color:  #00a9ff;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;

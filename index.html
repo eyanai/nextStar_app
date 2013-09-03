@@ -761,60 +761,6 @@
                 });
             
             
-                $('.animat').on('click', this, function () {
-                    anim = $(this).data('animat'); //animat="register"
-            
-                    switch (anim) {
-                        case 'register':
-                            $('#register .slide').addClass('regAnim');
-                            break;
-                        case 'singleBad':
-                            $('.slideRight').addClass('singleBad');
-                            $('.slideLeft').addClass('hideL');
-                            $('.single .like').addClass('likeShow');
-                            break;
-                        case 'singleGood':
-                            $('.slideLeft').addClass('singleGood');
-                            $('.slideRight').addClass('hideR');
-                            $('.single .hate').addClass('hateShow');
-                            break;
-                        case 'battel1Good':
-                            $('.contestant1 .slideTopbattle').addClass('battel1lGood');
-                            $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant1 .love').addClass('love1Show');
-            
-                            break;
-                        case 'battel1Bad':
-                            $('.contestant1 .slideDownbattle').addClass('battel1Bad');
-                            $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant1 .slideTopbattle').addClass('hideR');
-                            $('.contestant1 .hate').addClass('hate1Show');
-            
-                            break;
-                        case 'battel2Good':
-                            $('.contestant2 .slideTopbattle').addClass('battel2lGood');
-                            $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant2 .love').addClass('love2Show');
-            
-                            break;
-                        case 'battel2Bad':
-                            $('.contestant2 .slideDownbattle').addClass('battel2Bad');
-                            $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant2 .slideTopbattle').addClass('hideL');
-                            $('.contestant2 .hate2').addClass('hate2Show');
-            
-                            break;
-                        case 'results':
-                            var x = -50;
-                            $('.scalaRed').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scalaRed').animate({ bottom: x + '%' }, 500, function () { });
-                            });
-                            break;
-                        default:
-                    }
-                });
             });
         </script>
 
