@@ -212,6 +212,7 @@ function showFlash() {
 
 
 $(document).ready(function() {
+    ga('send', 'pageview', '/TNS_Homepage'); //for google analytics
     $.ajaxSetup({ cache: false });
     checkPCScreen();
     if(window.location.host.indexOf("9090") > -1) {

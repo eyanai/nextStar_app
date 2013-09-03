@@ -13,14 +13,12 @@ function setOpenRegisterPage(data, from) {
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
     $(".slide").css("left", "5.5%");
-    //$(".slide").css("left", "76%");
-    //$("#test-reut-stars").css("left", "0%").show();
     $(".slider-text").html(registerTextHtml);
+    $(".slider-text").show();
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
-    //generalParameters.isSingle = null; //init isSingle
     setIsSingle(data);
     setRegisterGeneralParams(data);
     //if this is a double vote
@@ -41,14 +39,12 @@ function setOpenRegisterPage(data, from) {
         var song1 = data.votes[0].songName;
         var name2 = data.votes[1].name;
         var song2 = data.votes[1].songName;
-        //var textWait = data.textWaitRegister;
         $("#register-img-first").css("background-image", "url('" + url1 + "')");
         $("#register-comp-name-first").text(name1);
         $("#register-song-name-first").text(song1);
         $("#register-img-second").css("background-image", "url('" + url2 + "')");
         $("#register-comp-name-second").text(name2);
         $("#register-song-name-second").text(song2);
-        //$("#register-wait-text").text(textWait);
         Navi.goto("registerBattle");
     }
     //if this is a single vote
@@ -61,15 +57,12 @@ function setOpenRegisterPage(data, from) {
         }
         var name = data.votes[0].name;
         var song = data.votes[0].songName;
-        //var textWait = data.textWaitRegister;
         $("#register-single-img").css("background-image", "url('" + url + "')");
         $("#register-comp-name-single").text(name);
         $("#register-song-name-single").text(song);
-        //$("#register-wait-text").text(textWait);
         Navi.goto("registerSingle");
     }
 
-    //if(!generalParameters.wasRegisterPage||generalParameters.wasRegisterPage&&generalParameters.isRegistered){
     if (from == "vote") {
         $("#register .reMesseg .continue h2").text(data.textWaitVote);
         Navi.goto("notRegister");
@@ -78,14 +71,8 @@ function setOpenRegisterPage(data, from) {
         $(".topMenu").show();
         toggleTopMenu(registerDic);
     }
-    //}
-    //generalParameters.wasRegisterPage = true;
 
 }
-//var starsWidth;//=$("#test-reut-stars").width();
-//var slideWidth;//=$(".slide").width();
-//var leftMax = $("#test-reut-outer").css("left").slice(0, -2);
-//drag to register in single vote
 
 function attachDrag(){
 
@@ -99,16 +86,8 @@ function attachDrag(){
         stack: ".drag",
         axis: "x",
         containment: "#registerSingle .slidein",
-        //start:function(event,ui){
-        //    starsWidth=$("#test-reut-stars").width();
-        //    slideWidth=$(".slide").width();
-
-        //},
         drag: function(event, ui) {
-            //$("#test-reut-stars").css("left", 100*((ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth-10)/starsWidth) + "%");
-            //console.log(ui.helper.css("left").slice(0,-2)*1);
-            //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
-
+            $(".slider-text").hide();
             console.log("ui.offset.left: " + ui.offset.left)
         },
         stop: function(event, ui) {
@@ -117,38 +96,28 @@ function attachDrag(){
             if($(".slidein").width().toString().length < 3) {
                 var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
             }
-            else {
+            else {  
                 var widthInPx = $(".slidein").width();
             }
 
-            if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
-
-                //  alert("checkin");
-                // $("#checkInAud")[0].play();
-
-                $(".slide").addClass("animateLeft");
+            if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%         
                 $(ui.helper).css("left", "74%");
+                $(".slide").addClass("register-slide-back");
                 $("#checkInAud")[0].play();
                 $(ui.helper).css("left", "5.5%");
                 $(".deny-register").show();
-
-
-                //stop the red flash sound
-                // $("#alertAud")[0].pause();
-                //   clearInterval(alertInterval);
-                //alert("hi4")
                 setTimeout(function() {
-                    //alert('setRegister');
                     setRegister();
-                }, 1200);
+                    Navi.goto("WaitVotePage");
+                }, 1600);
+                 
 
 
             }
             else {
 
                 $(ui.helper).css("left", "5.5%");
-                //$("#test-reut-stars").css("left", "0%");
-                //$(ui.helper).css("left", "76%");
+                $(".slider-text").show();
             }
         }
     });
@@ -159,31 +128,30 @@ function attachDrag(){
     axis: "x",
     containment: "#registerBattle .slidein",
     drag: function(event, ui) {
+        $(".slider-text").hide();
     },
     stop: function(event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
         if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
-            $(".slide").addClass("animateLeft");
             $(ui.helper).css("left", "74%");
+            $(".slide").addClass("register-slide-back");
             $("#checkInAud")[0].play();
-            // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
-            //$(".slider-text").text("");
-            
             //stop the red flash sound
             $("#alertAud")[0].pause();
             clearInterval(alertInterval);
             setTimeout(function() {
-                //alert('hi4');
-                setRegister();
-            }, 1200);
+                 setRegister();
+                 Navi.goto("WaitVotePage");
+                }, 1600);
 
         }
         else {
             $(ui.helper).css("left", "5.5%");
+            $(".slider-text").show();
         }
     }
 }); 
@@ -220,7 +188,6 @@ function setRegisterGoingClose(data) {
 var alertInterval;
 function alertRegisterGoingClose() {
     alertInterval = setInterval(function() {
-        // alertSound.playclip();
         $("#alertAud")[0].play();
     }, 1000);
 }
@@ -243,20 +210,14 @@ function setRegister() {
     else{
       data =  {voteId1:voteGeneralParameters.voteid1, voteId2 :voteGeneralParameters.voteid2,facebookId:facebookid}
     }
-     //alert("domain: "+window.location.host);
-    //alert("url: "+serverDomain + "type=registerToVote");
+
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
-       // url: "http://thenextstar.mako.co.il/nextStarUser/userjson?" + "type=registerToVote",
         data: data,
         success: function(data) {
-            //alert("success registerToVote");
 
             console.log(data);
-            //alert("success "+data.result)
-            //if the resposne to register return when the status is steel register
-            //alert("data.status" +data.status);
             if(voteGeneralParameters.status == 21) {
                 //if the response return when the page id is identical
                 if((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
@@ -274,8 +235,6 @@ function setRegister() {
 
         },
         error: function (request, status, error) {
-         // alert("error: "+request.status);
-         //alert("error status: "+status);
     }
     });
 };
@@ -294,13 +253,11 @@ function setWaitVotePage(data) {
     }
 
     else {
-        //alert("here")
-        Navi.goto("WaitVotePage");
+      //  Navi.goto("WaitVotePage");
         voteGeneralParameters.votekey1 = data[0].voteKey;
         if (data[1]) {
             voteGeneralParameters.votekey2 = data[1].voteKey;
         }
-       // generalParameters.isRegistered = true;
     }
 
 };
@@ -318,7 +275,6 @@ var registerWishTextInterval;
 function initWishText(sliderObj){
     index =0;
     sliderObjTemp =sliderObj;
-   // $(sliderObj).html(registerTextHtml);
     var spanArray =  $(sliderObj).children("span");
 
     setTimeout(function(){

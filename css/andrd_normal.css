@@ -87,9 +87,13 @@ html, body {
 	width: 22%;
     height: 73%;
     background-size: 100% 100%;
-    top: 15%;
+    top: 17%;
 	left:5.3%;	
 } */
+
+.nextPage {
+    background-color: #ff006e; /* #3befe9; */
+}
 
 /*================================================VOTE SECTION=====================================*/
 
