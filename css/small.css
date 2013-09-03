@@ -231,9 +231,7 @@ h2 {
     padding: 0.3% 0;
 }
 
-.slideStay h1, .slideGo h1 {
-    font-size: 2em;
-}
+
 
 .contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay {
     top: 22%;
@@ -504,3 +502,14 @@ section {
         transform: rotateZ(180deg);
     }
 }*/
+
+
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
+
+    font-size: 0.7em;
+}
+
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+
+    font-size: 0.7em;
+}

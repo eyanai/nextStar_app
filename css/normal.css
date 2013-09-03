@@ -388,6 +388,19 @@ input[type=checkbox] {
     }
 }
 
+
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
+
+    font-size: 1.5em;
+}
+
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+
+    font-size: 1.5em;
+}
+
+
+
 /*================================================VOTE BATTLE SECTION=====================================*/
 
 #voteBattle .btn {

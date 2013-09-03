@@ -1248,17 +1248,22 @@ top: 0%;*/
     position: absolute;
     top: 38%;
     left: 50%;
-    font-size: 1.5em;
-    color: #ff006c; /* red */
+    font-size: 1em;
+    color: #Fb285f; /* red */
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
     position: absolute;
     top: 38%;
     right: 50%;
-    font-size: 1.8em;
+    font-size: 1em;
     color: #00a9ff;  /* blue.  VICE VERSA... */
 }
+
+/*.slideStay h1, .slideGo h1{
+    font-size: 0.9em;
+}*/
+
 
  .contestant1 .slideDownbattle h1  {
 	right: 30%;
@@ -2076,7 +2081,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  #00a9ff;/* #3befe9; */
+    background-color:  #b6ff00;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;
