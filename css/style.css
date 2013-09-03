@@ -1244,14 +1244,39 @@ top: 0%;*/
     transform: rotate(90deg);
 }*/
 
-.slideStay h1 {
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
     position: absolute;
     top: 38%;
     left: 50%;
     font-size: 1.5em;
-    color: #00a9ff;
+    color: #ff006c; /* red */
 }
 
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+    position: absolute;
+    top: 38%;
+    right: 50%;
+    font-size: 1.8em;
+    color: #00a9ff;  /* blue.  VICE VERSA... */
+}
+
+ .contestant1 .slideDownbattle h1  {
+	right: 30%;
+ }
+
+.contestant2 .slideTopbattle h1{
+	left: 30%;
+}
+
+/* 
+.contestant1 .slideStay h1 {
+    left: 30%;
+}
+
+.contestant2 .slideGo h1 {
+    right: 30%;
+}
+ */
 .slideRight {
     background-image: url(../images/votes/slide_pick_right.png);
     background-size: 100% 100%;
@@ -1280,14 +1305,6 @@ top: 0%;*/
 
 .contestant .slideGo:before, .contestant .slideStay:before {
     top: 15px;
-}
-
-.slideGo h1 {
-    position: absolute;
-    top: 38%;
-    right: 50%;
-    font-size: 1.8em;
-    color: #ff006c;
 }
 
 .like {
@@ -1500,14 +1517,6 @@ transform: rotateZ(-180deg);
 .contestant2 .slideGo {
     right: 18%;
     background-position: right center;
-}
-
-.contestant1 .slideStay h1 {
-    left: 30%;
-}
-
-.contestant2 .slideGo h1 {
-    right: 30%;
 }
 
 .contestant2 .slideTopbattle {
@@ -2067,7 +2076,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  orange;/* #3befe9; */
+    background-color:  white;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;
