@@ -197,6 +197,12 @@ input[type=checkbox] {
     width: 82%;
 }
 
+.team {
+    /* background-image: url(../images/masseg/team.jpg); */
+	
+}
+
+
 #message .contIcons {
     height: 23%;
 }

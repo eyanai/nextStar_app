@@ -83,13 +83,13 @@ html, body {
 }
 
 
-.slide{
+/* .slide{
 	width: 22%;
-    height: 65%;
+    height: 73%;
     background-size: 100% 100%;
     top: 17%;
 	left:5.3%;	
-}
+} */
 
 .nextPage {
     background-color: #ff006e; /* #3befe9; */
