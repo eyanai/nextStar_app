@@ -4,7 +4,7 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleLeft',
         drag: function (event, ui) {
-            if ($('.slideLeft').position().left > (($("body").width()) / 2 - 0.1*($("body").width()))) {
+            if ($('.slideLeft').position().left > (($("body").width()) / 2 - 0.08*($("body").width()))) {
                 //if passes the middle
                 $('.arrowRed').addClass('rotDown');
                 $('.slideLeft').addClass('badSong');
@@ -21,7 +21,7 @@ function initDrag() {
 
         },
         stop: function (event, ui) {
-            if ($('.slideLeft').position().left < (($("body").width()) / 2 - 0.1*($("body").width()))) {
+            if ($('.slideLeft').position().left < (($("body").width()) / 2 - 0.08*($("body").width()))) {
                 //if doesn't pass the middle
                 $('.slideLeft').animate({ left: '20%' }, 800, function () { });
             }
@@ -34,7 +34,7 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleRight',
         drag: function (event, ui) {
-            if ($('.slideRight').position().left < ($("body").width()/10)) {
+            if ($('.slideRight').position().left < 0.08*($("body").width())) {
                 $('.arrowBlue').addClass('rotupl');
                 $('.slideRight').addClass('goodSong');
                 $('.slideLeft').addClass('hideL');
@@ -45,7 +45,7 @@ function initDrag() {
             };
         },
         stop: function (event, ui) {
-            if ($('.slideRight').position().left > ($("body").width()/10)) {
+            if ($('.slideRight').position().left > 0.08*($("body").width())) {
                 $('.slideRight').animate({ left: '30%' }, 800, function () { });
             }
         }
@@ -59,7 +59,7 @@ function initDrag() {
         containment: "#rslidecon",
         drag: function (event, ui) {
             sR = $(document).width();
-            if ($('.slideTopbattle.con1').position().left < ($("body").width()/10)) {
+            if ($('.slideTopbattle.con1').position().left < 0.08*($("body").width())) {
                 $('.redArrow.cont1').addClass('rotdwnrcon1');
                 $('.slideTopbattle.con1').addClass('battel1vot');
                 $('.slideDownbattle.con1').addClass('hideRcon');
@@ -70,7 +70,7 @@ function initDrag() {
             };
         },
         stop: function (event, ui) {
-            if ($('.slideTopbattle.con1').position().left > ($("body").width()/10)) {
+            if ($('.slideTopbattle.con1').position().left > 0.08*($("body").width())) {
                 $('.slideTopbattle.con1').animate({ left: '30%' }, 800, function () { });
             }
         }
@@ -81,7 +81,7 @@ function initDrag() {
         axis: "x",
         containment: "#rslidecon",
         drag: function (event, ui) {
-            if ($('.slideDownbattle.con1').position().left < ($("body").width()/10)) {
+            if ($('.slideDownbattle.con1').position().left < 0.08*($("body").width())) {
                 $('.blueArrow.cont1').addClass('rotuprcon1');
                 $('.slideDownbattle.con1').addClass('battel1vot');
                 $('.slideTopbattle.con1').addClass('hideRcon');
@@ -92,7 +92,7 @@ function initDrag() {
             };
         },
         stop: function (event, ui) {
-            if ($('.slideDownbattle.con1').position().left > ($("body").width()/10)) {
+            if ($('.slideDownbattle.con1').position().left > 0.08*($("body").width())) {
                 $('.slideDownbattle.con1').animate({ left: '30%' }, 800, function () { });
             }
         }
@@ -126,7 +126,6 @@ function initDrag() {
         axis: "x",
         containment: "#lslidecon",
         drag: function (event, ui) {
-
             if ($('.slideDownbattle.con2').position().left > (($("body").width()) / 2 - 0.08*($("body").width()))) {
                 $('.blueArrow.cont2').addClass('rotuplcon2');
                 $('.slideDownbattle.con2').addClass('battel2vot');
@@ -145,3 +144,4 @@ function initDrag() {
     });
 
 }
+			
