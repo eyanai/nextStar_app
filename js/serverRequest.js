@@ -10,7 +10,7 @@ var serverDomain = "/nextStarUser/userjson?";
 //E -mako
 //F -yerutech
 //cambium -D
-//var domain = "http://thenextstar.mako.co.il/application";
+var domain = "http://thenextstar.mako.co.il/application";
 //var domain = "http://thenextstar.mako.co.il/applicationMakoQA";
 //var domain = "http://thenextstar.mako.co.il:9090/apptest";
 //var domain = "http://thenextstar.mako.co.il:9090/applicationYerutechQA";
