@@ -33,6 +33,10 @@ header{
 	height:14.6%;
 }
 
+.topMenu {
+    top: 14.6%;
+}
+
 /*================================================LOG IN SECTION=====================================*/
 
 .logo.login{
@@ -87,12 +91,12 @@ header{
 	margin-left:0.2%;
 }
 
-.slide{
+/* .slide{
 	width:21%;
 	height:62%;
 	top:14.5%;
 	left:5.3%;
-}
+} */
 
 .slidein.grey .slider-text{
 	top:25%;
