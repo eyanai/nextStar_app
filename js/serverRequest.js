@@ -4,8 +4,8 @@
 //var serverDomain = '/nextStar/userjson?';
 /***********PRODUCTION***********/
 
-//var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
-var serverDomain = "/nextStarUser/userjson?";
+var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
+//var serverDomain = "/nextStarUser/userjson?";
 
 //E -mako
 //F -yerutech

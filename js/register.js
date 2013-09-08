@@ -12,7 +12,12 @@ function setOpenRegisterPage(data, from) {
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
-    $(".slide").css("left", "5.5%");
+    if ($(window).width() > 700){
+		$(ui.helper).css("left", "10px");
+	}
+	else {
+		$(ui.helper).css("left", "4px");
+	}
     $(".slider-text").html(registerTextHtml);
     $(".slider-text").show();
     $("#register .slidein").show();
@@ -88,7 +93,8 @@ function attachDrag(){
         containment: "#registerSingle .slidein",
         drag: function(event, ui) {
             $(".slider-text").hide();
-            console.log("ui.offset.left: " + ui.offset.left)
+            console.log("ui.offset.left: " + ui.offset.left);
+            console.log("% " + ui.offset.left/ ui.offset.width);
         },
         stop: function(event, ui) {
             var lengthNoPx = ui.helper.css("left").length - 2;
@@ -101,10 +107,19 @@ function attachDrag(){
             }
 
             if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%         
-                $(ui.helper).css("left", "74%");
-                $(".slide").addClass("register-slide-back");
+                console.log($(ui.helper).css("left"));
+				console.log("% " + ui.helper.left/ ui.helper.width);
+				if ($(window).width() > 700){
+					$(ui.helper).css("left", "52%");
+				}
+				else {
+					$(ui.helper).css("left", "60%");
+				}
+                //$(".slide").addClass("register-slide-back");
                 $("#checkInAud")[0].play();
-                $(ui.helper).css("left", "5.5%");
+                // $(ui.helper).css("left", "4px");
+				
+				$(".slide").hide();
                 $(".deny-register").show();
                 setTimeout(function() {
                     setRegister();
@@ -116,7 +131,12 @@ function attachDrag(){
             }
             else {
 
-                $(ui.helper).css("left", "5.5%");
+                if ($(window).width() > 700){
+					$(ui.helper).css("left", "10px");
+				}
+				else {
+					$(ui.helper).css("left", "4px");
+				}
                 $(".slider-text").show();
             }
         }
@@ -135,10 +155,16 @@ function attachDrag(){
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
         if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
-            $(ui.helper).css("left", "74%");
-            $(".slide").addClass("register-slide-back");
+            if ($(window).width() > 700){
+				$(ui.helper).css("left", "52%");
+			}
+			else {
+				$(ui.helper).css("left", "60%");
+			}
+            //$(".slide").addClass("register-slide-back");
             $("#checkInAud")[0].play();
-            $(ui.helper).css("left", "5.5%");
+            // $(ui.helper).css("left", "4px");
+			$(".slide").hide();
             $(".deny-register").show();
             //stop the red flash sound
             $("#alertAud")[0].pause();
@@ -150,7 +176,12 @@ function attachDrag(){
 
         }
         else {
-            $(ui.helper).css("left", "5.5%");
+            if ($(window).width() > 700){
+				$(ui.helper).css("left", "10px");
+			}
+			else {
+				$(ui.helper).css("left", "4px");
+			}
             $(".slider-text").show();
         }
     }

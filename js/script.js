@@ -231,9 +231,6 @@ $(document).ready(function () {
     initDrag(); // init draggable
     soundsLoad(); //init sounds
 
-    // longPolling(); //check gallery
-
-    //longPolling(); //check gallery
     $("body").on("start-app", longPolling);
     if (generalParameters.isConnect) {
         $("body").trigger("start-app");

@@ -237,12 +237,28 @@ input[type=checkbox] {
     margin-top: 2%;
 }
 
+.slidein {
+	height: 130px;
+	background-position: -9px -9px;
+	width:48%;
+	padding-right: 7%; 
+	left: 27%;
+}
+
+.slide {
+    width: 23%;
+height: 72%;
+background-size: auto 100%;
+top: 10px;
+left: 10px;
+}
+
 #registerBattle .slidein {
     top: 61%;
 }
 
 .slidein.grey .slider-text {
-    font-size: 2em;
+    font-size: 1.8em;
     padding-right: 8%;
 }
 
@@ -251,17 +267,20 @@ input[type=checkbox] {
 }
 
 .slider-text {
-    padding-right: 2%;
+    font-size: 2.2em;
+    position: absolute;
+    top: 26%;
+    right: 22%;
 }
 
-.slide{
+/* .slide{
 	width: 22%;
     height: 70%;
     background-size: 100% 100%;
     top: 16.3%;
 	left:5.3%;
 	
-}
+} */
 /*================================================VOTE SECTION=====================================*/
 
 .slideLeft {
@@ -391,12 +410,12 @@ input[type=checkbox] {
 
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
 
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
 
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 

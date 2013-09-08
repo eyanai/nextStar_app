@@ -266,6 +266,26 @@ top: 50%;
 left: 44%;
 }
 
+/*================================================LOADER=====================================*/
+#loader{
+    display: block;
+position: absolute;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #000000;
+z-index: 1000;
+opacity: 0.8;
+color: #ffffff;
+font-size: 1.5em;
+}
+#loader span{
+ position: absolute;
+top: 50%;
+left: 44%;
+}
+
+
 /*================================================HEADER=====================================*/
 header {
     position: relative;
@@ -776,7 +796,7 @@ input[type=checkbox].checked{
     /*background-image: url(../images/register/koteret_bgpixel_kohav_full.png);*/
     padding: 0 0 0 0;
     line-height: 3em;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     border-bottom: 1px solid #005078;
     position: absolute;
     top: 17.6%;
@@ -796,13 +816,13 @@ input[type=checkbox].checked{
 }
 
 .contestant {
-    /*background-image: url(../images/register/kohav2.jpg);*/
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-    position: relative;
-    /*    top: -8.3%;*/
+/*     background-image: url(../images/register/kohav2.jpg); */
+background-repeat: no-repeat;
+height: 100%;
+background-size: auto 100%;
+position: relative;
+background-position: center;
+
 }
 
 #registerBattle, #registerSingle {
@@ -825,15 +845,16 @@ input[type=checkbox].checked{
 
 .slidein {
     background-image: url(../images/register/signin_slider_base.png);
-    background-repeat: no-repeat;
-    height: 18%;
-    width: 54%;
-    padding-right: 4%;
-    padding-left: 4%;
-    background-size: 100% 100%;
-    position: absolute;
-    left: 19%;
-    overflow: hidden;
+	background-repeat: no-repeat;
+	height: 68px;
+	width: 59%;
+	 padding-right: 4%; 
+	/* padding-left: 4%; */
+	background-size: auto 100%;
+	position: absolute;
+	left: 20%;
+	background-position: -8px -9px;
+	overflow: hidden;
 }
 
 /*#registerSingle {
@@ -944,10 +965,11 @@ left: 0%;
     top: 62%;*/
 }
 
-.slidein.grey .slider-text {
+.slidein .grey .slider-text {
     font-size: 1em;
     width: 58%;
     text-align: center;
+	vertical-align:middle;  
 }
 .slidein .slider-text span{
    
@@ -969,23 +991,14 @@ left: 0%;
 
 .slide {
     background-image: url(../images/register/signin_slider_button.png);
-    background-size: 100% 104%;
     background-repeat: no-repeat;
-    width: 23%;
-    height: 70%;
     background-position: left center;
-    left: 5%;
     position: absolute;
-    top: 18%;
-    /*background-image: url(../images/register/signin_slider_button.png);
-background-size: 100% 104%;
-background-repeat: no-repeat;
-width: 25%;
-height: 100%;
-background-position: left center;
-left: 76%;
-position: absolute;
-top: 0%;*/
+    width: 23%;
+height: 72%;
+background-size: auto 100%;
+top: 2px;
+left: 2px;
 }
 
 /*.slide:hover {
@@ -998,9 +1011,9 @@ top: 0%;*/
 }*/
 
 .slider-text {
-    font-size: 2.625em;
+    font-size: 1.2em;
     position: absolute;
-    top: 35%;
+    top: 23%;
     right: 13%;
      color: gray;
     
@@ -2058,7 +2071,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color:  #00486d;/* change to check update */
+    background-color: #FFFBF0;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;
