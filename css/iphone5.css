@@ -6,10 +6,19 @@ color: yellow;
 /*=====================================================generel==============================================*/
 
 html,body{
-	  font-size:17px; 
+	  font-size:16px; 
 }
 
+section {
+    height: 76.53%;
+    top: 14.6%;
+}
 
+#login {
+    
+    height: 91.13%;
+    
+}
 
 /*===========================================horizonal-screen=================================*/
 
@@ -30,8 +39,6 @@ header{
 	height:22%;
 	 /* border:1px solid yellow;  */
 }
-
-
 
 #loginExtendedBox{
 	height:44%;
@@ -88,7 +95,7 @@ header{
 }
 
 .slidein.grey .slider-text{
-	top:27%;
+	top:25%;
 }
 
 .slideStay, .slideGo{

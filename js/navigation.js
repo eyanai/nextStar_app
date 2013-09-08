@@ -8,7 +8,7 @@ var Navi = {
     },
 
     goto: function (el) {
-        //stopWaitAnimation()
+        stopWaitAnimation()
         switch (el) {
             case 'login1':
                 $(".topMenu").hide();
@@ -18,7 +18,7 @@ var Navi = {
                 $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
-                //    initWaitAnimation();
+               initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -27,10 +27,10 @@ var Navi = {
                 $('#message .messageNoImage').show();
                 $('#message .messageNoImage .continue').show();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageWaitingWithImage':
-                //   initWaitAnimation();
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -39,7 +39,7 @@ var Navi = {
                 $('#message .messageImage .continue').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageNoImage':
                 Navi.hidelogin();
@@ -50,7 +50,7 @@ var Navi = {
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageWithImage':
                 Navi.hidelogin();
@@ -61,7 +61,7 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
 
             case 'registerSingle':
@@ -72,7 +72,7 @@ var Navi = {
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
-                $(".slide").removeClass("animateLeft");
+                $(".slide").removeClass("register-slide-back");
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
@@ -92,7 +92,7 @@ var Navi = {
                 if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
-                $(".slide").removeClass("animateLeft");
+                $(".slide").removeClass("register-slide-back");
                 $("#registerSingle").hide();
                 $("#registerBattle").show();
                 $(".register-red-flash").hide();
@@ -112,9 +112,7 @@ var Navi = {
                 $(".slidein ").addClass('grey');
                 $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לביצוע הבא</p>");
                 $(".slide.btn").hide();
-                $(".slide").removeClass("animateLeft");
-                //$(".slide .btn .drag .ui-draggable .regAnim").hide();
-                //$(".topMenu").hide();
+                $(".slide").removeClass("register-slide-back");
                 $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
@@ -138,6 +136,7 @@ var Navi = {
                 $("#vote .battle").hide();
                 $(".live").show();
                 ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                resetAnimations();
 
                 break;
             case 'voteBattle':
@@ -148,6 +147,7 @@ var Navi = {
                 $("#vote .battle").show();
                 $(".live").show();
                 ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                resetAnimations();
 
                 break;
             case 'voteCloseSingle':
@@ -224,7 +224,7 @@ var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize
 
 window.addEventListener(orientationEvent,
    function () {
-       $("#horizonal-screen").show();
+     //  $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {
            //alert("work");

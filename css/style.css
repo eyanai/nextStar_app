@@ -198,6 +198,25 @@ h2 {
     text-overflow: ellipsis;
 }
 
+/*===========================================pc-screen=================================*/
+#pc-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/pc-screen.jpg);
+    background-size: 100% 100%;
+    z-index: 10000;
+    font-size: 3.5em;
+    text-align: center;
+    vertical-align: central;   
+}
+
+#pc-screen div{
+    margin: auto;  
+    margin-top: 25%;
+}
 
 /*===========================================horizonal-screen=================================*/
 #horizonal-screen {
@@ -226,6 +245,25 @@ h2 {
     background-image: url(../images/flip.png);
     background-size: 100% 100%;
     margin: auto;
+}
+ /*================================================LOADER=====================================*/
+#loader{
+    display: block;
+position: absolute;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #000000;
+z-index: 1000;
+opacity: 0.8;
+color: #ffffff;
+font-size: 3em;
+text-align: center;
+}
+#loader span{
+ position: absolute;
+top: 50%;
+left: 44%;
 }
 
 /*================================================LOADER=====================================*/
@@ -268,7 +306,7 @@ header {
 }
 
 .live {
-    background-image: url(../images/header/live_0_kohav.png);
+   /*  background-image: url(../images/header/live_0_kohav.png); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: right center;
@@ -288,14 +326,14 @@ header {
     height: 26%;
     position: relative;
     top: 3%;
-    background-image: url(../images/singUp/logo.png);
+    background-image: url(../images/singUp/logo.png); 
     background-repeat: no-repeat;
-    background-size: 100% 90%;
+    background-size: 100% auto;
     display: block;
     margin: 0 auto;
 }
 
-#loginExtended, #loginReward {
+#logiended, #loginReward {
     position: relative;
     top: 0%;
 }
@@ -429,7 +467,7 @@ input[type=checkbox]:checked {
 input[type=checkbox].checked{
     background: url(../images/singUp/kohav_chcbox_true_iphone.png) no-repeat;
     background-color: #fff;
-    background-size: 85% 80%;
+    background-size: auto 80%;
     background-position: center;
     z-index: 2;
 }
@@ -778,7 +816,7 @@ input[type=checkbox].checked{
 }
 
 .contestant {
-    background-image: url(../images/register/kohav2.jpg);
+    /*background-image: url(../images/register/kohav2.jpg);*/
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -804,6 +842,7 @@ input[type=checkbox].checked{
     margin-top: 8.1%;
 }
 
+
 .slidein {
     background-image: url(../images/register/signin_slider_base.png);
     background-repeat: no-repeat;
@@ -811,7 +850,7 @@ input[type=checkbox].checked{
     width: 54%;
     padding-right: 4%;
     padding-left: 4%;
-    background-size: 100%;
+    background-size: 100% 100%;
     position: absolute;
     left: 19%;
     overflow: hidden;
@@ -973,10 +1012,10 @@ top: 0%;*/
     background-image: url(../images/register/signin_slider_button_prs.png);
     background-size: 100% 104%;
 }*/
-.slide.animateLeft {
-    transition: left 1s ease-out;
-    -webkit-transition: left 1s ease-out;
-}
+/*.slide.animateLeft {
+    transition: left 1.6s ease-out;
+    -webkit-transition: left 1.6s ease-out;
+}*/
 
 .slider-text {
     font-size: 2.625em;
@@ -1094,10 +1133,10 @@ top: 0%;*/
 
 .slideLeft {
     background-image: url(../images/votes/slide_pick_left.png);
-    background-size: 100% 100%,100% 100%;
+    background-size: 100% 100%;
     /*background-position: 100%;*/
     width: 50%;
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat;
     position: absolute;
     left: 20%;
     bottom: 25%;
@@ -1130,22 +1169,22 @@ top: 0%;*/
     /*overflow: hidden;*/
 }
 
-.blueArrow {
+.arrowRed {
     position: absolute;
-    right: -5%;
-    top: 15%;
+    right: -1%;
+    top: 24%;
     -webkit-transform: rotateZ(90deg);
     transform: rotateZ(90deg);
-    width: 35%;
+    width: 25%;
 }
 
-.redArrow {
+.arrowBlue {
     position: absolute;
-    left: -23%;
-    top: 20%;
+    left: -25%;
+    top: 18%;
     -webkit-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg);
-    width: 31%;
+    width: 37%;
 }
 
 .blueArrow.cont1 {
@@ -1225,14 +1264,44 @@ top: 0%;*/
     transform: rotate(90deg);
 }*/
 
-.slideStay h1 {
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
     position: absolute;
     top: 38%;
     left: 50%;
-    font-size: 1.5em;
-    color: #00a9ff;
+    font-size: 1em;
+    color: #Fb285f; /* red */
 }
 
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+    position: absolute;
+    top: 38%;
+    right: 50%;
+    font-size: 1em;
+    color: #00a9ff;  /* blue.  VICE VERSA... */
+}
+
+/*.slideStay h1, .slideGo h1{
+    font-size: 0.9em;
+}*/
+
+
+ .contestant1 .slideDownbattle h1  {
+	right: 30%;
+ }
+
+.contestant2 .slideTopbattle h1{
+	left: 30%;
+}
+
+/* 
+.contestant1 .slideStay h1 {
+    left: 30%;
+}
+
+.contestant2 .slideGo h1 {
+    right: 30%;
+}
+ */
 .slideRight {
     background-image: url(../images/votes/slide_pick_right.png);
     background-size: 100% 100%;
@@ -1263,26 +1332,34 @@ top: 0%;*/
     top: 15px;
 }
 
-.slideGo h1 {
-    position: absolute;
-    top: 38%;
-    right: 50%;
-    font-size: 1.8em;
-    color: #ff006c;
+.like {
+background-image: url(../images/votes/slide_round_pick.png);
+position: absolute;
+width: 54%;
+height: 100%;
+top: 8%;
+background-repeat: no-repeat;
+background-position: center;
+left: -49%;
+background-size: 100% 100%;
+opacity: 0;
+z-index: 1;
 }
 
-.hate { /*actually hate - to change*/
-    background-image: url(../images/votes/slide_round_red.png);
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 13%;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 70%;
-    background-size: 100% 100%;
-    opacity: 0;
-    z-index: 3;
+.hate {
+background-image: url(../images/votes/slide_round_red.png);
+position: absolute;
+width: 47%;
+height: 100%;
+top: 9%;
+background-repeat: no-repeat;
+background-position: center;
+left: 77%;
+background-size: 100% 100%;
+opacity: 0;
+z-index: 3;
+-webkit-transform: rotateZ(-180deg);
+transform: rotateZ(-180deg);
 }
 
 .love1 {
@@ -1359,7 +1436,7 @@ top: 0%;*/
 }
 /*================================================VOTE BATTLE SECTION=====================================*/
 .contestant1 {
-    background-image: url(../images/votes/kohav6_02.jpg);
+    /*background-image: url(../images/votes/kohav6_02.jpg);*/
     background-repeat: no-repeat;
     width: 50%;
     height: 100%;
@@ -1369,7 +1446,7 @@ top: 0%;*/
 }
 
 .contestant2 {
-    background-image: url(../images/votes/kohav6_01.jpg);
+    /*background-image: url(../images/votes/kohav6_01.jpg);*/
     background-repeat: no-repeat;
     width: 50%;
     height: 100%;
@@ -1465,14 +1542,6 @@ top: 0%;*/
 .contestant2 .slideGo {
     right: 18%;
     background-position: right center;
-}
-
-.contestant1 .slideStay h1 {
-    left: 30%;
-}
-
-.contestant2 .slideGo h1 {
-    right: 30%;
 }
 
 .contestant2 .slideTopbattle {
@@ -1632,6 +1701,12 @@ background-position-y: 10%;*/
     color: #00aaff;
     /* float: left;
     margin: 3% 0 0 10%;*/
+}
+
+.percentage.red {
+    
+     color: #ff0060;
+   
 }
 
 #results .single .resultRed {
@@ -1836,21 +1911,20 @@ background-position-y: 10%;*/
 }
 
 .gallery-pic {
-    height: 100%;
-    position: absolute;
-    /*background-image: url(../images/register/kohav2.jpg);*/
-    width: 100%;
-    background-size: auto 100%;
-    background-position: center;
+	height: 100%;
+	position: absolute;
+	/* background-image: url(../images/register/kohav2.jpg);  */
+	width: 100%;
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat:no-repeat;
+	
+	left: 0px;
+	top: 0px;
 }
 
 .gallery-vote-single img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
+   
 }
 
 #result-gallery .reMesseg {
@@ -1876,13 +1950,7 @@ background-position-y: 10%;*/
 }
 
 .gallery-vote-battle img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 100%;
+ 
 }
 
 .gallery-vote-battle .vote-1 {
@@ -2028,12 +2096,12 @@ background-position-y: 10%;*/
 
 
 
-/*-------------------------------------------to delite!!!!!--------------------------------*/
+/*-------------------------------------------to delete!!!!!--------------------------------*/
 .nextPage {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: rgba(0,204,102,.35);
+    background-color:  #b6ff00;/* #3befe9; */
     top: 47px;
     left: 1px;
     z-index: 500;

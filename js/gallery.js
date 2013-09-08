@@ -8,13 +8,20 @@ function attachEventsGallery() {
 function gallerySize() {
    // alert("gallery-size");
     var resultGallery = $("#result-gallery").width(); //get the diaplay width
+	
     var singleVoteWidth = resultGallery * 30 / 100; //calculate single width
+	
     var numSingleVotes = $(".gallery-vote-single").width(singleVoteWidth).size(); //set single width and counter single votes
-    var battleVoteWidth = $("#result-gallery").width() * 60 / 100; //calculate battle width
+	
+    var battleVoteWidth = $("#result-gallery").width() * 60 / 100  ; //calculate battle width
+	
     var numBattleVotes = $(".gallery-vote-battle").width(battleVoteWidth).size(); //set battle width and counter battle votes
+	
     var margin = $("#result-gallery ul li").css("margin-right").slice(0,-2)*1+3;
-    //var margin = 4;
-    var resultGalleryList = numSingleVotes * (singleVoteWidth + margin) + numBattleVotes * (battleVoteWidth + margin)+5; //calculate ul width
+	
+    //var margin = 0;
+    var resultGalleryList = numSingleVotes * (singleVoteWidth + margin) + numBattleVotes * (battleVoteWidth + margin); //calculate ul width
+	
     $("#result-gallery ul").width(resultGalleryList); //set ul width
     $("#result-gallery").scrollLeft(resultGalleryList - resultGallery + margin); //go to the right in ul
 }
@@ -41,7 +48,7 @@ function setGalleryPage(data) {
 
     });
     $("#result-gallery ul").append(gallerObj); //append to dom the gallery string
-    toggleTopMenu(endShowDic);
+    toggleTopMenu(data.text);
     $("#gallery-title").text(data.title);
     //if login to fb and check show his image in tv
     if(generalParameters.fbUser.id!=null){
@@ -79,9 +86,14 @@ function createObj(vote) {
     }
     //var $obj = "<img src=\"" + url + "\" alt=\"alt\"><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
     //            "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>"
-
+    
+    //add the red class for the user that not pass the threshold
+    var redClass = "";
+    if(vote.finalPercent < vote.threshold){
+       redClass ="red" 
+    }
     var $obj = "<span class=\"gallery-pic\" style=\"background-image:url("+ url.split(' ').join('%20')+") ;\"></span><span class=\"reMesseg\"><span class=\"divide\"></span><div class=\"songName\">" +
-                "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage\">" + vote.finalPercent + "%</span></span>";
+                "<h1>" + vote.name + "</h1><h2>" + vote.songName + "</h2></div><span class=\"percentage "+redClass+"\">" + vote.finalPercent + "%</span></span>";
 
     return $obj;
 }

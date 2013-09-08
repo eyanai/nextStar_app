@@ -8,7 +8,10 @@ var myLocation = domain+"/index.html";//domain
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 //alert(0);
-//localStorage.setItem('fbStorage', "");
+//if(localStorage != null){
+//    localStorage.setItem('fbStorage', "");
+//}
+
 
 
 ////////////////////////////////////////////////////// listener   
@@ -16,10 +19,10 @@ function attachEventsFacebook() {
     
  $(".logFb").on("click", loginFb);
     $("#loginRewardBox").on("click", ".login", loginRewardClicked);
-    $("#loginExtendedBox").on("click",".login", loginWithoutFacClicked);
+    $("#loginExtendedBox .facebookArea").on("click",".login", loginWithoutFacClicked);
     $("#rulesCB").on("click",rulesCBClick);
     $(".tvImgCB").on("click",tvImgCBClick);
-    $(".reset-localstorge").on("click",function(){localStorage.setItem('fbStorage', "");});
+    //$(".reset-localstorge").on("click",function(){localStorage.setItem('fbStorage', "");});
 }
 
 
@@ -79,7 +82,7 @@ function loginCheck() {
         }
         else if (response.status === 'not_authorized' || response.status == "unknown") {
             $("#loader").hide();
-     generalParameters.onLoad = false;
+            generalParameters.onLoad = false;
             console.log("not connect");
         }
     });
@@ -204,14 +207,14 @@ function saveDataOnServer(str) {
 
         }
     });
-
+    postOnFeed();//post on feeds
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
 function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
-    postOnFeed();//post on feeds
+    //postOnFeed();//post on feeds
    //longPolling();
 }
 

@@ -3,11 +3,11 @@
 var generalParameters = {
     isRegistered: false, //if register to vote
     wasRegisterPage: false,
-    voteIdA: null,
-    voteKeyA: null,
-    voteIdB: null,
-    voteKeyB: null,
-    isSingle: null, //is the vote is to single or battle
+   // voteIdA: null,
+    //voteKeyA: null,
+    //voteIdB: null,
+    //voteKeyB: null,
+   // isSingle: null, //is the vote is to single or battle
     fbUser: {
         id: null,
         userName: null,
@@ -19,8 +19,25 @@ var generalParameters = {
     ruledChecked: false,
     isConnect: false,
     onLoad:true
+
 }
 
+
+var voteGeneralParameters ={
+    status:0,
+    registered:false,
+    isSingle:null,
+    voteid1:0,
+    voteid2:0,
+    votekey1: null,
+    votekey2: null,
+    
+    //null - not vote, 0 - bad , 1- good
+    like1:null,
+    like2:null,
+    votePageId:0
+
+}
 
 //dictionary values
 var registerDic = "";
@@ -32,8 +49,10 @@ var endShowDic = "";
 
 //get data from the server and send to the suitable page
 function pageChange(data) {
+    //alert("status change");
     $("#loader").hide();
-     generalParameters.onLoad = false;
+    generalParameters.onLoad = false;
+
     var status = data.status;
 
     switch (status) {
@@ -60,21 +79,21 @@ function pageChange(data) {
 }
 
 //check for every vote if is single or battle
-function isSingle(data) {
+function setIsSingle(data) {
 
     // if the generalParameters.isSingle was init -return it
-    if (generalParameters.isSingle != null && generalParameters.isSingle != "") {
-        return generalParameters.isSingle;
+    if (voteGeneralParameters.isSingle != null && voteGeneralParameters.isSingle != "") {
+        return voteGeneralParameters.isSingle;
     }
     //else - init and then return it
     else {
         if (data.votes.length == 2) {
-            generalParameters.isSingle = false;
+            voteGeneralParameters.isSingle = false;
         }
         else {
-            generalParameters.isSingle = true;
+            voteGeneralParameters.isSingle = true;
         }
-        return generalParameters.isSingle
+        return voteGeneralParameters.isSingle
     }
 }
 
@@ -148,7 +167,7 @@ function initWaitAnimation() {
             pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
-    }, 300);
+    }, 900);
 }
 
 function stopWaitAnimation() {
@@ -192,53 +211,50 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
+    ga('send', 'pageview', '/TNS_Homepage'); //for google analytics
+    $.ajaxSetup({ cache: false });
+    checkPCScreen();
+    if(window.location.host.indexOf("9090") > -1) {
+        $(".nextPage").hide();
+    }
+    // window.location = "http://thenextstar.mako.co.il/test.html";
     initAppSize();
     //init the dictionary values
     initDictionaryValues();
-    //checkRulesChecked();
     attachEventsFacebook(); //check gallery
     attachEventsGallery();
     //init the touchmive events
     initMoveEvents();
     //initWaitAnimation();
+    initDrag(); // init draggable
 
     // longPolling(); //check gallery
+
+    //longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
-    //$("#horizonal-screen").hide();
-
-    // initSounds();
 
     initBrowser();
     loadRelevantCss();
     attachDrag();
-    //init banner script
-    //initBannerScript();
 
-    //// alert("user agent: " + ua);
-    //    alert("width: " +$(document).width());
-    //    alert("height: " +$(document).height());
-
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
 
-    //   alert("user agent: " + ua);
-    //alert("width: " +$(document).width());
-    //alert("height: " +$(document).height());
 
 
     //check orientation 
-    isPortrait = (window.innerHeight / window.innerWidth) > 1;
+    var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch (isPortrait) {
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
@@ -255,79 +271,47 @@ var browser;
 function initBrowser() {
     var ua = navigator.userAgent.toLowerCase();
     console.log("user agent: " + ua);
-    // alert("user agent: " + ua);
-    // alert("width: " +$(document).width());
-    // alert("height: " +$(document).height());
     var androidSmall = false;
     var androidSmall2 = false;
     var androidNormal = false;
-    //if (ua.search("android") > -1 && ua.search("mobile") > -1) {
-    //    androidSmall = true;
-    //}
-    //if (ua.search("android") > -1 && ua.search("p5110") > -1) {
-    //    androidNormal = true;
-    //}
-    if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9300") >-1)    {
+    if (ua.search("android") > -1 && !(ua.search("mobile") > -1)) {
+        androidNormal = true;
+    }
+	if (androidNormal) {
+        browser = "androidNormal";
+    }
+    if (ua.search("android") > -1 && ua.search("mobile") > -1 && (ua.search("i9300") >-1 || ua.search("i9500") >-1 ))    {
         androidSmall = true;
     }
     if (androidSmall) {
         browser = "androidSmall";
-        //   alert("android small");
     }
     if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") >-1)    {
         androidSmall2 = true;
     }
-    if (androidSmall) {
+    if (androidSmall2) {
         browser = "androidSmall2";
-        //   alert("android small");
     }
-    //if (androidSmall2) {
-    //    browser = "androidSmall2";
-    //    //   alert("android small");
-    //}
-    //if (androidNormal) {
-    //    browser = "androidNormal";
-    //    //   alert("android normal");
-    //}
-    //var isIpad = false;
-    //if (ua.search("ipad") > -1) {
-    //    isIpad = true;
-    //    browser = "ipad";
-    //}
-    //var isIphone5 = false;
-    //if (ua.search('iphone os 5') > -1) {
-    //    isIphone5 = true;
-    //    browser = "iphone5";
-    //}
+
 }
 
 function loadRelevantCss(){
      switch (browser) {
 
-  //      case "iphone5":
-  //          loadcssfile("css/iphone5.css");
-  //          break;
-  //      
-		//case "androidNormal":
-  //          loadcssfile("css/andrd_normal.css");
-  //          break;
-		//
-		//case "androidSmall2":
-
         case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
+			
             break;
 			
-		case "androidSmall":
+		case "androidNormal":
             loadcssfile("css/andrd_normal.css");
+			
+            break;
+		
+		case "androidSmall":
+            loadcssfile("css/andrd_small.css");
+			
               break;
-        //case "androidNormal":
-        //    loadcssfile("css/andrd_normal.css");
-        //    break;
-
-        //case "androidSmall":
-        //    loadcssfile("css/andrd_small.css");
-        //    break;
     }
 }
 
@@ -369,6 +353,23 @@ function initBannerScript() {
 }
 
 function df() {//show the agreement on click in login section
+    $("#scroller").html('');
+    $("#scroller").append(' <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_2.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_3.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_4.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>');
+
     $("#agreement").show();
     $("#login").hide();
+}
+
+
+function checkPCScreen(){
+     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+     
+    }
+    else {
+        $("#pc-screen").show();
+    }
 }

@@ -47,7 +47,7 @@ function setWaitPageWithImg(data){
 
     $("#message-with-img-img").css("background-image", "url('"+url+"')");
     
-    Navi.goto("messageWithImage");
+    Navi.goto("messageWaitingWithImage");
 }
 
 //set wait page without image       
@@ -59,9 +59,9 @@ function  setWaitPageNoImg(data){
     //$("#message-no-img-title").text(title);
     textHtml = text.replace("\n", "<br/>");
     $("#message-no-img-text").html(textHtml);
-    $("#message-with-img-wait-text").text(info);
-    
-    Navi.goto("messageNoImage");
+    //$("#message-with-img-wait-text").text(info);
+    $("#message-no-img-wait-text").text(info)
+    Navi.goto("messageWaitingNoImage");
  }
 
 //set page with image      
@@ -69,11 +69,20 @@ function   setStaticPageWithImg(data){
     var title = data.title;
     var text = data.text;
     var info =data.info
-
-    //$("#message-no-img-title").text(title);
-     textHtml = text.replace("\n", "<br/>");
-    $("#message-no-img-text").html(textHtml);
+    var url="";
+    //set the ing by size
+    if(generalParameters.isBigSize){
+        url =data.tamplateImage2;
+    }
+      else{
+        url =data.tamplateImage1;
+    }
+    //$("#message-with-img-title").text(title);
+    textHtml = text.replace("\n", "<br/>");
+    $("#message-with-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
+
+    $("#message-with-img-img").css("background-image", "url('"+url+"')");
     
     Navi.goto("messageWithImage");
  
@@ -81,12 +90,12 @@ function   setStaticPageWithImg(data){
 
 //set wait without image       
 function   setStaticPageNoImg(data){
-    var title = data.title;
+   var title = data.title;
     var text = data.text;
     var info =data.info
 
     //$("#message-no-img-title").text(title);
-     textHtml = text.replace("\n", "<br/>");
+    textHtml = text.replace("\n", "<br/>");
     $("#message-no-img-text").html(textHtml);
     $("#message-with-img-wait-text").text(info);
     

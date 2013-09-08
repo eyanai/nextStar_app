@@ -3,21 +3,26 @@ var voteIdA, voteKeyA, voteIdB, voteKeyB;
 var registerTextHtml = "<span>כ</span><span>נ</span><span>י</span><span>ס</span><span>ה</span> <span>ל</span><span>ה</span><span>צ</span><span>ב</span><span>ע</span><span>ה</span>";
 //set register page
 function setOpenRegisterPage(data, from) {
+    initVoteGeneralParameters();
+
+    voteGeneralParameters.status = data.status
+    voteGeneralParameters.votePageId =data.id;
+    
     generalParameters.isRegistered = false;
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
     $(".slide").css("left", "5.5%");
-    //$(".slide").css("left", "76%");
-    //$("#test-reut-stars").css("left", "0%").show();
     $(".slider-text").html(registerTextHtml);
+    $(".slider-text").show();
     $("#register .slidein").show();
     $(".deny-register").hide();
     $("#register .reMesseg .continue").hide();
     var url = "";
-    generalParameters.isSingle = null; //init isSingle
+    setIsSingle(data);
+    setRegisterGeneralParams(data);
     //if this is a double vote
-    if (!isSingle(data)) {
+    if (!voteGeneralParameters.isSingle) {
         var url1 = "";
         var url2 = "";
         //set the img
@@ -34,14 +39,12 @@ function setOpenRegisterPage(data, from) {
         var song1 = data.votes[0].songName;
         var name2 = data.votes[1].name;
         var song2 = data.votes[1].songName;
-        //var textWait = data.textWaitRegister;
         $("#register-img-first").css("background-image", "url('" + url1 + "')");
         $("#register-comp-name-first").text(name1);
         $("#register-song-name-first").text(song1);
         $("#register-img-second").css("background-image", "url('" + url2 + "')");
         $("#register-comp-name-second").text(name2);
         $("#register-song-name-second").text(song2);
-        //$("#register-wait-text").text(textWait);
         Navi.goto("registerBattle");
     }
     //if this is a single vote
@@ -54,15 +57,12 @@ function setOpenRegisterPage(data, from) {
         }
         var name = data.votes[0].name;
         var song = data.votes[0].songName;
-        //var textWait = data.textWaitRegister;
         $("#register-single-img").css("background-image", "url('" + url + "')");
         $("#register-comp-name-single").text(name);
         $("#register-song-name-single").text(song);
-        //$("#register-wait-text").text(textWait);
         Navi.goto("registerSingle");
     }
 
-    //if(!generalParameters.wasRegisterPage||generalParameters.wasRegisterPage&&generalParameters.isRegistered){
     if (from == "vote") {
         $("#register .reMesseg .continue h2").text(data.textWaitVote);
         Navi.goto("notRegister");
@@ -71,31 +71,23 @@ function setOpenRegisterPage(data, from) {
         $(".topMenu").show();
         toggleTopMenu(registerDic);
     }
-    //}
-    //generalParameters.wasRegisterPage = true;
 
 }
-//var starsWidth;//=$("#test-reut-stars").width();
-//var slideWidth;//=$(".slide").width();
-//var leftMax = $("#test-reut-outer").css("left").slice(0, -2);
-//drag to register in single vote
 
 function attachDrag(){
 
+    $("#registerSingle .slide.btn.drag").click(function(){
+        setRegister()
+    });
+    $("#registerBattle .slide.btn.drag").click(function(){
+        setRegister()
+    });
     $("#registerSingle .slide.btn.drag").draggable({
         stack: ".drag",
         axis: "x",
         containment: "#registerSingle .slidein",
-        //start:function(event,ui){
-        //    starsWidth=$("#test-reut-stars").width();
-        //    slideWidth=$(".slide").width();
-
-        //},
         drag: function(event, ui) {
-            //$("#test-reut-stars").css("left", 100*((ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth-10)/starsWidth) + "%");
-            //console.log(ui.helper.css("left").slice(0,-2)*1);
-            //console.log(ui.helper.css("left").slice(0,-2)*1-starsWidth+slideWidth);
-
+            $(".slider-text").hide();
             console.log("ui.offset.left: " + ui.offset.left)
         },
         stop: function(event, ui) {
@@ -104,38 +96,28 @@ function attachDrag(){
             if($(".slidein").width().toString().length < 3) {
                 var widthInPx = ($("#registerSingle").width() / 100) * $(".slidein").width();
             }
-            else {
+            else {  
                 var widthInPx = $(".slidein").width();
             }
 
-            if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%
-
-                //  alert("checkin");
-                // $("#checkInAud")[0].play();
-
-                $(".slide").addClass("animateLeft");
+            if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%         
                 $(ui.helper).css("left", "74%");
+                $(".slide").addClass("register-slide-back");
                 $("#checkInAud")[0].play();
                 $(ui.helper).css("left", "5.5%");
                 $(".deny-register").show();
-
-
-                //stop the red flash sound
-                // $("#alertAud")[0].pause();
-                //   clearInterval(alertInterval);
-               // alert("hi4")
                 setTimeout(function() {
-                 //   alert('5');
                     setRegister();
-                }, 3000);
+                    Navi.goto("WaitVotePage");
+                }, 1600);
+                 
 
 
             }
             else {
 
                 $(ui.helper).css("left", "5.5%");
-                //$("#test-reut-stars").css("left", "0%");
-                //$(ui.helper).css("left", "76%");
+                $(".slider-text").show();
             }
         }
     });
@@ -146,30 +128,30 @@ function attachDrag(){
     axis: "x",
     containment: "#registerBattle .slidein",
     drag: function(event, ui) {
+        $(".slider-text").hide();
     },
     stop: function(event, ui) {
         var lengthNoPx = ui.helper.css("left").length - 2;
         var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
         if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
-            $(".slide").addClass("animateLeft");
             $(ui.helper).css("left", "74%");
+            $(".slide").addClass("register-slide-back");
             $("#checkInAud")[0].play();
-            // sliderCheckInSound.playclip();
             $(ui.helper).css("left", "5.5%");
             $(".deny-register").show();
-            //$(".slider-text").text("");
-            
             //stop the red flash sound
             $("#alertAud")[0].pause();
             clearInterval(alertInterval);
             setTimeout(function() {
-                setRegister();
-            }, 3000);
+                 setRegister();
+                 Navi.goto("WaitVotePage");
+                }, 1600);
 
         }
         else {
             $(ui.helper).css("left", "5.5%");
+            $(".slider-text").show();
         }
     }
 }); 
@@ -180,21 +162,32 @@ function attachDrag(){
 //set register going to close 
 function setRegisterGoingClose(data) {
     console.log("setOpenRegisterPage data.status: " + data.status);
-    //if(data.votes.length ==1){
-    //   
-    //}
-    //else{
-    //     Navi.goto("registerBattle");
-    //}
+   //if the user where in register page before the red flash
+    if($('#register').is(":visible")){
+        //show and play the audio if the user not register
+        if(!voteGeneralParameters.registered){
+               $(".register-red-flash").show();
+                alertRegisterGoingClose();
+        }
+    }
+    //else- set the data to the html object
+    else{
+        setOpenRegisterPage(data);
+
+        $(".register-red-flash").show();
+        alertRegisterGoingClose();
+    }
+    //show and play the audio if the user not register
+   if(!voteGeneralParameters.registered){
+       $(".register-red-flash").show();
+        alertRegisterGoingClose();
+   } 
     
-    $(".register-red-flash").show();
-    alertRegisterGoingClose();
 }
 
-var alertInterval
+var alertInterval;
 function alertRegisterGoingClose() {
     alertInterval = setInterval(function() {
-        // alertSound.playclip();
         $("#alertAud")[0].play();
     }, 1000);
 }
@@ -205,26 +198,51 @@ function stopAlertRegisterGoingClose() {
 
 //send to server the register
 function setRegister() {
-    //ajax call server
-   // alert("setRegister");
+    voteGeneralParameters.registered = true;
+    var data ="";
+    var facebookid = 0;
+    if(generalParameters.fbUser.id != null) {
+        facebookid = generalParameters.fbUser.id;
+    }
+    if (voteGeneralParameters.isSingle){
+       data ={voteId1:voteGeneralParameters.voteid1,facebookId:facebookid}
+    }
+    else{
+      data =  {voteId1:voteGeneralParameters.voteid1, voteId2 :voteGeneralParameters.voteid2,facebookId:facebookid}
+    }
+
     $.ajax({
         type: "POST",
         url: serverDomain + "type=registerToVote",
+        data: data,
         success: function(data) {
+
             console.log(data);
-         //   alert("setRegister success");
-            setWaitVotePage(data);
+            if(voteGeneralParameters.status == 21) {
+                //if the response return when the page id is identical
+                if((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
+                    //alert("setWaitVotePage");
+                    setWaitVotePage(data);
+                    //alert("registered");
+                }
+
+            }
+            //else - if the current status is another
+            else {
+
+                registerReturnFromServerDelay(data);
+            }
+
         },
-        error: function(data) {
-           //  alert("setRegister error: "+data);
-            console.log("error getPage: " + data);
-        }
+        error: function (request, status, error) {
+    }
     });
 };
 
 //set wait vote page
 function setWaitVotePage(data) {
-   // alert("data.length =0");
+   //alert("data.length = "+data.length);
+
     if (data.length == 0) {
        
         console.log("no data was received");
@@ -235,28 +253,28 @@ function setWaitVotePage(data) {
     }
 
     else {
-       // alert("here")
-        Navi.goto("WaitVotePage");
-        generalParameters.voteIdA = data[0].voteId;
-        generalParameters.voteKeyA = data[0].voteKey;
+      //  Navi.goto("WaitVotePage");
+        voteGeneralParameters.votekey1 = data[0].voteKey;
         if (data[1]) {
-            generalParameters.voteIdB = data[1].voteId;
-            generalParameters.voteKeyB = data[1].voteKey;
+            voteGeneralParameters.votekey2 = data[1].voteKey;
         }
-        generalParameters.isRegistered = true;
     }
 
-    //stop the red flash sound
-   // $("#alertAud")[0].pause();
-   // clearInterval(alertInterval);
 };
+
+function registerReturnFromServerDelay(data){
+     voteGeneralParameters.votekey1 = data[0].voteKey;
+        if (data[1]) {
+            voteGeneralParameters.votekey2 = data[1].voteKey;
+        }
+}
+
 
 var index =0;
 var registerWishTextInterval;
 function initWishText(sliderObj){
     index =0;
     sliderObjTemp =sliderObj;
-   // $(sliderObj).html(registerTextHtml);
     var spanArray =  $(sliderObj).children("span");
 
     setTimeout(function(){
@@ -296,4 +314,32 @@ function addWishToLettet(spanArrayTemp,sliderObjTemp){
 function clearRegisterWishTextInterval(){
     
     clearTimeout(registerWishTextInterval);
+}
+
+
+function setRegisterGeneralParams(data){
+   voteGeneralParameters.voteid1 = data.votes[0].voteID;
+   
+   if(!voteGeneralParameters.isSingle)
+   {
+        voteGeneralParameters.voteid2 = data.votes[1].voteID;
+   }
+
+
+
+}
+
+
+function initVoteGeneralParameters(){
+    
+    voteGeneralParameters.status = 0;
+    voteGeneralParameters.isSingle = null;
+    voteGeneralParameters.registered = false;
+    voteGeneralParameters.voteid1 = 0;
+    voteGeneralParameters.voteid2 = 0;
+    voteGeneralParameters.votekey1 = null;
+    voteGeneralParameters.votekey2 = null;
+    voteGeneralParameters.like1 = null;
+    voteGeneralParameters.like2 = null;
+    voteGeneralParameters.votePageId = 0;
 }

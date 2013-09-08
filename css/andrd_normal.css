@@ -1,10 +1,23 @@
 
-/*.loginHg .titleLogin {
-color: orange;
-}*/
+.loginHg .titleLogin {
+
+}
 
 /*=====================================================generel==============================================*/
 
+html, body {
+   
+    direction: ltr;
+   
+}
+
+.reMesseg .continue{
+	direction:rtl;
+}
+
+.continue{
+	direction:rtl;
+}
 
 /*===========================================horizonal-screen=================================*/
 
@@ -24,6 +37,7 @@ color: orange;
 #loginExtendedBox{
 	height:44%;
 	margin:14% auto 10%;
+	
 	
 }
 
@@ -69,33 +83,78 @@ color: orange;
 }
 
 
-.slide{
+/* .slide{
 	width: 22%;
-    height: 63%;
+    height: 73%;
     background-size: 100% 100%;
-    top: 15.3%;
+    top: 17%;
 	left:5.3%;	
-}
+} */
+
+
 
 /*================================================VOTE SECTION=====================================*/
 
-#voteSingle .arrowBlue{
+/*#voteSingle .arrowBlue{
 	left:-8%;
 	top:6%;
 }
 
 #voteSingle .arrowRed{
 	top:10%;
+}*/
+
+.slideGo{
+	 top:7%; 
 }
 
-.slideGo, .slideStay{
-	/* top:6%; */
+.slideStay{
+	 top:7%; 
+	 left:0%;
+}
+
+
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
+    0% {
+        right: -1%;
+    }
+
+    100% {
+        right: -1%;
+    }
+}
+
+@keyframes larrowDown { /*turn arrow DOWN*/
+    0% {
+        right: -1%;
+    }
+
+    100% {
+        right: -1%;
+    }
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
+/* #vote{
+	direction:ltr;
+} */
+
 #voteBattle .slideGo{
 	top:27%;
+}
+
+.redArrow.cont2{
+	left:58%;
+	
+}
+
+.contestant1 .slideStay{
+	left:-37%;
+}
+
+.redArrow.cont1{
+	left:-6%;
 }
 
 /*=============================================RESULTS SECTION======================================================*/

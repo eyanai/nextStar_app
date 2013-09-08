@@ -197,6 +197,12 @@ input[type=checkbox] {
     width: 82%;
 }
 
+.team {
+    /* background-image: url(../images/masseg/team.jpg); */
+	
+}
+
+
 #message .contIcons {
     height: 23%;
 }
@@ -381,6 +387,19 @@ input[type=checkbox] {
         left: -28%;
     }
 }
+
+
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
+
+    font-size: 1.5em;
+}
+
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+
+    font-size: 1.5em;
+}
+
+
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 

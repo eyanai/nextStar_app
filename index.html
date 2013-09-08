@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <meta property="fb:app_id" content="543975688973172" />
+        <meta property="fb:page_id" content="307123691727"/>
 
+           <!-- <meta property="fb:admins" content="100003676970632" />
+    <meta property="fb:app_id" content="543975688973172" />
+              -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/animation.css">
         <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
@@ -19,12 +23,13 @@
         <link rel="stylesheet" media="screen and (max-width:320px) and (min-height:548px)" href="css/iphone5.css" /><!--for iphone5 needs to be tested-->
        <!-- <link rel="stylesheet" media="screen and (max-width:320px) and (max-height:533px)" href="css/andrd_small_2.css" />-->
         <!------------------------------------general scripts and plugins------------------------------------------>
-        <script src="js/jq.js"></script>
-        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+        <!--<script src="js/jq.js"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
         <!--<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>-->
-        <script src="js/jquery-ui-touch-punch.js" type="text/javascript"></script>
+        <!--<script src="js/jquery-ui-touch-punch.js" type="text/javascript"></script>-->
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
         <script src="js/pollController.js"></script>
         <script src="js/serverRequest.js"></script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
@@ -47,12 +52,22 @@
         
     </head>
     <body>
+        <div id="pc-screen">
+            <div>חכם חכם אבל לא סמארטפון...<br> ניתן לשפוט בכוכב הבא רק דרך אפליקציית makoTV בסמארטפון או בטאבלט</div>
+        </div>
+
         <div id="horizonal-screen">
             <div id="flip-me"></div>
         </div>
-        <div id="loader">
+        
+         <div id="loader">
             <span>טוען...</span>
         </div>
+        
+		<!-- <video autoplay loop  width=100% height=100% style="background-color:black;">
+			<source src="../nextStar_app/images/The_Next_Star_Video.mp4" type="video/mp4" />
+			הדפדפן שלך לא תומך ב-HTML 5. אנו מצטערים.
+		</video> -->
         <header class="hide">
             <figure class="header logo"></figure>
             <figure class="live"></figure>
@@ -60,9 +75,9 @@
         <nav class="topMenu">
             <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
         </nav>
-
+		
         <section id="login">
-            <!--<div class="nextPage" data-goto="messageWaitingWithImage"></div>-->
+            <div class="nextPage" data-goto="voteSingle"></div>
             <figure class="logo login"></figure>
             <div id="loginExtendedBox">
                 <div id="slide-container">
@@ -112,21 +127,21 @@
         </section>
         <!---log in section-->
          <section id="agreement">
-            <!--<div class="nextPage" data-goto="messageWaitingWithImage"></div>-->
+            <div class="nextPage" data-goto="messageWaitingWithImage"></div>
             <div id="close-agreement">x</div>
             <div id="scroller-container-agreement">
                  <ul id="scroller">
-                    <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>
+                   <!-- <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>
                     <li><img src="images/agreement/agreement_page_2.jpg" alt="1"></li>
                     <li><img src="images/agreement/agreement_page_3.jpg" alt="1"></li>
                     <li><img src="images/agreement/agreement_page_4.jpg" alt="1"></li>
-                    <li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>
+                    <li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>-->
                 </ul>
             </div>
         </section>
         <!---agreement section-->
         <section id="message">
-            <!--<div class="nextPage" data-goto="registerSingle"></div>-->
+            <div class="nextPage" data-goto="registerSingle"></div>
             <div class="messageImage">
                 <figure id="message-with-img-img" class="team"></figure>
                 <div class="message">
@@ -159,17 +174,18 @@
         </section>
         <!--- message section-->
         <section id="register">
-                            <!--<div class="nextPage" data-goto="resultsSingle"></div>
-                                                                                                                                            <div class="nextPage" data-goto="voteBattle"></div>-->
+                            <div class="nextPage" data-goto="resultsSingle"></div>
+                                                                                                                                            <div class="nextPage" data-goto="voteBattle"></div>
             <!--<div class="nextPage" data-goto="voteSingle"></div>-->
 
             <!--<div class="animat" data-animat="register"></div>-->
-            <div class="animat" data-animat="notRegister"></div>
-            <div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>
+            <!--<div class="animat" data-animat="notRegister"></div>-->
+            <!--<div onclick="showFlash()" style="width: 50px;height: 40px;position: absolute;background-color: yellow;z-index: 100"></div>-->
                             <!--<nav class="topMenu">
                                                                                                                                                                 <h1 id="register-dic">אתם פה? מוכנים להצביע?</h1>
                                                                                                                                                             </nav>-->
             <div id="registerSingle">
+			<div class="nextPage" data-goto="voteSingle"></div>
                 <div id="register-single-img" class="contestant">
 
                     <div class="slidein grey">
@@ -262,10 +278,10 @@
         </section>
         <!---register  section-->
         <section id="vote">
-            <div class="centerSection">
-                <!--<div class="nextPage" data-goto="voteSingle"></div>-->
+            
+                <div class="nextPage" data-goto="voteSingle"></div>
                 <div id="voteSingle" class="single">
-                    <!--<div class="nextPage" data-goto="voteBattle"></div>-->
+                    <div class="nextPage" data-goto="voteBattle"></div>
                                             <!--<div class="animat animatG" data-animat="singleGood"></div>
                                                                                                                                                                             <div class="animat animatB" data-animat="singleBad"></div>-->
                                             <!--<nav class="topMenu">
@@ -276,7 +292,7 @@
                             <div id="slideLeft" class="slideLeft">
                                 <div class="slideStay btn">
                                     <img src="images/votes/slide_pick_x.png" class="arrowRed" alt="c">
-                                    <!--<h1>נשאר</h1>-->
+                                    <h1>לא עבר</h1>
                                     <div class="hate"></div>
                                 </div>
                             </div>
@@ -285,7 +301,7 @@
                             <div id="slideRight" class="slideRight">
                                 <div class="slideGo btn">
                                     <img src="images/votes/slide_pick_heart.png" class="arrowBlue" alt="c">
-                                    <!--<h1>הולך</h1>-->
+                                    <h1>עבר</h1>
                                     <div class="like"></div>
                                 </div>
                             </div>
@@ -306,7 +322,7 @@
                 </div>
                 <!----------------------------------------------------------------------single  div----------------->
                 <div id="voteBattle" class="battle">
-                    <!--<div class="nextPage" data-goto="resultsSingle"></div>-->
+                    <div class="nextPage" data-goto="resultsSingle"></div>
                                             <!--<div class="animat animatG1" data-animat="battel1Good"></div>
                                                                                                                                                                             <div class="nextPage" data-goto="resultsBattle"></div></br>
                                                                                                                                                                             <div class="animat animatG1" data-animat="battel1Good"></div>
@@ -316,17 +332,19 @@
                     <div id="vote-img-first" class="contestant1">
                         <div id="rslidecon">
 
-                            <div id="slideDownbattleCon1" class="slideDownbattle con1">
+                            <div id="slideDownbattleCon2" class="slideDownbattle con1">
                                 <div class="slideStay btn">
                                     <img src="images/votes/slide_pick_heart.png" class="blueArrow cont1" alt="c">
                                 </div>
+								<h1>עבר</h1> 
                                 <div class="love1"></div>
                             </div>
 
-                            <div id="slideTopbattleCon1" class="slideTopbattle con1">
+                            <div id="slideTopbattleCon2" class="slideTopbattle con1">
                                 <div class="slideGo btn">
                                     <img src="images/votes/slide_pick_x.png" class="redArrow cont1" alt="r">
                                 </div>
+								<h1>לא עבר</h1> 
                                 <div class="hate1"></div>
                             </div>
 
@@ -337,18 +355,19 @@
                     <div id="vote-img-second" class="contestant2">
                         <div id="lslidecon">
 
-                            <div id="slideDownbattleCon2" class="slideDownbattle con2">
+                            <div id="slideDownbattleCon1" class="slideDownbattle con2">
                                 <div class="slideStay btn">
                                     <img src="images/votes/slide_pick_heart.png" class="blueArrow cont2" alt="c">
                                 </div>
-                                <!-- <h1>נשאר</h1> -->
+                                 <h1>עבר</h1> 
                                 <div class="love2"></div>
                             </div>
 
-                            <div id="slideTopbattleCon2" class="slideTopbattle con2">
+                            <div id="slideTopbattleCon1" class="slideTopbattle con2">
                                 <div class="slideGo btn">
                                     <img src="images/votes/slide_pick_x.png" class="redArrow cont2" alt="c">
                                 </div>
+								<h1>לא עבר</h1> 
                                 <div class="hate2"></div>
                             </div>
                         </div><!--lslidecon-->
@@ -380,14 +399,14 @@
 	לא נרשמת בזמן<br>
 	אין אוטו.</div>
                 <!---------------------------------------------------not-registered div--------------------------------->
-            </div>
+       
         </section>
 
         <!---vote  section-->
         <section id="voteClose">
 
             <div id="voteCloseSingle" class="single">
-                <!--<div class="nextPage" data-goto="resultsSingle"></div>-->
+                <div class="nextPage" data-goto="resultsSingle"></div>
                                     <!-- <div class="animat animatG" data-animat="singleGood"></div>
                                                                                                                                                             <div class="animat animatB" data-animat="singleBad"></div>-->
                                     <!--<nav class="topMenu">
@@ -453,7 +472,7 @@
         </section>
         <!---vote  section-->
         <section id="results">
-            <!--<div class="nextPage" data-goto="gallery"></div>-->
+            <div class="nextPage" data-goto="gallery"></div>
             <!-- <div class="animat animatB" data-animat="results"></div>-->
                             <!--<nav class="topMenu">
                                                                                                                                                                 <h1 id="results-dic" id="results-dic">ויש לנו תוצאות....</h1>
@@ -535,7 +554,7 @@
         </section>
         <!---results  section-->
         <section id="gallery" style="direction:ltr;">
-            <!--<div class="nextPage" data-goto="messageNoImage"></div>-->
+            <div class="nextPage" data-goto="messageNoImage"></div>
                             <!--<nav class="topMenu">
                                                                                                                                                                 <h1 id="end-show-dic">התוכנית הסתיימה, נתראה בשלישי ב 21:00</h1>
                                                                                                                                                             </nav>-->
@@ -543,7 +562,7 @@
             <div id="result-gallery">
                 <ul>
                     <li class="gallery-vote-single">
-                        <!--<img src="images/register/kohav2.jpg" alt="alt">-->
+                        <img src="" alt="alt">
                         <span class="gallery-pic"></span>
                         <span class="reMesseg">
                             <div class="songName">
@@ -554,7 +573,7 @@
                         </span>
                     </li>
                     <li class="gallery-vote-single">
-                        <!--<img src="images/register/kohav2.jpg" alt="alt">-->
+                        <img src="" alt="alt">
                         <span class="gallery-pic"></span>
                         <span class="reMesseg">
                             <div class="songName">
@@ -566,7 +585,7 @@
                     </li>
                     <li class="gallery-vote-battle">
                         <span class="vote-1">
-                            <!--<img src="images/register/kohav2.jpg" alt="alt">-->
+                            <img src="" alt="alt">
                             <span class="gallery-pic"></span>
                             <span class="reMesseg">
                                 <div class="songName">
@@ -577,7 +596,7 @@
                             </span>
                         </span>
                         <span class="vote-2">
-                            <!--<img src="images/register/kohav2.jpg" alt="alt">-->
+                            <img src="" alt="alt">
                             <span class="gallery-pic"></span>
                             <span class="reMesseg">
                                 <div class="songName">
@@ -589,7 +608,7 @@
                         </span>
                     </li>
                     <li class="gallery-vote-single">
-                        <!--<img src="images/register/kohav2.jpg" alt="alt">-->
+                        <img src="" alt="alt">
                         <span class="gallery-pic"></span>
                         <span class="reMesseg">
                             <div class="songName">
@@ -685,7 +704,7 @@
                 else{
                     CM8Server="mako.checkm8.com";
                     CM8Cat="mobile.makoTV.programs.the_next_star.votes";
-                    CM8Profile="APP_BANNER_LARGE_1024X66";
+                    CM8Profile="APP_BANNER_LARGE_768X66";
                     CM8Req="x";
                     CM8Redir={click: "", ad_play: ""};
                 }
@@ -749,60 +768,6 @@
                 });
             
             
-                $('.animat').on('click', this, function () {
-                    anim = $(this).data('animat'); //animat="register"
-            
-                    switch (anim) {
-                        case 'register':
-                            $('#register .slide').addClass('regAnim');
-                            break;
-                        case 'singleBad':
-                            $('.slideRight').addClass('singleBad');
-                            $('.slideLeft').addClass('hideL');
-                            $('.single .like').addClass('likeShow');
-                            break;
-                        case 'singleGood':
-                            $('.slideLeft').addClass('singleGood');
-                            $('.slideRight').addClass('hideR');
-                            $('.single .hate').addClass('hateShow');
-                            break;
-                        case 'battel1Good':
-                            $('.contestant1 .slideTopbattle').addClass('battel1lGood');
-                            $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant1 .love').addClass('love1Show');
-            
-                            break;
-                        case 'battel1Bad':
-                            $('.contestant1 .slideDownbattle').addClass('battel1Bad');
-                            $('.contestant2 .slideTopbattle,.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant1 .slideTopbattle').addClass('hideR');
-                            $('.contestant1 .hate').addClass('hate1Show');
-            
-                            break;
-                        case 'battel2Good':
-                            $('.contestant2 .slideTopbattle').addClass('battel2lGood');
-                            $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant2 .slideDownbattle').addClass('hideL');
-                            $('.contestant2 .love').addClass('love2Show');
-            
-                            break;
-                        case 'battel2Bad':
-                            $('.contestant2 .slideDownbattle').addClass('battel2Bad');
-                            $('.contestant1 .slideTopbattle,.contestant1 .slideDownbattle').addClass('hideR');
-                            $('.contestant2 .slideTopbattle').addClass('hideL');
-                            $('.contestant2 .hate2').addClass('hate2Show');
-            
-                            break;
-                        case 'results':
-                            var x = -50;
-                            $('.scalaRed').animate({ bottom: '0%' }, 1000, function () {
-                                $('.scalaRed').animate({ bottom: x + '%' }, 500, function () { });
-                            });
-                            break;
-                        default:
-                    }
-                });
             });
         </script>
 

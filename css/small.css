@@ -1,6 +1,6 @@
-/*.loginHg .titleLogin {
-color: green;
-}*/
+.loginHg .titleLogin {
+
+}
 
 
 html, body {
@@ -21,6 +21,11 @@ html, body {
 
 }
 
+#horizonal-screen {
+	 background-image: url(../images/horizonal-background-iphone.png);
+}
+
+
 .loginHg .titleLogin, .loginHg .titleLoginReward {
     font-size: 0.85em;
     margin: 1% auto;
@@ -34,7 +39,7 @@ html, body {
 
 .loginHg .titleLoginReward {
     min-height: 60px;
-    margin: 11% 0;
+    margin: 10% 0 8%;
     padding: 0% 24%;
 }
 
@@ -226,9 +231,7 @@ h2 {
     padding: 0.3% 0;
 }
 
-.slideStay h1, .slideGo h1 {
-    font-size: 2em;
-}
+
 
 .contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay {
     top: 22%;
@@ -270,6 +273,13 @@ h2 {
     /*background-size: 100% 131%;*/
     background-position: center 40%;
 }
+#loader{
+    
+font-size: 2em;
+}
+#loader span{
+    left: 42%;
+}
 
 header {
     height: 17.3%;
@@ -303,7 +313,7 @@ section {
 }
 
 .slideLeft {
-    background-size: 100% 100%,100% 100%;
+    background-size: 100% 100%;
     /*height: 23%;*/
     height: 18%;
 }
@@ -362,7 +372,7 @@ section {
 }
 
 #gallery-title {
-    margin: 10% 0 0%;
+    margin: 11% 0 0%;
 }
 
 #result-gallery {
@@ -396,14 +406,14 @@ section {
     min-width: 87%; /* andrd */
 }
 
-.checkboxArea .textAd {
+ .checkboxArea .textAd {
     min-width: 84%;
     vertical-align: top;
 }
 
 .checkboxArea .tvImgCB {
     margin-top: 0%;
-}
+} 
 
 #checkbox4 {
     margin-right: 0px;
@@ -492,3 +502,14 @@ section {
         transform: rotateZ(180deg);
     }
 }*/
+
+
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
+
+    font-size: 0.7em;
+}
+
+.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+
+    font-size: 0.7em;
+}
