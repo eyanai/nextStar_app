@@ -233,7 +233,7 @@ h2 {
 
 
 
-.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay {
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .Stay {
     top: 22%;
 }
 
@@ -293,13 +293,13 @@ section {
     top: 17.6%;
 }
 
-.slide {
+/* .slide {
     width: 23%;
     height: 73%;
     background-size: 100% 100%;
     top: 17.5%;
     left: 5.3%;
-}
+} */
 
 .red .slide {
     top: 11.5%;
@@ -332,9 +332,9 @@ section {
     left: 34%;
 }
 
-.slideStay h1 {
+/* .slideStay h1 {
     left: 32%;
-}
+} */
 
 #results .percentage {
     font-size: 108%;
@@ -506,10 +506,10 @@ section {
 
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
 
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
 
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
