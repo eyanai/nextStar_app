@@ -266,6 +266,26 @@ top: 50%;
 left: 44%;
 }
 
+/*================================================LOADER=====================================*/
+#loader{
+    display: block;
+position: absolute;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #000000;
+z-index: 1000;
+opacity: 0.8;
+color: #ffffff;
+font-size: 1.5em;
+}
+#loader span{
+ position: absolute;
+top: 50%;
+left: 44%;
+}
+
+
 /*================================================HEADER=====================================*/
 header {
     position: relative;

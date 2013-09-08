@@ -229,9 +229,6 @@ $(document).ready(function() {
     //initWaitAnimation();
     initDrag(); // init draggable
 
-    // longPolling(); //check gallery
-
-    //longPolling(); //check gallery
     $("body").on("start-app", longPolling);
     if(generalParameters.isConnect) {
         $("body").trigger("start-app");
