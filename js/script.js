@@ -157,7 +157,7 @@ var gifInterval;
 function initWaitAnimation() {
 
     var pos;
-    gifInterval = setInterval(function () {
+    gifInterval = setTimeout(function () {
         pos = $(".contIcons").css("background-position-x");
         pos = pos.substring(0, pos.length - 2);
         if (pos > -1) {
@@ -167,11 +167,12 @@ function initWaitAnimation() {
             pos = pos * 1 + 40.75 * 1;
         }
         $(".contIcons").css("background-position-x", pos + "px");
-    }, 900);
+        initWaitAnimation();
+    }, 300);
 }
 
 function stopWaitAnimation() {
-    clearInterval(gifInterval);
+    clearTimeout(gifInterval);
 }
 
 function initMoveEvents() {
@@ -211,11 +212,11 @@ function showFlash() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     ga('send', 'pageview', '/TNS_Homepage'); //for google analytics
     $.ajaxSetup({ cache: false });
     checkPCScreen();
-    if(window.location.host.indexOf("9090") > -1) {
+    if (window.location.host.indexOf("9090") > -1) {
         $(".nextPage").hide();
     }
     // window.location = "http://thenextstar.mako.co.il/test.html";
@@ -228,15 +229,16 @@ $(document).ready(function() {
     initMoveEvents();
     //initWaitAnimation();
     initDrag(); // init draggable
+    soundsLoad(); //init sounds
 
     // longPolling(); //check gallery
 
     //longPolling(); //check gallery
     $("body").on("start-app", longPolling);
-    if(generalParameters.isConnect) {
+    if (generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if(!generalParameters.onLoad) {
+    if (!generalParameters.onLoad) {
         $("#loader").hide();
     }
 
@@ -244,7 +246,7 @@ $(document).ready(function() {
     loadRelevantCss();
     attachDrag();
 
-    $("#close-agreement").on("click", function() {
+    $("#close-agreement").on("click", function () {
         $("#login").show();
         $("#agreement").hide();
     });
@@ -254,7 +256,7 @@ $(document).ready(function() {
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch(isPortrait) {
+    switch (isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
