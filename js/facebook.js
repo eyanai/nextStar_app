@@ -7,8 +7,8 @@ var myLocation = domain+"/index.html";//domain
 ///*FB._https = (window.location.protocol == "https:");*/
 FB._https = true; //check fb init
 FB.init({ appId: appID, status: true, cookie: true, oauth: true });
-alert(0);
-localStorage.setItem('fbStorage', "");
+//alert(0);
+//localStorage.setItem('fbStorage', "");
 
 
 ////////////////////////////////////////////////////// listener   
@@ -42,6 +42,7 @@ else if (searchQuery.length > 0) {
     loginCheck();
 }
 else{//if not connect and not from localstorge
+    generalParameters.onLoad = false;
      $("#loader").hide();
 }
 
@@ -77,7 +78,8 @@ function loginCheck() {
             saveData();
         }
         else if (response.status === 'not_authorized' || response.status == "unknown") {
-
+            $("#loader").hide();
+     generalParameters.onLoad = false;
             console.log("not connect");
         }
     });
@@ -179,7 +181,8 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-     $("#loader").hide();
+     //$("#loader").hide();
+     //generalParameters.onLoad = false;
     $.ajax({
         type: "POST",
         url: serverDomain + "type=getFacebookData",

@@ -237,13 +237,14 @@ height: 100%;
 width: 100%;
 background-color: #000000;
 z-index: 1000;
-opacity: 0.6;
+opacity: 0.8;
 color: #ffffff;
+font-size: 1.5em;
 }
 #loader span{
  position: absolute;
 top: 50%;
-left: 50%;  
+left: 44%;
 }
 
 
@@ -314,6 +315,7 @@ header {
     margin: 8% auto;
     display: block;
     overflow: hidden;
+	/* border:1px solid red; */
 	
 }
 
@@ -982,6 +984,7 @@ top: 0%;*/
     top: 35%;
     right: 13%;
      color: gray;
+    
 }
 
 .reMesseg {

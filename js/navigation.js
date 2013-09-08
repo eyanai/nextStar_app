@@ -220,15 +220,17 @@ var Navi = {
 var supportsOrientationChange = "onorientationchange" in window;
 var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
+
+
 window.addEventListener(orientationEvent,
    function () {
        $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {
-            
+           //alert("work");
            isPortrait = (window.innerHeight / window.innerWidth) > 1;
-           //alert(window.isPortrait);
-           switch (isPortrait) {
+           //alert(window.isPortrait);	
+            switch (isPortrait) {
                case true:
 
                    $("#horizonal-screen").hide();

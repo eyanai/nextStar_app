@@ -26,8 +26,10 @@ html, body {
     margin: 1% auto;
 }
 
-.loginHg .titleLogin {
-    height: 27%;
+.loginHg .titleLoginReward{
+	min-height: 60px; 
+	 margin: 8% 0%; 
+	padding: 0% 24%;
 }
 
 .loginHg .titleLoginReward {
@@ -135,6 +137,8 @@ h2 .songName1,h2 .songName2{
     font-size: 1.4em;
     margin-top: 2%;
     height: 35px;
+    
+    /*border: 2px solid gray;*/
 }
 
 #loginRewardBox .loginHg {

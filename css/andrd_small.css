@@ -23,12 +23,16 @@ html,body{
 
 .logo.login{
 	height:23%;
-	/* border-bottom:1px solid blue; */
+}
+
+.loginHg{
+	padding:7% 0%;
 }
 
 #loginExtendedBox{
-	height:44%;
-	margin:14% auto 10%;
+	height:52%;
+	margin:12% auto 10%;
+
 }
 
 .loginHg .titleLoginReward{
@@ -37,12 +41,17 @@ html,body{
 	margin:9% auto;
 }
 
+/*#loginExtendedBox .login{
+    border: 1px solid blue;
+}*/
+
 #loginExtendedBox .loginHg{
 	height:14.5%;
 }
 
 .loginHg .titleLogin{
 	line-height:1.3em;
+	 
 }
 
 #login .checkboxArea{
