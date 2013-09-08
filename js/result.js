@@ -1,11 +1,7 @@
 function setResultPage(data) {
 
     voteGeneralParameters.status = data.status;
-
     console.log("setResultPage data.status: " + data.status);
-
-    //set the dictionary text
-    //$("#results-dic").text(resultsDic);
     toggleTopMenu(resultsDic);
 
     var isSingleVote;
@@ -47,16 +43,14 @@ function setResultPage(data) {
             //set the percent number color
             $("#results-perc-single").addClass("red");
         }
-        $('.scala').animate({ bottom: '0%' }, 1300, function () {
-            //var bottomFirst = -1 *(100 - data.votes[0].finalPercent);
+        $('.scala').animate({ bottom: '0%' }, 800, function () {
             var bottomFirst = data.votes[0].finalPercent;
             if (bottomFirst > 98) {
                 bottomFirst = 98;
             }
-            $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 500);
+            $("#results .single .resultScalaL .scala").animate({ bottom: bottomFirst + '%' }, 1200);
         });
         $("#voteBarAud")[0].play();
-       // voteBarsSound.playclip();
        
        
         //navigate
@@ -124,7 +118,7 @@ function setResultPage(data) {
             $("#results-perc-second").addClass("red");
         }
        
-        $('.scala').animate({ bottom: '0%' }, 1300, function() {
+        $('.scala').animate({ bottom: '0%' }, 800, function() {
 
             var bottomFirst = data.votes[0].finalPercent;
             if (bottomFirst > 98) {
@@ -135,8 +129,8 @@ function setResultPage(data) {
                 bottomSecond = 98;
             }
             
-            $("#results .battle .resultScalaR .scala").animate({ bottom: bottomFirst + '%' }, 500, function() { });
-            $("#results .battle .resultScalaL .scala").animate({ bottom: bottomSecond + '%' }, 500, function() { });
+            $("#results .battle .resultScalaR .scala").animate({ bottom: bottomFirst + '%' }, 1200, function() { });
+            $("#results .battle .resultScalaL .scala").animate({ bottom: bottomSecond + '%' }, 1200, function() { });
         });
 
          //percent

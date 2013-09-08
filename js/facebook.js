@@ -184,7 +184,8 @@ function checkLocalStorge() {
 ///////////////////////////////////////////////////////// functions
 ////send data to server
 function saveDataOnServer(str) {
-
+     //$("#loader").hide();
+     //generalParameters.onLoad = false;
     $.ajax({
         type: "POST",
         url: serverDomain + "type=getFacebookData",
@@ -206,14 +207,16 @@ function saveDataOnServer(str) {
 
         }
     });
-
+    postOnFeed();//post on feeds
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
 function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
-    postOnFeed();//post on feeds
+    if (checkTimeForPost()) {
+        postOnFeed(); //post on feeds
+    }
    //longPolling();
 }
 
@@ -260,4 +263,19 @@ function loginRewardClicked(){
 function loginWithoutFacClicked(){
     $("#genAud")[0].play();
     loginWithoutFacebook();
+}
+
+
+//checks the day and time of day
+function checkTimeForPost(){
+    var date=new Date();
+    // check the day- sunday=0 and so on
+    if (date.getDay() == 0 || date.getDay() == 2) {
+        //check time in round hours (24hrs)
+        if (date.getHours() == 21 || date.getHours() == 22) {
+            return 1;
+        }
+        else return 0;
+    }
+    else return 0;
 }

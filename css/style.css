@@ -266,6 +266,26 @@ top: 50%;
 left: 44%;
 }
 
+/*================================================LOADER=====================================*/
+#loader{
+    display: block;
+position: absolute;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #000000;
+z-index: 1000;
+opacity: 0.8;
+color: #ffffff;
+font-size: 1.5em;
+}
+#loader span{
+ position: absolute;
+top: 50%;
+left: 44%;
+}
+
+
 /*================================================HEADER=====================================*/
 header {
     position: relative;
@@ -1672,8 +1692,6 @@ background-position-y: 10%;*/
 .percentage {
     font-size: 3.5em;
     color: #00aaff;
-    /* float: left;
-    margin: 3% 0 0 10%;*/
 }
 
 .percentage.red {
@@ -1682,13 +1700,6 @@ background-position-y: 10%;*/
    
 }
 
-#results .single .resultRed {
-    /*display: none;*/
-}
-
-#results .single .scalaRed {
-    /*display: none;*/
-}
 /*=======================================================RESULT BATTLE=========================================*/
 #results .divideH {
     top: 0%;
@@ -1705,20 +1716,6 @@ background-position-y: 10%;*/
     bottom: 100%;
     height: 41%;
 }
-
-/* #results .songName1 h1, #results .songName1 h2, #results .songName2 h1, #results .songName2 h2 {
-     width: 100%;
-    float: right;
-    clear: both;
-    margin-right: 20%; 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-} */
-
-/* #results .songName1 h1, #results .songName2 h1 {
-    margin-top: 4%;
-} */
 
 #results .percentage {
     top: 22%;
@@ -2074,7 +2071,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #FFFBF0;  /* #3befe9;  */
+    background-color: yellow;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;

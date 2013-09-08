@@ -12,9 +12,6 @@ section{
 	height: 82.9%;
 }
 
-.musix {
-    background-image: url(../large/images/musix.png);
-}
 
 /*===========================================horizonal-screen=================================*/
 
@@ -29,14 +26,14 @@ header {
     height: 11.3%;
 }
 
-.header.logo {
+/*.header.logo {
 	background-image: url(../images/large/header/kohav_logo_big.png);
-}
+}*/
 
-.live{
+/*.live{
 	background-image: url(../images/large/header/kohav_live_sequence1.png);
     width: 5%;
-}
+}*/
 
 
 
@@ -53,9 +50,9 @@ header {
 
 /*================================================VOTE SECTION=====================================*/
 
-.slideLeft {
+/*.slideLeft {
     background-image: url(../images/large/votes/kohav_vote_slider_left.png);
-}
+}*/
 
 .slideRight {
     background-image: url(../images/votes/slide_pick_right.png);
