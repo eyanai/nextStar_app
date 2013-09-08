@@ -13,7 +13,7 @@ function setOpenRegisterPage(data, from) {
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
     if ($(window).width() > 700){
-		$(".slide").css("left", "4px");
+		$(".slide").css("left", "10px");
 	}
 	else {
 		$(".slide").css("left", "4px");
