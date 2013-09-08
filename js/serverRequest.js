@@ -22,7 +22,7 @@ function longPolling() {
     //alert(0);
     pollController = new PollController();
     //pollController._setUrl("http://thenextstar.mako.co.il/page/pageF.json");
-    pollController._setUrl("/page/pageF.json");
+    pollController._setUrl("/page/pageD.json");
     pollController._setCallBackFunction(function (data) {
         console.log(data);
         pageChange(data);
