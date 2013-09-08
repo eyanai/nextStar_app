@@ -2,14 +2,14 @@
 
 var Navi = {
 
-    hidelogin: function () {
+    hidelogin: function() {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function (el) {
+    goto: function(el) {
         stopWaitAnimation()
-        switch (el) {
+        switch(el) {
             case 'login1':
                 $(".topMenu").hide();
                 break;
@@ -18,7 +18,7 @@ var Navi = {
                 $(".topMenu").hide();
                 break;
             case 'messageWaitingNoImage':
-               initWaitAnimation();
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('header').show();
                 $(".topMenu").hide();
@@ -69,7 +69,7 @@ var Navi = {
                 //toggleTopMenu(registerDic);
                 $(".topMenu").show(); //check reut need to remove
                 $('#register').show();
-                if ($(".slidein ").hasClass('grey')) {
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $(".slide").removeClass("register-slide-back");
@@ -89,7 +89,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if ($(".slidein ").hasClass('grey')) {
+                if($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
                 $(".slide").removeClass("register-slide-back");
@@ -206,6 +206,11 @@ var Navi = {
                 gallerySize();
                 $(".live").hide();
                 ga('send', 'pageview', '/TNS_Program_Votes'); //for google analytics
+                break;
+            case "errorPage":
+                Navi.hidelogin();
+                 $(".live").hide();
+                $('#error').show();
                 break;
             default:
                 Navi.hidelogin();
