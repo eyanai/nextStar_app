@@ -153,8 +153,11 @@
     animation-fill-mode: forwards; /*animation-timing-function: cubic-bezier(0.460, 0.025, 0.425, 1);*/
 }
 
-@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
-    0% {
+/*.nextPage {
+    background-color: #fff;
+}*/
+/*@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
+    /*0% {
         left: -25%;
         top: 25%;
         -webkit-transform: rotateZ(-90deg);
@@ -167,8 +170,8 @@
     }
 }
 
-@keyframes rarrowUp { /*rotate right arrow up- vote single*/
-    0% {
+@keyframes rarrowUp {*/ /*rotate right arrow up- vote single*/
+    /*0% {
         left: -25%;
         top: 25%;
         transform: rotateZ(-90deg);
@@ -179,7 +182,7 @@
         top: 25%;
         transform: rotateZ(0deg);
     }
-}
+}*/
 
 @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
     0% {
