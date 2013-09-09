@@ -250,8 +250,6 @@ $(document).ready(function () {
         $("#agreement").hide();
     });
 
-    /*****images from json to cach list********/
-    getImagesCachList();
 
 
     //check orientation 

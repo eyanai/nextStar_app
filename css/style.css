@@ -875,7 +875,7 @@ background-position: center;
     top: 62%;
 }
 
-.slidein .register-red-flash {
+/*.slidein .register-red-flash {
     background-image: url(../images/register/signin_slider_base_red.png);
     background-size: 95% 92%;
     top: 6%;
@@ -886,6 +886,20 @@ background-position: center;
     position: absolute;
     left: 3%;
     -webkit-animation: mymove 1s infinite;
+}*/
+
+.slidein .register-red-flash {
+    background-image: url(../images/register/signin_slider_base_red.png);
+top: 3%;
+background-repeat: no-repeat;
+background-size: auto 86%;
+position: absolute;
+-webkit-animation: mymove 1s infinite;
+display: block;
+background-position: -3px -6px;
+height: 68px;
+width: 100%;
+left: 3%;
 }
 
 #test-reut{
@@ -2081,7 +2095,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #5FC7ED ;  /* #3befe9;  */
+    background-color: #D60CCE ;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;

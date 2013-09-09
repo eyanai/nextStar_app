@@ -260,6 +260,11 @@ h2 {
 .slider-text {
     font-size: 1.2em;
 }
+.slider-text.notRegistered{
+    top: 12%;
+    font-size: 0.9em;
+    padding-right: 9px;
+}
 
 #notRegister .slider-text {
     font-size: 0.9em;
@@ -524,7 +529,7 @@ section {
 
 
 .banner-wrap{
-    height: 50px;
+    /*height: 50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0px;*/
 }
