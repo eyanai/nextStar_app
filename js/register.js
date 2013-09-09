@@ -228,6 +228,7 @@ function setRegisterGoingClose(data) {
 
 var alertInterval;
 function alertRegisterGoingClose() {
+     clearInterval(alertInterval);
     alertInterval = setInterval(function () {
         $("#alertAud")[0].play();
     }, 1000);
