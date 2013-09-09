@@ -1,5 +1,9 @@
 /* CSS Document */
 
+.nextPage {
+    background-color: white;/* #3befe9;   */
+}
+
 .loginHg .titleLogin {
 
 }
@@ -163,7 +167,45 @@ width: 41%;
 /*================================================VOTE BATTLE SECTION=====================================*/
 
 
+.hate, .like{
+	width:60%;
+}
 
+.hate{
+	right:-36%;
+}
+
+.like{
+	right:100%;
+}
+
+/* .love1,.love2{
+	width:50%; /* 45 
+} 
+ */
+.hate1, .hate2{
+	width:40%; /* 42 */
+}
+
+.hate1{
+	right:62%;
+}
+
+.hate2{
+	right:-1%;
+}
+
+ /* .love2{
+	right:-3%;
+ }
+ 
+ .love1{
+	right:61%;
+ }
+ */
+
+ 
+ 
 /*=============================================RESULTS SECTION======================================================*/
 
 
