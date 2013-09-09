@@ -132,7 +132,7 @@ function postOnFeed() {
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
                 //picture: domain + '/images/header/facebook_star.png',
-                picture: domain + '/images/header/facebook_star1.png',
+                picture: domain + '/images/header/facebook_star_for_post.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
