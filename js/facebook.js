@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////// help parameters
 var appID = "543975688973172";//fb app id
-var myLocation = domain+"/index.html";//domain
-
+//var myLocation = domain+"/index.html";//domain
+var myLocation = window.location.href;
 
 ////////////////////////////////////////////////////// fb init
 ///*FB._https = (window.location.protocol == "https:");*/
@@ -131,7 +131,8 @@ function postOnFeed() {
             FB.api('/me/feed', 'post',
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
-               // picture: domain + '/images/header/facebook_star.png',
+                //picture: domain + '/images/header/facebook_star.png',
+                picture: domain + '/images/header/facebook_star1.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
@@ -207,16 +208,17 @@ function saveDataOnServer(str) {
 
         }
     });
-    postOnFeed();//post on feeds
+    //check if the current day is a day to publish post
+    if (checkTimeForPost()) {
+        postOnFeed(); //post on feeds
+    }
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
 function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
-    if (checkTimeForPost()) {
-        postOnFeed(); //post on feeds
-    }
+    
    //longPolling();
 }
 

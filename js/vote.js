@@ -232,6 +232,13 @@ function setWaitVoteClosePage(data) {
 }
 
 function resetAnimations() {
+    $('.slideRight').draggable('enable');
+    $('.slideLeft').draggable('enable');
+    $('.slideDownbattle.con1').draggable('enable');
+    $('.slideTopbattle.con1').draggable('enable');
+    $('.slideDownbattle.con2').draggable('enable');
+    $('.slideTopbattle.con2').draggable('enable');
+
     $('.arrowRed').removeClass('rotDown');
     $('.slideLeft').removeClass('badSong');
     $('.slideRight').removeClass('hideR');
