@@ -287,6 +287,17 @@ left: 10px;
 	left:5.3%;
 	
 } */
+
+.slidein .register-red-flash {
+    
+    top: 3%;
+background-position: -3px -6px;
+height: 106px;
+width: 100%;
+left: 3%;
+background-size: auto 104%;
+}
+
 /*================================================VOTE SECTION=====================================*/
 
 .slideLeft {
@@ -427,7 +438,7 @@ left: 10px;
 }
 
 .nextPage {
-    background-color: #FEADAD ;
+    background-color: #750CD6 ;
 	}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
