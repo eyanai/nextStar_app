@@ -83,6 +83,12 @@ html,body{
 	top:-4%;
 }
 
+.slider-text.notRegistered{
+ 
+    padding-right: 12px;
+}
+
+
 /*================================================VOTE SECTION=====================================*/
 @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
     0% {

@@ -41,9 +41,9 @@ section {
 
 
 .banner-wrap{
-    height: 66px;
+    /*height: 66px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0px;*/
 }
 
 /*===========================================horizonal-screen=================================*/
@@ -437,9 +437,6 @@ background-size: auto 104%;
 	left:-23%;
 }
 
-.nextPage {
-    background-color: #750CD6 ;
-	}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
