@@ -3,11 +3,11 @@
 var generalParameters = {
     isRegistered: false, //if register to vote
     wasRegisterPage: false,
-    // voteIdA: null,
+   // voteIdA: null,
     //voteKeyA: null,
     //voteIdB: null,
     //voteKeyB: null,
-    // isSingle: null, //is the vote is to single or battle
+   // isSingle: null, //is the vote is to single or battle
     fbUser: {
         id: null,
         userName: null,
@@ -18,24 +18,24 @@ var generalParameters = {
     isBigSize: false,
     ruledChecked: false,
     isConnect: false,
-    onLoad: true
+    onLoad:true
 
 }
 
 
-var voteGeneralParameters = {
-    status: 0,
-    registered: false,
-    isSingle: null,
-    voteid1: 0,
-    voteid2: 0,
+var voteGeneralParameters ={
+    status:0,
+    registered:false,
+    isSingle:null,
+    voteid1:0,
+    voteid2:0,
     votekey1: null,
     votekey2: null,
-
+    
     //null - not vote, 0 - bad , 1- good
-    like1: null,
-    like2: null,
-    votePageId: 0
+    like1:null,
+    like2:null,
+    votePageId:0
 
 }
 
@@ -116,8 +116,6 @@ function initDictionaryValues() {
         success: function (data) {
             dictionary = JSON.parse(data);
             registerDic = dictionary.registerDic;
-            notRegisterDic = dictionary.notRegisterDic;
-            notRegisterWaitDic = dictionary.notRegisterWaitDic;
             pushVoteDic = dictionary.pushVoteDic;
             afterVoteDic = dictionary.afterVoteDic;
             voteCloseDic = dictionary.voteCloseDic;
@@ -214,11 +212,11 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     ga('send', 'pageview', '/TNS_Homepage'); //for google analytics
     $.ajaxSetup({ cache: false });
     checkPCScreen();
-    if (window.location.host.indexOf("9090") > -1) {
+    if(window.location.host.indexOf("9090") > -1) {
         $(".nextPage").hide();
     }
     // window.location = "http://thenextstar.mako.co.il/test.html";
@@ -234,10 +232,10 @@ $(document).ready(function () {
     soundsLoad(); //init sounds
 
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
 
@@ -245,17 +243,19 @@ $(document).ready(function () {
     loadRelevantCss();
     attachDrag();
 
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
 
+    /*****images from json to cach list********/
+    getImagesCachList();
 
 
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch (isPortrait) {
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
@@ -269,29 +269,25 @@ $(document).ready(function () {
 });
 
 var browser;
-var browserAnimation;
-
 function initBrowser() {
     var ua = navigator.userAgent.toLowerCase();
     console.log("user agent: " + ua);
     var androidSmall = false;
     var androidSmall2 = false;
     var androidNormal = false;
-    browserAnimation = "everythingElse";
     if (ua.search("android") > -1 && !(ua.search("mobile") > -1)) {
         androidNormal = true;
     }
-    if (androidNormal) {
+	if (androidNormal) {
         browser = "androidNormal";
-        browserAnimation = "androidNormal";
     }
-    if (ua.search("android") > -1 && ua.search("mobile") > -1 && (ua.search("i9300") > -1 || ua.search("i9500") > -1)) {
+    if (ua.search("android") > -1 && ua.search("mobile") > -1 && (ua.search("i9300") >-1 || ua.search("i9500") >-1 ))    {
         androidSmall = true;
     }
     if (androidSmall) {
         browser = "androidSmall";
     }
-    if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") > -1) {
+    if (ua.search("android") > -1 && ua.search("mobile") > -1 && ua.search("i9100") >-1)    {
         androidSmall2 = true;
     }
     if (androidSmall2) {
@@ -300,40 +296,24 @@ function initBrowser() {
 
 }
 
-function loadRelevantCss() {
-
-    switch (browserAnimation) {
-
-        case "androidNormal":
-            loadcssfile("css/arrow-anim-android.css");
-
-            break;
-
-        case "everythingElse":
-            loadcssfile("css/arrow-anim.css");
-            break;
-
-    }
-
-    switch (browser) {
+function loadRelevantCss(){
+     switch (browser) {
 
         case "androidSmall2":
             loadcssfile("css/andrd_small_2.css");
-
+			
             break;
-
-        case "androidNormal":
+			
+		case "androidNormal":
             loadcssfile("css/andrd_normal.css");
-
+			
             break;
-
-        case "androidSmall":
+		
+		case "androidSmall":
             loadcssfile("css/andrd_small.css");
-
-            break;
+			
+              break;
     }
-
-
 }
 
 function loadcssfile(filename) {
@@ -375,17 +355,17 @@ function initBannerScript() {
 
 function df() {//show the agreement on click in login section
     $("#scroller").html('');
-    $("#scroller").append(' <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_2.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_3.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_4.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_6.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_7.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_8.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_9.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_10.jpg" alt="1"></li>' +
-                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>' +
+    $("#scroller").append(' <li><img src="images/agreement/agreement_page_1.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_2.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_3.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_4.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_5.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_6.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_7.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_8.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_9.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_10.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>'+
                     '<li><img src="images/agreement/agreement_page_12.jpg" alt="1"></li>');
 
     $("#agreement").show();
@@ -393,9 +373,9 @@ function df() {//show the agreement on click in login section
 }
 
 
-function checkPCScreen() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
+function checkPCScreen(){
+     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+     
     }
     else {
         $("#pc-screen").show();
@@ -403,17 +383,17 @@ function checkPCScreen() {
 }
 
 
-function getImagesCachList() {
-    $.getJSON('/page/imagesList.json', function (data) {
-        var css = 'body:after{content:';
-
-        $.each(data, function (key, val) {
-            css += 'url("' + val + '") ';
-        });
-
-        css += ';display:none;}';
-
-        $("head").append($('<style>' + css + '</style>'));
-
-    });
+function getImagesCachList(){
+    $.getJSON('/page/imagesList.json', function(data) {
+	var css='body:after{content:';
+	
+	$.each(data, function(key, val) {
+		css+='url("'+val+'") ';
+	});
+	
+	css+=';display:none;}';
+	
+	$("head").append($('<style>'+css+'</style>'));
+	
+});
 }
