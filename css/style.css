@@ -945,6 +945,7 @@ left: 0%;
 
 .slidein.grey .slider-text + p{
 	padding-right:9px;
+	
 }
 
 
@@ -973,6 +974,9 @@ left: 0%;
     width: 58%;
     text-align: center;
 	vertical-align:middle;  
+	margin:auto;
+	padding-top:0px;
+	top:11%;
 }
 .slidein .slider-text span{
    
@@ -2077,7 +2081,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #CE4239 ;  /* #3befe9;  */
+    background-color: #5FC7ED ;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;
