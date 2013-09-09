@@ -2,14 +2,14 @@
 
 var Navi = {
 
-    hidelogin: function() {
+    hidelogin: function () {
         $('header').removeClass('hide');
         $('#login,section').hide();
     },
 
-    goto: function(el) {
+    goto: function (el) {
         stopWaitAnimation()
-        switch(el) {
+        switch (el) {
             case 'login1':
                 $(".topMenu").hide();
                 break;
@@ -69,7 +69,7 @@ var Navi = {
                 //toggleTopMenu(registerDic);
                 $(".topMenu").show(); //check reut need to remove
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 };
                 $(".slide").removeClass("register-slide-back");
@@ -90,7 +90,7 @@ var Navi = {
             case 'registerBattle':
                 Navi.hidelogin();
                 $('#register').show();
-                if($(".slidein ").hasClass('grey')) {
+                if ($(".slidein ").hasClass('grey')) {
                     $(".slidein ").removeClass('grey');
                 }
                 $(".slide").removeClass("register-slide-back");
@@ -116,10 +116,12 @@ var Navi = {
                 $("#register .slider-text").addClass("notRegistered");
                 $(".slide.btn").hide();
                 $(".slide").removeClass("register-slide-back");
-                $(".topMenu").slideUp(700);
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
-                $("#register .reMesseg .continue").slideDown(500); //text was changed to textWaitVote in setOpenRegisterPage()
+                $(".topMenu").show();
+                toggleTopMenu(notRegisterDic);
+                $("#register .reMesseg .continue h2").text(notRegisterWaitDic);
+                $("#register .reMesseg .continue").slideDown(500);
 
                 //ga('send', 'pageview', '/TNS_Votes_CI');//for google analytics
                 break;
@@ -232,13 +234,13 @@ var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize
 
 window.addEventListener(orientationEvent,
    function () {
-     //  $("#horizonal-screen").show();
+       //  $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {
            //alert("work");
            isPortrait = (window.innerHeight / window.innerWidth) > 1;
            //alert(window.isPortrait);	
-            switch (isPortrait) {
+           switch (isPortrait) {
                case true:
 
                    $("#horizonal-screen").hide();
