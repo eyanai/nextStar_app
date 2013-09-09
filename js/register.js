@@ -124,8 +124,8 @@ function attachDrag() {
                 //$(".slide").addClass("register-slide-back");
                 $("#checkInAud")[0].play();
                 // $(ui.helper).css("left", "4px");
-
-                $(".slide").hide();
+				
+				$(".slidein").hide();
                 $(".deny-register").show();
                 setTimeout(function () {
                     setRegister();
@@ -164,25 +164,25 @@ function attachDrag() {
             var lengthNoPx = ui.helper.css("left").length - 2;
             var widthInPx = ($("#registerBattle").width() / 100) * $(".slidein").width();
 
-            if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
-                if ($(window).width() > 700) {
-                    $(ui.helper).css("left", "52%");
-                }
-                else {
-                    $(ui.helper).css("left", "60%");
-                }
-                //$(".slide").addClass("register-slide-back");
-                $("#checkInAud")[0].play();
-                // $(ui.helper).css("left", "4px");
-                $(".slide").hide();
-                $(".deny-register").show();
-                //stop the red flash sound
-                $("#alertAud")[0].pause();
-                clearInterval(alertInterval);
-                setTimeout(function () {
-                    setRegister();
-                    Navi.goto("WaitVotePage");
-                }, 300);
+        if(ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx / 2)) { //btn position goes over 50%
+            if ($(window).width() > 700){
+				$(ui.helper).css("left", "52%");
+			}
+			else {
+				$(ui.helper).css("left", "60%");
+			}
+            //$(".slide").addClass("register-slide-back");
+            $("#checkInAud")[0].play();
+            // $(ui.helper).css("left", "4px");
+			$(".slidein").hide();
+            $(".deny-register").show();
+            //stop the red flash sound
+            $("#alertAud")[0].pause();
+            clearInterval(alertInterval);
+            setTimeout(function() {
+                 setRegister();
+                 Navi.goto("WaitVotePage");
+                }, 1600);
 
             }
             else {

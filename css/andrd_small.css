@@ -83,12 +83,21 @@ html,body{
 	left:5.3%;
 } */
 
+.slider-text {
+    font-size: 1em;
+    right: 29%;
+}
+
 .slidein.grey .slider-text{
 	top:27%;
 }
 
 .slideStay, .slideGo{
 	top:-4%;
+}
+
+.slidein{
+	padding-right:10%;
 }
 
 /*================================================VOTE SECTION=====================================*/
@@ -124,6 +133,31 @@ width: 28%;
 left: -30%;
 top: 26%;
 width: 41%;
+}
+
+.slideStay, .slideGo{
+	top:-12%;
+}
+
+.slideStay{
+	left:-23%;
+}
+
+ .slideGo{
+	left:38%;
+}
+
+
+.slideGo h1, .slideStay h1{
+	top:50%;
+}
+
+/* .contestant2 .slideGo, .contestant1 .slideGo{
+	top:25%;
+} */
+
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay{
+	top:26%;
 }
 
 /*================================================VOTE BATTLE SECTION=====================================*/

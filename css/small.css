@@ -233,7 +233,7 @@ h2 {
 
 
 
-.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .Stay {
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay  {
     top: 22%;
 }
 
@@ -309,7 +309,7 @@ section {
 
 
 .slide:hover {
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 
 .slideLeft {
@@ -324,12 +324,13 @@ section {
 }
 
 .slideStay {
-    top: -8%;
+    top: -7%;
+	left:-21%;
 }
 
 .slideGo {
-    top: -8%;
-    left: 34%;
+    top: -7%;
+    left: 36%;
 }
 
 /* .slideStay h1 {
@@ -504,12 +505,19 @@ section {
 }*/
 
 
-.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1 ,.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1  {
 
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
-.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+.contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1{
+	top:42%;
+}
 
-    font-size: 0.8em;
+.slideGo h1, .slideStay h1 {
+	top:42%;
+}
+
+.contestant2 .slideTopbattle h1{
+	left:25%;
 }

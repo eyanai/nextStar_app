@@ -409,22 +409,28 @@ left: 10px;
 
 
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
-
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
 
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 
-
+.slideStay{
+	left:-23%;
+}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
 #voteBattle .btn {
     top: 23%;
 }
+
+.contestant2 .slideGo, .contestant1 .slideGo, .contestant2 .slideStay, .contestant1 .slideStay{
+	top:23%;
+}
+
 
 
 /*=============================================RESULTS SECTION======================================================*/
