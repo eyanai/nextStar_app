@@ -17,7 +17,7 @@ html, body {
 
 section {
     height: 82.8%;
-    top: 11.4%;
+    top: 11.3%;
 }
 
 #login .musix {
@@ -39,6 +39,10 @@ section {
     height: 5.8%;
 }
 
+
+.banner-wrap{
+    height: 66px;
+}
 
 /*===========================================horizonal-screen=================================*/
 
@@ -70,7 +74,7 @@ header {
 
 .topMenu {
     height: 5%;
-    top: 11.5%;
+    top: 11.3%;
     line-height: 2em;
 }
 
@@ -409,17 +413,20 @@ left: 10px;
 
 
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
-    font-size: 1.8em;
+    font-size: 2.5em;
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
-
-    font-size: 1.8em;
+    font-size: 2.5em;
 }
 
 .slideStay{
 	left:-23%;
 }
+
+.nextPage {
+    background-color: #FEADAD ;
+	}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 

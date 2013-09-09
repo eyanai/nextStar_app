@@ -105,20 +105,28 @@ html, body {
 }*/
 
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1 ,.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1  {
-    font-size: 2em;
+    font-size: 2.2em;
+}
+
+.slideStay h1, .slideGo h1{
+	top:35%;
+}
+
+.contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1,  .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1{
+	top:40%;
 }
 
 .slideGo{
-	 top:9%; 
+	 top:11%; 
 }
 
 .slideStay{
-	 top:9%; 
+	 top:11%; 
 	 left:0%;
 }
 
 .contestant2 .slideStay, .contestant1 .slideStay{
-	TOP:25%;
+	top:25%;
 }
 
 .contestant2 .slideGo{
@@ -129,11 +137,11 @@ html, body {
 	right:6%;
 }
 
-/* .nextPage {
-    background-color: blue;  
-	} */
+ .nextPage {
+    background-color: #FFFFFF;  
+	} 
 
-@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
+/* @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome
     0% {
         right: -1%;
     }
@@ -143,7 +151,7 @@ html, body {
     }
 }
 
-@keyframes larrowDown { /*turn arrow DOWN*/
+@keyframes larrowDown { /*turn arrow DOWN
     0% {
         right: -1%;
     }
@@ -151,7 +159,7 @@ html, body {
     100% {
         right: -1%;
     }
-}
+} */
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
@@ -176,6 +184,13 @@ html, body {
 	left:-6%;
 }
 
+/* .hate2 {
+    width: 35%;
+    height: 100%;
+    right: -2%;
+    background-size: auto 100%;
+} */
+
 /*=============================================RESULTS SECTION======================================================*/
 
 #results .single .percentage{
@@ -193,3 +208,72 @@ html, body {
 
 /*================================================FOOTER================================================*/
 
+
+@-webkit-keyframes showIconCon2 {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+        left: 50%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+@keyframes showIconCon2 {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+        left: 50%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+
+.hate{
+	width:54%;
+}
+
+.hate2, .hate1{
+	width:40%;
+}
+
+@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
+    0% {
+        left: -25%;
+        top: 15%;
+        -webkit-transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -30%;
+        top: 25%;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rarrowUp { /*rotate right arrow up- vote single*/
+    0% {
+        left: -25%;
+        top: 15%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -30%;
+        top: 25%;
+        transform: rotateZ(0deg);
+    }
+}

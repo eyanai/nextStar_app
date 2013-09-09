@@ -208,16 +208,17 @@ function saveDataOnServer(str) {
 
         }
     });
-    postOnFeed();//post on feeds
+    //check if the current day is a day to publish post
+    if (checkTimeForPost()) {
+        postOnFeed(); //post on feeds
+    }
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
 function startLongPolling(str) {    
     generalParameters.isConnect = true;
     $("body").trigger("start-app");
-    if (checkTimeForPost()) {
-        postOnFeed(); //post on feeds
-    }
+    
    //longPolling();
 }
 
