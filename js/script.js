@@ -208,7 +208,9 @@ function toggleTopMenu(headerText) {
 
 function showFlash() {
     $(".register-red-flash").show();
+    $("#alertAud")[0].play();
     alertRegisterGoingClose();
+    
 }
 
 
