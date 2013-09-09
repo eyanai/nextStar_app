@@ -875,28 +875,27 @@ background-position: center;
     top: 62%;
 }
 
-.slidein .register-red-flash {
+/*.slidein .register-red-flash {
     background-image: url(../images/register/signin_slider_base_red.png);
     top: 6%;
     background-repeat: no-repeat;
     background-size: auto 100%;
     position: absolute;
     -webkit-animation: mymove 1s infinite;
-	  display: block !important;  
-	background-position: -3px -6px;
-	height: 68px;
-	width: 59%;
-	left:3%;
-	
-	
-/* 	height: 68px;
-	width: 59%;
-	 padding-right: 4%; 
-	background-size: auto 100%;
-	left: 20%;
-	background-position: -8px -9px; */
-	overflow: hidden;
-	
+}*/
+
+.slidein .register-red-flash {
+    background-image: url(../images/register/signin_slider_base_red.png);
+top: 3%;
+background-repeat: no-repeat;
+background-size: auto 86%;
+position: absolute;
+-webkit-animation: mymove 1s infinite;
+display: block;
+background-position: -3px -6px;
+height: 68px;
+width: 100%;
+left: 3%;
 }
 
 #test-reut{
@@ -2092,7 +2091,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #196085 ;  /* #3befe9;  */
+    background-color: #D60CCE ;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;
