@@ -42,6 +42,8 @@ section {
 
 .banner-wrap{
     height: 66px;
+    position: absolute;
+    bottom: 0px;
 }
 
 /*===========================================horizonal-screen=================================*/

@@ -85,6 +85,7 @@ var Navi = {
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
                 ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                $("#register .slider-text").removeClass("notRegistered");
                 break;
             case 'registerBattle':
                 Navi.hidelogin();
@@ -105,12 +106,14 @@ var Navi = {
                 // }, 3500);
                 $(".slide.btn").show();
                 ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                $("#register .slider-text").removeClass("notRegistered");
                 break;
             case 'notRegister':
                 initWaitAnimation();
                 clearRegisterWishTextInterval();
                 $(".slidein ").addClass('grey');
                 $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לביצוע הבא</p>");
+                $("#register .slider-text").addClass("notRegistered");
                 $(".slide.btn").hide();
                 $(".slide").removeClass("register-slide-back");
                 $(".topMenu").slideUp(700);
@@ -209,7 +212,7 @@ var Navi = {
                 break;
             case "errorPage":
                 Navi.hidelogin();
-                 $(".live").hide();
+                $(".live").hide();
                 $('#error').show();
                 break;
             default:
