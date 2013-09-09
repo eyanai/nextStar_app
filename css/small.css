@@ -522,15 +522,9 @@ section {
 	left:25%;
 }
 
- .slider-text.notRegistered{
-	top:11%;
-}
-
-
-
-
-
 
 .banner-wrap{
     height: 50px;
+    position: absolute;
+    bottom: 0px;
 }
