@@ -212,11 +212,11 @@ function showFlash() {
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     ga('send', 'pageview', '/TNS_Homepage'); //for google analytics
     $.ajaxSetup({ cache: false });
     checkPCScreen();
-    if (window.location.host.indexOf("9090") > -1) {
+    if(window.location.host.indexOf("9090") > -1) {
         $(".nextPage").hide();
     }
     // window.location = "http://thenextstar.mako.co.il/test.html";
@@ -232,10 +232,10 @@ $(document).ready(function () {
     soundsLoad(); //init sounds
 
     $("body").on("start-app", longPolling);
-    if (generalParameters.isConnect) {
+    if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }
-    if (!generalParameters.onLoad) {
+    if(!generalParameters.onLoad) {
         $("#loader").hide();
     }
 
@@ -243,17 +243,19 @@ $(document).ready(function () {
     loadRelevantCss();
     attachDrag();
 
-    $("#close-agreement").on("click", function () {
+    $("#close-agreement").on("click", function() {
         $("#login").show();
         $("#agreement").hide();
     });
 
+    /*****images from json to cach list********/
+    getImagesCachList();
 
 
     //check orientation 
     var isPortrait = (window.innerHeight / window.innerWidth) > 1;
     //alert(window.isPortrait);	
-    switch (isPortrait) {
+    switch(isPortrait) {
         case true:
 
             $("#horizonal-screen").hide();
@@ -378,4 +380,20 @@ function checkPCScreen(){
     else {
         $("#pc-screen").show();
     }
+}
+
+
+function getImagesCachList(){
+    $.getJSON('/page/imagesList.json', function(data) {
+	var css='body:after{content:';
+	
+	$.each(data, function(key, val) {
+		css+='url("'+val+'") ';
+	});
+	
+	css+=';display:none;}';
+	
+	$("head").append($('<style>'+css+'</style>'));
+	
+});
 }
