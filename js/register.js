@@ -119,7 +119,7 @@ function attachDrag(){
                 $("#checkInAud")[0].play();
                 // $(ui.helper).css("left", "4px");
 				
-				$(".slide").hide();
+				$(".slidein").hide();
                 $(".deny-register").show();
                 setTimeout(function() {
                     setRegister();
@@ -164,7 +164,7 @@ function attachDrag(){
             //$(".slide").addClass("register-slide-back");
             $("#checkInAud")[0].play();
             // $(ui.helper).css("left", "4px");
-			$(".slide").hide();
+			$(".slidein").hide();
             $(".deny-register").show();
             //stop the red flash sound
             $("#alertAud")[0].pause();

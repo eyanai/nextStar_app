@@ -762,6 +762,7 @@ input[type=checkbox].checked{
     display: inline-block;
     vertical-align: middle;
     background-position-x: -285.25px;
+	margin-top:1%;
     /* top: 72%; */
 }
 
@@ -813,6 +814,7 @@ input[type=checkbox].checked{
     height: 80%;
     padding-top: 1%;
     font-size: 1.5em;
+	direction:rtl;
 }
 
 .contestant {
@@ -994,7 +996,7 @@ left: 0%;
     background-repeat: no-repeat;
     background-position: left center;
     position: absolute;
-    width: 23%;
+    width: 26%;
 height: 72%;
 background-size: auto 100%;
 top: 2px;
@@ -1051,6 +1053,7 @@ left: 2px;
     background-color: rgba(0,0,0,.65);
     height: 49%;
     z-index: 5;
+	direction:rtl;
 }
 
 #register .reMesseg .continue {
@@ -1260,41 +1263,44 @@ left: 2px;
 .slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1  {
     position: absolute;
     top: 38%;
-    left: 50%;
-    font-size: 1em;
     color: #Fb285f; /* red */
+}
+
+.slideStay h1, .contestant2 .slideDownbattle h1  {
+    left: 30%;
+}
+
+.contestant2 .slideTopbattle h1{
+	left:30%;
 }
 
 .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
     position: absolute;
     top: 38%;
-    right: 50%;
-    font-size: 1em;
     color: #00a9ff;  /* blue.  VICE VERSA... */
 }
 
-/*.slideStay h1, .slideGo h1{
-    font-size: 0.9em;
-}*/
-
-
- .contestant1 .slideDownbattle h1  {
-	right: 30%;
- }
-
-.contestant2 .slideTopbattle h1{
-	left: 30%;
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1 ,.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1  {
+    font-size: 1.5em;
 }
 
-/* 
-.contestant1 .slideStay h1 {
-    left: 30%;
+
+.slideStay h1{
+	/* top:; */
 }
 
-.contestant2 .slideGo h1 {
-    right: 30%;
+.slideGo h1{
+    right: 50%;	
 }
- */
+
+.contestant1 .slideDownbattle h1 {
+    right: 30%;	
+}
+
+.contestant1 .slideTopbattle h1{
+	right:20%;
+}
+
 .slideRight {
     background-image: url(../images/votes/slide_pick_right.png);
     background-size: 100% 100%;
@@ -1334,7 +1340,7 @@ top: 8%;
 background-repeat: no-repeat;
 background-position: center;
 left: -49%;
-background-size: 100% 100%;
+background-size: auto 100%;
 opacity: 0;
 z-index: 1;
 }
@@ -1364,7 +1370,7 @@ transform: rotateZ(-180deg);
     background-repeat: no-repeat;
     background-position: center;
     left: 1%;
-    background-size: 100%;
+    background-size: auto 100%;
     opacity: 0;
     z-index: 3;
 }
@@ -1378,7 +1384,7 @@ transform: rotateZ(-180deg);
     background-repeat: no-repeat;
     background-position: center;
     right: 2%;
-    background-size: 100%;
+    background-size: auto 100%;
     opacity: 0;
     z-index: 3;
 }
@@ -1393,7 +1399,7 @@ transform: rotateZ(-180deg);
     background-repeat: no-repeat;
     background-position: center;
     left: -35%;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     opacity: 0;
     z-index: 1;
 }
@@ -1409,7 +1415,7 @@ transform: rotateZ(-180deg);
     background-repeat: no-repeat;
     background-position: center;
     left: 2%;
-    background-size: 100%;
+    background-size: auto 100%;
     opacity: 0;
 }
 
@@ -1424,7 +1430,7 @@ transform: rotateZ(-180deg);
     background-repeat: no-repeat;
     background-position: center;
     right: 2%;
-    background-size: 100%;
+    background-size: auto 100%;
     opacity: 0;
 }
 /*================================================VOTE BATTLE SECTION=====================================*/
@@ -1517,13 +1523,12 @@ transform: rotateZ(-180deg);
 
 .contestant1 .slideStay {
     right: 57%;
-    top: 7%;
     background-position: left center;
 }
 
 
 .contestant1 .slideGo {
-    right: 10%;
+    right: 8%;
     background-position: left center;
 }
 
@@ -1533,7 +1538,7 @@ transform: rotateZ(-180deg);
 }
 
 .contestant2 .slideGo {
-    right: 18%;
+    right: 19%;
     background-position: right center;
 }
 
@@ -2071,7 +2076,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: yellow;  /* #3befe9;  */
+    background-color: #CE4239 ;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;

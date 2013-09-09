@@ -104,15 +104,34 @@ html, body {
 	top:10%;
 }*/
 
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1 ,.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1  {
+    font-size: 2em;
+}
+
 .slideGo{
-	 top:7%; 
+	 top:9%; 
 }
 
 .slideStay{
-	 top:7%; 
+	 top:9%; 
 	 left:0%;
 }
 
+.contestant2 .slideStay, .contestant1 .slideStay{
+	TOP:25%;
+}
+
+.contestant2 .slideGo{
+	right:21%;
+}
+
+.contestant1 .slideGo{
+	right:6%;
+}
+
+/* .nextPage {
+    background-color: blue;  
+	} */
 
 @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
     0% {

@@ -105,6 +105,15 @@ html,body{
 }
 
 
+.contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1{
+	top:40%;
+}
+
+.slideStay h1 {
+	left:20%;
+}
+
+
 /*================================================VOTE BATTLE SECTION=====================================*/
 
 
