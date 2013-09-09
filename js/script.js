@@ -112,7 +112,7 @@ function initDictionaryValues() {
     $.ajax({
         type: "GET",
         datatype: "json",
-        url: "/dictionary/dictionary.txt",
+        url: "dictionary/dictionary.txt",
         success: function (data) {
             dictionary = JSON.parse(data);
             registerDic = dictionary.registerDic;
