@@ -521,3 +521,10 @@ section {
 .contestant2 .slideTopbattle h1{
 	left:25%;
 }
+
+
+.banner-wrap{
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+}
