@@ -132,6 +132,7 @@ var Navi = {
                 //ga('send', 'pageview', '/TNS_Votes_CI');//for google analytics
                 break;
             case 'voteSingle':
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('#vote').show();
                 $(".topMenu").show();
@@ -143,6 +144,7 @@ var Navi = {
 
                 break;
             case 'voteBattle':
+                initWaitAnimation();
                 Navi.hidelogin();
                 $('#vote').show();
                 $(".topMenu").show();

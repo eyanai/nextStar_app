@@ -281,36 +281,3 @@ html, body {
         transform: rotateZ(0deg);
     }
 }
-
-
-.hate, .like{
-	width:60%;
-}
-
-.like{
-	right:110%;
-}
-
-/* .love1,.love2{
-	width:40%; 
-}  */
-
-.hate1, .hate2{
-	width:40%; /* 42 */
-}
-
-.hate1{
-	right:62%;
-}
-
-.hate2{
-	right:-6%;
-}
-/* 
- .love2{
-	right:-2%;
- }
- 
- .love1{
-	right:62%;
- } */

@@ -4,7 +4,7 @@ color: yellow;
 }*/
 
 .nextPage {
-    background-color: yellow;/* #3befe9;   */
+    background-color: white;/* #3befe9;   */
 }
 
 /*=====================================================generel==============================================*/
@@ -179,7 +179,11 @@ header{
 }
  */
 .hate, .like{
-	width:55%;
+	width:60%;
+}
+
+.hate{
+	right:-36%;
 }
 
 .like{
@@ -203,9 +207,9 @@ header{
 }
 
  .love2{
-	right:-1%;
+	right:-7%;
  }
  
  .love1{
-	right:64%;
+	right:61%;
  }
