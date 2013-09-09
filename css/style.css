@@ -138,7 +138,7 @@ section {
     height: 10.5%;
     width: 100%;
     display: block;
-    border-top: solid 1px #00486d;
+    /*border-top: solid 1px #00486d;*/
     z-index: 10;
 }
 
@@ -2081,7 +2081,7 @@ background-position-y: 10%;*/
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #5FC7ED ;  /* #3befe9;  */
+    background-color: #ff0060 ;  /* #3befe9;  */
     top: 47px;
     left: 1px;
     z-index: 500;
