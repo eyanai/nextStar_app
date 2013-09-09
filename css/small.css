@@ -522,9 +522,14 @@ section {
 	left:25%;
 }
 
+/* .slidein {
+	width: 53%;
+	padding-right: 10%; 
+} */
+
 
 .banner-wrap{
-    height: 50px;
+    /*height: 50px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0px;*/
 }

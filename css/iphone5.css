@@ -3,6 +3,10 @@
 color: yellow;
 }*/
 
+.nextPage {
+    background-color: yellow;/* #3befe9;   */
+}
+
 /*=====================================================generel==============================================*/
 
 html,body{
@@ -99,16 +103,30 @@ header{
 } */
 
 .slidein.grey .slider-text{
-	top:25%;
+	top:15%;
 }
 
 .slideStay, .slideGo{
-	top:-4%;
+	top:20%;
 }
 
 /*================================================VOTE SECTION=====================================*/
+  .contestant2 .slideStay, .contestant1 .slideStay  {
+    top: 25%;
+}
 
+.contestant2 .slideGo, .contestant1 .slideGo{
+	top:30%;
+}
 
+.slideGo, .slideStay{
+	top:1%;
+	
+}
+
+.contestant1 .slideGo{
+	right:9%;
+}
 
 /*================================================VOTE BATTLE SECTION=====================================*/
 
@@ -140,3 +158,54 @@ header{
 	height:8.87%;
 }
 
+
+
+
+
+/* .contestant1 .like {
+    right: 60%;
+}
+
+.contestant1 .hate {
+    right: 60%;
+}
+
+.contestant2 .like {
+    left: 60%;
+}
+
+.contestant2 .hate {
+    right: 60%;
+}
+ */
+.hate, .like{
+	width:55%;
+}
+
+.like{
+	right:100%;
+}
+
+.love1,.love2{
+	width:50%; /* 45 */
+} 
+
+.hate1, .hate2{
+	width:40%; /* 42 */
+}
+
+.hate1{
+	right:62%;
+}
+
+.hate2{
+	right:-1%;
+}
+
+ .love2{
+	right:-1%;
+ }
+ 
+ .love1{
+	right:64%;
+ }
