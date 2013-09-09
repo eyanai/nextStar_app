@@ -4,7 +4,7 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleLeft',
         drag: function (event, ui) {
-            if ($('.slideLeft').position().left > (($("body").width()) / 2 - 0.08 * ($("body").width()))) {
+            if ($('.slideLeft').position().left >= (($("body").width()) / 2 - 0.08 * ($("body").width()))) {
                 $('.slideRight').draggable('disable');//disable to vote again
                 //if passes the middle
                 $('.arrowRed').addClass('rotDown');
@@ -36,7 +36,7 @@ function initDrag() {
         axis: "x",
         containment: '#slideSingleRight',
         drag: function (event, ui) {
-            if ($('.slideRight').position().left < 0.08*($("body").width())) {
+            if ($('.slideRight').position().left <= 0.08*($("body").width())) {
                 $('.slideLeft').draggable('disable');//disable to vote again
                 $('.arrowBlue').addClass('rotupl');
                 $('.slideRight').addClass('goodSong');
@@ -63,7 +63,7 @@ function initDrag() {
         containment: "#rslidecon",
         drag: function (event, ui) {
             sR = $(document).width();
-            if ($('.slideTopbattle.con1').position().left < 0.08*($("body").width())) {
+            if ($('.slideTopbattle.con1').position().left <= 0.08*($("body").width())) {
                 $('.slideDownbattle.con1').draggable('disable');//disable to vote again
                 $('.redArrow.cont1').addClass('rotdwnrcon1');
                 $('.slideTopbattle.con1').addClass('battel1vot');
@@ -86,7 +86,7 @@ function initDrag() {
         axis: "x",
         containment: "#rslidecon",
         drag: function (event, ui) {
-            if ($('.slideDownbattle.con1').position().left < 0.08*($("body").width())) {
+            if ($('.slideDownbattle.con1').position().left <= 0.08*($("body").width())) {
                 $('.slideTopbattle.con1').draggable('disable');//disable to vote again
                 $('.blueArrow.cont1').addClass('rotuprcon1');
                 $('.slideDownbattle.con1').addClass('battel1vot');
@@ -109,7 +109,7 @@ function initDrag() {
         axis: "x",
         containment: "#lslidecon",
         drag: function (event, ui) {
-            if ($('.slideTopbattle.con2').position().left > (($("body").width()) / 2 - 0.08*($("body").width()))) {
+            if ($('.slideTopbattle.con2').position().left >= (($("body").width()) / 2 - 0.08*($("body").width()))) {
                 $('.slideDownbattle.con2').draggable('disable');//disable to vote again
                 $('.redArrow.cont2').addClass('rotdwnlcon2');
                 $('.slideTopbattle.con2').addClass('battel2vot');
@@ -133,7 +133,7 @@ function initDrag() {
         axis: "x",
         containment: "#lslidecon",
         drag: function (event, ui) {
-            if ($('.slideDownbattle.con2').position().left > (($("body").width()) / 2 - 0.08*($("body").width()))) {
+            if ($('.slideDownbattle.con2').position().left >= (($("body").width()) / 2 - 0.08*($("body").width()))) {
                 $('.slideTopbattle.con2').draggable('disable');//disable to vote again
                 $('.blueArrow.cont2').addClass('rotuplcon2');
                 $('.slideDownbattle.con2').addClass('battel2vot');
