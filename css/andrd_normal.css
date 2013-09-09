@@ -78,6 +78,9 @@ html, body {
     padding-top: 1.6%;
 }
 
+.slidein.grey .slider-text{
+	top:11%;
+}
 
 /*================================================VOTE SECTION=====================================*/
 
@@ -115,6 +118,7 @@ html, body {
     right: 6%;
 }
 
+	
 
 
 @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
