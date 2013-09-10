@@ -1,23 +1,25 @@
 
 .loginHg .titleLogin {
-
 }
 
-/*=====================================================generel==============================================*/
+/*=====================================================general==============================================*/
 
 html, body {
-   
     direction: ltr;
-   
 }
 
-.reMesseg .continue{
-	direction:rtl;
+.reMesseg .continue {
+    direction: rtl;
 }
 
-.continue{
-	direction:rtl;
+.continue {
+    direction: rtl;
 }
+
+.contIcons {
+    margin-top: -2%;
+}
+
 
 /*===========================================horizonal-screen=================================*/
 
@@ -29,159 +31,180 @@ html, body {
 
 /*================================================LOG IN SECTION=====================================*/
 
-.logo.login{
-	height:23%;
-	/* border-left:1px solid blue; */
+.logo.login {
+    height: 23%;
 }
 
-#loginExtendedBox{
-	height:44%;
-	margin:14% auto 10%;
-	
-	
+#loginExtendedBox {
+    height: 44%;
+    margin: 14% auto 10%;
 }
 
-.loginHg .titleLoginReward{
-	min-height: 60px; 
-	padding: 10% 24% 0;
-	margin:9% auto;
-}
-/*#loginExtendedBox .login{
-    border: 1px solid black;
-}*/
-
-#loginExtendedBox .loginHg{
-	height:14.5%;
+.loginHg .titleLoginReward {
+    min-height: 60px;
+    padding: 10% 24% 0;
+    margin: 9% auto;
 }
 
-.loginHg .titleLogin{
-	line-height:1.3em;
+#loginExtendedBox .loginHg {
+    height: 14.5%;
 }
 
-#login .checkboxArea{
-	margin-bottom:4%;
+.loginHg .titleLogin {
+    line-height: 1.3em;
 }
 
-.loginHg .titleLoginReward{
-	margin:3px auto;
+#login .checkboxArea {
+    margin-bottom: 4%;
+}
+
+.loginHg .titleLoginReward {
+    margin: 3px auto;
 }
 
 
 /*===============================================MESSAGE SECTION==============================================*/
 
-.team{
-	background-image: url(../images/masseg/team.png);	
+.team {
+    background-image: url(../images/masseg/team.png);
 }
 
 
 
 /*=============================================REGISTER SECTION===========================================*/
 
-#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic{
-	font-size:1.8em;
-	padding-top:1.6%;
+#vote-dic-single, #vote-dic-battle, #register-dic, #results-dic, #end-show-dic {
+    font-size: 1.8em;
+    padding-top: 1.6%;
 }
 
-
-/* .slide{
-	width: 22%;
-    height: 73%;
-    background-size: 100% 100%;
-    top: 17%;
-	left:5.3%;	
-} */
-
-
+.slidein.grey .slider-text{
+	top:11%;
+}
 
 /*================================================VOTE SECTION=====================================*/
 
-/*#voteSingle .arrowBlue{
-	left:-8%;
-	top:6%;
-}
 
-#voteSingle .arrowRed{
-	top:10%;
-}*/
-
-.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1 ,.slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1  {
+.slideStay h1, .contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1, .slideGo h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
     font-size: 2.2em;
 }
 
-.slideStay h1, .slideGo h1{
-	top:35%;
+.slideStay h1, .slideGo h1 {
+    top: 35%;
 }
 
-.contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1,  .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1{
-	top:40%;
+.contestant2 .slideTopbattle h1, .contestant1 .slideTopbattle h1, .contestant2 .slideDownbattle h1, .contestant1 .slideDownbattle h1 {
+    top: 40%;
 }
 
-.slideGo{
-	 top:11%; 
+.slideGo {
+    top: 11%;
 }
 
-.slideStay{
-	 top:11%; 
-	 left:0%;
+.slideStay {
+    top: 11%;
+    left: 0%;
 }
 
-.contestant2 .slideStay, .contestant1 .slideStay{
-	top:25%;
+.contestant2 .slideStay, .contestant1 .slideStay {
+    top: 25%;
 }
 
-.contestant2 .slideGo{
-	right:21%;
+.contestant2 .slideGo {
+    right: 21%;
 }
 
-.contestant1 .slideGo{
-	right:6%;
+.contestant1 .slideGo {
+    right: 6%;
 }
 
- .nextPage {
-    background-color: #FFFFFF;  
-	} 
+	
 
-/* @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome
+
+@-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
     0% {
         right: -1%;
+        top: 11%;
     }
 
     100% {
         right: -1%;
+        top: 11%;
     }
 }
 
-@keyframes larrowDown { /*turn arrow DOWN
+@keyframes larrowDown { /*turn arrow DOWN*/
     0% {
         right: -1%;
+        top: 11%;
     }
 
     100% {
         right: -1%;
+        top: 11%;
     }
-} */
+}
 
-/*================================================VOTE BATTLE SECTION=====================================*/
+/*.nextPage {
+    background-color: #FFF;
+}
+
+.rotupl {
+    -webkit-animation: rarrowUp 0.4s; /* Safari and Chrome */
+/*-webkit-animation-fill-mode: forwards;
+    animation: rarrowUp .4s;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes rarrowUp {*/ /*rotate right arrow up- vote single- chrome*/
+/*0% {
+        left: 30%;
+        top: 25%;
+        -webkit-transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: 30%;
+        top: 25%;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rarrowUp {*/ /*rotate right arrow up- vote single*/
+/*0% {
+        left: 30%;
+        top: 25%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: 30%;
+        top: 25%;
+        transform: rotateZ(0deg);
+    }
+}*/
+
+
+
+/*================================================VOTE BATTLE SECTION=====================================
 
 /* #vote{
 	direction:ltr;
 } */
 
-#voteBattle .slideGo{
-	top:27%;
+#voteBattle .slideGo {
+    top: 27%;
 }
 
-.redArrow.cont2{
-	left:58%;
-	
+.redArrow.cont2 {
+    left: 58%;
 }
 
-.contestant1 .slideStay{
-	left:-37%;
+.contestant1 .slideStay {
+    left: -37%;
 }
 
-.redArrow.cont1{
-	left:-6%;
+.redArrow.cont1 {
+    left: -6%;
 }
 
 /* .hate2 {
@@ -193,8 +216,8 @@ html, body {
 
 /*=============================================RESULTS SECTION======================================================*/
 
-#results .single .percentage{
-	top:150%;
+#results .single .percentage {
+    top: 150%;
 }
 
 /*=======================================================RESULT BATTLE=========================================*/
@@ -242,38 +265,10 @@ html, body {
 }
 
 
-.hate{
-	width:54%;
+.hate {
+    width: 54%;
 }
 
-.hate2, .hate1{
-	width:40%;
-}
-
-@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
-    0% {
-        left: -25%;
-        top: 15%;
-        -webkit-transform: rotateZ(-90deg);
-    }
-
-    100% {
-        left: -30%;
-        top: 25%;
-        -webkit-transform: rotateZ(0deg);
-    }
-}
-
-@keyframes rarrowUp { /*rotate right arrow up- vote single*/
-    0% {
-        left: -25%;
-        top: 15%;
-        transform: rotateZ(-90deg);
-    }
-
-    100% {
-        left: -30%;
-        top: 25%;
-        transform: rotateZ(0deg);
-    }
+.hate2, .hate1 {
+    width: 40%;
 }

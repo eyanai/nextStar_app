@@ -219,16 +219,16 @@ function setRegisterGoingClose(data) {
         alertRegisterGoingClose();
     }
     //show and play the audio if the user not register
-    if (!voteGeneralParameters.registered) {
-        $(".register-red-flash").show();
-        alertRegisterGoingClose();
-    }
+    //if (!voteGeneralParameters.registered) {
+    //    $(".register-red-flash").show();
+    //    alertRegisterGoingClose();
+    //}
 
 }
 
 var alertInterval;
 function alertRegisterGoingClose() {
-     clearInterval(alertInterval);
+     //clearInterval(alertInterval);
     alertInterval = setInterval(function () {
         $("#alertAud")[0].play();
     }, 1000);
@@ -279,6 +279,9 @@ function setRegister() {
         error: function (request, status, error) {
         }
     });
+
+    //stop the flash sound when user checkin
+    stopAlertRegisterGoingClose()
 };
 
 //set wait vote page

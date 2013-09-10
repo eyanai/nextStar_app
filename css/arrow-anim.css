@@ -1,0 +1,37 @@
+.rotupl {
+    -webkit-animation: rarrowUp 0.4s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation: rarrowUp .4s;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
+    0% {
+        left: -25%;
+        top: 25%;
+        -webkit-transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -30%;
+        top: 25%;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rarrowUp { /*rotate right arrow up- vote single*/
+    0% {
+        left: -25%;
+        top: 25%;
+        transform: rotateZ(-90deg);
+    }
+
+    100% {
+        left: -30%;
+        top: 25%;
+        transform: rotateZ(0deg);
+    }
+}
+
+.nextPage {
+    background-color: #0ff;
+}
