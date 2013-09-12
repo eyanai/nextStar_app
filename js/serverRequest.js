@@ -21,8 +21,8 @@ var domain = "http://thenextstar.mako.co.il/applicationMakoQA";
 function longPolling() {
     //alert(0);
     pollController = new PollController();
-   // pollController._setUrl("http://thenextstar.mako.co.il/page/pageF.json");
-    pollController._setUrl("/page/pageF.json");
+       //pollController._setUrl("http://thenextstar.mako.co.il/page/pageE.json");
+ pollController._setUrl("/page/pageF.json");
     pollController._setCallBackFunction(function (data) {
         console.log(data);
         pageChange(data);
