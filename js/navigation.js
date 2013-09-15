@@ -112,7 +112,7 @@ var Navi = {
                 initWaitAnimation();
                 clearRegisterWishTextInterval();
                 $(".slidein ").addClass('grey');
-                $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לביצוע הבא</p>");
+                $("#register .slider-text").html("<p>ההצבעה החלה</p><p>המתן לשיר הבא</p>");
                 $("#register .slider-text").addClass("notRegistered");
                 $(".slide.btn").hide();
                 $(".slide").removeClass("register-slide-back");

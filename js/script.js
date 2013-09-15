@@ -371,8 +371,7 @@ function df() {//show the agreement on click in login section
                     '<li><img src="images/agreement/agreement_page_8.jpg" alt="1"></li>'+
                     '<li><img src="images/agreement/agreement_page_9.jpg" alt="1"></li>'+
                     '<li><img src="images/agreement/agreement_page_10.jpg" alt="1"></li>'+
-                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>'+
-                    '<li><img src="images/agreement/agreement_page_12.jpg" alt="1"></li>');
+                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>');
 
     $("#agreement").show();
     $("#login").hide();
@@ -390,7 +389,15 @@ function checkPCScreen(){
 
 
 function getImagesCachList(){
-    $.getJSON('/page/imagesList.json', function(data) {
+    //load the relevant json by the device size
+    var jsonUrl = "";
+    if(generalParameters.isBigSize){
+        jsonUrl = "/page/imagesListBig.json";
+    }
+    else{
+        jsonUrl = "/page/imagesListSmall.json";
+    }
+    $.getJSON(jsonUrl, function(data) {
 	var css='body:after{content:';
 	
 	$.each(data, function(key, val) {
