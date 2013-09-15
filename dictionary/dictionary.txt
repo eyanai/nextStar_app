@@ -1,7 +1,7 @@
 ﻿{
     "registerDic":"אתם פה? מוכנים להצביע?", 
     "notRegisterDic":"אופס! פספסת את הכניסה להצבעה",
-    "notRegisterWaitDic":"ממתין לסיום הביצוע",
+    "notRegisterWaitDic":"ממתין לסיום השיר",
     "pushVoteDic":"הצביעו עכשיו, נשאר או הולך?",
     "voteCloseDic":"ההצבעה נסגרה",
     "afterVoteDic": "תודה על הצבעתך.", 
