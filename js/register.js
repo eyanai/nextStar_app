@@ -281,6 +281,9 @@ function setRegister() {
         error: function (request, status, error) {
         }
     });
+
+    //stop the flash sound when user checkin
+    stopAlertRegisterGoingClose()
 };
 
 //set wait vote page
