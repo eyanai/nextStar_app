@@ -132,7 +132,7 @@ function postOnFeed() {
             {
                 link: 'http://www.mako.co.il/collab/thenextstar/',
                 //picture: domain + '/images/header/facebook_star.png',
-                picture: domain + '/images/header/facebook_star_for_post.png',
+                picture: fbPostPicDomain + '/images/header/facebook_star_for_post.png',
                 message: postText,
                 description: 'לראשונה בעולם, אתם השופטים בזמן אמת, בשידור חי ובכל ביצוע! התחברו עכשיו',
                 caption: captionText,
@@ -209,9 +209,9 @@ function saveDataOnServer(str) {
         }
     });
     //check if the current day is a day to publish post
-    if (checkTimeForPost()) {//remove for this version till 17/9
+    //if (checkTimeForPost()) {//remove for this version till 17/9
         postOnFeed(); //post on feeds
-    }
+   // }
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling

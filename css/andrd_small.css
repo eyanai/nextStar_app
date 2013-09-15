@@ -1,8 +1,6 @@
 /* CSS Document */
 
-.nextPage {
-    background-color: white;/* #3befe9;   */
-}
+
 
 .loginHg .titleLogin {
 
@@ -93,7 +91,7 @@ html,body{
 }
 
 .slidein.grey .slider-text{
-	top:27%;
+	top:28%;
 }
 
 .slideStay, .slideGo{
