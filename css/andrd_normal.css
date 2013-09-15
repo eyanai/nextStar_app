@@ -1,4 +1,8 @@
 
+.nextPage {
+    background-color: green;/* #3befe9;   */
+}
+
 .loginHg .titleLogin {
 }
 
@@ -264,11 +268,36 @@ html, body {
     }
 }
 
+.like, .hate{
+	width:50%;
+}
 
-.hate {
+.love1,.love2{
+	width:50%; /* 45 */
+} 
+
+.hate1, .hate2{
+	width:50%; /* 42 */
+}
+
+/* .hate {
     width: 54%;
 }
 
 .hate2, .hate1 {
     width: 40%;
+} */
+
+/* 
+.like{
+	right:110%;
 }
+
+.hate2{
+	left:-10%;
+}
+
+ .love2{
+	right:-20%;
+ }
+  */
