@@ -290,7 +290,7 @@ left: 10px;
 
 .slidein .register-red-flash {
     
-    top: 3%;
+    top: 4%;
 background-position: -3px -6px;
 height: 106px;
 width: 100%;
@@ -333,8 +333,8 @@ background-size: auto 104%;
     top: 9%;
 }
 
-/*@-webkit-keyframes rarrowUp {*/ /*rotate right arrow up- vote single- chrome*/
-    /*0% {
+@-webkit-keyframes rarrowUp { /*rotate right arrow up- vote single- chrome*/
+    0% {
      left: -4%;
         top: 19%;
         -webkit-transform: rotateZ(-90deg);
@@ -347,8 +347,8 @@ background-size: auto 104%;
     }
 }
 
-@keyframes rarrowUp {*/ /*rotate right arrow up- vote single*/
-    /*0% {
+@keyframes rarrowUp { /*rotate right arrow up- vote single*/
+    0% {
      left: -4%;
         top: 19%;
         transform: rotateZ(-90deg);
@@ -359,7 +359,7 @@ background-size: auto 104%;
         top: 26%;
         transform: rotateZ(0deg);
     }
-}*/
+}
 
 
 @-webkit-keyframes larrowDown { /*turn arrow DOWN -chrome*/
