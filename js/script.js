@@ -371,7 +371,12 @@ function df() {//show the agreement on click in login section
                     '<li><img src="images/agreement/agreement_page_8.jpg" alt="1"></li>'+
                     '<li><img src="images/agreement/agreement_page_9.jpg" alt="1"></li>'+
                     '<li><img src="images/agreement/agreement_page_10.jpg" alt="1"></li>'+
-                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>');
+                    '<li><img src="images/agreement/agreement_page_11.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_12.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_13.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_14.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_15.jpg" alt="1"></li>'+
+                    '<li><img src="images/agreement/agreement_page_16.jpg" alt="1"></li>');
 
     $("#agreement").show();
     $("#login").hide();

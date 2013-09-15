@@ -274,7 +274,7 @@ function checkTimeForPost(){
     // check the day- sunday=0 and so on
     if (date.getDay() == 0 || date.getDay() == 2) {
         //check time in round hours (24hrs)
-        if (date.getHours() == 21 || date.getHours() == 22) {
+        if (date.getHours() == 20 || date.getHours() == 22) {
             return 1;
         }
         else return 0;
