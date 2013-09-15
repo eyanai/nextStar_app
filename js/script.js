@@ -46,6 +46,8 @@ var afterVoteDic = "";
 var voteCloseDic = "";
 var resultsDic = "";
 var endShowDic = "";
+var notRegisterDic = "";
+var notRegisterWaitDic = "";
 
 //get data from the server and send to the suitable page
 function pageChange(data) {
@@ -121,6 +123,8 @@ function initDictionaryValues() {
             voteCloseDic = dictionary.voteCloseDic;
             resultsDic = dictionary.resultsDic;
             endShowDic = dictionary.endShowDic;
+            notRegisterDic = dictionary.notRegisterDic;
+            notRegisterWaitDic = dictionary.notRegisterWaitDic;
             //console.log(JSON.parse(data));
         },
         error: function (data) {
@@ -208,7 +212,9 @@ function toggleTopMenu(headerText) {
 
 function showFlash() {
     $(".register-red-flash").show();
+    $("#alertAud")[0].play();
     alertRegisterGoingClose();
+    
 }
 
 
