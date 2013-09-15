@@ -27,7 +27,7 @@ function initDrag() {
                 setTimeout(function () { $('.arrowRed.rotDown').hide(); }, 1630);
                 $('.hate').addClass('hateShow');
                 setVote(event);
-                return false;
+               // return false;
             }
             else// ($('.slideLeft').position().left < (($("body").width()) / 2 - 0.08 * ($("body").width()))) 
             {
@@ -63,7 +63,7 @@ function initDrag() {
                 setTimeout(function () { $('.arrowBlue.rotupl').hide(); }, 1630);
                 $('.like').addClass('likeShow');
                     setVote(event);
-                return false;
+             //   return false;
             }
             else //($('.slideRight').position().left > 0.08*($("body").width())) 
             {
@@ -100,7 +100,7 @@ function initDrag() {
                 setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 1630);
                 $('.hate1').addClass('showIconCon1');
                   setVote(event);
-                return false;
+              //  return false;
             }
             else //($('.slideTopbattle.con1').position().left > 0.08*($("body").width())) 
             {
@@ -134,7 +134,7 @@ function initDrag() {
                 setTimeout(function () { $('.blueArrow.cont1.rotuprcon1').hide(); }, 1630);
                 $('.love1').addClass('showIconCon1');
                     setVote(event);
-                return false;
+            //    return false;
             }
             else // ($('.slideDownbattle.con1').position().left > 0.08*($("body").width())) 
             {
@@ -168,7 +168,7 @@ function initDrag() {
                 setTimeout(function () { $('.redArrow.cont2.rotdwnlcon2').hide(); }, 1630);
                 $('.hate2').addClass('showIconCon2');
                   setVote(event);
-                return false;
+            //    return false;
             }
             else // ($('.slideTopbattle.con2').position().left < (($("body").width()) / 2 - 0.08*($("body").width()))) 
             {
@@ -203,7 +203,7 @@ function initDrag() {
                 setTimeout(function () { $('.blueArrow.cont2.rotuplcon2').hide(); }, 1630);
                 $('.love2').addClass('showIconCon2');
                   setVote(event);
-                return false;
+           //     return false;
             }
             else // ($('.slideDownbattle.con2').position().left < (($("body").width()) / 2 - 0.08*($("body").width()))) 
             {
