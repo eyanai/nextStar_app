@@ -1,59 +1,69 @@
 var numOfVotesThatChecked = 0;
 var voteId, voteKey, vote;
-
+var waitVoteText = "";
 //set vote page
 function setVotePage(data) {
     var isSingleVote;
     var firstFields;
     var secondFields;
 
+    //set the wait text
+    waitVoteText = data.textWaitVote;
     voteGeneralParameters.status = data.status;
     //alert("setVotePage");
     //if the user was register - only if the register server request didnt return - do
+    //alert(" voteGeneralParameters.voteid1: " + voteGeneralParameters.voteid1 + " ; data.votes[0].voteID: " + data.votes[0].voteID);
     if (voteGeneralParameters.registered ) {
-        $("#vote .reMesseg .continue").hide();
-        resetAnimations(); //reset animations
-        $("#vote .continue h2").text(data.textWaitVote); //take the value from dictionary
-        setIsSingle(data);
+        //if we have the voteID that correct for the current vote
+        if( voteGeneralParameters.voteid1 == data.votes[0].voteID){
+                      $("#vote .reMesseg .continue").hide();
+                resetAnimations(); //reset animations
+                $("#vote .continue #vote-wait-text").text(data.textWaitVote); //take the value from dictionary
+                setIsSingle(data);
 
-        if (voteGeneralParameters.isSingle) {
+                if (voteGeneralParameters.isSingle) {
 
-            //wait text
-            //var waitText = data.textWaitVote;
-            //$(".vote-wait-text").text(waitText);
-            firstFields = getFielsdByVote(data.votes[0]);
-            //set the dic title
-            //$("#vote-dic-single").text(pushVoteDic);
-            toggleTopMenu(pushVoteDic);
-            $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')");
-            $("#vote-img-single").show();
-            $("#vote-comp-name-single").text(firstFields[0]);
-            $("#vote-song-name-single").text(firstFields[1]);
+                    //wait text
+                    //var waitText = data.textWaitVote;
+                    //$(".vote-wait-text").text(waitText);
+                    firstFields = getFielsdByVote(data.votes[0]);
+                    //set the dic title
+                    //$("#vote-dic-single").text(pushVoteDic);
+                    toggleTopMenu(pushVoteDic);
+                    $("#vote-img-single").css("background-image", "url('" + firstFields[2] + "')");
+                    $("#vote-img-single").show();
+                    $("#vote-comp-name-single").text(firstFields[0]);
+                    $("#vote-song-name-single").text(firstFields[1]);
 
-            //navigate
-            Navi.goto("voteSingle");
+                    //navigate
+                    Navi.goto("voteSingle");
+                }
+                else if (!voteGeneralParameters.isSingle) {
+                    //wait text
+                    //var waitText = data.textWaitVote;
+                    //$(".vote-wait-text").text(waitText);
+                    firstFields = getFielsdByVote(data.votes[0]);
+                    secondFields = getFielsdByVote(data.votes[1]);
+                    //set the dic title
+                    //$("#vote-dic-battle").text(pushVoteDic);
+                    toggleTopMenu(pushVoteDic);
+                    //firat comp
+                    $("#vote-img-first").css("background-image", "url('" + firstFields[2] + "')")
+                    $("#vote-comp-name-first").text(firstFields[0]);
+                    $("#vote-song-name-first").text(firstFields[1]);
+                    //second comp
+                    $("#vote-img-second").css("background-image", "url('" + secondFields[2] + "')")
+                    $("#vote-comp-name-second").text(secondFields[0]);
+                    $("#vote-song-name-second").text(secondFields[1]);
+
+                    //navigate
+                    Navi.goto("voteBattle");
+                }
         }
-        else if (!voteGeneralParameters.isSingle) {
-            //wait text
-            //var waitText = data.textWaitVote;
-            //$(".vote-wait-text").text(waitText);
-            firstFields = getFielsdByVote(data.votes[0]);
-            secondFields = getFielsdByVote(data.votes[1]);
-            //set the dic title
-            //$("#vote-dic-battle").text(pushVoteDic);
-            toggleTopMenu(pushVoteDic);
-            //firat comp
-            $("#vote-img-first").css("background-image", "url('" + firstFields[2] + "')")
-            $("#vote-comp-name-first").text(firstFields[0]);
-            $("#vote-song-name-first").text(firstFields[1]);
-            //second comp
-            $("#vote-img-second").css("background-image", "url('" + secondFields[2] + "')")
-            $("#vote-comp-name-second").text(secondFields[0]);
-            $("#vote-song-name-second").text(secondFields[1]);
-
-            //navigate
-            Navi.goto("voteBattle");
+        else{
+             setOpenRegisterPage(data, "vote");
         }
+      
     }
     else { //if not registered
         setOpenRegisterPage(data, "vote");
@@ -81,6 +91,7 @@ function setVoteClosePage(data) {
         firstFields = getFielsdByVote(data.votes[0]);
         $("#vote-close-img-single").css("background-image", "url('" + firstFields[2] + "')")
         $("#vote-close-comp-name-single").text(firstFields[0]);
+        $("#vote-close-song-name-single").text(firstFields[1]);
         //set the dictionary text
         //$("#vote-close-dic-single").text(voteCloseDic);
         toggleTopMenu(voteCloseDic);
@@ -172,6 +183,11 @@ function setVote(e) {
     }
 
     console.log(vote, voteId, voteKey);
+
+    //show the wait text if return from server and if not
+    numOfVotesThatChecked++;
+    setWaitVoteClosePage();
+
     //if the register return from server- send the vote to server, else - wait 
     if(voteGeneralParameters.votekey1 != null || voteGeneralParameters.votekey2 != null){
         sendVoteToServer(voteId,voteKey,vote);
@@ -191,11 +207,11 @@ function sendVoteToServer(voteId,voteKey,vote){
         data: { voteId: voteId, voteKey: voteKey, vote: vote },
         success: function (data) {
             console.log(data);
-            numOfVotesThatChecked++;
+            //numOfVotesThatChecked++;
            //alert("suc" +data.result);
            //alert("suc" +data);
            //show the wait text if the server respone return and if not
-            setWaitVoteClosePage(data);
+            //setWaitVoteClosePage(data);
 //              alert("vote");
 
         },
@@ -208,17 +224,19 @@ function sendVoteToServer(voteId,voteKey,vote){
 
 
 //set wait result page
-function setWaitVoteClosePage(data) {
+function setWaitVoteClosePage() {
     //if this is a single vote - show the wait and top menu
     //if this is a double vote - show the wait and top menu only if the user vote to 2 
     if(voteGeneralParameters.isSingle){
           toggleTopMenu(afterVoteDic);
-         $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
+          $("#vote .continue #vote-wait-text").text(waitVoteText);
+          $("#vote .continue").slideDown(500);
      }
    else{
        if(numOfVotesThatChecked == 2){
          toggleTopMenu(afterVoteDic);
-         $("#vote .continue").text(data.voteCloseCalc).slideDown(500);
+         $("#vote .continue #vote-wait-text").text(waitVoteText);
+          $("#vote .continue").slideDown(500);
        }
    }
     //remove the vote buttons

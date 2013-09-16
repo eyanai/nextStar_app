@@ -48,8 +48,8 @@ function setGalleryPage(data) {
 
     });
     $("#result-gallery ul").append(gallerObj); //append to dom the gallery string
-    toggleTopMenu(data.text);
-    $("#gallery-title").text(data.title);
+    toggleTopMenu(data.title);
+    $("#gallery-title").text(data.text);
     //if login to fb and check show his image in tv
     if(generalParameters.fbUser.id!=null){
         $(".logFb").addClass("inFb");//set login button to disable
@@ -101,5 +101,7 @@ function createObj(vote) {
 //
 function downloadMusic() {
     $("#genAud")[0].play();
+   // alert("hi");
+    window.location = "https://img.mako.co.il/2013/09/15/rid.html";
     //genClickSound.playclip();
 }

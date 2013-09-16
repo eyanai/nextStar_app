@@ -47,6 +47,7 @@ else if (searchQuery.length > 0) {
 else{//if not connect and not from localstorge
     generalParameters.onLoad = false;
      $("#loader").hide();
+      ga('send', 'pageview', '/TNS_Registration'); //for google analytics
 }
 
 //alert("search: " + window.location);
@@ -82,6 +83,7 @@ function loginCheck() {
         }
         else if (response.status === 'not_authorized' || response.status == "unknown") {
             $("#loader").hide();
+             ga('send', 'pageview', '/TNS_Registration'); //for google analytics
             generalParameters.onLoad = false;
             console.log("not connect");
         }

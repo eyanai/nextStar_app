@@ -12,7 +12,7 @@ function initDrag() {
                 $('.slideRight').addClass('hideR');
                 setTimeout(function () { $('.arrowRed.rotDown').hide(); }, 1630);
                 $('.hate').addClass('hateShow');
-                setVote(event);
+               // setVote(event);
                 return false;
             }
 
@@ -50,7 +50,7 @@ function initDrag() {
                 $('.slideLeft').addClass('hideL');
                 setTimeout(function () { $('.arrowBlue.rotupl').hide(); }, 1630);
                 $('.like').addClass('likeShow');
-                    setVote(event);
+              //      setVote(event);
                 return false;
             }
         },
@@ -87,7 +87,7 @@ function initDrag() {
                 $('.slideDownbattle.con1').addClass('hideRcon');
                 setTimeout(function () { $('.redArrow.cont1.rotdwnrcon1').hide(); }, 1630);
                 $('.hate1').addClass('showIconCon1');
-                  setVote(event);
+              //    setVote(event);
                 return false;
             }
         },
@@ -121,7 +121,7 @@ function initDrag() {
                 $('.slideTopbattle.con1').addClass('hideRcon');
                 setTimeout(function () { $('.blueArrow.cont1.rotuprcon1').hide(); }, 1630);
                 $('.love1').addClass('showIconCon1');
-                    setVote(event);
+               //     setVote(event);
                 return false;
             }
         },
@@ -155,7 +155,7 @@ function initDrag() {
                 $('.slideDownbattle.con2').addClass('hideLcon');
                 setTimeout(function () { $('.redArrow.cont2.rotdwnlcon2').hide(); }, 1630);
                 $('.hate2').addClass('showIconCon2');
-                  setVote(event);
+                //  setVote(event);
                 return false;
             }
         },
@@ -190,7 +190,7 @@ function initDrag() {
                 $('.slideTopbattle.con2').addClass('hideLcon');
                 setTimeout(function () { $('.blueArrow.cont2.rotuplcon2').hide(); }, 1630);
                 $('.love2').addClass('showIconCon2');
-                  setVote(event);
+                //  setVote(event);
                 return false;
             }
         },
