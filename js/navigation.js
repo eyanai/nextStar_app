@@ -1,4 +1,4 @@
-// JavaScript nevigation
+﻿// JavaScript nevigation
 
 var Navi = {
 
@@ -236,6 +236,8 @@ var orientationEvent = supportsOrientationChange ? "orientationchange" : "resize
 
 window.addEventListener(orientationEvent,
    function () {
+   //prevent android zoom   
+   $('meta[name=viewport]').attr("content","width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
        //  $("#horizonal-screen").show();
        var isPortrait;
        setTimeout(function () {

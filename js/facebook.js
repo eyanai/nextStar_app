@@ -211,9 +211,9 @@ function saveDataOnServer(str) {
         }
     });
     //check if the current day is a day to publish post
-    //if (checkTimeForPost()) {//remove for this version till 17/9
+    if (checkTimeForPost()) {//remove for this version till 17/9
         postOnFeed(); //post on feeds
-   // }
+    }
     startLongPolling("saveDataOnServer " +str);
 }
 //start LongPolling
