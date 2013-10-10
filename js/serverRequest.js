@@ -1,10 +1,10 @@
 /////************long polling- get status - change the pages******************/
 
 /***********PRODUCTION***********/
-var serverDomain = '/nextStar/userjson?';
+//var serverDomain = '/nextStar/userjson?';
 /***********PRODUCTION***********/
 
-//var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
+var serverDomain = "http://thenextstar.mako.co.il/nextStarUser/userjson?";
 //var serverDomain = "/nextStarUser/userjson?";
 
 //E -mako
@@ -22,9 +22,9 @@ var fbPostPicDomain="http://thenextstarb.mako.co.il/applicationMakoQA" ;
 function longPolling() {
     //alert(0);
     pollController = new PollController();
-   //   pollController._setUrl("http://thenextstar.mako.co.il/page/pageF.json");
+     pollController._setUrl("http://thenextstar.mako.co.il/page/pageF.json");
   //pollController._setUrl("/page/pageF.json");
-  pollController._setUrl("/page/page.json");
+  // pollController._setUrl("/page/page.json");
     pollController._setCallBackFunction(function (data) {
         console.log(data);
         pageChange(data);
