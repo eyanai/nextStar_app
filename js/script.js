@@ -1,7 +1,7 @@
 
 //general parameters
 var generalParameters = {
-    isRegistered: false, //if register to vote
+    //isRegistered: false, //if register to vote
     wasRegisterPage: false,
    // voteIdA: null,
     //voteKeyA: null,
@@ -35,7 +35,10 @@ var voteGeneralParameters ={
     //null - not vote, 0 - bad , 1- good
     like1:null,
     like2:null,
-    votePageId:0
+    votePageId:0,
+
+    //this fields save the vote data of the user- what he was voted
+   
 
 }
 

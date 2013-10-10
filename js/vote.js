@@ -10,13 +10,12 @@ function setVotePage(data) {
     //set the wait text
     waitVoteText = data.textWaitVote;
     voteGeneralParameters.status = data.status;
-    //alert("setVotePage");
     //if the user was register - only if the register server request didnt return - do
-    //alert(" voteGeneralParameters.voteid1: " + voteGeneralParameters.voteid1 + " ; data.votes[0].voteID: " + data.votes[0].voteID);
-    if (voteGeneralParameters.registered ) {
+    //if the user was register,and if the page id = page id of his registration
+    if (voteGeneralParameters.registered && (data.id == voteGeneralParameters.votePageId)) {
         //if we have the voteID that correct for the current vote
-        if( voteGeneralParameters.voteid1 == data.votes[0].voteID){
-                      $("#vote .reMesseg .continue").hide();
+        //if( voteGeneralParameters.voteid1 == data.votes[0].voteID){
+                $("#vote .reMesseg .continue").hide();
                 resetAnimations(); //reset animations
                 $("#vote .continue #vote-wait-text").text(data.textWaitVote); //take the value from dictionary
                 setIsSingle(data);
@@ -59,15 +58,14 @@ function setVotePage(data) {
                     //navigate
                     Navi.goto("voteBattle");
                 }
-        }
+       // }
         else{
              setOpenRegisterPage(data, "vote");
         }
       
     }
     else { //if not registered
-        setOpenRegisterPage(data, "vote");
-        //Navi.goto("notRegister");        
+        setOpenRegisterPage(data, "vote");       
     }
 
     //init numOfVotesThatVoted

@@ -6,9 +6,9 @@ function setOpenRegisterPage(data, from) {
     initVoteGeneralParameters();
 
     voteGeneralParameters.status = data.status
+   
     voteGeneralParameters.votePageId = data.id;
-
-    generalParameters.isRegistered = false;
+   // generalParameters.isRegistered = false;
 
     $("#register .continue h2").text(data.textWaitRegister); //take the value from dictionary
 
@@ -243,6 +243,8 @@ function stopAlertRegisterGoingClose() {
 //send to server the register
 function setRegister() {
     voteGeneralParameters.registered = true;
+    //voteGeneralParameters.votePageId = data.id;
+
     var data = "";
     var facebookid = 0;
     if (generalParameters.fbUser.id != null) {
@@ -261,17 +263,20 @@ function setRegister() {
         data: data,
         success: function (data) {
 
-            console.log(data);
+            //if the response return when the status is 21-register time
             if (voteGeneralParameters.status == 21) {
                 //if the response return when the page id is identical
                 if ((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
-                    //alert("setWaitVotePage");
-                    setWaitVotePage(data);
-                    //alert("registered");
+                     setWaitVotePage(data);
+                   
+                }
+                //else- if the response return when this is register of another vote (different page id)
+                else{
+                    //do nothing
                 }
 
             }
-            //else - if the current status is another
+            //else - if the current status is another - vote ot publish result etc.
             else {
 
                 registerReturnFromServerDelay(data);
@@ -279,6 +284,7 @@ function setRegister() {
 
         },
         error: function (request, status, error) {
+            //when error eccured- the user was transfered to the next pages and didnt know about the error
         }
     });
 
@@ -288,19 +294,19 @@ function setRegister() {
 
 //set wait vote page
 function setWaitVotePage(data) {
-    //alert("data.length = "+data.length);
-
+  
+    //
     if (data.length == 0) {
 
+        //error eccured in the server - the data=""
         console.log("no data was received");
-        $("#register .continue h2").text("ממתין לסגירת ההצבעה");
-        Navi.goto("notRegister");
+        //$("#register .continue h2").text("ממתין לסגירת ההצבעה");
+       // Navi.goto("notRegister");
 
 
     }
 
     else {
-        //  Navi.goto("WaitVotePage");
         voteGeneralParameters.votekey1 = data[0].voteKey;
         if (data[1]) {
             voteGeneralParameters.votekey2 = data[1].voteKey;
@@ -313,6 +319,23 @@ function registerReturnFromServerDelay(data) {
     voteGeneralParameters.votekey1 = data[0].voteKey;
     if (data[1]) {
         voteGeneralParameters.votekey2 = data[1].voteKey;
+    }
+
+    //check if the status is vote - and the user was voted - take his data and send to teh server
+    if (data.status == 23){
+        voteId = voteGeneralParameters.voteid1;
+        voteKey =voteGeneralParameters.votekey1;
+        vote =voteGeneralParameters.like1;
+        
+        sendVoteToServer(voteId,voteKey,vote);
+        
+        if (!voteGeneralParameters.isSingle){
+            voteId = voteGeneralParameters.voteid2;
+            voteKey =voteGeneralParameters.votekey2;
+            vote =voteGeneralParameters.like2;
+        
+            sendVoteToServer(voteId,voteKey,vote);
+        }
     }
 }
 
