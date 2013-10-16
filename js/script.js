@@ -35,7 +35,7 @@ var voteGeneralParameters ={
     //null - not vote, 0 - bad , 1- good
     like1:null,
     like2:null,
-    votePageId:0,
+    votePageId:0
 
     //this fields save the vote data of the user- what he was voted
    
@@ -240,7 +240,7 @@ $(document).ready(function() {
     initDrag(); // init draggable
     soundsLoad(); //init sounds
 
-    $("body").on("start-app", longPolling);
+   // $("body").on("start-app", longPolling);
     if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }

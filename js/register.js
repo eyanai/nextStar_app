@@ -265,11 +265,17 @@ function setRegister() {
 
             //if the response return when the status is 21-register time
             if (voteGeneralParameters.status == 21) {
+                if (data.length == 0) {
+                     //error eccured in the server - the data=""
+                    console.log("no data was received");
+                    
+                }
                 //if the response return when the page id is identical
-                if ((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
+                else if ((voteGeneralParameters.voteid1 == data[0].voteId) || (voteGeneralParameters.voteid1 == null)) {
                      setWaitVotePage(data);
                    
                 }
+
                 //else- if the response return when this is register of another vote (different page id)
                 else{
                     //do nothing
