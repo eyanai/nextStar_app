@@ -254,19 +254,21 @@ function saveDataOnServer(str) {
             facebookName: generalParameters.fbUser.userName,
             facebookSex: generalParameters.fbUser.gender,
             facebookimgurl: generalParameters.fbUser.profilePic,
-            birthday:generalParameters.fbUser.birthday,
-            age_range:generalParameters.fbUser.age_range,
-            location:generalParameters.fbUser.location,
-            relationship_status:generalParameters.fbUser.relationship_status,
+            birthday: generalParameters.fbUser.birthday,
+            age_range: generalParameters.fbUser.age_range,
+            location: generalParameters.fbUser.location,
+            relationship_status: generalParameters.fbUser.relationship_status,
             showImg: generalParameters.fbUser.showImg
         },
-        success: function(data) {
-           // alert("return from ajax getFacebookData");
+        success: function (data) {
+            // alert("return from ajax getFacebookData");
             console.log(data);
-            setLocalStorage();
-           // alert(generalParameters.fbUser.showImg);
+            if (generalParameters.fbUser.birthday != null) {
+                setLocalStorage();
+            }
+            // alert(generalParameters.fbUser.showImg);
         },
-        error: function(data) {
+        error: function (data) {
             console.log("error getFacebookData: " + data);
 
         }
