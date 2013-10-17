@@ -13,6 +13,10 @@ var generalParameters = {
         userName: null,
         gender: null,
         profilePic: null,
+        birthday:null,//add here
+        age_range:null,
+        location:null,
+        relationship_status:null,
         showImg: false
     },
     isBigSize: false,

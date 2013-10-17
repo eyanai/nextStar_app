@@ -52,6 +52,44 @@ else{//if not connect and not from localstorge
 
 //alert("search: " + window.location);
 ////////////////////////////////////////////////////// fb api functions
+
+function require_perms() {
+    // check if the user is logged in + connected to the app
+    FB.getLoginStatus(function (response) {
+
+        // if the user is logged in, continue to check permissions
+        if (response.authResponse) {
+            FB.api('/me/permissions', function (perms_response) {
+
+                // if photo access already exists, we're good to go
+                if (perms_response['data'][0]['user_relationships'] && perms_response['data'][0]['user_location'] && perms_response['data'][0]['user_birthday']) {
+                    console.log('permissions are already granted.');                   
+                    fbDialog();      
+                    // photo access does not exist, so show an auth dialog
+                } else {
+
+                    // get photo permissions
+                    console.log('requesting permission...');
+                    
+                    fbDialog();
+                    
+                }
+            });
+            // user is not connected to the app, so show an auth dialog
+        } else {
+
+            // get photo permissions
+            console.log('requesting permission...');
+            fbDialog();            
+        }
+    });
+}
+
+
+function fbDialog(){
+    window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"?"+generalParameters.fbUser.showImg+"&scope=publish_stream,user_relationships,user_location,user_birthday";
+}
+
 //login fb
 function loginFb() {
    if(!$(this).hasClass("inFb")){       
@@ -61,7 +99,7 @@ function loginFb() {
             $("#rulesCB").addClass("required");
         }
         else{
-                window.location = "https://www.facebook.com/dialog/oauth?client_id=543975688973172&redirect_uri=" + myLocation+"?"+generalParameters.fbUser.showImg+"&scope=publish_stream";
+            require_perms();
         }
         
     }
@@ -79,7 +117,8 @@ function loginCheck() {
     }
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
-            saveData();
+            var accessToken = response.authResponse.accessToken;
+            saveData(accessToken);
         }
         else if (response.status === 'not_authorized' || response.status == "unknown") {
             $("#loader").hide();
@@ -103,12 +142,30 @@ function loginWithoutFacebook(){
 }
 
 //get user data from fb api
-function saveData() {
-    FB.api('/me', function (response) {
+function saveData(accessToken) {
+    FB.api('/me?fields=id,name,gender,birthday,relationship_status,age_range,location&access_token=' + accessToken, function (response) {
         generalParameters.fbUser.id = response.id;
         generalParameters.fbUser.userName = response.name;
         generalParameters.fbUser.gender = response.gender;
         generalParameters.fbUser.profilePic = "https://graph.facebook.com/" + generalParameters.fbUser.id + "/picture";
+
+        generalParameters.fbUser.birthday = response.birthday; //add here
+        generalParameters.fbUser.age_range = response.age_range.min;
+        if (response.age_range.max !== undefined) {
+            generalParameters.fbUser.age_range += "-" + response.age_range.max;
+        }
+        else {
+            generalParameters.fbUser.age_range += "+";
+        }
+        
+        if (response.location !== undefined) {
+            generalParameters.fbUser.location = response.location;
+        }
+
+        if (response.relationship_status !== undefined) {
+            generalParameters.fbUser.relationship_status = response.relationship_status;
+        }
+
         //alert("fb api "+generalParameters.fbUser.userName);
         saveDataOnServer();
     });
@@ -158,7 +215,7 @@ function postOnFeed() {
 //set Local Storage
 function setLocalStorage() {
     if (localStorage != null) {
-        localStorage.setItem('fbStorage', JSON.stringify(generalParameters.fbUser));
+        localStorage.setItem('fbStorage1', JSON.stringify(generalParameters.fbUser));
     }
     
     //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
@@ -168,7 +225,7 @@ function getLocalStorage() {
     if(localStorage==null){
         return null;
     }
-    return (localStorage.getItem('fbStorage'));    
+    return (localStorage.getItem('fbStorage1'));    
 }
 //check if there is local storge
 function checkLocalStorge() {    
@@ -197,6 +254,10 @@ function saveDataOnServer(str) {
             facebookName: generalParameters.fbUser.userName,
             facebookSex: generalParameters.fbUser.gender,
             facebookimgurl: generalParameters.fbUser.profilePic,
+            birthday:generalParameters.fbUser.birthday,
+            age_range:generalParameters.fbUser.age_range,
+            location:generalParameters.fbUser.location,
+            relationship_status:generalParameters.fbUser.relationship_status,
             showImg: generalParameters.fbUser.showImg
         },
         success: function(data) {
