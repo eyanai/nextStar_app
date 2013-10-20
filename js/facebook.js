@@ -158,7 +158,7 @@ function saveData(accessToken) {
         }
         
         if (response.location !== undefined) {
-            generalParameters.fbUser.location = response.location;
+            generalParameters.fbUser.location = response.location.name;
         }
 
         if (response.relationship_status !== undefined) {
