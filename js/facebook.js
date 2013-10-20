@@ -12,8 +12,6 @@ FB.init({ appId: appID, status: true, cookie: true, oauth: true });
 //    localStorage.setItem('fbStorage', "");
 //}
 
-
-
 ////////////////////////////////////////////////////// listener   
 function attachEventsFacebook() {
     
@@ -34,17 +32,18 @@ checkLocalStorge();
 var searchQuery = window.location.search;//search Query 
 //if connect already
 if (fromLocalStorge) {
-    //alert("local");
+    //alert("local fbStorage3");
     saveDataOnServer("fromLocalStorge");
     
 }
 
 //connect yet and after after login in webview
 else if (searchQuery.length > 0) {
-    //alert("search");
+    //alert("searchQuery "+searchQuery);
     loginCheck();
 }
 else{//if not connect and not from localstorge
+    //alert("not connect");
     generalParameters.onLoad = false;
      $("#loader").hide();
       ga('send', 'pageview', '/TNS_Registration'); //for google analytics
@@ -215,7 +214,7 @@ function postOnFeed() {
 //set Local Storage
 function setLocalStorage() {
     if (localStorage != null) {
-        localStorage.setItem('fbStorage1', JSON.stringify(generalParameters.fbUser));
+        localStorage.setItem('fbStorage3', JSON.stringify(generalParameters.fbUser));
     }
     
     //alert("setLocalStorage "+localStorage.getItem('fbStorage'));
@@ -225,7 +224,7 @@ function getLocalStorage() {
     if(localStorage==null){
         return null;
     }
-    return (localStorage.getItem('fbStorage1'));    
+    return (localStorage.getItem('fbStorage3'));    
 }
 //check if there is local storge
 function checkLocalStorge() {    
