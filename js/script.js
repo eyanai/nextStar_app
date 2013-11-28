@@ -240,7 +240,7 @@ $(document).ready(function() {
     initDrag(); // init draggable
     soundsLoad(); //init sounds
 
-   // $("body").on("start-app", longPolling);
+    $("body").on("start-app", longPolling);
     if(generalParameters.isConnect) {
         $("body").trigger("start-app");
     }

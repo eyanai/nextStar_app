@@ -2,7 +2,7 @@
     "registerDic":"אתם פה? מוכנים להצביע?", 
     "notRegisterDic":"אופס! פספסת את הכניסה להצבעה",
     "notRegisterWaitDic":"ממתין לסיום השיר",
-    "pushVoteDic":"הצביעו עכשיו, נשאר או הולך?",
+    "pushVoteDic":"הצביעו עכשיו",
     "voteCloseDic":"ההצבעה נסגרה",
     "afterVoteDic": "תודה על הצבעתך", 
     "resultsDic":"ויש לנו תוצאות...",
