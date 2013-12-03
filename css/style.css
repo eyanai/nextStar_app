@@ -188,14 +188,14 @@ h1 {
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
 }
 
 h2 {
     font-size: 2em;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
 }
 
 /*===========================================pc-screen=================================*/
@@ -1099,7 +1099,7 @@ left: 2px;
 }
 
 .songName h1, .songName h2 {
-    width: 80%;
+    /*width: 80%;*/
     margin: 0 auto;
 	line-height:130%;
 }
@@ -1478,6 +1478,10 @@ transform: rotateZ(-180deg);
     position: relative;
 }
 
+.songName1 h1, .songName1 h2, .songName2 h1, .songName2 h2{
+    text-overflow: ellipsis;    
+} 
+
 .songName2 {
     text-align: center;
     /*border-top: solid 1px rgba(117,117,117,.5);*/
@@ -1705,7 +1709,7 @@ background-position-y: 10%;*/
 
 .reMesseg.results .songName {
     border: none;
-    width: 50%;
+    /*width: 50%;*/
     margin: auto;
 }
 
