@@ -27,7 +27,7 @@ var Navi = {
                 $('#message .messageNoImage').show();
                 $('#message .messageNoImage .continue').show();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageWaitingWithImage':
                 initWaitAnimation();
@@ -39,7 +39,7 @@ var Navi = {
                 $('#message .messageImage .continue').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageNoImage':
                 Navi.hidelogin();
@@ -50,7 +50,7 @@ var Navi = {
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
             case 'messageWithImage':
                 Navi.hidelogin();
@@ -61,7 +61,7 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
                 break;
 
             case 'registerSingle':
@@ -84,7 +84,7 @@ var Navi = {
                 $(".slide.btn").show();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
                 $("#register .slider-text").removeClass("notRegistered");
                 break;
             case 'registerBattle':
@@ -105,7 +105,7 @@ var Navi = {
                 initWishText($("#register #registerBattle .slidein .slider-text"));
                 // }, 3500);
                 $(".slide.btn").show();
-                ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
                 $("#register .slider-text").removeClass("notRegistered");
                 break;
             case 'notRegister':
@@ -123,7 +123,7 @@ var Navi = {
                 $("#register .reMesseg .continue h2").text(notRegisterWaitDic);
                 $("#register .reMesseg .continue").slideDown(500);
 
-                //ga('send', 'pageview', '/TNS_Votes_CI');//for google analytics
+                //ga('send', 'pageview', '/Checkin: vote missed');//for google analytics
                 break;
             case 'WaitVotePage':
                 initWaitAnimation();
@@ -131,7 +131,6 @@ var Navi = {
                 $(".topMenu").show();
                 $("#register .reMesseg .continue").slideDown(500);
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI');//for google analytics
                 break;
             case 'voteSingle':
                 initWaitAnimation();
@@ -141,7 +140,7 @@ var Navi = {
                 $("#vote .single").show();
                 $("#vote .battle").hide();
                 $(".live").show();
-                ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes'); //for google analytics
                 resetAnimations();
 
                 break;
@@ -153,7 +152,7 @@ var Navi = {
                 $("#vote .single").hide();
                 $("#vote .battle").show();
                 $(".live").show();
-                ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes'); //for google analytics
                 resetAnimations();
 
                 break;
@@ -167,7 +166,7 @@ var Navi = {
                 $("#vote-close-wait-text-single").show();
                 $(".live").hide();
                 $("#voteClose .continue").show();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analyticsk
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analyticsk
 
                 break;
             case 'voteCloseBattle':
@@ -180,7 +179,7 @@ var Navi = {
                 $("#vote-close-wait-text-battle").show();
                 $("#voteClose .continue").show();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
 
                 break;
             case 'resultsSingle':
@@ -193,7 +192,7 @@ var Navi = {
                 $("#results .battle").hide();
                 $("#results .single .reMesseg .continue").slideDown(500);
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
                 break;
             case 'resultsBattle':
                 initWaitAnimation();
@@ -204,7 +203,7 @@ var Navi = {
                 $("#results .battle").show();
                 $("#results .battle .reMesseg .continue").slideDown();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
                 break;
             case 'gallery':
                 Navi.hidelogin();
@@ -212,7 +211,7 @@ var Navi = {
                 $('#gallery').show();
                 gallerySize();
                 $(".live").hide();
-                ga('send', 'pageview', '/TNS_Program_Votes'); //for google analytics
+                //ga('send', 'pageview', '/TNS_Program_Votes'); //for google analytics
                 break;
             case "errorPage":
                 Navi.hidelogin();
