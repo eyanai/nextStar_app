@@ -188,6 +188,9 @@ function setVote(e) {
 
     //if the register return from server- send the vote to server, else - wait 
     if(voteGeneralParameters.votekey1 != null || voteGeneralParameters.votekey2 != null){
+        //google analytics for user vote
+        ga('send', 'pageview', '/Vote: Voted by user'); //the user was voted
+        
         sendVoteToServer(voteId,voteKey,vote);
     }
     else{
@@ -211,6 +214,7 @@ function sendVoteToServer(voteId,voteKey,vote){
            //show the wait text if the server respone return and if not
             //setWaitVoteClosePage(data);
 //              alert("vote");
+        ga('send', 'pageview', '/Vote: Voted by server'); //the user was voted and it saved in the server
 
         },
         error: function (data) {

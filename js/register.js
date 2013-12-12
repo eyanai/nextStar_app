@@ -99,8 +99,8 @@ function attachDrag() {
             if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.03)) {
                 $(".slider-text").hide();
             }
-            console.log("ui.offset.left: " + ui.offset.left);
-            console.log("% " + ui.offset.left / ui.offset.width);
+          //  console.log("ui.offset.left: " + ui.offset.left);
+           // console.log("% " + ui.offset.left / ui.offset.width);
         },
         stop: function (event, ui) {
             var lengthNoPx = ui.helper.css("left").length - 2;
@@ -113,8 +113,8 @@ function attachDrag() {
             }
 
             if (ui.helper.css("left").substring(0, lengthNoPx) >= (widthInPx * 0.5)) { //btn position goes over 50%         
-                console.log($(ui.helper).css("left"));
-                console.log("% " + ui.helper.left / ui.helper.width);
+               // console.log($(ui.helper).css("left"));
+               // console.log("% " + ui.helper.left / ui.helper.width);
                 if ($(window).width() > 700) {
                     $(ui.helper).css("left", "52%");
                 }
@@ -218,11 +218,9 @@ function setRegisterGoingClose(data) {
         $(".register-red-flash").show();
         alertRegisterGoingClose();
     }
-    //show and play the audio if the user not register
-    //if (!voteGeneralParameters.registered) {
-    //    $(".register-red-flash").show();
-    //    alertRegisterGoingClose();
-    //}
+    //Checkin: enter vote reminder
+    ga('send', 'pageview', '/Checkin: enter vote reminder'); //register flash
+   
 
 }
 

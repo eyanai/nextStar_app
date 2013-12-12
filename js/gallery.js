@@ -102,6 +102,7 @@ function createObj(vote) {
 function downloadMusic() {
     $("#genAud")[0].play();
    // alert("hi");
-    window.location = "https://img.mako.co.il/2013/09/15/rid.html";
+   ga('send', 'pageview', '/Vote Results page'); //for google analytics
+   window.location = "https://img.mako.co.il/2013/09/15/rid.html";
     //genClickSound.playclip();
 }

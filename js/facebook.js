@@ -45,8 +45,8 @@ else if (searchQuery.length > 0) {
 else{//if not connect and not from localstorge
     //alert("not connect");
     generalParameters.onLoad = false;
-     $("#loader").hide();
-      //ga('send', 'pageview', '/TNS_Registration'); //for google analytics
+    $("#loader").hide();
+    ga('send', 'pageview', '/Signup page'); //for google analytics
 }
 
 //alert("search: " + window.location);
@@ -110,9 +110,13 @@ function loginCheck() {
     var showImg = window.location.search.substr(1, 5);
     if(showImg.indexOf("true")>-1){
         generalParameters.fbUser.showImg = true;
+        //Signup Facebook pic allow
+         ga('send', 'pageview', '/Signup Facebook pic');//
     }
     else{
         generalParameters.fbUser.showImg = false;
+        //Signup Facebook pic allow
+         ga('send', 'pageview', '/Signup Facebook no pic');//
     }
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
@@ -323,6 +327,7 @@ function tvImgCBClick(){
 
 function loginRewardClicked(){
     $("#genAud")[0].play();
+    ga('send', 'pageview', '/Signup anonymous'); //sign up with no facebook
     startLongPolling();
 }
 

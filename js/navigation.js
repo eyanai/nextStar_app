@@ -16,6 +16,8 @@ var Navi = {
             case 'login2':
                 $("#slide-container").addClass("login-anim");
                 $(".topMenu").hide();
+                ga('send', 'pageview', '/Signup page 2'); //login 2
+                
                 break;
             case 'messageWaitingNoImage':
                 initWaitAnimation();
@@ -27,7 +29,7 @@ var Navi = {
                 $('#message .messageNoImage').show();
                 $('#message .messageNoImage .continue').show();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                ga('send', 'pageview', '/Waiting page'); //waiting page
                 break;
             case 'messageWaitingWithImage':
                 initWaitAnimation();
@@ -39,7 +41,7 @@ var Navi = {
                 $('#message .messageImage .continue').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                ga('send', 'pageview', '/Waiting page'); //waiting page
                 break;
             case 'messageNoImage':
                 Navi.hidelogin();
@@ -50,7 +52,7 @@ var Navi = {
                 $('#message .messageImage').hide();
                 $('#message .messageNoImage').show();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                ga('send', 'pageview', '/Waiting page'); //waiting page
                 break;
             case 'messageWithImage':
                 Navi.hidelogin();
@@ -61,7 +63,7 @@ var Navi = {
                 $('#message .messageImage').show();
                 $('#message .messageNoImage').hide();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                ga('send', 'pageview', '/Waiting page'); //waiting page
                 break;
 
             case 'registerSingle':
@@ -76,16 +78,14 @@ var Navi = {
                 $("#registerSingle").show();
                 $("#registerBattle").hide();
                 $(".register-red-flash").hide();
-                //$("#register .slider-text").html("כניסה להצבעה");
                 $("#register #registerSingle .slidein .slider-text").html(registerTextHtml);
-                // registerWishTextInterval = setInterval(function() {
                 initWishText($("#register #registerSingle .slidein .slider-text"));
-                //  }, 3500);
                 $(".slide.btn").show();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
                 $("#register .slider-text").removeClass("notRegistered");
+
+                ga('send', 'pageview', '/Checkin: enter vote'); //register
                 break;
             case 'registerBattle':
                 Navi.hidelogin();
@@ -99,14 +99,13 @@ var Navi = {
                 $(".register-red-flash").hide();
                 stopAlertRegisterGoingClose();
                 $(".live").hide();
-                //$("#register .slider-text").html("כניסה להצבעה");
-                $("#register #registerBattle .slidein .slider-text").html(registerTextHtml);
-                //registerWishTextInterval = setInterval(function() {
+                 $("#register #registerBattle .slidein .slider-text").html(registerTextHtml);
                 initWishText($("#register #registerBattle .slidein .slider-text"));
-                // }, 3500);
                 $(".slide.btn").show();
-                //ga('send', 'pageview', '/TNS_Votes_CI'); //for google analytics
+                
                 $("#register .slider-text").removeClass("notRegistered");
+
+                ga('send', 'pageview', '/Checkin: enter vote'); //register
                 break;
             case 'notRegister':
                 initWaitAnimation();
@@ -123,7 +122,7 @@ var Navi = {
                 $("#register .reMesseg .continue h2").text(notRegisterWaitDic);
                 $("#register .reMesseg .continue").slideDown(500);
 
-                //ga('send', 'pageview', '/Checkin: vote missed');//for google analytics
+                ga('send', 'pageview', '/Checkin: vote missed');//for google analytics
                 break;
             case 'WaitVotePage':
                 initWaitAnimation();
@@ -131,6 +130,7 @@ var Navi = {
                 $(".topMenu").show();
                 $("#register .reMesseg .continue").slideDown(500);
                 $(".live").hide();
+                ga('send', 'pageview', '/Checkin: checkedin'); //registered
                 break;
             case 'voteSingle':
                 initWaitAnimation();
@@ -140,9 +140,10 @@ var Navi = {
                 $("#vote .single").show();
                 $("#vote .battle").hide();
                 $(".live").show();
-                //ga('send', 'pageview', '/TNS_Votes'); //for google analytics
+                
                 resetAnimations();
-
+                ga('send', 'pageview', '/Vote'); //registered
+                
                 break;
             case 'voteBattle':
                 initWaitAnimation();
@@ -152,8 +153,9 @@ var Navi = {
                 $("#vote .single").hide();
                 $("#vote .battle").show();
                 $(".live").show();
-                //ga('send', 'pageview', '/TNS_Votes'); //for google analytics
-                resetAnimations();
+                 resetAnimations();
+
+                ga('send', 'pageview', '/Vote'); //registered
 
                 break;
             case 'voteCloseSingle':
@@ -166,7 +168,7 @@ var Navi = {
                 $("#vote-close-wait-text-single").show();
                 $(".live").hide();
                 $("#voteClose .continue").show();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analyticsk
+                ga('send', 'pageview', '/Song ended'); //vote close
 
                 break;
             case 'voteCloseBattle':
@@ -179,7 +181,7 @@ var Navi = {
                 $("#vote-close-wait-text-battle").show();
                 $("#voteClose .continue").show();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Splash_page'); //for google analytics
+                 ga('send', 'pageview', '/Song ended'); //vote close
 
                 break;
             case 'resultsSingle':
@@ -192,7 +194,7 @@ var Navi = {
                 $("#results .battle").hide();
                 $("#results .single .reMesseg .continue").slideDown(500);
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
+                ga('send', 'pageview', '/Vote Results page'); //for google analytics
                 break;
             case 'resultsBattle':
                 initWaitAnimation();
@@ -203,7 +205,7 @@ var Navi = {
                 $("#results .battle").show();
                 $("#results .battle .reMesseg .continue").slideDown();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Votes_Result'); //for google analytics
+                ga('send', 'pageview', '/Vote Results page'); //for google analytics
                 break;
             case 'gallery':
                 Navi.hidelogin();
@@ -211,7 +213,7 @@ var Navi = {
                 $('#gallery').show();
                 gallerySize();
                 $(".live").hide();
-                //ga('send', 'pageview', '/TNS_Program_Votes'); //for google analytics
+                ga('send', 'pageview', '/Results'); //slider
                 break;
             case "errorPage":
                 Navi.hidelogin();
